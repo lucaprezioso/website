@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Luxury Obsession | Garage</title>
+
+    <meta
+      name="description"
+      content="Explore the Luxury Obsession garage near Zurich. Ferrari 458 Italia available now. Future additions listed as coming soon with descriptions."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="Luxury Obsession | Garage" />
+    <meta property="og:description" content="Models, availability, and descriptions." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../images/image00200.jpg" />
+
+    <link rel="icon" href="../images/image00600.jpg" />
+
+    <style>
+      :root {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color-scheme: dark light;
+        --bg: #050509;
+        --accent: #e50914;
+        --text: #f5f5f5;
+        --muted: #a3a3a3;
+        --border: #262637;
+        --cardRadius: 18px;
+        --shadowSoft: 0 18px 45px rgba(0, 0, 0, 0.4);
+        --maxWidth: 1120px;
+      }
+
+      * { box-sizing: border-box; }
+      body { margin: 0; background: radial-gradient(circle at top, #191621 0, var(--bg) 55%); color: var(--text); }
+      a { color: inherit; text-decoration: none; }
+
+      header {
+        position: sticky; top: 0; z-index: 50;
+        backdrop-filter: blur(12px);
+        background: linear-gradient(to bottom, rgba(5, 5, 9, 0.92), rgba(5, 5, 9, 0.62), transparent);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      }
+
+      .container { max-width: var(--maxWidth); margin: 0 auto; padding: 0 1.5rem; }
+      .nav { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 0; gap: 1rem; }
+
+      .brand { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.95rem; letter-spacing: 0.16em; text-transform: uppercase; }
+      .brandMark {
+        width: 30px; height: 30px; border-radius: 999px;
+        background: radial-gradient(circle at 30% 30%, #ff5a5a, #7b0209);
+        box-shadow: 0 0 20px rgba(229, 9, 20, 0.7);
+        display: grid; place-items: center;
+        font-weight: 850; font-size: 0.8rem;
+      }
+
+      .navRight { display: flex; align-items: center; gap: 0.75rem; }
+      .navLinks { display: flex; align-items: center; gap: 0.8rem; font-size: 0.9rem; }
+      .navLinks a { padding: 0.35rem 0.65rem; border-radius: 999px; color: var(--muted); }
+      .navLinks a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+      .cta {
+        padding: 0.45rem 0.9rem;
+        border-radius: 999px;
+        background: var(--accent);
+        font-size: 0.85rem;
+        font-weight: 800;
+        color: #fff;
+        box-shadow: 0 10px 26px rgba(229, 9, 20, 0.45);
+      }
+
+      .langPicker { display: inline-flex; align-items: center; gap: 0.35rem; }
+      .flagBtn {
+        border: 1px solid rgba(255,255,255,0.14);
+        background: rgba(255,255,255,0.04);
+        border-radius: 999px;
+        padding: 0.25rem 0.45rem;
+        cursor: pointer;
+        font-size: 1rem;
+        line-height: 1;
+        opacity: 0.75;
+      }
+      .flagBtn.active { opacity: 1; border-color: rgba(229, 9, 20, 0.55); box-shadow: 0 0 0 1px rgba(229, 9, 20, 0.25); }
+
+      main { padding: 2.4rem 0 3.3rem; }
+      .pageTitle { font-size: clamp(2.0rem, 3.0vw + 0.7rem, 3.0rem); margin: 0; }
+      .subtitle { color: var(--muted); margin-top: 0.6rem; max-width: 60rem; }
+
+      .grid {
+        margin-top: 1.7rem;
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+        gap: 1.2rem;
+        align-items: start;
+      }
+
+      .card {
+        background: radial-gradient(circle at top left, #151520, #050509 55%);
+        border-radius: var(--cardRadius);
+        border: 1px solid var(--border);
+        padding: 1.2rem;
+        box-shadow: var(--shadowSoft);
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.72rem;
+        padding: 0.22rem 0.55rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255,255,255,0.18);
+        color: var(--muted);
+        width: fit-content;
+        background: rgba(255,255,255,0.03);
+      }
+      .badgeAvailable { border-color: rgba(74,222,128,0.35); color: #86efac; background: rgba(74,222,128,0.08); }
+      .badgeSoon { border-color: rgba(251,191,36,0.35); color: #fbbf24; background: rgba(251,191,36,0.08); }
+
+      .stage {
+        border-radius: 28px;
+        border: 1px solid rgba(255,255,255,0.10);
+        background:
+          radial-gradient(circle at 20% 10%, rgba(229, 9, 20, 0.18), transparent 42%),
+          radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.06), transparent 45%),
+          rgba(10, 10, 18, 0.65);
+        overflow: hidden;
+        box-shadow: var(--shadowSoft);
+        padding: 1.05rem;
+      }
+
+      .car3dWrap {
+        position: relative;
+        height: 340px;
+        display: grid;
+        place-items: center;
+        perspective: 1200px;
+      }
+
+      .platform {
+        position: absolute;
+        bottom: 46px;
+        width: min(520px, 92%);
+        height: 56px;
+        border-radius: 999px;
+        background: radial-gradient(closest-side, rgba(255,255,255,0.13), rgba(255,255,255,0.04), transparent);
+        transform: translateZ(-70px);
+      }
+
+      .car3d {
+        width: min(560px, 96%);
+        height: 280px;
+        border-radius: 24px;
+        overflow: hidden;
+        transform-style: preserve-3d;
+        transform: rotateX(12deg) rotateY(-18deg);
+        transition: transform 0.35s ease, filter 0.35s ease;
+        box-shadow: 0 30px 80px rgba(0,0,0,0.55);
+        border: 1px solid rgba(255,255,255,0.14);
+        position: relative;
+        background: rgba(0,0,0,0.2);
+      }
+
+      .car3d:hover { transform: rotateX(10deg) rotateY(-10deg) translateY(-2px); filter: saturate(1.05) contrast(1.05); }
+      .car3d img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.08); display: block; }
+
+      .carOverlay {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(to top, rgba(5,5,9,0.85), transparent 55%),
+          radial-gradient(circle at 15% 15%, rgba(229, 9, 20, 0.18), transparent 55%);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 1rem;
+        gap: 0.3rem;
+      }
+
+      .carName { margin: 0; font-size: 1.1rem; }
+      .carMeta { margin: 0; color: var(--muted); font-size: 0.9rem; max-width: 48rem; }
+
+      .carPicker { display: grid; gap: 0.75rem; margin-top: 0.8rem; }
+      .carRow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        padding: 0.75rem 0.9rem;
+        border-radius: 14px;
+        border: 1px solid rgba(255,255,255,0.10);
+        background: rgba(255,255,255,0.02);
+        cursor: pointer;
+      }
+      .carRow:hover { border-color: rgba(255,255,255,0.18); }
+      .carRow.active { border-color: rgba(229,9,20,0.45); box-shadow: 0 0 0 1px rgba(229,9,20,0.25); }
+      .carRow.disabled { opacity: 0.55; cursor: not-allowed; }
+      .carRow strong { display: block; font-size: 0.95rem; }
+      .carRow span { display: block; font-size: 0.8rem; color: var(--muted); }
+
+      .btnRow { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-top: 1.0rem; }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 0.65rem 1.0rem;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+        cursor: pointer;
+        font-size: 0.9rem;
+        font-weight: 850;
+      }
+      .btnPrimary { background: linear-gradient(135deg, var(--accent), #ff3b3b); border: none; }
+
+      .carCards { display: grid; gap: 1rem; margin-top: 1.05rem; }
+      .carCardHeader { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem; }
+      .carCardTitle { margin: 0; font-size: 1.05rem; }
+      .muted { color: var(--muted); font-size: 0.92rem; line-height: 1.65; }
+
+      .specList { margin: 0.75rem 0 0; padding-left: 1.1rem; color: rgba(245,245,245,0.88); }
+      .specList li { margin: 0.35rem 0; }
+
+      footer { border-top: 1px solid rgba(255, 255, 255, 0.08); padding: 1.5rem 0; font-size: 0.78rem; color: var(--muted); }
+
+      @media (max-width: 980px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+      @media (max-width: 760px) { .navLinks { display: none; } }
+      @media (max-width: 640px) { header { position: static; background: transparent; } .container { padding: 0 1rem; } }
+    </style>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const { useEffect, useState } = React;
+
+      const IMG = {
+        car458: "../images/image00200.png",
+        carPortofino: "../images/image00300.jpg",
+        car256: "../images/image00400.jpg"
+      };
+
+      const CARS = [
+        {
+          id: "458",
+          name: "Ferrari 458 Italia",
+          status: "available",
+          image: IMG.car458,
+          meta: {
+            en: "A pure mid engine icon. Sharp response, clean sound, and a sense of occasion without being fragile.",
+            de: "Mittelmotor Ikone. Direkte Response, klarer Sound und echtes Erlebnis ohne fragil zu wirken.",
+            it: "Icona mid engine. Risposta netta, suono pulito e atmosfera speciale senza essere fragile."
+          },
+          specs: {
+            en: ["Available now", "Ideal for weddings and shoots", "Best for scenic day routes"],
+            de: ["Jetzt verfügbar", "Ideal für Hochzeiten und Shootings", "Perfekt für Tagesrouten"],
+            it: ["Disponibile", "Perfetta per matrimoni e shooting", "Ottima per percorsi panoramici"]
+          }
+        },
+        {
+          id: "portofino",
+          name: "Ferrari Portofino",
+          status: "soon",
+          image: IMG.carPortofino,
+          meta: {
+            en: "Grand tourer elegance. Built for comfort and style. Listed as coming soon for expansion.",
+            de: "Grand Tourer Eleganz. Komfort und Stil. Als Expansion geplant, kommt bald.",
+            it: "Eleganza grand tourer. Comfort e stile. In arrivo come espansione."
+          },
+          specs: {
+            en: ["Coming soon", "Designed for refined cruising", "Best for longer relaxed routes"],
+            de: ["Kommt bald", "Für entspanntes Cruisen", "Ideal für längere Routen"],
+            it: ["In arrivo", "Per guida rilassata", "Ideale per percorsi lunghi"]
+          }
+        },
+        {
+          id: "256gts",
+          name: "Ferrari 256 GTS",
+          status: "soon",
+          image: IMG.car256,
+          meta: {
+            en: "Future classic slot. This slot is reserved for a heritage oriented addition.",
+            de: "Future Classic Slot. Platzhalter für eine heritage orientierte Ergänzung.",
+            it: "Slot future classic. Riservato per un aggiunta heritage."
+          },
+          specs: {
+            en: ["Coming soon", "Focus on heritage feel", "For curated luxury moments"],
+            de: ["Kommt bald", "Heritage Charakter", "Für kuratierte Luxury Momente"],
+            it: ["In arrivo", "Focus heritage", "Per momenti luxury curati"]
+          }
+        }
+      ];
+
+      const I18N = {
+        en: { navHome: "Home", navPricing: "Pricing", navBlog: "Blog", navRequest: "Request date", title: "Garage", subtitle: "Browse models, availability, and descriptions. Select a car to preview it on the stage.", chooseCar: "Choose your car", available: "Available", comingSoon: "Coming soon", openPricing: "Open pricing", goBooking: "Go to booking" },
+        de: { navHome: "Home", navPricing: "Preise", navBlog: "Blog", navRequest: "Datum anfragen", title: "Garage", subtitle: "Modelle, Verfügbarkeit und Beschreibungen. Auto wählen und auf der Bühne ansehen.", chooseCar: "Auto wählen", available: "Verfügbar", comingSoon: "Kommt bald", openPricing: "Preise öffnen", goBooking: "Zur Buchung" },
+        it: { navHome: "Home", navPricing: "Prezzi", navBlog: "Blog", navRequest: "Richiedi data", title: "Garage", subtitle: "Modelli, disponibilità e descrizioni. Seleziona un auto per vederla sul palco.", chooseCar: "Seleziona auto", available: "Disponibile", comingSoon: "In arrivo", openPricing: "Apri prezzi", goBooking: "Vai alla prenotazione" }
+      };
+
+      function getParam(name) {
+        const p = new URLSearchParams(window.location.search);
+        return p.get(name);
+      }
+
+      function setParam(name, value) {
+        const url = new URL(window.location.href);
+        if (!value) url.searchParams.delete(name);
+        else url.searchParams.set(name, value);
+        window.history.replaceState({}, "", url.toString());
+      }
+
+      function readLang() {
+        const fromUrl = getParam("lang");
+        if (fromUrl && I18N[fromUrl]) return fromUrl;
+        const fromStore = localStorage.getItem("lo_lang");
+        if (fromStore && I18N[fromStore]) return fromStore;
+        return "en";
+      }
+
+      function readCar() {
+        const fromStore = localStorage.getItem("lo_car");
+        const ok = CARS.find((c) => c.id === fromStore);
+        return ok ? ok.id : "458";
+      }
+
+      function LanguagePicker({ lang, onChange }) {
+        const items = [
+          { code: "en", flag: "🇬🇧", title: "English" },
+          { code: "de", flag: "🇩🇪", title: "Deutsch" },
+          { code: "it", flag: "🇮🇹", title: "Italiano" }
+        ];
+        return (
+          <div className="langPicker" aria-label="Language">
+            {items.map((it) => (
+              <button
+                key={it.code}
+                className={it.code === lang ? "flagBtn active" : "flagBtn"}
+                title={it.title}
+                onClick={() => onChange(it.code)}
+                type="button"
+              >
+                {it.flag}
+              </button>
+            ))}
+          </div>
+        );
+      }
+
+      function App() {
+        const [lang, _setLang] = useState(readLang());
+        const [carId, setCarId] = useState(readCar());
+        const t = I18N[lang] || I18N.en;
+
+        useEffect(() => {
+          localStorage.setItem("lo_lang", lang);
+          document.documentElement.lang = lang;
+          setParam("lang", lang);
+        }, [lang]);
+
+        useEffect(() => {
+          localStorage.setItem("lo_car", carId);
+        }, [carId]);
+
+        function setLang(next) { if (!I18N[next]) return; _setLang(next); }
+
+        function homeLink(hash) {
+          const url = new URL("../home.html", window.location.href);
+          url.searchParams.set("lang", lang);
+          url.hash = hash || "";
+          return url.pathname + url.search + (hash ? "#" + hash : "");
+        }
+
+        function pricingLink() {
+          const url = new URL("pricing.html", window.location.href);
+          url.searchParams.set("lang", lang);
+          return url.pathname + url.search;
+        }
+
+        function blogLink() {
+          const url = new URL("blog.html", window.location.href);
+          url.searchParams.set("lang", lang);
+          return url.pathname + url.search;
+        }
+
+        const selectedCar = CARS.find((c) => c.id === carId) || CARS[0];
+        const badgeText = selectedCar.status === "available" ? t.available : t.comingSoon;
+        const badgeClass = selectedCar.status === "available" ? "badge badgeAvailable" : "badge badgeSoon";
+
+        return (
+          <div>
+            <header>
+              <div className="container">
+                <div className="nav">
+                  <a href={homeLink("top")} className="brand">
+                    <div className="brandMark">LO</div>
+                    <span>Luxury Obsession</span>
+                  </a>
+
+                  <div className="navRight">
+                    <div className="navLinks" aria-label="Primary">
+                      <a href={homeLink("top")}>{t.navHome}</a>
+                      <a href={pricingLink()}>{t.navPricing}</a>
+                      <a href={blogLink()}>{t.navBlog}</a>
+                      <a href={homeLink("booking")} className="cta">{t.navRequest}</a>
+                    </div>
+                    <LanguagePicker lang={lang} onChange={setLang} />
+                  </div>
+                </div>
+              </div>
+            </header>
+
+            <main className="container">
+              <h1 className="pageTitle">{t.title}</h1>
+              <p className="subtitle">{t.subtitle}</p>
+
+              <div className="grid">
+                <div className="stage">
+                  <div className="car3dWrap">
+                    <div className="platform"></div>
+                    <div className="car3d" title={selectedCar.name}>
+                      <img src={selectedCar.image} alt={selectedCar.name} />
+                      <div className="carOverlay">
+                        <span className={badgeClass}>{badgeText}</span>
+                        <h3 className="carName">{selectedCar.name}</h3>
+                        <p className="carMeta">{selectedCar.meta[lang] || selectedCar.meta.en}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="btnRow">
+                    <a className="btn" href={pricingLink()}>{t.openPricing}</a>
+                    <a className="btn btnPrimary" href={homeLink("booking")}>{t.goBooking}</a>
+                  </div>
+
+                  <div className="carCards">
+                    {CARS.map((c) => {
+                      const bText = c.status === "available" ? t.available : t.comingSoon;
+                      const bClass = c.status === "available" ? "badge badgeAvailable" : "badge badgeSoon";
+                      const specs = c.specs[lang] || c.specs.en;
+
+                      return (
+                        <div key={c.id} className="card" style={{ opacity: c.status === "available" ? 1 : 0.78 }}>
+                          <div className="carCardHeader">
+                            <div>
+                              <h3 className="carCardTitle">{c.name}</h3>
+                              <p className="muted" style={{ marginTop: "0.35rem" }}>{c.meta[lang] || c.meta.en}</p>
+                            </div>
+                            <span className={bClass}>{bText}</span>
+                          </div>
+                          <ul className="specList">
+                            {specs.map((s, i) => <li key={i}>{s}</li>)}
+                          </ul>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div className="card">
+                  <h3 style={{ marginTop: 0 }}>{t.chooseCar}</h3>
+
+                  <div className="carPicker">
+                    {CARS.map((c) => {
+                      const isDisabled = c.status !== "available";
+                      const isActive = c.id === carId;
+                      const cls = ["carRow", isActive ? "active" : "", isDisabled ? "disabled" : ""].filter(Boolean).join(" ");
+
+                      return (
+                        <div
+                          key={c.id}
+                          className={cls}
+                          onClick={() => { if (!isDisabled) setCarId(c.id); }}
+                          role="button"
+                          tabIndex={0}
+                        >
+                          <div>
+                            <strong>{c.name}</strong>
+                            <span>{isDisabled ? t.comingSoon : t.available}</span>
+                          </div>
+                          <span className={c.status === "available" ? "badge badgeAvailable" : "badge badgeSoon"}>
+                            {isDisabled ? t.comingSoon : t.available}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <p className="muted" style={{ marginTop: "1.0rem" }}>
+                    Selecting a car sets the preview and carries into booking and pricing pages.
+                  </p>
+                </div>
+              </div>
+            </main>
+
+            <footer>
+              <div className="container">© {new Date().getFullYear()} Luxury Obsession.</div>
+            </footer>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
