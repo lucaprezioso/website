@@ -1,455 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Luxury Obsession | Blog</title>
+<head>
+  <meta charset="UTF-8" />
+  <title>Luxury Obsession | Blog</title>
+  <meta name="description" content="Luxury lifestyle with technical credibility. Ferrari only experiences, Switzerland." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../images/image00600.jpg" />
+  <style>
+    :root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--bg:#050509;--accent:#e50914;--text:#f5f5f5;--muted:#a3a3a3;--border:#262637;--radius:18px;--shadow:0 18px 45px rgba(0,0,0,0.4);--max:1120px}
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at top,#191621 0,var(--bg) 55%);color:var(--text)} a{color:inherit;text-decoration:none}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:linear-gradient(to bottom,rgba(5,5,9,0.92),rgba(5,5,9,0.62),transparent);border-bottom:1px solid rgba(255,255,255,0.03)}
+    .container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
+    .navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.75rem 0}
+    .brand{display:inline-flex;align-items:center;gap:0.75rem;font-size:0.95rem;letter-spacing:0.16em;text-transform:uppercase}
+    .brandMark{width:30px;height:30px;border-radius:999px;background:radial-gradient(circle at 30% 30%,#ff5a5a,#7b0209);box-shadow:0 0 20px rgba(229,9,20,0.7);display:grid;place-items:center;font-weight:850;font-size:0.8rem}
+    .navRight{display:flex;align-items:center;gap:0.65rem}
+    .navLinks{display:flex;align-items:center;gap:0.8rem;font-size:0.9rem}
+    .navLinks a{padding:0.35rem 0.65rem;border-radius:999px;color:var(--muted)}
+    .navLinks a:hover{color:var(--text);background:rgba(255,255,255,0.05)}
+    .navCta{padding:0.45rem 0.9rem;border-radius:999px;background:var(--accent);font-size:0.85rem;font-weight:800;color:#fff;box-shadow:0 10px 26px rgba(229,9,20,0.45)}
+    .langPicker{display:inline-flex;align-items:center;gap:0.35rem}
+    .flagBtn{border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.04);border-radius:999px;padding:0.25rem 0.45rem;cursor:pointer;font-size:1rem;line-height:1;opacity:0.75}
+    .flagBtn.active{opacity:1;border-color:rgba(229,9,20,0.55);box-shadow:0 0 0 1px rgba(229,9,20,0.25)}
+    .hamburger{display:none;width:42px;height:38px;border-radius:999px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.04);cursor:pointer;align-items:center;justify-content:center}
+    .hamburgerLines{display:grid;gap:4px} .hamburgerLines span{width:18px;height:2px;border-radius:999px;background:rgba(245,245,245,0.92);display:block}
+    .mobileMenu{margin:0.65rem 0 0.95rem;padding:0.85rem;border-radius:16px;background:rgba(5,5,9,0.92);border:1px solid rgba(255,255,255,0.10);box-shadow:var(--shadow)}
+    .mobileMenu a{display:flex;align-items:center;justify-content:space-between;padding:0.7rem 0.75rem;border-radius:12px}
+    .mobileMenu a:hover{background:rgba(255,255,255,0.05)}
+    .mobileMenuDivider{height:1px;background:rgba(255,255,255,0.08);margin:0.55rem 0}
+    .mobileMenuCta{display:flex;justify-content:center;padding:0.75rem 0.85rem;border-radius:14px;background:var(--accent);font-weight:800;color:#fff;box-shadow:0 10px 26px rgba(229,9,20,0.45)}
+    main{padding:3rem 0 2.6rem}
+    .containerNarrow{max-width:980px;margin:0 auto;padding:0 1.5rem}
+    h1{margin:0;font-size:clamp(2rem,2.6vw + 1rem,3rem)} .sub{margin-top:0.65rem;color:var(--muted);max-width:58rem}
+    .grid{margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem}
+    .card{background:radial-gradient(circle at top left,#151520,#050509 55%);border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);overflow:hidden;cursor:pointer}
+    .card img{width:100%;height:170px;object-fit:cover;display:block}
+    .cardBody{padding:1.1rem}
+    .meta{color:var(--muted);font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase}
+    .title{margin:0.45rem 0 0.55rem;font-size:1.05rem}
+    .excerpt{margin:0;color:rgba(245,245,245,0.88);line-height:1.6;font-size:0.92rem}
+    .post{background:radial-gradient(circle at top left,#151520,#050509 55%);border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);padding:1.3rem;margin-top:2rem}
+    .backLink{color:var(--muted)}
+    .postTitle{margin:0.25rem 0 0.35rem;font-size:1.5rem}
+    .postBody{color:rgba(245,245,245,0.88);line-height:1.75}
+    footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.78rem;color:var(--muted)}
+    .footerInner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+    @media(max-width:760px){.navLinks{display:none}.hamburger{display:inline-flex}.container,.containerNarrow{padding:0 1rem}}
+  </style>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { useEffect, useMemo, useState } = React;
 
-    <meta
-      name="description"
-      content="Luxury lifestyle with technical credibility. Cost models, engineering notes, and disciplined operations behind supercar rentals."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="index, follow" />
+    const I18N = {
+      en:{ home:"Home", garage:"Garage", pricing:"Pricing", blog:"Blog", request:"Request date", title:"Luxury lifestyle with technical credibility", sub:"Short reads about Ferrari engineering, Swiss driving culture, and the discipline behind a true luxury experience." },
+      de:{ home:"Home", garage:"Garage", pricing:"Preise", blog:"Blog", request:"Datum anfragen", title:"Luxury Lifestyle mit technischer Glaubwürdigkeit", sub:"Kurze Beiträge über Ferrari Technik, Schweizer Fahrkultur und die Disziplin hinter echter Luxury." },
+      it:{ home:"Home", garage:"Garage", pricing:"Prezzi", blog:"Blog", request:"Richiedi data", title:"Luxury lifestyle con credibilità tecnica", sub:"Articoli brevi su ingegneria Ferrari, cultura di guida svizzera e disciplina dietro un esperienza di lusso." }
+    };
 
-    <meta property="og:title" content="Luxury Obsession | Blog" />
-    <meta property="og:description" content="Luxury lifestyle with technical credibility." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="../images/image00500.jpg" />
+    const POSTS = [
+      { id:"handling", date:"2025-12-20", image:"../images/image00100.jpg",
+        title:{ en:"Why the 458 still feels alive", de:"Warum sich der 458 immer noch lebendig anfühlt", it:"Perché la 458 è ancora viva" },
+        excerpt:{ en:"Hydraulic steering, naturally aspirated response, and a chassis tuned for confidence.", de:"Hydraulische Lenkung, Sauger Reaktion und ein Chassis für Vertrauen.", it:"Sterzo idraulico, risposta aspirata e un telaio che ispira fiducia." },
+        body:{ en:"Sample article. Expand later with real content.\n\nFocus on steering feel, throttle response, and that era of Ferrari.",
+              de:"Beispielartikel. Später mit echtem Inhalt erweitern.\n\nLenkgefühl, Gasannahme und diese Ferrari Ära.",
+              it:"Articolo di esempio. Espandi in seguito.\n\nFeeling sterzo, risposta acceleratore e questa era Ferrari." } },
+      { id:"swiss", date:"2025-12-14", image:"../images/image00400.jpg",
+        title:{ en:"Swiss roads, perfect discipline", de:"Schweizer Strassen, perfekte Disziplin", it:"Strade svizzere, disciplina perfetta" },
+        excerpt:{ en:"The experience is not speed. It is precision: timing, scenery, etiquette.", de:"Es geht nicht um Geschwindigkeit. Es geht um Präzision.", it:"Non è velocità. È precisione." },
+        body:{ en:"Sample article. Suggest scenic loops and a disciplined mindset.\n\nLuxury is control, not noise.",
+              de:"Beispielartikel. Schöne Routen und disziplinierte Haltung.\n\nLuxury ist Kontrolle, nicht Lärm.",
+              it:"Articolo di esempio. Itinerari e mentalità disciplinata.\n\nLuxury è controllo, non rumore." } },
+      { id:"care", date:"2025-12-05", image:"../images/image00500.jpg",
+        title:{ en:"How we prep a Ferrari before handover", de:"So bereiten wir den Ferrari vor", it:"Come prepariamo la Ferrari" },
+        excerpt:{ en:"Inspection, warm up, and the details that separate rental from experience.", de:"Check, Warm up und Details die Rental von Experience trennen.", it:"Ispezione, warm up e dettagli che separano noleggio da esperienza." },
+        body:{ en:"Sample article. Tyres, fluids, brakes, cabin details, briefing.\n\nDiscipline equals confidence.",
+              de:"Beispielartikel. Reifen, Flüssigkeiten, Bremse, Details, Briefing.\n\nDisziplin schafft Vertrauen.",
+              it:"Articolo di esempio. Gomme, fluidi, freni, dettagli, briefing.\n\nDisciplina significa fiducia." } }
+    ];
 
-    <link rel="icon" href="../images/image00600.jpg" />
+    function getParam(name){ const p=new URLSearchParams(window.location.search); return p.get(name); }
+    function setParamReplace(name,value){ const u=new URL(window.location.href); if(!value) u.searchParams.delete(name); else u.searchParams.set(name,value); window.history.replaceState({}, "", u.toString()); }
+    function readLang(){ const u=getParam("lang"); if(u && I18N[u]) return u; const s=localStorage.getItem("lo_lang"); if(s && I18N[s]) return s; return "en"; }
+    function buildUrl(path, lang, hash){ const u=new URL(path, window.location.href); u.searchParams.set("lang", lang); if(hash) u.hash=hash; return u.pathname + u.search + u.hash; }
 
-    <style>
-      :root {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        color-scheme: dark light;
-        --bg: #050509;
-        --accent: #e50914;
-        --text: #f5f5f5;
-        --muted: #a3a3a3;
-        --border: #262637;
-        --cardRadius: 18px;
-        --shadowSoft: 0 18px 45px rgba(0, 0, 0, 0.4);
-        --maxWidth: 1120px;
-      }
+    function LanguagePicker({ lang, onChange }){
+      const items=[{code:"en",flag:"🇬🇧"},{code:"de",flag:"🇩🇪"},{code:"it",flag:"🇮🇹"}];
+      return (
+        <div className="langPicker">
+          {items.map(it => (
+            <button key={it.code} className={it.code === lang ? "flagBtn active":"flagBtn"} onClick={() => onChange(it.code)} type="button">{it.flag}</button>
+          ))}
+        </div>
+      );
+    }
 
-      * { box-sizing: border-box; }
-      body { margin: 0; background: radial-gradient(circle at top, #191621 0, var(--bg) 55%); color: var(--text); }
-      a { color: inherit; text-decoration: none; }
+    function Nav({ lang, setLang }){
+      const t = I18N[lang] || I18N.en;
+      const [open,setOpen]=useState(false);
+      const close=() => setOpen(false);
 
-      header {
-        position: sticky; top: 0; z-index: 50;
-        backdrop-filter: blur(12px);
-        background: linear-gradient(to bottom, rgba(5, 5, 9, 0.92), rgba(5, 5, 9, 0.62), transparent);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-      }
-
-      .container { max-width: var(--maxWidth); margin: 0 auto; padding: 0 1.5rem; }
-      .nav { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 0; gap: 1rem; }
-
-      .brand { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.95rem; letter-spacing: 0.16em; text-transform: uppercase; }
-      .brandMark {
-        width: 30px; height: 30px; border-radius: 999px;
-        background: radial-gradient(circle at 30% 30%, #ff5a5a, #7b0209);
-        box-shadow: 0 0 20px rgba(229, 9, 20, 0.7);
-        display: grid; place-items: center;
-        font-weight: 850; font-size: 0.8rem;
-      }
-
-      .navRight { display: flex; align-items: center; gap: 0.75rem; }
-      .navLinks { display: flex; align-items: center; gap: 0.8rem; font-size: 0.9rem; }
-      .navLinks a { padding: 0.35rem 0.65rem; border-radius: 999px; color: var(--muted); }
-      .navLinks a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
-      .cta {
-        padding: 0.45rem 0.9rem;
-        border-radius: 999px;
-        background: var(--accent);
-        font-size: 0.85rem;
-        font-weight: 800;
-        color: #fff;
-        box-shadow: 0 10px 26px rgba(229, 9, 20, 0.45);
-      }
-
-      .langPicker { display: inline-flex; align-items: center; gap: 0.35rem; }
-      .flagBtn {
-        border: 1px solid rgba(255,255,255,0.14);
-        background: rgba(255,255,255,0.04);
-        border-radius: 999px;
-        padding: 0.25rem 0.45rem;
-        cursor: pointer;
-        font-size: 1rem;
-        line-height: 1;
-        opacity: 0.75;
-      }
-      .flagBtn.active { opacity: 1; border-color: rgba(229, 9, 20, 0.55); box-shadow: 0 0 0 1px rgba(229, 9, 20, 0.25); }
-
-      main { padding: 2.4rem 0 3.3rem; }
-      .pageTitle { font-size: clamp(2.0rem, 3.0vw + 0.7rem, 3.0rem); margin: 0; }
-      .subtitle { color: var(--muted); margin-top: 0.6rem; max-width: 44rem; }
-
-      .grid {
-        margin-top: 2rem;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.2rem;
-      }
-
-      .card {
-        background: radial-gradient(circle at top left, #151520, #050509 55%);
-        border-radius: var(--cardRadius);
-        border: 1px solid var(--border);
-        padding: 1.2rem;
-        box-shadow: var(--shadowSoft);
-      }
-
-      .thumb {
-        width: 100%;
-        height: 160px;
-        border-radius: 14px;
-        overflow: hidden;
-        border: 1px solid rgba(255,255,255,0.12);
-        margin-bottom: 0.9rem;
-      }
-      .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-      .meta {
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 0.16em;
-        color: var(--muted);
-        margin-bottom: 0.6rem;
-      }
-
-      .card h3 { margin: 0 0 0.5rem; font-size: 1.05rem; }
-      .card p { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 999px;
-        padding: 0.55rem 0.95rem;
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        background: rgba(255, 255, 255, 0.04);
-        color: var(--text);
-        cursor: pointer;
-        font-size: 0.85rem;
-        font-weight: 800;
-      }
-
-      .article { margin-top: 2rem; display: grid; gap: 1rem; }
-      .article h1 { margin: 0; font-size: 1.9rem; }
-      .article p { color: rgba(245,245,245,0.88); line-height: 1.75; }
-
-      footer { border-top: 1px solid rgba(255, 255, 255, 0.08); padding: 1.5rem 0; font-size: 0.78rem; color: var(--muted); }
-
-      @media (max-width: 760px) { .navLinks { display: none; } }
-      @media (max-width: 640px) { header { position: static; background: transparent; } .container { padding: 0 1rem; } }
-    </style>
-
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  </head>
-
-  <body>
-    <div id="root"></div>
-
-    <script type="text/babel">
-      const { useMemo, useState, useEffect } = React;
-
-      const COVER = "../images/image00500.jpg";
-
-      const I18N = {
-        en: { title: "Blog", subtitle: "Luxury lifestyle with technical credibility. Cost models, engineering notes, and disciplined operations.", read: "Read full article", back: "Back to all articles", request: "Request a date", navHome: "Home", navPricing: "Pricing", navGarage: "Garage" },
-        de: { title: "Blog", subtitle: "Luxury Ton mit technischer Glaubwürdigkeit. Kostenmodelle, Engineering und disziplinierte Abläufe.", read: "Volltext lesen", back: "Zurück zur Übersicht", request: "Datum anfragen", navHome: "Home", navPricing: "Preise", navGarage: "Garage" },
-        it: { title: "Blog", subtitle: "Tono luxury con credibilità tecnica. Modelli di costo, ingegneria e processi disciplinati.", read: "Leggi articolo", back: "Torna agli articoli", request: "Richiedi data", navHome: "Home", navPricing: "Prezzi", navGarage: "Garage" }
-      };
-
-      const POSTS = {
-        en: [
-          {
-            slug: "weekend-cost-model",
-            title: "What a Ferrari weekend in Switzerland really costs",
-            date: "2025 01 15",
-            tag: "Luxury finance",
-            excerpt: "A transparent model of price drivers: insurance, wear, depreciation, and operational risk.",
-            content: [
-              "Luxury is rarely just horsepower. Behind a clean rental price sits a stack of real costs that behave like a portfolio of risks.",
-              "Start with insurance and screening. The goal is not paperwork, it is controlling the probability of a large loss event.",
-              "Then add wear. Tires, brakes, fluids, and heat cycles behave like consumables.",
-              "Depreciation is the silent line item. It is about value loss per unit of stress on the asset.",
-              "A disciplined rental communicates this honestly: the client pays for an experience, and the host prices the downside."
-            ]
-          },
-          {
-            slug: "why-458-feels-classic",
-            title: "Why the 458 still feels like a future classic",
-            date: "2025 01 22",
-            tag: "Engineering",
-            excerpt: "A naturally aspirated balance of response, sound, and control that is increasingly rare.",
-            content: [
-              "Some cars feel like an interface. The 458 feels like an instrument.",
-              "Naturally aspirated throttle response links foot and drivetrain in a way that modern torque shaping often hides.",
-              "The chassis is fast without feeling clinical. On real roads, confidence matters more than numbers.",
-              "This is why many owners keep a 458 even when newer models arrive."
-            ]
-          },
-          {
-            slug: "risk-and-romance",
-            title: "Designing a rental that respects risk and romance",
-            date: "2025 02 04",
-            tag: "Concept",
-            excerpt: "A small, disciplined service that protects the asset while staying human and cinematic.",
-            content: [
-              "A great rental feels effortless to the client and carefully engineered behind the scenes.",
-              "Operational discipline is what allows the host to say yes more often, because boundaries are defined and predictable.",
-              "Romance is in the details: timing, route, lighting, and how the handover sets the tone.",
-              "Treat the car like a premium asset, treat the client like a guest."
-            ]
-          }
-        ],
-        de: [
-          {
-            slug: "weekend-cost-model",
-            title: "Was ein Ferrari Wochenende in der Schweiz wirklich kostet",
-            date: "2025 01 15",
-            tag: "Luxury Finance",
-            excerpt: "Transparente Treiber: Versicherung, Verschleiss, Wertverlust und operatives Risiko.",
-            content: [
-              "Luxury ist selten nur Leistung. Hinter einem klaren Preis stehen echte Kosten, die sich wie ein Risikoprofil verhalten.",
-              "Versicherung und Screening reduzieren die Wahrscheinlichkeit eines grossen Schadens.",
-              "Verschleiss ist real: Reifen, Bremsen, Flüssigkeiten und Heat Cycles wirken wie Verbrauchsgüter.",
-              "Wertverlust ist die stille Position, gemessen pro Einheit Stress auf dem Asset.",
-              "Disziplinierte Vermietung kommuniziert das offen und fair."
-            ]
-          },
-          {
-            slug: "why-458-feels-classic",
-            title: "Warum sich der 458 wie ein zukünftiger Klassiker anfühlt",
-            date: "2025 01 22",
-            tag: "Engineering",
-            excerpt: "Saugmotor Response, Sound und Kontrolle, die seltener werden.",
-            content: [
-              "Manche Autos sind Interface. Der 458 ist ein Instrument.",
-              "Saugmotor Response verbindet Fuss und Antrieb direkt.",
-              "Das Chassis ist schnell ohne klinisch zu wirken. Auf echten Strassen zählt Vertrauen.",
-              "Darum behalten viele Besitzer den 458 trotz neuerer Modelle."
-            ]
-          },
-          {
-            slug: "risk-and-romance",
-            title: "Vermietung zwischen Risiko und Romantik designen",
-            date: "2025 02 04",
-            tag: "Konzept",
-            excerpt: "Disziplinierte Prozesse, ohne das menschliche Gefühl zu verlieren.",
-            content: [
-              "Für den Gast wirkt es mühelos, dahinter steht Engineering.",
-              "Prozesse schaffen Raum für Ja, weil Grenzen klar sind.",
-              "Romantik liegt in Details: Timing, Route, Licht, Übergabe.",
-              "Asset wie Premium Asset behandeln, Gast wie Gast behandeln."
-            ]
-          }
-        ],
-        it: [
-          {
-            slug: "weekend-cost-model",
-            title: "Quanto costa davvero un weekend Ferrari in Svizzera",
-            date: "2025 01 15",
-            tag: "Finanza luxury",
-            excerpt: "Driver di prezzo: assicurazione, usura, svalutazione e rischio operativo.",
-            content: [
-              "Il luxury non è solo cavalli. Dietro un prezzo pulito ci sono costi reali che si comportano come un portafoglio di rischi.",
-              "Assicurazione e screening riducono la probabilità di eventi di perdita grande.",
-              "Usura: gomme, freni, fluidi e cicli termici sono consumabili.",
-              "Svalutazione: perdita di valore per unità di stress sull asset.",
-              "Un noleggio disciplinato lo comunica in modo trasparente e corretto."
-            ]
-          },
-          {
-            slug: "why-458-feels-classic",
-            title: "Perché la 458 sembra un classico del futuro",
-            date: "2025 01 22",
-            tag: "Ingegneria",
-            excerpt: "Risposta aspirata, suono e controllo sempre più rari.",
-            content: [
-              "Alcune auto sono un interfaccia. La 458 è uno strumento.",
-              "La risposta aspirata lega piede e trasmissione in modo diretto.",
-              "Telaio veloce senza diventare clinico. Su strada conta la fiducia.",
-              "Per questo molti proprietari tengono una 458 anche con modelli più nuovi."
-            ]
-          },
-          {
-            slug: "risk-and-romance",
-            title: "Progettare un noleggio tra rischio e romanticismo",
-            date: "2025 02 04",
-            tag: "Concept",
-            excerpt: "Processi disciplinati con un tono umano e cinematografico.",
-            content: [
-              "Per il cliente deve essere facile. Dietro c è progettazione.",
-              "Disciplina operativa significa confini chiari e decisioni rapide.",
-              "Il romanticismo è nei dettagli: timing, percorso, luce, consegna.",
-              "Tratta l auto come asset premium e il cliente come ospite."
-            ]
-          }
-        ]
-      };
-
-      function getParam(name) { const p = new URLSearchParams(window.location.search); return p.get(name); }
-
-      function readLang() {
-        const fromUrl = getParam("lang");
-        if (fromUrl && I18N[fromUrl]) return fromUrl;
-        const fromStore = localStorage.getItem("lo_lang");
-        if (fromStore && I18N[fromStore]) return fromStore;
-        return "en";
-      }
-
-      function setParam(name, value) {
-        const url = new URL(window.location.href);
-        if (!value) url.searchParams.delete(name);
-        else url.searchParams.set(name, value);
-        window.history.pushState({}, "", url.toString());
-      }
-
-      function LanguagePicker({ lang, onChange }) {
-        const items = [
-          { code: "en", flag: "🇬🇧", title: "English" },
-          { code: "de", flag: "🇩🇪", title: "Deutsch" },
-          { code: "it", flag: "🇮🇹", title: "Italiano" }
-        ];
-        return (
-          <div className="langPicker">
-            {items.map((it) => (
-              <button
-                key={it.code}
-                className={it.code === lang ? "flagBtn active" : "flagBtn"}
-                title={it.title}
-                onClick={() => onChange(it.code)}
-                type="button"
-              >
-                {it.flag}
-              </button>
-            ))}
-          </div>
-        );
-      }
-
-      function App() {
-        const [lang, _setLang] = useState(readLang());
-        const [slug, setSlug] = useState(getParam("post"));
-        const ui = I18N[lang] || I18N.en;
-
-        const posts = POSTS[lang] || POSTS.en;
-        const post = useMemo(() => posts.find((p) => p.slug === slug), [posts, slug]);
-
-        useEffect(() => {
-          localStorage.setItem("lo_lang", lang);
-          document.documentElement.lang = lang;
-          setParam("lang", lang);
-        }, [lang]);
-
-        useEffect(() => {
-          function onPop() {
-            setSlug(getParam("post"));
-            window.scrollTo(0, 0);
-          }
-          window.addEventListener("popstate", onPop);
-          return () => window.removeEventListener("popstate", onPop);
-        }, []);
-
-        function setLang(next) { if (!I18N[next]) return; _setLang(next); }
-
-        function homeLink(hash) {
-          const url = new URL("../home.html", window.location.href);
-          url.searchParams.set("lang", lang);
-          url.hash = hash || "";
-          return url.pathname + url.search + (hash ? "#" + hash : "");
-        }
-
-        function pricingLink() {
-          const url = new URL("pricing.html", window.location.href);
-          url.searchParams.set("lang", lang);
-          return url.pathname + url.search;
-        }
-
-        function garageLink() {
-          const url = new URL("garage.html", window.location.href);
-          url.searchParams.set("lang", lang);
-          return url.pathname + url.search;
-        }
-
-        function openPost(s) { setParam("post", s); setSlug(s); window.scrollTo(0, 0); }
-        function backToList() { setParam("post", null); setSlug(null); window.scrollTo(0, 0); }
-
-        return (
-          <div>
-            <header>
-              <div className="container">
-                <div className="nav">
-                  <a href={homeLink("top")} className="brand">
-                    <div className="brandMark">LO</div>
-                    <span>Luxury Obsession</span>
-                  </a>
-
-                  <div className="navRight">
-                    <div className="navLinks">
-                      <a href={homeLink("top")}>{ui.navHome}</a>
-                      <a href={garageLink()}>{ui.navGarage}</a>
-                      <a href={pricingLink()}>{ui.navPricing}</a>
-                      <a href={homeLink("booking")} className="cta">{ui.request}</a>
-                    </div>
-                    <LanguagePicker lang={lang} onChange={setLang} />
-                  </div>
-                </div>
+      return (
+        <header>
+          <div className="container">
+            <div className="navInner">
+              <a href={buildUrl("../home.html", lang, "top")} className="brand"><div className="brandMark">LO</div><span>Luxury Obsession</span></a>
+              <div className="navRight">
+                <nav className="navLinks">
+                  <a href={buildUrl("../home.html", lang, "top")}>{t.home}</a>
+                  <a href={buildUrl("pricing.html", lang, "garage")}>{t.garage}</a>
+                  <a href={buildUrl("pricing.html", lang, "packages")}>{t.pricing}</a>
+                  <a href={buildUrl("blog.html", lang)}>{t.blog}</a>
+                  <a href={buildUrl("../home.html", lang, "booking")} className="navCta">{t.request}</a>
+                </nav>
+                <LanguagePicker lang={lang} onChange={(x) => { setLang(x); close(); }} />
+                <button type="button" className="hamburger" onClick={() => setOpen(v => !v)} aria-label="menu">
+                  <div className="hamburgerLines"><span></span><span></span><span></span></div>
+                </button>
               </div>
-            </header>
+            </div>
 
-            <main className="container">
-              {!post ? (
-                <div>
-                  <h1 className="pageTitle">{ui.title}</h1>
-                  <p className="subtitle">{ui.subtitle}</p>
+            {open && (
+              <div className="mobileMenu">
+                <a href={buildUrl("../home.html", lang, "top")} onClick={close}>{t.home}<span>›</span></a>
+                <a href={buildUrl("pricing.html", lang, "garage")} onClick={close}>{t.garage}<span>›</span></a>
+                <a href={buildUrl("pricing.html", lang, "packages")} onClick={close}>{t.pricing}<span>›</span></a>
+                <a href={buildUrl("blog.html", lang)} onClick={close}>{t.blog}<span>›</span></a>
+                <div className="mobileMenuDivider"></div>
+                <a className="mobileMenuCta" href={buildUrl("../home.html", lang, "booking")} onClick={close}>{t.request}</a>
+              </div>
+            )}
+          </div>
+        </header>
+      );
+    }
 
-                  <div className="grid">
-                    {posts.map((p) => (
-                      <article key={p.slug} className="card">
-                        <div className="thumb"><img src={COVER} alt="Article cover" /></div>
-                        <div className="meta">{p.date} · {p.tag}</div>
-                        <h3>{p.title}</h3>
-                        <p>{p.excerpt}</p>
-                        <div style={{ marginTop: "0.95rem" }}>
-                          <button className="btn" onClick={() => openPost(p.slug)}>{ui.read}</button>
-                        </div>
-                      </article>
+    function App(){
+      const [lang,_setLang]=useState(readLang());
+      const t = I18N[lang] || I18N.en;
+
+      const [postId,setPostId]=useState(getParam("post") || "");
+      const posts = useMemo(() => POSTS.slice().sort((a,b) => b.date.localeCompare(a.date)), []);
+
+      useEffect(() => {
+        localStorage.setItem("lo_lang", lang);
+        document.documentElement.lang = lang;
+        setParamReplace("lang", lang);
+      }, [lang]);
+
+      function setLang(next){ if(!I18N[next]) return; _setLang(next); }
+
+      const selected = posts.find(p => p.id === postId) || null;
+
+      function openPost(id){
+        const u=new URL(window.location.href);
+        u.searchParams.set("post", id);
+        window.history.pushState({}, "", u.toString());
+        setPostId(id);
+        window.scrollTo({ top:0, behavior:"smooth" });
+      }
+
+      function back(){
+        const u=new URL(window.location.href);
+        u.searchParams.delete("post");
+        window.history.pushState({}, "", u.toString());
+        setPostId("");
+        window.scrollTo({ top:0, behavior:"smooth" });
+      }
+
+      return (
+        <div>
+          <Nav lang={lang} setLang={setLang} />
+
+          <main>
+            <div className="containerNarrow">
+              <h1>{t.title}</h1>
+              <p className="sub">{t.sub}</p>
+
+              {!selected ? (
+                <div className="grid">
+                  {posts.map(p => (
+                    <div key={p.id} className="card" onClick={() => openPost(p.id)} role="button" tabIndex={0}>
+                      <img src={p.image} alt={p.title[lang] || p.title.en} />
+                      <div className="cardBody">
+                        <div className="meta">{p.date}</div>
+                        <h3 className="title">{p.title[lang] || p.title.en}</h3>
+                        <p className="excerpt">{p.excerpt[lang] || p.excerpt.en}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="post">
+                  <a className="backLink" href="#" onClick={(e) => { e.preventDefault(); back(); }}>‹ Back to all articles</a>
+                  <div className="meta" style={{ marginTop:"0.85rem" }}>{selected.date}</div>
+                  <h2 className="postTitle">{selected.title[lang] || selected.title.en}</h2>
+                  <div className="postBody">
+                    {(selected.body[lang] || selected.body.en).split("\n").map((line, idx) => (
+                      <p key={idx} style={{ marginTop: idx === 0 ? 0 : "1rem" }}>{line}</p>
                     ))}
                   </div>
                 </div>
-              ) : (
-                <div className="article">
-                  <div style={{ display: "flex", gap: "0.7rem", flexWrap: "wrap" }}>
-                    <button className="btn" onClick={backToList}>{ui.back}</button>
-                    <a className="btn" href={homeLink("booking")}>{ui.request}</a>
-                  </div>
-
-                  <div className="card">
-                    <div className="thumb"><img src={COVER} alt="Article cover" /></div>
-                    <div className="meta">{post.date} · {post.tag}</div>
-                    <h1>{post.title}</h1>
-                    {post.content.map((para, i) => <p key={i}>{para}</p>)}
-                  </div>
-                </div>
               )}
-            </main>
+            </div>
+          </main>
 
-            <footer>
-              <div className="container">© {new Date().getFullYear()} Luxury Obsession.</div>
-            </footer>
-          </div>
-        );
-      }
+          <footer>
+            <div className="container footerInner">
+              <div>© {new Date().getFullYear()} Luxury Obsession.</div>
+              <div>Ferrari only experiences, Switzerland.</div>
+            </div>
+          </footer>
+        </div>
+      );
+    }
 
-      const root = ReactDOM.createRoot(document.getElementById("root"));
-      root.render(<App />);
-    </script>
-  </body>
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
+</body>
 </html>
