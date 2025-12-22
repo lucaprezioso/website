@@ -1,684 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Luxury Obsession | Pricing</title>
+<head>
+  <meta charset="UTF-8" />
+  <title>Luxury Obsession | Garage & Pricing</title>
+  <meta name="description" content="Ferrari only experiences. Explore the garage, packages, and options. Package pricing is loaded from ../data/package.xlsx." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../images/image00600.jpg" />
+  <style>
+    :root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--bg:#050509;--accent:#e50914;--text:#f5f5f5;--muted:#a3a3a3;--border:#262637;--radius:18px;--shadow:0 18px 45px rgba(0,0,0,0.4);--max:1120px}
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at top,#191621 0,var(--bg) 55%);color:var(--text)} a{color:inherit;text-decoration:none}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:linear-gradient(to bottom,rgba(5,5,9,0.92),rgba(5,5,9,0.62),transparent);border-bottom:1px solid rgba(255,255,255,0.03)}
+    .container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
+    .navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.75rem 0}
+    .brand{display:inline-flex;align-items:center;gap:0.75rem;font-size:0.95rem;letter-spacing:0.16em;text-transform:uppercase}
+    .brandMark{width:30px;height:30px;border-radius:999px;background:radial-gradient(circle at 30% 30%,#ff5a5a,#7b0209);box-shadow:0 0 20px rgba(229,9,20,0.7);display:grid;place-items:center;font-weight:850;font-size:0.8rem}
+    .navRight{display:flex;align-items:center;gap:0.65rem}
+    .navLinks{display:flex;align-items:center;gap:0.8rem;font-size:0.9rem}
+    .navLinks a{padding:0.35rem 0.65rem;border-radius:999px;color:var(--muted)}
+    .navLinks a:hover{color:var(--text);background:rgba(255,255,255,0.05)}
+    .navCta{padding:0.45rem 0.9rem;border-radius:999px;background:var(--accent);font-size:0.85rem;font-weight:800;color:#fff;box-shadow:0 10px 26px rgba(229,9,20,0.45)}
+    .langPicker{display:inline-flex;align-items:center;gap:0.35rem}
+    .flagBtn{border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.04);border-radius:999px;padding:0.25rem 0.45rem;cursor:pointer;font-size:1rem;line-height:1;opacity:0.75}
+    .flagBtn.active{opacity:1;border-color:rgba(229,9,20,0.55);box-shadow:0 0 0 1px rgba(229,9,20,0.25)}
+    .hamburger{display:none;width:42px;height:38px;border-radius:999px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.04);cursor:pointer;align-items:center;justify-content:center}
+    .hamburgerLines{display:grid;gap:4px} .hamburgerLines span{width:18px;height:2px;border-radius:999px;background:rgba(245,245,245,0.92);display:block}
+    .mobileMenu{margin:0.65rem 0 0.95rem;padding:0.85rem;border-radius:16px;background:rgba(5,5,9,0.92);border:1px solid rgba(255,255,255,0.10);box-shadow:var(--shadow)}
+    .mobileMenu a{display:flex;align-items:center;justify-content:space-between;padding:0.7rem 0.75rem;border-radius:12px}
+    .mobileMenu a:hover{background:rgba(255,255,255,0.05)}
+    .mobileMenuDivider{height:1px;background:rgba(255,255,255,0.08);margin:0.55rem 0}
+    .mobileMenuCta{display:flex;justify-content:center;padding:0.75rem 0.85rem;border-radius:14px;background:var(--accent);font-weight:800;color:#fff;box-shadow:0 10px 26px rgba(229,9,20,0.45)}
+    main{padding:3rem 0 2.8rem} section{padding:2.4rem 0}
+    .containerNarrow{max-width:980px;margin:0 auto;padding:0 1.5rem}
+    h1{margin:0;font-size:clamp(2rem,2.6vw + 1rem,3rem)} p{color:var(--muted);line-height:1.7}
+    .grid2{display:grid;grid-template-columns:1.15fr 0.85fr;gap:1.2rem;margin-top:1.8rem}
+    .card{background:radial-gradient(circle at top left,#151520,#050509 55%);border-radius:var(--radius);border:1px solid var(--border);padding:1.3rem;box-shadow:var(--shadow)}
+    .cars{display:grid;gap:0.9rem}
+    .carRow{display:grid;grid-template-columns:1.2fr auto;gap:0.75rem;align-items:center;padding:0.95rem 1rem;border-radius:16px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.02)}
+    .carName{font-weight:900} .pill{font-size:0.72rem;padding:0.2rem 0.6rem;border-radius:999px;border:1px solid rgba(255,255,255,0.10);background:rgba(255,255,255,0.04)}
+    .pillAvail{background:rgba(229,9,20,0.16);border-color:rgba(229,9,20,0.35);color:#ffb4b4}
+    .pillSoon{opacity:0.7}
+    img.model{width:100%;height:100%;min-height:260px;object-fit:cover;border-radius:22px;border:1px solid rgba(255,255,255,0.10)}
+    table{width:100%;border-collapse:collapse;margin-top:0.9rem;font-size:0.9rem} th,td{padding:0.75rem 0.55rem;border-bottom:1px solid rgba(255,255,255,0.08);text-align:left}
+    th{color:var(--muted);font-weight:700} .price{font-weight:900}
+    .gallery{margin-top:1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.8rem}
+    .gallery img{width:100%;height:150px;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,0.10)}
+    footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.78rem;color:var(--muted)}
+    .footerInner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+    @media(max-width:980px){.grid2{grid-template-columns:1fr}}
+    @media(max-width:760px){.navLinks{display:none}.hamburger{display:inline-flex}.container,.containerNarrow{padding:0 1rem}}
+  </style>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { useEffect, useMemo, useState } = React;
 
-    <meta
-      name="description"
-      content="Detailed Ferrari rental pricing near Zurich. Select the car, compare limited and unlimited packages, see deposit and options."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="index, follow" />
+    const DATA = { packages: new URL("../data/package.xlsx", window.location.href).toString() };
+    const CARS = [
+      { id: "458", name: "Ferrari 458 Italia", status: "available", image: "../images/image00100.jpg" },
+      { id: "portofino", name: "Ferrari Portofino", status: "soon", image: "../images/image00200.jpg" },
+      { id: "296", name: "Ferrari 296 Spider", status: "soon", image: "../images/image00300.jpg" }
+    ];
 
-    <meta property="og:title" content="Luxury Obsession | Pricing" />
-    <meta property="og:description" content="Deposit, extra mileage, unlimited packages, and options." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="../images/image00100.jpg" />
+    const I18N = {
+      en: { home:"Home", garage:"Garage", packages:"Packages", blog:"Blog", request:"Request date" },
+      de: { home:"Home", garage:"Garage", packages:"Pakete", blog:"Blog", request:"Datum anfragen" },
+      it: { home:"Home", garage:"Garage", packages:"Pacchetti", blog:"Blog", request:"Richiedi data" }
+    };
 
-    <link rel="icon" href="../images/image00600.jpg" />
+    function getParam(name){ const p = new URLSearchParams(window.location.search); return p.get(name); }
+    function setParamReplace(name,value){ const u=new URL(window.location.href); if(!value) u.searchParams.delete(name); else u.searchParams.set(name,value); window.history.replaceState({}, "", u.toString()); }
+    function readLang(){ const u=getParam("lang"); if(u && I18N[u]) return u; const s=localStorage.getItem("lo_lang"); if(s && I18N[s]) return s; return "en"; }
+    function buildUrl(path, lang, hash){ const u=new URL(path, window.location.href); u.searchParams.set("lang", lang); if(hash) u.hash=hash; return u.pathname + u.search + u.hash; }
 
-    <style>
-      :root {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        color-scheme: dark light;
-        --bg: #050509;
-        --accent: #e50914;
-        --text: #f5f5f5;
-        --muted: #a3a3a3;
-        --border: #262637;
-        --cardRadius: 18px;
-        --shadowSoft: 0 18px 45px rgba(0, 0, 0, 0.4);
-        --maxWidth: 1120px;
-      }
-
-      * { box-sizing: border-box; }
-      body { margin: 0; background: radial-gradient(circle at top, #191621 0, var(--bg) 55%); color: var(--text); }
-      a { color: inherit; text-decoration: none; }
-
-      header {
-        position: sticky;
-        top: 0;
-        z-index: 50;
-        backdrop-filter: blur(12px);
-        background: linear-gradient(to bottom, rgba(5, 5, 9, 0.92), rgba(5, 5, 9, 0.62), transparent);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-      }
-
-      .container { max-width: var(--maxWidth); margin: 0 auto; padding: 0 1.5rem; }
-
-      .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0.75rem 0;
-        gap: 1rem;
-      }
-
-      .brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.75rem;
-        font-size: 0.95rem;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-      }
-
-      .brandMark {
-        width: 30px; height: 30px; border-radius: 999px;
-        background: radial-gradient(circle at 30% 30%, #ff5a5a, #7b0209);
-        box-shadow: 0 0 20px rgba(229, 9, 20, 0.7);
-        display: grid; place-items: center;
-        font-weight: 850; font-size: 0.8rem;
-      }
-
-      .navRight { display: flex; align-items: center; gap: 0.75rem; }
-      .navLinks { display: flex; align-items: center; gap: 0.8rem; font-size: 0.9rem; }
-      .navLinks a { padding: 0.35rem 0.65rem; border-radius: 999px; color: var(--muted); }
-      .navLinks a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
-
-      .cta {
-        padding: 0.45rem 0.9rem;
-        border-radius: 999px;
-        background: var(--accent);
-        font-size: 0.85rem;
-        font-weight: 800;
-        color: #fff;
-        box-shadow: 0 10px 26px rgba(229, 9, 20, 0.45);
-      }
-
-      .langPicker { display: inline-flex; align-items: center; gap: 0.35rem; }
-      .flagBtn {
-        border: 1px solid rgba(255,255,255,0.14);
-        background: rgba(255,255,255,0.04);
-        border-radius: 999px;
-        padding: 0.25rem 0.45rem;
-        cursor: pointer;
-        font-size: 1rem;
-        line-height: 1;
-        opacity: 0.75;
-      }
-      .flagBtn.active { opacity: 1; border-color: rgba(229, 9, 20, 0.55); box-shadow: 0 0 0 1px rgba(229, 9, 20, 0.25); }
-
-      main { padding: 2.4rem 0 3.3rem; }
-      .pageTitle { font-size: clamp(2.0rem, 3.0vw + 0.7rem, 3.0rem); margin: 0; }
-      .subtitle { color: var(--muted); margin-top: 0.6rem; max-width: 62rem; }
-
-      .grid {
-        margin-top: 1.7rem;
-        display: grid;
-        grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
-        gap: 1.2rem;
-        align-items: start;
-      }
-
-      .card {
-        background: radial-gradient(circle at top left, #151520, #050509 55%);
-        border-radius: var(--cardRadius);
-        border: 1px solid var(--border);
-        padding: 1.2rem;
-        box-shadow: var(--shadowSoft);
-      }
-
-      .carList { display: grid; gap: 0.75rem; margin-top: 0.8rem; }
-      .carList {
-	max-height: 520px;
-  	overflow: auto;
-  	padding-right: 6px;
-      }
-
-      .carRow {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 0.75rem;
-        padding: 0.75rem 0.9rem;
-        border-radius: 14px;
-        border: 1px solid rgba(255,255,255,0.10);
-        background: rgba(255,255,255,0.02);
-        cursor: pointer;
-      }
-      .carRow:hover { border-color: rgba(255,255,255,0.18); }
-      .carRow.active { border-color: rgba(229,9,20,0.45); box-shadow: 0 0 0 1px rgba(229,9,20,0.25); }
-      .carRow.disabled { opacity: 0.55; cursor: not-allowed; }
-      .carRow strong { display: block; font-size: 0.95rem; }
-      .carRow span { display: block; font-size: 0.8rem; color: var(--muted); }
-
-      .smallBtn {
-        border-radius: 999px;
-        padding: 0.45rem 0.85rem;
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        background: rgba(255, 255, 255, 0.04);
-        color: var(--text);
-        cursor: pointer;
-        font-size: 0.85rem;
-        font-weight: 800;
-      }
-      .smallBtn:disabled { cursor: not-allowed; opacity: 0.6; }
-
-      .badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        font-size: 0.72rem;
-        padding: 0.22rem 0.55rem;
-        border-radius: 999px;
-        border: 1px solid rgba(255,255,255,0.18);
-        color: var(--muted);
-        width: fit-content;
-        background: rgba(255,255,255,0.03);
-      }
-      .badgeAvailable { border-color: rgba(74,222,128,0.35); color: #86efac; background: rgba(74,222,128,0.08); }
-      .badgeSoon { border-color: rgba(251,191,36,0.35); color: #fbbf24; background: rgba(251,191,36,0.08); }
-
-      .stage {
-        border-radius: 28px;
-        border: 1px solid rgba(255,255,255,0.10);
-        background:
-          radial-gradient(circle at 20% 10%, rgba(229, 9, 20, 0.18), transparent 42%),
-          radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.06), transparent 45%),
-          rgba(10, 10, 18, 0.65);
-        overflow: hidden;
-        box-shadow: var(--shadowSoft);
-        padding: 1.05rem;
-      }
-
-      .car3dWrap {
-        position: relative;
-        height: 340px;
-        display: grid;
-        place-items: center;
-        perspective: 1200px;
-      }
-
-      .platform {
-        position: absolute;
-        bottom: 46px;
-        width: min(520px, 92%);
-        height: 56px;
-        border-radius: 999px;
-        background: radial-gradient(closest-side, rgba(255,255,255,0.13), rgba(255,255,255,0.04), transparent);
-        transform: translateZ(-70px);
-      }
-
-      .car3d {
-        width: min(560px, 96%);
-        height: 280px;
-        border-radius: 24px;
-        overflow: hidden;
-        transform-style: preserve-3d;
-        transform: rotateX(12deg) rotateY(-18deg);
-        transition: transform 0.35s ease, filter 0.35s ease;
-        box-shadow: 0 30px 80px rgba(0,0,0,0.55);
-        border: 1px solid rgba(255,255,255,0.14);
-        position: relative;
-        background: rgba(0,0,0,0.2);
-      }
-
-      .car3d:hover { transform: rotateX(10deg) rotateY(-10deg) translateY(-2px); filter: saturate(1.05) contrast(1.05); }
-      .car3d img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.08); display: block; }
-
-      .carOverlay {
-        position: absolute;
-        inset: 0;
-        background:
-          linear-gradient(to top, rgba(5,5,9,0.85), transparent 55%),
-          radial-gradient(circle at 15% 15%, rgba(229, 9, 20, 0.18), transparent 55%);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 1rem;
-        gap: 0.3rem;
-      }
-
-      .carName { margin: 0; font-size: 1.1rem; }
-      .carMeta { margin: 0; color: var(--muted); font-size: 0.9rem; max-width: 44rem; }
-
-      .btnRow { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-top: 1.0rem; }
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 999px;
-        padding: 0.65rem 1.0rem;
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        background: rgba(255, 255, 255, 0.04);
-        color: var(--text);
-        cursor: pointer;
-        font-size: 0.9rem;
-        font-weight: 850;
-      }
-      .btnPrimary { background: linear-gradient(135deg, var(--accent), #ff3b3b); border: none; }
-
-      .tableWrap { overflow: auto; border-radius: 14px; border: 1px solid rgba(255,255,255,0.10); margin-top: 1.0rem; }
-      table { width: 100%; border-collapse: collapse; min-width: 760px; }
-      th, td { padding: 0.75rem 0.8rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); }
-      th { color: var(--muted); font-weight: 850; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.12em; }
-      td { font-size: 0.95rem; }
-
-      .muted { color: var(--muted); font-size: 0.92rem; line-height: 1.65; }
-
-      footer { border-top: 1px solid rgba(255, 255, 255, 0.08); padding: 1.5rem 0; font-size: 0.78rem; color: var(--muted); }
-
-      @media (max-width: 980px) { .grid { grid-template-columns: minmax(0, 1fr); } }
-      @media (max-width: 760px) { .navLinks { display: none; } }
-      @media (max-width: 640px) { header { position: static; background: transparent; } .container { padding: 0 1rem; } }
-    </style>
-
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  </head>
-
-  <body>
-    <div id="root"></div>
-
-    <script type="text/babel">
-      const { useEffect, useState } = React;
-
-      const IMG = {
-        hero: "../images/image00100.jpg",
-        car458: "../images/image00200.png",
-        carPortofino: "../images/image00300.jpg",
-        car256: "../images/image00400.jpg"
-      };
-
-      const CARS = [
-        {
-          id: "458",
-          name: "Ferrari 458 Italia",
-          status: "available",
-          image: IMG.car458,
-          meta: {
-            en: "Naturally aspirated, direct, iconic. The reference point for a pure mid engine experience.",
-            de: "Saugmotor, direkt, ikonisch. Referenz für ein pures Mittelmotor Erlebnis.",
-            it: "Aspirato, diretto, iconico. Riferimento per una vera esperienza mid engine."
-          }
-        },
-        {
-          id: "portofino",
-          name: "Ferrari Portofino",
-          status: "soon",
-          image: IMG.carPortofino,
-          meta: {
-            en: "Grand tourer elegance. Listed for expansion. Not bookable yet.",
-            de: "Grand Tourer Eleganz. Für Expansion geplant. Noch nicht buchbar.",
-            it: "Eleganza grand tourer. Prevista per espansione. Non prenotabile."
-          }
-        },
-        {
-          id: "256gts",
-          name: "Ferrari 256 GTS",
-          status: "soon",
-          image: IMG.car256,
-          meta: {
-            en: "Future classic slot. Grayed out until available.",
-            de: "Future Classic Slot. Ausgegraut bis verfügbar.",
-            it: "Slot future classic. Disabilitata finché non disponibile."
+    function useExcel(urlStr, mapRowFn){
+      const [data,setData]=useState(null);
+      const [loaded,setLoaded]=useState(false);
+      const [error,setError]=useState("");
+      useEffect(() => {
+        let cancelled=false;
+        async function load(){
+          try{
+            const url = new URL(urlStr);
+            url.searchParams.set("ts", String(Date.now()));
+            const res = await fetch(url.toString(), { cache: "no-store" });
+            if(!res.ok) throw new Error(`HTTP ${res.status} while fetching ${url.toString()}`);
+            const buf = await res.arrayBuffer();
+            const wb = window.XLSX.read(buf, { type:"array" });
+            const ws = wb.Sheets[wb.SheetNames[0]];
+            const rows = window.XLSX.utils.sheet_to_json(ws, { defval:"" });
+            const out = rows.map(mapRowFn).filter(Boolean);
+            if(!cancelled){ setData(out); setLoaded(true); setError(""); }
+          }catch(e){
+            if(!cancelled){ setData(null); setLoaded(true); setError(String(e?.message || e)); }
           }
         }
+        load();
+        return () => { cancelled=true; }
+      }, [urlStr]);
+      return { data, loaded, error };
+    }
+
+    function usePackages(){
+      const fallback = [
+        { package_id:"P6_L", duration:"6h", km:"80", pricing_chf:790, label_en:"Signature Half Day", label_de:"Signature Halbtag", label_it:"Signature Mezza giornata", sort_order:10 }
       ];
+      const { data, loaded, error } = useExcel(DATA.packages, (row) => {
+        const id = String(row.package_id ?? row.id ?? "").trim();
+        if(!id) return null;
+        const active = String(row.active ?? "").trim().toUpperCase();
+        if(active === "N") return null;
+        const price = Number(row.pricing_chf ?? "");
+        const sort = Number(row.sort_order ?? 9999);
+        return {
+          package_id: id,
+          duration: String(row.duration ?? "").trim(),
+          km: String(row.km ?? "").trim(),
+          pricing_chf: Number.isFinite(price) ? price : null,
+          label_en: String(row.label_en ?? "").trim(),
+          label_de: String(row.label_de ?? "").trim(),
+          label_it: String(row.label_it ?? "").trim(),
+          sort_order: Number.isFinite(sort) ? sort : 9999
+        };
+      });
+      const packages = useMemo(() => {
+        const src = (data && data.length) ? data : fallback;
+        return [...src].sort((a,b) => (a.sort_order ?? 9999) - (b.sort_order ?? 9999));
+      }, [data]);
+      return { packages, loaded, error };
+    }
 
-      const PACKAGES = [
-        { name: "6h", km: "80 km", limited: "790 CHF", unlimited: "890 CHF", note: { en: "Short shoots, city experience", de: "Kurze Shootings, City Experience", it: "Shooting breve, esperienza città" } },
-        { name: "12h", km: "150 km", limited: "1290 CHF", unlimited: "1390 CHF", note: { en: "Wedding day, full day route", de: "Hochzeitstag, Tagesroute", it: "Giornata matrimonio, percorso giorno" } },
-        { name: "24h", km: "250 km", limited: "1490 CHF", unlimited: "1690 CHF", note: { en: "Overnight escape", de: "Overnight Escape", it: "Fuga con notte" } },
-        { name: "Weekend Fri to Sun", km: "500 km", limited: "2290 CHF", unlimited: "2590 CHF", note: { en: "Swiss tour ready", de: "Bereit für Schweiz Tour", it: "Perfetto per tour Svizzera" } },
-        { name: "Full week", km: "1000 km", limited: "3990 CHF", unlimited: "-", note: { en: "Campaigns and creators", de: "Kampagnen und Creator", it: "Campagne e creator" } }
+    function LanguagePicker({ lang, onChange }){
+      const items = [
+        { code:"en", flag:"🇬🇧" },
+        { code:"de", flag:"🇩🇪" },
+        { code:"it", flag:"🇮🇹" }
       ];
+      return (
+        <div className="langPicker">
+          {items.map(it => (
+            <button key={it.code} className={it.code === lang ? "flagBtn active":"flagBtn"} onClick={() => onChange(it.code)} type="button">
+              {it.flag}
+            </button>
+          ))}
+        </div>
+      );
+    }
 
-      const OPTIONS = [
-        { key: "deliveryCity", price: "120 CHF" },
-        { key: "deliveryOutside", price: "2 CHF per km" },
-        { key: "extraDriver", price: "150 CHF" },
-        { key: "gift", price: "90 CHF" },
-        { key: "commercial", price: "500 CHF per day" },
-        { key: "chauffeur", price: "On request" }
-      ];
+    function Nav({ lang, setLang }){
+      const t = I18N[lang] || I18N.en;
+      const [open,setOpen]=useState(false);
+      const close=() => setOpen(false);
 
-      const I18N = {
-        en: {
-          navHome: "Home",
-          navGarage: "Garage",
-          navBlog: "Blog",
-          navRequest: "Request date",
-          title: "Pricing details",
-          subtitle: "Select the car, then choose a package. Deposit, extra mileage, unlimited packages, and options are listed transparently.",
-          chooseCar: "Choose your car",
-          available: "Available",
-          comingSoon: "Coming soon",
-          selectedCar: "Selected car",
-          openGarage: "Open full garage",
-          goBooking: "Go to booking",
-          packages: "Packages",
-          includedKm: "Included mileage",
-          limited: "Limited mileage",
-          unlimited: "Unlimited mileage",
-          notes: "Notes",
-          depositTitle: "Deposit and screening",
-          depositText: "A refundable security deposit is required before confirmation. Typical deposit starts from 3000 CHF and may vary by model and use case. Driver screening applies for all bookings.",
-          mileageTitle: "Extra mileage and unlimited rules",
-          mileageText: "Extra mileage for limited packages is charged at 5 CHF per km. Unlimited mileage is intended for normal road use. No track use. No racing. Reasonable use aligned with rental duration.",
-          optionsTitle: "Options",
-          option: "Option",
-          price: "Price",
-          deliveryCity: "Delivery and pickup in Zurich city",
-          deliveryOutside: "Delivery outside Zurich",
-          extraDriver: "Additional driver",
-          gift: "Gift presentation",
-          commercial: "Commercial photo and video usage",
-          chauffeur: "Chauffeur service"
-        },
-        de: {
-          navHome: "Home",
-          navGarage: "Garage",
-          navBlog: "Blog",
-          navRequest: "Datum anfragen",
-          title: "Preise im Detail",
-          subtitle: "Auto wählen, dann Paket wählen. Kaution, Zusatzkilometer, Unlimited und Optionen sind transparent gelistet.",
-          chooseCar: "Auto wählen",
-          available: "Verfügbar",
-          comingSoon: "Kommt bald",
-          selectedCar: "Gewähltes Auto",
-          openGarage: "Garage öffnen",
-          goBooking: "Zur Buchung",
-          packages: "Pakete",
-          includedKm: "Inklusive Kilometer",
-          limited: "Limitierte Kilometer",
-          unlimited: "Unlimited Kilometer",
-          notes: "Hinweise",
-          depositTitle: "Kaution und Screening",
-          depositText: "Eine rückerstattbare Kaution ist vor Bestätigung erforderlich. Typisch ab 3000 CHF, abhängig von Modell und Use Case. Fahrer Screening gilt für alle Buchungen.",
-          mileageTitle: "Zusatzkilometer und Regeln für unlimited",
-          mileageText: "Zusatzkilometer: 5 CHF pro km. Unlimited ist für normale Strassennutzung gedacht. Kein Track. Kein Racing. Angemessene Nutzung zur Mietdauer.",
-          optionsTitle: "Optionen",
-          option: "Option",
-          price: "Preis",
-          deliveryCity: "Lieferung und Abholung in Zürich Stadt",
-          deliveryOutside: "Lieferung ausserhalb Zürich",
-          extraDriver: "Zusätzlicher Fahrer",
-          gift: "Geschenk Präsentation",
-          commercial: "Kommerzielle Foto und Video Nutzung",
-          chauffeur: "Chauffeur Service"
-        },
-        it: {
-          navHome: "Home",
-          navGarage: "Garage",
-          navBlog: "Blog",
-          navRequest: "Richiedi data",
-          title: "Prezzi dettagliati",
-          subtitle: "Seleziona l auto, poi scegli un pacchetto. Deposito, extra km, illimitato e opzioni sono mostrati in modo trasparente.",
-          chooseCar: "Seleziona auto",
-          available: "Disponibile",
-          comingSoon: "In arrivo",
-          selectedCar: "Auto selezionata",
-          openGarage: "Apri la garage",
-          goBooking: "Vai alla prenotazione",
-          packages: "Pacchetti",
-          includedKm: "Km inclusi",
-          limited: "Km limitati",
-          unlimited: "Km illimitati",
-          notes: "Note",
-          depositTitle: "Deposito e screening",
-          depositText: "È richiesto un deposito cauzionale rimborsabile prima della conferma. Tipicamente da 3000 CHF e può variare per modello e caso d uso. Screening guidatore per tutte le richieste.",
-          mileageTitle: "Extra km e regole illimitato",
-          mileageText: "Extra km: 5 CHF per km. Illimitato per uso stradale normale. No pista. No gare. Uso ragionevole in linea con la durata.",
-          optionsTitle: "Opzioni",
-          option: "Opzione",
-          price: "Prezzo",
-          deliveryCity: "Consegna e ritiro a Zurigo città",
-          deliveryOutside: "Consegna fuori Zurigo",
-          extraDriver: "Guidatore aggiuntivo",
-          gift: "Confezione regalo",
-          commercial: "Uso commerciale foto e video",
-          chauffeur: "Servizio chauffeur"
-        }
-      };
-
-      function getParam(name) {
-        const p = new URLSearchParams(window.location.search);
-        return p.get(name);
-      }
-
-      function setParam(name, value) {
-        const url = new URL(window.location.href);
-        if (!value) url.searchParams.delete(name);
-        else url.searchParams.set(name, value);
-        window.history.replaceState({}, "", url.toString());
-      }
-
-      function readLang() {
-        const fromUrl = getParam("lang");
-        if (fromUrl && I18N[fromUrl]) return fromUrl;
-        const fromStore = localStorage.getItem("lo_lang");
-        if (fromStore && I18N[fromStore]) return fromStore;
-        return "en";
-      }
-
-      function readCar() {
-        const fromStore = localStorage.getItem("lo_car");
-        const ok = CARS.find((c) => c.id === fromStore && c.status === "available");
-        return ok ? ok.id : "458";
-      }
-
-      function LanguagePicker({ lang, onChange }) {
-        const items = [
-          { code: "en", flag: "🇬🇧", title: "English" },
-          { code: "de", flag: "🇩🇪", title: "Deutsch" },
-          { code: "it", flag: "🇮🇹", title: "Italiano" }
-        ];
-        return (
-          <div className="langPicker" aria-label="Language">
-            {items.map((it) => (
-              <button
-                key={it.code}
-                className={it.code === lang ? "flagBtn active" : "flagBtn"}
-                title={it.title}
-                onClick={() => onChange(it.code)}
-                type="button"
-              >
-                {it.flag}
-              </button>
-            ))}
-          </div>
-        );
-      }
-
-      function App() {
-        const [lang, _setLang] = useState(readLang());
-        const [carId, setCarId] = useState(readCar());
-        const t = I18N[lang] || I18N.en;
-
-        useEffect(() => {
-          localStorage.setItem("lo_lang", lang);
-          document.documentElement.lang = lang;
-          setParam("lang", lang);
-        }, [lang]);
-
-        useEffect(() => {
-          localStorage.setItem("lo_car", carId);
-        }, [carId]);
-
-        function setLang(next) { if (!I18N[next]) return; _setLang(next); }
-
-        function homeLink(hash) {
-          const url = new URL("../home.html", window.location.href);
-          url.searchParams.set("lang", lang);
-          url.hash = hash || "";
-          return url.pathname + url.search + (hash ? "#" + hash : "");
-        }
-
-        function blogLink() {
-          const url = new URL("blog.html", window.location.href);
-          url.searchParams.set("lang", lang);
-          return url.pathname + url.search;
-        }
-
-        function garageLink() {
-          const url = new URL("garage.html", window.location.href);
-          url.searchParams.set("lang", lang);
-          return url.pathname + url.search;
-        }
-
-        const selectedCar = CARS.find((c) => c.id === carId) || CARS[0];
-        const badgeText = selectedCar.status === "available" ? t.available : t.comingSoon;
-        const badgeClass = selectedCar.status === "available" ? "badge badgeAvailable" : "badge badgeSoon";
-
-        return (
-          <div>
-            <header>
-              <div className="container">
-                <div className="nav">
-                  <a href={homeLink("top")} className="brand">
-                    <div className="brandMark">LO</div>
-                    <span>Luxury Obsession</span>
-                  </a>
-
-                  <div className="navRight">
-                    <div className="navLinks" aria-label="Primary">
-                      <a href={homeLink("top")}>{t.navHome}</a>
-                      <a href={garageLink()}>{t.navGarage}</a>
-                      <a href={blogLink()}>{t.navBlog}</a>
-                      <a href={homeLink("booking")} className="cta">{t.navRequest}</a>
-                    </div>
-                    <LanguagePicker lang={lang} onChange={setLang} />
-                  </div>
-                </div>
+      return (
+        <header>
+          <div className="container">
+            <div className="navInner">
+              <a href={buildUrl("../home.html", lang, "top")} className="brand"><div className="brandMark">LO</div><span>Luxury Obsession</span></a>
+              <div className="navRight">
+                <nav className="navLinks">
+                  <a href={buildUrl("../home.html", lang, "top")}>{t.home}</a>
+                  <a href={buildUrl("pricing.html", lang, "garage")}>{t.garage}</a>
+                  <a href={buildUrl("pricing.html", lang, "packages")}>{t.packages}</a>
+                  <a href={buildUrl("blog.html", lang)}>{t.blog}</a>
+                  <a href={buildUrl("../home.html", lang, "booking")} className="navCta">{t.request}</a>
+                </nav>
+                <LanguagePicker lang={lang} onChange={(x) => { setLang(x); close(); }} />
+                <button type="button" className="hamburger" onClick={() => setOpen(v => !v)} aria-label="menu">
+                  <div className="hamburgerLines"><span></span><span></span><span></span></div>
+                </button>
               </div>
-            </header>
+            </div>
 
-            <main className="container">
-              <h1 className="pageTitle">{t.title}</h1>
-              <p className="subtitle">{t.subtitle}</p>
+            {open && (
+              <div className="mobileMenu">
+                <a href={buildUrl("../home.html", lang, "top")} onClick={close}>{t.home}<span>›</span></a>
+                <a href={buildUrl("pricing.html", lang, "garage")} onClick={close}>{t.garage}<span>›</span></a>
+                <a href={buildUrl("pricing.html", lang, "packages")} onClick={close}>{t.packages}<span>›</span></a>
+                <a href={buildUrl("blog.html", lang)} onClick={close}>{t.blog}<span>›</span></a>
+                <div className="mobileMenuDivider"></div>
+                <a className="mobileMenuCta" href={buildUrl("../home.html", lang, "booking")} onClick={close}>{t.request}</a>
+              </div>
+            )}
+          </div>
+        </header>
+      );
+    }
 
-              <div className="grid">
-                <div className="card">
-                  <h3 style={{ marginTop: 0 }}>{t.chooseCar}</h3>
+    function App(){
+      const [lang,_setLang]=useState(readLang());
+      const pack = usePackages();
+      const [carId,setCarId]=useState("458");
+      const car = useMemo(() => CARS.find(c => c.id === carId) || CARS[0], [carId]);
+      const labelKey = `label_${lang}`;
 
-                  <div className="carList">
-                    {CARS.map((c) => {
-                      const isDisabled = c.status !== "available";
-                      const isActive = c.id === carId;
-                      const cls = ["carRow", isActive ? "active" : "", isDisabled ? "disabled" : ""].filter(Boolean).join(" ");
+      useEffect(() => {
+        localStorage.setItem("lo_lang", lang);
+        document.documentElement.lang = lang;
+        setParamReplace("lang", lang);
+      }, [lang]);
 
-                      return (
-                        <div
-                          key={c.id}
-                          className={cls}
-                          onClick={() => { if (!isDisabled) setCarId(c.id); }}
-                          role="button"
-                          tabIndex={0}
-                        >
-                          <div>
-                            <strong>{c.name}</strong>
-                            <span>{isDisabled ? t.comingSoon : t.available}</span>
+      function setLang(next){ if(!I18N[next]) return; _setLang(next); }
+
+      return (
+        <div>
+          <Nav lang={lang} setLang={setLang} />
+
+          <main>
+            <section id="garage">
+              <div className="containerNarrow">
+                <h1>Garage and pricing</h1>
+                <p>Package pricing is loaded from <code>{DATA.packages}</code>. Ferrari 458 Italia is available now; other models are coming soon.</p>
+
+                <div className="grid2">
+                  <div className="card">
+                    <h3 style={{ marginTop: 0 }}>Choose your Ferrari</h3>
+                    <div className="cars">
+                      {CARS.map(c => {
+                        const isSoon = c.status !== "available";
+                        return (
+                          <div key={c.id} className="carRow" style={{ opacity: isSoon ? 0.55 : 1, cursor: isSoon ? "not-allowed" : "pointer" }} onClick={() => !isSoon && setCarId(c.id)}>
+                            <div>
+                              <div className="carName">{c.name}</div>
+                              <div style={{ marginTop:"0.15rem", fontSize:"0.82rem", color:"var(--muted)" }}>{isSoon ? "Coming soon" : "Available now"}</div>
+                            </div>
+                            <span className={isSoon ? "pill pillSoon" : "pill pillAvail"}>{isSoon ? "Soon" : "Available"}</span>
                           </div>
-                          <button
-                            className="smallBtn"
-                            type="button"
-                            disabled={isDisabled}
-                            onClick={(e) => { e.stopPropagation(); if (!isDisabled) setCarId(c.id); }}
-                          >
-                            {isDisabled ? t.comingSoon : t.available}
-                          </button>
-                        </div>
-                      );
-                    })}
+                        );
+                      })}
+                    </div>
                   </div>
 
-                  <p className="muted" style={{ marginTop: "0.9rem" }}>
-                    {t.selectedCar}: <strong>{selectedCar.name}</strong>
-                  </p>
+                  <div>
+                    <img className="model" src={car.image} alt={car.name} />
+                    <p style={{ marginTop:"0.6rem" }}>3D style display placeholder. Replace with an actual WebGL or Three.js model later.</p>
+                  </div>
                 </div>
 
-                <div className="stage">
-                  <div className="car3dWrap">
-                    <div className="platform"></div>
-                    <div className="car3d" title={selectedCar.name}>
-                      <img src={selectedCar.image} alt={selectedCar.name} />
-                      <div className="carOverlay">
-                        <span className={badgeClass}>{badgeText}</span>
-                        <h3 className="carName">{selectedCar.name}</h3>
-                        <p className="carMeta">{selectedCar.meta[lang] || selectedCar.meta.en}</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="btnRow">
-                    <a className="btn" href={garageLink()}>{t.openGarage}</a>
-                    <a className="btn btnPrimary" href={homeLink("booking")}>{t.goBooking}</a>
-                  </div>
-
-                  <div className="card" style={{ marginTop: "1.1rem" }}>
-                    <h3 style={{ marginTop: 0 }}>{t.packages}</h3>
-
-                    <div className="tableWrap">
-                      <table>
-                        <thead>
-                          <tr>
-                            <th>Package</th>
-                            <th>{t.includedKm}</th>
-                            <th>{t.limited}</th>
-                            <th>{t.unlimited}</th>
-                            <th>{t.notes}</th>
+                <div className="card" style={{ marginTop:"1.2rem" }}>
+                  <h3 style={{ marginTop: 0 }} id="packages">Packages</h3>
+                  {!pack.loaded ? (
+                    <p>Loading packages…</p>
+                  ) : (
+                    <table>
+                      <thead>
+                        <tr><th>Package</th><th>Duration</th><th>Km</th><th>Price</th></tr>
+                      </thead>
+                      <tbody>
+                        {pack.packages.map(p => (
+                          <tr key={p.package_id}>
+                            <td><strong>{(p[labelKey] || p.label_en || p.package_id).split(" · ")[0]}</strong><div style={{ color:"var(--muted)", marginTop:"0.2rem" }}>{p.package_id}</div></td>
+                            <td>{p.duration}</td>
+                            <td>{String(p.km).toLowerCase() === "unlimited" ? "Unlimited" : `${p.km} km`}</td>
+                            <td className="price">{p.pricing_chf} CHF</td>
                           </tr>
-                        </thead>
-                        <tbody>
-                          {PACKAGES.map((p) => (
-                            <tr key={p.name}>
-                              <td><strong>{p.name}</strong></td>
-                              <td>{p.km}</td>
-                              <td>{p.limited}</td>
-                              <td>{p.unlimited}</td>
-                              <td className="muted">{p.note[lang] || p.note.en}</td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
+                        ))}
+                      </tbody>
+                    </table>
+                  )}
+                  {pack.error ? <p style={{ color:"var(--muted)" }}>Could not load {DATA.packages}. Using fallback.</p> : null}
+                </div>
 
-                    <div style={{ marginTop: "1.0rem" }}>
-                      <h3 style={{ marginBottom: "0.35rem" }}>{t.depositTitle}</h3>
-                      <p className="muted" style={{ marginTop: 0 }}>{t.depositText}</p>
-
-                      <h3 style={{ marginBottom: "0.35rem" }}>{t.mileageTitle}</h3>
-                      <p className="muted" style={{ marginTop: 0 }}>{t.mileageText}</p>
-
-                      <h3 style={{ marginBottom: "0.35rem" }}>{t.optionsTitle}</h3>
-                      <div className="tableWrap">
-                        <table style={{ minWidth: "520px" }}>
-                          <thead>
-                            <tr>
-                              <th>{t.option}</th>
-                              <th>{t.price}</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {OPTIONS.map((o) => (
-                              <tr key={o.key}>
-                                <td>{t[o.key]}</td>
-                                <td><strong>{o.price}</strong></td>
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-
+                <div className="card" style={{ marginTop:"1.2rem" }}>
+                  <h3 style={{ marginTop: 0 }}>Gallery</h3>
+                  <div className="gallery">
+                    <img src="../images/image00100.jpg" alt="gallery" />
+                    <img src="../images/image00200.jpg" alt="gallery" />
+                    <img src="../images/image00300.jpg" alt="gallery" />
+                    <img src="../images/image00400.jpg" alt="gallery" />
+                    <img src="../images/image00500.jpg" alt="gallery" />
                   </div>
+                </div>
+
+                <div className="card" style={{ marginTop:"1.2rem" }}>
+                  <h3 style={{ marginTop: 0 }}>Terms and options</h3>
+                  <table>
+                    <tbody>
+                      <tr><th>Deposit</th><td>Example: 2,000 CHF refundable deposit.</td></tr>
+                      <tr><th>Extra mileage</th><td>Example: 5 CHF per extra km (adjust as needed).</td></tr>
+                      <tr><th>Options</th><td>Example: Concierge pickup, second driver, child seat.</td></tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
-            </main>
+            </section>
+          </main>
 
-            <footer>
-              <div className="container">© {new Date().getFullYear()} Luxury Obsession.</div>
-            </footer>
-          </div>
-        );
-      }
+          <footer>
+            <div className="container footerInner">
+              <div>© {new Date().getFullYear()} Luxury Obsession.</div>
+              <div>Ferrari only experiences, Switzerland.</div>
+            </div>
+          </footer>
+        </div>
+      );
+    }
 
-      const root = ReactDOM.createRoot(document.getElementById("root"));
-      root.render(<App />);
-    </script>
-  </body>
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
+</body>
 </html>
