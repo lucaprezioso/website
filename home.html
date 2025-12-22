@@ -2,25 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Luxury Obsession Italia | Ferrari 458 Rental Switzerland</title>
-
-    <meta
-      name="description"
-      content="Ferrari 458 Italia rental with private host service. Pickup near Zurich, drive anywhere in Switzerland. Transparent packages, clear terms, and booking requests."
-    />
+    <title>Luxury Obsession | Ferrari Experiences in Switzerland</title>
+    <meta name="description" content="Ferrari only luxury experiences in Switzerland. Ferrari 458 Italia available now. Choose a package, check availability, and request your booking." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index, follow" />
-
-    <meta property="og:title" content="Luxury Obsession Italia | Ferrari 458 Rental Switzerland" />
-    <meta
-      property="og:description"
-      content="Ferrari 458 Italia, privately hosted. Pickup near Zurich, Switzerland wide routes, transparent packages."
-    />
+    <meta property="og:title" content="Luxury Obsession | Ferrari Experiences in Switzerland" />
+    <meta property="og:description" content="Ferrari only luxury experiences in Switzerland. Ferrari 458 Italia available now." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="images/image00100.jpg" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-
     <link rel="icon" href="images/image00600.jpg" />
 
     <link rel="alternate" hreflang="en" href="home.html?lang=en" />
@@ -28,380 +17,138 @@
     <link rel="alternate" hreflang="it" href="home.html?lang=it" />
     <link rel="alternate" hreflang="x-default" href="home.html?lang=en" />
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "AutoRental",
-        "name": "Luxury Obsession Italia",
-        "url": "home.html",
-        "image": ["images/image00100.jpg"],
-        "description": "Ferrari 458 Italia rental with private host service. Pickup near Zurich, drive anywhere in Switzerland. Transparent packages, clear terms, and booking requests.",
-        "areaServed": ["Switzerland", "Zurich"],
-        "telephone": "+41 79 123 45 67",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Uster",
-          "addressRegion": "ZH",
-          "addressCountry": "CH"
-        }
-      }
-    </script>
-
     <style>
-      :root {
+      :root{
         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        color-scheme: dark light;
-        --bg: #050509;
-        --accent: #e50914;
-        --accentSoft: rgba(229, 9, 20, 0.16);
-        --text: #f5f5f5;
-        --muted: #a3a3a3;
-        --border: #262637;
-        --cardRadius: 18px;
-        --shadowSoft: 0 18px 45px rgba(0, 0, 0, 0.4);
-        --maxWidth: 1120px;
+        --bg:#050509; --accent:#e50914; --accentSoft: rgba(229,9,20,0.16);
+        --text:#f5f5f5; --muted:#a3a3a3; --border:#262637;
+        --radius:18px; --shadow: 0 18px 45px rgba(0,0,0,0.4); --max:1120px;
       }
-
-      * { box-sizing: border-box; }
-      body { margin: 0; background: radial-gradient(circle at top, #191621 0, var(--bg) 55%); color: var(--text); }
-      a { color: inherit; text-decoration: none; }
-
-      .page { min-height: 100vh; display: flex; flex-direction: column; }
-
-      header {
-        position: sticky;
-        top: 0;
-        z-index: 50;
+      *{box-sizing:border-box}
+      body{margin:0;background: radial-gradient(circle at top, #191621 0, var(--bg) 55%); color:var(--text)}
+      a{color:inherit;text-decoration:none}
+      header{
+        position:sticky; top:0; z-index:50;
         backdrop-filter: blur(12px);
-        background: linear-gradient(to bottom, rgba(5, 5, 9, 0.92), rgba(5, 5, 9, 0.62), transparent);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        background: linear-gradient(to bottom, rgba(5,5,9,0.92), rgba(5,5,9,0.62), transparent);
+        border-bottom: 1px solid rgba(255,255,255,0.03);
       }
-
-      .container { max-width: var(--maxWidth); margin: 0 auto; padding: 0 1.5rem; }
-
-      .navInner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.75rem 0; }
-
-      .brand { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.95rem; letter-spacing: 0.16em; text-transform: uppercase; }
-      .brandMark {
-        width: 30px; height: 30px; border-radius: 999px;
+      .container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
+      .navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.75rem 0}
+      .brand{display:inline-flex;align-items:center;gap:0.75rem;font-size:0.95rem;letter-spacing:0.16em;text-transform:uppercase}
+      .brandMark{
+        width:30px;height:30px;border-radius:999px;
         background: radial-gradient(circle at 30% 30%, #ff5a5a, #7b0209);
         box-shadow: 0 0 20px rgba(229, 9, 20, 0.7);
-        display: grid; place-items: center;
-        font-weight: 800; font-size: 0.8rem;
+        display:grid;place-items:center;font-weight:850;font-size:0.8rem
       }
-
-      .navRight { display: flex; align-items: center; gap: 0.65rem; }
-
-      .navLinks { display: flex; align-items: center; gap: 0.8rem; font-size: 0.9rem; }
-      .navLinks a { padding: 0.35rem 0.65rem; border-radius: 999px; color: var(--muted); transition: color 0.2s ease, background 0.2s ease; }
-      .navLinks a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
-
-      .navCta {
-        padding: 0.45rem 0.9rem;
-        border-radius: 999px;
-        background: var(--accent);
-        font-size: 0.85rem;
-        font-weight: 700;
-        color: #fff;
-        box-shadow: 0 10px 26px rgba(229, 9, 20, 0.45);
+      .navRight{display:flex;align-items:center;gap:0.65rem}
+      .navLinks{display:flex;align-items:center;gap:0.8rem;font-size:0.9rem}
+      .navLinks a{padding:0.35rem 0.65rem;border-radius:999px;color:var(--muted);transition:0.2s}
+      .navLinks a:hover{color:var(--text);background:rgba(255,255,255,0.05)}
+      .navCta{
+        padding:0.45rem 0.9rem;border-radius:999px;background:var(--accent);
+        font-size:0.85rem;font-weight:800;color:#fff;box-shadow:0 10px 26px rgba(229,9,20,0.45)
       }
-
-      .langPicker { display: inline-flex; align-items: center; gap: 0.35rem; }
-      .flagBtn {
-        border: 1px solid rgba(255,255,255,0.14);
-        background: rgba(255,255,255,0.04);
-        border-radius: 999px;
-        padding: 0.25rem 0.45rem;
-        cursor: pointer;
-        font-size: 1rem;
-        line-height: 1;
-        opacity: 0.75;
-        transition: opacity 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+      .langPicker{display:inline-flex;align-items:center;gap:0.35rem}
+      .flagBtn{
+        border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.04);
+        border-radius:999px;padding:0.25rem 0.45rem;cursor:pointer;font-size:1rem;line-height:1;opacity:0.75
       }
-      .flagBtn:hover { opacity: 1; transform: translateY(-1px); }
-      .flagBtn.active { opacity: 1; border-color: rgba(229, 9, 20, 0.55); box-shadow: 0 0 0 1px rgba(229, 9, 20, 0.25); }
-
-      .hamburger {
-        display: none;
-        width: 42px;
-        height: 38px;
-        border-radius: 999px;
-        border: 1px solid rgba(255,255,255,0.14);
-        background: rgba(255,255,255,0.04);
-        cursor: pointer;
-        align-items: center;
-        justify-content: center;
+      .flagBtn.active{opacity:1;border-color:rgba(229,9,20,0.55);box-shadow:0 0 0 1px rgba(229,9,20,0.25)}
+      .hamburger{
+        display:none;width:42px;height:38px;border-radius:999px;border:1px solid rgba(255,255,255,0.14);
+        background:rgba(255,255,255,0.04);cursor:pointer;align-items:center;justify-content:center
       }
-      .hamburgerLines { display: grid; gap: 4px; }
-      .hamburgerLines span {
-        width: 18px;
-        height: 2px;
-        border-radius: 999px;
-        background: rgba(245,245,245,0.92);
-        display: block;
+      .hamburgerLines{display:grid;gap:4px}
+      .hamburgerLines span{width:18px;height:2px;border-radius:999px;background:rgba(245,245,245,0.92);display:block}
+      .mobileMenu{
+        margin:0.65rem 0 0.95rem;padding:0.85rem;border-radius:16px;background:rgba(5,5,9,0.92);
+        border:1px solid rgba(255,255,255,0.10);box-shadow:var(--shadow)
       }
+      .mobileMenu a{display:flex;align-items:center;justify-content:space-between;padding:0.7rem 0.75rem;border-radius:12px}
+      .mobileMenu a:hover{background:rgba(255,255,255,0.05)}
+      .mobileMenuDivider{height:1px;background:rgba(255,255,255,0.08);margin:0.55rem 0}
+      .mobileMenuCta{display:flex;justify-content:center;padding:0.75rem 0.85rem;border-radius:14px;background:var(--accent);font-weight:800;color:#fff;box-shadow:0 10px 26px rgba(229,9,20,0.45)}
 
-      .mobileMenu {
-        display: none;
-        margin: 0.65rem 0 0.95rem;
-        padding: 0.85rem;
-        border-radius: 16px;
-        background: rgba(5, 5, 9, 0.92);
-        border: 1px solid rgba(255,255,255,0.10);
-        box-shadow: var(--shadowSoft);
+      main{padding-bottom:2.2rem}
+      section{padding:3.4rem 0}
+      .eyebrow{text-transform:uppercase;letter-spacing:0.24em;font-size:0.7rem;color:var(--muted);margin-bottom:0.75rem}
+      .hero{padding-top:2.2rem}
+      .heroGrid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:2.4rem;align-items:center}
+      .heroTitle{font-size:clamp(2.35rem, 3.2vw + 1rem, 3.55rem);line-height:1.05;margin:0 0 0.75rem}
+      .heroHighlight{background:linear-gradient(to right,#ff7676,#ffb199);-webkit-background-clip:text;background-clip:text;color:transparent}
+      .heroSubtitle{font-size:1.05rem;color:var(--muted);max-width:38rem}
+      .heroPills{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:0.6rem}
+      .heroPill{border-radius:999px;padding:0.3rem 0.8rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);font-size:0.75rem;color:var(--muted)}
+      .heroActions{margin-top:1.9rem;display:flex;flex-wrap:wrap;gap:0.9rem;align-items:center}
+      .btn{border-radius:999px;padding:0.8rem 1.25rem;border:none;outline:none;font-weight:800;cursor:pointer;font-size:0.95rem;display:inline-flex;align-items:center;gap:0.45rem;white-space:nowrap}
+      .btnPrimary{background:linear-gradient(135deg,var(--accent),#ff3b3b);color:#fff;box-shadow:0 15px 35px rgba(229,9,20,0.45)}
+      .btnSecondary{background:rgba(255,255,255,0.02);color:var(--muted);border:1px solid rgba(255,255,255,0.12)}
+      .heroNote{margin-top:1.05rem;font-size:0.82rem;color:var(--muted);line-height:1.6}
+
+      .heroMediaCard{border-radius:32px;overflow:hidden;background:radial-gradient(circle at top left,#ff4949,#050509 52%);box-shadow:var(--shadow);position:relative;min-height:300px;border:1px solid rgba(255,255,255,0.10)}
+      .heroMediaCard video,.heroMediaCard img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.08);filter:saturate(1.06) contrast(1.05)}
+      .heroBadge{position:absolute;bottom:1.15rem;left:1.25rem;right:1.25rem;background:rgba(5,5,9,0.78);padding:0.55rem 0.85rem;border-radius:999px;display:flex;align-items:center;justify-content:space-between;gap:0.6rem;border:1px solid rgba(255,255,255,0.16);font-size:0.75rem}
+      .heroBadgeDot{width:9px;height:9px;border-radius:999px;background:#4ade80;box-shadow:0 0 12px rgba(74,222,128,0.9)}
+      .sectionTitle{font-size:1.75rem;margin:0 0 0.4rem}
+      .sectionSubtitle{font-size:0.95rem;color:var(--muted);max-width:52rem;margin:0}
+      .card{background:radial-gradient(circle at top left,#151520,#050509 55%);border-radius:var(--radius);border:1px solid var(--border);padding:1.3rem;box-shadow:var(--shadow)}
+      .pricingGrid{margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem}
+      .pricingCard h3{margin:0 0 0.25rem;font-size:1.05rem}
+      .pricingPrice{display:flex;align-items:baseline;gap:0.2rem;margin:0.35rem 0 0.45rem}
+      .pricingPrice span:first-child{font-size:1.55rem;font-weight:900}
+      .pricingKm{font-size:0.82rem;color:var(--muted)}
+      .pricingTag{display:inline-block;margin-top:0.35rem;font-size:0.72rem;padding:0.2rem 0.6rem;border-radius:999px;background:var(--accentSoft);color:#ffb4b4}
+      .pricingNote{font-size:0.8rem;color:var(--muted);margin-top:1.25rem}
+
+      .bookingLayout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,0.95fr);gap:1.6rem;margin-top:2rem}
+      .calendar{width:100%;border-collapse:collapse;font-size:0.85rem}
+      .calendar th,.calendar td{text-align:center;padding:0.45rem}
+      .calendar th{font-weight:650;color:var(--muted)}
+      .calendar td{border-radius:10px;cursor:pointer;transition:0.15s}
+      .calendar td.empty{cursor:default}
+      .calendar td.available:hover{background:rgba(255,255,255,0.06)}
+      .calendar td.unavailable{color:#555;text-decoration:line-through;cursor:not-allowed;opacity:0.6}
+      .calendar td.partial{cursor:pointer;border:1px dashed rgba(229,9,20,0.55);background:rgba(229,9,20,0.10)}
+      .calendar td.partial:hover{background:rgba(229,9,20,0.16)}
+      .calendar td.selected{background:var(--accent);color:#fff;box-shadow:0 0 0 1px rgba(255,255,255,0.25);border:1px solid rgba(255,255,255,0.18)}
+      .calendarHeader{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.75rem;font-size:0.9rem;gap:0.6rem}
+      .calendarHeader button{border-radius:999px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.03);padding:0.25rem 0.65rem;color:var(--muted);cursor:pointer;font-size:0.8rem}
+      .calendarLegend{margin-top:0.75rem;font-size:0.75rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:0.75rem}
+      .calendarLegendItem{display:inline-flex;align-items:center;gap:0.35rem}
+      .legendDot{width:10px;height:10px;border-radius:999px}
+      .legendDotAvail{background:rgba(255,255,255,0.18)}
+      .legendDotUnavail{background:#4b5563}
+      .legendDotPartial{background:rgba(229,9,20,0.30);border:1px dashed rgba(229,9,20,0.65)}
+      .legendDotSelected{background:var(--accent)}
+      .bookingForm{display:grid;gap:0.75rem;font-size:0.9rem}
+      .fieldGroup{display:flex;flex-direction:column;gap:0.25rem}
+      label{font-size:0.8rem;color:var(--muted)}
+      input,select,textarea{
+        border-radius:10px;border:1px solid var(--border);background:rgba(10,10,18,0.9);
+        padding:0.5rem 0.7rem;color:var(--text);font-family:inherit;font-size:0.9rem;outline:none
       }
-      .mobileMenu a {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0.7rem 0.75rem;
-        border-radius: 12px;
-        color: rgba(245,245,245,0.92);
+      input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 1px rgba(229,9,20,0.5)}
+      textarea{min-height:84px;resize:vertical}
+      .inlineFields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0.75rem}
+      .couponRow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0.65rem;align-items:end}
+      .applyBtn{
+        border-radius:10px;padding:0.55rem 0.9rem;border:1px solid rgba(255,255,255,0.14);
+        background:rgba(255,255,255,0.04);color:var(--text);cursor:pointer;font-size:0.85rem;font-weight:900
       }
-      .mobileMenu a:hover { background: rgba(255,255,255,0.05); }
-      .mobileMenuDivider { height: 1px; background: rgba(255,255,255,0.08); margin: 0.55rem 0; }
-      .mobileMenuCta {
-        display: flex;
-        justify-content: center;
-        padding: 0.75rem 0.85rem;
-        border-radius: 14px;
-        background: var(--accent);
-        font-weight: 800;
-        color: #fff;
-        margin-top: 0.6rem;
-        box-shadow: 0 10px 26px rgba(229, 9, 20, 0.45);
-      }
-
-      main { flex: 1; }
-      section { padding: 3.6rem 0; }
-
-      .eyebrow { text-transform: uppercase; letter-spacing: 0.24em; font-size: 0.7rem; color: var(--muted); margin-bottom: 0.75rem; }
-
-      .hero { padding-top: 2.25rem; }
-      .heroGrid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 2.4rem; align-items: center; }
-
-      .heroTitle { font-size: clamp(2.35rem, 3.2vw + 1rem, 3.55rem); line-height: 1.05; margin: 0 0 0.75rem; }
-      .heroHighlight { background: linear-gradient(to right, #ff7676, #ffb199); -webkit-background-clip: text; background-clip: text; color: transparent; }
-
-      .heroSubtitle { font-size: 1.05rem; color: var(--muted); max-width: 38rem; }
-
-      .heroPills { margin-top: 1.6rem; display: flex; flex-wrap: wrap; gap: 0.6rem; }
-      .heroPill { border-radius: 999px; padding: 0.3rem 0.8rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); font-size: 0.75rem; color: var(--muted); }
-
-      .heroActions { margin-top: 1.9rem; display: flex; flex-wrap: wrap; gap: 0.9rem; align-items: center; }
-
-      .btn {
-        border-radius: 999px;
-        padding: 0.8rem 1.25rem;
-        border: none;
-        outline: none;
-        font-weight: 750;
-        cursor: pointer;
-        font-size: 0.95rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.45rem;
-        white-space: nowrap;
-      }
-      .btnPrimary { background: linear-gradient(135deg, var(--accent), #ff3b3b); color: #fff; box-shadow: 0 15px 35px rgba(229, 9, 20, 0.45); }
-      .btnSecondary { background: rgba(255,255,255,0.02); color: var(--muted); border: 1px solid rgba(255,255,255,0.12); }
-
-      .heroNote { margin-top: 1.05rem; font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
-
-      .heroMediaCard {
-        border-radius: 32px;
-        overflow: hidden;
-        background: radial-gradient(circle at top left, #ff4949, #050509 52%);
-        box-shadow: var(--shadowSoft);
-        position: relative;
-        min-height: 300px;
-        border: 1px solid rgba(255,255,255,0.10);
-      }
-      .heroMediaCard video, .heroMediaCard img {
-        width: 100%; height: 100%;
-        object-fit: cover;
-        display: block;
-        transform: scale(1.08);
-        filter: saturate(1.06) contrast(1.05);
-      }
-
-      .heroBadge {
-        position: absolute;
-        bottom: 1.15rem;
-        left: 1.25rem;
-        right: 1.25rem;
-        background: rgba(5,5,9,0.78);
-        padding: 0.55rem 0.85rem;
-        border-radius: 999px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 0.6rem;
-        border: 1px solid rgba(255,255,255,0.16);
-        font-size: 0.75rem;
-      }
-      .heroBadgeLeft { display: inline-flex; align-items: center; gap: 0.5rem; }
-      .heroBadgeDot {
-        width: 9px; height: 9px; border-radius: 999px;
-        background: #4ade80;
-        box-shadow: 0 0 12px rgba(74, 222, 128, 0.9);
-      }
-
-      .sectionTitle { font-size: 1.75rem; margin: 0 0 0.4rem; }
-      .sectionSubtitle { font-size: 0.95rem; color: var(--muted); max-width: 52rem; margin: 0; }
-
-      .card {
-        background: radial-gradient(circle at top left, #151520, #050509 55%);
-        border-radius: var(--cardRadius);
-        border: 1px solid var(--border);
-        padding: 1.3rem;
-        box-shadow: var(--shadowSoft);
-      }
-
-      .twoCol { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 2.1rem; margin-top: 2rem; }
-
-      .pillList { display: grid; gap: 0.45rem; font-size: 0.92rem; }
-      .pillItem { display: flex; align-items: center; gap: 0.55rem; }
-      .pillDot { width: 6px; height: 6px; border-radius: 999px; background: var(--accent); }
-
-      .specList { list-style: none; padding: 0; margin: 0; font-size: 0.95rem; }
-      .specList li { margin-bottom: 0.4rem; color: rgba(245,245,245,0.88); }
-
-      .routeGrid { margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; }
-      .routeThumb { width: 100%; height: 150px; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); margin-bottom: 0.9rem; }
-      .routeThumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-      .routeCard h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
-      .routeCard p { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
-
-      .pricingGrid { margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.2rem; }
-      .pricingCard h3 { margin: 0 0 0.25rem; font-size: 1.05rem; }
-      .pricingPrice { display: flex; align-items: baseline; gap: 0.2rem; margin: 0.35rem 0 0.45rem; }
-      .pricingPrice span:first-child { font-size: 1.45rem; font-weight: 850; }
-      .pricingKm { font-size: 0.82rem; color: var(--muted); }
-      .pricingTag { display: inline-block; margin-top: 0.35rem; font-size: 0.72rem; padding: 0.2rem 0.6rem; border-radius: 999px; background: var(--accentSoft); color: #ffb4b4; }
-      .pricingNote { font-size: 0.8rem; color: var(--muted); margin-top: 1.25rem; }
-
-      .bookingLayout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 1.6rem; margin-top: 2rem; }
-
-      .calendar { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-      .calendar th, .calendar td { text-align: center; padding: 0.45rem; }
-      .calendar th { font-weight: 600; color: var(--muted); }
-      .calendar td { border-radius: 10px; cursor: pointer; transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, border 0.15s ease; }
-      .calendar td.empty { cursor: default; }
-      .calendar td.available:hover { background: rgba(255, 255, 255, 0.06); }
-      .calendar td.unavailable { color: #555; text-decoration: line-through; cursor: not-allowed; opacity: 0.6; }
-      .calendar td.partial {
-        cursor: pointer;
-        border: 1px dashed rgba(229, 9, 20, 0.55);
-        background: rgba(229, 9, 20, 0.10);
-      }
-      .calendar td.partial:hover { background: rgba(229, 9, 20, 0.16); }
-      .calendar td.selected { background: var(--accent); color: #fff; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25); border: 1px solid rgba(255,255,255,0.18); }
-
-      .calendarHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; font-size: 0.9rem; gap: 0.6rem; }
-      .calendarHeader button {
-        border-radius: 999px;
-        border: 1px solid rgba(255,255,255,0.12);
-        background: rgba(255,255,255,0.03);
-        padding: 0.25rem 0.65rem;
-        color: var(--muted);
-        cursor: pointer;
-        font-size: 0.8rem;
-      }
-
-      .calendarLegend {
-        margin-top: 0.75rem;
-        font-size: 0.75rem;
-        color: var(--muted);
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-      }
-      .calendarLegendItem { display: inline-flex; align-items: center; gap: 0.35rem; }
-      .legendDot { width: 10px; height: 10px; border-radius: 999px; }
-      .legendDotAvail { background: rgba(255,255,255,0.18); }
-      .legendDotUnavail { background: #4b5563; }
-      .legendDotPartial { background: rgba(229, 9, 20, 0.30); border: 1px dashed rgba(229, 9, 20, 0.65); }
-      .legendDotSelected { background: var(--accent); }
-
-      .bookingForm { display: grid; gap: 0.75rem; font-size: 0.9rem; }
-      .fieldGroup { display: flex; flex-direction: column; gap: 0.25rem; }
-      label { font-size: 0.8rem; color: var(--muted); }
-
-      input, select, textarea {
-        border-radius: 10px;
-        border: 1px solid var(--border);
-        background: rgba(10, 10, 18, 0.9);
-        padding: 0.5rem 0.7rem;
-        color: var(--text);
-        font-family: inherit;
-        font-size: 0.9rem;
-        outline: none;
-      }
-      input:focus, select:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 1px rgba(229,9,20,0.5); }
-
-      textarea { min-height: 84px; resize: vertical; }
-      .inlineFields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
-
-      .helper { font-size: 0.78rem; color: var(--muted); margin: 0.15rem 0 0; }
-      .success { margin-top: 0.35rem; font-size: 0.82rem; color: #4ade80; }
-      .error { margin-top: 0.35rem; font-size: 0.82rem; color: #f97373; }
-
-      .blogGrid { margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; }
-      .blogCard h3 { margin: 0.1rem 0 0.45rem; font-size: 1.05rem; }
-      .blogMeta { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--muted); margin-bottom: 0.6rem; }
-      .blogCard p { font-size: 0.9rem; color: var(--muted); margin: 0; }
-      .blogThumb { width: 100%; height: 140px; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); margin-bottom: 0.8rem; }
-      .blogThumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-      .smallBtn {
-        border-radius: 999px;
-        padding: 0.45rem 0.85rem;
-        border: 1px solid rgba(255,255,255,0.14);
-        background: rgba(255,255,255,0.04);
-        color: var(--text);
-        cursor: pointer;
-        font-size: 0.85rem;
-        font-weight: 700;
-      }
-
-      .contactLayout { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: 1.6rem; margin-top: 2rem; }
-      .contactList { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.6rem; font-size: 0.95rem; }
-      .contactList li span { color: var(--muted); font-size: 0.85rem; margin-right: 0.35rem; text-transform: uppercase; letter-spacing: 0.16em; }
-      .mapEmbed { border-radius: var(--cardRadius); overflow: hidden; border: 1px solid var(--border); min-height: 220px; }
-      .mapEmbed iframe { width: 100%; height: 100%; border: 0; }
-
-      footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 1.5rem 0; font-size: 0.78rem; color: var(--muted); }
-      .footerInner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
-
-      @media (max-width: 980px) {
-        .heroGrid, .twoCol, .bookingLayout, .contactLayout { grid-template-columns: minmax(0, 1fr); }
-        .heroMediaCard { max-width: 640px; margin: 0 auto; }
-      }
-
-      @media (max-width: 760px) {
-        .navLinks { display: none; }
-        .hamburger { display: inline-flex; }
-        .mobileMenu { display: block; }
-      }
-
-      @media (max-width: 640px) {
-        header { position: sticky; }
-        .container { padding: 0 1rem; }
-      }
-
-      @media (max-width: 560px) {
-        .pricingGrid {
-          grid-auto-flow: column;
-          grid-auto-columns: minmax(190px, 1fr);
-          grid-template-columns: unset;
-          overflow-x: auto;
-          -webkit-overflow-scrolling: touch;
-          scroll-snap-type: x mandatory;
-          padding-bottom: 0.75rem;
-        }
-        .pricingCard { scroll-snap-align: start; }
-        .pricingPrice span:first-child { font-size: 1.65rem; }
+      .applyBtn:disabled{cursor:not-allowed;opacity:0.6}
+      .helper{font-size:0.78rem;color:var(--muted);margin:0.15rem 0 0}
+      .success{margin-top:0.35rem;font-size:0.82rem;color:#4ade80}
+      .error{margin-top:0.35rem;font-size:0.82rem;color:#f97373}
+      footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.78rem;color:var(--muted)}
+      .footerInner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+      @media(max-width:980px){.heroGrid,.bookingLayout{grid-template-columns:1fr}.heroMediaCard{max-width:640px;margin:0 auto}}
+      @media(max-width:760px){.navLinks{display:none}.hamburger{display:inline-flex}.container{padding:0 1rem}}
+      @media(max-width:560px){
+        .pricingGrid{grid-auto-flow:column;grid-auto-columns:minmax(240px,1fr);grid-template-columns:unset;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:0.75rem}
+        .pricingCard{scroll-snap-align:start}
+        .pricingPrice span:first-child{font-size:1.8rem}
       }
     </style>
 
@@ -417,87 +164,48 @@
     <script type="text/babel">
       const { useEffect, useMemo, useState } = React;
 
-      const ASSET = {
-        heroImage: "images/image00100.png",
-        blogImage: "images/image00500.jpg",
-        route1: "images/image00600.png",
-        route2: "images/image00700.png",
-        route3: "images/image00800.png"
+      const DATA = {
+        booking: "data/booking.xlsx",
+        coupon: "data/coupon.xlsx",
+        package: "data/package.xlsx"
       };
 
-      const GARAGE = [
+      const CARS = [
         { id: "458", name: "Ferrari 458 Italia", status: "available" },
         { id: "portofino", name: "Ferrari Portofino", status: "soon" },
         { id: "296", name: "Ferrari 296 Spider", status: "soon" }
       ];
 
-      const COUPONS = {
-        "LO10": { pct: 0.10, label: "10%" },
-        "LO15": { pct: 0.15, label: "15%" },
-        "WELCOME": { pct: 0.05, label: "5%" }
-      };
-
       const I18N = {
         en: {
-          navHome: "Home",
           navGarage: "Garage",
-          navExperience: "Experience",
           navPricing: "Pricing",
           navAvailability: "Availability",
           navBlog: "Blog",
           navContact: "Contact",
           navRequest: "Request date",
+          menuOpen: "Open menu",
+          menuClose: "Close menu",
 
-          eyebrow: "Private Ferrari experience, Switzerland wide",
-          heroTitleA: "Naturally aspirated Ferrari 458 Italia.",
-          heroTitleB: "Without compromise",
-          heroSubtitle:
-            "Not just a rental. A curated Ferrari experience where sound, roads and atmosphere align. Choose your package and request your date. Ferrari 458 Italia available now.",
+          eyebrow: "Ferrari only luxury experiences in Switzerland",
+          heroTitleA: "Luxury",
+          heroTitleB: "Ferrari experiences",
+          heroSubtitle: "A Ferrari only service built around taste, discipline, and real driving pleasure. Choose a package, check availability, and request your booking.",
           pill1: "Ferrari only fleet",
-          pill2: "Luxury first experience",
-          pill3: "Your route or curated routes",
-          pill4: "Request in minutes",
-          ctaGarage: "Open the garage",
+          pill2: "Private host",
+          pill3: "Curated handover",
+          pill4: "Transparent pricing",
+          ctaGarage: "Explore garage and pricing",
           ctaBooking: "Check dates and request",
           currentSelection: "Available now:",
-          availabilityNote: "More Ferraris are listed as coming soon.",
-          takingBookings: "Now taking booking requests",
-
-          experienceTitle: "A special day, with disciplined execution",
-          experienceSubtitle:
-            "Luxury should feel effortless. Behind the scenes, it should be structured and reliable.",
-          perfectFor: "Perfect for",
-          pf1: "Weddings and engagement shoots",
-          pf2: "Photo and video productions",
-          pf3: "Luxury day trips across Switzerland",
-          pf4: "Corporate and investor events",
-          pf5: "Surprise gifts",
-          opsClarity: "Operational clarity",
-          oc1: "Driver screening and deposit before confirmation",
-          oc2: "Briefing focused on safety and vehicle care",
-          oc3: "Transparent mileage and condition expectations",
-          oc4: "Private host support during the rental window",
-          oc5: "Clear rules, no surprises",
-
-          routesTitle: "Route inspiration",
-          routesSubtitle:
-            "You choose the itinerary. These are popular Switzerland classics that match the 458 feeling.",
-          r1Title: "Lauterbrunnen and the valley light",
-          r1Text: "A cinematic day in the Alps. Best with early timing and calm roads.",
-          r2Title: "Lake Lucerne loop",
-          r2Text: "Elegant curves, lake reflections, and a relaxed luxury pace.",
-          r3Title: "Andermatt and the passes",
-          r3Text: "For the driver: elevation, rhythm, and views that earn the moment.",
+          availabilityNote: "Ferrari 458 Italia is currently available. Other models are listed as coming soon.",
 
           pricingTitle: "Packages preview",
-          pricingSubtitle:
-            "Quick overview. Full pricing, deposit, options, and rules are on the Pricing page.",
-          pricingNote:
-            "Fuel, vignettes, and fines are not included. Unlimited options exist for longer scenic routes.",
+          pricingSubtitle: "Loaded from data/package.xlsx. Swipe on mobile.",
+          pricingNote: "Deposit, options, and extra mileage are on the Garage and Pricing page.",
 
           bookingTitle: "Availability and booking request",
-          bookingSubtitle:
-            "Select a date, then request the booking. No payment is taken on this page.",
+          bookingSubtitle: "Select a date, then send a booking request. No payment is taken on this page.",
           formTitle: "Request your date",
           selectedCar: "Selected car:",
           name: "Full name",
@@ -505,9 +213,16 @@
           phone: "Phone",
           package: "Rental package",
           coupon: "Coupon",
-          couponPlaceholder: "Optional code",
+          couponPlaceholder: "Enter code",
+          couponApply: "Apply",
+          couponClear: "Clear",
           couponApplied: "Coupon applied",
-          couponInvalid: "Coupon not recognised",
+          couponInvalid: "Coupon not valid",
+          couponNeedsEmail: "Enter your email to validate this coupon",
+          couponNeedsDate: "Select a date to validate this coupon",
+          couponNeedsPackage: "Select a package to validate this coupon",
+          couponLoading: "Loading coupons…",
+          packagesLoading: "Loading packages…",
           estimatedTotal: "Estimated total",
           preferredDate: "Preferred date",
           pickupTime: "Pickup time",
@@ -517,17 +232,6 @@
           errPickDate: "Select a preferred date in the calendar first.",
           errRequired: "Name, email and package are required.",
           prepared: "Booking request prepared in your email client.",
-          pkgPick: "Select package",
-          pkg6L: "6 hours, 790 CHF, 80 km",
-          pkg6U: "6 hours, 890 CHF, unlimited km",
-          pkg12L: "12 hours, 1290 CHF, 150 km",
-          pkg12U: "12 hours, 1390 CHF, unlimited km",
-          pkg24L: "24 hours, 1490 CHF, 250 km",
-          pkg24U: "24 hours, 1690 CHF, unlimited km",
-          pkgWeL: "Weekend Fri to Sun, 2290 CHF, 500 km",
-          pkgWeU: "Weekend Fri to Sun, 2590 CHF, unlimited km",
-          pkgWkL: "Full week, 3990 CHF, 1000 km",
-          pkgWkU: "Full week, 4490 CHF, unlimited km",
 
           calPrev: "Previous",
           calNext: "Next",
@@ -536,77 +240,37 @@
           calLegendPartial: "Partially available",
           calLegendSelected: "Selected",
           weekdays: ["S", "M", "T", "W", "T", "F", "S"],
-          locale: "en",
+          locale: "en-GB",
 
-          blogTitle: "Notes from the garage",
-          blogSubtitle: "Luxury lifestyle with technical credibility. Click to read the full articles.",
-          readFull: "Read full article",
-
-          contactTitle: "Contact and location",
-          contactSubtitle: "Based in Uster near Zurich. Handovers are by appointment.",
-          directContact: "Direct contact",
-
-          footerA: "Luxury Obsession Italia.",
-          footerB: "Ferrari 458 Italia. Private host. Switzerland.",
-
-          menuOpen: "Open menu",
-          menuClose: "Close menu"
+          footerA: "Luxury Obsession.",
+          footerB: "Ferrari only experiences, Switzerland."
         },
-
         de: {
-          navHome: "Home",
           navGarage: "Garage",
-          navExperience: "Erlebnis",
           navPricing: "Preise",
           navAvailability: "Verfügbarkeit",
           navBlog: "Blog",
           navContact: "Kontakt",
           navRequest: "Datum anfragen",
+          menuOpen: "Menü öffnen",
+          menuClose: "Menü schliessen",
 
-          eyebrow: "Privates Ferrari Erlebnis, schweizweit",
-          heroTitleA: "Ferrari 458 Italia.",
-          heroTitleB: "Ihre Route, Schweiz.",
-          heroSubtitle:
-            "Ein Auto, richtig gemacht. Abholung nahe Zürich, danach fahren Sie wohin Sie möchten, von Lauterbrunnen bis zu den Pässen. Transparente Pakete, klare Regeln, privater Host.",
-          pill1: "Abholung nahe Zürich",
-          pill2: "Schweizweit fahren",
-          pill3: "Transparente Pakete und Kilometer",
-          pill4: "Screening und Kaution vor Bestätigung",
-          ctaGarage: "Zur Garage",
+          eyebrow: "Ferrari only Luxury Erlebnisse in der Schweiz",
+          heroTitleA: "Luxury",
+          heroTitleB: "Ferrari Erlebnisse",
+          heroSubtitle: "Ein Ferrari only Service mit Geschmack, Disziplin und echter Fahrfreude. Paket wählen, Verfügbarkeit prüfen, Anfrage senden.",
+          pill1: "Nur Ferrari",
+          pill2: "Privater Host",
+          pill3: "Kuratiertes Handover",
+          pill4: "Transparente Preise",
+          ctaGarage: "Garage und Preise ansehen",
           ctaBooking: "Datum prüfen und anfragen",
           currentSelection: "Jetzt verfügbar:",
-          availabilityNote: "Der Ferrari 458 Italia ist aktuell das einzige buchbare Auto. Weitere Modelle sind als kommt bald gelistet.",
-          takingBookings: "Buchungen offen für Routen in der Schweiz.",
-
-          experienceTitle: "Besonders wirken, diszipliniert umsetzen",
-          experienceSubtitle:
-            "Luxury soll mühelos wirken. Dahinter stehen klare Prozesse und Zuverlässigkeit.",
-          perfectFor: "Ideal für",
-          pf1: "Hochzeiten und Verlobungs Shootings",
-          pf2: "Foto und Video Produktionen",
-          pf3: "Luxus Tagestrips in der Schweiz",
-          pf4: "Corporate und Investor Events",
-          pf5: "Überraschungsgeschenke",
-          opsClarity: "Operative Klarheit",
-          oc1: "Fahrer Screening und Kaution vor Bestätigung",
-          oc2: "Briefing zu Sicherheit und Fahrzeugpflege",
-          oc3: "Transparente Kilometer und Zustandserwartung",
-          oc4: "Support durch den Host während der Mietzeit",
-          oc5: "Klare Regeln, keine Überraschungen",
-
-          routesTitle: "Route Inspiration",
-          routesSubtitle:
-            "Sie wählen die Route. Diese Klassiker passen sehr gut zum 458 Gefühl.",
-          r1Title: "Lauterbrunnen und das Tallicht",
-          r1Text: "Cinematisch in den Alpen. Am besten früh starten und ruhige Strassen nutzen.",
-          r2Title: "Rund um den Vierwaldstättersee",
-          r2Text: "Elegante Kurven, See Spiegelungen, entspanntes Luxury Tempo.",
-          r3Title: "Andermatt und die Pässe",
-          r3Text: "Für Fahrer: Höhe, Rhythmus und Ausblicke, die sich verdienen.",
+          availabilityNote: "Ferrari 458 Italia verfügbar. Weitere Modelle kommen bald.",
 
           pricingTitle: "Paket Übersicht",
-          pricingSubtitle: "Kurzüberblick. Details zu Preisen, Kaution, Optionen und Regeln auf der Preis Seite.",
-          pricingNote: "Treibstoff, Vignette und Bussen sind nicht enthalten. Unlimited Optionen existieren für längere Routen.",
+          pricingSubtitle: "Aus data/package.xlsx geladen. Auf Mobile wischen.",
+          pricingNote: "Kaution, Optionen und Zusatzkilometer auf der Garage und Preise Seite.",
 
           bookingTitle: "Verfügbarkeit und Anfrage",
           bookingSubtitle: "Datum wählen, dann Anfrage senden. Keine Zahlung auf dieser Seite.",
@@ -617,9 +281,16 @@
           phone: "Telefon",
           package: "Paket",
           coupon: "Coupon",
-          couponPlaceholder: "Optionaler Code",
+          couponPlaceholder: "Code eingeben",
+          couponApply: "Anwenden",
+          couponClear: "Löschen",
           couponApplied: "Coupon angewendet",
-          couponInvalid: "Coupon unbekannt",
+          couponInvalid: "Coupon nicht gültig",
+          couponNeedsEmail: "Bitte E Mail eingeben, um Coupon zu prüfen",
+          couponNeedsDate: "Bitte Datum wählen, um Coupon zu prüfen",
+          couponNeedsPackage: "Bitte Paket wählen, um Coupon zu prüfen",
+          couponLoading: "Coupons laden…",
+          packagesLoading: "Pakete laden…",
           estimatedTotal: "Geschätzter Total",
           preferredDate: "Wunschtermin",
           pickupTime: "Abholzeit",
@@ -629,17 +300,6 @@
           errPickDate: "Bitte zuerst ein Datum im Kalender wählen.",
           errRequired: "Name, E Mail und Paket sind erforderlich.",
           prepared: "Anfrage wurde im E Mail Programm vorbereitet.",
-          pkgPick: "Paket wählen",
-          pkg6L: "6 Stunden, 790 CHF, 80 km",
-          pkg6U: "6 Stunden, 890 CHF, unlimited km",
-          pkg12L: "12 Stunden, 1290 CHF, 150 km",
-          pkg12U: "12 Stunden, 1390 CHF, unlimited km",
-          pkg24L: "24 Stunden, 1490 CHF, 250 km",
-          pkg24U: "24 Stunden, 1690 CHF, unlimited km",
-          pkgWeL: "Wochenende Fr bis So, 2290 CHF, 500 km",
-          pkgWeU: "Wochenende Fr bis So, 2590 CHF, unlimited km",
-          pkgWkL: "Woche, 3990 CHF, 1000 km",
-          pkgWkU: "Woche, 4490 CHF, unlimited km",
 
           calPrev: "Zurück",
           calNext: "Weiter",
@@ -648,77 +308,37 @@
           calLegendPartial: "Teilweise verfügbar",
           calLegendSelected: "Ausgewählt",
           weekdays: ["S", "M", "D", "M", "D", "F", "S"],
-          locale: "de",
+          locale: "de-CH",
 
-          blogTitle: "Notizen aus der Garage",
-          blogSubtitle: "Luxury Ton mit technischer Glaubwürdigkeit. Klicken für Volltexte.",
-          readFull: "Volltext lesen",
-
-          contactTitle: "Kontakt und Standort",
-          contactSubtitle: "Standort Uster bei Zürich. Übergabe nach Termin.",
-          directContact: "Direktkontakt",
-
-          footerA: "Luxury Obsession Italia.",
-          footerB: "Ferrari 458 Italia. Privater Host. Schweiz.",
-
-          menuOpen: "Menü öffnen",
-          menuClose: "Menü schliessen"
+          footerA: "Luxury Obsession.",
+          footerB: "Ferrari only Erlebnisse, Schweiz."
         },
-
         it: {
-          navHome: "Home",
           navGarage: "Garage",
-          navExperience: "Esperienza",
           navPricing: "Prezzi",
           navAvailability: "Disponibilità",
           navBlog: "Blog",
           navContact: "Contatto",
           navRequest: "Richiedi data",
+          menuOpen: "Apri menu",
+          menuClose: "Chiudi menu",
 
-          eyebrow: "Esperienza Ferrari privata, in tutta la Svizzera",
-          heroTitleA: "Ferrari 458 Italia.",
-          heroTitleB: "Il tuo percorso, Svizzera.",
-          heroSubtitle:
-            "Una sola auto, fatta bene. Ritiro vicino a Zurigo, poi guidi dove vuoi, da Lauterbrunnen ai passi. Pacchetti trasparenti, regole chiare, host privato.",
-          pill1: "Ritiro vicino Zurigo",
-          pill2: "Percorsi in tutta la Svizzera",
-          pill3: "Pacchetti e km trasparenti",
-          pill4: "Screening e deposito prima della conferma",
-          ctaGarage: "Apri la garage",
+          eyebrow: "Esperienze Luxury Ferrari only in Svizzera",
+          heroTitleA: "Luxury",
+          heroTitleB: "esperienze Ferrari",
+          heroSubtitle: "Un servizio Ferrari only con gusto, disciplina e vera passione di guida. Scegli pacchetto, controlla disponibilità, invia richiesta.",
+          pill1: "Solo Ferrari",
+          pill2: "Host privato",
+          pill3: "Handover curato",
+          pill4: "Prezzi trasparenti",
+          ctaGarage: "Scopri garage e prezzi",
           ctaBooking: "Controlla date e richiedi",
           currentSelection: "Disponibile ora:",
-          availabilityNote: "La Ferrari 458 Italia è l unica auto prenotabile al momento. Altri modelli sono in arrivo.",
-          takingBookings: "Prenotazioni aperte per percorsi in Svizzera.",
-
-          experienceTitle: "Speciale da vivere, disciplinato da gestire",
-          experienceSubtitle:
-            "Il luxury deve sembrare semplice. Dietro, deve essere strutturato e affidabile.",
-          perfectFor: "Ideale per",
-          pf1: "Matrimoni e shooting di coppia",
-          pf2: "Produzioni foto e video",
-          pf3: "Gite di lusso in Svizzera",
-          pf4: "Eventi corporate e investor",
-          pf5: "Regali sorpresa",
-          opsClarity: "Chiarezza operativa",
-          oc1: "Screening guidatore e deposito prima della conferma",
-          oc2: "Briefing su sicurezza e cura del veicolo",
-          oc3: "Chilometraggio e condizioni trasparenti",
-          oc4: "Supporto dell host durante il noleggio",
-          oc5: "Regole chiare, zero sorprese",
-
-          routesTitle: "Ispirazione percorso",
-          routesSubtitle:
-            "Scegli tu l itinerario. Questi classici svizzeri stanno benissimo con la 458.",
-          r1Title: "Lauterbrunnen e luce di valle",
-          r1Text: "Giornata cinematografica nelle Alpi. Meglio con partenza presto e strade calme.",
-          r2Title: "Anello Lago di Lucerna",
-          r2Text: "Curve eleganti, riflessi sul lago, ritmo luxury rilassato.",
-          r3Title: "Andermatt e i passi",
-          r3Text: "Per chi guida: quota, ritmo e viste che si meritano.",
+          availabilityNote: "Ferrari 458 Italia disponibile. Altri modelli in arrivo.",
 
           pricingTitle: "Anteprima pacchetti",
-          pricingSubtitle: "Panoramica veloce. Prezzi, deposito, opzioni e regole sono nella pagina Prezzi.",
-          pricingNote: "Carburante, vignetta e multe non inclusi. Esistono opzioni km illimitati per percorsi lunghi.",
+          pricingSubtitle: "Caricati da data/package.xlsx. Su mobile scorri.",
+          pricingNote: "Deposito, opzioni e extra km nella pagina Garage e Prezzi.",
 
           bookingTitle: "Disponibilità e richiesta",
           bookingSubtitle: "Seleziona una data, poi invia la richiesta. Nessun pagamento su questa pagina.",
@@ -729,9 +349,16 @@
           phone: "Telefono",
           package: "Pacchetto",
           coupon: "Coupon",
-          couponPlaceholder: "Codice opzionale",
+          couponPlaceholder: "Inserisci codice",
+          couponApply: "Applica",
+          couponClear: "Rimuovi",
           couponApplied: "Coupon applicato",
-          couponInvalid: "Coupon non riconosciuto",
+          couponInvalid: "Coupon non valido",
+          couponNeedsEmail: "Inserisci la tua email per validare il coupon",
+          couponNeedsDate: "Seleziona una data per validare il coupon",
+          couponNeedsPackage: "Seleziona un pacchetto per validare il coupon",
+          couponLoading: "Caricamento coupon…",
+          packagesLoading: "Caricamento pacchetti…",
           estimatedTotal: "Totale stimato",
           preferredDate: "Data preferita",
           pickupTime: "Ora ritiro",
@@ -741,17 +368,6 @@
           errPickDate: "Seleziona prima una data nel calendario.",
           errRequired: "Nome, email e pacchetto sono obbligatori.",
           prepared: "Richiesta preparata nel client email.",
-          pkgPick: "Seleziona pacchetto",
-          pkg6L: "6 ore, 790 CHF, 80 km",
-          pkg6U: "6 ore, 890 CHF, km illimitati",
-          pkg12L: "12 ore, 1290 CHF, 150 km",
-          pkg12U: "12 ore, 1390 CHF, km illimitati",
-          pkg24L: "24 ore, 1490 CHF, 250 km",
-          pkg24U: "24 ore, 1690 CHF, km illimitati",
-          pkgWeL: "Weekend ven a dom, 2290 CHF, 500 km",
-          pkgWeU: "Weekend ven a dom, 2590 CHF, km illimitati",
-          pkgWkL: "Settimana, 3990 CHF, 1000 km",
-          pkgWkU: "Settimana, 4490 CHF, km illimitati",
 
           calPrev: "Indietro",
           calNext: "Avanti",
@@ -760,231 +376,230 @@
           calLegendPartial: "Parzialmente disponibile",
           calLegendSelected: "Selezionato",
           weekdays: ["D", "L", "M", "M", "G", "V", "S"],
-          locale: "it",
+          locale: "it-CH",
 
-          blogTitle: "Note dalla garage",
-          blogSubtitle: "Tono luxury con credibilità tecnica. Clicca per leggere gli articoli completi.",
-          readFull: "Leggi articolo",
-
-          contactTitle: "Contatto e posizione",
-          contactSubtitle: "Base a Uster vicino Zurigo. Consegna su appuntamento.",
-          directContact: "Contatto diretto",
-
-          footerA: "Luxury Obsession Italia.",
-          footerB: "Ferrari 458 Italia. Host privato. Svizzera.",
-
-          menuOpen: "Apri menu",
-          menuClose: "Chiudi menu"
+          footerA: "Luxury Obsession.",
+          footerB: "Esperienze solo Ferrari, Svizzera."
         }
       };
 
-      const HOME_POSTS = {
-        en: [
-          { slug: "weekend-cost-model", title: "What a Ferrari weekend in Switzerland really costs", date: "2025 01 15", tag: "Luxury finance", excerpt: "A transparent model of price drivers: insurance, wear, depreciation, and operational risk." },
-          { slug: "why-458-feels-classic", title: "Why the 458 still feels like a future classic", date: "2025 01 22", tag: "Engineering", excerpt: "A naturally aspirated balance of response, sound, and control that is increasingly rare." },
-          { slug: "risk-and-romance", title: "Designing a rental that respects risk and romance", date: "2025 02 04", tag: "Concept", excerpt: "A small, disciplined service that protects the asset while staying human and cinematic." }
-        ],
-        de: [
-          { slug: "weekend-cost-model", title: "Was ein Ferrari Wochenende in der Schweiz wirklich kostet", date: "2025 01 15", tag: "Luxury Finance", excerpt: "Transparente Treiber: Versicherung, Verschleiss, Wertverlust und Risiko." },
-          { slug: "why-458-feels-classic", title: "Warum sich der 458 wie ein zukünftiger Klassiker anfühlt", date: "2025 01 22", tag: "Engineering", excerpt: "Saugmotor Response, Sound und Kontrolle, die seltener werden." },
-          { slug: "risk-and-romance", title: "Vermietung zwischen Risiko und Romantik designen", date: "2025 02 04", tag: "Konzept", excerpt: "Disziplinierte Prozesse, ohne das menschliche Gefühl zu verlieren." }
-        ],
-        it: [
-          { slug: "weekend-cost-model", title: "Quanto costa davvero un weekend Ferrari in Svizzera", date: "2025 01 15", tag: "Finanza luxury", excerpt: "Driver di prezzo: assicurazione, usura, svalutazione e rischio operativo." },
-          { slug: "why-458-feels-classic", title: "Perché la 458 sembra un classico del futuro", date: "2025 01 22", tag: "Ingegneria", excerpt: "Risposta aspirata, suono e controllo sempre più rari." },
-          { slug: "risk-and-romance", title: "Progettare un noleggio tra rischio e romanticismo", date: "2025 02 04", tag: "Concept", excerpt: "Processi disciplinati con un tono umano e cinematografico." }
-        ]
-      };
+      function getParam(name){const params=new URLSearchParams(window.location.search);return params.get(name);}
+      function setParamReplace(name,value){const url=new URL(window.location.href);if(!value) url.searchParams.delete(name); else url.searchParams.set(name,value); window.history.replaceState({}, "", url.toString());}
+      function readLang(){const fromUrl=getParam("lang"); if(fromUrl && I18N[fromUrl]) return fromUrl; const fromStore=localStorage.getItem("lo_lang"); if(fromStore && I18N[fromStore]) return fromStore; return "en";}
 
-      function getParam(name) {
-        const params = new URLSearchParams(window.location.search);
-        return params.get(name);
+      function buildUrl(path, lang, hash){
+        const url = new URL(path, window.location.href);
+        url.searchParams.set("lang", lang);
+        if(hash) url.hash = hash;
+        return url.pathname + url.search + url.hash;
       }
 
-      function setParamReplace(name, value) {
-        const url = new URL(window.location.href);
-        if (!value) url.searchParams.delete(name);
-        else url.searchParams.set(name, value);
-        window.history.replaceState({}, "", url.toString());
-      }
+      function pad2(n){return String(n).padStart(2,"0")}
+      function toISO(d){return d ? `${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}` : ""}
 
-      function readLang() {
-        const fromUrl = getParam("lang");
-        if (fromUrl && I18N[fromUrl]) return fromUrl;
-        const fromStore = localStorage.getItem("lo_lang");
-        if (fromStore && I18N[fromStore]) return fromStore;
-        return "en";
-      }
-
-      function readCar() {
-        const fromStore = localStorage.getItem("lo_car");
-        const ok = GARAGE.find((c) => c.id === fromStore && c.status === "available");
-        return ok ? ok.id : "458";
-      }
-
-      function pad2(n) { return String(n).padStart(2, "0"); }
-
-      function toISODateLocal(d) {
-        return d ? `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}` : "";
-      }
-
-      function parseExcelDate(value) {
-        if (!value && value !== 0) return null;
-        if (value instanceof Date) return value;
-
-        if (typeof value === "number") {
+      function parseExcelDate(value){
+        if(!value && value!==0) return null;
+        if(value instanceof Date) return value;
+        if(typeof value === "number"){
           const dc = window.XLSX?.SSF?.parse_date_code ? window.XLSX.SSF.parse_date_code(value) : null;
-          if (dc && dc.y && dc.m && dc.d) return new Date(dc.y, dc.m - 1, dc.d);
-          const base = new Date(Date.UTC(1899, 11, 30));
-          const ms = value * 24 * 60 * 60 * 1000;
-          const guess = new Date(base.getTime() + ms);
+          if(dc && dc.y && dc.m && dc.d) return new Date(dc.y, dc.m-1, dc.d);
+          const base = new Date(Date.UTC(1899,11,30));
+          const guess = new Date(base.getTime() + value * 24*60*60*1000);
           return new Date(guess.getUTCFullYear(), guess.getUTCMonth(), guess.getUTCDate());
         }
-
-        if (typeof value === "string") {
-          const s = value.trim();
-          if (!s) return null;
-
-          const direct = new Date(s);
-          if (!isNaN(direct.getTime())) return new Date(direct.getFullYear(), direct.getMonth(), direct.getDate());
-
-          const m = s.match(/^(\d{1,2})[./](\d{1,2})[./](\d{2,4})$/);
-          if (m) {
-            const dd = Number(m[1]);
-            const mm = Number(m[2]);
-            let yy = Number(m[3]);
-            if (yy < 100) yy = 2000 + yy;
-            const d = new Date(yy, mm - 1, dd);
-            if (!isNaN(d.getTime())) return d;
-          }
+        if(typeof value === "string"){
+          const s = value.trim(); if(!s) return null;
+          const d = new Date(s);
+          if(!isNaN(d.getTime())) return new Date(d.getFullYear(), d.getMonth(), d.getDate());
         }
-
         return null;
       }
+      function normalizeDateOnly(d){return d ? new Date(d.getFullYear(), d.getMonth(), d.getDate()) : null}
+      function inRange(dateOnly, from, to){
+        const d = normalizeDateOnly(dateOnly);
+        const f = from ? normalizeDateOnly(from) : null;
+        const t = to ? normalizeDateOnly(to) : null;
+        if(!d) return false;
+        if(f && d < f) return false;
+        if(t && d > t) return false;
+        return true;
+      }
+      function parseList(value){
+        const s = String(value || "").trim();
+        if(!s) return [];
+        return s.split(/[;,]/).map(x => x.trim()).filter(Boolean);
+      }
+      function parseDiscount(discountRaw){
+        if(discountRaw === null || discountRaw === undefined) return { type:"pct", value:0 };
+        if(typeof discountRaw === "number"){
+          if(discountRaw > 0 && discountRaw <= 1) return { type:"pct", value:discountRaw };
+          if(discountRaw > 1 && discountRaw <= 100) return { type:"pct", value:discountRaw/100 };
+          if(discountRaw > 100) return { type:"chf", value:discountRaw };
+          return { type:"pct", value:0 };
+        }
+        const s = String(discountRaw || "").trim();
+        if(!s) return { type:"pct", value:0 };
+        const pct = s.match(/^(\d+(?:\.\d+)?)\s*%$/);
+        if(pct) return { type:"pct", value: Math.max(0, Math.min(1, Number(pct[1])/100)) };
+        const chf = s.match(/^(\d+(?:\.\d+)?)\s*CHF$/i);
+        if(chf) return { type:"chf", value: Math.max(0, Number(chf[1])) };
+        const n = Number(s);
+        if(Number.isFinite(n)){
+          if(n > 0 && n <= 1) return { type:"pct", value:n };
+          if(n > 1 && n <= 100) return { type:"pct", value:n/100 };
+          if(n > 100) return { type:"chf", value:n };
+        }
+        return { type:"pct", value:0 };
+      }
 
-      function useBookingStatuses() {
-        const [statusByISO, setStatusByISO] = useState({});
+      function useExcel(urlStr, mapRowFn){
+        const [data, setData] = useState(null);
         const [loaded, setLoaded] = useState(false);
-
+        const [error, setError] = useState("");
         useEffect(() => {
           let cancelled = false;
-
-          async function load() {
-            try {
-              const res = await fetch(`data/booking.xlsx?ts=${Date.now()}`);
-              if (!res.ok) throw new Error("booking.xlsx not found");
+          async function load(){
+            try{
+              const res = await fetch(`${urlStr}?ts=${Date.now()}`);
+              if(!res.ok) throw new Error("not found");
               const buf = await res.arrayBuffer();
               const wb = window.XLSX.read(buf, { type: "array" });
-              const sheetName = wb.SheetNames[0];
-              const ws = wb.Sheets[sheetName];
+              const ws = wb.Sheets[wb.SheetNames[0]];
               const rows = window.XLSX.utils.sheet_to_json(ws, { defval: "" });
-
-              const map = {};
-              for (const row of rows) {
-                const dateVal = row.date ?? row.Date ?? row.DATE ?? row["Date"] ?? row["DATE"];
-                const stVal = row.status ?? row.Status ?? row.STATUS ?? row["status"] ?? row["Status"] ?? "";
-                const d = parseExcelDate(dateVal);
-                if (!d) continue;
-                const iso = toISODateLocal(d);
-                const st = String(stVal || "").trim().toUpperCase();
-                map[iso] = st;
-              }
-
-              if (!cancelled) {
-                setStatusByISO(map);
-                setLoaded(true);
-              }
-            } catch (e) {
-              if (!cancelled) {
-                setStatusByISO({});
-                setLoaded(true);
-              }
+              const out = rows.map(mapRowFn).filter(Boolean);
+              if(!cancelled){ setData(out); setLoaded(true); setError(""); }
+            }catch(e){
+              if(!cancelled){ setData(null); setLoaded(true); setError(String(e?.message || e)); }
             }
           }
-
           load();
           return () => { cancelled = true; };
-        }, []);
-
-        return { statusByISO, loaded };
+        }, [urlStr]);
+        return { data, loaded, error };
       }
 
-      function useCalendar(statusByISO, initialDate = new Date()) {
-        const [currentMonth, setCurrentMonth] = useState(new Date(initialDate.getFullYear(), initialDate.getMonth(), 1));
-        const [selectedDate, setSelectedDate] = useState(null);
-
-        const today = useMemo(() => {
-          const t = new Date();
-          t.setHours(0, 0, 0, 0);
-          return t;
-        }, []);
-
-        function buildMatrix() {
-          const year = currentMonth.getFullYear();
-          const month = currentMonth.getMonth();
-          const first = new Date(year, month, 1);
-          const last = new Date(year, month + 1, 0);
-          const firstWeekday = first.getDay();
-          const daysInMonth = last.getDate();
-
-          const cells = [];
-          for (let i = 0; i < firstWeekday; i++) cells.push(null);
-          for (let d = 1; d <= daysInMonth; d++) cells.push(new Date(year, month, d));
-          while (cells.length % 7 !== 0) cells.push(null);
-
-          const weeks = [];
-          for (let i = 0; i < cells.length; i += 7) weeks.push(cells.slice(i, i + 7));
-          return weeks;
-        }
-
-        function isPast(date) { return date ? date < today : false; }
-
-        function getStatus(date) {
-          if (!date) return "EMPTY";
-          if (isPast(date)) return "PAST";
-          const iso = toISODateLocal(date);
-          const st = (statusByISO && Object.prototype.hasOwnProperty.call(statusByISO, iso)) ? statusByISO[iso] : "";
-          if (st === "N") return "N";
-          if (st === "P") return "P";
-          return "A";
-        }
-
-        function isSelectable(date) {
-          const st = getStatus(date);
-          return st === "A" || st === "P";
-        }
-
-        function prevMonth() { setCurrentMonth((m) => new Date(m.getFullYear(), m.getMonth() - 1, 1)); setSelectedDate(null); }
-        function nextMonth() { setCurrentMonth((m) => new Date(m.getFullYear(), m.getMonth() + 1, 1)); setSelectedDate(null); }
-
-        return {
-          currentMonth,
-          selectedDate,
-          setSelectedDate,
-          daysMatrix: buildMatrix(),
-          getStatus,
-          isSelectable,
-          prevMonth,
-          nextMonth
-        };
+      function useBookingStatuses(){
+        return useExcel(DATA.booking, (row) => {
+          const dateVal = row.date ?? row.Date ?? row.DATE ?? row["Date"] ?? row["DATE"];
+          const stVal = row.status ?? row.Status ?? row.STATUS ?? "";
+          const d = parseExcelDate(dateVal);
+          if(!d) return null;
+          const iso = toISO(d);
+          const st = String(stVal || "").trim().toUpperCase();
+          return { iso, st };
+        });
       }
 
-      function LanguagePicker({ lang, onChange }) {
+      function usePackages(){
+        const fallback = [
+          { package_id:"P6_L", duration:"6h", km:"80", pricing_chf:790, label_en:"Signature Half Day (6h, 80 km) · 790 CHF", label_de:"Signature Halbtag (6h, 80 km) · 790 CHF", label_it:"Signature Mezza giornata (6h, 80 km) · 790 CHF", sort_order:10 },
+          { package_id:"P6_U", duration:"6h", km:"Unlimited", pricing_chf:890, label_en:"Signature Half Day Unlimited (6h) · 890 CHF", label_de:"Signature Halbtag Unlimited (6h) · 890 CHF", label_it:"Signature Mezza giornata Unlimited (6h) · 890 CHF", sort_order:20 },
+          { package_id:"P12_L", duration:"12h", km:"150", pricing_chf:1290, label_en:"Grand Tour (12h, 150 km) · 1290 CHF", label_de:"Grand Tour (12h, 150 km) · 1290 CHF", label_it:"Grand Tour (12h, 150 km) · 1290 CHF", sort_order:30 },
+          { package_id:"P12_U", duration:"12h", km:"Unlimited", pricing_chf:1390, label_en:"Grand Tour Unlimited (12h) · 1390 CHF", label_de:"Grand Tour Unlimited (12h) · 1390 CHF", label_it:"Grand Tour Unlimited (12h) · 1390 CHF", sort_order:40 },
+          { package_id:"P24_L", duration:"24h", km:"250", pricing_chf:1490, label_en:"Full Day Icon (24h, 250 km) · 1490 CHF", label_de:"Full Day Icon (24h, 250 km) · 1490 CHF", label_it:"Full Day Icon (24h, 250 km) · 1490 CHF", sort_order:50 },
+        ];
+        const { data, loaded, error } = useExcel(DATA.package, (row) => {
+          const id = String(row.package_id ?? row.packageId ?? row.id ?? "").trim();
+          if(!id) return null;
+          const active = String(row.active ?? "").trim().toUpperCase();
+          if(active === "N") return null;
+          const duration = String(row.duration ?? "").trim();
+          const km = String(row.km ?? "").trim();
+          const price = Number(row.pricing_chf ?? row.price_chf ?? row.price ?? "");
+          const sort = Number(row.sort_order ?? row.sort ?? 0);
+          return {
+            package_id: id,
+            duration,
+            km,
+            pricing_chf: Number.isFinite(price) ? price : null,
+            label_en: String(row.label_en ?? "").trim(),
+            label_de: String(row.label_de ?? "").trim(),
+            label_it: String(row.label_it ?? "").trim(),
+            sort_order: Number.isFinite(sort) ? sort : 9999
+          };
+        });
+
+        const packages = useMemo(() => {
+          const src = (data && data.length) ? data : fallback;
+          return [...src].sort((a,b) => (a.sort_order ?? 9999) - (b.sort_order ?? 9999));
+        }, [data]);
+
+        return { packages, loaded, error };
+      }
+
+      function useCoupons(){
+        const { data, loaded, error } = useExcel(DATA.coupon, (row) => {
+          const code = String(row.coupon ?? row.Coupon ?? "").trim().toUpperCase();
+          if(!code) return null;
+          const active = String(row.active ?? "").trim().toUpperCase();
+          const user = String(row.user ?? "").trim().toLowerCase();
+          const reqFrom = parseExcelDate(row.valid_from_request_date ?? "");
+          const reqTo = parseExcelDate(row.valid_to_request_date ?? "");
+          const bookFrom = parseExcelDate(row.valid_from_booked_date ?? "");
+          const bookTo = parseExcelDate(row.valid_to_booked_date ?? "");
+          const discount = parseDiscount(row.discount ?? "");
+          const packageList = parseList(row.package ?? row.packages ?? "");
+          return { code, active, user, reqFrom, reqTo, bookFrom, bookTo, discount, packageList };
+        });
+
+        const map = useMemo(() => {
+          const out = {};
+          for(const c of (data || [])) out[c.code] = c;
+          return out;
+        }, [data]);
+
+        return { couponsByCode: map, loaded, error };
+      }
+
+      function validateCoupon({ codeInput, emailInput, requestDate, bookedDate, packageId, couponsByCode }){
+        const code = String(codeInput || "").trim().toUpperCase();
+        if(!code) return { ok:false, reason:"empty" };
+        const row = couponsByCode && couponsByCode[code] ? couponsByCode[code] : null;
+        if(!row) return { ok:false, reason:"not_found" };
+        const active = String(row.active || "").trim().toUpperCase();
+        if(active === "N") return { ok:false, reason:"inactive" };
+        const email = String(emailInput || "").trim().toLowerCase();
+        if(row.user && !email) return { ok:false, reason:"need_email" };
+        if(row.user && email && row.user !== email) return { ok:false, reason:"wrong_user" };
+        const reqDate = normalizeDateOnly(requestDate || new Date());
+        if((row.reqFrom || row.reqTo) && !inRange(reqDate, row.reqFrom, row.reqTo)) return { ok:false, reason:"request_date_outside" };
+        if(row.bookFrom || row.bookTo){
+          if(!bookedDate) return { ok:false, reason:"need_date" };
+          const b = normalizeDateOnly(bookedDate);
+          if(!inRange(b, row.bookFrom, row.bookTo)) return { ok:false, reason:"booked_date_outside" };
+        }
+        if(row.packageList && row.packageList.length){
+          if(!packageId) return { ok:false, reason:"need_package" };
+          const allowed = row.packageList.map(x => x.toUpperCase());
+          if(!allowed.includes(String(packageId).toUpperCase())) return { ok:false, reason:"wrong_package" };
+        }
+        const label = row.discount.type === "pct" ? `${Math.round(row.discount.value*100)}%` : `${Math.round(row.discount.value)} CHF`;
+        return { ok:true, code, discount: row.discount, label };
+      }
+
+      function calcDiscounted(base, discount){
+        if(!base || !discount) return { final: base, delta: 0 };
+        if(discount.type === "pct"){
+          const final = Math.round(base * (1 - discount.value));
+          return { final, delta: Math.max(0, base - final) };
+        }
+        if(discount.type === "chf"){
+          const final = Math.max(0, Math.round(base - discount.value));
+          return { final, delta: Math.max(0, base - final) };
+        }
+        return { final: base, delta: 0 };
+      }
+
+      function LanguagePicker({ lang, onChange }){
         const items = [
-          { code: "en", flag: "🇬🇧", title: "English" },
-          { code: "de", flag: "🇩🇪", title: "Deutsch" },
-          { code: "it", flag: "🇮🇹", title: "Italiano" }
+          { code:"en", flag:"🇬🇧", title:"English" },
+          { code:"de", flag:"🇩🇪", title:"Deutsch" },
+          { code:"it", flag:"🇮🇹", title:"Italiano" }
         ];
         return (
           <div className="langPicker" aria-label="Language">
-            {items.map((it) => (
-              <button
-                key={it.code}
-                className={it.code === lang ? "flagBtn active" : "flagBtn"}
-                title={it.title}
-                onClick={() => onChange(it.code)}
-                type="button"
-              >
+            {items.map(it => (
+              <button key={it.code} className={it.code === lang ? "flagBtn active" : "flagBtn"} title={it.title} onClick={() => onChange(it.code)} type="button">
                 {it.flag}
               </button>
             ))}
@@ -992,68 +607,44 @@
         );
       }
 
-      function buildUrl(path, lang, hash) {
-        const url = new URL(path, window.location.href);
-        url.searchParams.set("lang", lang);
-        if (hash) url.hash = hash;
-        return url.pathname + url.search + url.hash;
-      }
-
-      function Nav({ lang, setLang, t }) {
+      function Nav({ lang, setLang, t }){
         const [open, setOpen] = useState(false);
-
-        function link(path, hash) {
-          return buildUrl(path, lang, hash);
-        }
-
-        function close() { setOpen(false); }
-
+        const close = () => setOpen(false);
         return (
           <header>
             <div className="container">
               <div className="navInner">
-                <a href={link("home.html", "top")} className="brand">
-                  <div className="brandMark">LOI</div>
-                  <span>Luxury Obsession Italia</span>
+                <a href={buildUrl("home.html", lang, "top")} className="brand">
+                  <div className="brandMark">LO</div><span>Luxury Obsession</span>
                 </a>
 
                 <div className="navRight">
                   <nav className="navLinks" aria-label="Primary">
-                    <a href={link("subs/garage.html")}>{t.navGarage}</a>
-                    <a href={link("home.html", "experience")}>{t.navExperience}</a>
-                    <a href={link("subs/pricing.html")}>{t.navPricing}</a>
-                    <a href={link("home.html", "booking")}>{t.navAvailability}</a>
-                    <a href={link("subs/blog.html")}>{t.navBlog}</a>
-                    <a href={link("home.html", "contact")}>{t.navContact}</a>
-                    <a href={link("home.html", "booking")} className="navCta">{t.navRequest}</a>
+                    <a href={buildUrl("subs/pricing.html", lang, "garage")}>{t.navGarage}</a>
+                    <a href={buildUrl("subs/pricing.html", lang, "packages")}>{t.navPricing}</a>
+                    <a href={buildUrl("home.html", lang, "booking")}>{t.navAvailability}</a>
+                    <a href={buildUrl("subs/blog.html", lang)}>{t.navBlog}</a>
+                    <a href={buildUrl("home.html", lang, "contact")}>{t.navContact}</a>
+                    <a href={buildUrl("home.html", lang, "booking")} className="navCta">{t.navRequest}</a>
                   </nav>
 
                   <LanguagePicker lang={lang} onChange={(x) => { setLang(x); close(); }} />
 
-                  <button
-                    type="button"
-                    className="hamburger"
-                    aria-label={open ? t.menuClose : t.menuOpen}
-                    aria-expanded={open ? "true" : "false"}
-                    onClick={() => setOpen((v) => !v)}
-                  >
-                    <div className="hamburgerLines" aria-hidden="true">
-                      <span></span><span></span><span></span>
-                    </div>
+                  <button type="button" className="hamburger" aria-label={open ? t.menuClose : t.menuOpen} aria-expanded={open ? "true" : "false"} onClick={() => setOpen(v => !v)}>
+                    <div className="hamburgerLines" aria-hidden="true"><span></span><span></span><span></span></div>
                   </button>
                 </div>
               </div>
 
               {open && (
                 <div className="mobileMenu" role="navigation" aria-label="Mobile">
-                  <a href={link("subs/garage.html")} onClick={close}>{t.navGarage}<span>›</span></a>
-                  <a href={link("home.html", "experience")} onClick={close}>{t.navExperience}<span>›</span></a>
-                  <a href={link("subs/pricing.html")} onClick={close}>{t.navPricing}<span>›</span></a>
-                  <a href={link("home.html", "booking")} onClick={close}>{t.navAvailability}<span>›</span></a>
-                  <a href={link("subs/blog.html")} onClick={close}>{t.navBlog}<span>›</span></a>
-                  <a href={link("home.html", "contact")} onClick={close}>{t.navContact}<span>›</span></a>
+                  <a href={buildUrl("subs/pricing.html", lang, "garage")} onClick={close}>{t.navGarage}<span>›</span></a>
+                  <a href={buildUrl("subs/pricing.html", lang, "packages")} onClick={close}>{t.navPricing}<span>›</span></a>
+                  <a href={buildUrl("home.html", lang, "booking")} onClick={close}>{t.navAvailability}<span>›</span></a>
+                  <a href={buildUrl("subs/blog.html", lang)} onClick={close}>{t.navBlog}<span>›</span></a>
+                  <a href={buildUrl("home.html", lang, "contact")} onClick={close}>{t.navContact}<span>›</span></a>
                   <div className="mobileMenuDivider"></div>
-                  <a className="mobileMenuCta" href={link("home.html", "booking")} onClick={close}>{t.navRequest}</a>
+                  <a className="mobileMenuCta" href={buildUrl("home.html", lang, "booking")} onClick={close}>{t.navRequest}</a>
                 </div>
               )}
             </div>
@@ -1061,18 +652,14 @@
         );
       }
 
-      function Hero({ selectedCar, lang, t }) {
-        const selected = GARAGE.find((c) => c.id === selectedCar) || GARAGE[0];
-        const garageUrl = buildUrl("subs/garage.html", lang);
-
+      function Hero({ lang, t }){
+        const selected = CARS[0];
         return (
           <section id="top" className="hero">
             <div className="container heroGrid">
               <div>
                 <div className="eyebrow">{t.eyebrow}</div>
-                <h1 className="heroTitle">
-                  {t.heroTitleA} <span className="heroHighlight">{t.heroTitleB}</span>
-                </h1>
+                <h1 className="heroTitle">{t.heroTitleA} <span className="heroHighlight">{t.heroTitleB}</span></h1>
                 <p className="heroSubtitle">{t.heroSubtitle}</p>
 
                 <div className="heroPills">
@@ -1083,7 +670,7 @@
                 </div>
 
                 <div className="heroActions">
-                  <a href={garageUrl} className="btn btnSecondary">{t.ctaGarage}</a>
+                  <a href={buildUrl("subs/pricing.html", lang, "garage")} className="btn btnSecondary">{t.ctaGarage}</a>
                   <a href={buildUrl("home.html", lang, "booking")} className="btn btnPrimary">{t.ctaBooking}</a>
                 </div>
 
@@ -1094,14 +681,14 @@
               </div>
 
               <div className="heroMediaCard" aria-label="Hero media">
-                <video autoPlay muted loop playsInline poster={ASSET.heroImage}>
+                <video autoPlay muted loop playsInline poster="images/image00100.jpg">
                   <source src="videos/video00100.mp4" type="video/mp4" />
                 </video>
 
                 <div className="heroBadge">
-                  <div className="heroBadgeLeft">
+                  <div style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
                     <span className="heroBadgeDot"></span>
-                    <span>{t.takingBookings}</span>
+                    <span>Taking booking requests</span>
                   </div>
                   <span>Switzerland</span>
                 </div>
@@ -1111,76 +698,13 @@
         );
       }
 
-      function Experience({ t }) {
-        return (
-          <section id="experience">
-            <div className="container">
-              <h2 className="sectionTitle">{t.experienceTitle}</h2>
-              <p className="sectionSubtitle">{t.experienceSubtitle}</p>
-
-              <div className="twoCol">
-                <div className="card">
-                  <h3 style={{ marginTop: 0 }}>{t.perfectFor}</h3>
-                  <div className="pillList">
-                    <div className="pillItem"><span className="pillDot"></span><span>{t.pf1}</span></div>
-                    <div className="pillItem"><span className="pillDot"></span><span>{t.pf2}</span></div>
-                    <div className="pillItem"><span className="pillDot"></span><span>{t.pf3}</span></div>
-                    <div className="pillItem"><span className="pillDot"></span><span>{t.pf4}</span></div>
-                    <div className="pillItem"><span className="pillDot"></span><span>{t.pf5}</span></div>
-                  </div>
-                </div>
-
-                <div className="card">
-                  <h3 style={{ marginTop: 0 }}>{t.opsClarity}</h3>
-                  <ul className="specList">
-                    <li>{t.oc1}</li>
-                    <li>{t.oc2}</li>
-                    <li>{t.oc3}</li>
-                    <li>{t.oc4}</li>
-                    <li>{t.oc5}</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-        );
-      }
-
-      function Routes({ t }) {
-        const routes = [
-          { img: ASSET.route1, title: t.r1Title, text: t.r1Text },
-          { img: ASSET.route2, title: t.r2Title, text: t.r2Text },
-          { img: ASSET.route3, title: t.r3Title, text: t.r3Text }
-        ];
-
-        return (
-          <section id="routes">
-            <div className="container">
-              <h2 className="sectionTitle">{t.routesTitle}</h2>
-              <p className="sectionSubtitle">{t.routesSubtitle}</p>
-
-              <div className="routeGrid">
-                {routes.map((r) => (
-                  <article className="card routeCard" key={r.title}>
-                    <div className="routeThumb"><img src={r.img} alt={r.title} /></div>
-                    <h3>{r.title}</h3>
-                    <p>{r.text}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-        );
-      }
-
-      function PricingPreview({ t }) {
-        const tiers = [
-          { name: "6h", price: "790", km: "80 km", tag: "Limited" },
-          { name: "6h", price: "890", km: "Unlimited", tag: "Unlimited" },
-          { name: "12h", price: "1290", km: "150 km", tag: "Limited" },
-          { name: "24h", price: "1490", km: "250 km", tag: "Limited" },
-          { name: "Weekend", price: "2290", km: "500 km", tag: "Limited" }
-        ];
+      function PricingPreview({ t, packages, packagesLoaded, lang }){
+        const tiers = packages.slice(0, 6).map((p) => {
+          const kmLabel = String(p.km || "").toLowerCase() === "unlimited" ? "Unlimited" : `${p.km} km`;
+          const tag = String(p.km || "").toLowerCase() === "unlimited" ? "Unlimited" : "Limited";
+          const label = p[`label_${lang}`] || p.label_en || p.package_id;
+          return { name: label.split(" · ")[0], price: String(p.pricing_chf || "-"), km: kmLabel, tag };
+        });
 
         return (
           <section id="pricing">
@@ -1189,14 +713,16 @@
               <p className="sectionSubtitle">{t.pricingSubtitle}</p>
 
               <div className="pricingGrid" aria-label="Package preview">
-                {tiers.map((x, idx) => (
-                  <div className="card pricingCard" key={x.name + idx}>
-                    <h3>{x.name}</h3>
-                    <div className="pricingPrice"><span>{x.price}</span><span>CHF</span></div>
-                    <div className="pricingKm">{x.km}</div>
-                    <div className="pricingTag">{x.tag}</div>
-                  </div>
-                ))}
+                {!packagesLoaded ? <div className="card">{t.packagesLoading}</div> :
+                  tiers.map((x, idx) => (
+                    <div className="card pricingCard" key={x.name + idx}>
+                      <h3>{x.name}</h3>
+                      <div className="pricingPrice"><span>{x.price}</span><span>CHF</span></div>
+                      <div className="pricingKm">{x.km}</div>
+                      <div className="pricingTag">{x.tag}</div>
+                    </div>
+                  ))
+                }
               </div>
 
               <p className="pricingNote">{t.pricingNote}</p>
@@ -1205,14 +731,69 @@
         );
       }
 
-      function Calendar({ calendar, t }) {
-        const monthLabel = calendar.currentMonth.toLocaleString(t.locale || "en", { month: "long", year: "numeric" });
+      function useCalendar(statusList, initialDate = new Date()){
+        const statusByISO = useMemo(() => {
+          const map = {};
+          for(const row of (statusList || [])) map[row.iso] = row.st;
+          return map;
+        }, [statusList]);
 
-        function handleClick(date) {
-          if (!date) return;
-          if (!calendar.isSelectable(date)) return;
+        const [currentMonth, setCurrentMonth] = useState(new Date(initialDate.getFullYear(), initialDate.getMonth(), 1));
+        const [selectedDate, setSelectedDate] = useState(null);
+
+        const today = useMemo(() => { const t = new Date(); t.setHours(0,0,0,0); return t; }, []);
+
+        function buildMatrix(){
+          const year = currentMonth.getFullYear();
+          const month = currentMonth.getMonth();
+          const first = new Date(year, month, 1);
+          const last = new Date(year, month + 1, 0);
+          const firstWeekday = first.getDay();
+          const daysInMonth = last.getDate();
+
+          const cells = [];
+          for(let i=0;i<firstWeekday;i++) cells.push(null);
+          for(let d=1; d<=daysInMonth; d++) cells.push(new Date(year, month, d));
+          while(cells.length % 7 !== 0) cells.push(null);
+
+          const weeks = [];
+          for(let i=0;i<cells.length;i+=7) weeks.push(cells.slice(i, i+7));
+          return weeks;
+        }
+
+        function isPast(date){ return date ? date < today : false; }
+
+        function getStatus(date){
+          if(!date) return "EMPTY";
+          if(isPast(date)) return "PAST";
+          const iso = toISO(date);
+          const st = (statusByISO && Object.prototype.hasOwnProperty.call(statusByISO, iso)) ? statusByISO[iso] : "";
+          if(st === "N") return "N";
+          if(st === "P") return "P";
+          return "A";
+        }
+
+        function isSelectable(date){ const st = getStatus(date); return st === "A" || st === "P"; }
+
+        function prevMonth(){ setCurrentMonth(m => new Date(m.getFullYear(), m.getMonth()-1, 1)); setSelectedDate(null); }
+        function nextMonth(){ setCurrentMonth(m => new Date(m.getFullYear(), m.getMonth()+1, 1)); setSelectedDate(null); }
+
+        return { currentMonth, selectedDate, setSelectedDate, daysMatrix: buildMatrix(), getStatus, isSelectable, prevMonth, nextMonth };
+      }
+
+      function Calendar({ calendar, t }){
+        const monthLabel = calendar.currentMonth.toLocaleString(t.locale || "en-GB", { month:"long", year:"numeric" });
+        function handleClick(date){
+          if(!date) return;
+          if(!calendar.isSelectable(date)) return;
           calendar.setSelectedDate(date);
         }
+        const tooltip = (st) => {
+          if(st === "P") return t.calLegendPartial;
+          if(st === "N" || st === "PAST") return t.calLegendUnavail;
+          if(st === "A") return t.calLegendAvail;
+          return "";
+        };
 
         return (
           <div className="card">
@@ -1224,31 +805,18 @@
 
             <table className="calendar" aria-label="Availability calendar">
               <thead>
-                <tr>{(t.weekdays || ["S","M","T","W","T","F","S"]).map((d) => <th key={d}>{d}</th>)}</tr>
+                <tr>{(t.weekdays || ["S","M","T","W","T","F","S"]).map(d => <th key={d}>{d}</th>)}</tr>
               </thead>
               <tbody>
                 {calendar.daysMatrix.map((week, i) => (
                   <tr key={i}>
                     {week.map((date, j) => {
-                      if (!date) return <td className="empty" key={j}></td>;
-
+                      if(!date) return <td className="empty" key={j}></td>;
                       const st = calendar.getStatus(date);
                       const isSelected = calendar.selectedDate && date.getTime() === calendar.selectedDate.getTime();
-
-                      const cls = [
-                        isSelected && "selected",
-                        st === "A" && "available",
-                        st === "P" && "partial",
-                        (st === "N" || st === "PAST") && "unavailable"
-                      ].filter(Boolean).join(" ");
-
+                      const cls = [isSelected && "selected", st==="A" && "available", st==="P" && "partial", (st==="N" || st==="PAST") && "unavailable"].filter(Boolean).join(" ");
                       return (
-                        <td
-                          key={j}
-                          className={cls}
-                          onClick={() => handleClick(date)}
-                          title={st === "P" ? t.calLegendPartial : ""}
-                        >
+                        <td key={j} className={cls} onClick={() => handleClick(date)} title={tooltip(st)}>
                           {date.getDate()}
                         </td>
                       );
@@ -1268,47 +836,65 @@
         );
       }
 
-      function parseCHF(pkgText) {
-        if (!pkgText) return null;
-        const m = String(pkgText).match(/(\d+)\s*CHF/i);
-        if (!m) return null;
-        const n = Number(m[1]);
-        return Number.isFinite(n) ? n : null;
-      }
-
-      function BookingForm({ selectedDate, selectedCar, selectedStatus, t }) {
-        const [form, setForm] = useState({ name: "", email: "", phone: "", pkg: "", startTime: "", notes: "", coupon: "" });
+      function BookingForm({ selectedDate, selectedStatus, t, packages, packagesLoaded, couponsByCode, couponsLoaded, couponsError, lang }){
+        const carObj = CARS[0];
+        const [form, setForm] = useState({ name:"", email:"", phone:"", packageId:"", startTime:"", notes:"", couponInput:"" });
         const [status, setStatus] = useState(null);
-        const carObj = GARAGE.find((c) => c.id === selectedCar) || GARAGE[0];
+        const [appliedCoupon, setAppliedCoupon] = useState(null);
 
-        function handleChange(e) {
+        function handleChange(e){
           const { name, value } = e.target;
-          setForm((f) => ({ ...f, [name]: value }));
+          setForm(f => ({ ...f, [name]: value }));
+          setStatus(null);
+          if(name === "packageId" || name === "email") setAppliedCoupon(null);
+        }
+
+        const selectedPackage = useMemo(() => packages.find(p => p.package_id === form.packageId) || null, [packages, form.packageId]);
+        const basePrice = selectedPackage?.pricing_chf || 0;
+        const estObj = useMemo(() => calcDiscounted(basePrice, appliedCoupon?.discount || null), [basePrice, appliedCoupon]);
+        const estimate = basePrice ? `${estObj.final} CHF` : "";
+
+        function applyCoupon(){
+          setStatus(null);
+          if(!couponsLoaded){ setStatus({ type:"error", msg:t.couponLoading }); return; }
+          const code = (form.couponInput || "").trim();
+          if(!code){ setAppliedCoupon(null); return; }
+          const v = validateCoupon({
+            codeInput: code,
+            emailInput: form.email,
+            requestDate: new Date(),
+            bookedDate: selectedDate,
+            packageId: form.packageId,
+            couponsByCode
+          });
+          if(!v.ok){
+            if(v.reason === "need_email") setStatus({ type:"error", msg:t.couponNeedsEmail });
+            else if(v.reason === "need_date") setStatus({ type:"error", msg:t.couponNeedsDate });
+            else if(v.reason === "need_package" || v.reason === "wrong_package") setStatus({ type:"error", msg:t.couponNeedsPackage });
+            else setStatus({ type:"error", msg:t.couponInvalid });
+            setAppliedCoupon(null);
+            return;
+          }
+          setAppliedCoupon({ code: v.code, discount: v.discount, label: v.label });
+          setStatus({ type:"success", msg:`${t.couponApplied}${v.label ? " ("+v.label+")" : ""}` });
+        }
+
+        function clearCoupon(){
+          setAppliedCoupon(null);
+          setForm(f => ({ ...f, couponInput:"" }));
           setStatus(null);
         }
 
-        const couponInfo = useMemo(() => {
-          const code = (form.coupon || "").trim().toUpperCase();
-          if (!code) return null;
-          return COUPONS[code] ? { code, ...COUPONS[code] } : { code, invalid: true };
-        }, [form.coupon]);
-
-        const estimate = useMemo(() => {
-          const base = parseCHF(form.pkg);
-          if (!base) return "";
-          const code = couponInfo && !couponInfo.invalid ? couponInfo : null;
-          const discounted = code ? Math.round(base * (1 - code.pct)) : base;
-          return `${discounted} CHF`;
-        }, [form.pkg, couponInfo]);
-
-        function handleSubmit(e) {
+        function handleSubmit(e){
           e.preventDefault();
-          if (!selectedDate) { setStatus({ type: "error", msg: t.errPickDate }); return; }
-          if (!form.name || !form.email || !form.pkg) { setStatus({ type: "error", msg: t.errRequired }); return; }
+          if(!selectedDate){ setStatus({ type:"error", msg:t.errPickDate }); return; }
+          if(!form.name || !form.email || !form.packageId){ setStatus({ type:"error", msg:t.errRequired }); return; }
 
-          const dateLabel = toISODateLocal(selectedDate);
-
+          const dateLabel = toISO(selectedDate);
           const subject = `Ferrari booking request for ${dateLabel}`;
+
+          const pkgLabel = (selectedPackage && (selectedPackage[`label_${lang}`] || selectedPackage.label_en)) || form.packageId;
+
           const lines = [
             `Selected car: ${carObj.name}`,
             `Preferred date: ${dateLabel}`,
@@ -1316,24 +902,17 @@
             `Name: ${form.name}`,
             `Email: ${form.email}`,
             `Phone: ${form.phone}`,
-            `Package: ${form.pkg}`,
+            `Package: ${pkgLabel} (id: ${form.packageId})`,
             `Pickup time: ${form.startTime}`,
-            `Coupon: ${(form.coupon || "").trim()}`,
+            `Coupon: ${(appliedCoupon?.code || form.couponInput || "").trim()}`,
             `Estimated total: ${estimate || ""}`,
             `Notes: ${form.notes}`
           ];
 
           const body = encodeURIComponent(lines.join("\n"));
-
-          window.location.href =
-            `mailto:info@luxury-obsession.ch?subject=${encodeURIComponent(subject)}&body=${body}`;
-
-          setStatus({ type: "success", msg: t.prepared });
+          window.location.href = `mailto:info@luxury-obsession.ch?subject=${encodeURIComponent(subject)}&body=${body}`;
+          setStatus({ type:"success", msg:t.prepared });
         }
-
-        const couponMsg = couponInfo
-          ? (couponInfo.invalid ? t.couponInvalid : `${t.couponApplied} (${couponInfo.label})`)
-          : "";
 
         return (
           <form className="card bookingForm" onSubmit={handleSubmit}>
@@ -1357,19 +936,13 @@
                 <input id="phone" name="phone" value={form.phone} onChange={handleChange} />
               </div>
               <div className="fieldGroup">
-                <label htmlFor="pkg">{t.package}</label>
-                <select id="pkg" name="pkg" value={form.pkg} onChange={handleChange} required>
-                  <option value="">{t.pkgPick}</option>
-                  <option value={t.pkg6L}>{t.pkg6L}</option>
-                  <option value={t.pkg6U}>{t.pkg6U}</option>
-                  <option value={t.pkg12L}>{t.pkg12L}</option>
-                  <option value={t.pkg12U}>{t.pkg12U}</option>
-                  <option value={t.pkg24L}>{t.pkg24L}</option>
-                  <option value={t.pkg24U}>{t.pkg24U}</option>
-                  <option value={t.pkgWeL}>{t.pkgWeL}</option>
-                  <option value={t.pkgWeU}>{t.pkgWeU}</option>
-                  <option value={t.pkgWkL}>{t.pkgWkL}</option>
-                  <option value={t.pkgWkU}>{t.pkgWkU}</option>
+                <label htmlFor="packageId">{t.package}</label>
+                <select id="packageId" name="packageId" value={form.packageId} onChange={handleChange} required disabled={!packagesLoaded}>
+                  <option value="">{packagesLoaded ? "Select package" : t.packagesLoading}</option>
+                  {packages.map(p => {
+                    const label = p[`label_${lang}`] || p.label_en || `${p.duration} · ${p.km} · ${p.pricing_chf} CHF`;
+                    return <option key={p.package_id} value={p.package_id}>{label}</option>;
+                  })}
                 </select>
               </div>
             </div>
@@ -1387,20 +960,21 @@
 
             <div className="inlineFields">
               <div className="fieldGroup">
-                <label htmlFor="coupon">{t.coupon}</label>
-                <input
-                  id="coupon"
-                  name="coupon"
-                  value={form.coupon}
-                  onChange={handleChange}
-                  placeholder={t.couponPlaceholder}
-                  autoComplete="off"
-                />
-                {couponMsg ? <p className="helper">{couponMsg}</p> : <p className="helper">&nbsp;</p>}
+                <label>{t.coupon}</label>
+                <div className="couponRow">
+                  <input id="couponInput" name="couponInput" value={form.couponInput} onChange={handleChange} placeholder={t.couponPlaceholder} autoComplete="off" />
+                  <div style={{ display:"flex", gap:"0.45rem" }}>
+                    <button type="button" className="applyBtn" onClick={applyCoupon} disabled={!form.couponInput.trim()}>{t.couponApply}</button>
+                    <button type="button" className="applyBtn" onClick={clearCoupon} disabled={!form.couponInput.trim() && !appliedCoupon}>{t.couponClear}</button>
+                  </div>
+                </div>
+                <p className="helper">{couponsError ? "coupon.xlsx not reachable" : ""}</p>
               </div>
+
               <div className="fieldGroup">
                 <label>{t.estimatedTotal}</label>
                 <input type="text" readOnly value={estimate} />
+                {appliedCoupon && basePrice ? <p className="helper">Saved {estObj.delta} CHF</p> : <p className="helper">&nbsp;</p>}
               </div>
             </div>
 
@@ -1411,18 +985,13 @@
             </div>
 
             <button type="submit" className="btn btnPrimary">{t.sendRequest}</button>
-
-            {status && (
-              <div className={status.type === "success" ? "success" : "error"}>
-                {status.msg}
-              </div>
-            )}
+            {status && <div className={status.type === "success" ? "success" : "error"}>{status.msg}</div>}
           </form>
         );
       }
 
-      function Booking({ selectedCar, t, statusByISO, loaded }) {
-        const calendar = useCalendar(statusByISO);
+      function Booking({ t, bookingList, bookingLoaded, packages, packagesLoaded, couponsByCode, couponsLoaded, couponsError, lang }){
+        const calendar = useCalendar(bookingList);
         const selectedStatus = calendar.selectedDate ? calendar.getStatus(calendar.selectedDate) : null;
 
         return (
@@ -1436,91 +1005,29 @@
                 <BookingForm
                   selectedDate={calendar.selectedDate}
                   selectedStatus={selectedStatus}
-                  selectedCar={selectedCar}
                   t={t}
+                  packages={packages}
+                  packagesLoaded={packagesLoaded}
+                  couponsByCode={couponsByCode}
+                  couponsLoaded={couponsLoaded}
+                  couponsError={couponsError}
+                  lang={lang}
                 />
               </div>
 
-              {!loaded && (
-                <p className="pricingNote">Loading availability data…</p>
-              )}
+              {!bookingLoaded && <p className="pricingNote">Loading availability from data/booking.xlsx…</p>}
             </div>
           </section>
         );
       }
 
-      function BlogTeaser({ lang, t }) {
-        const posts = HOME_POSTS[lang] || HOME_POSTS.en;
-
-        function blogUrl(slug) {
-          const url = new URL("subs/blog.html", window.location.href);
-          url.searchParams.set("lang", lang);
-          if (slug) url.searchParams.set("post", slug);
-          return url.pathname + url.search;
-        }
-
-        return (
-          <section id="blog">
-            <div className="container">
-              <h2 className="sectionTitle">{t.blogTitle}</h2>
-              <p className="sectionSubtitle">{t.blogSubtitle}</p>
-
-              <div className="blogGrid">
-                {posts.map((p) => (
-                  <article className="card blogCard" key={p.slug}>
-                    <div className="blogThumb"><img src={ASSET.blogImage} alt="Blog cover" /></div>
-                    <div className="blogMeta">{p.date} · {p.tag}</div>
-                    <h3>{p.title}</h3>
-                    <p>{p.excerpt}</p>
-                    <div style={{ marginTop: "0.9rem" }}>
-                      <a className="smallBtn" href={blogUrl(p.slug)}>{t.readFull}</a>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-        );
-      }
-
-      function Contact({ t }) {
-        return (
-          <section id="contact">
-            <div className="container">
-              <h2 className="sectionTitle">{t.contactTitle}</h2>
-              <p className="sectionSubtitle">{t.contactSubtitle}</p>
-
-              <div className="contactLayout">
-                <div className="card">
-                  <h3 style={{ marginTop: 0 }}>{t.directContact}</h3>
-                  <ul className="contactList">
-                    <li><span>Email</span><a href="mailto:info@luxury-obsession.ch">info@luxury-obsession.ch</a></li>
-                    <li><span>Phone</span><a href="tel:+41791234567">+41 79 123 45 67</a></li>
-                    <li><span>Location</span>Uster, Zurich, Switzerland</li>
-                  </ul>
-                </div>
-
-                <div className="mapEmbed">
-                  <iframe
-                    title="Luxury Obsession Italia location"
-                    loading="lazy"
-                    allowFullScreen
-                    referrerPolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2766.822792757516!2d8.716!3d47.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDIxJzAwLjAiTiA4wrA0MScwMC4wIkU!5e0!3m2!1sen!2sch!4v1700000000000"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </section>
-        );
-      }
-
-      function App() {
+      function App(){
         const [lang, _setLang] = useState(readLang());
-        const [selectedCar, setSelectedCar] = useState(readCar());
         const t = I18N[lang] || I18N.en;
 
-        const { statusByISO, loaded } = useBookingStatuses();
+        const booking = useBookingStatuses();
+        const pack = usePackages();
+        const coupon = useCoupons();
 
         useEffect(() => {
           localStorage.setItem("lo_lang", lang);
@@ -1528,24 +1035,38 @@
           setParamReplace("lang", lang);
         }, [lang]);
 
-        useEffect(() => {
-          localStorage.setItem("lo_car", selectedCar);
-        }, [selectedCar]);
+        function setLang(next){ if(!I18N[next]) return; _setLang(next); }
 
-        function setLang(next) { if (!I18N[next]) return; _setLang(next); }
+        const bookingList = booking.data || [];
 
         return (
-          <div className="page">
+          <div>
             <Nav lang={lang} setLang={setLang} t={t} />
-
             <main>
-              <Hero selectedCar={selectedCar} lang={lang} t={t} />
-              <Experience t={t} />
-              <Routes t={t} />
-              <PricingPreview t={t} />
-              <Booking selectedCar={selectedCar} t={t} statusByISO={statusByISO} loaded={loaded} />
-              <BlogTeaser lang={lang} t={t} />
-              <Contact t={t} />
+              <Hero lang={lang} t={t} />
+              <PricingPreview t={t} packages={pack.packages} packagesLoaded={pack.loaded} lang={lang} />
+              <Booking
+                t={t}
+                bookingList={bookingList}
+                bookingLoaded={booking.loaded}
+                packages={pack.packages}
+                packagesLoaded={pack.loaded}
+                couponsByCode={coupon.couponsByCode}
+                couponsLoaded={coupon.loaded}
+                couponsError={coupon.error}
+                lang={lang}
+              />
+
+              <section id="contact">
+                <div className="container">
+                  <h2 className="sectionTitle">{t.navContact}</h2>
+                  <p className="sectionSubtitle">info@luxury-obsession.ch</p>
+                  <p className="pricingNote">
+                    Data sources: <code>{DATA.booking}</code>, <code>{DATA.coupon}</code>, <code>{DATA.package}</code>.
+                    For Excel loading to work, serve the site over https (GitHub Pages or any web server).
+                  </p>
+                </div>
+              </section>
             </main>
 
             <footer>
