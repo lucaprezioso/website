@@ -164,10 +164,11 @@
     <script type="text/babel">
       const { useEffect, useMemo, useState } = React;
 
+      const SITE_BASE = new URL(".", window.location.href);
       const DATA = {
-        booking: "data/booking.xlsx",
-        coupon: "data/coupon.xlsx",
-        package: "data/package.xlsx"
+        booking: new URL("data/booking.xlsx", SITE_BASE).toString(),
+        coupon: new URL("data/coupon.xlsx", SITE_BASE).toString(),
+        package: new URL("data/package.xlsx", SITE_BASE).toString()
       };
 
       const CARS = [
@@ -451,6 +452,21 @@
         }
         return { type:"pct", value:0 };
       }
+      function resolveDataUrl(urlStr){
+        try{
+          return new URL(urlStr, document.baseURI).toString();
+        }catch(e){
+          return urlStr;
+        }
+      }
+
+      function explainFetchError(urlStr, err){
+        const resolved = resolveDataUrl(urlStr);
+        const proto = window.location.protocol;
+        const hint = (proto === "file:") ? "This page is opened via file:// which blocks fetch(). Serve the site over http/https (local server or GitHub Pages)." : "";
+        return `${String(err?.message || err || "Failed to fetch")} | resolved: ${resolved} | protocol: ${proto}${hint ? " | " + hint : ""}`;
+      }
+
 
       function useExcel(urlStr, mapRowFn){
         const [data, setData] = useState(null);
@@ -460,8 +476,10 @@
           let cancelled = false;
           async function load(){
             try{
-              const res = await fetch(`${urlStr}?ts=${Date.now()}`);
-              if(!res.ok) throw new Error("not found");
+              const url = new URL(urlStr);
+              url.searchParams.set("ts", String(Date.now()));
+              const res = await fetch(url.toString(), { cache: "no-store" });
+              if(!res.ok) throw new Error(`HTTP ${res.status} while fetching ${url.toString()}`);
               const buf = await res.arrayBuffer();
               const wb = window.XLSX.read(buf, { type: "array" });
               const ws = wb.Sheets[wb.SheetNames[0]];
@@ -469,7 +487,7 @@
               const out = rows.map(mapRowFn).filter(Boolean);
               if(!cancelled){ setData(out); setLoaded(true); setError(""); }
             }catch(e){
-              if(!cancelled){ setData(null); setLoaded(true); setError(String(e?.message || e)); }
+              if(!cancelled){ setData(null); setLoaded(true); setError(explainFetchError(urlStr, e)); }
             }
           }
           load();
@@ -968,7 +986,7 @@
                     <button type="button" className="applyBtn" onClick={clearCoupon} disabled={!form.couponInput.trim() && !appliedCoupon}>{t.couponClear}</button>
                   </div>
                 </div>
-                <p className="helper">{couponsError ? "coupon.xlsx not reachable" : ""}</p>
+                <p className="helper">{couponsError ? `Coupons error: ${couponsError}: ${couponsError}` : ""}</p>
               </div>
 
               <div className="fieldGroup">
@@ -1061,7 +1079,7 @@
                 <div className="container">
                   <h2 className="sectionTitle">{t.navContact}</h2>
                   <p className="sectionSubtitle">info@luxury-obsession.ch</p>
-                  <p className="pricingNote">
+                  <p className="pricingNote">{window.location.protocol === "file:" ? (<p className="pricingNote" style={{color:"#f97373"}}>Excel loading will not work via file protocol. Open this site via http or https.</p>) : null}
                     Data sources: <code>{DATA.booking}</code>, <code>{DATA.coupon}</code>, <code>{DATA.package}</code>.
                     For Excel loading to work, serve the site over https (GitHub Pages or any web server).
                   </p>
