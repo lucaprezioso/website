@@ -129,7 +129,8 @@
         border-radius:10px;border:1px solid var(--border);background:rgba(10,10,18,0.9);
         padding:0.5rem 0.7rem;color:var(--text);font-family:inherit;font-size:0.9rem;outline:none
       }
-      input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 1px rgba(229,9,20,0.5)}
+      input:focus,select:focus,textarea:focus{border-color:rgba(245,245,245,0.22);box-shadow:0 0 0 1px rgba(245,245,245,0.12)}
+      input:invalid,select:invalid,textarea:invalid{border-color:var(--accent);box-shadow:0 0 0 1px rgba(229,9,20,0.35)}
       textarea{min-height:84px;resize:vertical}
       .inlineFields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0.75rem}
       .couponRow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0.65rem;align-items:end}
@@ -138,6 +139,7 @@
         background:rgba(255,255,255,0.04);color:var(--text);cursor:pointer;font-size:0.85rem;font-weight:900
       }
       .applyBtn:disabled{cursor:not-allowed;opacity:0.6}
+      .couponBtns{display:flex;gap:0.45rem}
       .helper{font-size:0.78rem;color:var(--muted);margin:0.15rem 0 0}
       .success{margin-top:0.35rem;font-size:0.82rem;color:#4ade80}
       .error{margin-top:0.35rem;font-size:0.82rem;color:#f97373}
@@ -146,6 +148,11 @@
       @media(max-width:980px){.heroGrid,.bookingLayout{grid-template-columns:1fr}.heroMediaCard{max-width:640px;margin:0 auto}}
       @media(max-width:760px){.navLinks{display:none}.hamburger{display:inline-flex}.container{padding:0 1rem}}
       @media(max-width:560px){
+        .inlineFields{grid-template-columns:1fr}
+        .couponRow{grid-template-columns:1fr}
+        .couponBtns{flex-direction:column}
+        .couponBtns button{width:100%}
+
         .inlineFields{grid-template-columns:1fr}
         .couponRow{grid-template-columns:1fr}
         .couponRow > div{justify-content:flex-start}
@@ -231,6 +238,7 @@
           estimatedTotal: "Estimated total",
           preferredDate: "Preferred date",
           pickupTime: "Pickup time",
+          selectTime: "Select time",
           notes: "Use case and requirements",
           notesHint: "More detail means faster confirmation.",
           sendRequest: "Send booking request",
@@ -299,6 +307,7 @@
           estimatedTotal: "Geschätzter Total",
           preferredDate: "Wunschtermin",
           pickupTime: "Abholzeit",
+          selectTime: "Zeit auswählen",
           notes: "Use Case und Anforderungen",
           notesHint: "Mehr Details bedeutet schnellere Bestätigung.",
           sendRequest: "Anfrage senden",
@@ -367,6 +376,7 @@
           estimatedTotal: "Totale stimato",
           preferredDate: "Data preferita",
           pickupTime: "Ora ritiro",
+          selectTime: "Seleziona ora",
           notes: "Caso d uso e richieste",
           notesHint: "Più dettagli significa conferma più rapida.",
           sendRequest: "Invia richiesta",
@@ -861,6 +871,16 @@
       function BookingForm({ selectedDate, selectedStatus, t, packages, packagesLoaded, couponsByCode, couponsLoaded, couponsError, lang }){
         const carObj = CARS[0];
         const [form, setForm] = useState({ name:"", email:"", phone:"", packageId:"", startTime:"", notes:"", couponInput:"" });
+        const timeOptions = useMemo(() => {
+          const out = [];
+          for(let h=8; h<=20; h++){
+            for(const m of [0, 30]){
+              if(h === 20 && m > 0) continue;
+              out.push(`${pad2(h)}:${pad2(m)}`);
+            }
+          }
+          return out;
+        }, []);
         const [status, setStatus] = useState(null);
         const [appliedCoupon, setAppliedCoupon] = useState(null);
 
@@ -976,7 +996,12 @@
               </div>
               <div className="fieldGroup">
                 <label htmlFor="startTime">{t.pickupTime}</label>
-                <input id="startTime" name="startTime" type="time" value={form.startTime}  onChange={handleChange} onInput={handleChange} />
+                <select id="startTime" name="startTime" value={form.startTime} onChange={handleChange}>
+                  <option value="">{t.selectTime || "Select time"}</option>
+                  {timeOptions.map((x) => (
+                    <option key={x} value={x}>{x}</option>
+                  ))}
+                </select>
               </div>
             </div>
 
@@ -985,7 +1010,7 @@
                 <label>{t.coupon}</label>
                 <div className="couponRow">
                   <input id="couponInput" name="couponInput" value={form.couponInput} onChange={handleChange} placeholder={t.couponPlaceholder} autoComplete="off" />
-                  <div style={{ display:"flex", gap:"0.45rem" }}>
+                  <div className="couponBtns">
                     <button type="button" className="applyBtn" onClick={applyCoupon} disabled={!form.couponInput.trim()}>{t.couponApply}</button>
                     <button type="button" className="applyBtn" onClick={clearCoupon} disabled={!form.couponInput.trim() && !appliedCoupon}>{t.couponClear}</button>
                   </div>
