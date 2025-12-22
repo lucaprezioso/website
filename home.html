@@ -146,6 +146,10 @@
       @media(max-width:980px){.heroGrid,.bookingLayout{grid-template-columns:1fr}.heroMediaCard{max-width:640px;margin:0 auto}}
       @media(max-width:760px){.navLinks{display:none}.hamburger{display:inline-flex}.container{padding:0 1rem}}
       @media(max-width:560px){
+        .inlineFields{grid-template-columns:1fr}
+        .couponRow{grid-template-columns:1fr}
+        .couponRow > div{justify-content:flex-start}
+
         .pricingGrid{grid-auto-flow:column;grid-auto-columns:minmax(240px,1fr);grid-template-columns:unset;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:0.75rem}
         .pricingCard{scroll-snap-align:start}
         .pricingPrice span:first-child{font-size:1.8rem}
@@ -972,7 +976,7 @@
               </div>
               <div className="fieldGroup">
                 <label htmlFor="startTime">{t.pickupTime}</label>
-                <input id="startTime" name="startTime" type="time" value={form.startTime} onChange={handleChange} />
+                <input id="startTime" name="startTime" type="time" value={form.startTime}  onChange={handleChange} onInput={handleChange} />
               </div>
             </div>
 
