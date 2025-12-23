@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Luxury Obsession | Pickup locations</title>
+  <meta name="description" content="Pickup locations for Ferrari only experiences. Default pickup in Nänikon, with optional city fees." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Luxury Obsession | Pickup locations" />
+  <meta property="og:description" content="Pickup locations for Ferrari only experiences. Default pickup in Nänikon, with optional city fees." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../images/image00100.jpg" />
+  <link rel="icon" href="../images/image00600.jpg" />
+  <style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--bg:#050509;--accent:#e50914;--text:#f5f5f5;--muted:#a3a3a3;--radius:18px;--shadow:0 18px 45px rgba(0,0,0,0.4);--max:1120px}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#191621 0,var(--bg) 55%);color:var(--text)}a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:linear-gradient(to bottom,rgba(5,5,9,0.92),rgba(5,5,9,0.62),transparent);border-bottom:1px solid rgba(255,255,255,0.03)}
+.container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
+.navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.75rem 0}
+.brand{display:inline-flex;align-items:center;gap:0.75rem;font-size:0.95rem;letter-spacing:0.16em;text-transform:uppercase}
+.brandMark{width:30px;height:30px;border-radius:999px;background:radial-gradient(circle at 30% 30%,#ff5a5a,#7b0209);box-shadow:0 0 20px rgba(229,9,20,0.7);display:grid;place-items:center;font-weight:850;font-size:0.8rem}
+.navRight{display:flex;align-items:center;gap:0.65rem}
+.navLinks{display:flex;align-items:center;gap:0.8rem;font-size:0.9rem}
+.navLinks a{padding:0.35rem 0.65rem;border-radius:999px;color:var(--muted);transition:0.2s}
+.navLinks a:hover{color:var(--text);background:rgba(255,255,255,0.05)}
+.navCta{padding:0.45rem 0.9rem;border-radius:999px;background:var(--accent);font-size:0.85rem;font-weight:800;color:#fff;box-shadow:0 10px 26px rgba(229,9,20,0.45)}
+.langPicker{display:inline-flex;align-items:center;gap:0.35rem}
+.flagBtn{border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.04);border-radius:999px;padding:0.25rem 0.45rem;cursor:pointer;font-size:1rem;line-height:1;opacity:0.75;transition:0.2s}
+.flagBtn.active{opacity:1;box-shadow:0 0 0 3px rgba(229,9,20,0.12);border-color:rgba(229,9,20,0.55)}
+.hamburger{display:none;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.03);border-radius:12px;padding:0.45rem 0.6rem;cursor:pointer}
+.hLine{width:18px;height:2px;background:rgba(245,245,245,0.86);display:block;margin:3px 0;border-radius:2px}
+.mobileMenu{display:none;position:absolute;right:1.5rem;top:62px;width:min(360px,calc(100vw - 3rem));background:rgba(10,10,14,0.96);border:1px solid rgba(255,255,255,0.10);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.mobileMenu.open{display:block}
+.mobileMenu a{display:flex;justify-content:space-between;padding:0.85rem 1rem;color:var(--text);border-bottom:1px solid rgba(255,255,255,0.06)}
+.mobileMenu a:last-child{border-bottom:none}
+.mobileMenu a.cta{background:rgba(229,9,20,0.16);font-weight:800}
+.pageTitle{margin:1.6rem 0 0.4rem;font-size:2rem;letter-spacing:-0.02em}
+.subtitle{margin:0 0 1.2rem;color:var(--muted);max-width:72ch}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.10);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.2rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;padding:0.6rem 0.9rem;border-radius:999px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.04);color:var(--text);cursor:pointer;transition:0.2s;font-weight:700}
+.btn:hover{transform:translateY(-1px);background:rgba(255,255,255,0.06)}
+.btnPrimary{background:var(--accent);border-color:rgba(229,9,20,0.62);box-shadow:0 10px 26px rgba(229,9,20,0.45)}
+.btnRow{display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:0.9rem}
+.footer{margin:2.2rem 0 1.5rem;color:var(--muted);font-size:0.92rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+@media(max-width:960px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.navLinks{display:none}.hamburger{display:block}.grid{grid-template-columns:1fr}}
+</style>
+  <script>window.I18N = {"en": {"navHome": "Home", "navPricing": "Pricing", "navBlog": "Blog", "navRequest": "Request a quote", "title": "Pickup locations", "subtitle": "Default pickup is Nänikon. Choose another city below or request a quote for anywhere else in Switzerland.", "free": "Free", "bracket1": "Fee bracket 1", "bracket2": "Fee bracket 2", "ask": "Other locations", "b1fee": "CHF 120", "b2fee": "CHF 250", "br1note": "For 2026, Zurich, Zurich Airport and Winterthur are free. Other bracket 1 cities use the fee below.", "asknote": "If your city is not listed, we will quote it quickly by phone or WhatsApp.", "footerLine": "Ferrari only experiences, Switzerland."}, "de": {"navHome": "Home", "navPricing": "Preise", "navBlog": "Blog", "navRequest": "Offerte anfragen", "title": "Abholorte", "subtitle": "Standard Abholung in Nänikon. Wähle unten eine andere Stadt oder frage ein Angebot für jeden anderen Ort in der Schweiz an.", "free": "Gratis", "bracket1": "Gebührenstufe 1", "bracket2": "Gebührenstufe 2", "ask": "Andere Orte", "b1fee": "CHF 120", "b2fee": "CHF 250", "br1note": "Für 2026 sind Zürich, Flughafen Zürich und Winterthur gratis. Andere Städte in Stufe 1 gelten zum Betrag unten.", "asknote": "Wenn deine Stadt nicht aufgeführt ist, erstellen wir schnell eine Offerte per Telefon oder WhatsApp.", "footerLine": "Ferrari only experiences, Switzerland."}, "it": {"navHome": "Home", "navPricing": "Prezzi", "navBlog": "Blog", "navRequest": "Richiedi preventivo", "title": "Luoghi di ritiro", "subtitle": "Il ritiro standard è a Nänikon. Scegli un'altra città qui sotto o richiedi un preventivo per qualsiasi altra località in Svizzera.", "free": "Gratis", "bracket1": "Fascia 1", "bracket2": "Fascia 2", "ask": "Altre località", "b1fee": "CHF 120", "b2fee": "CHF 250", "br1note": "Nel 2026 Zurigo, Aeroporto di Zurigo e Winterthur sono gratuiti. Le altre città in fascia 1 seguono la tariffa sotto.", "asknote": "Se la tua località non è in elenco, ti facciamo un preventivo in pochi minuti via telefono o WhatsApp.", "footerLine": "Ferrari only experiences, Switzerland."}};</script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="navInner">
+      <a class="brand" href="../home.html" data-internal>
+        <span class="brandMark">LO</span><span>Luxury Obsession</span>
+      </a>
+      <div class="navRight">
+        <nav class="navLinks" aria-label="Main">
+          <a href="../home.html" data-internal data-t="navHome">Home</a>
+          <a href="../subs/pricing.html" data-internal data-t="navPricing">Pricing</a>
+          <a href="../subs/blog.html" data-internal data-t="navBlog">Blog</a>
+          <a class="navCta" href="../home.html#request" data-internal data-t="navRequest">Request</a>
+        </nav>
+        <div class="langPicker" aria-label="Language">
+          <button class="flagBtn" type="button" data-lang="en" title="English">🇬🇧</button>
+          <button class="flagBtn" type="button" data-lang="de" title="Deutsch">🇩🇪</button>
+          <button class="flagBtn" type="button" data-lang="it" title="Italiano">🇮🇹</button>
+        </div>
+        <button id="hamburger" class="hamburger" type="button" aria-label="Menu">
+          <span class="hLine"></span><span class="hLine"></span><span class="hLine"></span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobileMenu" role="dialog" aria-label="Menu">
+      <a href="../home.html" data-internal><span data-t="navHome">Home</span><span>›</span></a>
+      <a href="../subs/pricing.html" data-internal><span data-t="navPricing">Pricing</span><span>›</span></a>
+      <a href="../subs/blog.html" data-internal><span data-t="navBlog">Blog</span><span>›</span></a>
+      <a href="../home.html#request" data-internal class="cta"><span data-t="navRequest">Request</span><span>›</span></a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+<h1 class="pageTitle" data-t="title">Pickup locations</h1>
+<p class="subtitle" data-t="subtitle"></p>
+
+<div class="grid">
+  <section class="card">
+    <h3 style="margin-top:0" data-t="free">Free</h3>
+    <p style="color:var(--muted);margin-top:0.2rem">Nänikon (Waldaustrasse 2)</p>
+    <ul style="margin:0.8rem 0 0;padding-left:1.05rem;color:rgba(245,245,245,0.92)">
+      <li>Zurich (free in 2026)</li>
+      <li>Zurich Airport (free in 2026)</li>
+      <li>Winterthur (free in 2026)</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3 style="margin-top:0"><span data-t="bracket1">Fee bracket 1</span> · <span data-t="b1fee">CHF 120</span></h3>
+    <p style="color:var(--muted);margin-top:0.2rem" data-t="br1note"></p>
+    <ul style="margin:0.8rem 0 0;padding-left:1.05rem;color:rgba(245,245,245,0.92)">
+      <li>Zug</li>
+      <li>Lucerne</li>
+      <li>St. Gallen</li>
+      <li>Konstanz (DE)</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3 style="margin-top:0"><span data-t="bracket2">Fee bracket 2</span> · <span data-t="b2fee">CHF 250</span></h3>
+    <ul style="margin:0.8rem 0 0;padding-left:1.05rem;color:rgba(245,245,245,0.92)">
+      <li>Bern</li>
+      <li>Biel</li>
+      <li>Basel</li>
+      <li>Davos</li>
+    </ul>
+  </section>
+</div>
+
+<section class="card" style="margin-top:1rem">
+  <h3 style="margin-top:0" data-t="ask">Other locations</h3>
+  <p style="color:var(--muted);margin:0" data-t="asknote"></p>
+  <div class="btnRow">
+    <a class="btn btnPrimary" href="../home.html#request" data-internal data-t="navRequest">Request a quote</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Waldaustrasse%202%2C%208605%20N%C3%A4nikon" target="_blank" rel="noreferrer">Open Nänikon map</a>
+  </div>
+</section>
+
+  <div class="footer">
+    <div>© <span id="y"></span> Luxury Obsession.</div>
+    <div data-t="footerLine">Ferrari only experiences, Switzerland.</div>
+  </div>
+</main>
+
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+
+
+<script>
+(function(){
+  const supported = ["en","de","it"];
+  const params = new URLSearchParams(location.search);
+  const stored = localStorage.getItem("lo_lang");
+  const lang = supported.includes(params.get("lang")) ? params.get("lang") : (supported.includes(stored) ? stored : "en");
+  document.documentElement.lang = lang;
+  localStorage.setItem("lo_lang", lang);
+
+  function withLang(href){
+    try{
+      const u = new URL(href, location.href);
+      u.searchParams.set("lang", lang);
+      return u.pathname + u.search + u.hash;
+    }catch(e){ return href; }
+  }
+  document.querySelectorAll("[data-internal]").forEach(a => a.setAttribute("href", withLang(a.getAttribute("href"))));
+
+  document.querySelectorAll("[data-lang]").forEach(btn => {
+    const l = btn.getAttribute("data-lang");
+    btn.classList.toggle("active", l===lang);
+    btn.addEventListener("click", () => {
+      const u = new URL(location.href);
+      u.searchParams.set("lang", l);
+      localStorage.setItem("lo_lang", l);
+      location.href = u.pathname + u.search + u.hash;
+    });
+  });
+
+  const burger = document.getElementById("hamburger");
+  const menu = document.getElementById("mobileMenu");
+  if(burger && menu){
+    burger.addEventListener("click", () => menu.classList.toggle("open"));
+    document.addEventListener("click", (e) => {
+      if(!menu.classList.contains("open")) return;
+      if(menu.contains(e.target) || burger.contains(e.target)) return;
+      menu.classList.remove("open");
+    });
+  }
+
+  const dict = window.I18N && window.I18N[lang];
+  if(dict){
+    document.querySelectorAll("[data-t]").forEach(el => {
+      const key = el.getAttribute("data-t");
+      if(dict[key] != null) el.textContent = dict[key];
+    });
+    document.querySelectorAll("[data-thtml]").forEach(el => {
+      const key = el.getAttribute("data-thtml");
+      if(dict[key] != null) el.innerHTML = dict[key];
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

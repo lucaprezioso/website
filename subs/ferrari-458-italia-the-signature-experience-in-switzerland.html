@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Luxury Obsession | Blog</title>
-  <meta name="description" content="Luxury lifestyle with technical credibility: Ferrari experiences, routes, pricing transparency, and behind the scenes." />
+  <title>Luxury Obsession | Ferrari 458 Italia the signature experience in Switzerland</title>
+  <meta name="description" content="The Ferrari 458 Italia is a modern classic: naturally aspirated power, razor sharp steering, and a soundtrack that makes every tunnel feel like a private concer" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
 :root{
@@ -214,80 +214,11 @@ textarea{min-height:90px;resize:vertical}
 .contactList li span{color:var(--muted);font-size:0.82rem}
 footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.78rem;color:var(--muted)}
 .footerInner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
-</style>
-  <script>
-(function(){
-  const LANGS = ["en","de","it"];
 
-  function getLang(){
-    const p = new URLSearchParams(window.location.search);
-    const q = p.get("lang");
-    if(q && LANGS.includes(q)) return q;
-    const s = localStorage.getItem("lo_lang");
-    if(s && LANGS.includes(s)) return s;
-    return "en";
-  }
-
-  function setLang(next){
-    if(!LANGS.includes(next)) return;
-    localStorage.setItem("lo_lang", next);
-    const u = new URL(window.location.href);
-    u.searchParams.set("lang", next);
-    window.location.href = u.pathname + u.search + u.hash;
-  }
-
-  function buildUrl(path, lang, hash){
-    const u = new URL(path, window.location.href);
-    u.searchParams.set("lang", lang);
-    if(hash) u.hash = hash;
-    return u.pathname + u.search + u.hash;
-  }
-
-  function initLangButtons(lang){
-    document.querySelectorAll("[data-langbtn]").forEach(btn => {
-      const code = btn.getAttribute("data-langbtn");
-      btn.classList.toggle("active", code === lang);
-      btn.addEventListener("click", () => setLang(code));
-    });
-  }
-
-  function initHamburger(){
-    const btn = document.getElementById("hamburger");
-    const menu = document.getElementById("mobileMenu");
-    if(!btn || !menu) return;
-
-    function close(){
-      menu.style.display = "none";
-      menu.setAttribute("data-open","0");
-      btn.setAttribute("aria-expanded","false");
-    }
-
-    btn.addEventListener("click", () => {
-      const open = menu.getAttribute("data-open") === "1";
-      if(open) close();
-      else {
-        menu.style.display = "block";
-        menu.setAttribute("data-open","1");
-        btn.setAttribute("aria-expanded","true");
-      }
-    });
-
-    // close when clicking a link
-    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
-  }
-
-  window.__LO__ = { getLang, setLang, buildUrl, initLangButtons, initHamburger };
-})();
-</script>
-  <style>
-    .postGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem;margin-top:1.4rem}
-    .postCard{display:flex;flex-direction:column;gap:0.75rem}
-    .postImg{width:100%;height:170px;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,0.10)}
-    .postTitle{font-weight:950;font-size:1.05rem;line-height:1.25}
-    .postMeta{font-size:0.82rem;color:var(--muted)}
-    .postSummary{margin:0;color:var(--muted);font-size:0.92rem}
-    .postLinkRow{margin-top:auto;display:flex;gap:0.6rem;align-items:center}
-    .pill{display:inline-block;font-size:0.72rem;padding:0.22rem 0.65rem;border-radius:999px;background:rgba(229,9,20,0.14);border:1px solid rgba(229,9,20,0.30);color:#ffb4b4}
+    .heroImg{width:100%;height:320px;object-fit:cover;border-radius:18px;border:1px solid rgba(255,255,255,0.10)}
+    .meta{margin-top:0.75rem;color:var(--muted);font-size:0.9rem}
+    .content{margin-top:1.1rem}
+    .content p{margin:0 0 1rem;color:var(--text);line-height:1.85}
   </style>
 </head>
 <body>
@@ -298,14 +229,14 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
 
         <div class="navRight">
           <nav class="navLinks" aria-label="Primary">
-            <a id="navHome" href="../home.html">Home</a>
-            <a id="navPricing" href="pricing.html">Pricing</a>
-            <a id="navBlog" href="blog.html">Blog</a>
-            <a id="navRequest" class="navCta" href="../home.html#request">Request</a>
+            <a href="../home.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="blog.html">Blog</a>
+            <a class="navCta" href="../home.html#request">Request a quote</a>
           </nav>
 
           <div class="langPicker" aria-label="Language">
-            <button type="button" class="flagBtn" data-langbtn="en" title="English"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
+            <a class="flagBtn active" title="English" href="?lang=en"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
   <defs><clipPath id="ukClip"><rect width="22" height="14" rx="2" ry="2"/></clipPath></defs>
   <g clip-path="url(#ukClip)">
     <rect width="22" height="14" fill="#012169"/>
@@ -314,17 +245,17 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
     <path d="M11 0 V14 M0 7 H22" stroke="#FFFFFF" stroke-width="5"/>
     <path d="M11 0 V14 M0 7 H22" stroke="#C8102E" stroke-width="3"/>
   </g>
-</svg></button>
-            <button type="button" class="flagBtn" data-langbtn="de" title="Deutsch"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
+</svg></a>
+            <a class="flagBtn" title="Deutsch" href="?lang=de"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
   <rect width="22" height="14" rx="2" ry="2" fill="#000000"/>
   <rect y="4.67" width="22" height="4.67" fill="#DD0000"/>
   <rect y="9.33" width="22" height="4.67" fill="#FFCE00"/>
-</svg></button>
-            <button type="button" class="flagBtn" data-langbtn="it" title="Italiano"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
+</svg></a>
+            <a class="flagBtn" title="Italiano" href="?lang=it"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
   <rect width="22" height="14" rx="2" ry="2" fill="#FFFFFF"/>
   <rect width="7.33" height="14" rx="2" ry="2" fill="#009246"/>
   <rect x="14.67" width="7.33" height="14" rx="2" ry="2" fill="#CE2B37"/>
-</svg></button>
+</svg></a>
           </div>
 
           <button id="hamburger" type="button" class="hamburger" aria-label="menu" aria-expanded="false">
@@ -334,23 +265,34 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
       </div>
 
       <div id="mobileMenu" class="mobileMenu" data-open="0" role="navigation" aria-label="Mobile" style="display:none">
-        <a id="mHome" href="../home.html">Home<span>›</span></a>
-        <a id="mPricing" href="pricing.html">Pricing<span>›</span></a>
-        <a id="mBlog" href="blog.html">Blog<span>›</span></a>
+        <a href="../home.html">Home<span>›</span></a>
+        <a href="pricing.html">Pricing<span>›</span></a>
+        <a href="blog.html">Blog<span>›</span></a>
         <div class="mobileMenuDivider"></div>
-        <a id="mRequest" class="mobileMenuCta" href="../home.html#request">Request a quote</a>
+        <a class="mobileMenuCta" href="../home.html#request">Request a quote</a>
       </div>
     </div>
   </header>
 
   <main>
     <section class="hero" style="padding-top:2.2rem">
-      <div class="container">
+      <div class="container" style="max-width:980px">
         <div class="eyebrow">Luxury Obsession</div>
-        <h1 class="heroTitle" style="margin-bottom:0.4rem" id="title">Blog</h1>
-        <p class="heroSubtitle" id="subtitle">Luxury lifestyle with technical credibility. Practical, concise, and obsessed with the details.</p>
+        <h1 class="heroTitle" style="margin-bottom:0.4rem">Ferrari 458 Italia the signature experience in Switzerland</h1>
+        <div class="meta">2025-12-15</div>
 
-        <div class="postGrid" id="postGrid"></div>
+        <div style="margin-top:1rem">
+          <img class="heroImg" src="../images/image00300.png" alt="Ferrari 458 Italia the signature experience in Switzerland">
+        </div>
+
+        <div class="content">
+          <p>The Ferrari 458 Italia is a modern classic: naturally aspirated power, razor sharp steering, and a soundtrack that makes every tunnel feel like a private concert.</p><p>A real Ferrari experience is not about rushing. It is about timing: a relaxed handover, a route with the right rhythm, and an ending that feels like a closing scene.</p><p>If you want suggestions, tell us your vibe. Lakes and cafés, mountain passes, or a clean fast loop with minimal traffic. We will propose a plan that fits your timing and season.</p>
+        </div>
+
+        <div class="ctaRow" style="margin-top:1.2rem">
+          <a class="ctaBtn" href="blog.html">← Back to blog</a>
+          <a class="ctaBtn ctaBtnPrimary" href="../home.html#request">💬 Request a quote</a>
+        </div>
       </div>
     </section>
   </main>
@@ -363,62 +305,21 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
   </footer>
 
   <script>
-    const I18N = {
-      en:{home:"Home",pricing:"Pricing",blog:"Blog",request:"Request a quote",title:"Blog",sub:"Luxury lifestyle with technical credibility. Practical, concise, and obsessed with the details.",read:"Read"},
-      de:{home:"Home",pricing:"Preise",blog:"Blog",request:"Offerte anfragen",title:"Blog",sub:"Luxury Lifestyle mit technischer Glaubwürdigkeit. Praktisch, klar, detailverliebt.",read:"Lesen"},
-      it:{home:"Home",pricing:"Prezzi",blog:"Blog",request:"Richiedi preventivo",title:"Blog",sub:"Lifestyle di lusso con credibilità tecnica. Pratico, essenziale, curato nei dettagli.",read:"Leggi"}
-    };
-    const POSTS = [{"title": "Ferrari 458 Italia the signature experience in Switzerland", "slug": "ferrari-458-italia-the-signature-experience-in-switzerland", "date": "2025-12-15", "summary": "What makes the 458 Italia special and how to design a Ferrari day that feels cinematic but effortless.", "image": "../images/image00300.png"}, {"title": "Transparent pricing how we design packages that make sense", "slug": "transparent-pricing-how-we-design-packages-that-make-sense", "date": "2025-12-10", "summary": "A luxury experience still needs clarity: time, kilometers, deposit, and why we keep it simple.", "image": "../images/image00400.jpg"}, {"title": "Swiss routes worth driving in a Ferrari", "slug": "swiss-routes-worth-driving-in-a-ferrari", "date": "2025-12-01", "summary": "Lakes, passes, and quiet roads. A curated list with practical timing and traffic tips.", "image": "../images/image00500.jpg"}];
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+    
+(function(){
+  const btn = document.getElementById("hamburger");
+  const menu = document.getElementById("mobileMenu");
+  if(btn && menu){
+    btn.addEventListener("click", () => {
+      const isOpen = menu.style.display === "block";
+      menu.style.display = isOpen ? "none" : "block";
+      btn.setAttribute("aria-expanded", String(!isOpen));
+    });
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => menu.style.display="none"));
+  }
+})();
 
-    function init(){
-      const lang = window.__LO__.getLang();
-      document.documentElement.lang = lang;
-      window.__LO__.initLangButtons(lang);
-      window.__LO__.initHamburger();
-      const t = I18N[lang] || I18N.en;
-
-      document.getElementById("navHome").textContent = t.home;
-      document.getElementById("navPricing").textContent = t.pricing;
-      document.getElementById("navBlog").textContent = t.blog;
-      document.getElementById("navRequest").textContent = t.request;
-
-      document.getElementById("navHome").href = window.__LO__.buildUrl("../home.html", lang, "top");
-      document.getElementById("navPricing").href = window.__LO__.buildUrl("pricing.html", lang, "top");
-      document.getElementById("navBlog").href = window.__LO__.buildUrl("blog.html", lang, "top");
-      document.getElementById("navRequest").href = window.__LO__.buildUrl("../home.html", lang, "request");
-
-      document.getElementById("mHome").childNodes[0].nodeValue = t.home;
-      document.getElementById("mPricing").childNodes[0].nodeValue = t.pricing;
-      document.getElementById("mBlog").childNodes[0].nodeValue = t.blog;
-      document.getElementById("mRequest").textContent = t.request;
-
-      document.getElementById("mHome").href = window.__LO__.buildUrl("../home.html", lang, "top");
-      document.getElementById("mPricing").href = window.__LO__.buildUrl("pricing.html", lang, "top");
-      document.getElementById("mBlog").href = window.__LO__.buildUrl("blog.html", lang, "top");
-      document.getElementById("mRequest").href = window.__LO__.buildUrl("../home.html", lang, "request");
-
-      document.getElementById("title").textContent = t.title;
-      document.getElementById("subtitle").textContent = t.sub;
-
-      const grid = document.getElementById("postGrid");
-      grid.innerHTML = "";
-      POSTS.forEach(p => {
-        const a = document.createElement("a");
-        a.className = "card postCard";
-        a.href = window.__LO__.buildUrl(p.slug + ".html", lang, "top");
-        a.innerHTML =
-          '<img class="postImg" src="' + p.image + '" alt="' + p.title + '">' +
-          '<div class="postMeta">' + p.date + '</div>' +
-          '<div class="postTitle">' + p.title + '</div>' +
-          '<p class="postSummary">' + p.summary + '</p>' +
-          '<div class="postLinkRow"><span class="pill">' + t.read + '</span><span style="opacity:0.75">›</span></div>';
-        grid.appendChild(a);
-      });
-
-      document.getElementById("year").textContent = String(new Date().getFullYear());
-    }
-
-    document.addEventListener("DOMContentLoaded", init);
   </script>
 </body>
 </html>
