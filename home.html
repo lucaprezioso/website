@@ -779,7 +779,7 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
       // Populate time options
       const timeSel = document.getElementById("pickupTime");
       timeSel.querySelectorAll("option:not([id=timePick])").forEach(o => o.remove());
-      for(let h=8; h<=20; h++){
+      for(let h=7; h<=20; h++){
         for(const m of [0,30]){
           if(h===20 && m>0) continue;
           const val = String(h).padStart(2,"0") + ":" + String(m).padStart(2,"0");

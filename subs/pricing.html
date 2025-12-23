@@ -290,8 +290,29 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
     .carName{font-weight:900}
     .pill{display:inline-block;font-size:0.72rem;padding:0.22rem 0.65rem;border-radius:999px;background:rgba(229,9,20,0.14);border:1px solid rgba(229,9,20,0.30);color:#ffb4b4}
     .model{width:100%;height:100%;min-height:260px;object-fit:cover;border-radius:22px;border:1px solid rgba(255,255,255,0.10)}
-    .gallery{margin-top:1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.8rem}
-    .gallery img{width:100%;height:150px;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,0.10)}
+    .gallery{margin-top:1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.85rem}
+    .gItem{padding:0;border:none;background:transparent;cursor:pointer}
+    .gItem img{width:100%;height:170px;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,0.10);transition:transform .18s ease, border-color .18s ease}
+    .gItem:hover img{transform:translateY(-2px);border-color:rgba(255,255,255,0.18)}
+    /* Lightbox */
+    .lightbox{position:fixed;inset:0;display:none;z-index:200}
+    .lightbox.open{display:block}
+    .lbBackdrop{position:absolute;inset:0;background:rgba(0,0,0,0.72);backdrop-filter:blur(6px)}
+    .lbPanel{position:absolute;inset:0;display:grid;place-items:center;padding:1rem}
+    .lbFigure{margin:0;max-width:min(980px,92vw);width:100%}
+    #lbImg{width:100%;max-height:min(78vh,720px);object-fit:contain;border-radius:18px;border:1px solid rgba(255,255,255,0.12);background:rgba(5,5,9,0.35)}
+    .lbCap{margin-top:0.75rem;color:var(--muted);font-size:0.9rem;text-align:center}
+    .lbClose{position:absolute;top:1rem;right:1rem;width:44px;height:44px;border-radius:999px;border:1px solid rgba(255,255,255,0.16);
+      background:rgba(5,5,9,0.6);color:var(--text);font-size:1.6rem;cursor:pointer}
+    .lbNav{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:999px;border:1px solid rgba(255,255,255,0.16);
+      background:rgba(5,5,9,0.6);color:var(--text);font-size:2rem;cursor:pointer;display:grid;place-items:center}
+    .lbPrev{left:1rem}
+    .lbNext{right:1rem}
+    @media(max-width:640px){
+      .lbPrev{left:0.55rem}
+      .lbNext{right:0.55rem}
+      .lbNav{width:46px;height:46px}
+    }
   </style>
 </head>
 <body>
@@ -394,38 +415,67 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
           </div>
         </div>
 
+        
+        
         <div class="card" style="margin-top:1.2rem">
           <h2 style="margin-top:0" id="pkgTitle">Packages</h2>
-          <table>
-            <thead>
-              <tr><th id="thPkg">Package</th><th id="thDur">Duration</th><th id="thKm">Km</th><th id="thPrice">Price</th></tr>
-            </thead>
-            <tbody id="pkgBody"></tbody>
-          </table>
+          <div style="overflow:auto;-webkit-overflow-scrolling:touch">
+            <table>
+              <thead>
+                <tr>
+                  <th id="thPkg">Package</th>
+                  <th id="thDur">Duration</th>
+                  <th id="thKm">Km</th>
+                  <th id="thPriceLimited">Price Limited</th>
+                  <th id="thPriceUnlimited">Price Unlimited</th>
+                </tr>
+              </thead>
+              <tbody id="pkgBody"></tbody>
+            </table>
+          </div>
+          <p class="pricingNote" id="pkgNote"></p>
         </div>
+
+
 
         <div class="card" style="margin-top:1.2rem">
           <h2 style="margin-top:0" id="termsTitle">Terms and options</h2>
           <table>
             <tbody>
-              <tr><th id="deposit">Deposit</th><td id="depositText">Example: 2,000 CHF refundable deposit.</td></tr>
-              <tr><th id="extra">Extra mileage</th><td id="extraText">Example: 5 CHF per extra km.</td></tr>
-              <tr><th id="options">Options</th><td id="optionsText">Example: concierge pickup, second driver, child seat.</td></tr>
+              <tr><th id="deposit">Deposit</th><td id="depositText">1,000 CHF refundable deposit (2,000 CHF for drivers younger than 25).</td></tr>
+              <tr><th id="age">Age</th><td id="ageText">Minimum age is 21.</td></tr>
+              <tr><th id="extra">Extra mileage</th><td id="extraText">5 CHF per extra km.</td></tr>
+              <tr><th id="options">Options</th><td id="optionsText">Concierge pickup, second driver, child seat (on request).</td></tr>
+
+
             </tbody>
           </table>
-          <p class="pricingNote" id="termsNote">Replace these examples with your final terms.</p>
+          <p class="pricingNote" id="termsNote">For further information, please use the contact form or reach out to us directly..</p>
         </div>
 
         <div class="card" style="margin-top:1.2rem">
           <h2 style="margin-top:0" id="galleryTitle">Gallery</h2>
-          <div class="gallery">
-            <img src="../images/image00100a.jpg" alt="gallery">
-            <img src="../images/image00100b.png" alt="gallery">
-            <img src="../images/image00300.jpg" alt="gallery">
-            <img src="../images/image00400.jpg" alt="gallery">
-            <img src="../images/image00500.jpg" alt="gallery">
+          <div class="gallery" id="gallery">
+            <button class="gItem" type="button" data-full="../images/image00100a.jpg"><img src="../images/image00100a.jpg" alt="Ferrari 458 Italia"></button>
+            <button class="gItem" type="button" data-full="../images/image00100b.png"><img src="../images/image00100b.png" alt="Ferrari 458 Italia"></button>
+            <button class="gItem" type="button" data-full="../images/image00300.jpg"><img src="../images/image00300.jpg" alt="Ferrari details"></button>
+            <button class="gItem" type="button" data-full="../images/image00400.jpg"><img src="../images/image00400.jpg" alt="Swiss road"></button>
+            <button class="gItem" type="button" data-full="../images/image00500.jpg"><img src="../images/image00500.jpg" alt="Ferrari moment"></button>
           </div>
-        </div>
+
+          <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Gallery" tabindex="-1">
+            <div class="lbBackdrop" data-lb-close="1"></div>
+            <div class="lbPanel">
+              <button class="lbClose" type="button" aria-label="Close" data-lb-close="1">×</button>
+              <button class="lbNav lbPrev" type="button" aria-label="Previous">‹</button>
+              <figure class="lbFigure">
+                <img id="lbImg" src="" alt="Gallery image">
+                <figcaption id="lbCap" class="lbCap"></figcaption>
+              </figure>
+              <button class="lbNav lbNext" type="button" aria-label="Next">›</button>
+            </div>
+          </div>
+</div>
       </div>
     </section>
   </main>
@@ -438,8 +488,8 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
   </footer>
 
   <script>
-    const I18N = {"en": {"home": "Home", "pricing": "Pricing", "blog": "Blog", "request": "Request a quote", "title": "Pricing", "sub": "Choose your Ferrari, then choose your package. Clear terms, no surprises.", "fleetTitle": "Ferrari fleet", "available": "Available", "availableNow": "Available now", "soon": "Coming soon", "pickup": "Pickup locations", "modelNote": "3D style display placeholder. Replace with Three.js later.", "pkgTitle": "Packages", "pkg": "Package", "dur": "Duration", "km": "Km", "price": "Price", "terms": "Terms and options", "deposit": "Deposit", "depositText": "Example: 2,000 CHF refundable deposit.", "extra": "Extra mileage", "extraText": "Example: 5 CHF per extra km.", "options": "Options", "optionsText": "Example: concierge pickup, second driver, child seat.", "termsNote": "Replace these examples with your final terms.", "gallery": "Gallery"}, "de": {"home": "Home", "pricing": "Preise", "blog": "Blog", "request": "Offerte anfragen", "title": "Preise", "sub": "Wähle deinen Ferrari, dann dein Paket. Klare Bedingungen, keine Überraschungen.", "fleetTitle": "Ferrari Flotte", "available": "Verfügbar", "availableNow": "Jetzt verfügbar", "soon": "Bald verfügbar", "pickup": "Abholorte", "modelNote": "3D Anzeige Platzhalter. Später mit Three.js ersetzen.", "pkgTitle": "Pakete", "pkg": "Paket", "dur": "Dauer", "km": "Km", "price": "Preis", "terms": "Bedingungen und Optionen", "deposit": "Depot", "depositText": "Beispiel: 2,000 CHF rückzahlbares Depot.", "extra": "Mehrkilometer", "extraText": "Beispiel: 5 CHF pro zusätzlichem km.", "options": "Optionen", "optionsText": "Beispiel: Concierge Abholung, Zweitfahrer, Kindersitz.", "termsNote": "Ersetze diese Beispiele mit deinen finalen Bedingungen.", "gallery": "Galerie"}, "it": {"home": "Home", "pricing": "Prezzi", "blog": "Blog", "request": "Richiedi preventivo", "title": "Prezzi", "sub": "Scegli la Ferrari, poi il pacchetto. Termini chiari, senza sorprese.", "fleetTitle": "Flotta Ferrari", "available": "Disponibile", "availableNow": "Disponibile ora", "soon": "Prossimamente", "pickup": "Punti di ritiro", "modelNote": "Placeholder stile 3D. Sostituire con Three.js più avanti.", "pkgTitle": "Pacchetti", "pkg": "Pacchetto", "dur": "Durata", "km": "Km", "price": "Prezzo", "terms": "Termini e opzioni", "deposit": "Deposito", "depositText": "Esempio: deposito rimborsabile 2,000 CHF.", "extra": "Km extra", "extraText": "Esempio: 5 CHF per km extra.", "options": "Opzioni", "optionsText": "Esempio: ritiro concierge, secondo guidatore, seggiolino.", "termsNote": "Sostituisci questi esempi con i tuoi termini finali.", "gallery": "Galleria"}};
-    const PACKAGES = [{"id": "P6_L", "duration": "6h", "km": "80", "price": 790, "label": {"en": "Signature Half Day", "de": "Signature Halbtag", "it": "Signature Mezza giornata"}, "tag": {"en": "Most chosen", "de": "Beliebt", "it": "Più scelto"}}, {"id": "P6_U", "duration": "6h", "km": "Unlimited", "price": 890, "label": {"en": "Signature Unlimited", "de": "Signature Unlimited", "it": "Signature Unlimited"}, "tag": {"en": "Unlimited", "de": "Unlimited", "it": "Unlimited"}}, {"id": "P12_L", "duration": "12h", "km": "150", "price": 1290, "label": {"en": "Grand Tour", "de": "Grand Tour", "it": "Grand Tour"}, "tag": {"en": "Day trip", "de": "Tagestrip", "it": "Giornata"}}, {"id": "P12_U", "duration": "12h", "km": "Unlimited", "price": 1390, "label": {"en": "Grand Tour Unlimited", "de": "Grand Tour Unlimited", "it": "Grand Tour Unlimited"}, "tag": {"en": "Unlimited", "de": "Unlimited", "it": "Unlimited"}}, {"id": "P24_L", "duration": "24h", "km": "250", "price": 1490, "label": {"en": "Full Day Icon", "de": "Full Day Icon", "it": "Full Day Icon"}, "tag": {"en": "Full day", "de": "Ganzer Tag", "it": "Intera giornata"}}, {"id": "P24_U", "duration": "24h", "km": "Unlimited", "price": 1690, "label": {"en": "Full Day Icon Unlimited", "de": "Full Day Icon Unlimited", "it": "Full Day Icon Unlimited"}, "tag": {"en": "Unlimited", "de": "Unlimited", "it": "Unlimited"}}];
+    const I18N = {"en": {"home": "Home", "pricing": "Pricing", "blog": "Blog", "request": "Request a quote", "title": "Pricing", "sub": "Choose your Ferrari, then choose your package. Clear terms, no surprises.", "fleetTitle": "Ferrari fleet", "available": "Available", "availableNow": "Available now", "soon": "Coming soon", "pickup": "Pickup locations", "modelNote": "3D style display placeholder. Replace with Three.js later.", "pkgTitle": "Packages", "pkg": "Package", "dur": "Duration", "km": "Km", "price": "Price", "terms": "Terms and options", "deposit": "Deposit", "depositText": "1,000 CHF refundable deposit (2,000 CHF for drivers younger than 25).", "age": "Age", "ageText": "Minimum age is 21.", "extra": "Extra mileage", "extraText": "5 CHF per extra km.", "options": "Options", "optionsText": "Concierge pickup, second driver, child seat (on request).", "termsNote": "For further information, please use the contact form or reach out to us directly.", "gallery": "Gallery", "thLimited": "Limited km", "thUnlimited": "Unlimited km", "pkgNote": "Some packages have multiple limited km tiers. Unlimited pricing is shown only where available and appears once per package.", "priceLimited": "Price Limited", "priceUnlimited": "Price Unlimited"}, "de": {"home": "Home", "pricing": "Preise", "blog": "Blog", "request": "Offerte anfragen", "title": "Preise", "sub": "Wähle deinen Ferrari, dann dein Paket. Klare Bedingungen, keine Überraschungen.", "fleetTitle": "Ferrari Flotte", "available": "Verfügbar", "availableNow": "Jetzt verfügbar", "soon": "Bald verfügbar", "pickup": "Abholorte", "modelNote": "3D Anzeige Platzhalter. Später mit Three.js ersetzen.", "pkgTitle": "Pakete", "pkg": "Paket", "dur": "Dauer", "km": "Km", "price": "Preis", "terms": "Bedingungen und Optionen", "deposit": "Depot", "depositText": "Beispiel: 2,000 CHF rückzahlbares Depot.", "extra": "Mehrkilometer", "extraText": "Beispiel: 5 CHF pro zusätzlichem km.", "options": "Optionen", "optionsText": "Concierge Abholung, Zweitfahrer, Kindersitz (auf Anfrage).", "termsNote": "Für weitere Informationen nutze bitte das Kontaktformular oder melde dich direkt bei uns.", "gallery": "Galerie", "thLimited": "Km limitiert", "thUnlimited": "Km unbegrenzt", "pkgNote": "Einige Pakete haben mehrere limitierte Km Stufen. Unbegrenzte Preise werden nur angezeigt, wenn verfügbar, und erscheinen einmal pro Paket.", "priceLimited": "Preis limitiert", "priceUnlimited": "Preis unbegrenzt"}, "it": {"home": "Home", "pricing": "Prezzi", "blog": "Blog", "request": "Richiedi preventivo", "title": "Prezzi", "sub": "Scegli la Ferrari, poi il pacchetto. Termini chiari, senza sorprese.", "fleetTitle": "Flotta Ferrari", "available": "Disponibile", "availableNow": "Disponibile ora", "soon": "Prossimamente", "pickup": "Punti di ritiro", "modelNote": "Placeholder stile 3D. Sostituire con Three.js più avanti.", "pkgTitle": "Pacchetti", "pkg": "Pacchetto", "dur": "Durata", "km": "Km", "price": "Prezzo", "terms": "Termini e opzioni", "deposit": "Deposito", "depositText": "Esempio: deposito rimborsabile 2,000 CHF.", "extra": "Km extra", "extraText": "Esempio: 5 CHF per km extra.", "options": "Opzioni", "optionsText": "Ritiro concierge, secondo guidatore, seggiolino (su richiesta).", "termsNote": "Per maggiori informazioni usa il modulo di contatto o scrivici direttamente.", "gallery": "Galleria", "thLimited": "Km limitati", "thUnlimited": "Km illimitati", "pkgNote": "Alcuni pacchetti hanno più livelli di km limitati. I prezzi illimitati sono mostrati solo dove disponibili e appaiono una sola volta per pacchetto.", "priceLimited": "Prezzo limitato", "priceUnlimited": "Prezzo illimitato"}};
+    const PACKAGES = [{"id": "P6", "duration": "6h", "label": {"en": "Signature Half Day", "de": "Signature Halbtag", "it": "Signature Mezza giornata"}, "limited": [{"km": 200, "price": 790}], "unlimited": {"price": 890}}, {"id": "GT", "duration": "12h", "label": {"en": "Grand Tour", "de": "Grand Tour", "it": "Grand Tour"}, "limited": [{"km": 300, "price": 890}, {"km": 500, "price": 1290}], "unlimited": {"price": 1590}}, {"id": "FD", "duration": "24h", "label": {"en": "Full Day Icon", "de": "Full Day Icon", "it": "Full Day Icon"}, "limited": [{"km": 500, "price": 1590}], "unlimited": {"price": 1990}}, {"id": "WE", "duration": {"en": "Weekend", "de": "Wochenende", "it": "Weekend"}, "label": {"en": "Weekend Escape", "de": "Weekend Escape", "it": "Weekend Escape"}, "limited": [{"km": 500, "price": 1990}, {"km": 800, "price": 2790}]}, {"id": "WD", "duration": {"en": "Mon–Fri", "de": "Mo–Fr", "it": "Lun–Ven"}, "label": {"en": "Weekday Privilege", "de": "Weekday Privilege", "it": "Weekday Privilege"}, "limited": [{"km": 800, "price": 2190}]}, {"id": "FW", "duration": {"en": "Full week", "de": "Ganze Woche", "it": "Settimana intera"}, "label": {"en": "Full Week", "de": "Ganze Woche", "it": "Settimana intera"}, "limited": [{"km": 1400, "price": 4480}]}];
 
     function init(){
       const lang = window.__LO__.getLang();
@@ -487,19 +537,33 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
       document.getElementById("thPkg").textContent = t.pkg;
       document.getElementById("thDur").textContent = t.dur;
       document.getElementById("thKm").textContent = t.km;
-      document.getElementById("thPrice").textContent = t.price;
+      document.getElementById("thPriceLimited").textContent = t.priceLimited;
+      document.getElementById("thPriceUnlimited").textContent = t.priceUnlimited;
+      document.getElementById("pkgNote").textContent = t.pkgNote;
 
       const body = document.getElementById("pkgBody");
       body.innerHTML = "";
+
       PACKAGES.forEach(p => {
-        const tr = document.createElement("tr");
         const name = (p.label && (p.label[lang] || p.label.en)) || p.id;
-        const km = (String(p.km).toLowerCase()==="unlimited") ? "Unlimited" : (p.km + " km");
-        tr.innerHTML = '<td><strong>' + name + '</strong><div style="color:var(--muted);margin-top:0.2rem">' + p.id + '</div></td>' +
-                       '<td>' + p.duration + '</td>' +
-                       '<td>' + km + '</td>' +
-                       '<td class="price">' + p.price + ' CHF</td>';
-        body.appendChild(tr);
+        const dur = (typeof p.duration === "object") ? (p.duration[lang] || p.duration.en) : p.duration;
+
+        const uRaw = (p.unlimited && p.unlimited.price != null) ? String(p.unlimited.price) : "";
+        const unlimited = (uRaw && uRaw.trim() !== "") ? (uRaw + " CHF") : "";
+
+        const limitedList = Array.isArray(p.limited) ? p.limited : [];
+
+        limitedList.forEach((opt, idx) => {
+          const tr = document.createElement("tr");
+          const showUnlimited = (idx === 0) ? unlimited : ""; // show only once per package
+          tr.innerHTML =
+            '<td><strong>' + name + '</strong><div style="color:var(--muted);margin-top:0.2rem">' + p.id + '</div></td>' +
+            '<td>' + dur + '</td>' +
+            '<td>' + opt.km + '</td>' +
+            '<td><span class="price">' + opt.price + ' CHF</span></td>' +
+            '<td>' + (showUnlimited ? ('<span class="price">' + showUnlimited + '</span>') : '') + '</td>';
+          body.appendChild(tr);
+        });
       });
 
       document.getElementById("termsTitle").textContent = t.terms;
@@ -511,6 +575,46 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
       document.getElementById("optionsText").textContent = t.optionsText;
       document.getElementById("termsNote").textContent = t.termsNote;
       document.getElementById("galleryTitle").textContent = t.gallery;
+      // Gallery lightbox
+      const items = Array.from(document.querySelectorAll("#gallery .gItem"));
+      const lb = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lbImg");
+      const lbCap = document.getElementById("lbCap");
+      const prev = lb.querySelector(".lbPrev");
+      const next = lb.querySelector(".lbNext");
+
+      let idx = 0;
+
+      function openAt(i){
+        idx = (i + items.length) % items.length;
+        const full = items[idx].getAttribute("data-full");
+        const alt = items[idx].querySelector("img")?.getAttribute("alt") || "Gallery image";
+        lbImg.src = full;
+        lbImg.alt = alt;
+        lbCap.textContent = (idx + 1) + " / " + items.length;
+        lb.classList.add("open");
+        lb.setAttribute("aria-hidden","false");
+        lb.focus();
+      }
+      function close(){
+        lb.classList.remove("open");
+        lb.setAttribute("aria-hidden","true");
+      }
+      function step(d){ openAt(idx + d); }
+
+      items.forEach((btn, i) => btn.addEventListener("click", () => openAt(i)));
+      prev.addEventListener("click", () => step(-1));
+      next.addEventListener("click", () => step(1));
+
+      lb.querySelectorAll("[data-lb-close]").forEach(el => el.addEventListener("click", close));
+
+      document.addEventListener("keydown", (e) => {
+        if(!lb.classList.contains("open")) return;
+        if(e.key === "Escape") close();
+        if(e.key === "ArrowLeft") step(-1);
+        if(e.key === "ArrowRight") step(1);
+      });
+
 
       document.getElementById("year").textContent = String(new Date().getFullYear());
     }
