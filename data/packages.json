@@ -1,0 +1,196 @@
+{
+  "packages": [
+    {
+      "id": "P3_U",
+      "duration": "3h",
+      "km": "Unlimited",
+      "price": 440,
+      "label": {
+        "en": "Brief Escape",
+        "de": "Kurztrip",
+        "it": "Breve Fuga"
+      },
+      "tag": {
+        "en": "Unlimited",
+        "de": "Unlimited",
+        "it": "Unlimited"
+      }
+    },
+    {
+      "id": "P6_L",
+      "duration": "6h",
+      "km": "200",
+      "price": 780,
+      "label": {
+        "en": "Signature Half Day",
+        "de": "Signature Halbtag",
+        "it": "Signature Mezza giornata"
+      },
+      "tag": {
+        "en": "Most chosen",
+        "de": "Beliebt",
+        "it": "Più scelto"
+      }
+    },
+    {
+      "id": "P6_U",
+      "duration": "6h",
+      "km": "Unlimited",
+      "price": 830,
+      "label": {
+        "en": "Signature Half Day Unlimited",
+        "de": "Signature Halbtag Unlimited",
+        "it": "Signature Mezza giornata Unlimited"
+      },
+      "tag": {
+        "en": "Unlimited",
+        "de": "Unlimited",
+        "it": "Unlimited"
+      }
+    },
+    {
+      "id": "P12_L",
+      "duration": "12h",
+      "km": "300",
+      "price": 940,
+      "label": {
+        "en": "Grand Tour 300",
+        "de": "Grand Tour 300",
+        "it": "Grand Tour 300"
+      },
+      "tag": {
+        "en": "Day trip",
+        "de": "Tagestrip",
+        "it": "Giornata"
+      }
+    },
+    {
+      "id": "P12_L500",
+      "duration": "12h",
+      "km": "500",
+      "price": 1140,
+      "label": {
+        "en": "Grand Tour 500",
+        "de": "Grand Tour 500",
+        "it": "Grand Tour 500"
+      },
+      "tag": {
+        "en": "Day trip",
+        "de": "Tagestrip",
+        "it": "Giornata"
+      }
+    },
+    {
+      "id": "P12_U",
+      "duration": "12h",
+      "km": "Unlimited",
+      "price": 1290,
+      "label": {
+        "en": "Grand Tour Unlimited",
+        "de": "Grand Tour Unlimited",
+        "it": "Grand Tour Unlimited"
+      },
+      "tag": {
+        "en": "Unlimited",
+        "de": "Unlimited",
+        "it": "Unlimited"
+      }
+    },
+    {
+      "id": "P24_L",
+      "duration": "24h",
+      "km": "500",
+      "price": 1590,
+      "label": {
+        "en": "Full Day Icon",
+        "de": "Full Day Icon",
+        "it": "Full Day Icon"
+      },
+      "tag": {
+        "en": "Full day",
+        "de": "Ganzer Tag",
+        "it": "Intera giornata"
+      }
+    },
+    {
+      "id": "P24_U",
+      "duration": "24h",
+      "km": "Unlimited",
+      "price": 1990,
+      "label": {
+        "en": "Full Day Icon Unlimited",
+        "de": "Full Day Icon Unlimited",
+        "it": "Full Day Icon Unlimited"
+      },
+      "tag": {
+        "en": "Unlimited",
+        "de": "Unlimited",
+        "it": "Unlimited"
+      }
+    },
+    {
+      "id": "WE_500",
+      "duration": "48h",
+      "km": "500",
+      "price": 1990,
+      "label": {
+        "en": "Weekend Escape 500",
+        "de": "Weekend Escape 500",
+        "it": "Weekend Escape 500"
+      },
+      "tag": {
+        "en": "Weekend",
+        "de": "Weekend",
+        "it": "Weekend"
+      }
+    },
+    {
+      "id": "WE_800",
+      "duration": "48h",
+      "km": "800",
+      "price": 2790,
+      "label": {
+        "en": "Weekend Escape 800",
+        "de": "Weekend Escape 800",
+        "it": "Weekend Escape 800"
+      },
+      "tag": {
+        "en": "Weekend",
+        "de": "Weekend",
+        "it": "Weekend"
+      }
+    },
+    {
+      "id": "WD",
+      "duration": "Mon-Fri",
+      "km": "800",
+      "price": 2190,
+      "label": {
+        "en": "Weekday Privilege",
+        "de": "Weekday Privilege",
+        "it": "Weekday Privilege"
+      },
+      "tag": {
+        "en": "Weekday",
+        "de": "Weekday",
+        "it": "Weekday"
+      }
+    },
+    {
+      "id": "FW",
+      "duration": "Full week",
+      "km": "1400",
+      "price": 4480,
+      "label": {
+        "en": "Full Week",
+        "de": "Ganze Woche",
+        "it": "Settimana intera"
+      },
+      "tag": {
+        "en": "Full week",
+        "de": "Ganze Woche",
+        "it": "Settimana Intera"
+      }
+    }
+  ]
+}

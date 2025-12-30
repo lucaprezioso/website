@@ -489,10 +489,101 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
 
   <script>
     const I18N = {"en": {"home": "Home", "pricing": "Pricing", "blog": "Blog", "request": "Request a quote", "title": "Pricing", "sub": "Choose your Ferrari, then choose your package. Clear terms, no surprises.", "fleetTitle": "Ferrari fleet", "available": "Available", "availableNow": "Available now", "soon": "Coming soon", "pickup": "Pickup locations", "modelNote": "3D style display placeholder. Replace with Three.js later.", "pkgTitle": "Packages", "pkg": "Package", "dur": "Duration", "km": "Km", "price": "Price", "terms": "Terms and options", "deposit": "Deposit", "depositText": "1,000 CHF refundable deposit (2,000 CHF for drivers younger than 25).", "age": "Age", "ageText": "Minimum age is 21.", "extra": "Extra mileage", "extraText": "5 CHF per extra km.", "options": "Options", "optionsText": "Concierge pickup, second driver, child seat (on request).", "termsNote": "For further information, please use the contact form or reach out to us directly.", "gallery": "Gallery", "thLimited": "Limited km", "thUnlimited": "Unlimited km", "pkgNote": "Some packages have multiple limited km tiers. Unlimited pricing is shown only where available and appears once per package.", "priceLimited": "Price Limited", "priceUnlimited": "Price Unlimited"}, "de": {"home": "Home", "pricing": "Preise", "blog": "Blog", "request": "Offerte anfragen", "title": "Preise", "sub": "Wähle deinen Ferrari, dann dein Paket. Klare Bedingungen, keine Überraschungen.", "fleetTitle": "Ferrari Flotte", "available": "Verfügbar", "availableNow": "Jetzt verfügbar", "soon": "Bald verfügbar", "pickup": "Abholorte", "modelNote": "3D Anzeige Platzhalter. Später mit Three.js ersetzen.", "pkgTitle": "Pakete", "pkg": "Paket", "dur": "Dauer", "km": "Km", "price": "Preis", "terms": "Bedingungen und Optionen", "deposit": "Depot", "depositText": "Beispiel: 2,000 CHF rückzahlbares Depot.", "extra": "Mehrkilometer", "extraText": "Beispiel: 5 CHF pro zusätzlichem km.", "options": "Optionen", "optionsText": "Concierge Abholung, Zweitfahrer, Kindersitz (auf Anfrage).", "termsNote": "Für weitere Informationen nutze bitte das Kontaktformular oder melde dich direkt bei uns.", "gallery": "Galerie", "thLimited": "Km limitiert", "thUnlimited": "Km unbegrenzt", "pkgNote": "Einige Pakete haben mehrere limitierte Km Stufen. Unbegrenzte Preise werden nur angezeigt, wenn verfügbar, und erscheinen einmal pro Paket.", "priceLimited": "Preis limitiert", "priceUnlimited": "Preis unbegrenzt"}, "it": {"home": "Home", "pricing": "Prezzi", "blog": "Blog", "request": "Richiedi preventivo", "title": "Prezzi", "sub": "Scegli la Ferrari, poi il pacchetto. Termini chiari, senza sorprese.", "fleetTitle": "Flotta Ferrari", "available": "Disponibile", "availableNow": "Disponibile ora", "soon": "Prossimamente", "pickup": "Punti di ritiro", "modelNote": "Placeholder stile 3D. Sostituire con Three.js più avanti.", "pkgTitle": "Pacchetti", "pkg": "Pacchetto", "dur": "Durata", "km": "Km", "price": "Prezzo", "terms": "Termini e opzioni", "deposit": "Deposito", "depositText": "Deposito rimborsabile 1,000 CHF (2,000 CHF per guidatori sotto i 25 anni)", "extra": "Km extra", "extraText": "5 CHF per km extra", "options": "Opzioni", "optionsText": "Ritiro concierge, secondo guidatore", "termsNote": "Per maggiori informazioni usa il modulo di contatto o scrivici direttamente.", "gallery": "Galleria", "thLimited": "Km limitati", "thUnlimited": "Km illimitati", "pkgNote": "Alcuni pacchetti hanno più livelli di km limitati. I prezzi illimitati sono mostrati solo dove disponibili e appaiono una sola volta per pacchetto.", "priceLimited": "Prezzo limitato", "priceUnlimited": "Prezzo illimitato"}};
-    const PACKAGES = [{"id": "P3", "duration": "3h", "label": {"en": "Brief Escape", "de": "Kurztrip", "it": "Breve Fuga"}, "limited": [{"km": 120, "price": 390}], "unlimited": {"price": 440}}, {"id": "P6", "duration": "6h", "label": {"en": "Signature Half Day", "de": "Signature Halbtag", "it": "Signature Mezza giornata"}, "limited": [{"km": 200, "price": 790}], "unlimited": {"price": 890}}, {"id": "GT", "duration": "12h", "label": {"en": "Grand Tour", "de": "Grand Tour", "it": "Grand Tour"}, "limited": [{"km": 300, "price": 890}, {"km": 500, "price": 1290}], "unlimited": {"price": 1590}}, {"id": "FD", "duration": "24h", "label": {"en": "Full Day Icon", "de": "Full Day Icon", "it": "Full Day Icon"}, "limited": [{"km": 500, "price": 1590}], "unlimited": {"price": 1990}}, {"id": "WE", "duration": {"en": "Weekend", "de": "Wochenende", "it": "Weekend"}, "label": {"en": "Weekend Escape", "de": "Weekend Escape", "it": "Weekend Escape"}, "limited": [{"km": 500, "price": 1990}, {"km": 800, "price": 2790}]}, {"id": "WD", "duration": {"en": "Mon–Fri", "de": "Mo–Fr", "it": "Lun–Ven"}, "label": {"en": "Weekday Privilege", "de": "Weekday Privilege", "it": "Weekday Privilege"}, "limited": [{"km": 800, "price": 2190}]}, {"id": "FW", "duration": {"en": "Full week", "de": "Ganze Woche", "it": "Settimana intera"}, "label": {"en": "Full Week", "de": "Ganze Woche", "it": "Settimana intera"}, "limited": [{"km": 1400, "price": 4480}]}];
+    let PACKAGES = [];
+const DEFAULT_PACKAGES = [{"id": "P3", "duration": "3h", "label": {"en": "Brief Escape", "de": "Kurztrip", "it": "Breve Fuga"}, "limited": [{"km": 120, "price": 390}], "unlimited": {"price": 440}}, {"id": "P6", "duration": "6h", "label": {"en": "Signature Half Day", "de": "Signature Halbtag", "it": "Signature Mezza giornata"}, "limited": [{"km": 200, "price": 790}], "unlimited": {"price": 890}}, {"id": "GT", "duration": "12h", "label": {"en": "Grand Tour", "de": "Grand Tour", "it": "Grand Tour"}, "limited": [{"km": 300, "price": 890}, {"km": 500, "price": 1290}], "unlimited": {"price": 1590}}, {"id": "FD", "duration": "24h", "label": {"en": "Full Day Icon", "de": "Full Day Icon", "it": "Full Day Icon"}, "limited": [{"km": 500, "price": 1590}], "unlimited": {"price": 1990}}, {"id": "WE", "duration": {"en": "Weekend", "de": "Wochenende", "it": "Weekend"}, "label": {"en": "Weekend Escape", "de": "Weekend Escape", "it": "Weekend Escape"}, "limited": [{"km": 500, "price": 1990}, {"km": 800, "price": 2790}]}, {"id": "WD", "duration": {"en": "Mon–Fri", "de": "Mo–Fr", "it": "Lun–Ven"}, "label": {"en": "Weekday Privilege", "de": "Weekday Privilege", "it": "Weekday Privilege"}, "limited": [{"km": 800, "price": 2190}]}, {"id": "FW", "duration": {"en": "Full week", "de": "Ganze Woche", "it": "Settimana intera"}, "label": {"en": "Full Week", "de": "Ganze Woche", "it": "Settimana intera"}, "limited": [{"km": 1400, "price": 4480}]}];
 
-    function init(){
+    async function hydratePackages(){
+      // Accept either the "pricing schema" (label, duration, limited[], unlimited)
+      // or the "home preview schema" (duration, km, price, label, tag) and convert.
+      function isPricingSchema(obj){
+        return obj && Array.isArray(obj.limited);
+      }
+      function isHomeSchema(obj){
+        return obj && ("km" in obj) && ("price" in obj) && !("limited" in obj);
+      }
+      function stripTierSuffix(s){
+        // Removes trailing " 300", " 500", " Unlimited" etc (generic, no hardcoded values)
+        return String(s || "").replace(/\s+(unlimited|\d+)\s*$/i, "").trim();
+      }
+      function kmValue(km){
+        if(km == null) return null;
+        const s = String(km).trim();
+        if(!s) return null;
+        if(s.toLowerCase() === "unlimited") return "Unlimited";
+        const n = Number(s);
+        return Number.isFinite(n) ? n : s;
+      }
+
+      function homeToPricing(list){
+        const lang = (window.__LO__ && window.__LO__.getLang) ? window.__LO__.getLang() : "en";
+        const groups = [];
+        const map = new Map();
+
+        list.forEach(it => {
+          const duration = (it.duration != null) ? String(it.duration) : "";
+          const labelObj = (it.label && typeof it.label === "object") ? it.label : {};
+          const baseKey = stripTierSuffix(labelObj.en || labelObj[lang] || it.id || "Package");
+          const key = baseKey + "||" + duration;
+
+          let g = map.get(key);
+          if(!g){
+            const cleanLabel = {};
+            Object.keys(labelObj).forEach(k => { cleanLabel[k] = stripTierSuffix(labelObj[k]); });
+            if(!cleanLabel.en) cleanLabel.en = baseKey;
+
+            g = { label: cleanLabel, duration: duration, limited: [] };
+            groups.push(g);
+            map.set(key, g);
+          }
+
+          const km = kmValue(it.km);
+          if(km === "Unlimited"){
+            g.unlimited = { price: it.price };
+          }else if(km != null){
+            g.limited.push({ km: km, price: it.price });
+          }
+        });
+
+        groups.forEach(g => {
+          g.limited.sort((a,b) => (Number(a.km)||0) - (Number(b.km)||0));
+        });
+
+        return groups;
+      }
+
+      async function tryFetch(paths){
+        for(const p of paths){
+          try{
+            const res = await fetch(p, { cache: "no-store" });
+            if(!res.ok) continue;
+            return await res.json();
+          }catch(e){
+            // try next
+          }
+        }
+        return null;
+      }
+
+      const data = await tryFetch(["../data/packages.json", "data/packages.json", "/data/packages.json"]);
+      const list = (data && Array.isArray(data.packages)) ? data.packages : (Array.isArray(data) ? data : null);
+
+      if(list && list.length){
+        if(isPricingSchema(list[0])){
+          PACKAGES = list;
+        }else if(isHomeSchema(list[0])){
+          PACKAGES = homeToPricing(list);
+        }else{
+          PACKAGES = DEFAULT_PACKAGES;
+        }
+      }else{
+        PACKAGES = DEFAULT_PACKAGES;
+      }
+    }
+
+
+    async function init(){
       const lang = window.__LO__.getLang();
+      await hydratePackages();
       document.documentElement.lang = lang;
       window.__LO__.initLangButtons(lang);
       window.__LO__.initHamburger();
@@ -553,18 +644,30 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
 
         const limitedList = Array.isArray(p.limited) ? p.limited : [];
 
-        limitedList.forEach((opt, idx) => {
+        function addRow(kmVal, limitedPrice, showUnlimited){
           const tr = document.createElement("tr");
-          const showUnlimited = (idx === 0) ? unlimited : ""; // show only once per package
+          const kmText = (kmVal == null) ? "" : String(kmVal);
+          const limText = (limitedPrice == null || String(limitedPrice).trim() === "") ? "" : ('<span class="price">' + limitedPrice + ' CHF</span>');
+          const unlimText = (showUnlimited && String(showUnlimited).trim() !== "") ? ('<span class="price">' + showUnlimited + '</span>') : "";
           tr.innerHTML =
-            '<td><strong>' + name + '</strong><div style="color:var(--muted);margin-top:0.2rem">' + p.id + '</div></td>' +
+            '<td><strong>' + name + '</strong></td>' +
             '<td>' + dur + '</td>' +
-            '<td>' + opt.km + '</td>' +
-            '<td><span class="price">' + opt.price + ' CHF</span></td>' +
-            '<td>' + (showUnlimited ? ('<span class="price">' + showUnlimited + '</span>') : '') + '</td>';
+            '<td>' + kmText + '</td>' +
+            '<td>' + limText + '</td>' +
+            '<td>' + unlimText + '</td>';
           body.appendChild(tr);
-        });
-      });
+        }
+
+        if(limitedList.length){
+          limitedList.forEach((opt, idx) => {
+            const showUnlimited = (idx === 0) ? unlimited : ""; // show only once per package
+            addRow(opt.km, opt.price, showUnlimited);
+          });
+        }else{
+          // Unlimited only or info only packages still show as a row with blanks
+          addRow("", "", unlimited);
+        }
+});
 
       document.getElementById("termsTitle").textContent = t.terms;
       document.getElementById("deposit").textContent = t.deposit;
