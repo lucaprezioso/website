@@ -124,6 +124,20 @@ section{padding:3.4rem 0}
 .pricingPrice span:first-child{font-size:1.55rem;font-weight:900}
 .pricingKm{font-size:0.82rem;color:var(--muted)}
 .pricingTag{display:inline-block;margin-top:0.35rem;font-size:0.72rem;padding:0.2rem 0.6rem;border-radius:999px;background:var(--accentSoft);color:#ffb4b4}
+@media (hover:hover) and (min-width: 980px){
+  .pricingCard{cursor:pointer;transition:transform 0.18s, border-color 0.18s, box-shadow 0.18s, background 0.18s}
+  .pricingCard:hover{
+    transform:translateY(-6px) scale(1.03);
+    border-color:rgba(229,9,20,0.55);
+    box-shadow:0 22px 60px rgba(229,9,20,0.10), var(--shadow);
+    background:radial-gradient(circle at top left, rgba(229,9,20,0.18), #050509 58%);
+  }
+  .pricingCard:hover .pricingTag{
+    background:rgba(229,9,20,0.24);
+    color:#ffd1d1;
+  }
+}
+
 .pricingNote{font-size:0.8rem;color:var(--muted);margin-top:1.25rem}
 .requestLayout{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:2rem}
 .ctaRow{display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:0.75rem}
@@ -747,25 +761,114 @@ const DEFAULT_PACKAGES = [<!--{"id": "P3_U", "duration": "3h", "km": "Unlimited"
       document.getElementById("quoteOpen").textContent = t.quoteOpen;
 
       // Packages preview
-      document.getElementById("packagesTitle").textContent = t.packagesTitle;
-      document.getElementById("packagesSub").textContent = t.packagesSub;
-      document.getElementById("packagesNote").textContent = "See full details on the pricing page.";
-      const grid = document.getElementById("packagesGrid");
-      grid.innerHTML = "";
-      PACKAGES.forEach(p => {
-        const card = document.createElement("div");
-        card.className = "card pricingCard";
-        const name = (p.label && (p.label[lang] || p.label.en)) || p.id;
-        const tag = (p.tag && (p.tag[lang] || p.tag.en)) || "";
-        const km = (String(p.km).toLowerCase() === "unlimited") ? "Unlimited" : (p.km + " km");
-        card.innerHTML = '<h3>' + name + '</h3>' +
-          '<div class="pricingPrice"><span>' + p.price + '</span><span>CHF</span></div>' +
-          '<div class="pricingKm">' + p.duration + ' · ' + km + '</div>' +
-          '<div class="pricingTag">' + tag + '</div>';
-        grid.appendChild(card);
-      });
+document.getElementById("packagesTitle").textContent = t.packagesTitle;
+document.getElementById("packagesSub").textContent = t.packagesSub;
+document.getElementById("packagesNote").textContent = "See full details on the pricing page.";
 
-      // Request section
+const toggleText = {
+  en: { more: "See all packages", less: "Show fewer" },
+  de: { more: "Alle Pakete anzeigen", less: "Weniger anzeigen" },
+  it: { more: "Vedi tutti i pacchetti", less: "Mostra meno" }
+};
+
+const grid = document.getElementById("packagesGrid");
+
+let pkgExpanded = false;
+
+function ensurePkgToggle(){
+  let wrap = document.getElementById("pkgToggleWrap");
+  if(!wrap){
+    wrap = document.createElement("div");
+    wrap.id = "pkgToggleWrap";
+    wrap.style.marginTop = "1rem";
+    wrap.style.display = "flex";
+    wrap.style.justifyContent = "center";
+    wrap.style.alignItems = "center";
+    wrap.style.gap = "0.75rem";
+
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "btn btnSecondary";
+    btn.id = "pkgToggleBtn";
+    btn.addEventListener("click", () => {
+      pkgExpanded = !pkgExpanded;
+      renderPackagesPreview();
+    });
+
+    wrap.appendChild(btn);
+
+    // Insert right after the grid
+    grid.insertAdjacentElement("afterend", wrap);
+  }
+  return wrap;
+}
+
+function jumpToRequestWithPackage(pkgId){
+  const req = document.getElementById("request");
+  if(req) req.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  const sel = document.getElementById("packageId");
+  if(sel){
+    const found = Array.from(sel.options).some(o => o.value === pkgId);
+    if(found) sel.value = pkgId;
+    // Give the scroll a moment, then focus
+    setTimeout(() => { try{ sel.focus({ preventScroll:true }); }catch(e){} }, 450);
+  }
+}
+
+function renderPackagesPreview(){
+  const isDesktop = window.matchMedia("(min-width: 980px)").matches;
+  const list = (isDesktop && !pkgExpanded) ? PACKAGES.slice(0, 4) : PACKAGES;
+
+  grid.innerHTML = "";
+
+  list.forEach(p => {
+    const card = document.createElement("div");
+    card.className = "card pricingCard";
+    card.setAttribute("role", "button");
+    card.tabIndex = 0;
+    card.dataset.pkgid = p.id;
+
+    const name = (p.label && (p.label[lang] || p.label.en)) || p.id;
+    const tag = (p.tag && (p.tag[lang] || p.tag.en)) || "";
+    const km = (String(p.km).toLowerCase() === "unlimited") ? "Unlimited" : (p.km + " km");
+
+    card.innerHTML =
+      '<h3>' + name + '</h3>' +
+      '<div class="pricingPrice"><span>' + p.price + '</span><span>CHF</span></div>' +
+      '<div class="pricingKm">' + p.duration + ' · ' + km + '</div>' +
+      (tag ? '<div class="pricingTag">' + tag + '</div>' : '');
+
+    card.addEventListener("click", () => jumpToRequestWithPackage(p.id));
+    card.addEventListener("keydown", (e) => {
+      if(e.key === "Enter" || e.key === " "){
+        e.preventDefault();
+        jumpToRequestWithPackage(p.id);
+      }
+    });
+
+    grid.appendChild(card);
+  });
+
+  // Toggle only on desktop when there are more than 4 packages
+  const wrap = ensurePkgToggle();
+  const btn = document.getElementById("pkgToggleBtn");
+  const tx = toggleText[lang] || toggleText.en;
+
+  if(window.matchMedia("(min-width: 980px)").matches && PACKAGES.length > 4){
+    wrap.style.display = "flex";
+    btn.textContent = pkgExpanded ? tx.less : tx.more;
+  }else{
+    wrap.style.display = "none";
+    pkgExpanded = false; // reset when leaving desktop layout
+  }
+}
+
+renderPackagesPreview();
+window.addEventListener("resize", () => renderPackagesPreview(), { passive: true });
+
+// Request section
+
       document.getElementById("requestTitle").textContent = t.requestTitle;
       document.getElementById("requestSub").textContent = t.requestSub;
       document.getElementById("directTitle").textContent = t.directTitle;
