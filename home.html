@@ -10,7 +10,7 @@
   <meta property="og:description" content="Ferrari only luxury experiences in Switzerland. Request a quote via form, WhatsApp, or call." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="images/image00100.png" />
-  <link rel="icon" href="images/image00600.jpg" />
+  <link rel="icon" href="images/icon.png" />
   <link rel="alternate" hreflang="en" href="home.html?lang=en" />
   <link rel="alternate" hreflang="de" href="home.html?lang=de" />
   <link rel="alternate" hreflang="it" href="home.html?lang=it" />
@@ -39,12 +39,14 @@ header{
 }
 .container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
 .navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.75rem 0}
-.brand{display:inline-flex;align-items:center;gap:0.75rem;font-size:0.95rem;letter-spacing:0.16em;text-transform:uppercase}
-.brandMark{
-  width:30px;height:30px;border-radius:999px;
-  background:radial-gradient(circle at 30% 30%,#ff5a5a,#7b0209);
-  box-shadow:0 0 20px rgba(229,9,20,0.7);
-  display:grid;place-items:center;font-weight:850;font-size:0.8rem
+.brand{display:inline-flex;align-items:center;gap:0.75rem}
+.brandIcon{width:40px;height:40px;object-fit:contain;display:block}
+.brandWordmark{height:34px;width:auto;object-fit:contain;display:block}
+.brandText{font-size:1.05rem;font-weight:850;letter-spacing:0.02em}
+@media (max-width:640px){
+  .brandIcon{width:34px;height:34px}
+  .brandWordmark{height:28px}
+  .brandText{font-size:0.98rem}
 }
 .navRight{display:flex;align-items:center;gap:0.65rem}
 .navLinks{display:flex;align-items:center;gap:0.8rem;font-size:0.9rem}
@@ -313,7 +315,11 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
   <header>
     <div class="container">
       <div class="navInner">
-        <a class="brand" href="home.html"><div class="brandMark">LO</div><span>Luxury Obsession</span></a>
+        <a class="brand" href="home.html" aria-label="Luxury Obsession">
+          <img class="brandIcon" src="images/icon.png" alt="Luxury Obsession icon">
+          <img class="brandWordmark" src="images/wordmark.png" alt="Luxury Obsession wordmark" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+          <span class="brandText" style="display:none">Luxury Obsession</span>
+        </a>
 
         <div class="navRight">
           <nav class="navLinks" aria-label="Primary">
