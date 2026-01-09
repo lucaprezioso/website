@@ -56,3 +56,6 @@
 
 /ferrari-rental-zug            /subs/ferrari-rental-zug            200
 /ferrari-rental-zug/           /subs/ferrari-rental-zug/           200
+
+/index.html        /   301
+/index.html/       /   301
