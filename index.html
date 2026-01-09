@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Luxury Obsession | Ferrari only experiences in Switzerland</title>
+  <title>Luxury Obsession | Sports Car Rental in Switzerland</title>
   <meta name="description" content="Ferrari only luxury experiences in Switzerland. Ferrari 458 Italia available now. Transparent packages and a private host. Request a quote via form, WhatsApp, or call." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index, follow" />
@@ -10,11 +10,11 @@
   <meta property="og:description" content="Ferrari only luxury experiences in Switzerland. Request a quote via form, WhatsApp, or call." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="images/image00100.png" />
-  <link rel="icon" href="images/image00600.jpg" />
-  <link rel="alternate" hreflang="en" href="home.html?lang=en" />
-  <link rel="alternate" hreflang="de" href="home.html?lang=de" />
-  <link rel="alternate" hreflang="it" href="home.html?lang=it" />
-  <link rel="alternate" hreflang="x-default" href="home.html?lang=en" />
+  <link rel="icon" href="images/icon.png" />
+  <link rel="alternate" hreflang="en" href="index.html?lang=en" />
+  <link rel="alternate" hreflang="de" href="index.html?lang=de" />
+  <link rel="alternate" hreflang="it" href="index.html?lang=it" />
+  <link rel="alternate" hreflang="x-default" href="index.html?lang=en" />
   <style>
 :root{
   font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
@@ -27,6 +27,8 @@
   --radius:18px;
   --shadow:0 18px 45px rgba(0,0,0,0.4);
   --max:1120px;
+  --logoSize: 60px;/*44px*/
+  --wordmarkH: 38px;/*34px*/
 }
 *{box-sizing:border-box}
 body{margin:0;background:radial-gradient(circle at top,#191621 0,var(--bg) 55%);color:var(--text)}
@@ -38,13 +40,15 @@ header{
   border-bottom:1px solid rgba(255,255,255,0.03)
 }
 .container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
-.navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.75rem 0}
-.brand{display:inline-flex;align-items:center;gap:0.75rem;font-size:0.95rem;letter-spacing:0.16em;text-transform:uppercase}
-.brandMark{
-  width:30px;height:30px;border-radius:999px;
-  background:radial-gradient(circle at 30% 30%,#ff5a5a,#7b0209);
-  box-shadow:0 0 20px rgba(229,9,20,0.7);
-  display:grid;place-items:center;font-weight:850;font-size:0.8rem
+.navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.20rem 0}/*0.75rem 0*/
+.brand{display:inline-flex;align-items:center;gap:0.75rem}
+.brandIcon{width:var(--logoSize);height:var(--logoSize);object-fit:contain;display:block}
+.brandWordmark{height:var(--wordmarkH);width:auto;object-fit:contain;display:block}
+.brandText{font-size:1.05rem;font-weight:850;letter-spacing:0.02em}
+@media (max-width:640px){
+  .brandIcon{width:34px;height:34px}
+  .brandWordmark{height:28px}
+  .brandText{font-size:0.98rem}
 }
 .navRight{display:flex;align-items:center;gap:0.65rem}
 .navLinks{display:flex;align-items:center;gap:0.8rem;font-size:0.9rem}
@@ -124,6 +128,20 @@ section{padding:3.4rem 0}
 .pricingPrice span:first-child{font-size:1.55rem;font-weight:900}
 .pricingKm{font-size:0.82rem;color:var(--muted)}
 .pricingTag{display:inline-block;margin-top:0.35rem;font-size:0.72rem;padding:0.2rem 0.6rem;border-radius:999px;background:var(--accentSoft);color:#ffb4b4}
+@media (hover:hover) and (min-width: 980px){
+  .pricingCard{cursor:pointer;transition:transform 0.18s, border-color 0.18s, box-shadow 0.18s, background 0.18s}
+  .pricingCard:hover{
+    transform:translateY(-6px) scale(1.03);
+    border-color:rgba(229,9,20,0.55);
+    box-shadow:0 22px 60px rgba(229,9,20,0.10), var(--shadow);
+    background:radial-gradient(circle at top left, rgba(229,9,20,0.18), #050509 58%);
+  }
+  .pricingCard:hover .pricingTag{
+    background:rgba(229,9,20,0.24);
+    color:#ffd1d1;
+  }
+}
+
 .pricingNote{font-size:0.8rem;color:var(--muted);margin-top:1.25rem}
 .requestLayout{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:2rem}
 .ctaRow{display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:0.75rem}
@@ -155,7 +173,7 @@ textarea{min-height:90px;resize:vertical}
 .span-6{grid-column:span 6}
 .span-12{grid-column:span 12}
 @media(max-width:980px){
-  .heroGrid,.contactGrid{grid-template-columns:1fr}
+  .heroGrid{grid-template-columns:1fr}
   .heroMediaCard{max-width:640px;margin:0 auto}
   .span-md-6{grid-column:span 6}
   .span-md-12{grid-column:span 12}
@@ -217,6 +235,11 @@ textarea{min-height:90px;resize:vertical}
 }
 /* Contact map */
 .contactGrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,0.95fr);gap:1.2rem;margin-top:1.2rem;align-items:stretch}
+
+@media(max-width:1100px){
+  .contactGrid{grid-template-columns:1fr}
+  .mapFrame{min-height:320px}
+}
 .mapCard{padding:0.85rem}
 .mapFrame{width:100%;height:100%;min-height:340px;border:0;border-radius:14px}
 .contactList{list-style:none;padding:0;margin:0.75rem 0 0;display:grid;gap:0.5rem}
@@ -294,7 +317,11 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
   <header>
     <div class="container">
       <div class="navInner">
-        <a class="brand" href="home.html"><div class="brandMark">LO</div><span>Luxury Obsession</span></a>
+        <a class="brand" href="index.html" aria-label="Luxury Obsession">
+          <img class="brandIcon" src="images/icon.png" alt="Luxury Obsession icon">
+          <img class="brandWordmark" src="images/wordmark.png" alt="Luxury Obsession wordmark" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+          <span class="brandText" style="display:none">Luxury Obsession</span>
+        </a>
 
         <div class="navRight">
           <nav class="navLinks" aria-label="Primary">
@@ -480,14 +507,19 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
                 </select>
               </div>
             </div>
+            <div class="grid12">
+              <div class="fieldGroup span-6 span-sm-12">
+                <label for="pickupLocation" id="lblPickupLoc"></label>
+                <select id="pickupLocation" name="pickupLocation"></select>
+              </div>
 
-            <div class="fieldGroup">
-              <label for="coupon" id="lblCoupon"></label>
-              <input id="coupon" name="coupon" placeholder="Optional" />
-              <p class="pricingNote" style="margin:0.35rem 0 0" id="couponHint"></p>
+              <div class="fieldGroup span-6 span-sm-12">
+                <label for="coupon" id="lblCoupon"></label>
+                <input id="coupon" name="coupon" placeholder="Optional" />
+                <p class="pricingNote" style="margin:0.35rem 0 0" id="couponHint"></p>
+              </div>
             </div>
-
-            <div class="fieldGroup">
+<div class="fieldGroup">
               <label for="notes" id="lblNotes"></label>
               <textarea id="notes" name="notes"></textarea>
               <p class="pricingNote" style="margin:0.35rem 0 0" id="notesHint"></p>
@@ -570,8 +602,24 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
     const MAPS_LINK = "https://www.google.com/maps/search/?api=1&query=" + MAPS_QUERY;
     const MAPS_EMBED = "https://www.google.com/maps?q=" + MAPS_QUERY + "&output=embed";
 
-    const PACKAGES = [{"id": "P6_L", "duration": "6h", "km": "80", "price": 790, "label": {"en": "Signature Half Day", "de": "Signature Halbtag", "it": "Signature Mezza giornata"}, "tag": {"en": "Most chosen", "de": "Beliebt", "it": "Più scelto"}}, {"id": "P6_U", "duration": "6h", "km": "Unlimited", "price": 890, "label": {"en": "Signature Unlimited", "de": "Signature Unlimited", "it": "Signature Unlimited"}, "tag": {"en": "Unlimited", "de": "Unlimited", "it": "Unlimited"}}, {"id": "P12_L", "duration": "12h", "km": "150", "price": 1290, "label": {"en": "Grand Tour", "de": "Grand Tour", "it": "Grand Tour"}, "tag": {"en": "Day trip", "de": "Tagestrip", "it": "Giornata"}}, {"id": "P12_U", "duration": "12h", "km": "Unlimited", "price": 1390, "label": {"en": "Grand Tour Unlimited", "de": "Grand Tour Unlimited", "it": "Grand Tour Unlimited"}, "tag": {"en": "Unlimited", "de": "Unlimited", "it": "Unlimited"}}, {"id": "P24_L", "duration": "24h", "km": "250", "price": 1490, "label": {"en": "Full Day Icon", "de": "Full Day Icon", "it": "Full Day Icon"}, "tag": {"en": "Full day", "de": "Ganzer Tag", "it": "Intera giornata"}}, {"id": "P24_U", "duration": "24h", "km": "Unlimited", "price": 1690, "label": {"en": "Full Day Icon Unlimited", "de": "Full Day Icon Unlimited", "it": "Full Day Icon Unlimited"}, "tag": {"en": "Unlimited", "de": "Unlimited", "it": "Unlimited"}}];
-    const I18N = {"en": {"navPricing": "Pricing", "navBlog": "Blog", "navContact": "Contact", "navRequest": "Request a quote", "eyebrow": "Ferrari only luxury experiences in Switzerland", "heroTitleA": "Luxury", "heroTitleB": "Ferrari experiences", "heroSubtitle": "Not a generic rental. A Ferrari only experience with a private host, curated handover, and transparent packages. You choose the route. We take care of the details.", "pill1": "Ferrari only fleet", "pill2": "Private host", "pill3": "Curated handover", "pill4": "Transparent packages", "ctaPricing": "See pricing", "ctaRequest": "Request a quote", "packagesTitle": "Packages preview", "packagesSub": "Clear, elegant options. Details and terms are on the pricing page.", "requestTitle": "Request your date", "requestSub": "Two ways to reserve: contact us directly or use the quote request form.", "directTitle": "Direct reservation", "directBody": "Reach out to reserve the Ferrari as an alternative to the quote request form. We are happy to take your reservation by phone, WhatsApp, or email. Share your package, date, and pickup time.", "bul1": "Reserve in minutes", "bul2": "Quick confirmation when possible", "bul3": "Private handover with a host", "formTitle": "Quote request form", "car": "Car", "carNote": "Only the Ferrari 458 Italia is available now.", "name": "Full name", "email": "Email", "phone": "Phone", "package": "Package", "date": "Preferred date", "datePick": "Select date", "time": "Pickup time", "timePick": "Select time", "coupon": "Coupon", "couponHint": "Optional. We will review it during confirmation.", "notes": "Message", "notesHint": "Tell us what you want: route, timing, use case, any special requests.", "send": "Prepare email request", "prepared": "Request prepared in your email client.", "pickupTitle": "Pickup location", "pickupNote": "Free pickup in Nänikon. Other cities available with a simple fee schedule.", "openMaps": "Open in Google Maps", "otherPickup": "Other pickup locations", "follow": "Follow", "followBody": "Instagram, Facebook, TikTok and YouTube for photos, routes and updates.", "quoteOpen": "Quote requests open"}, "de": {"navPricing": "Preise", "navBlog": "Blog", "navContact": "Kontakt", "navRequest": "Offerte anfragen", "eyebrow": "Ferrari only Luxury Erlebnisse in der Schweiz", "heroTitleA": "Luxury", "heroTitleB": "Ferrari Erlebnisse", "heroSubtitle": "Kein Standard Mietwagen. Ein Ferrari only Erlebnis mit privatem Host, kuratiertem Handover und transparenten Paketen. Du wählst die Route. Wir kümmern uns um die Details.", "pill1": "Nur Ferrari", "pill2": "Privater Host", "pill3": "Kuratiertes Handover", "pill4": "Transparente Pakete", "ctaPricing": "Preise ansehen", "ctaRequest": "Offerte anfragen", "packagesTitle": "Paket Übersicht", "packagesSub": "Klar und elegant. Details und Bedingungen auf der Preisseite.", "requestTitle": "Datum anfragen", "requestSub": "Zwei Wege zur Reservation: direkt kontaktieren oder das Offerte Formular nutzen.", "directTitle": "Direkte Reservierung", "directBody": "Kontaktiere uns direkt, um den Ferrari zu reservieren als Alternative zum Offerte Formular. Wir nehmen Reservierungen gerne per Telefon, WhatsApp oder E Mail entgegen. Bitte Paket, Datum und Abholzeit angeben.", "bul1": "In wenigen Minuten reservieren", "bul2": "Schnelle Rückmeldung wenn möglich", "bul3": "Privates Handover mit Host", "formTitle": "Offerte Formular", "car": "Auto", "carNote": "Nur der Ferrari 458 Italia ist aktuell verfügbar.", "name": "Name", "email": "E Mail", "phone": "Telefon", "package": "Paket", "date": "Wunschtermin", "datePick": "Datum wählen", "time": "Abholzeit", "timePick": "Zeit wählen", "coupon": "Coupon", "couponHint": "Optional. Wir prüfen den Coupon bei der Bestätigung.", "notes": "Nachricht", "notesHint": "Route, Timing, Use Case, Wünsche.", "send": "E Mail Anfrage vorbereiten", "prepared": "Anfrage im E Mail Programm vorbereitet.", "pickupTitle": "Abholort", "pickupNote": "Kostenlose Abholung in Nänikon. Weitere Städte gegen einfache Gebühr verfügbar.", "openMaps": "In Google Maps öffnen", "otherPickup": "Weitere Abholorte", "follow": "Folgen", "followBody": "Instagram, Facebook, TikTok und YouTube für Bilder, Routen und Updates.", "quoteOpen": "Anfragen offen"}, "it": {"navPricing": "Prezzi", "navBlog": "Blog", "navContact": "Contatto", "navRequest": "Richiedi preventivo", "eyebrow": "Esperienze Luxury Ferrari only in Svizzera", "heroTitleA": "Luxury", "heroTitleB": "esperienze Ferrari", "heroSubtitle": "Non un noleggio generico. Un esperienza Ferrari only con host privato, handover curato e pacchetti trasparenti. Tu scegli la rotta. Noi curiamo i dettagli.", "pill1": "Solo Ferrari", "pill2": "Host privato", "pill3": "Handover curato", "pill4": "Pacchetti trasparenti", "ctaPricing": "Vedi prezzi", "ctaRequest": "Richiedi preventivo", "packagesTitle": "Anteprima pacchetti", "packagesSub": "Opzioni chiare ed eleganti. Dettagli e termini nella pagina prezzi.", "requestTitle": "Richiedi la data", "requestSub": "Due modi per prenotare: contatto diretto oppure modulo preventivo.", "directTitle": "Prenotazione diretta", "directBody": "Contattaci direttamente per prenotare la Ferrari come alternativa al modulo preventivo. Siamo felici di prendere la prenotazione via telefono, WhatsApp o email. Indica pacchetto, data e ora ritiro.", "bul1": "Prenota in pochi minuti", "bul2": "Risposta rapida quando possibile", "bul3": "Handover privato con host", "formTitle": "Modulo preventivo", "car": "Auto", "carNote": "Solo la Ferrari 458 Italia è disponibile ora.", "name": "Nome completo", "email": "Email", "phone": "Telefono", "package": "Pacchetto", "date": "Data preferita", "datePick": "Seleziona data", "time": "Ora ritiro", "timePick": "Seleziona ora", "coupon": "Coupon", "couponHint": "Opzionale. Lo verifichiamo in fase di conferma.", "notes": "Messaggio", "notesHint": "Rotta, tempistiche, use case, richieste speciali.", "send": "Prepara richiesta email", "prepared": "Richiesta preparata nel client email.", "pickupTitle": "Luogo di ritiro", "pickupNote": "Ritiro gratuito a Nänikon. Altre città disponibili con una tariffa semplice.", "openMaps": "Apri in Google Maps", "otherPickup": "Altri luoghi di ritiro", "follow": "Seguici", "followBody": "Instagram, Facebook, TikTok e YouTube per foto, itinerari e aggiornamenti.", "quoteOpen": "Richieste aperte"}};
+    let PACKAGES = [];
+const DEFAULT_PACKAGES = [<!--{"id": "P3_U", "duration": "3h", "km": "Unlimited", "price": 440, "label": {"en": "Brief Escape", "de": "Kurztrip", "it": "Breve Fuga"}, "tag": {"en": "Unlimited", "de": "Unlimited", "it": "Unlimited"}}, -> 
+{"id": "P6_L", "duration": "6h", "km": "200", "price": 790, "label": {"en": "Signature Half Day", "de": "Signature Halbtag", "it": "Signature Mezza giornata"}, "tag": {"en": "Most chosen", "de": "Beliebt", "it": "Più scelto"}}, {"id": "P6_U", "duration": "6h", "km": "Unlimited", "price": 890, "label": {"en": "Signature Unlimited", "de": "Signature Unlimited", "it": "Signature Unlimited"}, "tag": {"en": "Unlimited", "de": "Unlimited", "it": "Unlimited"}}, {"id": "P12_L", "duration": "12h", "km": "300", "price": 890, "label": {"en": "Grand Tour 300", "de": "Grand Tour 300", "it": "Grand Tour 300"}, "tag": {"en": "Day trip", "de": "Tagestrip", "it": "Giornata"}}, {"id": "P12_L500", "duration": "12h", "km": "500", "price": 1290, "label": {"en": "Grand Tour 500", "de": "Grand Tour 500", "it": "Grand Tour 500"}, "tag": {"en": "Day trip", "de": "Tagestrip", "it": "Giornata"}}, {"id": "P12_U", "duration": "12h", "km": "Unlimited", "price": 1590, "label": {"en": "Grand Tour Unlimited", "de": "Grand Tour Unlimited", "it": "Grand Tour Unlimited"}, "tag": {"en": "Unlimited", "de": "Unlimited", "it": "Unlimited"}}, {"id": "P24_L", "duration": "24h", "km": "500", "price": 1590, "label": {"en": "Full Day Icon", "de": "Full Day Icon", "it": "Full Day Icon"}, "tag": {"en": "Full day", "de": "Ganzer Tag", "it": "Intera giornata"}}, {"id": "P24_U", "duration": "24h", "km": "Unlimited", "price": 1990, "label": {"en": "Full Day Icon Unlimited", "de": "Full Day Icon Unlimited", "it": "Full Day Icon Unlimited"}, "tag": {"en": "Unlimited", "de": "Unlimited", "it": "Unlimited"}}, {"id": "WE_500", "duration": "48h", "km": "500", "price": 1990, "label": {"en": "Weekend Escape 500", "de": "Weekend Escape 500", "it": "Weekend Escape 500"}, "tag": {"en": "Weekend", "de": "Weekend", "it": "Weekend"}}, {"id": "WE_800", "duration": "48h", "km": "800", "price": 2790, "label": {"en": "Weekend Escape 800", "de": "Weekend Escape 800", "it": "Weekend Escape 800"}, "tag": {"en": "Weekend", "de": "Weekend", "it": "Weekend"}}, {"id": "WD", "duration": "Mon-Fri", "km": "800", "price": 2190, "label": {"en": "Weekday Privilege", "de": "Weekday Privilege", "it": "Weekday Privilege"}, "tag": {"en": "Weekday", "de": "Weekday", "it": "Weekday"}}, {"id": "FW", "duration": "Full week", "km": "1400", "price": 4480, "label": {"en": "Full Week", "de": "Ganze Woche", "it": "Settimana intera"}, "tag": {"en": "Full week", "de": "Ganze Woche", "it": "Settimana Intera"}}];
+
+    async function hydratePackages(){
+      try{
+        const res = await fetch("data/packages.json", { cache: "no-store" });
+        if(!res.ok) throw new Error("bad response");
+        const data = await res.json();
+        const list = (data && Array.isArray(data.packages)) ? data.packages : (Array.isArray(data) ? data : null);
+        PACKAGES = (list && list.length) ? list : DEFAULT_PACKAGES;
+      }catch(e){
+        PACKAGES = DEFAULT_PACKAGES;
+      }
+    }
+
+
+    const I18N = {"en": {"navPricing": "Pricing", "navBlog": "Blog", "navContact": "Contact", "navRequest": "Request a quote", "eyebrow": "Ferrari only luxury experiences in Switzerland", "heroTitleA": "Ferrari 458 Italia Naturally aspirated", "heroTitleB": "Without compromise", "heroSubtitle": "Not just a rental. A curated Ferrari experience where sound, roads and atmosphere align. Choose your package and request your date. Ferrari 458 Italia available now.", "pill1": "Ferrari only fleet", "pill2": "Private host", "pill3": "Curated handover", "pill4": "Transparent packages", "ctaPricing": "See pricing", "ctaRequest": "Request a quote", "packagesTitle": "Packages preview", "packagesSub": "Clear, elegant options. Details and terms are on the pricing page.", "requestTitle": "Request your date", "requestSub": "Two ways to reserve: contact us directly or use the quote request form.", "directTitle": "Direct reservation", "directBody": "Reach out to reserve the Ferrari as an alternative to the quote request form. We are happy to take your reservation by phone, WhatsApp, or email. Share your package, date, and pickup time.", "bul1": "Reserve in minutes", "bul2": "Quick confirmation when possible", "bul3": "Private handover with a host", "formTitle": "Quote request form", "car": "Car", "carNote": "Only the Ferrari 458 Italia is available now.", "name": "Full name", "email": "Email", "phone": "Phone", "package": "Package", "date": "Preferred date", "datePick": "Select date", "time": "Pickup time", "timePick": "Select time", "coupon": "Coupon", "couponHint": "Optional. We will review it during confirmation.", "notes": "Message", "notesHint": "Tell us what you want: route, timing, use case, any special requests.", "send": "Prepare email request", "prepared": "Request prepared in your email client.", "pickupTitle": "Pickup location", "pickupNote": "Free pickup in Nänikon. Other cities available with a simple fee schedule.", "openMaps": "Open in Google Maps", "otherPickup": "Other pickup locations", "follow": "Follow", "followBody": "Instagram, Facebook, TikTok and YouTube for photos, routes and updates.", "quoteOpen": "Quote requests open", "pickupLocation": "Pickup location"}, "de": {"navPricing": "Preise", "navBlog": "Blog", "navContact": "Kontakt", "navRequest": "Offerte anfragen", "eyebrow": "Ferrari only Luxury Erlebnisse in der Schweiz", "heroTitleA": "Luxury", "heroTitleB": "Ferrari Erlebnisse", "heroSubtitle": "Kein Standard Mietwagen. Ein Ferrari only Erlebnis mit privatem Host, kuratiertem Handover und transparenten Paketen. Du wählst die Route. Wir kümmern uns um die Details.", "pill1": "Nur Ferrari", "pill2": "Privater Host", "pill3": "Kuratiertes Handover", "pill4": "Transparente Pakete", "ctaPricing": "Preise ansehen", "ctaRequest": "Offerte anfragen", "packagesTitle": "Paket Übersicht", "packagesSub": "Klar und elegant. Details und Bedingungen auf der Preisseite.", "requestTitle": "Datum anfragen", "requestSub": "Zwei Wege zur Reservation: direkt kontaktieren oder das Offerte Formular nutzen.", "directTitle": "Direkte Reservierung", "directBody": "Kontaktiere uns direkt, um den Ferrari zu reservieren als Alternative zum Offerte Formular. Wir nehmen Reservierungen gerne per Telefon, WhatsApp oder E Mail entgegen. Bitte Paket, Datum und Abholzeit angeben.", "bul1": "In wenigen Minuten reservieren", "bul2": "Schnelle Rückmeldung wenn möglich", "bul3": "Privates Handover mit Host", "formTitle": "Offerte Formular", "car": "Auto", "carNote": "Nur der Ferrari 458 Italia ist aktuell verfügbar.", "name": "Name", "email": "E Mail", "phone": "Telefon", "package": "Paket", "date": "Wunschtermin", "datePick": "Datum wählen", "time": "Abholzeit", "timePick": "Zeit wählen", "coupon": "Coupon", "couponHint": "Optional. Wir prüfen den Coupon bei der Bestätigung.", "notes": "Nachricht", "notesHint": "Route, Timing, Use Case, Wünsche.", "send": "E Mail Anfrage vorbereiten", "prepared": "Anfrage im E Mail Programm vorbereitet.", "pickupTitle": "Abholort", "pickupNote": "Kostenlose Abholung in Nänikon. Weitere Städte gegen einfache Gebühr verfügbar.", "openMaps": "In Google Maps öffnen", "otherPickup": "Weitere Abholorte", "follow": "Folgen", "followBody": "Instagram, Facebook, TikTok und YouTube für Bilder, Routen und Updates.", "quoteOpen": "Anfragen offen", "pickupLocation": "Abholort"}, "it": {"navPricing": "Prezzi", "navBlog": "Blog", "navContact": "Contatto", "navRequest": "Richiedi preventivo", "eyebrow": "Esperienze esclusive Ferrari in Svizzera", "heroTitleA": "Ferrari 458 Italia", "heroTitleB": "Aspirazione naturale senza compromessi", "heroSubtitle": "Non un semplice noleggio. Un'esperienza esclusiva Ferrari, consegna curata e pacchetti trasparenti. La Ferrari 458 è disponibile da ora.", "pill1": "Solo Ferrari", "pill2": "Host privato", "pill3": "Handover curato", "pill4": "Pacchetti trasparenti", "ctaPricing": "Vedi prezzi", "ctaRequest": "Richiedi preventivo", "packagesTitle": "Anteprima pacchetti", "packagesSub": "Opzioni chiare ed eleganti. Dettagli e termini nella pagina prezzi.", "requestTitle": "Richiedi la data", "requestSub": "Due modi per prenotare: contatto diretto oppure modulo preventivo.", "directTitle": "Prenotazione diretta", "directBody": "Contattaci direttamente per prenotare la Ferrari come alternativa al modulo preventivo. Siamo felici di prendere la prenotazione via telefono, WhatsApp o email. Indica pacchetto, data e ora ritiro.", "bul1": "Prenota in pochi minuti", "bul2": "Risposta rapida quando possibile", "bul3": "Handover privato con host", "formTitle": "Modulo preventivo", "car": "Auto", "carNote": "Solo la Ferrari 458 Italia è disponibile ora.", "name": "Nome completo", "email": "Email", "phone": "Telefono", "package": "Pacchetto", "date": "Data preferita", "datePick": "Seleziona data", "time": "Ora ritiro", "timePick": "Seleziona ora", "coupon": "Coupon", "couponHint": "Opzionale. Lo verifichiamo in fase di conferma.", "notes": "Messaggio", "notesHint": "Rotta, tempistiche, use case, richieste speciali.", "send": "Prepara richiesta email", "prepared": "Richiesta preparata nel client email.", "pickupTitle": "Luogo di ritiro", "pickupNote": "Ritiro gratuito a Nänikon. Altre città disponibili con una tariffa semplice.", "openMaps": "Apri in Google Maps", "otherPickup": "Altri luoghi di ritiro", "follow": "Seguici", "followBody": "Instagram, Facebook, TikTok e YouTube per foto, itinerari e aggiornamenti.", "quoteOpen": "Richieste aperte", "pickupLocation": "Luogo di ritiro"}};
 
     const WEEKDAYS = {
       en:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
@@ -592,6 +640,9 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
       const btnPrev = document.getElementById("calPrev");
       const btnNext = document.getElementById("calNext");
       const btnClose = document.getElementById("calClose");
+	  
+	  const blockFrom = new Date(2026, 2, 20); // March is month 2
+	  blockFrom.setHours(0,0,0,0);
 
       let selectedISO = "";
       const now = new Date();
@@ -640,7 +691,7 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
           const iso = isoForDay(y,m,day);
           const d = new Date(y,m,day);
           d.setHours(0,0,0,0);
-          const disabled = d < now;
+          const disabled = (d < now) || (d <= blockFrom);
           if(disabled) btn.classList.add("calDayDisabled");
           if(iso === selectedISO) btn.classList.add("calDaySelected");
           btn.textContent = String(day);
@@ -674,8 +725,9 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
       });
     }
 
-    function initPage(){
+    async function initPage(){
       const lang = window.__LO__.getLang();
+      await hydratePackages();
       document.documentElement.lang = lang;
       window.__LO__.initLangButtons(lang);
       window.__LO__.initHamburger();
@@ -689,8 +741,8 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
 
       document.getElementById("navPricing").href = window.__LO__.buildUrl("subs/pricing.html", lang, "top");
       document.getElementById("navBlog").href = window.__LO__.buildUrl("subs/blog.html", lang, "top");
-      document.getElementById("navContact").href = window.__LO__.buildUrl("home.html", lang, "contact");
-      document.getElementById("navRequest").href = window.__LO__.buildUrl("home.html", lang, "request");
+      document.getElementById("navContact").href = window.__LO__.buildUrl("index.html", lang, "contact");
+      document.getElementById("navRequest").href = window.__LO__.buildUrl("index.html", lang, "request");
 
       document.getElementById("mPricing").childNodes[0].nodeValue = t.navPricing;
       document.getElementById("mBlog").childNodes[0].nodeValue = t.navBlog;
@@ -699,8 +751,8 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
 
       document.getElementById("mPricing").href = window.__LO__.buildUrl("subs/pricing.html", lang, "top");
       document.getElementById("mBlog").href = window.__LO__.buildUrl("subs/blog.html", lang, "top");
-      document.getElementById("mContact").href = window.__LO__.buildUrl("home.html", lang, "contact");
-      document.getElementById("mRequest").href = window.__LO__.buildUrl("home.html", lang, "request");
+      document.getElementById("mContact").href = window.__LO__.buildUrl("index.html", lang, "contact");
+      document.getElementById("mRequest").href = window.__LO__.buildUrl("index.html", lang, "request");
 
       // Hero
       document.getElementById("eyebrow").textContent = t.eyebrow;
@@ -720,25 +772,114 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
       document.getElementById("quoteOpen").textContent = t.quoteOpen;
 
       // Packages preview
-      document.getElementById("packagesTitle").textContent = t.packagesTitle;
-      document.getElementById("packagesSub").textContent = t.packagesSub;
-      document.getElementById("packagesNote").textContent = "See full details on the pricing page.";
-      const grid = document.getElementById("packagesGrid");
-      grid.innerHTML = "";
-      PACKAGES.forEach(p => {
-        const card = document.createElement("div");
-        card.className = "card pricingCard";
-        const name = (p.label && (p.label[lang] || p.label.en)) || p.id;
-        const tag = (p.tag && (p.tag[lang] || p.tag.en)) || "";
-        const km = (String(p.km).toLowerCase() === "unlimited") ? "Unlimited" : (p.km + " km");
-        card.innerHTML = '<h3>' + name + '</h3>' +
-          '<div class="pricingPrice"><span>' + p.price + '</span><span>CHF</span></div>' +
-          '<div class="pricingKm">' + p.duration + ' · ' + km + '</div>' +
-          '<div class="pricingTag">' + tag + '</div>';
-        grid.appendChild(card);
-      });
+document.getElementById("packagesTitle").textContent = t.packagesTitle;
+document.getElementById("packagesSub").textContent = t.packagesSub;
+document.getElementById("packagesNote").textContent = "See full details on the pricing page.";
 
-      // Request section
+const toggleText = {
+  en: { more: "See all packages", less: "Show fewer" },
+  de: { more: "Alle Pakete anzeigen", less: "Weniger anzeigen" },
+  it: { more: "Vedi tutti i pacchetti", less: "Mostra meno" }
+};
+
+const grid = document.getElementById("packagesGrid");
+
+let pkgExpanded = false;
+
+function ensurePkgToggle(){
+  let wrap = document.getElementById("pkgToggleWrap");
+  if(!wrap){
+    wrap = document.createElement("div");
+    wrap.id = "pkgToggleWrap";
+    wrap.style.marginTop = "1rem";
+    wrap.style.display = "flex";
+    wrap.style.justifyContent = "center";
+    wrap.style.alignItems = "center";
+    wrap.style.gap = "0.75rem";
+
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "btn btnSecondary";
+    btn.id = "pkgToggleBtn";
+    btn.addEventListener("click", () => {
+      pkgExpanded = !pkgExpanded;
+      renderPackagesPreview();
+    });
+
+    wrap.appendChild(btn);
+
+    // Insert right after the grid
+    grid.insertAdjacentElement("afterend", wrap);
+  }
+  return wrap;
+}
+
+function jumpToRequestWithPackage(pkgId){
+  const req = document.getElementById("request");
+  if(req) req.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  const sel = document.getElementById("packageId");
+  if(sel){
+    const found = Array.from(sel.options).some(o => o.value === pkgId);
+    if(found) sel.value = pkgId;
+    // Give the scroll a moment, then focus
+    setTimeout(() => { try{ sel.focus({ preventScroll:true }); }catch(e){} }, 450);
+  }
+}
+
+function renderPackagesPreview(){
+  const isDesktop = window.matchMedia("(min-width: 980px)").matches;
+  const list = (isDesktop && !pkgExpanded) ? PACKAGES.slice(0, 4) : PACKAGES;
+
+  grid.innerHTML = "";
+
+  list.forEach(p => {
+    const card = document.createElement("div");
+    card.className = "card pricingCard";
+    card.setAttribute("role", "button");
+    card.tabIndex = 0;
+    card.dataset.pkgid = p.id;
+
+    const name = (p.label && (p.label[lang] || p.label.en)) || p.id;
+    const tag = (p.tag && (p.tag[lang] || p.tag.en)) || "";
+    const km = (String(p.km).toLowerCase() === "unlimited") ? "Unlimited" : (p.km + " km");
+
+    card.innerHTML =
+      '<h3>' + name + '</h3>' +
+      '<div class="pricingPrice"><span>' + p.price + '</span><span>CHF</span></div>' +
+      '<div class="pricingKm">' + p.duration + ' · ' + km + '</div>' +
+      (tag ? '<div class="pricingTag">' + tag + '</div>' : '');
+
+    card.addEventListener("click", () => jumpToRequestWithPackage(p.id));
+    card.addEventListener("keydown", (e) => {
+      if(e.key === "Enter" || e.key === " "){
+        e.preventDefault();
+        jumpToRequestWithPackage(p.id);
+      }
+    });
+
+    grid.appendChild(card);
+  });
+
+  // Toggle only on desktop when there are more than 4 packages
+  const wrap = ensurePkgToggle();
+  const btn = document.getElementById("pkgToggleBtn");
+  const tx = toggleText[lang] || toggleText.en;
+
+  if(window.matchMedia("(min-width: 980px)").matches && PACKAGES.length > 4){
+    wrap.style.display = "flex";
+    btn.textContent = pkgExpanded ? tx.less : tx.more;
+  }else{
+    wrap.style.display = "none";
+    pkgExpanded = false; // reset when leaving desktop layout
+  }
+}
+
+renderPackagesPreview();
+window.addEventListener("resize", () => renderPackagesPreview(), { passive: true });
+
+// Request section
+
       document.getElementById("requestTitle").textContent = t.requestTitle;
       document.getElementById("requestSub").textContent = t.requestSub;
       document.getElementById("directTitle").textContent = t.directTitle;
@@ -758,6 +899,56 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
       document.getElementById("preferredDate").placeholder = t.datePick;
       document.getElementById("lblTime").textContent = t.time;
       document.getElementById("timePick").textContent = t.timePick;
+	  
+	  // Pickup location select (shown next to coupon on wide screens)
+      document.getElementById("lblPickupLoc").textContent = t.pickupLocation;
+      const pickupSel = document.getElementById("pickupLocation");
+      pickupSel.innerHTML = "";
+	  
+	  const pickupOptions = {
+        en: [
+          ["NANIKON", "Nänikon · FREE"],
+          ["ZURICH", "Zurich · FREE in 2026"],
+          ["ZURICH_AIRPORT", "Zurich Airport · FREE in 2026"],
+          ["ZUG", "Zug · CHF 140"],
+          ["LUCERNE", "Lucerne · CHF 140"],
+          ["BERN", "Bern · CHF 290"],
+          ["BASEL", "Basel · CHF 290"],
+          ["CHUR", "Chur · CHF 290"],
+          ["OTHER", "Other · Please specify in the Message"]
+        ],
+        de: [
+          ["NANIKON", "Nänikon · KOSTENLOS"],
+          ["ZURICH", "Zürich · KOSTENLOS im 2026"],
+          ["ZURICH_AIRPORT", "Flughafen Zürich · KOSTENLOS im 2026"],
+          ["ZUG", "Zug · CHF 140"],
+          ["LUCERNE", "Lucerne · CHF 140"],
+          ["BERN", "Bern · CHF 290"],
+          ["BASEL", "Basel · CHF 290"],
+          ["CHUR", "Chur · CHF 290"],
+          ["OTHER", "Andere · Bitte in der Nachricht angeben"]
+        ],
+        it: [
+          ["NANIKON", "Nänikon · GRATIS"],
+          ["ZURICH", "Zurigo · GRATIS nel"],
+          ["ZURICH_AIRPORT", "Aeroporto di Zurigo · GRATIS nel"],
+          ["ZUG", "Zug · CHF 140"],
+          ["LUCERNE", "Lucerna · CHF 140"],
+          ["BERN", "Berna · CHF 290"],
+          ["BASEL", "Basilea · CHF 290"],
+          ["CHUR", "Chur · CHF 290"],
+          ["OTHER", "Altro · Prego specificare nel messaggio"]
+        ]
+      };
+
+      (pickupOptions[lang] || pickupOptions.en).forEach(([val, label], i) => {
+        const opt = document.createElement("option");
+        opt.value = val;
+        opt.textContent = label;
+        if(i === 0) opt.selected = true; // Nänikon default
+        pickupSel.appendChild(opt);
+      });
+	  
       document.getElementById("lblCoupon").textContent = t.coupon;
       document.getElementById("couponHint").textContent = t.couponHint;
       document.getElementById("lblNotes").textContent = t.notes;
@@ -779,7 +970,7 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
       // Populate time options
       const timeSel = document.getElementById("pickupTime");
       timeSel.querySelectorAll("option:not([id=timePick])").forEach(o => o.remove());
-      for(let h=8; h<=20; h++){
+      for(let h=7; h<=20; h++){
         for(const m of [0,30]){
           if(h===20 && m>0) continue;
           const val = String(h).padStart(2,"0") + ":" + String(m).padStart(2,"0");
@@ -862,6 +1053,7 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
           "Package: " + pkgName + " (" + pkg + ")",
           "Preferred date: " + (date || ""),
           "Pickup time: " + (time || ""),
+		  "Pickup location: " + (document.getElementById("pickupLocation").options[document.getElementById("pickupLocation").selectedIndex]?.textContent || ""),
           "Coupon: " + (coupon || ""),
           "Name: " + name,
           "Email: " + email,

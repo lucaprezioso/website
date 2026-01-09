@@ -1,0 +1,58 @@
+# Clean URLs (no /subs) -> serve content from /subs
+
+/swiss-routes-worth-driving-in-a-ferrari      /subs/swiss-routes-worth-driving-in-a-ferrari.html   200
+/swiss-routes-worth-driving-in-a-ferrari/     /subs/swiss-routes-worth-driving-in-a-ferrari.html   200
+
+/transparent-pricing-how-we-design-packages-that-make-sense   /subs/transparent-pricing-how-we-design-packages-that-make-sense   200
+/transparent-pricing-how-we-design-packages-that-make-sense/  /subs/transparent-pricing-how-we-design-packages-that-make-sense/  200
+
+/pricing        /subs/pricing        200
+/pricing/       /subs/pricing/       200
+
+/locations      /subs/locations      200
+/locations/     /subs/locations/     200
+
+/ferrari-rental-zurich-airport       /subs/ferrari-rental-zurich-airport       200
+/ferrari-rental-zurich-airport/      /subs/ferrari-rental-zurich-airport/      200
+
+/ferrari-rental-zurich_rebuilt_from_home      /subs/ferrari-rental-zurich_rebuilt_from_home      200
+/ferrari-rental-zurich_rebuilt_from_home/     /subs/ferrari-rental-zurich_rebuilt_from_home/     200
+
+/ferrari-458-italia-the-signature-experience-in-switzerland      /subs/ferrari-458-italia-the-signature-experience-in-switzerland      200
+/ferrari-458-italia-the-signature-experience-in-switzerland/     /subs/ferrari-458-italia-the-signature-experience-in-switzerland/     200
+
+/blog          /subs/blog          200
+/blog/         /subs/blog/         200
+
+/ferrari-rental-andermatt      /subs/ferrari-rental-andermatt      200
+/ferrari-rental-andermatt/     /subs/ferrari-rental-andermatt/     200
+
+/ferrari-rental-basel          /subs/ferrari-rental-basel          200
+/ferrari-rental-basel/         /subs/ferrari-rental-basel/         200
+
+/ferrari-rental-bern           /subs/ferrari-rental-bern           200
+/ferrari-rental-bern/          /subs/ferrari-rental-bern/          200
+
+/ferrari-rental-biel           /subs/ferrari-rental-biel           200
+/ferrari-rental-biel/          /subs/ferrari-rental-biel/          200
+
+/ferrari-rental-chur           /subs/ferrari-rental-chur           200
+/ferrari-rental-chur/          /subs/ferrari-rental-chur/          200
+
+/ferrari-rental-davos          /subs/ferrari-rental-davos          200
+/ferrari-rental-davos/         /subs/ferrari-rental-davos/         200
+
+/ferrari-rental-lucerne        /subs/ferrari-rental-lucerne        200
+/ferrari-rental-lucerne/       /subs/ferrari-rental-lucerne/       200
+
+/ferrari-rental-nanikon        /subs/ferrari-rental-nanikon        200
+/ferrari-rental-nanikon/       /subs/ferrari-rental-nanikon/       200
+
+/ferrari-rental-st-gallen      /subs/ferrari-rental-st-gallen      200
+/ferrari-rental-st-gallen/     /subs/ferrari-rental-st-gallen/     200
+
+/ferrari-rental-winterthur     /subs/ferrari-rental-winterthur     200
+/ferrari-rental-winterthur/    /subs/ferrari-rental-winterthur/    200
+
+/ferrari-rental-zug            /subs/ferrari-rental-zug            200
+/ferrari-rental-zug/           /subs/ferrari-rental-zug/           200

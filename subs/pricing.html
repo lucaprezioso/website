@@ -5,6 +5,7 @@
   <title>Luxury Obsession | Pricing</title>
   <meta name="description" content="Pricing for Ferrari only experiences in Switzerland. Transparent packages, options, and terms." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="../images/icon.png">
   <style>
 :root{
   font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
@@ -28,7 +29,7 @@ header{
   border-bottom:1px solid rgba(255,255,255,0.03)
 }
 .container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
-.navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.75rem 0}
+.navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.2rem 0}/*0.75rem 0*/
 .brand{display:inline-flex;align-items:center;gap:0.75rem;font-size:0.95rem;letter-spacing:0.16em;text-transform:uppercase}
 .brandMark{
   width:30px;height:30px;border-radius:999px;
@@ -214,6 +215,21 @@ textarea{min-height:90px;resize:vertical}
 .contactList li span{color:var(--muted);font-size:0.82rem}
 footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.78rem;color:var(--muted)}
 .footerInner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+
+/* Header logo sizing controls (match Home) */
+:root{
+  --logoSize: 60px;
+  --wordmarkH: 38px;
+}
+.brand{display:inline-flex;align-items:center;gap:0.75rem}
+.brandIcon{width:var(--logoSize);height:var(--logoSize);object-fit:contain;display:block}
+.brandWordmark{height:var(--wordmarkH);width:auto;object-fit:contain;display:block}
+.brandText{font-size:1.05rem;font-weight:850;letter-spacing:0.02em}
+@media(max-width:640px){
+  :root{ --logoSize: 34px; --wordmarkH: 28px; }
+  .brandText{font-size:0.98rem}
+}
+
 </style>
   <script>
 (function(){
@@ -319,14 +335,19 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
   <header>
     <div class="container">
       <div class="navInner">
-        <a class="brand" href="../home.html"><div class="brandMark">LO</div><span>Luxury Obsession</span></a>
+        <a class="brand" href="../index.html" aria-label="Luxury Obsession">
+          <img class="brandIcon" src="../images/icon.png" alt="Luxury Obsession icon">
+          <img class="brandWordmark" src="../images/wordmark.png" alt="Luxury Obsession"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+          <span class="brandText" style="display:none">Luxury Obsession</span>
+        </a>
 
         <div class="navRight">
           <nav class="navLinks" aria-label="Primary">
-            <a id="navHome" href="../home.html">Home</a>
+            <a id="navHome" href="../index.html">Home</a>
             <a id="navPricing" href="pricing.html">Pricing</a>
             <a id="navBlog" href="blog.html">Blog</a>
-            <a id="navRequest" class="navCta" href="../home.html#request">Request</a>
+            <a id="navRequest" class="navCta" href="../index.html#request">Request</a>
           </nav>
 
           <div class="langPicker" aria-label="Language">
@@ -359,11 +380,11 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
       </div>
 
       <div id="mobileMenu" class="mobileMenu" data-open="0" role="navigation" aria-label="Mobile" style="display:none">
-        <a id="mHome" href="../home.html">Home<span>›</span></a>
+        <a id="mHome" href="../index.html">Home<span>›</span></a>
         <a id="mPricing" href="pricing.html">Pricing<span>›</span></a>
         <a id="mBlog" href="blog.html">Blog<span>›</span></a>
         <div class="mobileMenuDivider"></div>
-        <a id="mRequest" class="mobileMenuCta" href="../home.html#request">Request a quote</a>
+        <a id="mRequest" class="mobileMenuCta" href="../index.html#request">Request a quote</a>
       </div>
     </div>
   </header>
@@ -405,7 +426,7 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
 
             <div class="ctaRow">
               <a class="ctaBtn" id="pickupLink" href="../subs/locations.html">📍 Pickup locations</a>
-              <a class="ctaBtn ctaBtnPrimary" id="requestLink" href="../home.html#request">💬 Request a quote</a>
+              <a class="ctaBtn ctaBtnPrimary" id="requestLink" href="../index.html#request">💬 Request a quote</a>
             </div>
           </div>
 
@@ -594,20 +615,20 @@ const DEFAULT_PACKAGES = [{"id": "P3", "duration": "3h", "label": {"en": "Brief 
       document.getElementById("navBlog").textContent = t.blog;
       document.getElementById("navRequest").textContent = t.request;
 
-      document.getElementById("navHome").href = window.__LO__.buildUrl("../home.html", lang, "top");
+      document.getElementById("navHome").href = window.__LO__.buildUrl("../index.html", lang, "top");
       document.getElementById("navPricing").href = window.__LO__.buildUrl("pricing.html", lang, "top");
       document.getElementById("navBlog").href = window.__LO__.buildUrl("blog.html", lang, "top");
-      document.getElementById("navRequest").href = window.__LO__.buildUrl("../home.html", lang, "request");
+      document.getElementById("navRequest").href = window.__LO__.buildUrl("../index.html", lang, "request");
 
       document.getElementById("mHome").childNodes[0].nodeValue = t.home;
       document.getElementById("mPricing").childNodes[0].nodeValue = t.pricing;
       document.getElementById("mBlog").childNodes[0].nodeValue = t.blog;
       document.getElementById("mRequest").textContent = t.request;
 
-      document.getElementById("mHome").href = window.__LO__.buildUrl("../home.html", lang, "top");
+      document.getElementById("mHome").href = window.__LO__.buildUrl("../index.html", lang, "top");
       document.getElementById("mPricing").href = window.__LO__.buildUrl("pricing.html", lang, "top");
       document.getElementById("mBlog").href = window.__LO__.buildUrl("blog.html", lang, "top");
-      document.getElementById("mRequest").href = window.__LO__.buildUrl("../home.html", lang, "request");
+      document.getElementById("mRequest").href = window.__LO__.buildUrl("../index.html", lang, "request");
 
       document.getElementById("title").textContent = t.title;
       document.getElementById("subtitle").textContent = t.sub;
@@ -620,7 +641,7 @@ const DEFAULT_PACKAGES = [{"id": "P3", "duration": "3h", "label": {"en": "Brief 
       document.getElementById("pickupLink").href = window.__LO__.buildUrl("../subs/locations.html", lang, "top");
 
       document.getElementById("requestLink").textContent = "💬 " + t.request;
-      document.getElementById("requestLink").href = window.__LO__.buildUrl("../home.html", lang, "request");
+      document.getElementById("requestLink").href = window.__LO__.buildUrl("../index.html", lang, "request");
 
       document.getElementById("modelNote").textContent = t.modelNote;
 

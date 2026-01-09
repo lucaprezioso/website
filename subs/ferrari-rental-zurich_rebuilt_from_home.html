@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Luxury Obsession | Swiss routes worth driving in a Ferrari</title>
-  <meta name="description" content="Switzerland rewards early starts. The best roads feel quiet and cinematic before the day peaks." />
+  <title>Luxury Obsession | Ferrari rental Zurich</title>
+  <meta name="description" content="Ferrari 458 Italia pickup in Zurich. Fee: 0 CHF (2026). Request a quote or reserve via WhatsApp." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Luxury Obsession | Swiss routes worth driving in a Ferrari" />
-  <meta property="og:description" content="Switzerland rewards early starts. The best roads feel quiet and cinematic before the day peaks." />
-  <meta property="og:type" content="article" />
-  <meta property="og:image" content="../images/image00500.jpg" />
+  <meta property="og:title" content="Luxury Obsession | Ferrari rental Zurich" />
+  <meta property="og:description" content="Ferrari 458 Italia pickup in Zurich. Fee: 0 CHF (2026). Request a quote or reserve via WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../images/image00100.png" />
   <link rel="icon" href="../images/icon.png" />
-  <link rel="alternate" hreflang="en" href="swiss-routes-worth-driving-in-a-ferrari.html?lang=en" />
-  <link rel="alternate" hreflang="de" href="swiss-routes-worth-driving-in-a-ferrari.html?lang=de" />
-  <link rel="alternate" hreflang="it" href="swiss-routes-worth-driving-in-a-ferrari.html?lang=it" />
-  <link rel="alternate" hreflang="x-default" href="swiss-routes-worth-driving-in-a-ferrari.html?lang=en" />
+
+  <link rel="alternate" hreflang="en" href="ferrari-rental-zurich.html?lang=en" />
+  <link rel="alternate" hreflang="de" href="ferrari-rental-zurich.html?lang=de" />
+  <link rel="alternate" hreflang="it" href="ferrari-rental-zurich.html?lang=it" />
+  <link rel="alternate" hreflang="x-default" href="ferrari-rental-zurich.html?lang=en" />
 
   <style>
 :root{
@@ -28,8 +29,6 @@
   --radius:18px;
   --shadow:0 18px 45px rgba(0,0,0,0.4);
   --max:1120px;
-  --logoSize: 60px;/*44px*/
-  --wordmarkH: 38px;/*34px*/
 }
 *{box-sizing:border-box}
 body{margin:0;background:radial-gradient(circle at top,#191621 0,var(--bg) 55%);color:var(--text)}
@@ -41,10 +40,10 @@ header{
   border-bottom:1px solid rgba(255,255,255,0.03)
 }
 .container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
-.navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.20rem 0}/*0.75rem 0*/
+.navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.75rem 0}
 .brand{display:inline-flex;align-items:center;gap:0.75rem}
-.brandIcon{width:var(--logoSize);height:var(--logoSize);object-fit:contain;display:block}
-.brandWordmark{height:var(--wordmarkH);width:auto;object-fit:contain;display:block}
+.brandIcon{width:40px;height:40px;object-fit:contain;display:block}
+.brandWordmark{height:34px;width:auto;object-fit:contain;display:block}
 .brandText{font-size:1.05rem;font-weight:850;letter-spacing:0.02em}
 @media (max-width:640px){
   .brandIcon{width:34px;height:34px}
@@ -251,85 +250,27 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
 
 /* Keep header alignment stable vs pages with or without scrollbars */
 html{scrollbar-gutter:stable}
-@supports not (scrollbar-gutter: stable){
-  html{overflow-y:scroll}
-}
+@supports not (scrollbar-gutter: stable){ html{overflow-y:scroll} }
 
-/* Article page only */
-.articleWrap{max-width:980px}
-.heroImg{width:100%;height:320px;object-fit:cover;border-radius:18px;border:1px solid rgba(255,255,255,0.10)}
-.meta{margin-top:0.75rem;color:var(--muted);font-size:0.9rem}
-.content{margin-top:1.1rem}
-.content p{margin:0 0 1rem;color:var(--text);line-height:1.85}
+/* City/article shared */
+.pageWrap{padding-top:2.2rem}
+.pageTitle{margin:1.6rem 0 0.4rem;font-size:2rem;letter-spacing:-0.02em}
+.subtitle{margin:0 0 1.2rem;color:var(--muted);max-width:72ch}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.meta{margin-top:0.8rem;color:var(--muted);font-size:0.95rem;line-height:1.6}
+.pill{display:inline-block;font-size:0.72rem;padding:0.22rem 0.65rem;border-radius:999px;background:rgba(229,9,20,0.14);border:1px solid rgba(229,9,20,0.30);color:#ffb4b4}
+.btnRow{display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:0.9rem}
+.footer{margin:2.2rem 0 1.5rem;color:var(--muted);font-size:0.92rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+@media(max-width:960px){ .grid{grid-template-columns:repeat(2,1fr)} }
+@media(max-width:720px){ .grid{grid-template-columns:1fr} }
+
   </style>
-
-  <script>
-(function(){
-  const LANGS = ["en","de","it"];
-  function getLang(){
-    const p = new URLSearchParams(window.location.search);
-    const q = p.get("lang");
-    if(q && LANGS.includes(q)) return q;
-    const s = localStorage.getItem("lo_lang");
-    if(s && LANGS.includes(s)) return s;
-    return "en";
-  }
-  function setLang(next){
-    if(!LANGS.includes(next)) return;
-    localStorage.setItem("lo_lang", next);
-    const u = new URL(window.location.href);
-    u.searchParams.set("lang", next);
-    window.location.href = u.pathname + u.search + u.hash;
-  }
-  function withLang(href, lang){
-    try{
-      const u = new URL(href, window.location.href);
-      u.searchParams.set("lang", lang);
-      return u.pathname + u.search + u.hash;
-    }catch(e){ return href; }
-  }
-  function initLangButtons(lang){
-    document.querySelectorAll("[data-langbtn]").forEach(btn => {
-      const code = btn.getAttribute("data-langbtn");
-      btn.classList.toggle("active", code === lang);
-      btn.addEventListener("click", () => setLang(code));
-    });
-  }
-  function initHamburger(){
-    const btn = document.getElementById("hamburger");
-    const menu = document.getElementById("mobileMenu");
-    if(!btn || !menu) return;
-    function close(){
-      menu.style.display = "none";
-      menu.setAttribute("data-open","0");
-      btn.setAttribute("aria-expanded","false");
-    }
-    btn.addEventListener("click", () => {
-      const open = menu.getAttribute("data-open") === "1";
-      if(open) close();
-      else {
-        menu.style.display = "block";
-        menu.setAttribute("data-open","1");
-        btn.setAttribute("aria-expanded","true");
-      }
-    });
-    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
-    document.addEventListener("click", (e) => {
-      if(menu.getAttribute("data-open") !== "1") return;
-      if(menu.contains(e.target) || btn.contains(e.target)) return;
-      close();
-    });
-  }
-  window.__LO__ = { getLang, withLang, initLangButtons, initHamburger };
-})();
-  </script>
 </head>
-
 <body>
   <header>
     <div class="container">
       <div class="navInner">
-        <a class="brand" href="../index.html" aria-label="Luxury Obsession">
+        <a class="brand" href="../home.html" aria-label="Luxury Obsession" data-internal>
           <img class="brandIcon" src="../images/icon.png" alt="Luxury Obsession icon">
           <img class="brandWordmark" src="../images/wordmark.png" alt="Luxury Obsession wordmark"
                onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
@@ -338,10 +279,11 @@ html{scrollbar-gutter:stable}
 
         <div class="navRight">
           <nav class="navLinks" aria-label="Primary">
-            <a id="navPricing" href="pricing.html">Pricing</a>
-            <a id="navBlog" href="blog.html">Blog</a>
-            <a id="navContact" href="../index.html#contact">Contact</a>
-            <a id="navRequest" class="navCta" href="../index.html#request">Request a quote</a>
+            <a id="navPricing" href="pricing.html" data-internal>Pricing</a>
+            <a id="navBlog" href="blog.html" data-internal>Blog</a>
+            <a id="navLocations" href="locations.html" data-internal>Pickup locations</a>
+            <a id="navContact" href="../home.html#contact" data-internal>Contact</a>
+            <a id="navRequest" class="navCta" href="../home.html#request" data-internal>Request a quote</a>
           </nav>
 
           <div class="langPicker" aria-label="Language">
@@ -374,38 +316,50 @@ html{scrollbar-gutter:stable}
       </div>
 
       <div id="mobileMenu" class="mobileMenu" data-open="0" role="navigation" aria-label="Mobile" style="display:none">
-        <a id="mPricing" href="pricing.html">Pricing<span>›</span></a>
-        <a id="mBlog" href="blog.html">Blog<span>›</span></a>
-        <a id="mContact" href="../index.html#contact">Contact<span>›</span></a>
+        <a id="mPricing" href="pricing.html" data-internal>Pricing<span>›</span></a>
+        <a id="mBlog" href="blog.html" data-internal>Blog<span>›</span></a>
+        <a id="mLocations" href="locations.html" data-internal>Pickup locations<span>›</span></a>
+        <a id="mContact" href="../home.html#contact" data-internal>Contact<span>›</span></a>
         <div class="mobileMenuDivider"></div>
-        <a id="mRequest" class="mobileMenuCta" href="../index.html#request">Request a quote</a>
+        <a id="mRequest" class="mobileMenuCta" href="../home.html#request" data-internal>Request a quote</a>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero" style="padding-top:2.2rem">
-      <div class="container articleWrap">
-        <div class="eyebrow">Luxury Obsession</div>
-        <h1 class="heroTitle" style="margin-bottom:0.4rem">Swiss routes worth driving in a Ferrari</h1>
-        <div class="meta">2025-12-01</div>
+<main class="container pageWrap">
+  <h1 class="pageTitle">Ferrari rental Zurich</h1>
+  <p class="subtitle">Pickup and handover options for the Ferrari 458 Italia.</p>
 
-        <div style="margin-top:1rem">
-          <img class="heroImg" src="../images/image00500.jpg" alt="Swiss routes worth driving in a Ferrari">
-        </div>
-
-        <div class="content">
-          <p>Switzerland rewards early starts. The best roads feel quiet and cinematic before the day peaks.</p><p>For a lake focused route, build around Zürichsee and Walensee. For altitude, choose a pass day and plan your pauses with intention.</p><p>Want it tailored? Tell us how much time you have, your comfort level, and whether you prefer scenery, driving rhythm, or a destination moment.</p>
-        </div>
-
-        <div class="ctaRow" style="margin-top:1.2rem">
-          <a class="ctaBtn" id="backBlog" href="blog.html">← Back to blog</a>
-          <a class="ctaBtn ctaBtnPrimary" id="reqQuote" href="../index.html#request">💬 Request a quote</a>
-        </div>
+  <div class="grid" style="grid-template-columns:2fr 1fr;gap:1rem">
+    <section class="card">
+      <h3 style="margin-top:0">Pickup in Zurich</h3>
+      <div class="meta">
+        <span class="pill">Fee: 0 CHF (2026)</span><br/>
+        Free pickup in Zurich for 2026. Outside 2026, ask for a quote.
       </div>
-    </section>
-  </main>
 
+      <div class="btnRow">
+        <a class="btn btnPrimary" href="../home.html#request" data-internal>Request a quote</a>
+        <a class="btn" href="../subs/locations.html" data-internal>Other pickup locations</a>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Zurich,%20Switzerland" target="_blank" rel="noreferrer">Open map</a>
+      </div>
+
+      <p style="color:var(--muted);margin-top:1rem;line-height:1.8">
+        We focus on a luxury experience: clean handover, clear terms, and support before and during your drive.
+        Tell us your timing and the vibe you want, and we will help shape a route that fits your package.
+      </p>
+    </section>
+
+    <section class="card">
+      <img class="heroImg" src="../images/image00100.png" alt="Ferrari 458 Italia" style="height:100%;min-height:320px"/>
+    </section>
+  </div>
+
+  <div class="footer">
+    <div>© <span id="y"></span> Luxury Obsession.</div>
+    <div>Ferrari only experiences, Switzerland.</div>
+  </div>
+</main>
   <footer>
     <div class="container footerInner">
       <div>© <span id="year"></span> Luxury Obsession.</div>
@@ -413,32 +367,89 @@ html{scrollbar-gutter:stable}
     </div>
   </footer>
 
+
   <script>
 (function(){
-  const lang = window.__LO__.getLang();
+  const LANGS = ["en","de","it"];
+
+  function getLang(){
+    const p = new URLSearchParams(window.location.search);
+    const q = p.get("lang");
+    if(q && LANGS.includes(q)) return q;
+    const s = localStorage.getItem("lo_lang");
+    if(s && LANGS.includes(s)) return s;
+    return "en";
+  }
+
+  function setLang(next){
+    if(!LANGS.includes(next)) return;
+    localStorage.setItem("lo_lang", next);
+    const u = new URL(window.location.href);
+    u.searchParams.set("lang", next);
+    window.location.href = u.pathname + u.search + u.hash;
+  }
+
+  function withLang(href, lang){
+    try{
+      const u = new URL(href, window.location.href);
+      u.searchParams.set("lang", lang);
+      return u.pathname + u.search + u.hash;
+    }catch(e){ return href; }
+  }
+
+  function initLangButtons(lang){
+    document.querySelectorAll("[data-langbtn]").forEach(btn => {
+      const code = btn.getAttribute("data-langbtn");
+      btn.classList.toggle("active", code === lang);
+      btn.addEventListener("click", () => setLang(code));
+    });
+  }
+
+  function initHamburger(){
+    const btn = document.getElementById("hamburger");
+    const menu = document.getElementById("mobileMenu");
+    if(!btn || !menu) return;
+
+    function close(){
+      menu.style.display = "none";
+      menu.setAttribute("data-open","0");
+      btn.setAttribute("aria-expanded","false");
+    }
+
+    btn.addEventListener("click", () => {
+      const open = menu.getAttribute("data-open") === "1";
+      if(open) close();
+      else{
+        menu.style.display = "block";
+        menu.setAttribute("data-open","1");
+        btn.setAttribute("aria-expanded","true");
+      }
+    });
+
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
+    document.addEventListener("click", (e) => {
+      if(menu.getAttribute("data-open") !== "1") return;
+      if(menu.contains(e.target) || btn.contains(e.target)) return;
+      close();
+    });
+  }
+
+  const lang = getLang();
   document.documentElement.lang = lang;
   localStorage.setItem("lo_lang", lang);
 
-  window.__LO__.initLangButtons(lang);
-  window.__LO__.initHamburger();
+  initLangButtons(lang);
+  initHamburger();
 
-  const set = (id, href) => {
-    const el = document.getElementById(id);
-    if(el) el.href = window.__LO__.withLang(href, lang);
-  };
-  set("navPricing", "pricing.html");
-  set("navBlog", "blog.html");
-  set("navContact", "../index.html#contact");
-  set("navRequest", "../index.html#request");
-  set("mPricing", "pricing.html");
-  set("mBlog", "blog.html");
-  set("mContact", "../index.html#contact");
-  set("mRequest", "../index.html#request");
-  set("backBlog", "blog.html");
-  set("reqQuote", "../index.html#request");
+  // propagate lang to internal links
+  document.querySelectorAll("a[data-internal]").forEach(a => {
+    a.setAttribute("href", withLang(a.getAttribute("href"), lang));
+  });
 
-  document.getElementById("year").textContent = String(new Date().getFullYear());
+  const y = document.getElementById("year");
+  if(y) y.textContent = String(new Date().getFullYear());
 })();
   </script>
+
 </body>
 </html>

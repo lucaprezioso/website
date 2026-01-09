@@ -5,6 +5,17 @@
   <title>Luxury Obsession | Transparent pricing how we design packages that make sense</title>
   <meta name="description" content="Luxury should never feel vague. Our packages are designed around time plus a simple distance allowance, so you can decide quickly and drive without second guess" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Luxury Obsession | Transparent pricing how we design packages that make sense" />
+  <meta property="og:description" content="Luxury should never feel vague. Our packages are designed around time plus a simple distance allowance, so you can decide quickly and drive without second guess" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="../images/image00400.jpg" />
+  <link rel="icon" href="../images/icon.png" />
+  <link rel="alternate" hreflang="en" href="transparent-pricing-how-we-design-packages-that-make-sense.html?lang=en" />
+  <link rel="alternate" hreflang="de" href="transparent-pricing-how-we-design-packages-that-make-sense.html?lang=de" />
+  <link rel="alternate" hreflang="it" href="transparent-pricing-how-we-design-packages-that-make-sense.html?lang=it" />
+  <link rel="alternate" hreflang="x-default" href="transparent-pricing-how-we-design-packages-that-make-sense.html?lang=en" />
+
   <style>
 :root{
   font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
@@ -17,6 +28,8 @@
   --radius:18px;
   --shadow:0 18px 45px rgba(0,0,0,0.4);
   --max:1120px;
+  --logoSize: 60px;/*44px*/
+  --wordmarkH: 38px;/*34px*/
 }
 *{box-sizing:border-box}
 body{margin:0;background:radial-gradient(circle at top,#191621 0,var(--bg) 55%);color:var(--text)}
@@ -28,13 +41,15 @@ header{
   border-bottom:1px solid rgba(255,255,255,0.03)
 }
 .container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
-.navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.75rem 0}
-.brand{display:inline-flex;align-items:center;gap:0.75rem;font-size:0.95rem;letter-spacing:0.16em;text-transform:uppercase}
-.brandMark{
-  width:30px;height:30px;border-radius:999px;
-  background:radial-gradient(circle at 30% 30%,#ff5a5a,#7b0209);
-  box-shadow:0 0 20px rgba(229,9,20,0.7);
-  display:grid;place-items:center;font-weight:850;font-size:0.8rem
+.navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.20rem 0}/*0.75rem 0*/
+.brand{display:inline-flex;align-items:center;gap:0.75rem}
+.brandIcon{width:var(--logoSize);height:var(--logoSize);object-fit:contain;display:block}
+.brandWordmark{height:var(--wordmarkH);width:auto;object-fit:contain;display:block}
+.brandText{font-size:1.05rem;font-weight:850;letter-spacing:0.02em}
+@media (max-width:640px){
+  .brandIcon{width:34px;height:34px}
+  .brandWordmark{height:28px}
+  .brandText{font-size:0.98rem}
 }
 .navRight{display:flex;align-items:center;gap:0.65rem}
 .navLinks{display:flex;align-items:center;gap:0.8rem;font-size:0.9rem}
@@ -114,6 +129,20 @@ section{padding:3.4rem 0}
 .pricingPrice span:first-child{font-size:1.55rem;font-weight:900}
 .pricingKm{font-size:0.82rem;color:var(--muted)}
 .pricingTag{display:inline-block;margin-top:0.35rem;font-size:0.72rem;padding:0.2rem 0.6rem;border-radius:999px;background:var(--accentSoft);color:#ffb4b4}
+@media (hover:hover) and (min-width: 980px){
+  .pricingCard{cursor:pointer;transition:transform 0.18s, border-color 0.18s, box-shadow 0.18s, background 0.18s}
+  .pricingCard:hover{
+    transform:translateY(-6px) scale(1.03);
+    border-color:rgba(229,9,20,0.55);
+    box-shadow:0 22px 60px rgba(229,9,20,0.10), var(--shadow);
+    background:radial-gradient(circle at top left, rgba(229,9,20,0.18), #050509 58%);
+  }
+  .pricingCard:hover .pricingTag{
+    background:rgba(229,9,20,0.24);
+    color:#ffd1d1;
+  }
+}
+
 .pricingNote{font-size:0.8rem;color:var(--muted);margin-top:1.25rem}
 .requestLayout{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:2rem}
 .ctaRow{display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:0.75rem}
@@ -145,7 +174,7 @@ textarea{min-height:90px;resize:vertical}
 .span-6{grid-column:span 6}
 .span-12{grid-column:span 12}
 @media(max-width:980px){
-  .heroGrid,.contactGrid{grid-template-columns:1fr}
+  .heroGrid{grid-template-columns:1fr}
   .heroMediaCard{max-width:640px;margin:0 auto}
   .span-md-6{grid-column:span 6}
   .span-md-12{grid-column:span 12}
@@ -207,6 +236,11 @@ textarea{min-height:90px;resize:vertical}
 }
 /* Contact map */
 .contactGrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,0.95fr);gap:1.2rem;margin-top:1.2rem;align-items:stretch}
+
+@media(max-width:1100px){
+  .contactGrid{grid-template-columns:1fr}
+  .mapFrame{min-height:320px}
+}
 .mapCard{padding:0.85rem}
 .mapFrame{width:100%;height:100%;min-height:340px;border:0;border-radius:14px}
 .contactList{list-style:none;padding:0;margin:0.75rem 0 0;display:grid;gap:0.5rem}
@@ -215,28 +249,103 @@ textarea{min-height:90px;resize:vertical}
 footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.78rem;color:var(--muted)}
 .footerInner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
 
-    .heroImg{width:100%;height:320px;object-fit:cover;border-radius:18px;border:1px solid rgba(255,255,255,0.10)}
-    .meta{margin-top:0.75rem;color:var(--muted);font-size:0.9rem}
-    .content{margin-top:1.1rem}
-    .content p{margin:0 0 1rem;color:var(--text);line-height:1.85}
+/* Keep header alignment stable vs pages with or without scrollbars */
+html{scrollbar-gutter:stable}
+@supports not (scrollbar-gutter: stable){
+  html{overflow-y:scroll}
+}
+
+/* Article page only */
+.articleWrap{max-width:980px}
+.heroImg{width:100%;height:320px;object-fit:cover;border-radius:18px;border:1px solid rgba(255,255,255,0.10)}
+.meta{margin-top:0.75rem;color:var(--muted);font-size:0.9rem}
+.content{margin-top:1.1rem}
+.content p{margin:0 0 1rem;color:var(--text);line-height:1.85}
   </style>
+
+  <script>
+(function(){
+  const LANGS = ["en","de","it"];
+  function getLang(){
+    const p = new URLSearchParams(window.location.search);
+    const q = p.get("lang");
+    if(q && LANGS.includes(q)) return q;
+    const s = localStorage.getItem("lo_lang");
+    if(s && LANGS.includes(s)) return s;
+    return "en";
+  }
+  function setLang(next){
+    if(!LANGS.includes(next)) return;
+    localStorage.setItem("lo_lang", next);
+    const u = new URL(window.location.href);
+    u.searchParams.set("lang", next);
+    window.location.href = u.pathname + u.search + u.hash;
+  }
+  function withLang(href, lang){
+    try{
+      const u = new URL(href, window.location.href);
+      u.searchParams.set("lang", lang);
+      return u.pathname + u.search + u.hash;
+    }catch(e){ return href; }
+  }
+  function initLangButtons(lang){
+    document.querySelectorAll("[data-langbtn]").forEach(btn => {
+      const code = btn.getAttribute("data-langbtn");
+      btn.classList.toggle("active", code === lang);
+      btn.addEventListener("click", () => setLang(code));
+    });
+  }
+  function initHamburger(){
+    const btn = document.getElementById("hamburger");
+    const menu = document.getElementById("mobileMenu");
+    if(!btn || !menu) return;
+    function close(){
+      menu.style.display = "none";
+      menu.setAttribute("data-open","0");
+      btn.setAttribute("aria-expanded","false");
+    }
+    btn.addEventListener("click", () => {
+      const open = menu.getAttribute("data-open") === "1";
+      if(open) close();
+      else {
+        menu.style.display = "block";
+        menu.setAttribute("data-open","1");
+        btn.setAttribute("aria-expanded","true");
+      }
+    });
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
+    document.addEventListener("click", (e) => {
+      if(menu.getAttribute("data-open") !== "1") return;
+      if(menu.contains(e.target) || btn.contains(e.target)) return;
+      close();
+    });
+  }
+  window.__LO__ = { getLang, withLang, initLangButtons, initHamburger };
+})();
+  </script>
 </head>
+
 <body>
   <header>
     <div class="container">
       <div class="navInner">
-        <a class="brand" href="../home.html"><div class="brandMark">LO</div><span>Luxury Obsession</span></a>
+        <a class="brand" href="../index.html" aria-label="Luxury Obsession">
+          <img class="brandIcon" src="../images/icon.png" alt="Luxury Obsession icon">
+          <img class="brandWordmark" src="../images/wordmark.png" alt="Luxury Obsession wordmark"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+          <span class="brandText" style="display:none">Luxury Obsession</span>
+        </a>
 
         <div class="navRight">
           <nav class="navLinks" aria-label="Primary">
-            <a href="../home.html">Home</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="blog.html">Blog</a>
-            <a class="navCta" href="../home.html#request">Request a quote</a>
+            <a id="navPricing" href="pricing.html">Pricing</a>
+            <a id="navBlog" href="blog.html">Blog</a>
+            <a id="navContact" href="../index.html#contact">Contact</a>
+            <a id="navRequest" class="navCta" href="../index.html#request">Request a quote</a>
           </nav>
 
           <div class="langPicker" aria-label="Language">
-            <a class="flagBtn active" title="English" href="?lang=en"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
+            <button type="button" class="flagBtn" data-langbtn="en" title="English"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
   <defs><clipPath id="ukClip"><rect width="22" height="14" rx="2" ry="2"/></clipPath></defs>
   <g clip-path="url(#ukClip)">
     <rect width="22" height="14" fill="#012169"/>
@@ -245,17 +354,17 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
     <path d="M11 0 V14 M0 7 H22" stroke="#FFFFFF" stroke-width="5"/>
     <path d="M11 0 V14 M0 7 H22" stroke="#C8102E" stroke-width="3"/>
   </g>
-</svg></a>
-            <a class="flagBtn" title="Deutsch" href="?lang=de"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
+</svg></button>
+            <button type="button" class="flagBtn" data-langbtn="de" title="Deutsch"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
   <rect width="22" height="14" rx="2" ry="2" fill="#000000"/>
   <rect y="4.67" width="22" height="4.67" fill="#DD0000"/>
   <rect y="9.33" width="22" height="4.67" fill="#FFCE00"/>
-</svg></a>
-            <a class="flagBtn" title="Italiano" href="?lang=it"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
+</svg></button>
+            <button type="button" class="flagBtn" data-langbtn="it" title="Italiano"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
   <rect width="22" height="14" rx="2" ry="2" fill="#FFFFFF"/>
   <rect width="7.33" height="14" rx="2" ry="2" fill="#009246"/>
   <rect x="14.67" width="7.33" height="14" rx="2" ry="2" fill="#CE2B37"/>
-</svg></a>
+</svg></button>
           </div>
 
           <button id="hamburger" type="button" class="hamburger" aria-label="menu" aria-expanded="false">
@@ -265,18 +374,18 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
       </div>
 
       <div id="mobileMenu" class="mobileMenu" data-open="0" role="navigation" aria-label="Mobile" style="display:none">
-        <a href="../home.html">Home<span>›</span></a>
-        <a href="pricing.html">Pricing<span>›</span></a>
-        <a href="blog.html">Blog<span>›</span></a>
+        <a id="mPricing" href="pricing.html">Pricing<span>›</span></a>
+        <a id="mBlog" href="blog.html">Blog<span>›</span></a>
+        <a id="mContact" href="../index.html#contact">Contact<span>›</span></a>
         <div class="mobileMenuDivider"></div>
-        <a class="mobileMenuCta" href="../home.html#request">Request a quote</a>
+        <a id="mRequest" class="mobileMenuCta" href="../index.html#request">Request a quote</a>
       </div>
     </div>
   </header>
 
   <main>
     <section class="hero" style="padding-top:2.2rem">
-      <div class="container" style="max-width:980px">
+      <div class="container articleWrap">
         <div class="eyebrow">Luxury Obsession</div>
         <h1 class="heroTitle" style="margin-bottom:0.4rem">Transparent pricing how we design packages that make sense</h1>
         <div class="meta">2025-12-10</div>
@@ -290,8 +399,8 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
         </div>
 
         <div class="ctaRow" style="margin-top:1.2rem">
-          <a class="ctaBtn" href="blog.html">← Back to blog</a>
-          <a class="ctaBtn ctaBtnPrimary" href="../home.html#request">💬 Request a quote</a>
+          <a class="ctaBtn" id="backBlog" href="blog.html">← Back to blog</a>
+          <a class="ctaBtn ctaBtnPrimary" id="reqQuote" href="../index.html#request">💬 Request a quote</a>
         </div>
       </div>
     </section>
@@ -305,21 +414,31 @@ footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.
   </footer>
 
   <script>
-    document.getElementById("year").textContent = String(new Date().getFullYear());
-    
 (function(){
-  const btn = document.getElementById("hamburger");
-  const menu = document.getElementById("mobileMenu");
-  if(btn && menu){
-    btn.addEventListener("click", () => {
-      const isOpen = menu.style.display === "block";
-      menu.style.display = isOpen ? "none" : "block";
-      btn.setAttribute("aria-expanded", String(!isOpen));
-    });
-    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => menu.style.display="none"));
-  }
-})();
+  const lang = window.__LO__.getLang();
+  document.documentElement.lang = lang;
+  localStorage.setItem("lo_lang", lang);
 
+  window.__LO__.initLangButtons(lang);
+  window.__LO__.initHamburger();
+
+  const set = (id, href) => {
+    const el = document.getElementById(id);
+    if(el) el.href = window.__LO__.withLang(href, lang);
+  };
+  set("navPricing", "pricing.html");
+  set("navBlog", "blog.html");
+  set("navContact", "../index.html#contact");
+  set("navRequest", "../index.html#request");
+  set("mPricing", "pricing.html");
+  set("mBlog", "blog.html");
+  set("mContact", "../index.html#contact");
+  set("mRequest", "../index.html#request");
+  set("backBlog", "blog.html");
+  set("reqQuote", "../index.html#request");
+
+  document.getElementById("year").textContent = String(new Date().getFullYear());
+})();
   </script>
 </body>
 </html>
