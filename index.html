@@ -859,6 +859,32 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
   .footerInner{grid-template-columns:1fr;gap:10px;text-align:center}
   .footerRight{justify-content:center}
 }
+
+/* SHOWCASE FULLSCREEN OVERRIDE: image or video always fills viewport */
+.mediaFull{
+  height: 100vh !important;
+  min-height: 100vh !important;
+
+  height: 100svh !important;
+  min-height: 100svh !important;
+
+  overflow: hidden !important;
+}
+
+.mediaFull > img,
+.mediaFull > video{
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: cover !important;
+  object-position: center center !important;
+
+  max-height: none !important;
+  display: block !important;
+}
+
 </style>
 <script>
 (function(){
@@ -999,7 +1025,9 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 <main>
 <section class="showcase" id="showcase">
 <div class="mediaFull">
-<img alt="Ferrari 458 Italia" src="images/image00200.png"/>
+<video id="showcaseVideo" autoplay muted playsinline preload="auto">
+<source src="./images/video00100.mp4" type="video/mp4">
+</video>
 <div class="mediaOverlay">
 <div class="container">
 <div class="mediaCaption">
@@ -1973,5 +2001,21 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
 
     document.addEventListener("DOMContentLoaded", initPage);
   </script>
+
+<script>
+/* SHOWCASE VIDEO: play once and hold on last frame */
+document.addEventListener("DOMContentLoaded", () => {
+  const v = document.getElementById("showcaseVideo");
+  if (!v) return;
+
+  v.addEventListener("ended", () => {
+    v.pause();
+    try{
+      v.currentTime = v.duration;
+    }catch(e){}
+  });
+});
+</script>
+
 </body>
 </html>
