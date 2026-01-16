@@ -2,19 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Luxury Obsession | Rates</title>
-  <meta name="description" content="Rates and terms for our privately hosted Ferrari 458 Italia in Zurich. Transparent packages, options, and clear confirmation." />
+  <title>Luxury Obsession | Rates and Terms</title>
+  <meta name="description" content="Rates, terms, and process for our privately hosted Ferrari 458 Italia in Zurich. Transparent packages, personal confirmation, and discreet handover." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <link rel="icon" type="image/png" href="../images/icon.png" />
-  <link rel="alternate" hreflang="en" href="pricing.html?lang=en" />
-  <link rel="alternate" hreflang="de" href="pricing.html?lang=de" />
-  <link rel="alternate" hreflang="it" href="pricing.html?lang=it" />
-  <link rel="alternate" hreflang="x-default" href="pricing.html?lang=en" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
 
   <style>
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap");
@@ -50,7 +46,7 @@ header{
 }
 .container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
 .navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.50rem 0}/*0.75rem 0*/
-.brand{display:inline-flex;align-items:center;gap:0.75rem}
+.brand{display:inline-flex;align-items:center;gap:0.65rem}
 .brandIcon{width:var(--logoSize);height:var(--logoSize);object-fit:contain;display:block}
 .brandWordmark{height:var(--wordmarkH);width:auto;object-fit:contain;display:block}
 .brandText{font-size:1.05rem;font-weight:850;letter-spacing:0.02em}
@@ -76,10 +72,10 @@ header{
   text-shadow:0 10px 30px rgba(0,0,0,0.35);
   white-space:nowrap;
 }
-
 @media (max-width:640px){
   .brandGold{font-size:0.90rem;letter-spacing:0.14em;}
 }
+
 @media (max-width:640px){
   .brandIcon{width:34px;height:34px}
   .brandWordmark{height:28px}
@@ -360,7 +356,7 @@ header{
   background:linear-gradient(to bottom, rgba(7,7,10,0.92), rgba(7,7,10,0.74), transparent);
   border-bottom:1px solid rgba(243,241,238,0.06);
 }
-.navInner{padding:0.55rem 0;}
+.navInner{padding:0.50rem 0;}
 .navLinks a{color:rgba(243,241,238,0.86);font-weight:500;letter-spacing:0.01em}
 .navLinks a:hover{color:var(--text)}
 .navCta{
@@ -750,7 +746,7 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
     --muted:rgba(243,241,238,0.72);
     --border:rgba(231,220,198,0.14);
   }
-  .navInner{padding:0.85rem 0 !important;}
+  .navInner{padding:0.50rem 0 !important;}
   .navCta{padding:0.48rem 0.82rem !important; font-weight:600 !important;}
   .btn{padding:0.82rem 1.0rem !important;}
   .mediaOverlay{padding:2.6rem 0 2.2rem !important;}
@@ -926,7 +922,7 @@ table{width:100%;border-collapse:collapse;margin-top:0.9rem;font-size:0.92rem}
 .carRow:first-of-type{border-top:0}
 .pill{display:inline-flex;align-items:center;gap:0.4rem;padding:0.28rem 0.65rem;border-radius:999px;border:1px solid rgba(231,220,198,0.18);background:rgba(255,255,255,0.03);color:var(--text);font-size:0.8rem;letter-spacing:0.06em;text-transform:uppercase}
 .tableWrap{overflow:auto;border-radius:16px;border:1px solid rgba(231,220,198,0.12)}
-table{min-width:720px}
+.tableWrap table{min-width:720px}
 thead th{background:rgba(255,255,255,0.02)}
 tbody tr:hover td{background:rgba(255,255,255,0.02)}
 
@@ -947,6 +943,66 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
     scroll-snap-align:start;
   }
   .gItem img{height:210px}
+}
+
+
+
+/* Mobile usability: sticky package column and header for Rates table */
+.tableWrap{overflow:auto;-webkit-overflow-scrolling:touch;position:relative}
+.tableWrap table{border-collapse:separate;border-spacing:0}
+.tableWrap thead th{
+  position:sticky;
+  top:0;
+  z-index:3;
+  background:rgba(7,7,10,0.92);
+  backdrop-filter:blur(8px);
+}
+.tableWrap th:first-child,
+.tableWrap td:first-child{
+  position:sticky;
+  left:0;
+  z-index:2;
+  background:rgba(7,7,10,0.92);
+}
+.tableWrap thead th:first-child{z-index:4}
+.tableWrap td:first-child{
+  box-shadow: 18px 0 22px rgba(0,0,0,0.35);
+  min-width: 170px;
+}
+@media (max-width: 760px){
+  .tableWrap::after{
+    content:"";
+    position:absolute;
+    top:0; right:0;
+    width:42px; height:100%;
+    pointer-events:none;
+    background:linear-gradient(90deg, rgba(7,7,10,0), rgba(7,7,10,0.85));
+  }
+  .tableWrap th, .tableWrap td{padding:0.65rem 0.55rem}
+  .tableWrap table{font-size:0.90rem}
+}
+
+/* Terms and options table typography, consistent on mobile */
+#termsTitle + table{
+  width:100%;
+  min-width:0;
+  font-size:0.95rem;
+  line-height:1.55;
+}
+#termsTitle + table th{width:38%;font-weight:650}
+#termsTitle + table td{color:rgba(243,241,238,0.86)}
+@media (max-width: 760px){
+  #termsTitle + table{font-size:0.92rem}
+  #termsTitle + table th, #termsTitle + table td{padding:0.65rem 0.55rem}
+}
+
+/* How it works */
+.processList{margin:0.85rem 0 0;padding:0;display:grid;gap:0.85rem}
+.processList li{list-style:none;padding:0.95rem 1rem;border-radius:16px;border:1px solid rgba(231,220,198,0.12);background:rgba(255,255,255,0.02)}
+.processStepTitle{font-weight:850;letter-spacing:0.02em;margin-bottom:0.25rem}
+.processStepBody{color:var(--muted);line-height:1.65;font-size:0.98rem}
+@media (max-width:760px){
+  .processStepBody{font-size:0.94rem}
 }
 
 </style>
@@ -1058,7 +1114,6 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
 <nav aria-label="Primary" class="navLinks"><a href="pricing.html#top" id="navRates">Rates</a>
 <a href="../philosophy.html" id="navPhilosophy">Our Philosophy</a>
 <a href="../experiences.html" id="navExperiences">Experiences</a>
-
 <a href="blog.html" id="navBlog">Journal</a>
 <a href="../index.html#contact" id="navContact">Contact</a>
 <a class="navCta" href="../index.html#request" id="navRequest">Request</a></nav>
@@ -1081,7 +1136,6 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
 <div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation" style="display:none"><a href="pricing.html#top" id="mRates">Rates</a>
 <a href="../philosophy.html" id="mPhilosophy">Our Philosophy</a>
 <a href="../experiences.html" id="mExperiences">Experiences</a>
-
 <a href="blog.html" id="mBlog">Journal</a>
 <a href="../index.html#contact" id="mContact">Contact</a>
 <a href="../impressum.html" id="mImpressum">Impressum</a><div class="mobileMenuDivider"></div>
@@ -1094,11 +1148,11 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
       <div class="container">
         <div class="eyebrow" id="eyebrow">Zurich, Switzerland</div>
         <h1 class="heroTitle" style="margin-bottom:0.4rem" id="title">Rates</h1>
-        <p class="heroSubtitle" id="subtitle"></p>
+        <p class="heroSubtitle" id="subtitle">Select a duration and request availability. Every booking is confirmed personally, with clear terms and discreet handover.</p>
 
         <div class="grid2">
           <div class="card">
-            <h2 style="margin-top:0" id="fleetTitle">Ferrari fleet</h2>
+            <h2 style="margin-top:0" id="fleetTitle">Current fleet</h2>
 
             <div class="carRow" style="margin-top:0.75rem">
               <div>
@@ -1113,38 +1167,66 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
                 <div class="carName">Ferrari Portofino</div>
                 <div style="margin-top:0.15rem;font-size:0.82rem;color:var(--muted)" id="comingSoon">Coming soon</div>
               </div>
-              <span class="pill">Soon</span>
+              <span class="pill" id="pillSoon">Soon</span>
             </div>
-
-            <div class="carRow" style="margin-top:0.75rem;opacity:0.55">
-              <div>
-                <div class="carName">Ferrari 296 Spider</div>
-                <div style="margin-top:0.15rem;font-size:0.82rem;color:var(--muted)">Coming soon</div>
-              </div>
-              <span class="pill">Soon</span>
-            </div>
-
-            <div class="ctaRow">
-              <a class="ctaBtn" id="pickupLink" href="../subs/locations.html">Pickup locations</a>
+<div class="ctaRow">
+              <a class="ctaBtn" id="pickupLink" href="locations.html">Pickup locations</a>
               <a class="ctaBtn ctaBtnPrimary" id="requestLink" href="../index.html#request">Request availability</a>
             </div>
           </div>
 
           <div class="card">
             <img class="model" src="../images/image00101.png" alt="Ferrari display" />
-            <p class="pricingNote" id="modelNote">3D style display placeholder. Replace with Three.js later.</p>
+            <p class="pricingNote" id="modelNote">A stylised preview render. A live configurator will follow.</p>
           </div>
         </div>
 
         
         
+        
+
+        <div class="card" style="margin-top:1.2rem" id="processCard">
+          <h2 style="margin-top:0" id="processTitle">How it works</h2>
+          <ol class="processList" aria-label="How it works">
+            <li>
+              <div class="processStepTitle" id="process1Title">1. Request</div>
+              <div class="processStepBody" id="process1Body">Send your preferred date, time, and rate. We reply personally with availability and a clear confirmation.</div>
+            </li>
+            <li>
+              <div class="processStepTitle" id="process2Title">2. Confirmation and payment</div>
+              <div class="processStepBody" id="process2Body">Once confirmed, payment is made in advance to secure the booking. You receive a written confirmation with the agreed details.</div>
+            </li>
+            <li>
+              <div class="processStepTitle" id="process3Title">3. Refundable deposit</div>
+              <div class="processStepBody" id="process3Body">A refundable deposit is provided at or before pickup. It is held as security and returned after the drive if the car is returned undamaged.</div>
+            </li>
+            <li>
+              <div class="processStepTitle" id="process4Title">4. Meet at the pickup location</div>
+              <div class="processStepBody" id="process4Body">We meet at the agreed location. Identity and licence are verified, and you receive a short briefing on the car and basic rules.</div>
+            </li>
+            <li>
+              <div class="processStepTitle" id="process5Title">5. The drive</div>
+              <div class="processStepBody" id="process5Body">Enjoy your time with the car within the agreed duration and mileage. We stay reachable should anything come up.</div>
+            </li>
+            <li>
+              <div class="processStepTitle" id="process6Title">6. Return</div>
+              <div class="processStepBody" id="process6Body">Return the car at the agreed location and time. A short walk around and confirmation of fuel and mileage closes the handover.</div>
+            </li>
+            <li>
+              <div class="processStepTitle" id="process7Title">7. Deposit refund</div>
+              <div class="processStepBody" id="process7Body">If there is no damage, the deposit is reimbursed immediately or within the agreed window after inspection.</div>
+            </li>
+          </ol>
+          <p class="pricingNote" id="processNote">Times and locations are agreed individually. Every request is confirmed personally before payment.</p>
+        </div>
+
         <div class="card" style="margin-top:1.2rem">
-          <h2 style="margin-top:0" id="pkgTitle">Packages</h2>
+          <h2 style="margin-top:0" id="pkgTitle">Rates</h2>
           <div style="overflow:auto;-webkit-overflow-scrolling:touch">
             <div class="tableWrap"><table>
               <thead>
                 <tr>
-                  <th id="thPkg">Package</th>
+                  <th id="thPkg">Rate</th>
                   <th id="thDur">Duration</th>
                   <th id="thKm">Km</th>
                   <th id="thPriceLimited">Price Limited</th>
@@ -1154,7 +1236,7 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
               <tbody id="pkgBody"></tbody>
             </table></div>
           </div>
-          <p class="pricingNote" id="pkgNote"></p>
+          <p class="pricingNote" id="pkgNote">Limited km tiers are shown per rate. Unlimited pricing appears only where available and is shown once per rate.</p>
         </div>
 
 
@@ -1171,7 +1253,7 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
 
             </tbody>
           </table>
-          <p class="pricingNote" id="termsNote">For further information, please use the contact form or reach out to us directly..</p>
+          <p class="pricingNote" id="termsNote">For exact arrangements, use the request form or contact us directly. We confirm availability and the final details personally.</p>
         </div>
 
         <div class="card" style="margin-top:1.2rem">
@@ -1209,7 +1291,7 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
   </div>
 </footer>
 <script>
-    const I18N = {"en": {"home": "Home", "pricing": "Pricing", "blog": "Blog", "request": "Request availability", "title": "Rates", "sub": "Choose a duration. Every request is confirmed personally. Clear terms, no surprises.", "fleetTitle": "Ferrari fleet", "available": "Available", "availableNow": "Available now", "soon": "Coming soon", "pickup": "Pickup locations", "modelNote": "3D style display placeholder. Replace with Three.js later.", "pkgTitle": "Rates", "pkg": "Rate", "dur": "Duration", "km": "Km", "price": "Price", "terms": "Terms and options", "deposit": "Deposit", "depositText": "Refundable deposit: CHF 1,000 (CHF 2,000 for drivers under 25).", "age": "Age", "ageText": "Minimum age is 21.", "extra": "Extra mileage", "extraText": "CHF 5 per additional km.", "options": "Options", "optionsText": "Concierge pickup, second driver, child seat on request.", "termsNote": "For details, use the request form or contact us directly.", "gallery": "Gallery", "thLimited": "Limited km", "thUnlimited": "Unlimited km", "pkgNote": "Limited km tiers are shown per rate. Unlimited pricing appears only where available and is shown once per rate.", "priceLimited": "Price Limited", "priceUnlimited": "Price Unlimited", "navRates": "Rates", "navPhilosophy": "Our Philosophy", "navExperiences": "Experiences", "navContact": "Contact", "navRequest": "Request", "navImpressum": "Impressum", "eyebrow": "Zurich, Switzerland", "navBlog": "Journal"}, "de": {"home": "Home", "pricing": "Preise", "blog": "Blog", "request": "Verfügbarkeit anfragen", "title": "Tarife", "sub": "Dauer auswählen. Jede Anfrage wird persönlich bestätigt. Klare Bedingungen, keine Überraschungen.", "fleetTitle": "Ferrari Flotte", "available": "Verfügbar", "availableNow": "Jetzt verfügbar", "soon": "Bald verfügbar", "pickup": "Abholorte", "modelNote": "3D Anzeige Platzhalter. Später mit Three.js ersetzen.", "pkgTitle": "Tarife", "pkg": "Tarif", "dur": "Dauer", "km": "Km", "price": "Preis", "terms": "Bedingungen und Optionen", "deposit": "Depot", "depositText": "Rückzahlbares Depot: CHF 1,000 (CHF 2,000 für Fahrer unter 25).", "extra": "Mehrkilometer", "extraText": "CHF 5 pro zusätzlichem km.", "options": "Optionen", "optionsText": "Concierge Abholung, Zweitfahrer, Kindersitz auf Anfrage.", "termsNote": "Für Details nutze bitte das Anfrageformular oder kontaktiere uns direkt.", "gallery": "Galerie", "thLimited": "Km limitiert", "thUnlimited": "Km unbegrenzt", "pkgNote": "Limitierte km Stufen werden pro Tarif angezeigt. Unbegrenzte Preise erscheinen nur, wenn verfügbar, und werden einmal pro Tarif angezeigt.", "priceLimited": "Preis limitiert", "priceUnlimited": "Preis unbegrenzt", "navRates": "Tarife", "navPhilosophy": "Unsere Philosophie", "navExperiences": "Anlässe", "navContact": "Kontakt", "navRequest": "Anfrage", "navImpressum": "Impressum", "eyebrow": "Zürich, Schweiz", "navBlog": "Journal", "age": "Alter", "ageText": "Mindestalter ist 21."}, "it": {"home": "Home", "pricing": "Prezzi", "blog": "Blog", "request": "Richiedi disponibilità", "title": "Tariffe", "sub": "Scegli la durata. Ogni richiesta viene confermata personalmente. Termini chiari, senza sorprese.", "fleetTitle": "Flotta Ferrari", "available": "Disponibile", "availableNow": "Disponibile ora", "soon": "Prossimamente", "pickup": "Punti di ritiro", "modelNote": "Placeholder stile 3D. Sostituire con Three.js più avanti.", "pkgTitle": "Tariffe", "pkg": "Tariffa", "dur": "Durata", "km": "Km", "price": "Prezzo", "terms": "Termini e opzioni", "deposit": "Deposito", "depositText": "Deposito rimborsabile: CHF 1,000 (CHF 2,000 per conducenti sotto i 25 anni).", "extra": "Km extra", "extraText": "CHF 5 per km extra.", "options": "Opzioni", "optionsText": "Ritiro concierge, secondo guidatore, seggiolino su richiesta.", "termsNote": "Per dettagli usa il modulo di richiesta o contattaci direttamente.", "gallery": "Galleria", "thLimited": "Km limitati", "thUnlimited": "Km illimitati", "pkgNote": "I livelli di km limitati sono mostrati per tariffa. Il prezzo illimitato appare solo dove disponibile e viene mostrato una sola volta per tariffa.", "priceLimited": "Prezzo limitato", "priceUnlimited": "Prezzo illimitato", "navRates": "Tariffe", "navPhilosophy": "La nostra filosofia", "navExperiences": "Esperienze", "navContact": "Contatti", "navRequest": "Richiesta", "navImpressum": "Impressum", "eyebrow": "Zurigo, Svizzera", "navBlog": "Journal", "age": "Età", "ageText": "Età minima 21 anni."}};
+    const I18N = {"en": {"home": "Home", "pricing": "Pricing", "blog": "Blog", "request": "Request availability", "title": "Rates", "sub": "Select a duration and request availability. Every booking is confirmed personally, with clear terms and discreet handover.", "fleetTitle": "Current fleet", "available": "Available", "availableNow": "Available now", "soon": "Coming soon", "pickup": "Pickup locations", "modelNote": "A stylised preview render. A live configurator will follow.", "pkgTitle": "Rates", "pkg": "Rate", "dur": "Duration", "km": "Km", "price": "Price", "terms": "Terms and options", "deposit": "Deposit", "depositText": "Refundable deposit: CHF 1,000 (CHF 2,000 for drivers under 25).", "age": "Age", "ageText": "Minimum age is 21.", "extra": "Extra mileage", "extraText": "5 CHF per extra km.", "options": "Options", "optionsText": "Concierge pickup, second driver, child seat on request.", "termsNote": "For exact arrangements, use the request form or contact us directly. We confirm availability and the final details personally.", "gallery": "Gallery", "thLimited": "Limited km", "thUnlimited": "Unlimited km", "pkgNote": "Limited km tiers are shown per rate. Unlimited pricing appears only where available and is shown once per rate.", "priceLimited": "Price Limited", "priceUnlimited": "Price Unlimited", "navRates": "Rates", "navPhilosophy": "Our Philosophy", "navExperiences": "Experiences", "navContact": "Contact", "navRequest": "Request", "navImpressum": "Impressum", "navBlog": "Journal", "eyebrow": "Zurich, Switzerland", "comingSoon": "Coming soon", "processTitle": "How it works", "processNote": "Times and locations are agreed individually. Every request is confirmed personally before payment.", "process1Title": "1. Request", "process1Body": "Send your preferred date, time, and rate. We reply personally with availability and a clear confirmation.", "process2Title": "2. Confirmation and payment", "process2Body": "Once confirmed, payment is made in advance to secure the booking. You receive a written confirmation with the agreed details.", "process3Title": "3. Refundable deposit", "process3Body": "A refundable deposit is provided at or before pickup. It is held as security and returned after the drive if the car is returned undamaged.", "process4Title": "4. Meet at the pickup location", "process4Body": "We meet at the agreed location. Identity and licence are verified, and you receive a short briefing on the car and basic rules.", "process5Title": "5. The drive", "process5Body": "Enjoy your time with the car within the agreed duration and mileage. We stay reachable should anything come up.", "process6Title": "6. Return", "process6Body": "Return the car at the agreed location and time. A short walk around and confirmation of fuel and mileage closes the handover.", "process7Title": "7. Deposit refund", "process7Body": "If there is no damage, the deposit is reimbursed immediately or within the agreed window after inspection.", "soonTag": "Soon"}, "de": {"home": "Home", "pricing": "Preise", "blog": "Blog", "request": "Verfügbarkeit anfragen", "title": "Tarife", "sub": "Dauer wählen und Verfügbarkeit anfragen. Jede Buchung wird persönlich bestätigt, mit klaren Bedingungen und diskreter Übergabe.", "fleetTitle": "Aktuelle Flotte", "available": "Verfügbar", "availableNow": "Jetzt verfügbar", "soon": "Bald verfügbar", "pickup": "Abholorte", "modelNote": "Stilisierte Vorschau. Ein Live Konfigurator folgt.", "pkgTitle": "Tarife", "pkg": "Tarif", "dur": "Dauer", "km": "Km", "price": "Preis", "terms": "Bedingungen und Optionen", "deposit": "Depot", "depositText": "Rückzahlbares Depot: CHF 1,000 (CHF 2,000 für Fahrer unter 25).", "extra": "Mehrkilometer", "extraText": "CHF 5 pro zusätzlichem km.", "options": "Optionen", "optionsText": "Concierge Abholung, Zweitfahrer, Kindersitz auf Anfrage.", "termsNote": "Für genaue Details nutze bitte das Anfrageformular oder kontaktiere uns direkt. Verfügbarkeit und finale Details bestätigen wir persönlich.", "gallery": "Galerie", "thLimited": "Km limitiert", "thUnlimited": "Km unbegrenzt", "pkgNote": "Limitierte km Stufen werden pro Tarif angezeigt. Unbegrenzte Preise erscheinen nur, wenn verfügbar, und werden einmal pro Tarif angezeigt.", "priceLimited": "Preis limitiert", "priceUnlimited": "Preis unbegrenzt", "navRates": "Tarife", "navPhilosophy": "Unsere Philosophie", "navExperiences": "Anlässe", "navContact": "Kontakt", "navRequest": "Anfrage", "navImpressum": "Impressum", "navBlog": "Journal", "eyebrow": "Zürich, Schweiz", "ageText": "Mindestalter ist 21.", "comingSoon": "Bald verfügbar", "processTitle": "Ablauf", "processNote": "Zeiten und Orte werden individuell abgestimmt. Jede Anfrage wird persönlich bestätigt, bevor bezahlt wird.", "process1Title": "1. Anfrage", "process1Body": "Sende Datum, Zeit und gewünschten Tarif. Wir antworten persönlich mit Verfügbarkeit und klarer Bestätigung.", "process2Title": "2. Bestätigung und Zahlung", "process2Body": "Nach Bestätigung erfolgt die Zahlung im Voraus zur Sicherung der Buchung. Du erhältst eine schriftliche Bestätigung mit allen Details.", "process3Title": "3. Rückzahlbares Depot", "process3Body": "Das Depot wird bei oder vor der Übergabe hinterlegt. Es dient als Sicherheit und wird nach der Fahrt bei unbeschädigter Rückgabe zurückerstattet.", "process4Title": "4. Treffen am Abholort", "process4Body": "Wir treffen uns am vereinbarten Ort. Ausweis und Führerschein werden geprüft, danach folgt eine kurze Einführung zum Fahrzeug und den Grundregeln.", "process5Title": "5. Fahrt", "process5Body": "Geniesse die Fahrt innerhalb der vereinbarten Dauer und Kilometer. Wir bleiben erreichbar, falls etwas sein sollte.", "process6Title": "6. Rückgabe", "process6Body": "Rückgabe am vereinbarten Ort und zur vereinbarten Zeit. Ein kurzer Rundgang sowie Bestätigung von Treibstoff und Kilometerstand schliessen die Übergabe ab.", "process7Title": "7. Rückerstattung", "process7Body": "Bei keiner Beschädigung wird das Depot sofort oder innerhalb des vereinbarten Zeitfensters nach Kontrolle zurückerstattet.", "age": "Alter", "soonTag": "Bald"}, "it": {"home": "Home", "pricing": "Prezzi", "blog": "Blog", "request": "Richiedi disponibilità", "title": "Tariffe", "sub": "Scegli la durata e richiedi disponibilità. Ogni prenotazione viene confermata personalmente, con termini chiari e consegna discreta.", "fleetTitle": "Flotta attuale", "available": "Disponibile", "availableNow": "Disponibile ora", "soon": "Prossimamente", "pickup": "Punti di ritiro", "modelNote": "Anteprima stilizzata. Un configuratore live arriverà più avanti.", "pkgTitle": "Tariffe", "pkg": "Tariffa", "dur": "Durata", "km": "Km", "price": "Prezzo", "terms": "Termini e opzioni", "deposit": "Deposito", "depositText": "Deposito rimborsabile: CHF 1,000 (CHF 2,000 per conducenti sotto i 25 anni).", "extra": "Km extra", "extraText": "5 CHF per km extra", "options": "Opzioni", "optionsText": "Ritiro concierge, secondo guidatore, seggiolino su richiesta.", "termsNote": "Per i dettagli esatti usa il modulo di richiesta o contattaci direttamente. Confermeremo disponibilità e dettagli finali personalmente.", "gallery": "Galleria", "thLimited": "Km limitati", "thUnlimited": "Km illimitati", "pkgNote": "I livelli di km limitati sono mostrati per tariffa. Il prezzo illimitato appare solo dove disponibile e viene mostrato una sola volta per tariffa.", "priceLimited": "Prezzo limitato", "priceUnlimited": "Prezzo illimitato", "navRates": "Tariffe", "navPhilosophy": "La nostra filosofia", "navExperiences": "Esperienze", "navContact": "Contatti", "navRequest": "Richiesta", "navImpressum": "Impressum", "navBlog": "Journal", "eyebrow": "Zurigo, Svizzera", "ageText": "Età minima 21 anni.", "comingSoon": "Prossimamente", "processTitle": "Come funziona", "processNote": "Orari e luoghi vengono concordati individualmente. Ogni richiesta viene confermata personalmente prima del pagamento.", "process1Title": "1. Richiesta", "process1Body": "Invia data, orario e tariffa desiderata. Rispondiamo personalmente con disponibilità e conferma chiara.", "process2Title": "2. Conferma e pagamento", "process2Body": "Dopo la conferma, il pagamento avviene in anticipo per bloccare la prenotazione. Ricevi una conferma scritta con i dettagli concordati.", "process3Title": "3. Deposito rimborsabile", "process3Body": "Il deposito viene versato al ritiro o prima. Serve come garanzia e viene rimborsato dopo la guida se l'auto viene restituita senza danni.", "process4Title": "4. Incontro al punto di ritiro", "process4Body": "Ci incontriamo nel luogo concordato. Verifica documento e patente, poi una breve spiegazione dell'auto e delle regole di base.", "process5Title": "5. La guida", "process5Body": "Goditi l'esperienza entro durata e chilometraggio concordati. Restiamo reperibili per qualsiasi necessità.", "process6Title": "6. Riconsegna", "process6Body": "Riconsegna nel luogo e nell'orario concordati. Un controllo rapido e conferma di carburante e km chiudono la consegna.", "process7Title": "7. Rimborso deposito", "process7Body": "Se non ci sono danni, il deposito viene rimborsato immediatamente o entro la finestra concordata dopo la verifica.", "age": "Età", "soonTag": "Presto"}};
     let PACKAGES = [];
 const DEFAULT_PACKAGES = [{"id": "P3", "duration": "3h", "label": {"en": "Brief Escape", "de": "Kurztrip", "it": "Breve Fuga"}, "unlimited": {"price": 440}}, {"id": "P6", "duration": "6h", "label": {"en": "Signature Half Day", "de": "Signature Halbtag", "it": "Signature Mezza giornata"}, "limited": [{"km": 200, "price": 790}], "unlimited": {"price": 890}}, {"id": "GT", "duration": "12h", "label": {"en": "Grand Tour", "de": "Grand Tour", "it": "Grand Tour"}, "limited": [{"km": 300, "price": 890}, {"km": 500, "price": 1290}], "unlimited": {"price": 1590}}, {"id": "FD", "duration": "24h", "label": {"en": "Full Day Icon", "de": "Full Day Icon", "it": "Full Day Icon"}, "limited": [{"km": 500, "price": 1590}], "unlimited": {"price": 1990}}, {"id": "WE", "duration": {"en": "Weekend", "de": "Wochenende", "it": "Weekend"}, "label": {"en": "Weekend Escape", "de": "Weekend Escape", "it": "Weekend Escape"}, "limited": [{"km": 500, "price": 1990}, {"km": 800, "price": 2790}]}, {"id": "WD", "duration": {"en": "Mon–Fri", "de": "Mo–Fr", "it": "Lun–Ven"}, "label": {"en": "Weekday Privilege", "de": "Weekday Privilege", "it": "Weekday Privilege"}, "limited": [{"km": 800, "price": 2190}]}, {"id": "FW", "duration": {"en": "Full week", "de": "Ganze Woche", "it": "Settimana intera"}, "label": {"en": "Full Week", "de": "Ganze Woche", "it": "Settimana intera"}, "limited": [{"km": 1400, "price": 4480}]}];
 
@@ -1370,21 +1452,31 @@ const DEFAULT_PACKAGES = [{"id": "P3", "duration": "3h", "label": {"en": "Brief 
       setHref("mImpressum", window.__LO__.buildUrl("../impressum.html", lang, "top"));
       setHref("mRequest", window.__LO__.buildUrl("../index.html", lang, "request"));
 
-      document.getElementById("eyebrow").textContent = t.eyebrow;
+      setText("eyebrow", t.eyebrow);
       document.getElementById("title").textContent = t.title;
       document.getElementById("subtitle").textContent = t.sub;
       document.getElementById("fleetTitle").textContent = t.fleetTitle;
       document.getElementById("availableNow").textContent = t.availableNow;
       document.getElementById("pillAvailable").textContent = t.available;
+      setText("pillSoon", t.soonTag);
       document.getElementById("comingSoon").textContent = t.soon;
 
       document.getElementById("pickupLink").textContent = t.pickup;
-      document.getElementById("pickupLink").href = window.__LO__.buildUrl("../subs/locations.html", lang, "top");
+      document.getElementById("pickupLink").href = window.__LO__.buildUrl("locations.html", lang, "top");
 
       document.getElementById("requestLink").textContent = t.request;
       document.getElementById("requestLink").href = window.__LO__.buildUrl("../index.html", lang, "request");
 
       document.getElementById("modelNote").textContent = t.modelNote;
+
+
+      // How it works
+      setText("processTitle", t.processTitle);
+      setText("processNote", t.processNote);
+      for(let i=1;i<=7;i++){
+        setText("process"+i+"Title", t["process"+i+"Title"]);
+        setText("process"+i+"Body", t["process"+i+"Body"]);
+      }
 
       document.getElementById("pkgTitle").textContent = t.pkgTitle;
       document.getElementById("thPkg").textContent = t.pkg;

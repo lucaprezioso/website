@@ -231,7 +231,6 @@ h1,h2,h3,.heroTitle,.sectionTitle{font-family:var(--font-serif);letter-spacing:0
   box-shadow:var(--shadow);
 }
 
-/* Journal page */
 .blogHero{padding-top:2.2rem}
 .blogGrid{margin-top:2rem;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:1.2rem}
 .blogCard{grid-column:span 6;display:grid;grid-template-columns:170px 1fr;gap:1rem;align-items:stretch;cursor:pointer}
@@ -256,9 +255,23 @@ h1,h2,h3,.heroTitle,.sectionTitle{font-family:var(--font-serif);letter-spacing:0
   .hamburger{display:inline-flex}
   .container{padding:0 1rem}
 }
+
+/* Mobile readability: photo first, then a dark glass panel that overlaps the image */
 @media(max-width:560px){
-  .blogCard{grid-template-columns:1fr}
-  .blogThumb{min-height:190px}
+  .blogCard{grid-template-columns:1fr;padding:0;overflow:hidden}
+  .blogThumb{min-height:230px;border-radius:0;border:none;filter:brightness(0.72) contrast(1.03) saturate(1.02)}
+  .blogCardInner{
+    margin-top:-3.2rem;
+    position:relative;
+    padding:1.05rem 1.1rem 1.15rem;
+    background:rgba(5,5,9,0.90);
+    border-top:1px solid rgba(231,220,198,0.12);
+    border-radius:22px 22px 16px 16px;
+    box-shadow:0 -10px 40px rgba(0,0,0,0.55);
+  }
+  .blogTitle{font-size:1.18rem; text-shadow:0 10px 26px rgba(0,0,0,0.55)}
+  .blogExcerpt{color:rgba(243,241,238,0.74)}
+  .blogMeta{color:rgba(243,241,238,0.62)}
 }
 
 footer{border-top:1px solid rgba(255,255,255,0.06);padding:1.4rem 0;font-size:0.78rem;color:rgba(243,241,238,0.70)}
@@ -567,7 +580,7 @@ function renderArticles(lang){
     const date = fmtDate(a.date, lang);
 
     card.innerHTML = `
-      <img class="blogThumb" src="${a.image}" alt="">
+      <img class="blogThumb" src="${a.image}" alt="" loading="lazy">
       <div class="blogCardInner">
         <div>
           <div class="blogMeta">

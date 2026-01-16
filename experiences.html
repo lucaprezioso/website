@@ -10,9 +10,12 @@
 <meta property="og:description" content="Explore bespoke Ferrari 458 Italia experiences in Zurich for photoshoots, weddings, special occasions, and curated drives."/>
 <meta property="og:type" content="website"/>
 <meta property="og:image" content="images/image00200.png"/>
+<link rel="icon" href="images/icon.png"/>
+<link rel="apple-touch-icon" href="images/icon.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
 <style>
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap");
@@ -540,6 +543,68 @@ header > .container{position:relative; z-index:1;}
   letter-spacing:0.02em;
 }
 .mediaBody{color:rgba(255,255,255,0.80);max-width:40rem;margin:0 0 1.2rem;}
+
+/* Opening quote visible on load */
+.heroQuote{
+  position:absolute;
+  top:clamp(0.9rem, 2.5vh, 1.6rem);
+  left:50%;
+  transform:translateX(-50%);
+  z-index:3;
+  max-width:min(760px, calc(100% - 3rem));
+  padding:0.85rem 1.1rem;
+  border-radius:999px;
+  background:rgba(7,7,10,0.46);
+  border:1px solid rgba(231,220,198,0.16);
+  backdrop-filter:blur(10px);
+  font-family:"Cormorant Garamond", serif;
+  font-style:italic;
+  font-size:clamp(1.02rem, 1.1vw + 0.75rem, 1.35rem);
+  color:rgba(243,241,238,0.94);
+  text-align:center;
+}
+
+/* Compact hero for narrow or short viewports */
+@media (max-width: 560px), (max-height: 620px){
+  .heroQuote{
+    position:relative;
+    top:auto; left:auto; transform:none;
+    margin:0 auto 0.85rem;
+    border-radius:18px;
+    max-width:100%;
+  }
+  .showcase .mediaFull{
+    padding:1.0rem 0 0;
+  }
+  .showcase .mediaFull > img{
+    max-height:none !important;
+    width:100%;
+    aspect-ratio:4 / 5 !important;
+    height:auto;
+    object-fit:cover;
+    object-position:center 35% !important;
+    border-radius:22px !important;
+    border:1px solid rgba(231,220,198,0.14);
+  }
+  .showcase .mediaOverlay{
+    padding:0.85rem 0 0 !important;
+  }
+  .showcase .mediaCaptionBox{
+    padding:1.05rem 1.0rem;
+    border-radius:22px;
+    background:rgba(7,7,10,0.55);
+    border:1px solid rgba(231,220,198,0.14);
+    backdrop-filter:blur(10px);
+  }
+}
+
+@media (max-height: 520px){
+  .showcase .mediaFull > img{
+    aspect-ratio:16 / 9 !important;
+    object-position:center 30% !important;
+  }
+}
+
 @media (max-width: 820px){
   .mediaFull{min-height:82vh;}
   .mediaOverlay{padding:2.4rem 0;}
@@ -913,6 +978,7 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 <main>
 <section class="showcase" id="top">
   <div class="mediaFull" style="min-height:68vh">
+    <blockquote class="heroQuote">Life is a journey, not a destination</blockquote>
     <img src="images/image00200.png" alt="Bespoke Experiences"/>
     <div class="mediaOverlay" style="align-items:flex-end">
       <div class="container">
