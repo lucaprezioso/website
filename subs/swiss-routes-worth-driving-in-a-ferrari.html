@@ -3,269 +3,307 @@
 <head>
   <meta charset="UTF-8" />
   <title>Luxury Obsession | Swiss routes worth driving in a Ferrari</title>
-  <meta name="description" content="Switzerland rewards early starts. The best roads feel quiet and cinematic before the day peaks." />
+  <meta name="description" content="Switzerland rewards early starts. A curated set of routes from Zurich, designed for scenery, rhythm, and quiet precision." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index, follow" />
+
   <meta property="og:title" content="Luxury Obsession | Swiss routes worth driving in a Ferrari" />
-  <meta property="og:description" content="Switzerland rewards early starts. The best roads feel quiet and cinematic before the day peaks." />
+  <meta property="og:description" content="Switzerland rewards early starts. A curated set of routes from Zurich, designed for scenery, rhythm, and quiet precision." />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="../images/image00500.jpg" />
+
   <link rel="icon" href="../images/icon.png" />
   <link rel="alternate" hreflang="en" href="swiss-routes-worth-driving-in-a-ferrari.html?lang=en" />
   <link rel="alternate" hreflang="de" href="swiss-routes-worth-driving-in-a-ferrari.html?lang=de" />
   <link rel="alternate" hreflang="it" href="swiss-routes-worth-driving-in-a-ferrari.html?lang=it" />
   <link rel="alternate" hreflang="x-default" href="swiss-routes-worth-driving-in-a-ferrari.html?lang=en" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet" />
+
   <style>
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap");
+
 :root{
-  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --bg:#050509;
-  --accent:#e50914;
-  --accentSoft:rgba(229,9,20,0.16);
-  --text:#f5f5f5;
-  --muted:#a3a3a3;
-  --border:#262637;
-  --radius:18px;
-  --shadow:0 18px 45px rgba(0,0,0,0.4);
+  font-family:"Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --bg:#07070a;
+  --surface:rgba(12,12,16,0.78);
+  --surface2:rgba(12,12,16,0.92);
+  --text:#f3f1ee;
+  --muted:rgba(243,241,238,0.70);
+  --border:rgba(243,241,238,0.12);
+  --radius:16px;
+  --shadow:0 14px 42px rgba(0,0,0,0.40);
+  --accent:#b1121d;
+  --accent2:#8b0f14;
+  --champagne:#e7dcc6;
+  --titaniumA:rgba(252,252,253,0.92);
+  --titaniumB:rgba(176,176,186,0.70);
+  --hairline:rgba(231,220,198,0.18);
+  --carbonImage:url("../images/carbon.jpg");
   --max:1120px;
-  --logoSize: 60px;/*44px*/
-  --wordmarkH: 38px;/*34px*/
+  --logoSize: 60px;
 }
+
 *{box-sizing:border-box}
-body{margin:0;background:radial-gradient(circle at top,#191621 0,var(--bg) 55%);color:var(--text)}
+html{scrollbar-gutter:stable}
+@supports not (scrollbar-gutter: stable){ html{overflow-y:scroll} }
+
+body{
+  margin:0;
+  background:
+    radial-gradient(1000px 600px at 20% -10%, rgba(200,183,155,0.12), transparent 55%),
+    radial-gradient(900px 520px at 85% 0%, rgba(139,15,20,0.10), transparent 55%),
+    var(--bg);
+  color:var(--text);
+}
+
 a{color:inherit;text-decoration:none}
+
 header{
   position:sticky;top:0;z-index:50;
+  position:relative;
   backdrop-filter:blur(12px);
-  background:linear-gradient(to bottom,rgba(5,5,9,0.92),rgba(5,5,9,0.62),transparent);
-  border-bottom:1px solid rgba(255,255,255,0.03)
+  background:linear-gradient(to bottom, rgba(7,7,10,0.92), rgba(7,7,10,0.74), transparent);
+  border-bottom:1px solid rgba(243,241,238,0.06);
+  isolation:isolate;
 }
+header::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image: var(--carbonImage);
+  background-size: 420px 420px;
+  background-position: center;
+  opacity:0.10;
+  mix-blend-mode:overlay;
+  pointer-events:none;
+  z-index:0;
+}
+header > .container{position:relative; z-index:1;}
+@supports not (mix-blend-mode: overlay){ header::before{opacity:0.06;} }
+
 .container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
-.navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.20rem 0}/*0.75rem 0*/
-.brand{display:inline-flex;align-items:center;gap:0.75rem}
+.navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.55rem 0}
+.brand{display:inline-flex;align-items:center;gap:0.65rem}
 .brandIcon{width:var(--logoSize);height:var(--logoSize);object-fit:contain;display:block}
-.brandWordmark{height:var(--wordmarkH);width:auto;object-fit:contain;display:block}
-.brandText{font-size:1.05rem;font-weight:850;letter-spacing:0.02em}
-@media (max-width:640px){
-  .brandIcon{width:34px;height:34px}
-  .brandWordmark{height:28px}
-  .brandText{font-size:0.98rem}
+
+.brandGold{
+  font-family:"Cinzel", serif;
+  font-weight:700;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  font-size:clamp(1.05rem, 1.2vw + 0.9rem, 1.2rem);
+  line-height:1;
+  background:linear-gradient(135deg,
+    rgba(252,252,253,0.92),
+    rgba(231,220,198,0.96),
+    rgba(200,183,155,0.92),
+    rgba(231,220,198,0.96)
+  );
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  text-shadow:0 10px 30px rgba(0,0,0,0.35);
+  white-space:nowrap;
 }
+@media (max-width:640px){
+  .brandGold{font-size:0.90rem;letter-spacing:0.14em;}
+  .brandIcon{width:34px;height:34px}
+}
+
 .navRight{display:flex;align-items:center;gap:0.65rem}
 .navLinks{display:flex;align-items:center;gap:0.8rem;font-size:0.9rem}
-.navLinks a{padding:0.35rem 0.65rem;border-radius:999px;color:var(--muted);transition:0.2s}
+.navLinks a{padding:0.35rem 0.65rem;border-radius:999px;color:rgba(243,241,238,0.86);font-weight:500;letter-spacing:0.01em;transition:0.2s}
 .navLinks a:hover{color:var(--text);background:rgba(255,255,255,0.05)}
 .navCta{
-  padding:0.45rem 0.9rem;border-radius:999px;background:var(--accent);
-  font-size:0.85rem;font-weight:800;color:#fff;box-shadow:0 10px 26px rgba(229,9,20,0.45)
+  background:transparent;
+  border:1px solid rgba(200,183,155,0.75);
+  color:rgba(243,241,238,0.92);
+  box-shadow:none;
+  font-weight:600;
+  padding:0.45rem 0.9rem;
+  border-radius:999px;
+  font-size:0.85rem;
+  letter-spacing:0.02em;
 }
-.langPicker{display:inline-flex;align-items:center;gap:0.35rem}
-.flagBtn{
-  border:1px solid rgba(255,255,255,0.14);
-  background:rgba(255,255,255,0.04);
-  border-radius:999px;padding:0.25rem 0.45rem;
-  cursor:pointer;line-height:1;opacity:0.75
+.navCta:hover{background:rgba(200,183,155,0.12)}
+
+.langSelect{position:relative;display:inline-flex;align-items:center}
+.langToggle{
+  display:inline-flex;align-items:center;gap:0.45rem;
+  padding:0.5rem 0.75rem;border-radius:999px;
+  border:1px solid rgba(243,241,238,0.16);
+  background:rgba(243,241,238,0.03);
+  color:rgba(243,241,238,0.86);
+  cursor:pointer;font-size:0.85rem;letter-spacing:0.08em;
 }
-.flagBtn.active{opacity:1;border-color:rgba(229,9,20,0.55);box-shadow:0 0 0 1px rgba(229,9,20,0.25)}
-.flagBtn svg{display:block}
+.langToggle:hover{background:rgba(243,241,238,0.06)}
+.langChevron{font-size:0.9rem;opacity:0.8}
+.langMenu{
+  position:absolute;right:0;top:calc(100% + 0.55rem);
+  min-width:190px;
+  background:rgba(7,7,10,0.92);
+  border:1px solid rgba(243,241,238,0.14);
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  padding:0.4rem;
+  backdrop-filter:blur(10px);
+}
+.langOption{
+  width:100%;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0.65rem 0.75rem;border-radius:12px;
+  background:transparent;border:none;
+  color:rgba(243,241,238,0.92);
+  cursor:pointer;font-size:0.92rem;
+}
+.langOption:hover{background:rgba(243,241,238,0.06)}
+.langOption[aria-current="true"]{background:rgba(200,183,155,0.10);border:1px solid rgba(200,183,155,0.22)}
+
 .hamburger{
   display:none;width:42px;height:38px;border-radius:999px;
-  border:1px solid rgba(255,255,255,0.14);
-  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(243,241,238,0.16);
+  background:rgba(243,241,238,0.03);
   cursor:pointer;align-items:center;justify-content:center
 }
+.hamburger:hover{background:rgba(243,241,238,0.06)}
 .hamburgerLines{display:grid;gap:4px}
-.hamburgerLines span{width:18px;height:2px;border-radius:999px;background:rgba(245,245,245,0.92);display:block}
+.hamburgerLines span{width:18px;height:2px;border-radius:999px;background:rgba(243,241,238,0.88);display:block}
+
 .mobileMenu{
   display:none;margin:0.65rem 0 0.95rem;padding:0.85rem;
-  border-radius:16px;background:rgba(5,5,9,0.92);
-  border:1px solid rgba(255,255,255,0.10);box-shadow:var(--shadow)
+  border-radius:16px;background:rgba(7,7,10,0.92);
+  border:1px solid rgba(243,241,238,0.10);box-shadow:var(--shadow)
 }
-.mobileMenu a{display:flex;align-items:center;justify-content:space-between;padding:0.7rem 0.75rem;border-radius:12px}
-.mobileMenu a:hover{background:rgba(255,255,255,0.05)}
-.mobileMenuDivider{height:1px;background:rgba(255,255,255,0.08);margin:0.55rem 0}
+.mobileMenu a{display:flex;align-items:center;justify-content:space-between;padding:0.7rem 0.75rem;border-radius:12px;color:rgba(243,241,238,0.86)}
+.mobileMenu a:hover{background:rgba(243,241,238,0.05);color:var(--text)}
+.mobileMenu a span{opacity:0.65}
+.mobileMenuDivider{height:1px;background:rgba(243,241,238,0.08);margin:0.55rem 0}
 .mobileMenuCta{
   display:flex;justify-content:center;padding:0.75rem 0.85rem;border-radius:14px;
-  background:var(--accent);font-weight:800;color:#fff;box-shadow:0 10px 26px rgba(229,9,20,0.45)
+  background:linear-gradient(135deg, rgba(231,220,198,0.95), rgba(252,252,253,0.92));
+  color:#0b0b10;
+  border:1px solid rgba(231,220,198,0.28);
+  font-weight:800;
 }
-main{padding-bottom:2.2rem}
-section{padding:3.4rem 0}
-.eyebrow{text-transform:uppercase;letter-spacing:0.24em;font-size:0.7rem;color:var(--muted);margin-bottom:0.75rem}
-.hero{padding-top:2.2rem}
-.heroGrid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:2.4rem;align-items:center}
-.heroTitle{font-size:clamp(2.35rem,3.2vw + 1rem,3.55rem);line-height:1.05;margin:0 0 0.75rem}
-.heroHighlight{background:linear-gradient(to right,#ff7676,#ffb199);-webkit-background-clip:text;background-clip:text;color:transparent}
-.heroSubtitle{font-size:1.05rem;color:var(--muted);max-width:38rem}
-.heroPills{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:0.6rem}
-.heroPill{border-radius:999px;padding:0.3rem 0.8rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);font-size:0.75rem;color:var(--muted)}
-.heroActions{margin-top:1.9rem;display:flex;flex-wrap:wrap;gap:0.9rem;align-items:center}
-.btn{
-  border-radius:999px;padding:0.8rem 1.25rem;border:none;outline:none;font-weight:800;
-  cursor:pointer;font-size:0.95rem;display:inline-flex;align-items:center;gap:0.45rem;white-space:nowrap
-}
-.btnPrimary{background:linear-gradient(135deg,var(--accent),#ff3b3b);color:#fff;box-shadow:0 15px 35px rgba(229,9,20,0.45)}
-.btnSecondary{background:rgba(255,255,255,0.02);color:var(--muted);border:1px solid rgba(255,255,255,0.12)}
-.heroNote{margin-top:1.05rem;font-size:0.82rem;color:var(--muted);line-height:1.6}
-.heroMediaCard{
-  border-radius:32px;overflow:hidden;background:radial-gradient(circle at top left,#ff4949,#050509 52%);
-  box-shadow:var(--shadow);position:relative;min-height:300px;border:1px solid rgba(255,255,255,0.10)
-}
-.heroMediaCard video{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.08);filter:saturate(1.06) contrast(1.05)}
-.heroBadge{
-  position:absolute;bottom:1.15rem;left:1.25rem;right:1.25rem;background:rgba(5,5,9,0.78);
-  padding:0.55rem 0.85rem;border-radius:999px;display:flex;align-items:center;justify-content:space-between;gap:0.6rem;
-  border:1px solid rgba(255,255,255,0.16);font-size:0.75rem
-}
-.heroBadgeDot{width:9px;height:9px;border-radius:999px;background:#4ade80;box-shadow:0 0 12px rgba(74,222,128,0.9)}
-.sectionTitle{font-size:1.75rem;margin:0 0 0.4rem}
-.sectionSubtitle{font-size:0.95rem;color:var(--muted);max-width:52rem;margin:0}
-.card{
-  background:radial-gradient(circle at top left,#151520,#050509 55%);
-  border-radius:var(--radius);border:1px solid var(--border);padding:1.3rem;box-shadow:var(--shadow)
-}
-.pricingGrid{margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem}
-.pricingCard h3{margin:0 0 0.25rem;font-size:1.05rem}
-.pricingPrice{display:flex;align-items:baseline;gap:0.2rem;margin:0.35rem 0 0.45rem}
-.pricingPrice span:first-child{font-size:1.55rem;font-weight:900}
-.pricingKm{font-size:0.82rem;color:var(--muted)}
-.pricingTag{display:inline-block;margin-top:0.35rem;font-size:0.72rem;padding:0.2rem 0.6rem;border-radius:999px;background:var(--accentSoft);color:#ffb4b4}
-@media (hover:hover) and (min-width: 980px){
-  .pricingCard{cursor:pointer;transition:transform 0.18s, border-color 0.18s, box-shadow 0.18s, background 0.18s}
-  .pricingCard:hover{
-    transform:translateY(-6px) scale(1.03);
-    border-color:rgba(229,9,20,0.55);
-    box-shadow:0 22px 60px rgba(229,9,20,0.10), var(--shadow);
-    background:radial-gradient(circle at top left, rgba(229,9,20,0.18), #050509 58%);
-  }
-  .pricingCard:hover .pricingTag{
-    background:rgba(229,9,20,0.24);
-    color:#ffd1d1;
-  }
-}
+.mobileMenuCta:hover{color:#0b0b10}
 
-.pricingNote{font-size:0.8rem;color:var(--muted);margin-top:1.25rem}
-.requestLayout{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:2rem}
-.ctaRow{display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:0.75rem}
-.ctaBtn{
-  border-radius:14px;padding:0.75rem 1rem;border:1px solid rgba(255,255,255,0.12);
-  background:rgba(255,255,255,0.03);color:var(--text);cursor:pointer;font-weight:850;
-  display:inline-flex;gap:0.5rem;align-items:center
-}
-.ctaBtnPrimary{background:rgba(229,9,20,0.14);border-color:rgba(229,9,20,0.30)}
-.socialRow{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:0.85rem}
-.socialBtn{
-  border-radius:999px;padding:0.55rem 0.85rem;border:1px solid rgba(255,255,255,0.12);
-  background:rgba(255,255,255,0.03);color:var(--text);cursor:pointer;font-weight:850;
-  display:inline-flex;gap:0.45rem;align-items:center;font-size:0.88rem
-}
-.socialBtn:hover{background:rgba(255,255,255,0.06)}
-.socialBtn svg{width:18px;height:18px;display:block}
-.bookingForm{display:grid;gap:0.75rem;font-size:0.9rem}
-.fieldGroup{display:flex;flex-direction:column;gap:0.25rem}
-label{font-size:0.8rem;color:var(--muted)}
-input,select,textarea{
-  border-radius:10px;border:1px solid var(--border);background:rgba(10,10,18,0.9);
-  padding:0.55rem 0.7rem;color:var(--text);font-family:inherit;font-size:0.95rem;outline:none
-}
-input:focus,select:focus,textarea:focus{border-color:rgba(245,245,245,0.22);box-shadow:0 0 0 1px rgba(245,245,245,0.12)}
-textarea{min-height:90px;resize:vertical}
-.grid12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0.75rem}
-.span-4{grid-column:span 4}
-.span-6{grid-column:span 6}
-.span-12{grid-column:span 12}
-@media(max-width:980px){
-  .heroGrid{grid-template-columns:1fr}
-  .heroMediaCard{max-width:640px;margin:0 auto}
-  .span-md-6{grid-column:span 6}
-  .span-md-12{grid-column:span 12}
-}
-@media(max-width:760px){
+@media (max-width: 980px){
   .navLinks{display:none}
   .hamburger{display:inline-flex}
-  .container{padding:0 1rem}
-}
-@media(max-width:560px){
-  .pricingGrid{grid-auto-flow:column;grid-auto-columns:minmax(240px,1fr);grid-template-columns:unset;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:0.75rem}
-  .pricingCard{scroll-snap-align:start}
-  .span-sm-12{grid-column:span 12}
-}
-/* Calendar popover */
-.calWrap{position:relative}
-.calPopup{
-  position:absolute;top:calc(100% + 8px);left:0;z-index:80;
-  width:min(320px, 92vw);
-  padding:0.85rem;border-radius:16px;
-  background:rgba(5,5,9,0.98);
-  border:1px solid rgba(255,255,255,0.10);
-  box-shadow:var(--shadow);
-  display:none;
-}
-.calPopup.open{display:block}
-.calHeader{display:flex;align-items:center;justify-content:space-between;gap:0.6rem;margin-bottom:0.65rem}
-.calHeaderTitle{font-weight:900;text-transform:capitalize}
-.calNavGroup{display:flex;gap:0.35rem;align-items:center}
-.calNavBtn{
-  border:1px solid rgba(255,255,255,0.12);
-  background:rgba(255,255,255,0.03);
-  color:var(--text);
-  border-radius:10px;
-  padding:0.35rem 0.55rem;
-  cursor:pointer;
-  font-weight:900
-}
-.calWeekdays{display:grid;grid-template-columns:repeat(7,1fr);gap:0.35rem;font-size:0.72rem;color:var(--muted);margin-bottom:0.35rem}
-.calGrid{display:grid;grid-template-columns:repeat(7,1fr);gap:0.35rem}
-.calDay{
-  width:100%;
-  aspect-ratio:1/1;
-  border-radius:12px;
-  border:1px solid rgba(255,255,255,0.08);
-  background:rgba(255,255,255,0.03);
-  color:var(--text);
-  cursor:pointer;
-  font-weight:850;
-  font-size:0.85rem
-}
-.calDay:hover{border-color:rgba(255,255,255,0.18);background:rgba(255,255,255,0.05)}
-.calDayOff{opacity:0;pointer-events:none;border-color:transparent;background:transparent}
-.calDayDisabled{opacity:0.35;cursor:not-allowed}
-.calDaySelected{
-  border-color:rgba(229,9,20,0.65);
-  box-shadow:0 0 0 1px rgba(229,9,20,0.25);
-  background:rgba(229,9,20,0.14)
-}
-/* Contact map */
-.contactGrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,0.95fr);gap:1.2rem;margin-top:1.2rem;align-items:stretch}
-
-@media(max-width:1100px){
-  .contactGrid{grid-template-columns:1fr}
-  .mapFrame{min-height:320px}
-}
-.mapCard{padding:0.85rem}
-.mapFrame{width:100%;height:100%;min-height:340px;border:0;border-radius:14px}
-.contactList{list-style:none;padding:0;margin:0.75rem 0 0;display:grid;gap:0.5rem}
-.contactList li{display:flex;align-items:center;justify-content:space-between;gap:0.75rem;padding:0.55rem 0.65rem;border-radius:12px;background:rgba(0,0,0,0.22);border:1px solid rgba(255,255,255,0.07)}
-.contactList li span{color:var(--muted);font-size:0.82rem}
-footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.78rem;color:var(--muted)}
-.footerInner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
-
-/* Keep header alignment stable vs pages with or without scrollbars */
-html{scrollbar-gutter:stable}
-@supports not (scrollbar-gutter: stable){
-  html{overflow-y:scroll}
 }
 
-/* Article page only */
+main{padding-bottom:2.2rem}
+section{padding:2.4rem 0}
+
+h1,h2,h3,.sectionTitle,.heroTitle{font-family:"Cormorant Garamond",serif;letter-spacing:0.02em}
+.heroTitle{font-weight:600}
+.heroHighlight{background:linear-gradient(to right, rgba(231,220,198,0.96), rgba(252,252,253,0.92));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.eyebrow{text-transform:uppercase;letter-spacing:0.24em;font-size:0.7rem;color:var(--muted);margin-bottom:0.75rem}
+.hero{padding-top:2.0rem}
+.heroTitle{font-size:clamp(2.15rem, 2.8vw + 1rem, 3.15rem);line-height:1.06;margin:0 0 0.55rem}
+.heroDeck{max-width:72ch;color:var(--muted);font-size:1.02rem;line-height:1.75;margin:0.5rem 0 0}
+
 .articleWrap{max-width:980px}
-.heroImg{width:100%;height:320px;object-fit:cover;border-radius:18px;border:1px solid rgba(255,255,255,0.10)}
-.meta{margin-top:0.75rem;color:var(--muted);font-size:0.9rem}
-.content{margin-top:1.1rem}
-.content p{margin:0 0 1rem;color:var(--text);line-height:1.85}
+.meta{margin-top:0.65rem;color:var(--muted);font-size:0.92rem}
+.heroImg{width:100%;height:340px;object-fit:cover;border-radius:18px;border:1px solid rgba(243,241,238,0.10)}
+
+.card{
+  background:rgba(12,12,16,0.62);
+  border:1px solid rgba(243,241,238,0.10);
+  border-radius:var(--radius);
+  box-shadow:none;
+}
+
+.prose{margin-top:1.15rem}
+.prose p{margin:0 0 1rem;color:rgba(243,241,238,0.92);line-height:1.9}
+.prose h2{font-size:2.0rem;margin:2.0rem 0 0.7rem}
+.prose h3{font-size:1.35rem;margin:1.35rem 0 0.45rem}
+.prose ul{margin:0.35rem 0 1.1rem;padding-left:1.2rem;color:rgba(243,241,238,0.90);line-height:1.85}
+.prose li{margin:0.35rem 0}
+.prose a{color:rgba(231,220,198,0.96)}
+
+.divider{
+  height:1px;
+  margin:1.5rem 0;
+  background:linear-gradient(90deg,transparent,rgba(252,252,253,0.10),rgba(231,220,198,0.24),rgba(252,252,253,0.10),transparent);
+}
+
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1rem}
+@media (max-width: 900px){ .grid2{grid-template-columns:1fr} }
+
+.callout{padding:1.0rem 1.05rem}
+.calloutTitle{font-family:"Cormorant Garamond",serif;font-size:1.35rem;margin:0 0 0.25rem}
+.calloutBody{margin:0;color:rgba(243,241,238,0.84);line-height:1.8}
+
+.tableWrap{overflow:auto;border-radius:16px;border:1px solid rgba(243,241,238,0.10);background:rgba(0,0,0,0.18)}
+.table{width:100%;border-collapse:collapse;min-width:720px}
+.table th, .table td{padding:0.9rem 0.9rem;border-bottom:1px solid rgba(243,241,238,0.08);text-align:left;vertical-align:top}
+.table th{font-size:0.82rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(243,241,238,0.78)}
+.table td{color:rgba(243,241,238,0.90);line-height:1.65}
+.table tr:last-child td{border-bottom:none}
+.tag{display:inline-flex;align-items:center;gap:0.4rem;padding:0.25rem 0.55rem;border-radius:999px;border:1px solid rgba(231,220,198,0.18);background:rgba(231,220,198,0.06);color:rgba(231,220,198,0.92);font-size:0.78rem;white-space:nowrap}
+
+.routeCards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1rem 0 0}
+@media (max-width: 900px){ .routeCards{grid-template-columns:1fr} }
+.routeCard{padding:1.0rem 1.05rem}
+.routeHead{display:flex;align-items:flex-start;justify-content:space-between;gap:0.75rem;margin-bottom:0.35rem}
+.routeTitle{font-family:"Cormorant Garamond",serif;font-size:1.45rem;margin:0}
+.routeMeta{color:rgba(243,241,238,0.70);font-size:0.9rem}
+.routeCard p{margin:0.6rem 0;color:rgba(243,241,238,0.88);line-height:1.85}
+.routeCard ul{margin:0.35rem 0 0.15rem}
+.routeCard li{color:rgba(243,241,238,0.88)}
+
+.figure{margin:1.1rem 0;border-radius:18px;overflow:hidden;border:1px solid rgba(243,241,238,0.10);background:rgba(0,0,0,0.18)}
+.figure img{display:block;width:100%;height:340px;object-fit:cover}
+.figure figcaption{padding:0.8rem 0.95rem;color:rgba(243,241,238,0.72);font-size:0.92rem;line-height:1.7}
+@media (max-width: 640px){ .figure img{height:260px} }
+
+.galleryGrid{display:grid;grid-template-columns:repeat(6, minmax(0, 1fr));gap:0.6rem;margin-top:0.85rem}
+@media (max-width: 980px){ .galleryGrid{grid-template-columns:repeat(3, minmax(0, 1fr));} }
+@media (max-width: 520px){ .galleryGrid{grid-template-columns:repeat(2, minmax(0, 1fr));} }
+.gItem{padding:0;border:none;background:transparent;border-radius:14px;overflow:hidden;cursor:pointer;border:1px solid rgba(243,241,238,0.10)}
+.gItem img{width:100%;height:110px;object-fit:cover;display:block;filter:saturate(1.02)}
+.gItem:hover{border-color:rgba(231,220,198,0.24)}
+
+.lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:200}
+.lightbox[aria-hidden="false"]{display:flex}
+.lbBackdrop{position:absolute;inset:0;background:rgba(0,0,0,0.78)}
+.lbPanel{position:relative;max-width:min(1100px, 92vw);max-height:86vh;background:rgba(7,7,10,0.92);border:1px solid rgba(243,241,238,0.14);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.lbFigure{margin:0;display:grid;grid-template-rows:1fr auto;max-height:86vh}
+#lbImg{width:100%;height:72vh;object-fit:contain;background:#050509}
+.lbCap{padding:0.85rem 1rem;color:rgba(243,241,238,0.78);font-size:0.95rem;line-height:1.6;border-top:1px solid rgba(243,241,238,0.08)}
+.lbClose{position:absolute;top:0.55rem;right:0.65rem;width:42px;height:42px;border-radius:999px;border:1px solid rgba(243,241,238,0.16);background:rgba(243,241,238,0.04);color:rgba(243,241,238,0.92);cursor:pointer;font-size:1.3rem;display:flex;align-items:center;justify-content:center}
+.lbClose:hover{background:rgba(243,241,238,0.08)}
+.lbNav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:999px;border:1px solid rgba(243,241,238,0.16);background:rgba(243,241,238,0.04);color:rgba(243,241,238,0.92);cursor:pointer;font-size:1.5rem;display:flex;align-items:center;justify-content:center}
+.lbNav:hover{background:rgba(243,241,238,0.08)}
+.lbPrev{left:0.55rem}
+.lbNext{right:0.55rem}
+
+.ctaRow{display:flex;flex-wrap:wrap;align-items:center;gap:0.6rem;margin-top:1.35rem}
+.ctaBtn{background:transparent;border:1px solid rgba(243,241,238,0.16);color:rgba(243,241,238,0.86);padding:0.8rem 1.05rem;border-radius:999px;font-weight:600;letter-spacing:0.02em}
+.ctaBtn:hover{background:rgba(243,241,238,0.05)}
+.ctaBtnPrimary{background:linear-gradient(135deg, rgba(231,220,198,0.95), rgba(252,252,253,0.92));color:#0b0b10;border:1px solid rgba(231,220,198,0.28)}
+.ctaBtnPrimary:hover{color:#0b0b10}
+
+footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.78rem;color:var(--muted)}
+.footerInner{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center}
+.footerRight{display:flex;justify-content:flex-end;gap:16px;flex-wrap:wrap}
+.footerRight a{color:var(--muted)}
+.footerRight a:hover{color:var(--text)}
+@media (max-width: 760px){
+  .footerInner{grid-template-columns:1fr;gap:10px;text-align:center}
+  .footerRight{justify-content:center}
+}
   </style>
 
   <script>
 (function(){
   const LANGS = ["en","de","it"];
+
   function getLang(){
     const p = new URLSearchParams(window.location.search);
     const q = p.get("lang");
@@ -274,6 +312,7 @@ html{scrollbar-gutter:stable}
     if(s && LANGS.includes(s)) return s;
     return "en";
   }
+
   function setLang(next){
     if(!LANGS.includes(next)) return;
     localStorage.setItem("lo_lang", next);
@@ -281,29 +320,64 @@ html{scrollbar-gutter:stable}
     u.searchParams.set("lang", next);
     window.location.href = u.pathname + u.search + u.hash;
   }
-  function withLang(href, lang){
-    try{
-      const u = new URL(href, window.location.href);
-      u.searchParams.set("lang", lang);
-      return u.pathname + u.search + u.hash;
-    }catch(e){ return href; }
+
+  function buildUrl(path, lang, hash){
+    const u = new URL(path, window.location.href);
+    u.searchParams.set("lang", lang);
+    if(hash) u.hash = hash;
+    return u.pathname + u.search + u.hash;
   }
-  function initLangButtons(lang){
-    document.querySelectorAll("[data-langbtn]").forEach(btn => {
-      const code = btn.getAttribute("data-langbtn");
-      btn.classList.toggle("active", code === lang);
-      btn.addEventListener("click", () => setLang(code));
+
+  function initLangMenu(lang){
+    const toggle = document.getElementById("langToggle");
+    const menu = document.getElementById("langMenu");
+    const codeEl = document.getElementById("langCode");
+    if(!toggle || !menu || !codeEl) return;
+
+    const codes = { en:"EN", de:"DE", it:"IT" };
+    codeEl.textContent = codes[lang] || "EN";
+
+    function close(){
+      menu.hidden = true;
+      toggle.setAttribute("aria-expanded","false");
+    }
+    function open(){
+      menu.hidden = false;
+      toggle.setAttribute("aria-expanded","true");
+    }
+
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = !menu.hidden;
+      if(isOpen) close();
+      else open();
+    });
+
+    document.addEventListener("click", () => close(), { passive:true });
+    document.addEventListener("keydown", (e) => { if(e.key === "Escape") close(); });
+
+    menu.querySelectorAll("[data-lang]").forEach(btn => {
+      const code = btn.getAttribute("data-lang");
+      btn.setAttribute("aria-current", code === lang ? "true" : "false");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setLang(code);
+      });
     });
   }
+
   function initHamburger(){
     const btn = document.getElementById("hamburger");
     const menu = document.getElementById("mobileMenu");
     if(!btn || !menu) return;
+
     function close(){
       menu.style.display = "none";
       menu.setAttribute("data-open","0");
       btn.setAttribute("aria-expanded","false");
     }
+
     btn.addEventListener("click", () => {
       const open = menu.getAttribute("data-open") === "1";
       if(open) close();
@@ -313,6 +387,7 @@ html{scrollbar-gutter:stable}
         btn.setAttribute("aria-expanded","true");
       }
     });
+
     menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
     document.addEventListener("click", (e) => {
       if(menu.getAttribute("data-open") !== "1") return;
@@ -320,125 +395,1140 @@ html{scrollbar-gutter:stable}
       close();
     });
   }
-  window.__LO__ = { getLang, withLang, initLangButtons, initHamburger };
+
+  window.__LO__ = { getLang, setLang, buildUrl, initLangMenu, initHamburger };
 })();
   </script>
 </head>
-
 <body>
-  <header>
-    <div class="container">
-      <div class="navInner">
-        <a class="brand" href="../index.html" aria-label="Luxury Obsession">
-          <img class="brandIcon" src="../images/icon.png" alt="Luxury Obsession icon">
-          <img class="brandWordmark" src="../images/wordmark.png" alt="Luxury Obsession wordmark"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-          <span class="brandText" style="display:none">Luxury Obsession</span>
-        </a>
+<header>
+  <div class="container">
+    <div class="navInner">
+      <a class="brand" href="../index.html" aria-label="Luxury Obsession">
+        <img class="brandIcon" src="../images/icon.png" alt="Luxury Obsession icon" />
+        <span class="brandGold">Luxury Obsession</span>
+      </a>
 
-        <div class="navRight">
-          <nav class="navLinks" aria-label="Primary">
-            <a id="navPricing" href="pricing.html">Pricing</a>
-            <a id="navBlog" href="blog.html">Blog</a>
-            <a id="navContact" href="../index.html#contact">Contact</a>
-            <a id="navRequest" class="navCta" href="../index.html#request">Request a quote</a>
-          </nav>
+      <div class="navRight">
+        <nav class="navLinks" aria-label="Primary">
+          <a href="pricing.html" id="navRates">Rates</a>
+          <a href="../philosophy.html" id="navPhilosophy">Our Philosophy</a>
+          <a href="../experiences.html" id="navExperiences">Experiences</a>
+          <a href="blog.html" id="navBlog">Journal</a>
+          <a href="../index.html#contact" id="navContact">Contact</a>
+          <a class="navCta" href="../index.html#request" id="navRequest">Request</a>
+        </nav>
 
-          <div class="langPicker" aria-label="Language">
-            <button type="button" class="flagBtn" data-langbtn="en" title="English"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
-  <defs><clipPath id="ukClip"><rect width="22" height="14" rx="2" ry="2"/></clipPath></defs>
-  <g clip-path="url(#ukClip)">
-    <rect width="22" height="14" fill="#012169"/>
-    <path d="M0 0 L22 14 M22 0 L0 14" stroke="#FFFFFF" stroke-width="3"/>
-    <path d="M0 0 L22 14 M22 0 L0 14" stroke="#C8102E" stroke-width="1.6"/>
-    <path d="M11 0 V14 M0 7 H22" stroke="#FFFFFF" stroke-width="5"/>
-    <path d="M11 0 V14 M0 7 H22" stroke="#C8102E" stroke-width="3"/>
-  </g>
-</svg></button>
-            <button type="button" class="flagBtn" data-langbtn="de" title="Deutsch"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
-  <rect width="22" height="14" rx="2" ry="2" fill="#000000"/>
-  <rect y="4.67" width="22" height="4.67" fill="#DD0000"/>
-  <rect y="9.33" width="22" height="4.67" fill="#FFCE00"/>
-</svg></button>
-            <button type="button" class="flagBtn" data-langbtn="it" title="Italiano"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
-  <rect width="22" height="14" rx="2" ry="2" fill="#FFFFFF"/>
-  <rect width="7.33" height="14" rx="2" ry="2" fill="#009246"/>
-  <rect x="14.67" width="7.33" height="14" rx="2" ry="2" fill="#CE2B37"/>
-</svg></button>
+        <div class="langSelect" aria-label="Language">
+          <button class="langToggle" id="langToggle" type="button" aria-haspopup="menu" aria-expanded="false">
+            <span id="langCode" aria-label="Current language">EN</span>
+            <span class="langChevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="langMenu" id="langMenu" role="menu" aria-label="Select language" hidden>
+            <button class="langOption" type="button" role="menuitem" data-lang="en">English</button>
+            <button class="langOption" type="button" role="menuitem" data-lang="de">Deutsch</button>
+            <button class="langOption" type="button" role="menuitem" data-lang="it">Italiano</button>
+          </div>
+        </div>
+
+        <button id="hamburger" type="button" class="hamburger" aria-label="menu" aria-expanded="false">
+          <div class="hamburgerLines"><span></span><span></span><span></span></div>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobileMenu" data-open="0" role="navigation" aria-label="Mobile" style="display:none">
+      <a href="pricing.html" id="mRates">Rates<span>›</span></a>
+      <a href="../philosophy.html" id="mPhilosophy">Our Philosophy<span>›</span></a>
+      <a href="../experiences.html" id="mExperiences">Experiences<span>›</span></a>
+      <a href="blog.html" id="mBlog">Journal<span>›</span></a>
+      <a href="../index.html#contact" id="mContact">Contact<span>›</span></a>
+      <a href="../impressum.html" id="mImpressum">Impressum<span>›</span></a>
+      <div class="mobileMenuDivider"></div>
+      <a class="mobileMenuCta" href="../index.html#request" id="mRequest">Request</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container articleWrap">
+      <div class="eyebrow" id="eyebrow">Luxury Obsession</div>
+      <h1 class="heroTitle"><span id="titleA">Swiss routes</span> <span class="heroHighlight" id="titleB">worth driving in a Ferrari</span></h1>
+      <p class="heroDeck" id="deck">Switzerland rewards early starts. The best roads feel quiet and cinematic before the day peaks. Here is a curated set of routes from Zurich that balance scenery with driving rhythm.</p>
+      <div class="meta" id="metaDate">2025 12 01</div>
+
+      <div style="margin-top:1rem">
+        <img class="heroImg" src="../images/image00500.jpg" alt="Swiss routes worth driving in a Ferrari" />
+      </div>
+
+      <div class="prose" id="articleBody">
+        <!-- populated by JS -->
+      </div>
+
+      <div class="ctaRow">
+        <a class="ctaBtn" id="backBlog" href="blog.html">Back to journal</a>
+        <a class="ctaBtn ctaBtnPrimary" id="reqQuote" href="../index.html#request">Request availability</a>
+      </div>
+
+      <!-- Lightbox for gallery -->
+      <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Gallery" tabindex="-1">
+        <div class="lbBackdrop" data-lb-close="1"></div>
+        <div class="lbPanel">
+          <button class="lbClose" type="button" aria-label="Close" data-lb-close="1">×</button>
+          <button class="lbNav lbPrev" type="button" aria-label="Previous">‹</button>
+          <figure class="lbFigure">
+            <img id="lbImg" src="" alt="Gallery image" />
+            <figcaption id="lbCap" class="lbCap"></figcaption>
+          </figure>
+          <button class="lbNav lbNext" type="button" aria-label="Next">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footerInner">
+    <div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
+    <div class="footerCenter" id="footerCenter">Ferrari only experiences, Switzerland.</div>
+    <div class="footerRight"><a href="../impressum.html" id="footerImpressum">Impressum</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const I18N = {
+    en: {
+      pageTitle: "Luxury Obsession | Swiss routes worth driving in a Ferrari",
+      metaDesc: "Switzerland rewards early starts. A curated set of routes from Zurich, designed for scenery, rhythm, and quiet precision.",
+      ogDesc: "Switzerland rewards early starts. A curated set of routes from Zurich, designed for scenery, rhythm, and quiet precision.",
+
+      navRates:"Rates",
+      navPhilosophy:"Our Philosophy",
+      navExperiences:"Experiences",
+      navBlog:"Journal",
+      navContact:"Contact",
+      navRequest:"Request",
+      navImpressum:"Impressum",
+
+      eyebrow:"Luxury Obsession",
+      titleA:"Swiss routes",
+      titleB:"worth driving in a Ferrari",
+      deck:"Switzerland rewards early starts. The best roads feel quiet and cinematic before the day peaks. Here is a curated set of routes from Zurich that balance scenery with driving rhythm.",
+      back:"Back to journal",
+      request:"Request availability",
+      footerCenter:"Ferrari only experiences, Switzerland.",
+
+      body: `
+        <p>Some drives are about speed. Switzerland, at its best, is about precision. The scenery is composed, the road surface is tidy, and even the smallest village feels curated. In a Ferrari 458 Italia, that clarity becomes the whole point: steering feel, throttle response, and the sound that rises with the revs, all set against lakes, forests, and high ridgelines.</p>
+
+        <div class="grid2" style="margin:1.1rem 0 0">
+          <div class="card callout">
+            <div class="calloutTitle">A simple rule</div>
+            <p class="calloutBody">Start early, keep your pauses intentional, and choose one signature moment. A pass, a lakeside breakfast, or a quiet viewpoint. Luxury is calm and unhurried.</p>
+          </div>
+          <div class="card callout">
+            <div class="calloutTitle">How to pick your route</div>
+            <p class="calloutBody">If you want rhythm, go lakes. If you want altitude, pick a pass day and plan your stops like chapters. If you want a destination, build the drive around a single lunch or sunset location.</p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Route selection at a glance</h2>
+        <p>All routes begin and end near Zurich. Distances and times are designed for real world driving with pauses. You can always shorten by skipping a branch or two.</p>
+
+        <div class="tableWrap" style="margin:0.85rem 0 1.15rem">
+          <table class="table" aria-label="Route summary">
+            <thead>
+              <tr>
+                <th>Route</th>
+                <th>Character</th>
+                <th>Time</th>
+                <th>Best season</th>
+                <th>Ideal for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Lake Rhythm</strong><br><span class="tag">Zürichsee to Walensee</span></td>
+                <td>Flowing bends, wide views, easy pace</td>
+                <td>3 to 5 hours</td>
+                <td>All year</td>
+                <td>First time guests, relaxed luxury</td>
+              </tr>
+              <tr>
+                <td><strong>Pre Alps Loop</strong><br><span class="tag">Toggenburg</span></td>
+                <td>Varied roads, villages, gentle elevation</td>
+                <td>4 to 6 hours</td>
+                <td>Spring to autumn</td>
+                <td>Balanced driving and scenery</td>
+              </tr>
+              <tr>
+                <td><strong>Pass Day</strong><br><span class="tag">High altitude</span></td>
+                <td>Switchbacks, grand viewpoints, alpine drama</td>
+                <td>7 to 10 hours</td>
+                <td>Summer and early autumn</td>
+                <td>Full day signature experience</td>
+              </tr>
+              <tr>
+                <td><strong>Evening Elegance</strong><br><span class="tag">Sunset and lights</span></td>
+                <td>Short, cinematic, city to lakeside</td>
+                <td>2 to 3 hours</td>
+                <td>All year</td>
+                <td>Dinner plans, photo moments</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="figure">
+          <img src="../images/image00510.jpg" data-fallback="Lake morning light" alt="Morning light above the lake" />
+          <figcaption>Early light is the secret ingredient. The roads are quieter, the air is cooler, and the drive feels private.</figcaption>
+        </figure>
+
+        <h2>Four routes that feel made for a Ferrari</h2>
+        <p>Each route below is written in the same structure: what it feels like, where to pause, and how to keep it elegant. We can tailor any of them to your time window and comfort level.</p>
+
+        <div class="routeCards">
+          <div class="card routeCard">
+            <div class="routeHead">
+              <h3 class="routeTitle">Lake Rhythm</h3>
+              <div class="routeMeta">3 to 5 hours, calm pace</div>
+            </div>
+            <p>Think of this as Switzerland in one afternoon. Smooth sections, wide water views, and enough gentle curves to enjoy the car without forcing the tempo.</p>
+            <p><strong>Stops that work well</strong></p>
+            <ul>
+              <li>Breakfast or espresso by Zürichsee</li>
+              <li>Walensee viewpoint for photos and quiet air</li>
+              <li>A short lakeside walk to reset the senses</li>
+            </ul>
+            <p><strong>How to keep it perfect</strong> Leave Zurich before the city wakes. Aim for a single long pause by the water and a second brief stop for photos.</p>
           </div>
 
-          <button id="hamburger" type="button" class="hamburger" aria-label="menu" aria-expanded="false">
-            <div class="hamburgerLines"><span></span><span></span><span></span></div>
+          <div class="card routeCard">
+            <div class="routeHead">
+              <h3 class="routeTitle">Pre Alps Loop</h3>
+              <div class="routeMeta">4 to 6 hours, varied roads</div>
+            </div>
+            <p>This loop mixes forests, open valleys, and small towns. It is the best choice when you want variety without committing to a full alpine pass day.</p>
+            <p><strong>Stops that work well</strong></p>
+            <ul>
+              <li>A viewpoint above Toggenburg</li>
+              <li>A quiet village bakery for something warm</li>
+              <li>A countryside lunch with parking close by</li>
+            </ul>
+            <p><strong>How to keep it perfect</strong> Keep the middle of the day flexible. If the road is busy, take an early lunch and return while the traffic is still soft.</p>
+          </div>
+
+          <div class="card routeCard">
+            <div class="routeHead">
+              <h3 class="routeTitle">Pass Day</h3>
+              <div class="routeMeta">7 to 10 hours, signature drive</div>
+            </div>
+            <p>This is the cinematic chapter. You plan it like a story: climb, crest, stop, descend, then a calm meal. The 458 feels alive in the switchbacks, yet composed on the faster links.</p>
+            <p><strong>Stops that work well</strong></p>
+            <ul>
+              <li>One top of pass viewpoint with a longer pause</li>
+              <li>A second stop on the descent for photographs</li>
+              <li>A destination lunch before the return leg</li>
+            </ul>
+            <p><strong>How to keep it perfect</strong> Choose one pass, not three. The best pass day is not the longest one. It is the one with room to breathe.</p>
+          </div>
+
+          <div class="card routeCard">
+            <div class="routeHead">
+              <h3 class="routeTitle">Evening Elegance</h3>
+              <div class="routeMeta">2 to 3 hours, sunset</div>
+            </div>
+            <p>If you want a short experience that still feels special, go late afternoon and aim for golden light. You get the sound, the visuals, and a discreet arrival for dinner.</p>
+            <p><strong>Stops that work well</strong></p>
+            <ul>
+              <li>A lakeside viewpoint at sunset</li>
+              <li>A short city photo moment after dark</li>
+              <li>A restaurant with easy parking</li>
+            </ul>
+            <p><strong>How to keep it perfect</strong> Keep the route short. Let the car be the jewellery, not the schedule.</p>
+          </div>
+        </div>
+
+        <figure class="figure">
+          <img src="../images/image00520.jpg" data-fallback="Alpine panorama" alt="Alpine panorama" />
+          <figcaption>A pass day is a full experience. Build it around one signature viewpoint and a calm destination meal.</figcaption>
+        </figure>
+
+        <h2>Seasonality notes</h2>
+        <p>Switzerland is reliable, but altitude always changes the rules. Use this as a guide, then confirm conditions close to your date if you plan a high pass.</p>
+
+        <div class="tableWrap" style="margin:0.85rem 0 1.15rem">
+          <table class="table" aria-label="Seasonality">
+            <thead>
+              <tr>
+                <th>Season</th>
+                <th>What it feels like</th>
+                <th>Best route style</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Spring</strong></td>
+                <td>Fresh air, clear mornings, occasional rain</td>
+                <td>Lakes and pre Alps</td>
+                <td>Altitude may still be limited. Plan with flexibility.</td>
+              </tr>
+              <tr>
+                <td><strong>Summer</strong></td>
+                <td>Long days, warm light, busiest roads</td>
+                <td>Pass day or early lake route</td>
+                <td>Start early. Choose one pass and keep pauses longer.</td>
+              </tr>
+              <tr>
+                <td><strong>Autumn</strong></td>
+                <td>Crisp air, golden forests, best photography</td>
+                <td>Pre Alps and select passes</td>
+                <td>Perfect for elegant pacing and scenery.</td>
+              </tr>
+              <tr>
+                <td><strong>Winter</strong></td>
+                <td>Sharp contrast, quiet roads, early sunsets</td>
+                <td>Lakes and evening elegance</td>
+                <td>Avoid high altitude routes. Focus on low elevation views.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="figure">
+          <img src="../images/image00530.jpg" data-fallback="Forest road" alt="Forest road" />
+          <figcaption>Pre Alps roads give you variety without committing to a full alpine day. It is the most balanced choice for many guests.</figcaption>
+        </figure>
+
+        <h2>Practical details that keep it elegant</h2>
+        <h3>Fuel and comfort</h3>
+        <p>Plan one fuel stop where it feels natural. It keeps the day relaxed and avoids a rushed decision. If you prefer, we can suggest stations that are easy to access and simple to park in.</p>
+
+        <h3>Parking and photos</h3>
+        <p>For photographs, the best approach is to choose one location that looks deliberate. A pull off with a wide view, a clean lakeside edge, or a quiet road shoulder with space. Ten calm minutes beat thirty rushed ones.</p>
+
+        <div class="grid2" style="margin:1.1rem 0 0">
+          <div class="card callout">
+            <div class="calloutTitle">A subtle etiquette note</div>
+            <p class="calloutBody">The most memorable drive is the one that fits Switzerland. Smooth inputs, measured sound in villages, and a calm presence. The car will still feel dramatic.</p>
+          </div>
+          <div class="card callout">
+            <div class="calloutTitle">Want it tailored?</div>
+            <p class="calloutBody">Tell us your available time, your comfort level, and whether you prefer scenery, driving rhythm, or a destination. We will respond with a route outline and the right rate.</p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Checklist for a perfect day</h2>
+        <p>This table is designed to keep the experience calm. You can screenshot it and use it as a lightweight plan.</p>
+
+        <div class="tableWrap" style="margin:0.85rem 0 1.15rem">
+          <table class="table" aria-label="Checklist">
+            <thead>
+              <tr>
+                <th>Moment</th>
+                <th>What to do</th>
+                <th>Why it matters</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Before departure</strong></td>
+                <td>Pick one signature stop and one meal stop</td>
+                <td>Keeps the day composed and avoids over planning</td>
+              </tr>
+              <tr>
+                <td><strong>First hour</strong></td>
+                <td>Warm up gently, settle into the car</td>
+                <td>The best rhythm arrives naturally</td>
+              </tr>
+              <tr>
+                <td><strong>Mid drive</strong></td>
+                <td>Pause in a quiet place, drink water, take one photo</td>
+                <td>Small resets make the whole day feel premium</td>
+              </tr>
+              <tr>
+                <td><strong>Return</strong></td>
+                <td>Choose a calmer final leg, arrive unhurried</td>
+                <td>Luxury ends softly, not abruptly</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Gallery</h2>
+        <p>A small set of visual references. If any image files are missing on your build, they will gracefully fall back to a styled placeholder.</p>
+
+        <div class="galleryGrid" id="gallery" aria-label="Photo gallery">
+          <button class="gItem" type="button" data-full="../images/image00500.jpg" data-cap="Zurich morning, start early">
+            <img src="../images/image00500.jpg" data-fallback="Zurich morning" alt="Zurich morning" />
+          </button>
+          <button class="gItem" type="button" data-full="../images/image00511.jpg" data-cap="Lakeside light and quiet air">
+            <img src="../images/image00511.jpg" data-fallback="Lakeside light" alt="Lakeside light" />
+          </button>
+          <button class="gItem" type="button" data-full="../images/image00521.jpg" data-cap="A pass viewpoint, one signature moment">
+            <img src="../images/image00521.jpg" data-fallback="Pass viewpoint" alt="Pass viewpoint" />
+          </button>
+          <button class="gItem" type="button" data-full="../images/image00531.jpg" data-cap="Pre Alps roads, balanced and varied">
+            <img src="../images/image00531.jpg" data-fallback="Pre Alps road" alt="Pre Alps road" />
+          </button>
+          <button class="gItem" type="button" data-full="../images/image00541.jpg" data-cap="Golden hour, evening elegance">
+            <img src="../images/image00541.jpg" data-fallback="Golden hour" alt="Golden hour" />
+          </button>
+          <button class="gItem" type="button" data-full="../images/image00551.jpg" data-cap="Arrival, calm and discreet">
+            <img src="../images/image00551.jpg" data-fallback="Discreet arrival" alt="Discreet arrival" />
           </button>
         </div>
-      </div>
+      `
+    },
 
-      <div id="mobileMenu" class="mobileMenu" data-open="0" role="navigation" aria-label="Mobile" style="display:none">
-        <a id="mPricing" href="pricing.html">Pricing<span>›</span></a>
-        <a id="mBlog" href="blog.html">Blog<span>›</span></a>
-        <a id="mContact" href="../index.html#contact">Contact<span>›</span></a>
-        <div class="mobileMenuDivider"></div>
-        <a id="mRequest" class="mobileMenuCta" href="../index.html#request">Request a quote</a>
-      </div>
-    </div>
-  </header>
+    de: {
+      pageTitle: "Luxury Obsession | Schweizer Routen, die man in einem Ferrari fahren sollte",
+      metaDesc: "Die Schweiz belohnt frühe Starts. Kuratierte Routen ab Zürich, gestaltet für Aussicht, Rhythmus und ruhige Präzision.",
+      ogDesc: "Die Schweiz belohnt frühe Starts. Kuratierte Routen ab Zürich, gestaltet für Aussicht, Rhythmus und ruhige Präzision.",
 
-  <main>
-    <section class="hero" style="padding-top:2.2rem">
-      <div class="container articleWrap">
-        <div class="eyebrow">Luxury Obsession</div>
-        <h1 class="heroTitle" style="margin-bottom:0.4rem">Swiss routes worth driving in a Ferrari</h1>
-        <div class="meta">2025-12-01</div>
+      navRates:"Tarife",
+      navPhilosophy:"Unsere Philosophie",
+      navExperiences:"Erlebnisse",
+      navBlog:"Journal",
+      navContact:"Kontakt",
+      navRequest:"Anfrage",
+      navImpressum:"Impressum",
 
-        <div style="margin-top:1rem">
-          <img class="heroImg" src="../images/image00500.jpg" alt="Swiss routes worth driving in a Ferrari">
+      eyebrow:"Luxury Obsession",
+      titleA:"Schweizer Routen",
+      titleB:"für eine Ferrari Fahrt",
+      deck:"Die Schweiz belohnt frühe Starts. Die besten Strassen wirken ruhig und filmisch, bevor der Tag anzieht. Hier ist eine kuratierte Auswahl ab Zürich, die Aussicht und Fahrgefühl elegant verbindet.",
+      back:"Zurück zum Journal",
+      request:"Verfügbarkeit anfragen",
+      footerCenter:"Ferrari Only Erlebnisse, Schweiz.",
+
+      body: `
+        <p>Manche Fahrten sind nur Tempo. Die Schweiz, im besten Sinne, ist Präzision. Das Licht ist klar, die Strassen wirken ordentlich, und selbst kleine Orte fühlen sich kuratiert an. In einer Ferrari 458 Italia wird genau dieses Gefühl zum Kern: Lenkgefühl, Gasannahme und der Klang, der mit der Drehzahl wächst, eingerahmt von Seen, Wäldern und hohen Gratlinien.</p>
+
+        <div class="grid2" style="margin:1.1rem 0 0">
+          <div class="card callout">
+            <div class="calloutTitle">Eine einfache Regel</div>
+            <p class="calloutBody">Starten Sie früh, wählen Sie Pausen bewusst, und setzen Sie einen Signature Moment. Ein Pass, ein Frühstück am Wasser oder ein stiller Aussichtspunkt. Luxus ist ruhig.</p>
+          </div>
+          <div class="card callout">
+            <div class="calloutTitle">So wählen Sie die Route</div>
+            <p class="calloutBody">Für Rhythmus: Seen. Für Höhe: ein Pass Tag mit klaren Stopps. Für ein Ziel: eine Fahrt um ein Mittagessen oder einen Sonnenuntergang.</p>
+          </div>
         </div>
 
-        <div class="content">
-          <p>Switzerland rewards early starts. The best roads feel quiet and cinematic before the day peaks.</p><p>For a lake focused route, build around Zürichsee and Walensee. For altitude, choose a pass day and plan your pauses with intention.</p><p>Want it tailored? Tell us how much time you have, your comfort level, and whether you prefer scenery, driving rhythm, or a destination moment.</p>
+        <div class="divider"></div>
+
+        <h2>Routen Überblick</h2>
+        <p>Alle Routen beginnen und enden in der Nähe von Zürich. Zeiten sind für reales Fahren mit Pausen gedacht. Sie können jederzeit kürzen.</p>
+
+        <div class="tableWrap" style="margin:0.85rem 0 1.15rem">
+          <table class="table" aria-label="Routen Übersicht">
+            <thead>
+              <tr>
+                <th>Route</th>
+                <th>Charakter</th>
+                <th>Zeit</th>
+                <th>Beste Saison</th>
+                <th>Ideal für</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>See Rhythmus</strong><br><span class="tag">Zürichsee bis Walensee</span></td>
+                <td>Fliessend, weit, entspannt</td>
+                <td>3 bis 5 Stunden</td>
+                <td>Ganzjährig</td>
+                <td>Erster Besuch, ruhiger Luxus</td>
+              </tr>
+              <tr>
+                <td><strong>Vor Alpen Runde</strong><br><span class="tag">Toggenburg</span></td>
+                <td>Abwechslung, Dörfer, sanfte Höhenmeter</td>
+                <td>4 bis 6 Stunden</td>
+                <td>Frühling bis Herbst</td>
+                <td>Balance aus Fahren und Aussicht</td>
+              </tr>
+              <tr>
+                <td><strong>Pass Tag</strong><br><span class="tag">Höhe</span></td>
+                <td>Serpentinen, Panorama, alpine Dramaturgie</td>
+                <td>7 bis 10 Stunden</td>
+                <td>Sommer, früher Herbst</td>
+                <td>Ganztag Signature Erlebnis</td>
+              </tr>
+              <tr>
+                <td><strong>Abend Eleganz</strong><br><span class="tag">Sonnenuntergang</span></td>
+                <td>Kurz, filmisch, Stadt bis See</td>
+                <td>2 bis 3 Stunden</td>
+                <td>Ganzjährig</td>
+                <td>Dinner, Fotos, Ankommen</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        <div class="ctaRow" style="margin-top:1.2rem">
-          <a class="ctaBtn" id="backBlog" href="blog.html">← Back to blog</a>
-          <a class="ctaBtn ctaBtnPrimary" id="reqQuote" href="../index.html#request">💬 Request a quote</a>
+        <figure class="figure">
+          <img src="../images/image00510.jpg" data-fallback="Morgen am See" alt="Morgen am See" />
+          <figcaption>Frühes Licht ist der wichtigste Trick. Weniger Verkehr, kühlere Luft, und die Fahrt fühlt sich privat an.</figcaption>
+        </figure>
+
+        <h2>Vier Routen, die sich wie gemacht anfühlen</h2>
+        <p>Jede Route ist gleich aufgebaut: Gefühl, Pausen, und wie man den Tag elegant hält. Auf Wunsch passen wir alles an Ihre Zeit und Ihren Stil an.</p>
+
+        <div class="routeCards">
+          <div class="card routeCard">
+            <div class="routeHead">
+              <h3 class="routeTitle">See Rhythmus</h3>
+              <div class="routeMeta">3 bis 5 Stunden, ruhig</div>
+            </div>
+            <p>Schweiz in einem Nachmittag. Glatte Abschnitte, weite Wasserblicke, und genug Kurven, um das Auto zu geniessen, ohne den Takt zu erzwingen.</p>
+            <p><strong>Stopps, die gut funktionieren</strong></p>
+            <ul>
+              <li>Frühstück oder Espresso am Zürichsee</li>
+              <li>Walensee Aussicht für Fotos und Ruhe</li>
+              <li>Ein kurzer Spaziergang am Wasser</li>
+            </ul>
+            <p><strong>So bleibt es perfekt</strong> Verlassen Sie Zürich, bevor die Stadt wach wird. Planen Sie eine längere Pause am See und einen kurzen Foto Stopp.</p>
+          </div>
+
+          <div class="card routeCard">
+            <div class="routeHead">
+              <h3 class="routeTitle">Vor Alpen Runde</h3>
+              <div class="routeMeta">4 bis 6 Stunden, abwechslungsreich</div>
+            </div>
+            <p>Wälder, Täler, kleine Orte. Die beste Wahl, wenn Sie Vielfalt möchten, ohne einen ganzen Pass Tag einzuplanen.</p>
+            <p><strong>Stopps, die gut funktionieren</strong></p>
+            <ul>
+              <li>Aussicht oberhalb des Toggenburgs</li>
+              <li>Eine ruhige Bäckerei im Dorf</li>
+              <li>Mittagessen auf dem Land mit einfachem Parken</li>
+            </ul>
+            <p><strong>So bleibt es perfekt</strong> Halten Sie die Mittagszeit flexibel. Wenn es voller wird, essen Sie früher und fahren zurück, solange es noch entspannt ist.</p>
+          </div>
+
+          <div class="card routeCard">
+            <div class="routeHead">
+              <h3 class="routeTitle">Pass Tag</h3>
+              <div class="routeMeta">7 bis 10 Stunden, Signature</div>
+            </div>
+            <p>Das filmische Kapitel. Wie eine Geschichte: Aufstieg, Passhöhe, Pause, Abfahrt, dann ein ruhiges Essen. Die 458 fühlt sich in Serpentinen lebendig an und bleibt auf schnellen Abschnitten stabil.</p>
+            <p><strong>Stopps, die gut funktionieren</strong></p>
+            <ul>
+              <li>Ein längerer Halt auf der Passhöhe</li>
+              <li>Ein zweiter Stopp für Fotos beim Abstieg</li>
+              <li>Ein Ziel Mittagessen vor dem Rückweg</li>
+            </ul>
+            <p><strong>So bleibt es perfekt</strong> Wählen Sie einen Pass, nicht drei. Der beste Pass Tag ist nicht der längste, sondern der mit Raum zum Atmen.</p>
+          </div>
+
+          <div class="card routeCard">
+            <div class="routeHead">
+              <h3 class="routeTitle">Abend Eleganz</h3>
+              <div class="routeMeta">2 bis 3 Stunden, Sunset</div>
+            </div>
+            <p>Kurz, aber besonders. Später Start für goldenes Licht, dann eine diskrete Ankunft zum Dinner.</p>
+            <p><strong>Stopps, die gut funktionieren</strong></p>
+            <ul>
+              <li>Ein See Aussichtspunkt zum Sonnenuntergang</li>
+              <li>Ein kurzes Foto Moment in der Stadt bei Nacht</li>
+              <li>Restaurant mit einfachem Parken</li>
+            </ul>
+            <p><strong>So bleibt es perfekt</strong> Halten Sie die Route kurz. Das Auto ist das Schmuckstück, nicht der Zeitplan.</p>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <footer>
-    <div class="container footerInner">
-      <div>© <span id="year"></span> Luxury Obsession.</div>
-      <div>Ferrari only experiences, Switzerland.</div>
-    </div>
-  </footer>
+        <figure class="figure">
+          <img src="../images/image00520.jpg" data-fallback="Alpen Panorama" alt="Alpen Panorama" />
+          <figcaption>Ein Pass Tag lebt von Struktur. Ein Signature Aussichtspunkt und ein ruhiges Ziel Essen reichen.</figcaption>
+        </figure>
 
-  <script>
-(function(){
+        <h2>Saison Hinweise</h2>
+        <p>Die Schweiz ist verlässlich, aber Höhe verändert immer die Bedingungen. Nutzen Sie dies als Orientierung und prüfen Sie bei hohen Pässen nahe am Datum die Lage.</p>
+
+        <div class="tableWrap" style="margin:0.85rem 0 1.15rem">
+          <table class="table" aria-label="Saison Hinweise">
+            <thead>
+              <tr>
+                <th>Saison</th>
+                <th>Gefühl</th>
+                <th>Beste Route</th>
+                <th>Hinweise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Frühling</strong></td>
+                <td>Klar, frisch, manchmal Regen</td>
+                <td>Seen und Vor Alpen</td>
+                <td>Höhere Lagen können noch eingeschränkt sein.</td>
+              </tr>
+              <tr>
+                <td><strong>Sommer</strong></td>
+                <td>Lange Tage, warmes Licht, mehr Verkehr</td>
+                <td>Pass Tag oder früh am See</td>
+                <td>Früh starten. Einen Pass wählen und Pausen länger halten.</td>
+              </tr>
+              <tr>
+                <td><strong>Herbst</strong></td>
+                <td>Crisp, golden, beste Fotos</td>
+                <td>Vor Alpen und ausgewählte Pässe</td>
+                <td>Perfekt für elegantes Tempo und Blickachsen.</td>
+              </tr>
+              <tr>
+                <td><strong>Winter</strong></td>
+                <td>Kontrast, ruhig, früher Abend</td>
+                <td>Seen und Abend Eleganz</td>
+                <td>Hohe Pässe vermeiden, tiefe Lagen geniessen.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="figure">
+          <img src="../images/image00530.jpg" data-fallback="Waldstrasse" alt="Waldstrasse" />
+          <figcaption>Vor Alpen Strecken sind die Balance Option. Vielfalt, weniger Aufwand, und dennoch viel Gefühl.</figcaption>
+        </figure>
+
+        <h2>Praktisches, das Luxus bewahrt</h2>
+        <h3>Tanken und Komfort</h3>
+        <p>Planen Sie einen Tankstopp, der sich natürlich anfühlt. Es hält den Tag entspannt und vermeidet spontane Entscheidungen. Auf Wunsch empfehlen wir Stationen mit einfacher Zufahrt.</p>
+
+        <h3>Parken und Fotos</h3>
+        <p>Für Fotos ist ein bewusster Ort besser als viele hastige Stopps. Ein sauberer Aussichtspunkt oder eine ruhige Uferkante. Zehn ruhige Minuten schlagen dreissig gehetzte.</p>
+
+        <div class="grid2" style="margin:1.1rem 0 0">
+          <div class="card callout">
+            <div class="calloutTitle">Eine kleine Etikette</div>
+            <p class="calloutBody">Die beste Fahrt passt zur Schweiz. Sanfte Inputs, zurückhaltender Klang in Dörfern, ruhige Präsenz. Das Auto bleibt trotzdem dramatisch.</p>
+          </div>
+          <div class="card callout">
+            <div class="calloutTitle">Wollen Sie es personalisiert?</div>
+            <p class="calloutBody">Sagen Sie uns Ihre Zeit, Ihren Komfort, und ob Sie Aussicht, Fahrgefühl oder ein Ziel bevorzugen. Wir antworten mit einem Routen Plan und dem passenden Tarif.</p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Checkliste für den perfekten Tag</h2>
+        <p>Diese Liste hält alles ruhig. Sie können sie als leichte Planung nutzen.</p>
+
+        <div class="tableWrap" style="margin:0.85rem 0 1.15rem">
+          <table class="table" aria-label="Checkliste">
+            <thead>
+              <tr>
+                <th>Moment</th>
+                <th>Was tun</th>
+                <th>Warum</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Vor der Abfahrt</strong></td>
+                <td>Einen Signature Stopp und einen Essens Stopp wählen</td>
+                <td>Der Tag bleibt komponiert und nicht überplant</td>
+              </tr>
+              <tr>
+                <td><strong>Erste Stunde</strong></td>
+                <td>Sanft warm fahren, ankommen</td>
+                <td>Der Rhythmus entsteht natürlich</td>
+              </tr>
+              <tr>
+                <td><strong>Zwischendurch</strong></td>
+                <td>Ruhig pausieren, Wasser, ein Foto</td>
+                <td>Kleine Resets wirken wie Premium</td>
+              </tr>
+              <tr>
+                <td><strong>Rückkehr</strong></td>
+                <td>Letzte Etappe entspannter wählen</td>
+                <td>Luxus endet leise, nicht abrupt</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Galerie</h2>
+        <p>Ein kleiner visueller Eindruck. Falls einzelne Dateien in Ihrem Build fehlen, erscheinen stilvolle Platzhalter.</p>
+
+        <div class="galleryGrid" id="gallery" aria-label="Foto Galerie">
+          <button class="gItem" type="button" data-full="../images/image00500.jpg" data-cap="Zürich am Morgen, früh starten">
+            <img src="../images/image00500.jpg" data-fallback="Zürich Morgen" alt="Zürich Morgen" />
+          </button>
+          <button class="gItem" type="button" data-full="../images/image00511.jpg" data-cap="Licht am See, ruhige Luft">
+            <img src="../images/image00511.jpg" data-fallback="Licht am See" alt="Licht am See" />
+          </button>
+          <button class="gItem" type="button" data-full="../images/image00521.jpg" data-cap="Pass Aussicht, ein Signature Moment">
+            <img src="../images/image00521.jpg" data-fallback="Pass Aussicht" alt="Pass Aussicht" />
+          </button>
+          <button class="gItem" type="button" data-full="../images/image00531.jpg" data-cap="Vor Alpen, Balance und Vielfalt">
+            <img src="../images/image00531.jpg" data-fallback="Vor Alpen" alt="Vor Alpen" />
+          </button>
+          <button class="gItem" type="button" data-full="../images/image00541.jpg" data-cap="Golden Hour, Abend Eleganz">
+            <img src="../images/image00541.jpg" data-fallback="Golden Hour" alt="Golden Hour" />
+          </button>
+          <button class="gItem" type="button" data-full="../images/image00551.jpg" data-cap="Ankunft, ruhig und diskret">
+            <img src="../images/image00551.jpg" data-fallback="Diskrete Ankunft" alt="Diskrete Ankunft" />
+          </button>
+        </div>
+      `
+    },
+
+    it: {
+      pageTitle: "Luxury Obsession | Strade svizzere da guidare in Ferrari",
+      metaDesc: "La Svizzera premia le partenze presto. Percorsi curati da Zurigo, pensati per panorama, ritmo e precisione.",
+      ogDesc: "La Svizzera premia le partenze presto. Percorsi curati da Zurigo, pensati per panorama, ritmo e precisione.",
+
+      navRates:"Tariffe",
+      navPhilosophy:"La nostra filosofia",
+      navExperiences:"Esperienze",
+      navBlog:"Journal",
+      navContact:"Contatto",
+      navRequest:"Richiesta",
+      navImpressum:"Impressum",
+
+      eyebrow:"Luxury Obsession",
+      titleA:"Strade svizzere",
+      titleB:"da guidare in Ferrari",
+      deck:"La Svizzera premia le partenze presto. Le strade migliori sono silenziose e cinematografiche prima che la giornata si riempia. Ecco una selezione curata da Zurigo che unisce panorama e ritmo di guida.",
+      back:"Torna al Journal",
+      request:"Richiedi disponibilità",
+      footerCenter:"Esperienze Ferrari only, Svizzera.",
+
+      body: `
+        <p>Alcuni giri sono solo velocità. La Svizzera, quando è al suo meglio, è precisione. La scena è pulita, l asfalto è curato, e anche il villaggio più piccolo sembra composto. Su una Ferrari 458 Italia, questa chiarezza diventa il punto: sterzo, risposta del gas e un suono che cresce con i giri, tra laghi, boschi e creste alte.</p>
+
+        <div class="grid2" style="margin:1.1rem 0 0">
+          <div class="card callout">
+            <div class="calloutTitle">Una regola semplice</div>
+            <p class="calloutBody">Parti presto, fai pause intenzionali, e scegli un solo momento firma. Un passo, una colazione sul lago o un punto panoramico tranquillo. Il lusso è calmo.</p>
+          </div>
+          <div class="card callout">
+            <div class="calloutTitle">Come scegliere il percorso</div>
+            <p class="calloutBody">Se vuoi ritmo, vai verso i laghi. Se vuoi quota, scegli un giorno di passo e pianifica le soste come capitoli. Se vuoi una destinazione, costruisci il giro attorno a un pranzo o al tramonto.</p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Panoramica rapida</h2>
+        <p>Tutti i percorsi partono e rientrano vicino a Zurigo. Tempi pensati per guida reale con pause. Puoi sempre accorciare.</p>
+
+        <div class="tableWrap" style="margin:0.85rem 0 1.15rem">
+          <table class="table" aria-label="Riepilogo percorsi">
+            <thead>
+              <tr>
+                <th>Percorso</th>
+                <th>Carattere</th>
+                <th>Tempo</th>
+                <th>Stagione</th>
+                <th>Ideale per</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Ritmo sul lago</strong><br><span class="tag">Zürichsee e Walensee</span></td>
+                <td>Curve fluide, viste ampie, passo facile</td>
+                <td>3 a 5 ore</td>
+                <td>Tutto l anno</td>
+                <td>Prima esperienza, lusso rilassato</td>
+              </tr>
+              <tr>
+                <td><strong>Anello pre Alpi</strong><br><span class="tag">Toggenburg</span></td>
+                <td>Varietà, paesi, quota leggera</td>
+                <td>4 a 6 ore</td>
+                <td>Primavera a autunno</td>
+                <td>Equilibrio tra guida e panorama</td>
+              </tr>
+              <tr>
+                <td><strong>Giornata di passo</strong><br><span class="tag">Alta quota</span></td>
+                <td>Tornanti, punti vista, atmosfera alpina</td>
+                <td>7 a 10 ore</td>
+                <td>Estate e inizio autunno</td>
+                <td>Esperienza firma di un giorno</td>
+              </tr>
+              <tr>
+                <td><strong>Eleganza serale</strong><br><span class="tag">Tramonto</span></td>
+                <td>Breve, cinematografico, città e lago</td>
+                <td>2 a 3 ore</td>
+                <td>Tutto l anno</td>
+                <td>Cena, foto, arrivo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="figure">
+          <img src="../images/image00510.jpg" data-fallback="Luce del mattino" alt="Luce del mattino" />
+          <figcaption>La luce presto è l ingrediente segreto. Strade più vuote, aria più fresca, e un feeling più privato.</figcaption>
+        </figure>
+
+        <h2>Quattro percorsi pensati per una Ferrari</h2>
+        <p>Ogni percorso segue la stessa struttura: sensazione, soste, e come mantenere tutto elegante. Possiamo adattare tutto al tuo tempo e al tuo stile.</p>
+
+        <div class="routeCards">
+          <div class="card routeCard">
+            <div class="routeHead">
+              <h3 class="routeTitle">Ritmo sul lago</h3>
+              <div class="routeMeta">3 a 5 ore, passo calmo</div>
+            </div>
+            <p>Svizzera in un pomeriggio. Sezioni scorrevoli, acqua a vista, e curve dolci per godere l auto senza forzare.</p>
+            <p><strong>Soste che funzionano</strong></p>
+            <ul>
+              <li>Colazione o espresso sul Zürichsee</li>
+              <li>Punto vista sul Walensee per foto e silenzio</li>
+              <li>Breve passeggiata sul lago</li>
+            </ul>
+            <p><strong>Come renderlo perfetto</strong> Parti da Zurigo prima dell ora piena. Una pausa lunga sul lago e una sosta breve per le foto.</p>
+          </div>
+
+          <div class="card routeCard">
+            <div class="routeHead">
+              <h3 class="routeTitle">Anello pre Alpi</h3>
+              <div class="routeMeta">4 a 6 ore, variabile</div>
+            </div>
+            <p>Boschi, vallate e piccoli paesi. La scelta migliore se vuoi varietà senza la complessità di una giornata di passo.</p>
+            <p><strong>Soste che funzionano</strong></p>
+            <ul>
+              <li>Un punto vista sopra il Toggenburg</li>
+              <li>Una panetteria tranquilla in paese</li>
+              <li>Pranzo in campagna con parcheggio semplice</li>
+            </ul>
+            <p><strong>Come renderlo perfetto</strong> Tieni flessibile la fascia centrale. Se c è traffico, pranzo anticipato e rientro con calma.</p>
+          </div>
+
+          <div class="card routeCard">
+            <div class="routeHead">
+              <h3 class="routeTitle">Giornata di passo</h3>
+              <div class="routeMeta">7 a 10 ore, esperienza firma</div>
+            </div>
+            <p>Il capitolo cinematografico. Pianificalo come una storia: salita, cima, pausa, discesa, poi un pasto tranquillo. La 458 è viva nei tornanti e composta sui tratti più veloci.</p>
+            <p><strong>Soste che funzionano</strong></p>
+            <ul>
+              <li>Un punto vista in cima con pausa lunga</li>
+              <li>Seconda sosta in discesa per foto</li>
+              <li>Pranzo destinazione prima del rientro</li>
+            </ul>
+            <p><strong>Come renderlo perfetto</strong> Un passo, non tre. La giornata migliore non è la più lunga. È quella con respiro.</p>
+          </div>
+
+          <div class="card routeCard">
+            <div class="routeHead">
+              <h3 class="routeTitle">Eleganza serale</h3>
+              <div class="routeMeta">2 a 3 ore, tramonto</div>
+            </div>
+            <p>Breve ma speciale. Tardo pomeriggio per la golden hour e arrivo discreto per la cena.</p>
+            <p><strong>Soste che funzionano</strong></p>
+            <ul>
+              <li>Punto vista sul lago al tramonto</li>
+              <li>Foto veloce in città dopo il buio</li>
+              <li>Ristorante con parcheggio facile</li>
+            </ul>
+            <p><strong>Come renderlo perfetto</strong> Percorso corto. L auto è il gioiello, non la tabella di marcia.</p>
+          </div>
+        </div>
+
+        <figure class="figure">
+          <img src="../images/image00520.jpg" data-fallback="Panorama alpino" alt="Panorama alpino" />
+          <figcaption>Una giornata di passo è un esperienza completa. Un solo punto firma e un pranzo tranquillo bastano.</figcaption>
+        </figure>
+
+        <h2>Note di stagione</h2>
+        <p>La Svizzera è affidabile, ma la quota cambia sempre le regole. Usa queste note come guida e conferma le condizioni vicino alla data se pianifichi alta quota.</p>
+
+        <div class="tableWrap" style="margin:0.85rem 0 1.15rem">
+          <table class="table" aria-label="Stagioni">
+            <thead>
+              <tr>
+                <th>Stagione</th>
+                <th>Atmosfera</th>
+                <th>Percorso ideale</th>
+                <th>Note</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Primavera</strong></td>
+                <td>Aria fresca, mattine chiare, pioggia possibile</td>
+                <td>Laghi e pre Alpi</td>
+                <td>Alta quota a volte limitata. Pianifica con flessibilità.</td>
+              </tr>
+              <tr>
+                <td><strong>Estate</strong></td>
+                <td>Giornate lunghe, luce calda, più traffico</td>
+                <td>Passo o lago molto presto</td>
+                <td>Parti presto. Un passo e pause più lunghe.</td>
+              </tr>
+              <tr>
+                <td><strong>Autunno</strong></td>
+                <td>Aria netta, colori dorati, foto perfette</td>
+                <td>Pre Alpi e alcuni passi</td>
+                <td>Ideale per ritmo elegante e panorama.</td>
+              </tr>
+              <tr>
+                <td><strong>Inverno</strong></td>
+                <td>Contrasti, strade più vuote, tramonto presto</td>
+                <td>Laghi ed eleganza serale</td>
+                <td>Evita alta quota e goditi le viste a bassa elevazione.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="figure">
+          <img src="../images/image00530.jpg" data-fallback="Strada tra i boschi" alt="Strada tra i boschi" />
+          <figcaption>Le pre Alpi sono la scelta più equilibrata. Varietà, meno complessità, e tanto feeling.</figcaption>
+        </figure>
+
+        <h2>Dettagli pratici</h2>
+        <h3>Carburante e comfort</h3>
+        <p>Pianifica una sosta carburante che sembri naturale. Mantiene la giornata rilassata e evita decisioni improvvise. Se preferisci, possiamo indicare stazioni facili da raggiungere.</p>
+
+        <h3>Parcheggio e foto</h3>
+        <p>Per le foto, scegli un luogo che sembri intenzionale. Un punto vista pulito, un bordo lago ordinato, o una sosta con spazio. Dieci minuti calmi valgono più di trenta di corsa.</p>
+
+        <div class="grid2" style="margin:1.1rem 0 0">
+          <div class="card callout">
+            <div class="calloutTitle">Un tocco di etichetta</div>
+            <p class="calloutBody">Il giro migliore si adatta alla Svizzera. Inputs morbidi, suono misurato nei paesi, presenza calma. L auto resta comunque teatrale.</p>
+          </div>
+          <div class="card callout">
+            <div class="calloutTitle">Vuoi un percorso su misura?</div>
+            <p class="calloutBody">Dicci tempo disponibile, comfort, e se preferisci panorama, ritmo di guida o una destinazione. Rispondiamo con una proposta e la tariffa giusta.</p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Check list</h2>
+        <p>Una tabella leggera per mantenere tutto calmo.</p>
+
+        <div class="tableWrap" style="margin:0.85rem 0 1.15rem">
+          <table class="table" aria-label="Checklist">
+            <thead>
+              <tr>
+                <th>Momento</th>
+                <th>Cosa fare</th>
+                <th>Perché</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Prima di partire</strong></td>
+                <td>Un momento firma e una sosta pranzo</td>
+                <td>La giornata resta composta e non troppo piena</td>
+              </tr>
+              <tr>
+                <td><strong>Prima ora</strong></td>
+                <td>Riscalda con calma e prenditi confidenza</td>
+                <td>Il ritmo migliore arriva naturalmente</td>
+              </tr>
+              <tr>
+                <td><strong>Durante</strong></td>
+                <td>Pausa breve, acqua, una foto</td>
+                <td>Piccoli reset rendono tutto premium</td>
+              </tr>
+              <tr>
+                <td><strong>Rientro</strong></td>
+                <td>Ultimo tratto più calmo e arrivo senza fretta</td>
+                <td>Il lusso finisce in modo morbido</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Galleria</h2>
+        <p>Un set di riferimenti visivi. Se alcune immagini non sono presenti nel tuo build, appariranno placeholder eleganti.</p>
+
+        <div class="galleryGrid" id="gallery" aria-label="Galleria foto">
+          <button class="gItem" type="button" data-full="../images/image00500.jpg" data-cap="Zurigo al mattino, partenza presto">
+            <img src="../images/image00500.jpg" data-fallback="Zurigo" alt="Zurigo" />
+          </button>
+          <button class="gItem" type="button" data-full="../images/image00511.jpg" data-cap="Luce sul lago e aria calma">
+            <img src="../images/image00511.jpg" data-fallback="Luce sul lago" alt="Luce sul lago" />
+          </button>
+          <button class="gItem" type="button" data-full="../images/image00521.jpg" data-cap="Punto vista, un momento firma">
+            <img src="../images/image00521.jpg" data-fallback="Punto vista" alt="Punto vista" />
+          </button>
+          <button class="gItem" type="button" data-full="../images/image00531.jpg" data-cap="Pre Alpi, equilibrio e varietà">
+            <img src="../images/image00531.jpg" data-fallback="Pre Alpi" alt="Pre Alpi" />
+          </button>
+          <button class="gItem" type="button" data-full="../images/image00541.jpg" data-cap="Golden hour, eleganza serale">
+            <img src="../images/image00541.jpg" data-fallback="Golden hour" alt="Golden hour" />
+          </button>
+          <button class="gItem" type="button" data-full="../images/image00551.jpg" data-cap="Arrivo discreto">
+            <img src="../images/image00551.jpg" data-fallback="Arrivo" alt="Arrivo" />
+          </button>
+        </div>
+      `
+    }
+  };
+
   const lang = window.__LO__.getLang();
   document.documentElement.lang = lang;
   localStorage.setItem("lo_lang", lang);
-
-  window.__LO__.initLangButtons(lang);
+  window.__LO__.initLangMenu(lang);
   window.__LO__.initHamburger();
 
-  const set = (id, href) => {
+  const t = I18N[lang] || I18N.en;
+
+  // Update head metadata
+  document.title = t.pageTitle;
+  const md = document.querySelector('meta[name="description"]');
+  if(md) md.setAttribute("content", t.metaDesc);
+  const ogd = document.querySelector('meta[property="og:description"]');
+  if(ogd) ogd.setAttribute("content", t.ogDesc);
+
+  // Text helpers
+  const setText = (id, value) => {
     const el = document.getElementById(id);
-    if(el) el.href = window.__LO__.withLang(href, lang);
+    if(el) el.textContent = value;
   };
-  set("navPricing", "pricing.html");
-  set("navBlog", "blog.html");
-  set("navContact", "../index.html#contact");
-  set("navRequest", "../index.html#request");
-  set("mPricing", "pricing.html");
-  set("mBlog", "blog.html");
-  set("mContact", "../index.html#contact");
-  set("mRequest", "../index.html#request");
-  set("backBlog", "blog.html");
-  set("reqQuote", "../index.html#request");
+  const setHTML = (id, value) => {
+    const el = document.getElementById(id);
+    if(el) el.innerHTML = value;
+  };
+  const setHref = (id, value) => {
+    const el = document.getElementById(id);
+    if(el) el.href = value;
+  };
+
+  // Nav labels
+  setText("navRates", t.navRates);
+  setText("navPhilosophy", t.navPhilosophy);
+  setText("navExperiences", t.navExperiences);
+  setText("navBlog", t.navBlog);
+  setText("navContact", t.navContact);
+  setText("navRequest", t.navRequest);
+
+  setText("mRates", t.navRates);
+  setText("mPhilosophy", t.navPhilosophy);
+  setText("mExperiences", t.navExperiences);
+  setText("mBlog", t.navBlog);
+  setText("mContact", t.navContact);
+  setText("mImpressum", t.navImpressum);
+  setText("mRequest", t.navRequest);
+
+  // Article header
+  setText("eyebrow", t.eyebrow);
+  setText("titleA", t.titleA);
+  setText("titleB", t.titleB);
+  setText("deck", t.deck);
+  setText("backBlog", t.back);
+  setText("reqQuote", t.request);
+  setText("footerCenter", t.footerCenter);
+  setText("footerImpressum", t.navImpressum);
+
+  // Body HTML
+  setHTML("articleBody", t.body);
+
+  // Hrefs with language
+  setHref("navRates", window.__LO__.buildUrl("pricing.html", lang, "top"));
+  setHref("navPhilosophy", window.__LO__.buildUrl("../philosophy.html", lang, "top"));
+  setHref("navExperiences", window.__LO__.buildUrl("../experiences.html", lang, "top"));
+  setHref("navBlog", window.__LO__.buildUrl("blog.html", lang, "top"));
+  setHref("navContact", window.__LO__.buildUrl("../index.html", lang, "contact"));
+  setHref("navRequest", window.__LO__.buildUrl("../index.html", lang, "request"));
+
+  setHref("mRates", window.__LO__.buildUrl("pricing.html", lang, "top"));
+  setHref("mPhilosophy", window.__LO__.buildUrl("../philosophy.html", lang, "top"));
+  setHref("mExperiences", window.__LO__.buildUrl("../experiences.html", lang, "top"));
+  setHref("mBlog", window.__LO__.buildUrl("blog.html", lang, "top"));
+  setHref("mContact", window.__LO__.buildUrl("../index.html", lang, "contact"));
+  setHref("mImpressum", window.__LO__.buildUrl("../impressum.html", lang, "top"));
+  setHref("mRequest", window.__LO__.buildUrl("../index.html", lang, "request"));
+
+  setHref("backBlog", window.__LO__.buildUrl("blog.html", lang, "top"));
+  setHref("reqQuote", window.__LO__.buildUrl("../index.html", lang, "request"));
+
+  // Hero image alt text can remain English; keep consistent if needed later.
+
+  // Image fallback placeholders
+  function svgPlaceholder(label){
+    const safe = (label || "Luxury Obsession").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    const svg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#15151b"/>
+      <stop offset="0.55" stop-color="#07070a"/>
+      <stop offset="1" stop-color="#1a1215"/>
+    </linearGradient>
+    <linearGradient id="h" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="rgba(231,220,198,0.0)"/>
+      <stop offset="0.5" stop-color="rgba(231,220,198,0.32)"/>
+      <stop offset="1" stop-color="rgba(231,220,198,0.0)"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <rect x="180" y="540" width="1240" height="1" fill="url(#h)" opacity="0.85"/>
+  <text x="50%" y="48%" text-anchor="middle" font-family="Cinzel, serif" font-size="38" letter-spacing="6" fill="rgba(231,220,198,0.92)">LUXURY OBSESSION</text>
+  <text x="50%" y="56%" text-anchor="middle" font-family="Inter, sans-serif" font-size="22" letter-spacing="1" fill="rgba(243,241,238,0.78)">${safe}</text>
+</svg>`;
+    return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
+  }
+
+  document.querySelectorAll("img[data-fallback]").forEach(img => {
+    img.addEventListener("error", () => {
+      if(img.dataset.fallbackApplied === "1") return;
+      img.dataset.fallbackApplied = "1";
+      img.src = svgPlaceholder(img.getAttribute("data-fallback"));
+    });
+  });
+
+  // Lightbox
+  function initLightbox(){
+    const box = document.getElementById("lightbox");
+    const img = document.getElementById("lbImg");
+    const cap = document.getElementById("lbCap");
+    if(!box || !img || !cap) return;
+
+    const items = Array.from(document.querySelectorAll(".gItem"));
+    if(!items.length) return;
+    let idx = 0;
+
+    function openAt(i){
+      idx = (i + items.length) % items.length;
+      const it = items[idx];
+      const src = it.getAttribute("data-full") || "";
+      const c = it.getAttribute("data-cap") || "";
+      img.src = src;
+      img.alt = c || "Gallery image";
+      cap.textContent = c;
+      box.setAttribute("aria-hidden","false");
+      box.focus();
+    }
+
+    function close(){
+      box.setAttribute("aria-hidden","true");
+      img.src = "";
+      cap.textContent = "";
+    }
+
+    function next(){ openAt(idx + 1); }
+    function prev(){ openAt(idx - 1); }
+
+    items.forEach((btn, i) => btn.addEventListener("click", () => openAt(i)));
+    box.querySelectorAll("[data-lb-close]").forEach(el => el.addEventListener("click", close));
+    const n = box.querySelector(".lbNext");
+    const p = box.querySelector(".lbPrev");
+    if(n) n.addEventListener("click", next);
+    if(p) p.addEventListener("click", prev);
+
+    document.addEventListener("keydown", (e) => {
+      if(box.getAttribute("aria-hidden") !== "false") return;
+      if(e.key === "Escape") close();
+      if(e.key === "ArrowRight") next();
+      if(e.key === "ArrowLeft") prev();
+    });
+  }
+  initLightbox();
 
   document.getElementById("year").textContent = String(new Date().getFullYear());
 })();
-  </script>
+</script>
 </body>
 </html>

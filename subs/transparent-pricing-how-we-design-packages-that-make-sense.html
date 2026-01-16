@@ -2,326 +2,366 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Luxury Obsession | Transparent pricing how we design packages that make sense</title>
-  <meta name="description" content="Luxury should never feel vague. Our packages are designed around time plus a simple distance allowance, so you can decide quickly and drive without second guess" />
+  <title>Luxury Obsession | Transparent pricing</title>
+  <meta name="description" content="Luxury should never feel vague. Here is how we build clear packages around time, distance, and the details that protect the experience." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Luxury Obsession | Transparent pricing how we design packages that make sense" />
-  <meta property="og:description" content="Luxury should never feel vague. Our packages are designed around time plus a simple distance allowance, so you can decide quickly and drive without second guess" />
+
+  <meta property="og:title" content="Luxury Obsession | Transparent pricing" />
+  <meta property="og:description" content="Luxury should never feel vague. Here is how we build clear packages around time, distance, and the details that protect the experience." />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="../images/image00400.jpg" />
+
   <link rel="icon" href="../images/icon.png" />
+
   <link rel="alternate" hreflang="en" href="transparent-pricing-how-we-design-packages-that-make-sense.html?lang=en" />
   <link rel="alternate" hreflang="de" href="transparent-pricing-how-we-design-packages-that-make-sense.html?lang=de" />
   <link rel="alternate" hreflang="it" href="transparent-pricing-how-we-design-packages-that-make-sense.html?lang=it" />
   <link rel="alternate" hreflang="x-default" href="transparent-pricing-how-we-design-packages-that-make-sense.html?lang=en" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet" />
+
   <style>
-:root{
-  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --bg:#050509;
-  --accent:#e50914;
-  --accentSoft:rgba(229,9,20,0.16);
-  --text:#f5f5f5;
-  --muted:#a3a3a3;
-  --border:#262637;
-  --radius:18px;
-  --shadow:0 18px 45px rgba(0,0,0,0.4);
-  --max:1120px;
-  --logoSize: 60px;/*44px*/
-  --wordmarkH: 38px;/*34px*/
-}
-*{box-sizing:border-box}
-body{margin:0;background:radial-gradient(circle at top,#191621 0,var(--bg) 55%);color:var(--text)}
-a{color:inherit;text-decoration:none}
-header{
-  position:sticky;top:0;z-index:50;
-  backdrop-filter:blur(12px);
-  background:linear-gradient(to bottom,rgba(5,5,9,0.92),rgba(5,5,9,0.62),transparent);
-  border-bottom:1px solid rgba(255,255,255,0.03)
-}
-.container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
-.navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.20rem 0}/*0.75rem 0*/
-.brand{display:inline-flex;align-items:center;gap:0.75rem}
-.brandIcon{width:var(--logoSize);height:var(--logoSize);object-fit:contain;display:block}
-.brandWordmark{height:var(--wordmarkH);width:auto;object-fit:contain;display:block}
-.brandText{font-size:1.05rem;font-weight:850;letter-spacing:0.02em}
-@media (max-width:640px){
-  .brandIcon{width:34px;height:34px}
-  .brandWordmark{height:28px}
-  .brandText{font-size:0.98rem}
-}
-.navRight{display:flex;align-items:center;gap:0.65rem}
-.navLinks{display:flex;align-items:center;gap:0.8rem;font-size:0.9rem}
-.navLinks a{padding:0.35rem 0.65rem;border-radius:999px;color:var(--muted);transition:0.2s}
-.navLinks a:hover{color:var(--text);background:rgba(255,255,255,0.05)}
-.navCta{
-  padding:0.45rem 0.9rem;border-radius:999px;background:var(--accent);
-  font-size:0.85rem;font-weight:800;color:#fff;box-shadow:0 10px 26px rgba(229,9,20,0.45)
-}
-.langPicker{display:inline-flex;align-items:center;gap:0.35rem}
-.flagBtn{
-  border:1px solid rgba(255,255,255,0.14);
-  background:rgba(255,255,255,0.04);
-  border-radius:999px;padding:0.25rem 0.45rem;
-  cursor:pointer;line-height:1;opacity:0.75
-}
-.flagBtn.active{opacity:1;border-color:rgba(229,9,20,0.55);box-shadow:0 0 0 1px rgba(229,9,20,0.25)}
-.flagBtn svg{display:block}
-.hamburger{
-  display:none;width:42px;height:38px;border-radius:999px;
-  border:1px solid rgba(255,255,255,0.14);
-  background:rgba(255,255,255,0.04);
-  cursor:pointer;align-items:center;justify-content:center
-}
-.hamburgerLines{display:grid;gap:4px}
-.hamburgerLines span{width:18px;height:2px;border-radius:999px;background:rgba(245,245,245,0.92);display:block}
-.mobileMenu{
-  display:none;margin:0.65rem 0 0.95rem;padding:0.85rem;
-  border-radius:16px;background:rgba(5,5,9,0.92);
-  border:1px solid rgba(255,255,255,0.10);box-shadow:var(--shadow)
-}
-.mobileMenu a{display:flex;align-items:center;justify-content:space-between;padding:0.7rem 0.75rem;border-radius:12px}
-.mobileMenu a:hover{background:rgba(255,255,255,0.05)}
-.mobileMenuDivider{height:1px;background:rgba(255,255,255,0.08);margin:0.55rem 0}
-.mobileMenuCta{
-  display:flex;justify-content:center;padding:0.75rem 0.85rem;border-radius:14px;
-  background:var(--accent);font-weight:800;color:#fff;box-shadow:0 10px 26px rgba(229,9,20,0.45)
-}
-main{padding-bottom:2.2rem}
-section{padding:3.4rem 0}
-.eyebrow{text-transform:uppercase;letter-spacing:0.24em;font-size:0.7rem;color:var(--muted);margin-bottom:0.75rem}
-.hero{padding-top:2.2rem}
-.heroGrid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:2.4rem;align-items:center}
-.heroTitle{font-size:clamp(2.35rem,3.2vw + 1rem,3.55rem);line-height:1.05;margin:0 0 0.75rem}
-.heroHighlight{background:linear-gradient(to right,#ff7676,#ffb199);-webkit-background-clip:text;background-clip:text;color:transparent}
-.heroSubtitle{font-size:1.05rem;color:var(--muted);max-width:38rem}
-.heroPills{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:0.6rem}
-.heroPill{border-radius:999px;padding:0.3rem 0.8rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);font-size:0.75rem;color:var(--muted)}
-.heroActions{margin-top:1.9rem;display:flex;flex-wrap:wrap;gap:0.9rem;align-items:center}
-.btn{
-  border-radius:999px;padding:0.8rem 1.25rem;border:none;outline:none;font-weight:800;
-  cursor:pointer;font-size:0.95rem;display:inline-flex;align-items:center;gap:0.45rem;white-space:nowrap
-}
-.btnPrimary{background:linear-gradient(135deg,var(--accent),#ff3b3b);color:#fff;box-shadow:0 15px 35px rgba(229,9,20,0.45)}
-.btnSecondary{background:rgba(255,255,255,0.02);color:var(--muted);border:1px solid rgba(255,255,255,0.12)}
-.heroNote{margin-top:1.05rem;font-size:0.82rem;color:var(--muted);line-height:1.6}
-.heroMediaCard{
-  border-radius:32px;overflow:hidden;background:radial-gradient(circle at top left,#ff4949,#050509 52%);
-  box-shadow:var(--shadow);position:relative;min-height:300px;border:1px solid rgba(255,255,255,0.10)
-}
-.heroMediaCard video{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.08);filter:saturate(1.06) contrast(1.05)}
-.heroBadge{
-  position:absolute;bottom:1.15rem;left:1.25rem;right:1.25rem;background:rgba(5,5,9,0.78);
-  padding:0.55rem 0.85rem;border-radius:999px;display:flex;align-items:center;justify-content:space-between;gap:0.6rem;
-  border:1px solid rgba(255,255,255,0.16);font-size:0.75rem
-}
-.heroBadgeDot{width:9px;height:9px;border-radius:999px;background:#4ade80;box-shadow:0 0 12px rgba(74,222,128,0.9)}
-.sectionTitle{font-size:1.75rem;margin:0 0 0.4rem}
-.sectionSubtitle{font-size:0.95rem;color:var(--muted);max-width:52rem;margin:0}
-.card{
-  background:radial-gradient(circle at top left,#151520,#050509 55%);
-  border-radius:var(--radius);border:1px solid var(--border);padding:1.3rem;box-shadow:var(--shadow)
-}
-.pricingGrid{margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem}
-.pricingCard h3{margin:0 0 0.25rem;font-size:1.05rem}
-.pricingPrice{display:flex;align-items:baseline;gap:0.2rem;margin:0.35rem 0 0.45rem}
-.pricingPrice span:first-child{font-size:1.55rem;font-weight:900}
-.pricingKm{font-size:0.82rem;color:var(--muted)}
-.pricingTag{display:inline-block;margin-top:0.35rem;font-size:0.72rem;padding:0.2rem 0.6rem;border-radius:999px;background:var(--accentSoft);color:#ffb4b4}
-@media (hover:hover) and (min-width: 980px){
-  .pricingCard{cursor:pointer;transition:transform 0.18s, border-color 0.18s, box-shadow 0.18s, background 0.18s}
-  .pricingCard:hover{
-    transform:translateY(-6px) scale(1.03);
-    border-color:rgba(229,9,20,0.55);
-    box-shadow:0 22px 60px rgba(229,9,20,0.10), var(--shadow);
-    background:radial-gradient(circle at top left, rgba(229,9,20,0.18), #050509 58%);
-  }
-  .pricingCard:hover .pricingTag{
-    background:rgba(229,9,20,0.24);
-    color:#ffd1d1;
-  }
-}
+    :root{
+      --bg:#07070a;
+      --surface:rgba(12,12,16,0.78);
+      --surface2:rgba(12,12,16,0.92);
+      --text:#f3f1ee;
+      --muted:rgba(243,241,238,0.70);
+      --border:rgba(243,241,238,0.12);
+      --radius:16px;
+      --shadow:0 14px 42px rgba(0,0,0,0.40);
+      --accent:#b1121d;
+      --accent2:#8b0f14;
+      --champagne:rgba(231,220,198,0.96);
+      --max:1120px;
+      --logoSize:60px;
+      font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scrollbar-gutter:stable}
+    @supports not (scrollbar-gutter: stable){ html{overflow-y:scroll} }
+    body{
+      margin:0;
+      background:
+        radial-gradient(1000px 600px at 20% -10%, rgba(200,183,155,0.12), transparent 55%),
+        radial-gradient(900px 520px at 85% 0%, rgba(139,15,20,0.10), transparent 55%),
+        var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit;text-decoration:none}
 
-.pricingNote{font-size:0.8rem;color:var(--muted);margin-top:1.25rem}
-.requestLayout{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:2rem}
-.ctaRow{display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:0.75rem}
-.ctaBtn{
-  border-radius:14px;padding:0.75rem 1rem;border:1px solid rgba(255,255,255,0.12);
-  background:rgba(255,255,255,0.03);color:var(--text);cursor:pointer;font-weight:850;
-  display:inline-flex;gap:0.5rem;align-items:center
-}
-.ctaBtnPrimary{background:rgba(229,9,20,0.14);border-color:rgba(229,9,20,0.30)}
-.socialRow{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:0.85rem}
-.socialBtn{
-  border-radius:999px;padding:0.55rem 0.85rem;border:1px solid rgba(255,255,255,0.12);
-  background:rgba(255,255,255,0.03);color:var(--text);cursor:pointer;font-weight:850;
-  display:inline-flex;gap:0.45rem;align-items:center;font-size:0.88rem
-}
-.socialBtn:hover{background:rgba(255,255,255,0.06)}
-.socialBtn svg{width:18px;height:18px;display:block}
-.bookingForm{display:grid;gap:0.75rem;font-size:0.9rem}
-.fieldGroup{display:flex;flex-direction:column;gap:0.25rem}
-label{font-size:0.8rem;color:var(--muted)}
-input,select,textarea{
-  border-radius:10px;border:1px solid var(--border);background:rgba(10,10,18,0.9);
-  padding:0.55rem 0.7rem;color:var(--text);font-family:inherit;font-size:0.95rem;outline:none
-}
-input:focus,select:focus,textarea:focus{border-color:rgba(245,245,245,0.22);box-shadow:0 0 0 1px rgba(245,245,245,0.12)}
-textarea{min-height:90px;resize:vertical}
-.grid12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0.75rem}
-.span-4{grid-column:span 4}
-.span-6{grid-column:span 6}
-.span-12{grid-column:span 12}
-@media(max-width:980px){
-  .heroGrid{grid-template-columns:1fr}
-  .heroMediaCard{max-width:640px;margin:0 auto}
-  .span-md-6{grid-column:span 6}
-  .span-md-12{grid-column:span 12}
-}
-@media(max-width:760px){
-  .navLinks{display:none}
-  .hamburger{display:inline-flex}
-  .container{padding:0 1rem}
-}
-@media(max-width:560px){
-  .pricingGrid{grid-auto-flow:column;grid-auto-columns:minmax(240px,1fr);grid-template-columns:unset;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:0.75rem}
-  .pricingCard{scroll-snap-align:start}
-  .span-sm-12{grid-column:span 12}
-}
-/* Calendar popover */
-.calWrap{position:relative}
-.calPopup{
-  position:absolute;top:calc(100% + 8px);left:0;z-index:80;
-  width:min(320px, 92vw);
-  padding:0.85rem;border-radius:16px;
-  background:rgba(5,5,9,0.98);
-  border:1px solid rgba(255,255,255,0.10);
-  box-shadow:var(--shadow);
-  display:none;
-}
-.calPopup.open{display:block}
-.calHeader{display:flex;align-items:center;justify-content:space-between;gap:0.6rem;margin-bottom:0.65rem}
-.calHeaderTitle{font-weight:900;text-transform:capitalize}
-.calNavGroup{display:flex;gap:0.35rem;align-items:center}
-.calNavBtn{
-  border:1px solid rgba(255,255,255,0.12);
-  background:rgba(255,255,255,0.03);
-  color:var(--text);
-  border-radius:10px;
-  padding:0.35rem 0.55rem;
-  cursor:pointer;
-  font-weight:900
-}
-.calWeekdays{display:grid;grid-template-columns:repeat(7,1fr);gap:0.35rem;font-size:0.72rem;color:var(--muted);margin-bottom:0.35rem}
-.calGrid{display:grid;grid-template-columns:repeat(7,1fr);gap:0.35rem}
-.calDay{
-  width:100%;
-  aspect-ratio:1/1;
-  border-radius:12px;
-  border:1px solid rgba(255,255,255,0.08);
-  background:rgba(255,255,255,0.03);
-  color:var(--text);
-  cursor:pointer;
-  font-weight:850;
-  font-size:0.85rem
-}
-.calDay:hover{border-color:rgba(255,255,255,0.18);background:rgba(255,255,255,0.05)}
-.calDayOff{opacity:0;pointer-events:none;border-color:transparent;background:transparent}
-.calDayDisabled{opacity:0.35;cursor:not-allowed}
-.calDaySelected{
-  border-color:rgba(229,9,20,0.65);
-  box-shadow:0 0 0 1px rgba(229,9,20,0.25);
-  background:rgba(229,9,20,0.14)
-}
-/* Contact map */
-.contactGrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,0.95fr);gap:1.2rem;margin-top:1.2rem;align-items:stretch}
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(12px);
+      background:linear-gradient(to bottom, rgba(7,7,10,0.92), rgba(7,7,10,0.74), transparent);
+      border-bottom:1px solid rgba(243,241,238,0.06);
+    }
+    .container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
+    .navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.55rem 0}
 
-@media(max-width:1100px){
-  .contactGrid{grid-template-columns:1fr}
-  .mapFrame{min-height:320px}
-}
-.mapCard{padding:0.85rem}
-.mapFrame{width:100%;height:100%;min-height:340px;border:0;border-radius:14px}
-.contactList{list-style:none;padding:0;margin:0.75rem 0 0;display:grid;gap:0.5rem}
-.contactList li{display:flex;align-items:center;justify-content:space-between;gap:0.75rem;padding:0.55rem 0.65rem;border-radius:12px;background:rgba(0,0,0,0.22);border:1px solid rgba(255,255,255,0.07)}
-.contactList li span{color:var(--muted);font-size:0.82rem}
-footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.78rem;color:var(--muted)}
-.footerInner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+    .brand{display:inline-flex;align-items:center;gap:0.65rem}
+    .brandIcon{width:var(--logoSize);height:var(--logoSize);object-fit:contain;display:block}
 
-/* Keep header alignment stable vs pages with or without scrollbars */
-html{scrollbar-gutter:stable}
-@supports not (scrollbar-gutter: stable){
-  html{overflow-y:scroll}
-}
+    .brandGold{
+      font-family:"Cinzel",serif;
+      font-weight:700;
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      font-size: clamp(1.05rem, 1.2vw + 0.9rem, 1.2rem);
+      line-height:1;
+      background:linear-gradient(135deg, rgba(252,252,253,0.92), rgba(231,220,198,0.96), rgba(200,183,155,0.92), rgba(231,220,198,0.96));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      text-shadow:0 10px 30px rgba(0,0,0,0.35);
+      white-space:nowrap;
+    }
+    @media (max-width:640px){
+      .brandGold{font-size:0.90rem;letter-spacing:0.14em}
+      .brandIcon{width:34px;height:34px}
+    }
 
-/* Article page only */
-.articleWrap{max-width:980px}
-.heroImg{width:100%;height:320px;object-fit:cover;border-radius:18px;border:1px solid rgba(255,255,255,0.10)}
-.meta{margin-top:0.75rem;color:var(--muted);font-size:0.9rem}
-.content{margin-top:1.1rem}
-.content p{margin:0 0 1rem;color:var(--text);line-height:1.85}
+    .navRight{display:flex;align-items:center;gap:0.65rem}
+    .navLinks{display:flex;align-items:center;gap:0.8rem;font-size:0.9rem}
+    .navLinks a{padding:0.35rem 0.65rem;border-radius:999px;color:rgba(243,241,238,0.86);font-weight:500;letter-spacing:0.01em;transition:0.2s}
+    .navLinks a:hover{color:var(--text);background:rgba(243,241,238,0.05)}
+
+    .navCta{
+      padding:0.45rem 0.9rem;border-radius:999px;
+      background:transparent;
+      border:1px solid rgba(200,183,155,0.75);
+      color:rgba(243,241,238,0.92);
+      box-shadow:none;
+      font-weight:600;
+    }
+    .navCta:hover{background:rgba(200,183,155,0.12)}
+
+    .langSelect{position:relative;display:inline-flex;align-items:center}
+    .langToggle{
+      display:inline-flex;align-items:center;gap:0.45rem;
+      padding:0.5rem 0.75rem;border-radius:999px;
+      border:1px solid rgba(243,241,238,0.16);
+      background:rgba(243,241,238,0.03);
+      color:rgba(243,241,238,0.86);
+      cursor:pointer;font-size:0.85rem;letter-spacing:0.08em;
+    }
+    .langToggle:hover{background:rgba(243,241,238,0.06)}
+    .langChevron{font-size:0.9rem;opacity:0.8}
+    .langMenu{
+      position:absolute;right:0;top:calc(100% + 0.55rem);
+      min-width:190px;
+      background:rgba(7,7,10,0.92);
+      border:1px solid rgba(243,241,238,0.14);
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      padding:0.4rem;
+      backdrop-filter:blur(10px);
+    }
+    .langOption{
+      width:100%;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:0.65rem 0.75rem;border-radius:12px;
+      background:transparent;border:none;
+      color:rgba(243,241,238,0.92);
+      cursor:pointer;font-size:0.92rem;
+    }
+    .langOption:hover{background:rgba(243,241,238,0.06)}
+    .langOption[aria-current="true"]{background:rgba(200,183,155,0.10);border:1px solid rgba(200,183,155,0.22)}
+
+    .hamburger{
+      display:none;width:42px;height:38px;border-radius:999px;
+      border:1px solid rgba(243,241,238,0.16);
+      background:rgba(243,241,238,0.03);
+      cursor:pointer;align-items:center;justify-content:center
+    }
+    .hamburger:hover{background:rgba(243,241,238,0.06)}
+    .hamburgerLines{display:grid;gap:4px}
+    .hamburgerLines span{width:18px;height:2px;border-radius:999px;background:rgba(243,241,238,0.88);display:block}
+
+    .mobileMenu{
+      display:none;margin:0.65rem 0 0.95rem;padding:0.85rem;
+      border-radius:16px;background:rgba(7,7,10,0.92);
+      border:1px solid rgba(243,241,238,0.12);
+      box-shadow:var(--shadow)
+    }
+    .mobileMenu a{display:flex;align-items:center;justify-content:flex-start;padding:0.7rem 0.75rem;border-radius:12px;color:rgba(243,241,238,0.92)}
+    .mobileMenu a:hover{background:rgba(243,241,238,0.05)}
+    .mobileMenuDivider{height:1px;background:rgba(243,241,238,0.10);margin:0.55rem 0}
+    .mobileMenuCta{
+      display:flex;justify-content:center;padding:0.75rem 0.85rem;border-radius:14px;
+      background:linear-gradient(135deg, rgba(231,220,198,0.96), rgba(231,220,198,0.82));
+      border:1px solid rgba(0,0,0,0.18);
+      font-weight:700;color:#0a0a0b !important;
+      box-shadow:0 16px 40px rgba(0,0,0,0.35)
+    }
+
+    @media(max-width:760px){
+      .navLinks{display:none}
+      .hamburger{display:inline-flex}
+      .container{padding:0 1rem}
+    }
+
+    main{padding-bottom:2.2rem}
+    section{padding:3.0rem 0}
+
+    h1,h2,h3{font-family:"Cormorant Garamond",serif;letter-spacing:0.02em}
+    h1{font-weight:600}
+
+    .eyebrow{text-transform:uppercase;letter-spacing:0.24em;font-size:0.7rem;color:var(--muted);margin-bottom:0.75rem}
+    .heroTitle{font-size:clamp(2.2rem,3.0vw + 1rem,3.3rem);line-height:1.06;margin:0 0 0.55rem}
+    .heroHighlight{background:linear-gradient(to right, rgba(231,220,198,0.96), rgba(252,252,253,0.92));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+    .articleWrap{max-width:980px}
+    .metaRow{display:flex;flex-wrap:wrap;gap:0.8rem;align-items:center;color:var(--muted);font-size:0.92rem}
+    .metaDot{opacity:0.55}
+
+    .heroImg{width:100%;height:360px;object-fit:cover;border-radius:18px;border:1px solid rgba(243,241,238,0.10)}
+    @media(max-width:760px){ .heroImg{height:260px} }
+
+    .card{
+      background:rgba(12,12,16,0.62);
+      border:1px solid rgba(243,241,238,0.10);
+      border-radius:var(--radius);
+      box-shadow:none;
+    }
+
+    .toc{margin-top:1.1rem;padding:1.0rem 1.05rem}
+    .tocTitle{margin:0 0 0.5rem;font-size:1.25rem}
+    .tocList{margin:0;padding:0;list-style:none;display:grid;gap:0.35rem}
+    .tocList a{display:inline-flex;gap:0.45rem;align-items:center;color:rgba(243,241,238,0.88)}
+    .tocList a:hover{color:var(--text)}
+
+    .prose{margin-top:1.35rem}
+    .prose p{margin:0 0 1.05rem;color:rgba(243,241,238,0.90);line-height:1.9}
+    .prose h2{margin:2.0rem 0 0.65rem;font-size:1.9rem}
+    .prose h3{margin:1.5rem 0 0.55rem;font-size:1.45rem}
+    .prose ul{margin:0.5rem 0 1.05rem;padding-left:1.2rem;color:rgba(243,241,238,0.90);line-height:1.8}
+    .prose li{margin:0.25rem 0}
+
+    figure{margin:1.4rem 0}
+    figure img{width:100%;height:auto;border-radius:18px;border:1px solid rgba(243,241,238,0.10);display:block}
+    figcaption{margin-top:0.55rem;color:var(--muted);font-size:0.9rem;line-height:1.6}
+
+    .imgGrid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0.85rem}
+    .imgA{grid-column:span 7}
+    .imgB{grid-column:span 5}
+    @media(max-width:900px){
+      .imgA,.imgB{grid-column:span 12}
+    }
+
+    .callout{padding:1.05rem 1.1rem;margin:1.35rem 0}
+    .calloutTitle{margin:0 0 0.35rem;font-size:1.35rem}
+    .calloutBody{margin:0;color:rgba(243,241,238,0.86);line-height:1.8}
+
+    .tableWrap{margin:1.25rem 0;overflow:auto;border-radius:16px;border:1px solid rgba(243,241,238,0.10)}
+    table{width:100%;border-collapse:collapse;min-width:760px;background:rgba(12,12,16,0.44)}
+    th,td{padding:0.85rem 0.9rem;text-align:left;vertical-align:top}
+    th{font-size:0.85rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(243,241,238,0.78);border-bottom:1px solid rgba(243,241,238,0.10)}
+    td{color:rgba(243,241,238,0.90);border-top:1px solid rgba(243,241,238,0.06);line-height:1.7}
+    tr:nth-child(even) td{background:rgba(243,241,238,0.02)}
+
+    .ctaRow{display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1.35rem}
+    .ctaBtn{
+      border-radius:999px;padding:0.8rem 1.1rem;
+      border:1px solid rgba(243,241,238,0.18);
+      background:transparent;
+      color:rgba(243,241,238,0.90);
+      cursor:pointer;font-weight:600;letter-spacing:0.04em;
+      display:inline-flex;gap:0.5rem;align-items:center
+    }
+    .ctaBtn:hover{background:rgba(243,241,238,0.05)}
+    .ctaBtnPrimary{
+      background:linear-gradient(135deg, rgba(231,220,198,0.96), rgba(231,220,198,0.82));
+      border:1px solid rgba(0,0,0,0.18);
+      color:#0a0a0b;
+    }
+    .ctaBtnPrimary:hover{filter:brightness(1.03)}
+
+    .gallery{margin-top:1.2rem}
+    .gGrid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0.85rem}
+    .gItem{grid-column:span 3;border-radius:18px;overflow:hidden;border:1px solid rgba(243,241,238,0.10);background:rgba(12,12,16,0.35);cursor:pointer}
+    .gItem img{width:100%;height:160px;object-fit:cover;display:block;transform:scale(1.02)}
+    @media(max-width:900px){.gItem{grid-column:span 6}.gItem img{height:180px}}
+    @media(max-width:540px){.gItem{grid-column:span 12}.gItem img{height:220px}}
+
+    .lightbox{position:fixed;inset:0;display:none;z-index:120;align-items:center;justify-content:center;padding:1.2rem}
+    .lightbox.open{display:flex}
+    .lightboxBg{position:absolute;inset:0;background:rgba(0,0,0,0.72);backdrop-filter:blur(6px)}
+    .lightboxCard{position:relative;max-width:min(1100px, 94vw);max-height:86vh;border-radius:18px;overflow:hidden;border:1px solid rgba(243,241,238,0.14);box-shadow:var(--shadow);background:rgba(7,7,10,0.85)}
+    .lightboxCard img{width:100%;height:100%;max-height:86vh;object-fit:contain;display:block;background:rgba(0,0,0,0.25)}
+    .lightboxClose{position:absolute;top:0.65rem;right:0.65rem;border:none;background:rgba(243,241,238,0.10);color:rgba(243,241,238,0.92);border-radius:999px;padding:0.55rem 0.8rem;cursor:pointer;font-weight:700}
+    .lightboxClose:hover{background:rgba(243,241,238,0.16)}
+
+    footer{border-top:1px solid rgba(243,241,238,0.10);padding:1.5rem 0;font-size:0.78rem;color:var(--muted)}
+    .footerInner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
   </style>
 
   <script>
-(function(){
-  const LANGS = ["en","de","it"];
-  function getLang(){
-    const p = new URLSearchParams(window.location.search);
-    const q = p.get("lang");
-    if(q && LANGS.includes(q)) return q;
-    const s = localStorage.getItem("lo_lang");
-    if(s && LANGS.includes(s)) return s;
-    return "en";
-  }
-  function setLang(next){
-    if(!LANGS.includes(next)) return;
-    localStorage.setItem("lo_lang", next);
-    const u = new URL(window.location.href);
-    u.searchParams.set("lang", next);
-    window.location.href = u.pathname + u.search + u.hash;
-  }
-  function withLang(href, lang){
-    try{
-      const u = new URL(href, window.location.href);
-      u.searchParams.set("lang", lang);
-      return u.pathname + u.search + u.hash;
-    }catch(e){ return href; }
-  }
-  function initLangButtons(lang){
-    document.querySelectorAll("[data-langbtn]").forEach(btn => {
-      const code = btn.getAttribute("data-langbtn");
-      btn.classList.toggle("active", code === lang);
-      btn.addEventListener("click", () => setLang(code));
-    });
-  }
-  function initHamburger(){
-    const btn = document.getElementById("hamburger");
-    const menu = document.getElementById("mobileMenu");
-    if(!btn || !menu) return;
-    function close(){
-      menu.style.display = "none";
-      menu.setAttribute("data-open","0");
-      btn.setAttribute("aria-expanded","false");
+  (function(){
+    const LANGS = ["en","de","it"];
+
+    function getLang(){
+      const p = new URLSearchParams(window.location.search);
+      const q = p.get("lang");
+      if(q && LANGS.includes(q)) return q;
+      const s = localStorage.getItem("lo_lang");
+      if(s && LANGS.includes(s)) return s;
+      return "en";
     }
-    btn.addEventListener("click", () => {
-      const open = menu.getAttribute("data-open") === "1";
-      if(open) close();
-      else {
-        menu.style.display = "block";
-        menu.setAttribute("data-open","1");
-        btn.setAttribute("aria-expanded","true");
+
+    function setLang(next){
+      if(!LANGS.includes(next)) return;
+      localStorage.setItem("lo_lang", next);
+      const u = new URL(window.location.href);
+      u.searchParams.set("lang", next);
+      window.location.href = u.pathname + u.search + u.hash;
+    }
+
+    function buildUrl(href, lang){
+      try{
+        const u = new URL(href, window.location.href);
+        u.searchParams.set("lang", lang);
+        return u.pathname + u.search + u.hash;
+      }catch(e){
+        return href;
       }
-    });
-    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
-    document.addEventListener("click", (e) => {
-      if(menu.getAttribute("data-open") !== "1") return;
-      if(menu.contains(e.target) || btn.contains(e.target)) return;
+    }
+
+    function initLangMenu(lang){
+      const toggle = document.getElementById("langToggle");
+      const menu = document.getElementById("langMenu");
+      const code = document.getElementById("langCode");
+      if(!toggle || !menu || !code) return;
+
+      const label = { en:"EN", de:"DE", it:"IT" };
+      code.textContent = label[lang] || "EN";
+
+      menu.querySelectorAll(".langOption").forEach(btn => {
+        const l = btn.getAttribute("data-lang");
+        btn.setAttribute("aria-current", l === lang ? "true" : "false");
+        btn.addEventListener("click", () => setLang(l));
+      });
+
+      function close(){
+        menu.hidden = true;
+        toggle.setAttribute("aria-expanded", "false");
+      }
+
+      toggle.addEventListener("click", () => {
+        const open = !menu.hidden;
+        menu.hidden = open;
+        toggle.setAttribute("aria-expanded", open ? "false" : "true");
+      });
+
+      document.addEventListener("click", (e) => {
+        if(menu.hidden) return;
+        if(menu.contains(e.target) || toggle.contains(e.target)) return;
+        close();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if(e.key === "Escape") close();
+      });
+
       close();
-    });
-  }
-  window.__LO__ = { getLang, withLang, initLangButtons, initHamburger };
-})();
+    }
+
+    function initHamburger(){
+      const btn = document.getElementById("hamburger");
+      const menu = document.getElementById("mobileMenu");
+      if(!btn || !menu) return;
+
+      function close(){
+        menu.style.display = "none";
+        menu.setAttribute("data-open","0");
+        btn.setAttribute("aria-expanded","false");
+      }
+
+      btn.addEventListener("click", () => {
+        const open = menu.getAttribute("data-open") === "1";
+        if(open) close();
+        else{
+          menu.style.display = "block";
+          menu.setAttribute("data-open","1");
+          btn.setAttribute("aria-expanded","true");
+        }
+      });
+
+      menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
+
+      document.addEventListener("click", (e) => {
+        if(menu.getAttribute("data-open") !== "1") return;
+        if(menu.contains(e.target) || btn.contains(e.target)) return;
+        close();
+      });
+    }
+
+    window.__LO__ = { getLang, setLang, buildUrl, initLangMenu, initHamburger };
+  })();
   </script>
 </head>
 
@@ -329,56 +369,48 @@ html{scrollbar-gutter:stable}
   <header>
     <div class="container">
       <div class="navInner">
-        <a class="brand" href="../index.html" aria-label="Luxury Obsession">
-          <img class="brandIcon" src="../images/icon.png" alt="Luxury Obsession icon">
-          <img class="brandWordmark" src="../images/wordmark.png" alt="Luxury Obsession wordmark"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-          <span class="brandText" style="display:none">Luxury Obsession</span>
+        <a class="brand" href="../index.html" aria-label="Luxury Obsession" data-withlang="1">
+          <img class="brandIcon" src="../images/icon.png" alt="Luxury Obsession icon" />
+          <span class="brandGold">Luxury Obsession</span>
         </a>
 
         <div class="navRight">
           <nav class="navLinks" aria-label="Primary">
-            <a id="navPricing" href="pricing.html">Pricing</a>
-            <a id="navBlog" href="blog.html">Blog</a>
-            <a id="navContact" href="../index.html#contact">Contact</a>
-            <a id="navRequest" class="navCta" href="../index.html#request">Request a quote</a>
+            <a id="navRates" href="pricing.html" data-withlang="1" data-i18n="nav_rates">Rates</a>
+            <a id="navPhilosophy" href="../philosophy.html" data-withlang="1" data-i18n="nav_philosophy">Our Philosophy</a>
+            <a id="navExperiences" href="../experiences.html" data-withlang="1" data-i18n="nav_experiences">Experiences</a>
+            <a id="navBlog" href="blog.html" data-withlang="1" data-i18n="nav_journal">Journal</a>
+            <a id="navContact" href="../index.html#contact" data-withlang="1" data-i18n="nav_contact">Contact</a>
+            <a id="navRequest" class="navCta" href="../index.html#request" data-withlang="1" data-i18n="nav_request">Request</a>
           </nav>
 
-          <div class="langPicker" aria-label="Language">
-            <button type="button" class="flagBtn" data-langbtn="en" title="English"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
-  <defs><clipPath id="ukClip"><rect width="22" height="14" rx="2" ry="2"/></clipPath></defs>
-  <g clip-path="url(#ukClip)">
-    <rect width="22" height="14" fill="#012169"/>
-    <path d="M0 0 L22 14 M22 0 L0 14" stroke="#FFFFFF" stroke-width="3"/>
-    <path d="M0 0 L22 14 M22 0 L0 14" stroke="#C8102E" stroke-width="1.6"/>
-    <path d="M11 0 V14 M0 7 H22" stroke="#FFFFFF" stroke-width="5"/>
-    <path d="M11 0 V14 M0 7 H22" stroke="#C8102E" stroke-width="3"/>
-  </g>
-</svg></button>
-            <button type="button" class="flagBtn" data-langbtn="de" title="Deutsch"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
-  <rect width="22" height="14" rx="2" ry="2" fill="#000000"/>
-  <rect y="4.67" width="22" height="4.67" fill="#DD0000"/>
-  <rect y="9.33" width="22" height="4.67" fill="#FFCE00"/>
-</svg></button>
-            <button type="button" class="flagBtn" data-langbtn="it" title="Italiano"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
-  <rect width="22" height="14" rx="2" ry="2" fill="#FFFFFF"/>
-  <rect width="7.33" height="14" rx="2" ry="2" fill="#009246"/>
-  <rect x="14.67" width="7.33" height="14" rx="2" ry="2" fill="#CE2B37"/>
-</svg></button>
+          <div class="langSelect" aria-label="Language">
+            <button id="langToggle" class="langToggle" type="button" aria-haspopup="menu" aria-expanded="false">
+              <span id="langCode" aria-label="Current language">EN</span>
+              <span class="langChevron" aria-hidden="true">▾</span>
+            </button>
+            <div id="langMenu" class="langMenu" role="menu" aria-label="Select language" hidden>
+              <button class="langOption" type="button" role="menuitem" data-lang="en">English</button>
+              <button class="langOption" type="button" role="menuitem" data-lang="de">Deutsch</button>
+              <button class="langOption" type="button" role="menuitem" data-lang="it">Italiano</button>
+            </div>
           </div>
 
-          <button id="hamburger" type="button" class="hamburger" aria-label="menu" aria-expanded="false">
+          <button id="hamburger" class="hamburger" type="button" aria-label="menu" aria-expanded="false">
             <div class="hamburgerLines"><span></span><span></span><span></span></div>
           </button>
         </div>
       </div>
 
       <div id="mobileMenu" class="mobileMenu" data-open="0" role="navigation" aria-label="Mobile" style="display:none">
-        <a id="mPricing" href="pricing.html">Pricing<span>›</span></a>
-        <a id="mBlog" href="blog.html">Blog<span>›</span></a>
-        <a id="mContact" href="../index.html#contact">Contact<span>›</span></a>
+        <a id="mRates" href="pricing.html" data-withlang="1" data-i18n="nav_rates">Rates</a>
+        <a id="mPhilosophy" href="../philosophy.html" data-withlang="1" data-i18n="nav_philosophy">Our Philosophy</a>
+        <a id="mExperiences" href="../experiences.html" data-withlang="1" data-i18n="nav_experiences">Experiences</a>
+        <a id="mBlog" href="blog.html" data-withlang="1" data-i18n="nav_journal">Journal</a>
+        <a id="mContact" href="../index.html#contact" data-withlang="1" data-i18n="nav_contact">Contact</a>
+        <a id="mImpressum" href="../impressum.html" data-withlang="1" data-i18n="nav_impressum">Impressum</a>
         <div class="mobileMenuDivider"></div>
-        <a id="mRequest" class="mobileMenuCta" href="../index.html#request">Request a quote</a>
+        <a id="mRequest" class="mobileMenuCta" href="../index.html#request" data-withlang="1" data-i18n="nav_request">Request</a>
       </div>
     </div>
   </header>
@@ -386,59 +418,636 @@ html{scrollbar-gutter:stable}
   <main>
     <section class="hero" style="padding-top:2.2rem">
       <div class="container articleWrap">
-        <div class="eyebrow">Luxury Obsession</div>
-        <h1 class="heroTitle" style="margin-bottom:0.4rem">Transparent pricing how we design packages that make sense</h1>
-        <div class="meta">2025-12-10</div>
+        <div class="eyebrow" data-i18n="eyebrow">Luxury Obsession</div>
+
+        <h1 class="heroTitle">
+          <span class="heroHighlight" data-i18n="title">Transparent pricing</span>
+          <span data-i18n="title_suffix">how we design packages that make sense</span>
+        </h1>
+
+        <div class="metaRow">
+          <span data-i18n="meta_date">December 10, 2025</span>
+          <span class="metaDot">·</span>
+          <span data-i18n="meta_read">Seven minute read</span>
+          <span class="metaDot">·</span>
+          <span data-i18n="meta_topic">Rates and design</span>
+        </div>
 
         <div style="margin-top:1rem">
-          <img class="heroImg" src="../images/image00400.jpg" alt="Transparent pricing how we design packages that make sense">
+          <img class="heroImg" src="../images/image00400.jpg" alt="Transparent pricing" />
         </div>
 
-        <div class="content">
-          <p>Luxury should never feel vague. Our packages are designed around time plus a simple distance allowance, so you can decide quickly and drive without second guessing.</p><p>If you plan a long route, choose an unlimited kilometer option. If you want a concentrated experience around Zürich and the lakes, the standard kilometer options are the cleanest value.</p><p>Deposit, extra mileage, and concierge pickup are stated clearly so the experience stays elegant from first click to handover.</p>
+        <div class="toc card">
+          <h2 class="tocTitle" data-i18n="toc_title">In this article</h2>
+          <ul class="tocList">
+            <li><a href="#principle" data-i18n="toc_1">The principle: time first, distance second</a></li>
+            <li><a href="#allowance" data-i18n="toc_2">Why distance allowances exist</a></li>
+            <li><a href="#choose" data-i18n="toc_3">How to choose the right package</a></li>
+            <li><a href="#examples" data-i18n="toc_4">Examples you can copy</a></li>
+            <li><a href="#details" data-i18n="toc_5">The details that keep it effortless</a></li>
+            <li><a href="#faq" data-i18n="toc_6">Frequently asked questions</a></li>
+          </ul>
         </div>
 
-        <div class="ctaRow" style="margin-top:1.2rem">
-          <a class="ctaBtn" id="backBlog" href="blog.html">← Back to blog</a>
-          <a class="ctaBtn ctaBtnPrimary" id="reqQuote" href="../index.html#request">💬 Request a quote</a>
-        </div>
+        <article class="prose" aria-label="Article">
+          <p data-i18n="p1">Luxury should never feel vague. When pricing is unclear, you spend mental energy on numbers instead of the road. Our goal is a structure that lets you decide in minutes, not in messages.</p>
+          <p data-i18n="p2">That is why our Rates are built around two simple questions: how long do you want the car, and how far do you plan to drive. Everything else is stated upfront as either included, optional, or outside scope.</p>
+
+          <div class="callout card callout">
+            <h3 class="calloutTitle" data-i18n="callout_title">A quick way to think about it</h3>
+            <p class="calloutBody" data-i18n="callout_body">Start with the time window you want. Then choose the distance allowance that matches your route. If you are unsure, request a quote and we will map it to the cleanest package.</p>
+          </div>
+
+          <h2 id="principle" data-i18n="h2_1">The principle: time first, distance second</h2>
+          <p data-i18n="p3">Time is the core of the experience. It covers the reserved slot, the preparation, and the private handover. Distance is simply the variable part, because your itinerary is personal.</p>
+          <p data-i18n="p4">A short, concentrated drive around Zurich is a different use case than an alpine day. Both can be perfect. They just need different distance logic, so the pricing stays fair in both directions.</p>
+
+          <div class="imgGrid">
+            <figure class="imgA">
+              <img src="../images/image00300.png" alt="Ferrari 458 in Zurich" />
+              <figcaption data-i18n="cap_1">Zurich and the lakes are ideal for a refined half day route with a clean distance allowance.</figcaption>
+            </figure>
+            <figure class="imgB">
+              <img src="../images/image00900.png" alt="Cockpit detail" />
+              <figcaption data-i18n="cap_2">A quiet handover and a clear plan keeps the cockpit focused on the drive, not on logistics.</figcaption>
+            </figure>
+          </div>
+
+          <h2 id="allowance" data-i18n="h2_2">Why distance allowances exist</h2>
+          <p data-i18n="p5">A performance car comes with real running costs that scale with distance. A distance allowance makes those costs visible and predictable, while keeping the base package clean.</p>
+          <p data-i18n="p6">We keep it simple: choose the allowance that matches your route, or select an unlimited option when the plan is open ended. Either way, you know the framework before you confirm.</p>
+
+          <div class="tableWrap" role="region" aria-label="Package design table" tabindex="0">
+            <table>
+              <thead>
+                <tr>
+                  <th data-i18n="t1_h1">Decision</th>
+                  <th data-i18n="t1_h2">What to look at</th>
+                  <th data-i18n="t1_h3">Usually best fit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="t1_r1_c1">City loop</td>
+                  <td data-i18n="t1_r1_c2">Short route, planned stops, close to Zurich</td>
+                  <td data-i18n="t1_r1_c3">Short time window with standard allowance</td>
+                </tr>
+                <tr>
+                  <td data-i18n="t1_r2_c1">Lake day</td>
+                  <td data-i18n="t1_r2_c2">Scenic pace, photos, lunch, one or two towns</td>
+                  <td data-i18n="t1_r2_c3">Half day or full day with upgraded allowance</td>
+                </tr>
+                <tr>
+                  <td data-i18n="t1_r3_c1">Alpine pass</td>
+                  <td data-i18n="t1_r3_c2">Elevation, longer distances, flexible route choice</td>
+                  <td data-i18n="t1_r3_c3">Full day with high allowance or unlimited</td>
+                </tr>
+                <tr>
+                  <td data-i18n="t1_r4_c1">Open itinerary</td>
+                  <td data-i18n="t1_r4_c2">You decide on the day, no fixed distance plan</td>
+                  <td data-i18n="t1_r4_c3">Unlimited distance option</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="choose" data-i18n="h2_3">How to choose the right package</h2>
+          <p data-i18n="p7">Most decisions become obvious once you name the purpose of the drive. A proposal has a different rhythm than a birthday surprise. A solo drive is different than an anniversary with photos.</p>
+          <p data-i18n="p8">We design packages to remove friction. That means fewer options, clearer boundaries, and a consistent host experience across every time window. If a detail matters, it is stated. If it does not matter, it is not a checkbox.</p>
+
+          <figure>
+            <img src="../images/image00200a.jpg" alt="Ferrari 458 front" />
+            <figcaption data-i18n="cap_3">A simple framework lets the moment stay cinematic without becoming complicated.</figcaption>
+          </figure>
+
+          <h3 data-i18n="h3_1">A note on add ons</h3>
+          <p data-i18n="p9">Add ons are only useful when they protect time and mood. Concierge delivery is about comfort. A curated route is about confidence. Extra time is about breathing room. None of them should feel like a hidden fee.</p>
+          <p data-i18n="p10">If you request a quote, we show the clean base package first. Then we list any add ons as optional so you can keep the experience minimal or elevate it with intention.</p>
+
+          <h2 id="examples" data-i18n="h2_4">Examples you can copy</h2>
+          <p data-i18n="p11">Below are three routes that match common requests. Think of them as templates. You can copy them, adjust the stops, or ask us to design one around your schedule.</p>
+
+          <div class="tableWrap" role="region" aria-label="Example itineraries table" tabindex="0">
+            <table>
+              <thead>
+                <tr>
+                  <th data-i18n="t2_h1">Route</th>
+                  <th data-i18n="t2_h2">Time</th>
+                  <th data-i18n="t2_h3">Distance</th>
+                  <th data-i18n="t2_h4">Suggested package</th>
+                  <th data-i18n="t2_h5">Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="t2_r1_c1">Zurich, lake loop, photo stop</td>
+                  <td data-i18n="t2_r1_c2">Two to three hours</td>
+                  <td data-i18n="t2_r1_c3">Low</td>
+                  <td data-i18n="t2_r1_c4">Short window with standard allowance</td>
+                  <td data-i18n="t2_r1_c5">Best for first time drivers and a clean surprise</td>
+                </tr>
+                <tr>
+                  <td data-i18n="t2_r2_c1">Lake towns, lunch, relaxed return</td>
+                  <td data-i18n="t2_r2_c2">Half day</td>
+                  <td data-i18n="t2_r2_c3">Medium</td>
+                  <td data-i18n="t2_r2_c4">Half day with upgraded allowance</td>
+                  <td data-i18n="t2_r2_c5">Comfortable pace with space for photos</td>
+                </tr>
+                <tr>
+                  <td data-i18n="t2_r3_c1">Alpine pass with flexible route choices</td>
+                  <td data-i18n="t2_r3_c2">Full day</td>
+                  <td data-i18n="t2_r3_c3">High</td>
+                  <td data-i18n="t2_r3_c4">Full day with high allowance or unlimited</td>
+                  <td data-i18n="t2_r3_c5">Ideal when the road decides the plan</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <figure>
+            <img src="../images/image00100a.jpg" alt="Ferrari detail" />
+            <figcaption data-i18n="cap_4">When the route is clear, the details feel deliberate and the day flows.</figcaption>
+          </figure>
+
+          <h2 id="details" data-i18n="h2_5">The details that keep it effortless</h2>
+          <p data-i18n="p12">Transparency is not only about numbers. It is also about timing, preparation, and what you can expect at handover. We confirm the essentials in writing so there are no surprises on the day.</p>
+          <p data-i18n="p13">If you are planning a special moment, we recommend choosing a little more time than you think. The extra margin often becomes the difference between rushing and enjoying.</p>
+          <p data-i18n="p14">Finally, we keep communication concise. You should not need a long thread to understand what is included. If you want it simple, it stays simple.</p>
+
+          <div class="card callout">
+            <h3 class="calloutTitle" data-i18n="callout2_title">Where to find exact numbers</h3>
+            <p class="calloutBody" data-i18n="callout2_body">Exact rates, allowances, and optional services live on the Rates page. This article explains the design logic, so the numbers feel predictable when you see them.</p>
+          </div>
+
+          <h2 id="faq" data-i18n="h2_6">Frequently asked questions</h2>
+
+          <h3 data-i18n="faq_q1">Why not just a single flat price</h3>
+          <p data-i18n="faq_a1">A flat price looks simple, but it shifts costs between guests. A clear time plus distance structure stays fair, especially when plans range from a short city loop to an alpine day.</p>
+
+          <h3 data-i18n="faq_q2">What if we change the route during the drive</h3>
+          <p data-i18n="faq_a2">If you selected an allowance, we simply track distance and keep it transparent. If you want full freedom, choose an unlimited option and drive with no second thoughts.</p>
+
+          <h3 data-i18n="faq_q3">Can you help us design the route</h3>
+          <p data-i18n="faq_a3">Yes. If you tell us the mood and the time window, we can suggest a refined route with scenic stops that fits the package cleanly.</p>
+
+          <h3 data-i18n="faq_q4">What is the easiest way to book</h3>
+          <p data-i18n="faq_a4">Request through the form and include your preferred date, time window, and a rough idea of distance. We reply with the best fit package and a concise confirmation.</p>
+
+          <h3 data-i18n="h3_gallery">A few moments from Zurich</h3>
+          <p data-i18n="p15">If you are still deciding, here are a few images to set the mood. The experience is designed to feel the same: private, calm, and effortless.</p>
+
+          <div class="gallery">
+            <div class="gGrid" aria-label="Gallery">
+              <button class="gItem" type="button" data-full="../images/image00300.png" aria-label="Open image 1"><img src="../images/image00300.png" alt="Ferrari in Zurich" /></button>
+              <button class="gItem" type="button" data-full="../images/image00200a.jpg" aria-label="Open image 2"><img src="../images/image00200a.jpg" alt="Ferrari front" /></button>
+              <button class="gItem" type="button" data-full="../images/image00900.png" aria-label="Open image 3"><img src="../images/image00900.png" alt="Cockpit" /></button>
+              <button class="gItem" type="button" data-full="../images/image00100a.jpg" aria-label="Open image 4"><img src="../images/image00100a.jpg" alt="Detail" /></button>
+            </div>
+          </div>
+
+          <div class="ctaRow">
+            <a class="ctaBtn" id="backBlog" href="blog.html" data-withlang="1" data-i18n="back_journal">Back to Journal</a>
+            <a class="ctaBtn ctaBtnPrimary" id="req" href="../index.html#request" data-withlang="1" data-i18n="cta_request">Request</a>
+          </div>
+        </article>
       </div>
     </section>
   </main>
 
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightboxBg" data-close="1"></div>
+    <div class="lightboxCard" role="dialog" aria-modal="true" aria-label="Image preview">
+      <button class="lightboxClose" type="button" data-close="1" aria-label="Close">Close</button>
+      <img id="lightboxImg" src="" alt="" />
+    </div>
+  </div>
+
   <footer>
     <div class="container footerInner">
-      <div>© <span id="year"></span> Luxury Obsession.</div>
-      <div>Ferrari only experiences, Switzerland.</div>
+      <div>© <span id="year"></span> <span data-i18n="footer_brand">Luxury Obsession</span>.</div>
+      <div data-i18n="footer_line">Ferrari only experiences, Switzerland.</div>
     </div>
   </footer>
 
   <script>
-(function(){
-  const lang = window.__LO__.getLang();
-  document.documentElement.lang = lang;
-  localStorage.setItem("lo_lang", lang);
+    (function(){
+      const lang = window.__LO__.getLang();
+      document.documentElement.lang = lang;
+      localStorage.setItem("lo_lang", lang);
 
-  window.__LO__.initLangButtons(lang);
-  window.__LO__.initHamburger();
+      window.__LO__.initLangMenu(lang);
+      window.__LO__.initHamburger();
 
-  const set = (id, href) => {
-    const el = document.getElementById(id);
-    if(el) el.href = window.__LO__.withLang(href, lang);
-  };
-  set("navPricing", "pricing.html");
-  set("navBlog", "blog.html");
-  set("navContact", "../index.html#contact");
-  set("navRequest", "../index.html#request");
-  set("mPricing", "pricing.html");
-  set("mBlog", "blog.html");
-  set("mContact", "../index.html#contact");
-  set("mRequest", "../index.html#request");
-  set("backBlog", "blog.html");
-  set("reqQuote", "../index.html#request");
+      document.querySelectorAll("[data-withlang='1']").forEach(a => {
+        const href = a.getAttribute("href");
+        if(href) a.setAttribute("href", window.__LO__.buildUrl(href, lang));
+      });
 
-  document.getElementById("year").textContent = String(new Date().getFullYear());
-})();
+      const COPY = {
+        en: {
+          nav_rates:"Rates",
+          nav_philosophy:"Our Philosophy",
+          nav_experiences:"Experiences",
+          nav_journal:"Journal",
+          nav_contact:"Contact",
+          nav_impressum:"Impressum",
+          nav_request:"Request",
+
+          eyebrow:"Luxury Obsession",
+          title:"Transparent pricing:",
+          title_suffix:"how we design packages that make sense",
+          meta_date:"December 10, 2025",
+          meta_read:"Seven minute read",
+          meta_topic:"Rates and design",
+
+          toc_title:"In this article",
+          toc_1:"The principle: time first, distance second",
+          toc_2:"Why distance allowances exist",
+          toc_3:"How to choose the right package",
+          toc_4:"Examples you can copy",
+          toc_5:"The details that keep it effortless",
+          toc_6:"Frequently asked questions",
+
+          p1:"Luxury should never feel vague. When pricing is unclear, you spend mental energy on numbers instead of the road. Our goal is a structure that lets you decide in minutes, not in messages.",
+          p2:"That is why our Rates are built around two simple questions: how long do you want the car, and how far do you plan to drive. Everything else is stated upfront as either included, optional, or outside scope.",
+
+          callout_title:"A quick way to think about it",
+          callout_body:"Start with the time window you want. Then choose the distance allowance that matches your route. If you are unsure, request a quote and we will map it to the cleanest package.",
+
+          h2_1:"The principle: time first, distance second",
+          p3:"Time is the core of the experience. It covers the reserved slot, the preparation, and the private handover. Distance is simply the variable part, because your itinerary is personal.",
+          p4:"A short, concentrated drive around Zurich is a different use case than an alpine day. Both can be perfect. They just need different distance logic, so the pricing stays fair in both directions.",
+          cap_1:"Zurich and the lakes are ideal for a refined half day route with a clean distance allowance.",
+          cap_2:"A quiet handover and a clear plan keeps the cockpit focused on the drive, not on logistics.",
+
+          h2_2:"Why distance allowances exist",
+          p5:"A performance car comes with real running costs that scale with distance. A distance allowance makes those costs visible and predictable, while keeping the base package clean.",
+          p6:"We keep it simple: choose the allowance that matches your route, or select an unlimited option when the plan is open ended. Either way, you know the framework before you confirm.",
+
+          t1_h1:"Decision",
+          t1_h2:"What to look at",
+          t1_h3:"Usually best fit",
+          t1_r1_c1:"City loop",
+          t1_r1_c2:"Short route, planned stops, close to Zurich",
+          t1_r1_c3:"Short time window with standard allowance",
+          t1_r2_c1:"Lake day",
+          t1_r2_c2:"Scenic pace, photos, lunch, one or two towns",
+          t1_r2_c3:"Half day or full day with upgraded allowance",
+          t1_r3_c1:"Alpine pass",
+          t1_r3_c2:"Elevation, longer distances, flexible route choice",
+          t1_r3_c3:"Full day with high allowance or unlimited",
+          t1_r4_c1:"Open itinerary",
+          t1_r4_c2:"You decide on the day, no fixed distance plan",
+          t1_r4_c3:"Unlimited distance option",
+
+          h2_3:"How to choose the right package",
+          p7:"Most decisions become obvious once you name the purpose of the drive. A proposal has a different rhythm than a birthday surprise. A solo drive is different than an anniversary with photos.",
+          p8:"We design packages to remove friction. That means fewer options, clearer boundaries, and a consistent host experience across every time window. If a detail matters, it is stated. If it does not matter, it is not a checkbox.",
+          cap_3:"A simple framework lets the moment stay cinematic without becoming complicated.",
+
+          h3_1:"A note on add ons",
+          p9:"Add ons are only useful when they protect time and mood. Concierge delivery is about comfort. A curated route is about confidence. Extra time is about breathing room. None of them should feel like a hidden fee.",
+          p10:"If you request a quote, we show the clean base package first. Then we list any add ons as optional so you can keep the experience minimal or elevate it with intention.",
+
+          h2_4:"Examples you can copy",
+          p11:"Below are three routes that match common requests. Think of them as templates. You can copy them, adjust the stops, or ask us to design one around your schedule.",
+
+          t2_h1:"Route",
+          t2_h2:"Time",
+          t2_h3:"Distance",
+          t2_h4:"Suggested package",
+          t2_h5:"Notes",
+          t2_r1_c1:"Zurich, lake loop, photo stop",
+          t2_r1_c2:"Two to three hours",
+          t2_r1_c3:"Low",
+          t2_r1_c4:"Short window with standard allowance",
+          t2_r1_c5:"Best for first time drivers and a clean surprise",
+          t2_r2_c1:"Lake towns, lunch, relaxed return",
+          t2_r2_c2:"Half day",
+          t2_r2_c3:"Medium",
+          t2_r2_c4:"Half day with upgraded allowance",
+          t2_r2_c5:"Comfortable pace with space for photos",
+          t2_r3_c1:"Alpine pass with flexible route choices",
+          t2_r3_c2:"Full day",
+          t2_r3_c3:"High",
+          t2_r3_c4:"Full day with high allowance or unlimited",
+          t2_r3_c5:"Ideal when the road decides the plan",
+
+          cap_4:"When the route is clear, the details feel deliberate and the day flows.",
+
+          h2_5:"The details that keep it effortless",
+          p12:"Transparency is not only about numbers. It is also about timing, preparation, and what you can expect at handover. We confirm the essentials in writing so there are no surprises on the day.",
+          p13:"If you are planning a special moment, we recommend choosing a little more time than you think. The extra margin often becomes the difference between rushing and enjoying.",
+          p14:"Finally, we keep communication concise. You should not need a long thread to understand what is included. If you want it simple, it stays simple.",
+
+          callout2_title:"Where to find exact numbers",
+          callout2_body:"Exact rates, allowances, and optional services live on the Rates page. This article explains the design logic, so the numbers feel predictable when you see them.",
+
+          h2_6:"Frequently asked questions",
+          faq_q1:"Why not just a single flat price",
+          faq_a1:"A flat price looks simple, but it shifts costs between guests. A clear time plus distance structure stays fair, especially when plans range from a short city loop to an alpine day.",
+          faq_q2:"What if we change the route during the drive",
+          faq_a2:"If you selected an allowance, we simply track distance and keep it transparent. If you want full freedom, choose an unlimited option and drive with no second thoughts.",
+          faq_q3:"Can you help us design the route",
+          faq_a3:"Yes. If you tell us the mood and the time window, we can suggest a refined route with scenic stops that fits the package cleanly.",
+          faq_q4:"What is the easiest way to book",
+          faq_a4:"Request through the form and include your preferred date, time window, and a rough idea of distance. We reply with the best fit package and a concise confirmation.",
+
+          h3_gallery:"A few moments from Zurich",
+          p15:"If you are still deciding, here are a few images to set the mood. The experience is designed to feel the same: private, calm, and effortless.",
+
+          back_journal:"Back to Journal",
+          cta_request:"Request",
+
+          footer_brand:"Luxury Obsession",
+          footer_line:"Ferrari only experiences, Switzerland."
+        },
+        de: {
+          nav_rates:"Rates",
+          nav_philosophy:"Unsere Philosophie",
+          nav_experiences:"Erlebnisse",
+          nav_journal:"Journal",
+          nav_contact:"Kontakt",
+          nav_impressum:"Impressum",
+          nav_request:"Anfrage",
+
+          eyebrow:"Luxury Obsession",
+          title:"Transparente Preise:",
+          title_suffix:"so gestalten wir Pakete, die Sinn ergeben",
+          meta_date:"10. Dezember 2025",
+          meta_read:"Sieben Minuten Lesezeit",
+          meta_topic:"Rates und Konzept",
+
+          toc_title:"In diesem Artikel",
+          toc_1:"Das Prinzip: zuerst Zeit, dann Distanz",
+          toc_2:"Warum es Kilometer Kontingente gibt",
+          toc_3:"So wählen Sie das richtige Paket",
+          toc_4:"Beispiele zum Kopieren",
+          toc_5:"Details, die alles mühelos machen",
+          toc_6:"Häufige Fragen",
+
+          p1:"Luxus sollte nie vage wirken. Wenn Preise unklar sind, geht Energie in Zahlen statt in die Strasse. Unser Ziel ist eine Struktur, mit der Sie in Minuten entscheiden, nicht in endlosen Nachrichten.",
+          p2:"Darum basieren unsere Rates auf zwei einfachen Fragen: Wie lange möchten Sie das Fahrzeug, und wie weit planen Sie zu fahren. Alles Weitere ist von Anfang an klar als inklusive, optional oder ausserhalb des Rahmens beschrieben.",
+
+          callout_title:"Eine schnelle Denkweise",
+          callout_body:"Starten Sie mit dem gewünschten Zeitfenster. Wählen Sie danach das Kilometer Kontingent passend zur Route. Wenn Sie unsicher sind, senden Sie eine Anfrage und wir ordnen es dem klarsten Paket zu.",
+
+          h2_1:"Das Prinzip: zuerst Zeit, dann Distanz",
+          p3:"Zeit ist der Kern des Erlebnisses. Sie deckt das reservierte Zeitfenster, die Vorbereitung und die private Uebergabe ab. Distanz ist der variable Teil, weil Ihre Route individuell ist.",
+          p4:"Eine kurze, konzentrierte Fahrt rund um Zuerich ist etwas anderes als ein Alpentag. Beides kann perfekt sein. Es braucht nur eine passende Distanz Logik, damit die Preise in beide Richtungen fair bleiben.",
+          cap_1:"Zuerich und die Seen eignen sich ideal fuer eine elegante Halbtagestour mit klarem Kilometer Kontingent.",
+          cap_2:"Eine ruhige Uebergabe und ein klarer Plan halten den Fokus im Cockpit auf der Fahrt, nicht auf der Logistik.",
+
+          h2_2:"Warum es Kilometer Kontingente gibt",
+          p5:"Ein Performance Fahrzeug bringt reale Kosten mit, die mit der Distanz steigen. Ein Kilometer Kontingent macht diese Kosten sichtbar und planbar und laesst das Basispaket trotzdem sauber.",
+          p6:"Wir halten es einfach: Waehlen Sie das Kontingent passend zur Route oder eine unbegrenzte Option, wenn der Plan offen ist. In beiden Faellen kennen Sie den Rahmen vor der Bestaetigung.",
+
+          t1_h1:"Entscheidung",
+          t1_h2:"Worauf achten",
+          t1_h3:"Meist beste Wahl",
+          t1_r1_c1:"City Loop",
+          t1_r1_c2:"Kurze Route, geplante Stopps, nahe bei Zuerich",
+          t1_r1_c3:"Kurzes Zeitfenster mit Standard Kontingent",
+          t1_r2_c1:"See Tag",
+          t1_r2_c2:"Szenisches Tempo, Fotos, Lunch, ein bis zwei Orte",
+          t1_r2_c3:"Halbtag oder Ganztag mit erweitertem Kontingent",
+          t1_r3_c1:"Alpenpass",
+          t1_r3_c2:"Hoehenmeter, laengere Distanz, flexible Routenwahl",
+          t1_r3_c3:"Ganztag mit hohem Kontingent oder unbegrenzt",
+          t1_r4_c1:"Offener Plan",
+          t1_r4_c2:"Sie entscheiden spontan, keine fixe Distanz",
+          t1_r4_c3:"Unbegrenzte Distanz Option",
+
+          h2_3:"So waehlen Sie das richtige Paket",
+          p7:"Die meisten Entscheidungen werden klar, sobald Sie den Anlass benennen. Ein Antrag hat einen anderen Rhythmus als eine Geburtstag Ueberraschung. Allein fahren ist anders als ein Jahrestag mit Fotos.",
+          p8:"Wir gestalten Pakete, um Reibung zu vermeiden. Das bedeutet weniger Optionen, klare Grenzen und ein konsistentes Host Erlebnis in jedem Zeitfenster. Was wichtig ist, steht drin. Was unwichtig ist, wird nicht zum Checkbox Thema.",
+          cap_3:"Ein einfacher Rahmen macht den Moment filmreif, ohne kompliziert zu werden.",
+
+          h3_1:"Hinweis zu Add ons",
+          p9:"Add ons sind nur sinnvoll, wenn sie Zeit und Stimmung schuetzen. Concierge Lieferung bedeutet Komfort. Eine kuratierte Route bedeutet Sicherheit. Mehr Zeit bedeutet Luft. Nichts davon sollte wie eine versteckte Gebuehr wirken.",
+          p10:"Bei einer Anfrage zeigen wir zuerst das saubere Basispaket. Danach listen wir Add ons als optional, damit Sie minimal bleiben oder bewusst aufwerten koennen.",
+
+          h2_4:"Beispiele zum Kopieren",
+          p11:"Unten finden Sie drei Routen, die zu typischen Anfragen passen. Sehen Sie sie als Vorlagen. Sie koennen sie kopieren, Stopps anpassen oder uns eine Route nach Ihrem Zeitplan designen lassen.",
+
+          t2_h1:"Route",
+          t2_h2:"Zeit",
+          t2_h3:"Distanz",
+          t2_h4:"Empfohlenes Paket",
+          t2_h5:"Hinweise",
+          t2_r1_c1:"Zuerich, See Runde, Fotostopp",
+          t2_r1_c2:"Zwei bis drei Stunden",
+          t2_r1_c3:"Niedrig",
+          t2_r1_c4:"Kurzes Zeitfenster mit Standard Kontingent",
+          t2_r1_c5:"Ideal fuer Erstfahrer und eine klare Ueberraschung",
+          t2_r2_c1:"See Orte, Lunch, entspannte Rueckfahrt",
+          t2_r2_c2:"Halbtag",
+          t2_r2_c3:"Mittel",
+          t2_r2_c4:"Halbtag mit erweitertem Kontingent",
+          t2_r2_c5:"Entspanntes Tempo mit Platz fuer Fotos",
+          t2_r3_c1:"Alpenpass mit flexiblen Routen",
+          t2_r3_c2:"Ganztag",
+          t2_r3_c3:"Hoch",
+          t2_r3_c4:"Ganztag mit hohem Kontingent oder unbegrenzt",
+          t2_r3_c5:"Perfekt, wenn die Strasse den Plan bestimmt",
+
+          cap_4:"Wenn die Route klar ist, wirken Details bewusst und der Tag fliesst.",
+
+          h2_5:"Details, die alles muehelos machen",
+          p12:"Transparenz ist nicht nur eine Frage von Zahlen. Es geht auch um Timing, Vorbereitung und Erwartungen bei der Uebergabe. Wir bestaetigen das Wesentliche schriftlich, damit am Tag selbst nichts ueberrascht.",
+          p13:"Wenn Sie einen besonderen Moment planen, empfehlen wir etwas mehr Zeit als gedacht. Diese Reserve ist oft der Unterschied zwischen Hetze und Genuss.",
+          p14:"Zum Schluss halten wir Kommunikation kurz und klar. Sie sollen keinen langen Thread brauchen, um zu verstehen, was enthalten ist. Wenn Sie es simpel wollen, bleibt es simpel.",
+
+          callout2_title:"Wo Sie exakte Zahlen finden",
+          callout2_body:"Exakte Preise, Kontingente und optionale Services stehen auf der Rates Seite. Dieser Artikel erklaert die Logik, damit die Zahlen beim Ansehen sofort plausibel sind.",
+
+          h2_6:"Haeufige Fragen",
+          faq_q1:"Warum nicht ein einziger Fixpreis",
+          faq_a1:"Ein Fixpreis wirkt einfach, verschiebt aber Kosten zwischen Gaesten. Eine klare Zeit plus Distanz Struktur bleibt fair, vor allem wenn Plaene von der City Runde bis zum Alpentag reichen.",
+          faq_q2:"Was, wenn wir die Route unterwegs aendern",
+          faq_a2:"Mit Kontingent verfolgen wir die Distanz transparent. Wenn Sie volle Freiheit wollen, waehlen Sie die unbegrenzte Option und fahren ohne zweite Gedanken.",
+          faq_q3:"Koennen Sie uns bei der Route helfen",
+          faq_a3:"Ja. Wenn Sie Stimmung und Zeitfenster nennen, schlagen wir eine elegante Route mit szenischen Stopps vor, die sauber zum Paket passt.",
+          faq_q4:"Wie buche ich am einfachsten",
+          faq_a4:"Senden Sie die Anfrage ueber das Formular und nennen Sie Datum, Zeitfenster und eine grobe Distanz Idee. Wir antworten mit dem passendsten Paket und einer kurzen Bestaetigung.",
+
+          h3_gallery:"Einige Momente aus Zuerich",
+          p15:"Falls Sie noch entscheiden, hier ein paar Bilder fuer die Stimmung. Das Erlebnis soll sich immer gleich anfuehlen: privat, ruhig, muehelos.",
+
+          back_journal:"Zurueck zum Journal",
+          cta_request:"Anfrage",
+
+          footer_brand:"Luxury Obsession",
+          footer_line:"Ferrari Erlebnisse, Schweiz."
+        },
+        it: {
+          nav_rates:"Tariffe",
+          nav_philosophy:"La nostra filosofia",
+          nav_experiences:"Esperienze",
+          nav_journal:"Journal",
+          nav_contact:"Contatto",
+          nav_impressum:"Impressum",
+          nav_request:"Richiesta",
+
+          eyebrow:"Luxury Obsession",
+          title:"Prezzi trasparenti:",
+          title_suffix:"come progettiamo pacchetti che hanno senso",
+          meta_date:"10 dicembre 2025",
+          meta_read:"Sette minuti di lettura",
+          meta_topic:"Tariffe e design",
+
+          toc_title:"In questo articolo",
+          toc_1:"Il principio: prima il tempo, poi la distanza",
+          toc_2:"Perche esiste un chilometraggio incluso",
+          toc_3:"Come scegliere il pacchetto giusto",
+          toc_4:"Esempi da copiare",
+          toc_5:"I dettagli che rendono tutto semplice",
+          toc_6:"Domande frequenti",
+
+          p1:"Il lusso non dovrebbe mai sembrare vago. Quando il prezzo non e chiaro, l energia va ai numeri invece che alla strada. Il nostro obiettivo e una struttura che permette di decidere in pochi minuti.",
+          p2:"Per questo le nostre Tariffe ruotano intorno a due domande semplici: per quanto tempo vuoi l auto e quanta strada prevedi di fare. Tutto il resto e dichiarato subito come incluso, opzionale o fuori ambito.",
+
+          callout_title:"Un modo rapido per orientarsi",
+          callout_body:"Scegli prima la finestra di tempo. Poi abbina il chilometraggio incluso al tuo itinerario. Se hai dubbi, invia una richiesta e lo collegheremo al pacchetto piu pulito.",
+
+          h2_1:"Il principio: prima il tempo, poi la distanza",
+          p3:"Il tempo e il cuore dell esperienza. Copre la fascia riservata, la preparazione e la consegna privata. La distanza e solo la parte variabile, perche il tuo itinerario e personale.",
+          p4:"Un giro breve intorno a Zurigo e diverso da una giornata sulle Alpi. Entrambi possono essere perfetti. Serve solo una logica di distanza coerente, cosi il prezzo resta equo in ogni direzione.",
+          cap_1:"Zurigo e i laghi sono ideali per un mezzo giorno elegante con chilometraggio incluso ben definito.",
+          cap_2:"Una consegna calma e un piano chiaro tengono il focus nel cockpit sulla guida, non sulla logistica.",
+
+          h2_2:"Perche esiste un chilometraggio incluso",
+          p5:"Un auto ad alte prestazioni ha costi reali che crescono con i chilometri. Un chilometraggio incluso rende quei costi visibili e prevedibili, lasciando il pacchetto base pulito.",
+          p6:"La regola e semplice: scegli il chilometraggio che combacia con la rotta, oppure un opzione illimitata quando il piano e aperto. In entrambi i casi conosci il quadro prima di confermare.",
+
+          t1_h1:"Scelta",
+          t1_h2:"Cosa considerare",
+          t1_h3:"Di solito la scelta migliore",
+          t1_r1_c1:"Giro in citta",
+          t1_r1_c2:"Percorso breve, soste pianificate, vicino a Zurigo",
+          t1_r1_c3:"Finestra breve con chilometraggio standard",
+          t1_r2_c1:"Giornata al lago",
+          t1_r2_c2:"Ritmo scenico, foto, pranzo, uno o due paesi",
+          t1_r2_c3:"Mezza giornata o giornata intera con chilometraggio maggiore",
+          t1_r3_c1:"Passo alpino",
+          t1_r3_c2:"Dislivello, distanza alta, rotta flessibile",
+          t1_r3_c3:"Giornata intera con chilometraggio alto o illimitato",
+          t1_r4_c1:"Itinerario aperto",
+          t1_r4_c2:"Decidi sul momento, nessun piano di distanza fisso",
+          t1_r4_c3:"Opzione illimitata",
+
+          h2_3:"Come scegliere il pacchetto giusto",
+          p7:"Molte decisioni diventano immediate quando definisci lo scopo della guida. Una proposta ha un ritmo diverso da una sorpresa di compleanno. Guidare da soli e diverso da un anniversario con foto.",
+          p8:"Progettiamo i pacchetti per eliminare attrito. Significa meno opzioni, confini chiari e un esperienza host coerente in ogni finestra di tempo. Se un dettaglio conta, e scritto. Se non conta, non diventa un checkbox.",
+          cap_3:"Un quadro semplice rende il momento cinematografico senza complicazioni.",
+
+          h3_1:"Una nota sugli extra",
+          p9:"Gli extra servono solo quando proteggono tempo e atmosfera. Consegna concierge significa comfort. Rotta curata significa sicurezza. Tempo extra significa respiro. Nessuno di questi dovrebbe sembrare un costo nascosto.",
+          p10:"Se invii una richiesta, ti mostriamo prima il pacchetto base piu pulito. Poi elenchiamo gli extra come opzionali, cosi puoi restare minimal o elevare con intenzione.",
+
+          h2_4:"Esempi da copiare",
+          p11:"Qui sotto trovi tre itinerari che corrispondono a richieste comuni. Considerali come template. Puoi copiarli, modificare le soste o chiederci di progettarne uno sul tuo orario.",
+
+          t2_h1:"Itinerario",
+          t2_h2:"Tempo",
+          t2_h3:"Distanza",
+          t2_h4:"Pacchetto suggerito",
+          t2_h5:"Note",
+          t2_r1_c1:"Zurigo, giro lago, sosta foto",
+          t2_r1_c2:"Due o tre ore",
+          t2_r1_c3:"Bassa",
+          t2_r1_c4:"Finestra breve con chilometraggio standard",
+          t2_r1_c5:"Ottimo per la prima volta e per una sorpresa pulita",
+          t2_r2_c1:"Paesi sul lago, pranzo, rientro rilassato",
+          t2_r2_c2:"Mezza giornata",
+          t2_r2_c3:"Media",
+          t2_r2_c4:"Mezza giornata con chilometraggio maggiore",
+          t2_r2_c5:"Ritmo comodo con spazio per le foto",
+          t2_r3_c1:"Passo alpino con scelte di rotta flessibili",
+          t2_r3_c2:"Giornata intera",
+          t2_r3_c3:"Alta",
+          t2_r3_c4:"Giornata intera con chilometraggio alto o illimitato",
+          t2_r3_c5:"Ideale quando la strada decide il piano",
+
+          cap_4:"Quando la rotta e chiara, i dettagli sembrano intenzionali e la giornata scorre.",
+
+          h2_5:"I dettagli che rendono tutto semplice",
+          p12:"La trasparenza non riguarda solo i numeri. Riguarda anche tempi, preparazione e cosa aspettarsi alla consegna. Confermiamo l essenziale per iscritto, cosi non ci sono sorprese.",
+          p13:"Se stai preparando un momento speciale, consigliamo un po piu tempo di quanto pensi. Quel margine spesso fa la differenza tra correre e godersi.",
+          p14:"Infine, manteniamo la comunicazione concisa. Non dovresti aver bisogno di una lunga chat per capire cosa e incluso. Se vuoi semplicità, resta semplice.",
+
+          callout2_title:"Dove trovare i numeri esatti",
+          callout2_body:"Tariffe, chilometraggi inclusi e servizi opzionali sono nella pagina Tariffe. Questo articolo spiega la logica, cosi i numeri risultano prevedibili quando li vedi.",
+
+          h2_6:"Domande frequenti",
+          faq_q1:"Perche non un prezzo unico",
+          faq_a1:"Un prezzo unico sembra semplice, ma sposta i costi tra ospiti. Una struttura chiara tempo piu distanza resta equa, soprattutto quando i piani vanno dal giro in città al giorno alpino.",
+          faq_q2:"E se cambiamo rotta durante la guida",
+          faq_a2:"Con un chilometraggio incluso, monitoriamo la distanza in modo trasparente. Se vuoi totale libertà, scegli l opzione illimitata e guida senza ripensamenti.",
+          faq_q3:"Potete aiutarci a progettare la rotta",
+          faq_a3:"Si. Se ci dici atmosfera e finestra di tempo, suggeriamo una rotta elegante con soste sceniche che si adatta pulitamente al pacchetto.",
+          faq_q4:"Qual e il modo piu semplice per prenotare",
+          faq_a4:"Invia la richiesta tramite il modulo e includi data, finestra di tempo e un idea di distanza. Rispondiamo con il pacchetto piu adatto e una conferma concisa.",
+
+          h3_gallery:"Alcuni momenti da Zurigo",
+          p15:"Se stai ancora decidendo, ecco alcune immagini per l atmosfera. L esperienza e pensata per essere sempre la stessa: privata, calma, semplice.",
+
+          back_journal:"Torna al Journal",
+          cta_request:"Richiesta",
+
+          footer_brand:"Luxury Obsession",
+          footer_line:"Esperienze Ferrari, Svizzera."
+        }
+      };
+
+      function applyTranslations(next){
+        const dict = COPY[next] || COPY.en;
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+          const key = el.getAttribute("data-i18n");
+          const val = dict[key];
+          if(typeof val === "string") el.textContent = val;
+        });
+      }
+
+      applyTranslations(lang);
+
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightboxImg");
+
+      function openLightbox(src, alt){
+        if(!lightbox || !lightboxImg) return;
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || "";
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden","false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox(){
+        if(!lightbox || !lightboxImg) return;
+        lightbox.classList.remove("open");
+        lightbox.setAttribute("aria-hidden","true");
+        lightboxImg.src = "";
+        document.body.style.overflow = "";
+      }
+
+      document.querySelectorAll(".gItem").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const src = btn.getAttribute("data-full") || "";
+          const img = btn.querySelector("img");
+          openLightbox(src, img ? img.alt : "");
+        });
+      });
+
+      if(lightbox){
+        lightbox.querySelectorAll("[data-close='1']").forEach(el => el.addEventListener("click", closeLightbox));
+        document.addEventListener("keydown", (e) => {
+          if(e.key === "Escape") closeLightbox();
+        });
+      }
+    })();
   </script>
 </body>
 </html>

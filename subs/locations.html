@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <title>Luxury Obsession | Pickup locations</title>
-  <meta name="description" content="Pickup locations for Ferrari only experiences. Default pickup in Nänikon, with optional city fees." />
+  <meta name="description" content="Pickup locations for Ferrari only experiences. Private host point in Nänikon near Zurich, with transparent transfer fees for other cities." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index, follow" />
   <meta property="og:title" content="Luxury Obsession | Pickup locations" />
-  <meta property="og:description" content="Pickup locations for Ferrari only experiences. Default pickup in Nänikon, with optional city fees." />
+  <meta property="og:description" content="Pickup locations for Ferrari only experiences. Private host point in Nänikon near Zurich, with transparent transfer fees for other cities." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="../images/image00100.png" />
   <link rel="icon" href="../images/icon.png" />
@@ -17,325 +17,381 @@
   <link rel="alternate" hreflang="it" href="locations.html?lang=it" />
   <link rel="alternate" hreflang="x-default" href="locations.html?lang=en" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet" />
+
   <style>
-:root{
-  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --bg:#050509;
-  --accent:#e50914;
-  --accentSoft:rgba(229,9,20,0.16);
-  --text:#f5f5f5;
-  --muted:#a3a3a3;
-  --border:#262637;
-  --radius:18px;
-  --shadow:0 18px 45px rgba(0,0,0,0.4);
-  --max:1120px;
-}
-*{box-sizing:border-box}
-body{margin:0;background:radial-gradient(circle at top,#191621 0,var(--bg) 55%);color:var(--text)}
-a{color:inherit;text-decoration:none}
-header{
-  position:sticky;top:0;z-index:50;
-  backdrop-filter:blur(12px);
-  background:linear-gradient(to bottom,rgba(5,5,9,0.92),rgba(5,5,9,0.62),transparent);
-  border-bottom:1px solid rgba(255,255,255,0.03)
-}
-.container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
-.navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.2rem 0}
-.brand{display:inline-flex;align-items:center;gap:0.75rem}
-.brandIcon{width:60px;height:60px;object-fit:contain;display:block}
-.brandWordmark{height:38px;width:auto;object-fit:contain;display:block}
-.brandText{font-size:1.05rem;font-weight:850;letter-spacing:0.02em}
-@media (max-width:640px){
-  .brandIcon{width:34px;height:34px}
-  .brandWordmark{height:28px}
-  .brandText{font-size:0.98rem}
-}
-.navRight{display:flex;align-items:center;gap:0.65rem}
-.navLinks{display:flex;align-items:center;gap:0.8rem;font-size:0.9rem}
-.navLinks a{padding:0.35rem 0.65rem;border-radius:999px;color:var(--muted);transition:0.2s}
-.navLinks a:hover{color:var(--text);background:rgba(255,255,255,0.05)}
-.navCta{
-  padding:0.45rem 0.9rem;border-radius:999px;background:var(--accent);
-  font-size:0.85rem;font-weight:800;color:#fff;box-shadow:0 10px 26px rgba(229,9,20,0.45)
-}
-.langPicker{display:inline-flex;align-items:center;gap:0.35rem}
-.flagBtn{
-  border:1px solid rgba(255,255,255,0.14);
-  background:rgba(255,255,255,0.04);
-  border-radius:999px;padding:0.25rem 0.45rem;
-  cursor:pointer;line-height:1;opacity:0.75
-}
-.flagBtn.active{opacity:1;border-color:rgba(229,9,20,0.55);box-shadow:0 0 0 1px rgba(229,9,20,0.25)}
-.flagBtn svg{display:block}
-.hamburger{
-  display:none;width:42px;height:38px;border-radius:999px;
-  border:1px solid rgba(255,255,255,0.14);
-  background:rgba(255,255,255,0.04);
-  cursor:pointer;align-items:center;justify-content:center
-}
-.hamburgerLines{display:grid;gap:4px}
-.hamburgerLines span{width:18px;height:2px;border-radius:999px;background:rgba(245,245,245,0.92);display:block}
-.mobileMenu{
-  display:none;margin:0.65rem 0 0.95rem;padding:0.85rem;
-  border-radius:16px;background:rgba(5,5,9,0.92);
-  border:1px solid rgba(255,255,255,0.10);box-shadow:var(--shadow)
-}
-.mobileMenu a{display:flex;align-items:center;justify-content:space-between;padding:0.7rem 0.75rem;border-radius:12px}
-.mobileMenu a:hover{background:rgba(255,255,255,0.05)}
-.mobileMenuDivider{height:1px;background:rgba(255,255,255,0.08);margin:0.55rem 0}
-.mobileMenuCta{
-  display:flex;justify-content:center;padding:0.75rem 0.85rem;border-radius:14px;
-  background:var(--accent);font-weight:800;color:#fff;box-shadow:0 10px 26px rgba(229,9,20,0.45)
-}
-main{padding-bottom:2.2rem}
-section{padding:3.4rem 0}
-.eyebrow{text-transform:uppercase;letter-spacing:0.24em;font-size:0.7rem;color:var(--muted);margin-bottom:0.75rem}
-.hero{padding-top:2.2rem}
-.heroGrid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:2.4rem;align-items:center}
-.heroTitle{font-size:clamp(2.35rem,3.2vw + 1rem,3.55rem);line-height:1.05;margin:0 0 0.75rem}
-.heroHighlight{background:linear-gradient(to right,#ff7676,#ffb199);-webkit-background-clip:text;background-clip:text;color:transparent}
-.heroSubtitle{font-size:1.05rem;color:var(--muted);max-width:38rem}
-.heroPills{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:0.6rem}
-.heroPill{border-radius:999px;padding:0.3rem 0.8rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);font-size:0.75rem;color:var(--muted)}
-.heroActions{margin-top:1.9rem;display:flex;flex-wrap:wrap;gap:0.9rem;align-items:center}
-.btn{
-  border-radius:999px;padding:0.8rem 1.25rem;border:none;outline:none;font-weight:800;
-  cursor:pointer;font-size:0.95rem;display:inline-flex;align-items:center;gap:0.45rem;white-space:nowrap
-}
-.btnPrimary{background:linear-gradient(135deg,var(--accent),#ff3b3b);color:#fff;box-shadow:0 15px 35px rgba(229,9,20,0.45)}
-.btnSecondary{background:rgba(255,255,255,0.02);color:var(--muted);border:1px solid rgba(255,255,255,0.12)}
-.heroNote{margin-top:1.05rem;font-size:0.82rem;color:var(--muted);line-height:1.6}
-.heroMediaCard{
-  border-radius:32px;overflow:hidden;background:radial-gradient(circle at top left,#ff4949,#050509 52%);
-  box-shadow:var(--shadow);position:relative;min-height:300px;border:1px solid rgba(255,255,255,0.10)
-}
-.heroMediaCard video{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.08);filter:saturate(1.06) contrast(1.05)}
-.heroBadge{
-  position:absolute;bottom:1.15rem;left:1.25rem;right:1.25rem;background:rgba(5,5,9,0.78);
-  padding:0.55rem 0.85rem;border-radius:999px;display:flex;align-items:center;justify-content:space-between;gap:0.6rem;
-  border:1px solid rgba(255,255,255,0.16);font-size:0.75rem
-}
-.heroBadgeDot{width:9px;height:9px;border-radius:999px;background:#4ade80;box-shadow:0 0 12px rgba(74,222,128,0.9)}
-.sectionTitle{font-size:1.75rem;margin:0 0 0.4rem}
-.sectionSubtitle{font-size:0.95rem;color:var(--muted);max-width:52rem;margin:0}
-.card{
-  background:radial-gradient(circle at top left,#151520,#050509 55%);
-  border-radius:var(--radius);border:1px solid var(--border);padding:1.3rem;box-shadow:var(--shadow)
-}
-.pricingGrid{margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem}
-.pricingCard h3{margin:0 0 0.25rem;font-size:1.05rem}
-.pricingPrice{display:flex;align-items:baseline;gap:0.2rem;margin:0.35rem 0 0.45rem}
-.pricingPrice span:first-child{font-size:1.55rem;font-weight:900}
-.pricingKm{font-size:0.82rem;color:var(--muted)}
-.pricingTag{display:inline-block;margin-top:0.35rem;font-size:0.72rem;padding:0.2rem 0.6rem;border-radius:999px;background:var(--accentSoft);color:#ffb4b4}
-@media (hover:hover) and (min-width: 980px){
-  .pricingCard{cursor:pointer;transition:transform 0.18s, border-color 0.18s, box-shadow 0.18s, background 0.18s}
-  .pricingCard:hover{
-    transform:translateY(-6px) scale(1.03);
-    border-color:rgba(229,9,20,0.55);
-    box-shadow:0 22px 60px rgba(229,9,20,0.10), var(--shadow);
-    background:radial-gradient(circle at top left, rgba(229,9,20,0.18), #050509 58%);
-  }
-  .pricingCard:hover .pricingTag{
-    background:rgba(229,9,20,0.24);
-    color:#ffd1d1;
-  }
-}
+    :root{
+      font-family:"Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --bg:#07070a;
+      --surface:rgba(12,12,16,0.78);
+      --surface2:rgba(12,12,16,0.92);
+      --text:#f3f1ee;
+      --muted:rgba(243,241,238,0.70);
+      --border:rgba(243,241,238,0.12);
+      --radius:16px;
+      --shadow:0 14px 42px rgba(0,0,0,0.40);
+      --accent:#b1121d;
+      --accent2:#8b0f14;
+      --accentSoft:rgba(177,18,29,0.14);
 
-.pricingNote{font-size:0.8rem;color:var(--muted);margin-top:1.25rem}
-.requestLayout{display:grid;grid-template-columns:1fr;gap:1.2rem;margin-top:2rem}
-.ctaRow{display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:0.75rem}
-.ctaBtn{
-  border-radius:14px;padding:0.75rem 1rem;border:1px solid rgba(255,255,255,0.12);
-  background:rgba(255,255,255,0.03);color:var(--text);cursor:pointer;font-weight:850;
-  display:inline-flex;gap:0.5rem;align-items:center
-}
-.ctaBtnPrimary{background:rgba(229,9,20,0.14);border-color:rgba(229,9,20,0.30)}
-.socialRow{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:0.85rem}
-.socialBtn{
-  border-radius:999px;padding:0.55rem 0.85rem;border:1px solid rgba(255,255,255,0.12);
-  background:rgba(255,255,255,0.03);color:var(--text);cursor:pointer;font-weight:850;
-  display:inline-flex;gap:0.45rem;align-items:center;font-size:0.88rem
-}
-.socialBtn:hover{background:rgba(255,255,255,0.06)}
-.socialBtn svg{width:18px;height:18px;display:block}
-.bookingForm{display:grid;gap:0.75rem;font-size:0.9rem}
-.fieldGroup{display:flex;flex-direction:column;gap:0.25rem}
-label{font-size:0.8rem;color:var(--muted)}
-input,select,textarea{
-  border-radius:10px;border:1px solid var(--border);background:rgba(10,10,18,0.9);
-  padding:0.55rem 0.7rem;color:var(--text);font-family:inherit;font-size:0.95rem;outline:none
-}
-input:focus,select:focus,textarea:focus{border-color:rgba(245,245,245,0.22);box-shadow:0 0 0 1px rgba(245,245,245,0.12)}
-textarea{min-height:90px;resize:vertical}
-.grid12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0.75rem}
-.span-4{grid-column:span 4}
-.span-6{grid-column:span 6}
-.span-12{grid-column:span 12}
-@media(max-width:980px){
-  .heroGrid{grid-template-columns:1fr}
-  .heroMediaCard{max-width:640px;margin:0 auto}
-  .span-md-6{grid-column:span 6}
-  .span-md-12{grid-column:span 12}
-}
-@media(max-width:760px){
-  .navLinks{display:none}
-  .hamburger{display:inline-flex}
-  .container{padding:0 1rem}
-}
-@media(max-width:560px){
-  .pricingGrid{grid-auto-flow:column;grid-auto-columns:minmax(240px,1fr);grid-template-columns:unset;overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding-bottom:0.75rem}
-  .pricingCard{scroll-snap-align:start}
-  .span-sm-12{grid-column:span 12}
-}
-/* Calendar popover */
-.calWrap{position:relative}
-.calPopup{
-  position:absolute;top:calc(100% + 8px);left:0;z-index:80;
-  width:min(320px, 92vw);
-  padding:0.85rem;border-radius:16px;
-  background:rgba(5,5,9,0.98);
-  border:1px solid rgba(255,255,255,0.10);
-  box-shadow:var(--shadow);
-  display:none;
-}
-.calPopup.open{display:block}
-.calHeader{display:flex;align-items:center;justify-content:space-between;gap:0.6rem;margin-bottom:0.65rem}
-.calHeaderTitle{font-weight:900;text-transform:capitalize}
-.calNavGroup{display:flex;gap:0.35rem;align-items:center}
-.calNavBtn{
-  border:1px solid rgba(255,255,255,0.12);
-  background:rgba(255,255,255,0.03);
-  color:var(--text);
-  border-radius:10px;
-  padding:0.35rem 0.55rem;
-  cursor:pointer;
-  font-weight:900
-}
-.calWeekdays{display:grid;grid-template-columns:repeat(7,1fr);gap:0.35rem;font-size:0.72rem;color:var(--muted);margin-bottom:0.35rem}
-.calGrid{display:grid;grid-template-columns:repeat(7,1fr);gap:0.35rem}
-.calDay{
-  width:100%;
-  aspect-ratio:1/1;
-  border-radius:12px;
-  border:1px solid rgba(255,255,255,0.08);
-  background:rgba(255,255,255,0.03);
-  color:var(--text);
-  cursor:pointer;
-  font-weight:850;
-  font-size:0.85rem
-}
-.calDay:hover{border-color:rgba(255,255,255,0.18);background:rgba(255,255,255,0.05)}
-.calDayOff{opacity:0;pointer-events:none;border-color:transparent;background:transparent}
-.calDayDisabled{opacity:0.35;cursor:not-allowed}
-.calDaySelected{
-  border-color:rgba(229,9,20,0.65);
-  box-shadow:0 0 0 1px rgba(229,9,20,0.25);
-  background:rgba(229,9,20,0.14)
-}
-/* Contact map */
-.contactGrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,0.95fr);gap:1.2rem;margin-top:1.2rem;align-items:stretch}
+      --champagne:#e7dcc6;
+      --titaniumA:rgba(252,252,253,0.92);
+      --titaniumB:rgba(176,176,186,0.70);
+      --hairline:rgba(231,220,198,0.18);
+      --carbonImage:url("../images/carbon.jpg");
+      --carbonScale:420px;
 
-@media(max-width:1100px){
-  .contactGrid{grid-template-columns:1fr}
-  .mapFrame{min-height:320px}
-}
-.mapCard{padding:0.85rem}
-.mapFrame{width:100%;height:100%;min-height:340px;border:0;border-radius:14px}
-.contactList{list-style:none;padding:0;margin:0.75rem 0 0;display:grid;gap:0.5rem}
-.contactList li{display:flex;align-items:center;justify-content:space-between;gap:0.75rem;padding:0.55rem 0.65rem;border-radius:12px;background:rgba(0,0,0,0.22);border:1px solid rgba(255,255,255,0.07)}
-.contactList li span{color:var(--muted);font-size:0.82rem}
-footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.78rem;color:var(--muted)}
-.footerInner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+      --max:1120px;
+      --logoSize:60px;
+    }
 
-/* Keep header alignment stable vs pages with or without scrollbars */
-html{scrollbar-gutter:stable}
-@supports not (scrollbar-gutter: stable){
-  html{overflow-y:scroll}
-}
+    *{box-sizing:border-box}
+    html{scrollbar-gutter:stable}
+    @supports not (scrollbar-gutter: stable){ html{overflow-y:scroll} }
 
-/* Page specific */
-.locList{margin:0.75rem 0 0;padding-left:1.05rem;color:rgba(245,245,245,0.92)}
-.locList li{margin:0.35rem 0}
-.locLink{text-decoration:underline;text-decoration-color:rgba(255,255,255,0.25);text-underline-offset:3px}
-.locLink:hover{text-decoration-color:rgba(229,9,20,0.65)}
-.locTitleRow{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:baseline}
-.locPill{display:inline-flex;align-items:center;gap:0.4rem;border-radius:999px;padding:0.22rem 0.65rem;
-  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);color:var(--muted);font-size:0.82rem}
-.locNote{margin:0.65rem 0 0;color:var(--muted);line-height:1.55}
-.btnRow{display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:1rem}
-/* Make flag SVG sit nicely inside pill buttons */
-.flagBtn svg{display:block}
+    body{
+      margin:0;
+      background:
+        radial-gradient(1000px 600px at 20% -10%, rgba(200,183,155,0.12), transparent 55%),
+        radial-gradient(900px 520px at 85% 0%, rgba(139,15,20,0.10), transparent 55%),
+        var(--bg);
+      color:var(--text);
+    }
+    a{color:inherit;text-decoration:none}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      isolation:isolate;
+      backdrop-filter:blur(12px);
+      background:linear-gradient(to bottom, rgba(7,7,10,0.92), rgba(7,7,10,0.74), transparent);
+      border-bottom:1px solid rgba(243,241,238,0.06);
+    }
+    header::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background-image:var(--carbonImage);
+      background-size:var(--carbonScale) var(--carbonScale);
+      background-position:center;
+      opacity:0.10;
+      mix-blend-mode:overlay;
+      pointer-events:none;
+      z-index:0;
+    }
+    @supports not (mix-blend-mode: overlay){ header::before{opacity:0.06;} }
+    header > .container{position:relative;z-index:1;}
+
+    .container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
+    .navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.55rem 0;}
+
+    .brand{display:inline-flex;align-items:center;gap:0.65rem}
+    .brandIcon{width:var(--logoSize);height:var(--logoSize);object-fit:contain;display:block}
+
+    .brandGold{
+      font-family:"Cinzel", serif;
+      font-weight:700;
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      font-size:clamp(1.05rem, 1.2vw + 0.9rem, 1.2rem);
+      line-height:1;
+      background:linear-gradient(135deg,
+        rgba(252,252,253,0.92),
+        rgba(231,220,198,0.96),
+        rgba(200,183,155,0.92),
+        rgba(231,220,198,0.96)
+      );
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      text-shadow:0 10px 30px rgba(0,0,0,0.35);
+      white-space:nowrap;
+    }
+
+    @media (max-width:640px){
+      .brandGold{font-size:0.90rem;letter-spacing:0.14em;}
+      .brandIcon{width:34px;height:34px}
+    }
+
+    .navRight{display:flex;align-items:center;gap:0.65rem}
+    .navLinks{display:flex;align-items:center;gap:0.8rem;font-size:0.9rem}
+    .navLinks a{padding:0.35rem 0.65rem;border-radius:999px;color:rgba(243,241,238,0.86);font-weight:500;letter-spacing:0.01em;transition:0.2s}
+    .navLinks a:hover{color:var(--text);background:rgba(243,241,238,0.06)}
+
+    .navCta{
+      padding:0.45rem 0.9rem;
+      border-radius:999px;
+      background:transparent;
+      border:1px solid rgba(200,183,155,0.75);
+      color:rgba(243,241,238,0.92);
+      box-shadow:none;
+      font-weight:600;
+    }
+    .navCta:hover{background:rgba(200,183,155,0.12)}
+
+    .langSelect{position:relative;display:inline-flex;align-items:center}
+    .langToggle{
+      display:inline-flex;align-items:center;gap:0.45rem;
+      padding:0.5rem 0.75rem;border-radius:999px;
+      border:1px solid rgba(243,241,238,0.16);
+      background:rgba(243,241,238,0.03);
+      color:rgba(243,241,238,0.86);
+      cursor:pointer;font-size:0.85rem;letter-spacing:0.08em;
+    }
+    .langToggle:hover{background:rgba(243,241,238,0.06)}
+    .langChevron{font-size:0.9rem;opacity:0.8}
+    .langMenu{
+      position:absolute;right:0;top:calc(100% + 0.55rem);
+      min-width:190px;
+      background:rgba(7,7,10,0.92);
+      border:1px solid rgba(243,241,238,0.14);
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      padding:0.4rem;
+      backdrop-filter:blur(10px);
+    }
+    .langOption{
+      width:100%;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:0.65rem 0.75rem;border-radius:12px;
+      background:transparent;border:none;
+      color:rgba(243,241,238,0.92);
+      cursor:pointer;font-size:0.92rem;
+    }
+    .langOption:hover{background:rgba(243,241,238,0.06)}
+    .langOption[aria-current="true"]{background:rgba(200,183,155,0.10);border:1px solid rgba(200,183,155,0.22)}
+
+    .hamburger{
+      display:none;
+      width:42px;height:38px;border-radius:999px;
+      border:1px solid rgba(243,241,238,0.16);
+      background:rgba(243,241,238,0.03);
+      cursor:pointer;align-items:center;justify-content:center
+    }
+    .hamburger:hover{background:rgba(243,241,238,0.06)}
+    .hamburgerLines{display:grid;gap:4px}
+    .hamburgerLines span{width:18px;height:2px;border-radius:999px;background:rgba(243,241,238,0.88);display:block}
+
+    .mobileMenu{
+      display:none;
+      margin:0.65rem 0 0.95rem;
+      padding:0.85rem;
+      border-radius:16px;
+      background:rgba(7,7,10,0.92);
+      border:1px solid rgba(243,241,238,0.14);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(10px);
+    }
+    .mobileMenu a{display:flex;align-items:center;justify-content:space-between;padding:0.7rem 0.75rem;border-radius:12px}
+    .mobileMenu a:hover{background:rgba(243,241,238,0.06)}
+    .mobileMenuDivider{height:1px;background:rgba(243,241,238,0.10);margin:0.55rem 0}
+    .mobileMenuCta{
+      display:flex;justify-content:center;
+      padding:0.75rem 0.85rem;border-radius:14px;
+      background:linear-gradient(135deg, rgba(231,220,198,0.95), rgba(252,252,253,0.92));
+      color:#0b0b10 !important;
+      border:1px solid rgba(231,220,198,0.28);
+      font-weight:700;
+    }
+
+    main{padding-bottom:2.2rem}
+    section{padding:3.4rem 0}
+
+    .eyebrow{text-transform:uppercase;letter-spacing:0.24em;font-size:0.7rem;color:var(--muted);margin-bottom:0.75rem}
+
+    h1,h2,h3,.heroTitle{font-family:"Cormorant Garamond", serif;letter-spacing:0.02em}
+    .heroTitle{font-size:clamp(2.35rem,3.2vw + 1rem,3.35rem);line-height:1.05;margin:0 0 0.55rem;font-weight:600}
+    .heroHighlight{background:linear-gradient(to right, rgba(231,220,198,0.96), rgba(252,252,253,0.92));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .heroSubtitle{font-size:1.05rem;color:var(--muted);max-width:56ch;line-height:1.7;white-space:pre-line;margin:0}
+
+    .btn{
+      border-radius:999px;
+      padding:0.9rem 1.35rem;
+      border:none;
+      outline:none;
+      cursor:pointer;
+      font-size:0.95rem;
+      display:inline-flex;
+      align-items:center;
+      gap:0.45rem;
+      white-space:nowrap;
+      font-weight:600;
+      letter-spacing:0.04em;
+    }
+    .btnPrimary{
+      background:linear-gradient(135deg, rgba(231,220,198,0.96), rgba(231,220,198,0.82));
+      color:#07070b;
+      box-shadow:0 18px 45px rgba(0,0,0,0.45);
+      border:1px solid rgba(0,0,0,0.18);
+    }
+    .btnSecondary{
+      background:transparent;
+      border:1px solid rgba(243,241,238,0.18);
+      color:rgba(243,241,238,0.88);
+    }
+    .btnSecondary:hover{background:rgba(243,241,238,0.05)}
+
+    .card{
+      background:rgba(12,12,16,0.62);
+      border:1px solid rgba(243,241,238,0.10);
+      border-radius:var(--radius);
+      padding:1.3rem;
+      box-shadow:none;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .grid12{display:grid;grid-template-columns:repeat(12, minmax(0, 1fr));gap:0.75rem}
+    .span-4{grid-column:span 4}
+    .span-6{grid-column:span 6}
+    .span-12{grid-column:span 12}
+
+    @media (max-width:980px){
+      .span-md-6{grid-column:span 6}
+      .span-md-12{grid-column:span 12}
+    }
+    @media (max-width:760px){
+      .navLinks{display:none}
+      .hamburger{display:inline-flex}
+      .container{padding:0 1rem}
+      .footerInner{grid-template-columns:1fr;gap:10px;text-align:center}
+      .footerRight{justify-content:center}
+    }
+
+    footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.78rem;color:var(--muted)}
+    .footerInner{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center}
+    .footerCenter{justify-self:center}
+    .footerRight{display:flex;justify-content:flex-end;gap:16px;flex-wrap:wrap;align-items:center}
+    .footerRight a{color:var(--muted);text-decoration:none}
+    .footerRight a:hover{color:var(--text)}
+
+    /* Page specific */
+    .pageHero{padding-top:2.2rem}
+
+    .locTitleRow{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:baseline}
+    .locPill{
+      display:inline-flex;align-items:center;gap:0.4rem;
+      border-radius:999px;
+      padding:0.22rem 0.65rem;
+      background:rgba(243,241,238,0.02);
+      border:1px solid rgba(243,241,238,0.12);
+      color:rgba(243,241,238,0.78);
+      font-size:0.82rem;
+      font-weight:500;
+    }
+
+    .locNote{margin:0.65rem 0 0;color:var(--muted);line-height:1.55}
+    .locList{margin:0.75rem 0 0;padding-left:1.05rem;color:rgba(243,241,238,0.92)}
+    .locList li{margin:0.35rem 0}
+
+    .locLink{
+      text-decoration:underline;
+      text-decoration-color:rgba(243,241,238,0.22);
+      text-underline-offset:3px;
+    }
+    .locLink:hover{text-decoration-color:rgba(231,220,198,0.78)}
+
+    .btnRow{display:flex;gap:0.6rem;flex-wrap:wrap;margin-top:1rem}
+    .pricingNote{font-size:0.82rem;color:rgba(243,241,238,0.62);margin-top:1.1rem;line-height:1.6}
   </style>
 
   <script>
-(function(){
-  const LANGS = ["en","de","it"];
+    (function(){
+      const LANGS = ["en","de","it"];
 
-  function getLang(){
-    const p = new URLSearchParams(window.location.search);
-    const q = p.get("lang");
-    if(q && LANGS.includes(q)) return q;
-    const s = localStorage.getItem("lo_lang");
-    if(s && LANGS.includes(s)) return s;
-    return "en";
-  }
-
-  function setLang(next){
-    if(!LANGS.includes(next)) return;
-    localStorage.setItem("lo_lang", next);
-    const u = new URL(window.location.href);
-    u.searchParams.set("lang", next);
-    window.location.href = u.pathname + u.search + u.hash;
-  }
-
-  function withLang(href, lang){
-    try{
-      const u = new URL(href, window.location.href);
-      u.searchParams.set("lang", lang);
-      return u.pathname + u.search + u.hash;
-    }catch(e){ return href; }
-  }
-
-  function initLangButtons(lang){
-    document.querySelectorAll("[data-langbtn]").forEach(btn => {
-      const code = btn.getAttribute("data-langbtn");
-      btn.classList.toggle("active", code === lang);
-      btn.addEventListener("click", () => setLang(code));
-    });
-  }
-
-  function initHamburger(){
-    const btn = document.getElementById("hamburger");
-    const menu = document.getElementById("mobileMenu");
-    if(!btn || !menu) return;
-
-    function close(){
-      menu.style.display = "none";
-      menu.setAttribute("data-open","0");
-      btn.setAttribute("aria-expanded","false");
-    }
-
-    btn.addEventListener("click", () => {
-      const open = menu.getAttribute("data-open") === "1";
-      if(open) close();
-      else {
-        menu.style.display = "block";
-        menu.setAttribute("data-open","1");
-        btn.setAttribute("aria-expanded","true");
+      function getLang(){
+        const p = new URLSearchParams(window.location.search);
+        const q = p.get("lang");
+        if(q && LANGS.includes(q)) return q;
+        const s = localStorage.getItem("lo_lang");
+        if(s && LANGS.includes(s)) return s;
+        return "en";
       }
-    });
 
-    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
-    document.addEventListener("click", (e) => {
-      if(menu.getAttribute("data-open") !== "1") return;
-      if(menu.contains(e.target) || btn.contains(e.target)) return;
-      close();
-    });
-  }
+      function setLang(next){
+        if(!LANGS.includes(next)) return;
+        localStorage.setItem("lo_lang", next);
+        const u = new URL(window.location.href);
+        u.searchParams.set("lang", next);
+        window.location.href = u.pathname + u.search + u.hash;
+      }
 
-  window.__LO__ = { getLang, setLang, withLang, initLangButtons, initHamburger };
-})();
+      function buildUrl(path, lang, hash){
+        const u = new URL(path, window.location.href);
+        u.searchParams.set("lang", lang);
+        if(hash) u.hash = hash;
+        return u.pathname + u.search + u.hash;
+      }
+
+      function initLangMenu(lang){
+        const toggle = document.getElementById("langToggle");
+        const menu = document.getElementById("langMenu");
+        const codeEl = document.getElementById("langCode");
+        if(!toggle || !menu || !codeEl) return;
+
+        const codes = { en:"EN", de:"DE", it:"IT" };
+        codeEl.textContent = codes[lang] || "EN";
+
+        function close(){
+          menu.hidden = true;
+          toggle.setAttribute("aria-expanded","false");
+        }
+        function open(){
+          menu.hidden = false;
+          toggle.setAttribute("aria-expanded","true");
+        }
+
+        toggle.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const isOpen = !menu.hidden;
+          if(isOpen) close();
+          else open();
+        });
+
+        document.addEventListener("click", () => close(), { passive:true });
+        document.addEventListener("keydown", (e) => { if(e.key === "Escape") close(); });
+
+        menu.querySelectorAll("[data-lang]").forEach(btn => {
+          const code = btn.getAttribute("data-lang");
+          btn.setAttribute("aria-current", code === lang ? "true" : "false");
+          btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setLang(code);
+          });
+        });
+      }
+
+      function initHamburger(){
+        const btn = document.getElementById("hamburger");
+        const menu = document.getElementById("mobileMenu");
+        if(!btn || !menu) return;
+
+        function close(){
+          menu.style.display = "none";
+          menu.setAttribute("data-open","0");
+          btn.setAttribute("aria-expanded","false");
+        }
+
+        btn.addEventListener("click", () => {
+          const open = menu.getAttribute("data-open") === "1";
+          if(open) close();
+          else {
+            menu.style.display = "block";
+            menu.setAttribute("data-open","1");
+            btn.setAttribute("aria-expanded","true");
+          }
+        });
+
+        menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
+      }
+
+      window.__LO__ = { getLang, setLang, buildUrl, initLangMenu, initHamburger };
+    })();
   </script>
 </head>
 
@@ -343,42 +399,31 @@ html{scrollbar-gutter:stable}
   <header>
     <div class="container">
       <div class="navInner">
-        <a class="brand" href="../index.html" aria-label="Luxury Obsession">
-          <img class="brandIcon" src="../images/icon.png" alt="Luxury Obsession icon">
-          <img class="brandWordmark" src="../images/wordmark.png" alt="Luxury Obsession wordmark"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-          <span class="brandText" style="display:none">Luxury Obsession</span>
+        <a id="brandHome" class="brand" href="../index.html" aria-label="Luxury Obsession">
+          <img class="brandIcon" src="../images/icon.png" alt="Luxury Obsession icon" />
+          <span class="brandGold">Luxury Obsession</span>
         </a>
 
         <div class="navRight">
           <nav class="navLinks" aria-label="Primary">
-            <a id="navPricing" href="pricing.html">Pricing</a>
-            <a id="navBlog" href="blog.html">Blog</a>
+            <a id="navRates" href="pricing.html">Rates</a>
+            <a id="navPhilosophy" href="../philosophy.html">Our Philosophy</a>
+            <a id="navExperiences" href="../experiences.html">Experiences</a>
+            <a id="navBlog" href="blog.html">Journal</a>
             <a id="navContact" href="../index.html#contact">Contact</a>
-            <a id="navRequest" class="navCta" href="../index.html#request">Request a quote</a>
+            <a id="navRequest" class="navCta" href="../index.html#request">Request</a>
           </nav>
 
-          <div class="langPicker" aria-label="Language">
-            <button type="button" class="flagBtn" data-langbtn="en" title="English"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
-  <defs><clipPath id="ukClip"><rect width="22" height="14" rx="2" ry="2"/></clipPath></defs>
-  <g clip-path="url(#ukClip)">
-    <rect width="22" height="14" fill="#012169"/>
-    <path d="M0 0 L22 14 M22 0 L0 14" stroke="#FFFFFF" stroke-width="3"/>
-    <path d="M0 0 L22 14 M22 0 L0 14" stroke="#C8102E" stroke-width="1.6"/>
-    <path d="M11 0 V14 M0 7 H22" stroke="#FFFFFF" stroke-width="5"/>
-    <path d="M11 0 V14 M0 7 H22" stroke="#C8102E" stroke-width="3"/>
-  </g>
-</svg></button>
-            <button type="button" class="flagBtn" data-langbtn="de" title="Deutsch"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
-  <rect width="22" height="14" rx="2" ry="2" fill="#000000"/>
-  <rect y="4.67" width="22" height="4.67" fill="#DD0000"/>
-  <rect y="9.33" width="22" height="4.67" fill="#FFCE00"/>
-</svg></button>
-            <button type="button" class="flagBtn" data-langbtn="it" title="Italiano"><svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true" style="border-radius:3px">
-  <rect width="22" height="14" rx="2" ry="2" fill="#FFFFFF"/>
-  <rect width="7.33" height="14" rx="2" ry="2" fill="#009246"/>
-  <rect x="14.67" width="7.33" height="14" rx="2" ry="2" fill="#CE2B37"/>
-</svg></button>
+          <div class="langSelect" aria-label="Language">
+            <button type="button" id="langToggle" class="langToggle" aria-haspopup="menu" aria-expanded="false">
+              <span id="langCode" aria-label="Current language">EN</span>
+              <span class="langChevron" aria-hidden="true">▾</span>
+            </button>
+            <div id="langMenu" class="langMenu" role="menu" aria-label="Select language" hidden>
+              <button type="button" class="langOption" role="menuitem" data-lang="en">English</button>
+              <button type="button" class="langOption" role="menuitem" data-lang="de">Deutsch</button>
+              <button type="button" class="langOption" role="menuitem" data-lang="it">Italiano</button>
+            </div>
           </div>
 
           <button id="hamburger" type="button" class="hamburger" aria-label="menu" aria-expanded="false">
@@ -388,30 +433,34 @@ html{scrollbar-gutter:stable}
       </div>
 
       <div id="mobileMenu" class="mobileMenu" data-open="0" role="navigation" aria-label="Mobile" style="display:none">
-        <a id="mPricing" href="pricing.html">Pricing<span>›</span></a>
-        <a id="mBlog" href="blog.html">Blog<span>›</span></a>
-        <a id="mContact" href="../index.html#contact">Contact<span>›</span></a>
+        <a id="mRates" href="pricing.html">Rates</a>
+        <a id="mPhilosophy" href="../philosophy.html">Our Philosophy</a>
+        <a id="mExperiences" href="../experiences.html">Experiences</a>
+        <a id="mBlog" href="blog.html">Journal</a>
+        <a id="mContact" href="../index.html#contact">Contact</a>
+        <a id="mImpressum" href="../impressum.html">Impressum</a>
         <div class="mobileMenuDivider"></div>
-        <a id="mRequest" class="mobileMenuCta" href="../index.html#request">Request a quote</a>
+        <a id="mRequest" class="mobileMenuCta" href="../index.html#request">Request</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section id="top" class="hero" style="padding-top:2.2rem">
+    <section id="top" class="pageHero">
       <div class="container">
         <div class="eyebrow" id="eyebrow"></div>
-        <h1 class="sectionTitle" style="margin-top:0.55rem" id="pageTitle"></h1>
-        <p class="sectionSub" id="subtitle"></p>
+        <h1 class="heroTitle"><span id="heroTitleA"></span> <span class="heroHighlight" id="heroTitleB"></span></h1>
+        <p class="heroSubtitle" id="heroSubtitle"></p>
 
-        <div class="grid12" style="margin-top:1.1rem">
+        <div class="grid12" style="margin-top:1.4rem">
           <div class="card span-6 span-md-12">
             <div class="locTitleRow">
               <h3 style="margin:0" id="freeTitle"></h3>
               <span class="locPill" id="freePill"></span>
             </div>
             <p class="locNote" style="margin-top:0.55rem">
-              <a class="locLink" data-internal href="ferrari-rental-nanikon.html">Nänikon</a> <span style="color:var(--muted)">(Waldaustrasse 2)</span>
+              <a class="locLink" data-internal href="ferrari-rental-nanikon.html" id="locNanikon">Nänikon</a>
+              <span style="color:var(--muted)" id="nanikonAddrNote"></span>
             </p>
           </div>
 
@@ -421,9 +470,9 @@ html{scrollbar-gutter:stable}
               <span class="locPill" id="b0Fee"></span>
             </div>
             <ul class="locList">
-              <li><a class="locLink" data-internal href="ferrari-rental-zurich.html">Zurich</a></li>
-              <li><a class="locLink" data-internal href="ferrari-rental-zurich-airport.html">Zurich Airport</a></li>
-              <li><a class="locLink" data-internal href="ferrari-rental-winterthur.html">Winterthur</a></li>
+              <li><a class="locLink" data-internal href="ferrari-rental-zurich.html" id="locZurich">Zurich</a></li>
+              <li><a class="locLink" data-internal href="ferrari-rental-zurich-airport.html" id="locZurichAirport">Zurich Airport</a></li>
+              <li><a class="locLink" data-internal href="ferrari-rental-winterthur.html" id="locWinterthur">Winterthur</a></li>
             </ul>
             <p class="locNote" id="br0Note"></p>
           </div>
@@ -434,10 +483,9 @@ html{scrollbar-gutter:stable}
               <span class="locPill" id="b1Fee"></span>
             </div>
             <ul class="locList">
-              <li><a class="locLink" data-internal href="ferrari-rental-zug.html">Zug</a></li>
-              <li><a class="locLink" data-internal href="ferrari-rental-lucerne.html">Lucerne</a></li>
-              <li><a class="locLink" data-internal href="ferrari-rental-st-gallen.html">St. Gallen</a></li>
-              <li><a class="locLink" data-internal href="ferrari-rental-konstanz.html">Konstanz</a></li>
+              <li><a class="locLink" data-internal href="ferrari-rental-zug.html" id="locZug">Zug</a></li>
+              <li><a class="locLink" data-internal href="ferrari-rental-lucerne.html" id="locLucerne">Lucerne</a></li>
+              <li><a class="locLink" data-internal href="ferrari-rental-st-gallen.html" id="locStGallen">St. Gallen</a></li>
             </ul>
           </div>
 
@@ -447,12 +495,18 @@ html{scrollbar-gutter:stable}
               <span class="locPill" id="b2Fee"></span>
             </div>
             <ul class="locList">
-              <li><a class="locLink" data-internal href="ferrari-rental-bern.html">Bern</a></li>
-              <li><a class="locLink" data-internal href="ferrari-rental-biel.html">Biel</a></li>
-              <li><a class="locLink" data-internal href="ferrari-rental-basel.html">Basel</a></li>
-              <li><a class="locLink" data-internal href="ferrari-rental-chur.html">Chur</a></li>
-              <li><a class="locLink" data-internal href="ferrari-rental-davos.html">Davos</a> <span style="color:var(--muted)">(pickup in Chur)</span></li>
-              <li><a class="locLink" data-internal href="ferrari-rental-andermatt.html">Andermatt</a> <span style="color:var(--muted)">(pickup in Altdorf UR)</span></li>
+              <li><a class="locLink" data-internal href="ferrari-rental-bern.html" id="locBern">Bern</a></li>
+              <li><a class="locLink" data-internal href="ferrari-rental-biel.html" id="locBiel">Biel</a></li>
+              <li><a class="locLink" data-internal href="ferrari-rental-basel.html" id="locBasel">Basel</a></li>
+              <li><a class="locLink" data-internal href="ferrari-rental-chur.html" id="locChur">Chur</a></li>
+              <li>
+                <a class="locLink" data-internal href="ferrari-rental-davos.html" id="locDavos">Davos</a>
+                <span style="color:var(--muted)" id="davosNote"></span>
+              </li>
+              <li>
+                <a class="locLink" data-internal href="ferrari-rental-andermatt.html" id="locAndermatt">Andermatt</a>
+                <span style="color:var(--muted)" id="andermattNote"></span>
+              </li>
             </ul>
           </div>
 
@@ -466,7 +520,7 @@ html{scrollbar-gutter:stable}
           </div>
         </div>
 
-        <p class="pricingNote" style="margin-top:1.1rem" id="footNote"></p>
+        <p class="pricingNote" id="footNote"></p>
       </div>
     </section>
   </main>
@@ -474,115 +528,282 @@ html{scrollbar-gutter:stable}
   <footer>
     <div class="container footerInner">
       <div>© <span id="year"></span> Luxury Obsession.</div>
-      <div id="footerLine">Ferrari only experiences, Switzerland.</div>
+      <div class="footerCenter">Currently available: Ferrari 458 Italia.</div>
+      <div class="footerRight">
+        <a data-internal href="../impressum.html" id="footerImpressum">Impressum</a>
+        <span aria-hidden="true">·</span>
+        <span id="footerLine">Ferrari only experiences, Switzerland.</span>
+      </div>
     </div>
   </footer>
 
   <script>
-const I18N = {
-  en:{
-    navPricing:"Pricing", navBlog:"Blog", navContact:"Contact", navRequest:"Request a quote",
-    eyebrow:"Pickup locations",
-    title:"Pickup locations",
-    subtitle:"Default pickup is Nänikon. Choose another city below or request a quote for anywhere else in Switzerland.",
-    freeTitle:"Nänikon", freePill:"FREE",
-    br0Title:"Zurich area", b0Fee:"FREE in 2026", br0Note:"Zurich, Zurich Airport and Winterthur are free in 2026.",
-    br1Title:"Regional pickup", b1Fee:"CHF 140",
-    br2Title:"Longer distance pickup", b2Fee:"CHF 290",
-    otherTitle:"Other locations",
-    otherNote:"If your city is not listed, we will quote it quickly by phone, WhatsApp or email.",
-    btnRequest:"Request a quote", btnMap:"Open Nänikon map",
-    footNote:"Fees are per pickup or drop off. Ask for a quote if you want a custom plan.",
-    footerLine:"Ferrari only experiences, Switzerland."
-  },
-  de:{
-    navPricing:"Preise", navBlog:"Blog", navContact:"Kontakt", navRequest:"Offerte anfragen",
-    eyebrow:"Abholorte",
-    title:"Abholorte",
-    subtitle:"Standard Abholung in Nänikon. Wähle unten eine andere Stadt oder frage ein Angebot für jeden anderen Ort in der Schweiz an.",
-    freeTitle:"Nänikon", freePill:"GRATIS",
-    br0Title:"Region Zürich", b0Fee:"Gratis im 2026", br0Note:"Zürich, Flughafen Zürich und Winterthur sind im 2026 gratis.",
-    br1Title:"Regionale Abholung", b1Fee:"CHF 140",
-    br2Title:"Weitere Distanz", b2Fee:"CHF 290",
-    otherTitle:"Andere Orte",
-    otherNote:"Wenn deine Stadt nicht aufgeführt ist, erstellen wir schnell eine Offerte per Telefon, WhatsApp oder E Mail.",
-    btnRequest:"Offerte anfragen", btnMap:"Nänikon Karte öffnen",
-    footNote:"Gebühren pro Abholung oder Rückgabe. Für individuelle Pläne einfach anfragen.",
-    footerLine:"Ferrari only experiences, Switzerland."
-  },
-  it:{
-    navPricing:"Prezzi", navBlog:"Blog", navContact:"Contatto", navRequest:"Richiedi preventivo",
-    eyebrow:"Luoghi di ritiro",
-    title:"Luoghi di ritiro",
-    subtitle:"Il ritiro standard è a Nänikon. Scegli un'altra città qui sotto o richiedi un preventivo per qualsiasi altra località in Svizzera.",
-    freeTitle:"Nänikon", freePill:"GRATIS",
-    br0Title:"Area Zurigo", b0Fee:"Gratis nel 2026", br0Note:"Zurigo, Aeroporto di Zurigo e Winterthur sono gratuiti nel 2026.",
-    br1Title:"Ritiro regionale", b1Fee:"CHF 140",
-    br2Title:"Distanza maggiore", b2Fee:"CHF 290",
-    otherTitle:"Altre località",
-    otherNote:"Se la tua località non è in elenco, ti facciamo un preventivo rapido via telefono, WhatsApp o email.",
-    btnRequest:"Richiedi preventivo", btnMap:"Apri mappa Nänikon",
-    footNote:"Tariffe per ritiro o consegna. Per piani personalizzati chiedi un preventivo.",
-    footerLine:"Ferrari only experiences, Switzerland."
-  }
-};
+    const I18N = {
+      en:{
+        navRates:"Rates",
+        navPhilosophy:"Our Philosophy",
+        navExperiences:"Experiences",
+        navBlog:"Journal",
+        navContact:"Contact",
+        navRequest:"Request",
+        navImpressum:"Impressum",
 
-function init(){
-  const lang = window.__LO__.getLang();
-  document.documentElement.lang = lang;
-  window.__LO__.initLangButtons(lang);
-  window.__LO__.initHamburger();
+        eyebrow:"Pickup",
+        heroTitleA:"Pickup",
+        heroTitleB:"Locations",
+        heroSubtitle:"Your experience begins at our private host point in Nänikon near Zurich.\n\nAlternative cities are available with a transparent transfer fee. Fees apply per pickup or drop off.",
 
-  const t = I18N[lang] || I18N.en;
+        freeTitle:"Nänikon",
+        freePill:"Included",
+        nanikonAddrNote:"(Waldaustrasse 2)",
 
-  // Header labels
-  document.getElementById("navPricing").textContent = t.navPricing;
-  document.getElementById("navBlog").textContent = t.navBlog;
-  document.getElementById("navContact").textContent = t.navContact;
-  document.getElementById("navRequest").textContent = t.navRequest;
+        br0Title:"Zurich area",
+        b0Fee:"Included in 2026",
+        br0Note:"Zurich, Zurich Airport, and Winterthur are included in 2026.",
 
-  document.getElementById("mPricing").childNodes[0].nodeValue = t.navPricing;
-  document.getElementById("mBlog").childNodes[0].nodeValue = t.navBlog;
-  document.getElementById("mContact").childNodes[0].nodeValue = t.navContact;
-  document.getElementById("mRequest").textContent = t.navRequest;
+        br1Title:"Regional pickup",
+        b1Fee:"CHF 140",
 
-  // Apply lang to internal links
-  document.querySelectorAll("a[data-internal]").forEach(a => {
-    a.setAttribute("href", window.__LO__.withLang(a.getAttribute("href"), lang));
-  });
-  document.getElementById("navPricing").href = window.__LO__.withLang("pricing.html", lang);
-  document.getElementById("navBlog").href = window.__LO__.withLang("blog.html", lang);
-  document.getElementById("navContact").href = window.__LO__.withLang("../index.html#contact", lang);
-  document.getElementById("navRequest").href = window.__LO__.withLang("../index.html#request", lang);
-  document.getElementById("mPricing").href = window.__LO__.withLang("pricing.html", lang);
-  document.getElementById("mBlog").href = window.__LO__.withLang("blog.html", lang);
-  document.getElementById("mContact").href = window.__LO__.withLang("../index.html#contact", lang);
-  document.getElementById("mRequest").href = window.__LO__.withLang("../index.html#request", lang);
+        br2Title:"Extended pickup",
+        b2Fee:"CHF 290",
 
-  // Page content
-  document.getElementById("eyebrow").textContent = t.eyebrow;
-  document.getElementById("pageTitle").textContent = t.title;
-  document.getElementById("subtitle").textContent = t.subtitle;
-  document.getElementById("freeTitle").textContent = t.freeTitle;
-  document.getElementById("freePill").textContent = t.freePill;
-  document.getElementById("br0Title").textContent = t.br0Title;
-  document.getElementById("b0Fee").textContent = t.b0Fee;
-  document.getElementById("br0Note").textContent = t.br0Note;
-  document.getElementById("br1Title").textContent = t.br1Title;
-  document.getElementById("b1Fee").textContent = t.b1Fee;
-  document.getElementById("br2Title").textContent = t.br2Title;
-  document.getElementById("b2Fee").textContent = t.b2Fee;
-  document.getElementById("otherTitle").textContent = t.otherTitle;
-  document.getElementById("otherNote").textContent = t.otherNote;
-  document.getElementById("btnRequest").textContent = t.btnRequest;
-  document.getElementById("btnMap").textContent = t.btnMap;
-  document.getElementById("footNote").textContent = t.footNote;
-  document.getElementById("footerLine").textContent = t.footerLine;
+        otherTitle:"Any other city",
+        otherNote:"Tell us your preferred handover point. We confirm feasibility and the transfer fee quickly by phone, WhatsApp, or email.",
 
-  document.getElementById("year").textContent = String(new Date().getFullYear());
-}
+        btnRequest:"Request a quote",
+        btnMap:"Open Nänikon map",
 
-document.addEventListener("DOMContentLoaded", init);
+        footNote:"Fees are per pickup or drop off. For multi day or bespoke itineraries, we can arrange a tailored handover.",
+        footerLine:"Ferrari only experiences, Switzerland.",
+
+        davosNote:"(pickup in Chur)",
+        andermattNote:"(pickup in Altdorf UR)",
+
+        locZurich:"Zurich",
+        locZurichAirport:"Zurich Airport",
+        locWinterthur:"Winterthur",
+        locZug:"Zug",
+        locLucerne:"Lucerne",
+        locStGallen:"St. Gallen",
+        locKonstanz:"Konstanz",
+        locBern:"Bern",
+        locBiel:"Biel",
+        locBasel:"Basel",
+        locChur:"Chur",
+        locDavos:"Davos",
+        locAndermatt:"Andermatt",
+        locNanikon:"Nänikon"
+      },
+      de:{
+        navRates:"Tarife",
+        navPhilosophy:"Unsere Philosophie",
+        navExperiences:"Anlässe",
+        navBlog:"Journal",
+        navContact:"Kontakt",
+        navRequest:"Anfrage",
+        navImpressum:"Impressum",
+
+        eyebrow:"Abholung",
+        heroTitleA:"Abholung",
+        heroTitleB:"Orte",
+        heroSubtitle:"Ihre Fahrt beginnt an unserem privaten Host Point in Nänikon bei Zürich.\n\nAlternative Orte sind möglich mit transparenter Transfergebühr. Gebühren gelten pro Abholung oder Rückgabe.",
+
+        freeTitle:"Nänikon",
+        freePill:"Inklusive",
+        nanikonAddrNote:"(Waldaustrasse 2)",
+
+        br0Title:"Region Zürich",
+        b0Fee:"Inklusive 2026",
+        br0Note:"Zürich, Flughafen Zürich und Winterthur sind 2026 inklusive.",
+
+        br1Title:"Regionale Abholung",
+        b1Fee:"CHF 140",
+
+        br2Title:"Weitere Distanz",
+        b2Fee:"CHF 290",
+
+        otherTitle:"Jeder andere Ort",
+        otherNote:"Nennen Sie Ihren gewünschten Übergabepunkt. Wir bestätigen Machbarkeit und Transfergebühr schnell per Telefon, WhatsApp oder E Mail.",
+
+        btnRequest:"Verfügbarkeit anfragen",
+        btnMap:"Karte Nänikon öffnen",
+
+        footNote:"Gebühren pro Abholung oder Rückgabe. Für mehrtägige oder individuelle Pläne organisieren wir die Übergabe passend.",
+        footerLine:"Ferrari only experiences, Switzerland.",
+
+        davosNote:"(Abholung in Chur)",
+        andermattNote:"(Abholung in Altdorf UR)",
+
+        locZurich:"Zürich",
+        locZurichAirport:"Flughafen Zürich",
+        locWinterthur:"Winterthur",
+        locZug:"Zug",
+        locLucerne:"Luzern",
+        locStGallen:"St. Gallen",
+        locKonstanz:"Konstanz",
+        locBern:"Bern",
+        locBiel:"Biel",
+        locBasel:"Basel",
+        locChur:"Chur",
+        locDavos:"Davos",
+        locAndermatt:"Andermatt",
+        locNanikon:"Nänikon"
+      },
+      it:{
+        navRates:"Tariffe",
+        navPhilosophy:"La nostra filosofia",
+        navExperiences:"Esperienze",
+        navBlog:"Journal",
+        navContact:"Contatti",
+        navRequest:"Richiesta",
+        navImpressum:"Impressum",
+
+        eyebrow:"Ritiro",
+        heroTitleA:"Ritiro",
+        heroTitleB:"Località",
+        heroSubtitle:"La tua esperienza inizia presso il nostro host point privato a Nänikon, vicino a Zurigo.\n\nAltre città sono disponibili con una tariffa di trasferimento trasparente. Le tariffe valgono per ritiro o consegna.",
+
+        freeTitle:"Nänikon",
+        freePill:"Incluso",
+        nanikonAddrNote:"(Waldaustrasse 2)",
+
+        br0Title:"Area Zurigo",
+        b0Fee:"Incluso nel 2026",
+        br0Note:"Zurigo, Aeroporto di Zurigo e Winterthur sono inclusi nel 2026.",
+
+        br1Title:"Ritiro regionale",
+        b1Fee:"CHF 140",
+
+        br2Title:"Ritiro a distanza",
+        b2Fee:"CHF 290",
+
+        otherTitle:"Qualsiasi altra città",
+        otherNote:"Indicaci il punto di consegna desiderato. Confermiamo rapidamente fattibilità e tariffa via telefono, WhatsApp o email.",
+
+        btnRequest:"Richiedi preventivo",
+        btnMap:"Apri mappa Nänikon",
+
+        footNote:"Tariffe per ritiro o consegna. Per itinerari su misura, organizziamo una consegna dedicata.",
+        footerLine:"Ferrari only experiences, Switzerland.",
+
+        davosNote:"(ritiro a Chur)",
+        andermattNote:"(ritiro ad Altdorf UR)",
+
+        locZurich:"Zurigo",
+        locZurichAirport:"Aeroporto di Zurigo",
+        locWinterthur:"Winterthur",
+        locZug:"Zug",
+        locLucerne:"Lucerna",
+        locStGallen:"San Gallo",
+        locKonstanz:"Costanza",
+        locBern:"Berna",
+        locBiel:"Biel",
+        locBasel:"Basilea",
+        locChur:"Coira",
+        locDavos:"Davos",
+        locAndermatt:"Andermatt",
+        locNanikon:"Nänikon"
+      }
+    };
+
+    function init(){
+      const lang = window.__LO__.getLang();
+      document.documentElement.lang = lang;
+      window.__LO__.initLangMenu(lang);
+      window.__LO__.initHamburger();
+
+      const t = I18N[lang] || I18N.en;
+
+      const setText = (id, val) => { const el = document.getElementById(id); if(el) el.textContent = val; };
+      const setHref = (id, href) => { const el = document.getElementById(id); if(el) el.setAttribute("href", href); };
+
+      setText("navRates", t.navRates);
+      setText("navPhilosophy", t.navPhilosophy);
+      setText("navExperiences", t.navExperiences);
+      setText("navBlog", t.navBlog);
+      setText("navContact", t.navContact);
+      setText("navRequest", t.navRequest);
+
+      setText("mRates", t.navRates);
+      setText("mPhilosophy", t.navPhilosophy);
+      setText("mExperiences", t.navExperiences);
+      setText("mBlog", t.navBlog);
+      setText("mContact", t.navContact);
+      setText("mImpressum", t.navImpressum);
+      setText("mRequest", t.navRequest);
+
+      setText("eyebrow", t.eyebrow);
+      setText("heroTitleA", t.heroTitleA);
+      setText("heroTitleB", t.heroTitleB);
+      setText("heroSubtitle", t.heroSubtitle);
+
+      setText("freeTitle", t.freeTitle);
+      setText("freePill", t.freePill);
+      setText("nanikonAddrNote", t.nanikonAddrNote);
+
+      setText("br0Title", t.br0Title);
+      setText("b0Fee", t.b0Fee);
+      setText("br0Note", t.br0Note);
+
+      setText("br1Title", t.br1Title);
+      setText("b1Fee", t.b1Fee);
+
+      setText("br2Title", t.br2Title);
+      setText("b2Fee", t.b2Fee);
+
+      setText("otherTitle", t.otherTitle);
+      setText("otherNote", t.otherNote);
+
+      setText("btnRequest", t.btnRequest);
+      setText("btnMap", t.btnMap);
+      setText("footNote", t.footNote);
+      setText("footerLine", t.footerLine);
+
+      setText("davosNote", t.davosNote);
+      setText("andermattNote", t.andermattNote);
+
+      setText("locZurich", t.locZurich);
+      setText("locZurichAirport", t.locZurichAirport);
+      setText("locWinterthur", t.locWinterthur);
+      setText("locZug", t.locZug);
+      setText("locLucerne", t.locLucerne);
+      setText("locStGallen", t.locStGallen);
+      setText("locKonstanz", t.locKonstanz);
+      setText("locBern", t.locBern);
+      setText("locBiel", t.locBiel);
+      setText("locBasel", t.locBasel);
+      setText("locChur", t.locChur);
+      setText("locDavos", t.locDavos);
+      setText("locAndermatt", t.locAndermatt);
+      setText("locNanikon", t.locNanikon);
+
+      // Apply lang to internal links
+      document.querySelectorAll("a[data-internal]").forEach(a => {
+        a.setAttribute("href", window.__LO__.buildUrl(a.getAttribute("href"), lang));
+      });
+
+      setHref("brandHome", window.__LO__.buildUrl("../index.html", lang));
+      setHref("navRates", window.__LO__.buildUrl("pricing.html", lang));
+      setHref("navPhilosophy", window.__LO__.buildUrl("../philosophy.html", lang));
+      setHref("navExperiences", window.__LO__.buildUrl("../experiences.html", lang));
+      setHref("navBlog", window.__LO__.buildUrl("blog.html", lang));
+      setHref("navContact", window.__LO__.buildUrl("../index.html", lang, "#contact"));
+      setHref("navRequest", window.__LO__.buildUrl("../index.html", lang, "#request"));
+
+      setHref("mRates", window.__LO__.buildUrl("pricing.html", lang));
+      setHref("mPhilosophy", window.__LO__.buildUrl("../philosophy.html", lang));
+      setHref("mExperiences", window.__LO__.buildUrl("../experiences.html", lang));
+      setHref("mBlog", window.__LO__.buildUrl("blog.html", lang));
+      setHref("mContact", window.__LO__.buildUrl("../index.html", lang, "#contact"));
+      setHref("mImpressum", window.__LO__.buildUrl("../impressum.html", lang));
+      setHref("mRequest", window.__LO__.buildUrl("../index.html", lang, "#request"));
+
+      setHref("footerImpressum", window.__LO__.buildUrl("../impressum.html", lang));
+
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    }
+
+    document.addEventListener("DOMContentLoaded", init);
   </script>
 </body>
 </html>
