@@ -9,10 +9,13 @@
 <meta property="og:title" content="Luxury Obsession | Our Philosophy"/>
 <meta property="og:description" content="Learn the philosophy behind Luxury Obsession and why the Ferrari 458 Italia is our singular, privately hosted selection in Zurich."/>
 <meta property="og:type" content="website"/>
-<meta property="og:image" content="images/image00100.png"/>
+<meta property="og:image" content="media/image00100.png"/>
+  <link rel="icon" href="media/icon.png" />
+  <link rel="apple-touch-icon" href="media/icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
 <style>
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap");
@@ -26,7 +29,7 @@
   --titaniumA:rgba(252,252,253,0.92);
   --titaniumB:rgba(176,176,186,0.70);
   --hairline:rgba(231,220,198,0.18);
-  --carbonImage:url("images/carbon.jpg");
+  --carbonImage:url("media/carbon.jpg");
   --text:#f5f5f5;
   --muted:#a3a3a3;
   --border:#262637;
@@ -52,6 +55,27 @@ header{
 .brandIcon{width:var(--logoSize);height:var(--logoSize);object-fit:contain;display:block}
 .brandWordmark{height:var(--wordmarkH);width:auto;object-fit:contain;display:block}
 .brandText{font-size:1.05rem;font-weight:850;letter-spacing:0.02em}
+
+/* Brand wordmark style to match index */
+.brandGold{
+  font-family:"Cinzel", serif;
+  font-weight:700;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  font-size: clamp(1.05rem, 1.2vw + 0.9rem, 1.2rem);
+  line-height:1;
+  background:linear-gradient(135deg,
+    rgba(252,252,253,0.92),
+    rgba(231,220,198,0.96),
+    rgba(200,183,155,0.92),
+    rgba(231,220,198,0.96)
+  );
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  display:inline-block;
+  white-space:nowrap;
+}
 @media (max-width:640px){
   .brandIcon{width:34px;height:34px}
   .brandWordmark{height:28px}
@@ -524,6 +548,44 @@ header > .container{position:relative; z-index:1;}
 ;
   z-index:0
 }
+
+.heroQuote{
+  position:absolute;
+  top:1.25rem;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:2;
+  margin:0;
+  padding:0.65rem 0.95rem;
+  border-radius:999px;
+  border:1px solid rgba(231,220,198,0.22);
+  background:rgba(7,7,10,0.55);
+  backdrop-filter:blur(10px);
+  color:rgba(252,252,253,0.92);
+  font-family:"Cormorant Garamond", serif;
+  font-style:italic;
+  font-size:clamp(1.0rem, 1.2vw + 0.65rem, 1.35rem);
+  letter-spacing:0.02em;
+  text-align:center;
+  max-width:min(92vw, 780px);
+}
+.heroQuote span{display:block; padding:0 0.3rem;}
+@media (max-width: 560px){
+  .heroQuote{top:0.85rem; padding:0.55rem 0.8rem; font-size:1.05rem;}
+}
+@media (max-height: 560px){
+  .heroQuote{top:0.75rem;}
+}
+
+.mediaCaptionBox{
+  background:rgba(7,7,10,0.55);
+  border:1px solid rgba(231,220,198,0.16);
+  border-radius:22px;
+  padding:1.05rem 1.15rem;
+  backdrop-filter:blur(12px);
+  box-shadow:0 18px 55px rgba(0,0,0,0.45);
+}
+.mediaSubtitle{color:rgba(243,241,238,0.80);margin:0;max-width:42rem;}
 .mediaOverlay{
   position:absolute;inset:0;
   display:flex;align-items:flex-end;
@@ -774,7 +836,7 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
     inset:auto !important;
     width:100%;
     height:auto;
-    max-height:72vh;
+    max-height:62vh;
     display:block;
     object-fit:cover;
     object-position:top center;
@@ -791,9 +853,19 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
   section.hero{padding-top:1.2rem !important; padding-bottom:1.6rem !important;}
 }
 
+@media (max-width: 520px){
+  .mediaFull > img{
+    max-height:56vh;
+    object-position:center center;
+  }
+}
+
 @media (max-width: 460px){
   .mediaFull{min-height:0 !important;height:auto !important;}
-  .mediaFull > img{max-height:78vh;}
+  .mediaFull > img{
+    max-height:54vh;
+    object-position:center center;
+  }
 }
 
 /* Short height (landscape windows): avoid empty gaps, keep content flowing */
@@ -875,14 +947,14 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 <div class="container">
 <div class="navInner">
 <a aria-label="Luxury Obsession" class="brand" href="index.html">
-<img alt="Luxury Obsession icon" class="brandIcon" src="images/icon.png"/>
-<img alt="Luxury Obsession wordmark" class="brandWordmark" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" src="images/wordmark.png"/>
-<span class="brandText" style="display:none">Luxury Obsession</span>
+<img alt="Luxury Obsession icon" class="brandIcon" src="media/icon.png"/>
+<span class="brandGold">Luxury Obsession</span>
 </a>
 <div class="navRight">
-<nav aria-label="Primary" class="navLinks"><a href="index.html#pricing" id="navRates">Rates</a>
+<nav aria-label="Primary" class="navLinks"><a href="pages/pricing.html" id="navRates">Rates</a>
 <a href="philosophy.html" id="navPhilosophy">Our Philosophy</a>
 <a href="experiences.html" id="navExperiences">Experiences</a>
+<a href="pages/blog.html" id="navBlog">Journal</a>
 <a href="index.html#contact" id="navContact">Contact</a>
 <a class="navCta" href="index.html#request" id="navRequest">Request</a></nav>
 <div aria-label="Language" class="langSelect">
@@ -901,9 +973,10 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 </button>
 </div>
 </div>
-<div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation" style="display:none"><a href="index.html#pricing" id="mRates">Rates</a>
+<div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation" style="display:none"><a href="pages/pricing.html" id="mRates">Rates</a>
 <a href="philosophy.html" id="mPhilosophy">Our Philosophy</a>
 <a href="experiences.html" id="mExperiences">Experiences</a>
+<a href="pages/blog.html" id="mBlog">Journal</a>
 <a href="index.html#contact" id="mContact">Contact</a>
 <a href="impressum.html" id="mImpressum">Impressum</a><div class="mobileMenuDivider"></div>
 <a class="mobileMenuCta" href="index.html#request" id="mRequest">Request</a>
@@ -913,7 +986,8 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 <main>
 <section class="showcase" id="top">
   <div class="mediaFull" style="min-height:68vh">
-    <img src="images/image00100.png" alt="Our Philosophy"/>
+    <img src="media/image00100.png" alt="Our Philosophy"/>
+    <blockquote class="heroQuote"><span>Make the dream a reality</span></blockquote>
     <div class="mediaOverlay" style="align-items:flex-end">
       <div class="container">
         <div class="mediaCaption">
@@ -939,7 +1013,7 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
     <div class="grid12" style="margin-top:2.25rem">
       <div class="span-6 span-md-12">
         <div class="inlineMedia">
-          <img src="images/image00200.png" alt="Ferrari 458 Italia detail"/>
+          <img src="media/image00200.png" alt="Ferrari 458 Italia detail"/>
         </div>
         <div class="figureCaption">A singular selection, maintained and hosted privately.</div>
       </div>
@@ -1004,7 +1078,7 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
       </div>
       <div class="span-6 span-md-12" style="margin-top:0.5rem">
         <div class="inlineMedia">
-          <img src="images/image00150.png" alt="Driving experience"/>
+          <img src="media/image00150.png" alt="Driving experience"/>
         </div>
         <div class="figureCaption">Curated routes available on request, from city elegance to alpine drama.</div>
       </div>
@@ -1020,7 +1094,7 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
     </div>
     <div style="margin-top:1.15rem">
       <a class="btnPrimary" href="index.html#request">Request availability</a>
-      <a class="btnSecondary" href="index.html#pricing" style="margin-left:0.75rem">View rates</a>
+      <a class="btnSecondary" href="pages/pricing.html" style="margin-left:0.75rem">View rates</a>
     </div>
   </div>
 </section>
@@ -1030,9 +1104,10 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
     <div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
     <div class="footerCenter">Zurich, Switzerland.</div>
     <div class="footerRight">
-      <a href="index.html#pricing">Rates</a>
+      <a href="pages/pricing.html">Rates</a>
       <a href="philosophy.html">Our Philosophy</a>
       <a href="experiences.html">Experiences</a>
+      <a href="pages/blog.html">Journal</a>
       <a href="impressum.html">Impressum</a>
     </div>
   </div>

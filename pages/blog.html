@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Luxury Obsession | Journal</title>
+  <meta name="description" content="Luxury Obsession Journal: Ferrari routes in Switzerland, transparent rates, and ownership grade details." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Luxury Obsession | Journal" />
+  <meta property="og:description" content="Ferrari routes, transparent rates, and ownership grade details in Switzerland." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../media/image00100.png" />
+
+  <link rel="icon" href="../media/icon.png" />
+
+  <link rel="alternate" hreflang="en" href="blog.html?lang=en" />
+  <link rel="alternate" hreflang="de" href="blog.html?lang=de" />
+  <link rel="alternate" hreflang="it" href="blog.html?lang=it" />
+  <link rel="alternate" hreflang="x-default" href="blog.html?lang=en" />
+
+  <link rel="stylesheet" href="../assets/lo.css" />
+  <script defer src="../assets/lo.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="navInner">
+        <a class="brand" href="../index.html" aria-label="Luxury Obsession">
+          <img class="brandIcon" src="../media/icon.png" alt="Luxury Obsession icon" />
+          <span class="brandGold">Luxury Obsession</span>
+        </a>
+
+        <div class="navRight">
+          <nav class="navLinks" aria-label="Primary">
+            <a id="navRates" href="pricing.html">Rates</a>
+            <a id="navPhilosophy" href="../philosophy.html">Our Philosophy</a>
+            <a id="navExperiences" href="../experiences.html">Experiences</a>
+            <a id="navBlog" href="blog.html" aria-current="page">Journal</a>
+            <a id="navContact" href="../index.html#contact">Contact</a>
+            <a id="navRequest" class="navCta" href="../index.html#request">Request</a>
+          </nav>
+
+          <div class="langSelect" aria-label="Language">
+            <button type="button" class="langToggle" id="langToggle" aria-haspopup="menu" aria-expanded="false">
+              <span id="langCode" aria-label="Current language">EN</span>
+              <span class="langChevron" aria-hidden="true">▾</span>
+            </button>
+            <div id="langMenu" class="langMenu" role="menu" aria-label="Select language" hidden>
+              <button type="button" class="langOption" role="menuitem" data-lang="en">English</button>
+              <button type="button" class="langOption" role="menuitem" data-lang="de">Deutsch</button>
+              <button type="button" class="langOption" role="menuitem" data-lang="it">Italiano</button>
+            </div>
+          </div>
+
+          <button id="hamburger" type="button" class="hamburger" aria-label="menu" aria-expanded="false">
+            <div class="hamburgerLines"><span></span><span></span><span></span></div>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="mobileMenu" data-open="0" role="navigation" aria-label="Mobile" style="display:none">
+        <a id="mRates" href="pricing.html">Rates<span>›</span></a>
+        <a id="mPhilosophy" href="../philosophy.html">Our Philosophy<span>›</span></a>
+        <a id="mExperiences" href="../experiences.html">Experiences<span>›</span></a>
+        <a id="mBlog" href="blog.html" aria-current="page">Journal<span>›</span></a>
+        <a id="mContact" href="../index.html#contact">Contact<span>›</span></a>
+        <a id="mImpressum" href="../impressum.html">Impressum<span>›</span></a>
+        <div class="mobileMenuDivider"></div>
+        <a id="mRequest" class="mobileMenuCta" href="../index.html#request">Request</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="top" class="blogHero">
+      <div class="container">
+        <div class="eyebrow" id="eyebrow"></div>
+        <h1 class="heroTitle" style="margin-bottom:0.55rem">
+          <span id="heroTitleA"></span> <span class="heroHighlight" id="heroTitleB"></span>
+        </h1>
+        <p class="heroSubtitle" id="heroSubtitle"></p>
+
+        <div class="blogGrid" id="blogGrid"></div>
+
+        <div class="blogCTA">
+          <a class="btn btnSecondary" id="ctaRates" href="pricing.html">View rates</a>
+          <a class="btn btnPrimary" id="ctaRequest" href="../index.html#request">Request</a>
+        </div>
+
+        <p class="pricingNote" id="note"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footerInner">
+      <div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
+      <div class="footerCenter" id="footerCenter">Currently available: Ferrari 458 Italia.</div>
+      <div class="footerRight"><a href="../impressum.html" id="footerImpressum">Impressum</a></div>
+    </div>
+  </footer>
+
+  <script>
+const I18N = {
+  en:{
+    navRates:"Rates", navPhilosophy:"Our Philosophy", navExperiences:"Experiences", navBlog:"Journal", navContact:"Contact", navRequest:"Request",
+    eyebrow:"Journal",
+    heroTitleA:"Routes and notes", heroTitleB:"from Switzerland",
+    heroSubtitle:"A short journal on Ferrari routes, ownership grade details, and transparent terms. Written to help you plan a day where the car is the main event.",
+    ctaRates:"View rates", ctaRequest:"Request availability",
+    note:"New entries are added regularly. If you have a route in mind, we will refine it with timing, stops, and the right amount of kilometres.",
+    readLabel:"Read",
+    footerCenter:"Currently available: Ferrari 458 Italia.",
+    impressum:"Impressum"
+  },
+  de:{
+    navRates:"Tarife", navPhilosophy:"Unsere Philosophie", navExperiences:"Anlässe", navBlog:"Journal", navContact:"Kontakt", navRequest:"Anfrage",
+    eyebrow:"Journal",
+    heroTitleA:"Routen und Notizen", heroTitleB:"aus der Schweiz",
+    heroSubtitle:"Ein kurzes Journal über Ferrari Routen, Details wie beim Besitz, und transparente Konditionen. Geschrieben, um Ihren Tag so zu planen, dass das Auto im Mittelpunkt steht.",
+    ctaRates:"Tarife ansehen", ctaRequest:"Verfügbarkeit anfragen",
+    note:"Neue Einträge regelmässig. Wenn Sie eine Route im Kopf haben, verfeinern wir sie mit Timing, Stopps und der passenden Kilometerzahl.",
+    readLabel:"Lesen",
+    footerCenter:"Aktuell verfügbar: Ferrari 458 Italia.",
+    impressum:"Impressum"
+  },
+  it:{
+    navRates:"Tariffe", navPhilosophy:"La nostra filosofia", navExperiences:"Esperienze", navBlog:"Journal", navContact:"Contatti", navRequest:"Richiesta",
+    eyebrow:"Journal",
+    heroTitleA:"Itinerari e note", heroTitleB:"dalla Svizzera",
+    heroSubtitle:"Un journal breve su itinerari in Ferrari, dettagli da vero appassionato, e condizioni trasparenti. Scritto per aiutarti a progettare una giornata in cui l’auto è protagonista.",
+    ctaRates:"Vedi tariffe", ctaRequest:"Richiedi disponibilità",
+    note:"Nuovi articoli regolarmente. Se hai un itinerario in mente, lo ottimizziamo con tempi, soste e i chilometri giusti.",
+    readLabel:"Leggi",
+    footerCenter:"Disponibile ora: Ferrari 458 Italia.",
+    impressum:"Impressum"
+  }
+};
+
+const ARTICLES = [
+  {
+    slug: "ferrari-458-italia-the-signature-experience-in-switzerland.html",
+    category: {en:"Experience", de:"Erlebnis", it:"Esperienza"},
+    date: "2026-01-01",
+    read: {en:"6 min", de:"6 min", it:"6 min"},
+    title: {
+      en:"Ferrari 458 Italia. The signature experience in Switzerland",
+      de:"Ferrari 458 Italia. Das Signature Erlebnis in der Schweiz",
+      it:"Ferrari 458 Italia. L’esperienza signature in Svizzera"
+    },
+    excerpt: {
+      en:"Why the 458 still feels like the purest modern Ferrari, and how to plan a day where the car is the main event.",
+      de:"Warum der 458 sich wie der reinste moderne Ferrari anfühlt und wie man den perfekten Tag plant.",
+      it:"Perché la 458 è ancora la Ferrari moderna più pura e come progettare una giornata perfetta."
+    },
+    image: "../media/image00300.png"
+  },
+  {
+    slug: "swiss-routes-worth-driving-in-a-ferrari.html",
+    category: {en:"Routes", de:"Routen", it:"Itinerari"},
+    date: "2026-01-01",
+    read: {en:"7 min", de:"7 min", it:"7 min"},
+    title: {
+      en:"Swiss routes worth driving in a Ferrari",
+      de:"Schweizer Routen, die sich im Ferrari lohnen",
+      it:"Itinerari svizzeri da fare in Ferrari"
+    },
+    excerpt: {
+      en:"From lake roads to alpine passes. A shortlist that balances scenery, flow, and the kind of corners the 458 loves.",
+      de:"Von Seen bis Pässen. Eine Auswahl mit Flow, Aussicht und Kurven, die der 458 liebt.",
+      it:"Da laghi a passi alpini. Una selezione con flow, panorama e curve perfette per la 458."
+    },
+    image: "../media/image00500.jpg"
+  },
+  {
+    slug: "transparent-rates-how-we-design-packages-that-make-sense.html",
+    category: {en:"Rates", de:"Tarife", it:"Tariffe"},
+    date: "2026-01-01",
+    read: {en:"5 min", de:"5 min", it:"5 min"},
+    title: {
+      en:"Transparent rates. How we design packages that make sense",
+      de:"Transparente Tarife. So designen wir Pakete die Sinn machen",
+      it:"Tariffe trasparenti. Come costruiamo pacchetti sensati"
+    },
+    excerpt: {
+      en:"Why our rates stay simple, what is included, and how to choose between limited kilometres and unlimited without surprises.",
+      de:"Warum unsere Tarife einfach bleiben, was inklusive ist, und wie man ohne Überraschungen wählt.",
+      it:"Perché le tariffe restano semplici, cosa includono e come scegliere senza sorprese."
+    },
+    image: "../media/image00400.jpg"
+  }
+];
+
+function fmtDate(iso, lang){
+  try{
+    const d = new Date(iso + "T00:00:00");
+    const locale = ({en:"en-GB",de:"de-CH",it:"it-CH"})[lang] || "en-GB";
+    return d.toLocaleDateString(locale, { year:"numeric", month:"short", day:"2-digit" });
+  }catch(e){
+    return iso;
+  }
+}
+
+function renderArticles(lang){
+  const grid = document.getElementById("blogGrid");
+  grid.innerHTML = "";
+  const t = I18N[lang] || I18N.en;
+
+  ARTICLES.forEach(a => {
+    const card = document.createElement("a");
+    card.className = "card blogCard";
+    card.href = window.__LO__.buildUrl(a.slug, lang, "top");
+    card.setAttribute("aria-label", (a.title && (a.title[lang] || a.title.en)) || "Article");
+
+    const cat = (a.category && (a.category[lang] || a.category.en)) || "";
+    const read = (a.read && (a.read[lang] || a.read.en)) || "";
+    const date = fmtDate(a.date, lang);
+
+    card.innerHTML = `
+      <img class="blogThumb" src="${a.image}" alt="">
+      <div class="blogCardInner">
+        <div>
+          <div class="blogMeta">
+            <span class="blogPill">${cat}</span>
+            <span>·</span>
+            <span>${date}</span>
+            <span>·</span>
+            <span>${read}</span>
+          </div>
+          <h3 class="blogTitle">${(a.title && (a.title[lang] || a.title.en)) || ""}</h3>
+          <p class="blogExcerpt">${(a.excerpt && (a.excerpt[lang] || a.excerpt.en)) || ""}</p>
+        </div>
+        <div class="blogRead">${t.readLabel} <span>→</span></div>
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+function init(){
+  const lang = window.__LO__.getLang();
+  document.documentElement.lang = lang;
+  window.__LO__.initLangMenu(lang);
+  window.__LO__.initHamburger();
+
+  const t = I18N[lang] || I18N.en;
+
+  const setText = (id, txt) => { const el = document.getElementById(id); if(el) el.textContent = txt; };
+  const setHref = (id, href) => { const el = document.getElementById(id); if(el) el.setAttribute("href", href); };
+
+  setText("navRates", t.navRates);
+  setText("navPhilosophy", t.navPhilosophy);
+  setText("navExperiences", t.navExperiences);
+  setText("navBlog", t.navBlog);
+  setText("navContact", t.navContact);
+  setText("navRequest", t.navRequest);
+
+  setHref("navRates", window.__LO__.buildUrl("pricing.html", lang, "top"));
+  setHref("navPhilosophy", window.__LO__.buildUrl("../philosophy.html", lang, "top"));
+  setHref("navExperiences", window.__LO__.buildUrl("../experiences.html", lang, "top"));
+  setHref("navBlog", window.__LO__.buildUrl("blog.html", lang, "top"));
+  setHref("navContact", window.__LO__.buildUrl("../index.html", lang, "contact"));
+  setHref("navRequest", window.__LO__.buildUrl("../index.html", lang, "request"));
+
+  const setMobileText = (id, txt) => {
+    const el = document.getElementById(id);
+    if(!el) return;
+    const first = el.childNodes && el.childNodes[0];
+    if(first) first.nodeValue = txt;
+    else el.textContent = txt;
+  };
+
+  setMobileText("mRates", t.navRates);
+  setMobileText("mPhilosophy", t.navPhilosophy);
+  setMobileText("mExperiences", t.navExperiences);
+  setMobileText("mBlog", t.navBlog);
+  setMobileText("mContact", t.navContact);
+  setMobileText("mImpressum", t.impressum);
+  setText("mRequest", t.navRequest);
+
+  setHref("mRates", window.__LO__.buildUrl("pricing.html", lang, "top"));
+  setHref("mPhilosophy", window.__LO__.buildUrl("../philosophy.html", lang, "top"));
+  setHref("mExperiences", window.__LO__.buildUrl("../experiences.html", lang, "top"));
+  setHref("mBlog", window.__LO__.buildUrl("blog.html", lang, "top"));
+  setHref("mContact", window.__LO__.buildUrl("../index.html", lang, "contact"));
+  setHref("mImpressum", window.__LO__.buildUrl("../impressum.html", lang, "top"));
+  setHref("mRequest", window.__LO__.buildUrl("../index.html", lang, "request"));
+
+  document.getElementById("eyebrow").textContent = t.eyebrow;
+  document.getElementById("heroTitleA").textContent = t.heroTitleA;
+  document.getElementById("heroTitleB").textContent = t.heroTitleB;
+  document.getElementById("heroSubtitle").textContent = t.heroSubtitle;
+
+  document.getElementById("ctaRates").textContent = t.ctaRates;
+  document.getElementById("ctaRates").href = window.__LO__.buildUrl("pricing.html", lang, "top");
+  document.getElementById("ctaRequest").textContent = t.ctaRequest;
+  document.getElementById("ctaRequest").href = window.__LO__.buildUrl("../index.html", lang, "request");
+
+  document.getElementById("note").textContent = t.note;
+
+  document.getElementById("footerCenter").textContent = t.footerCenter;
+  document.getElementById("footerImpressum").textContent = t.impressum;
+  document.getElementById("footerImpressum").href = window.__LO__.buildUrl("../impressum.html", lang, "top");
+
+  renderArticles(lang);
+
+  document.getElementById("year").textContent = String(new Date().getFullYear());
+}
+
+document.addEventListener("DOMContentLoaded", init);
+  </script>
+</body>
+</html>

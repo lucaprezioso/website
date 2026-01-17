@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Luxury Obsession | Journal</title>
+  <meta name="description" content="Luxury Obsession Journal: Ferrari routes in Switzerland, transparent rates, and ownership grade details." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Luxury Obsession | Journal" />
+  <meta property="og:description" content="Ferrari routes, transparent rates, and ownership grade details in Switzerland." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../images/image00100.png" />
+
+  <link rel="icon" href="../images/icon.png" />
+
+  <link rel="alternate" hreflang="en" href="blog.html?lang=en" />
+  <link rel="alternate" hreflang="de" href="blog.html?lang=de" />
+  <link rel="alternate" hreflang="it" href="blog.html?lang=it" />
+  <link rel="alternate" hreflang="x-default" href="blog.html?lang=en" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+
+  <style>
+:root{
+  --bg:#050509;
+  --surface:rgba(12,12,16,0.62);
+  --surface2:rgba(12,12,16,0.92);
+  --text:#f3f1ee;
+  --muted:rgba(243,241,238,0.70);
+  --border:rgba(231,220,198,0.12);
+  --radius:16px;
+  --shadow:0 14px 40px rgba(0,0,0,0.30);
+  --max:1120px;
+
+  --champagne:#e7dcc6;
+  --titaniumA:rgba(252,252,253,0.92);
+  --titaniumB:rgba(176,176,186,0.70);
+  --hairline:rgba(231,220,198,0.18);
+
+  --font-sans:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --font-serif:"Cormorant Garamond",serif;
+  --font-display:"Cinzel",serif;
+
+  font-family:var(--font-sans);
+}
+
+*{box-sizing:border-box}
+html{scrollbar-gutter:stable}
+@supports not (scrollbar-gutter: stable){ html{overflow-y:scroll} }
+
+body{
+  margin:0;
+  background:
+    radial-gradient(1000px 600px at 20% -10%, rgba(200,183,155,0.12), transparent 55%),
+    radial-gradient(900px 520px at 85% 0%, rgba(139,15,20,0.10), transparent 55%),
+    var(--bg);
+  color:var(--text);
+  position:relative;
+}
+body::before{
+  content:"";
+  position:fixed; inset:0;
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(231,220,198,0.06), transparent 55%),
+    radial-gradient(circle at 80% 30%, rgba(177,18,29,0.04), transparent 60%),
+    radial-gradient(circle at 40% 90%, rgba(255,255,255,0.03), transparent 55%);
+  pointer-events:none;
+  z-index:-10;
+}
+
+a{color:inherit;text-decoration:none}
+
+header{
+  position:sticky;top:0;z-index:50;
+  isolation:isolate;
+  backdrop-filter:blur(12px);
+  background:linear-gradient(to bottom, rgba(5,5,9,0.92), rgba(5,5,9,0.74), transparent);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
+.navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.55rem 0}
+
+.brand{display:inline-flex;align-items:center;gap:0.65rem}
+.brandIcon{width:60px;height:60px;object-fit:contain;display:block}
+.brandGold{
+  font-family:var(--font-display);
+  font-weight:700;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  font-size:clamp(1.05rem, 1.2vw + 0.9rem, 1.2rem);
+  line-height:1;
+  background:linear-gradient(135deg,
+    rgba(252,252,253,0.92),
+    rgba(231,220,198,0.96),
+    rgba(200,183,155,0.92),
+    rgba(231,220,198,0.96)
+  );
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  text-shadow:0 10px 30px rgba(0,0,0,0.35);
+  white-space:nowrap;
+}
+
+@media (max-width:640px){
+  .brandIcon{width:34px;height:34px}
+  .brandGold{font-size:0.90rem;letter-spacing:0.14em;}
+}
+
+.navRight{display:flex;align-items:center;gap:0.65rem}
+.navLinks{display:flex;align-items:center;gap:0.8rem;font-size:0.9rem}
+.navLinks a{padding:0.35rem 0.65rem;border-radius:999px;color:rgba(243,241,238,0.86);font-weight:500;letter-spacing:0.01em;transition:0.2s}
+.navLinks a:hover{color:var(--text);background:rgba(255,255,255,0.05)}
+.navLinks a[aria-current="page"]{background:rgba(231,220,198,0.10);border:1px solid rgba(231,220,198,0.14)}
+
+.navCta{
+  padding:0.45rem 0.9rem;
+  border-radius:999px;
+  background:linear-gradient(135deg, rgba(231,220,198,0.95), rgba(252,252,253,0.92));
+  color:#0b0b10;
+  box-shadow:0 18px 55px rgba(0,0,0,0.40);
+  border:1px solid rgba(231,220,198,0.28);
+  font-size:0.85rem;
+  font-weight:600;
+}
+
+.langSelect{position:relative;display:inline-flex;align-items:center}
+.langToggle{
+  display:inline-flex;align-items:center;gap:0.45rem;
+  padding:0.5rem 0.75rem;border-radius:999px;
+  border:1px solid rgba(243,241,238,0.16);
+  background:rgba(243,241,238,0.03);
+  color:rgba(243,241,238,0.86);
+  cursor:pointer;font-size:0.85rem;letter-spacing:0.08em;
+}
+.langToggle:hover{background:rgba(243,241,238,0.06)}
+.langChevron{font-size:0.9rem;opacity:0.8}
+.langMenu{
+  position:absolute;right:0;top:calc(100% + 0.55rem);
+  min-width:190px;
+  background:rgba(5,5,9,0.92);
+  border:1px solid rgba(243,241,238,0.14);
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  padding:0.4rem;
+  backdrop-filter:blur(10px);
+}
+.langOption{
+  width:100%;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0.65rem 0.75rem;border-radius:12px;
+  background:transparent;border:none;
+  color:rgba(243,241,238,0.92);
+  cursor:pointer;font-size:0.92rem;
+}
+.langOption:hover{background:rgba(243,241,238,0.06)}
+.langOption[aria-current="true"]{background:rgba(231,220,198,0.10);border:1px solid rgba(231,220,198,0.22)}
+
+.hamburger{
+  display:none;
+  width:44px;height:44px;border-radius:999px;
+  border:1px solid rgba(231,220,198,0.18);
+  background:rgba(5,5,9,0.35);
+  cursor:pointer;
+  align-items:center;justify-content:center;
+}
+.hamburgerLines{display:grid;gap:4px}
+.hamburgerLines span{width:18px;height:2px;border-radius:999px;background:rgba(243,241,238,0.92);display:block}
+
+.mobileMenu{
+  display:none;margin:0.85rem 0 1.2rem;padding:0.85rem;
+  border-radius:20px;background:rgba(5,5,9,0.94);
+  border:1px solid rgba(231,220,198,0.14);
+  box-shadow:0 18px 55px rgba(0,0,0,0.55);
+  backdrop-filter:blur(12px);
+}
+.mobileMenu a{display:flex;align-items:center;justify-content:space-between;padding:0.7rem 0.75rem;border-radius:12px;color:rgba(243,241,238,0.92)}
+.mobileMenu a:hover{background:rgba(255,255,255,0.05)}
+.mobileMenuDivider{height:1px;background:rgba(231,220,198,0.10);margin:0.55rem 0}
+.mobileMenuCta{
+  display:flex;justify-content:center;padding:0.75rem 0.85rem;border-radius:14px;
+  background:linear-gradient(135deg, rgba(231,220,198,0.95), rgba(252,252,253,0.92));
+  color:#0b0b10 !important;
+  font-weight:600;
+  border:1px solid rgba(231,220,198,0.28);
+}
+
+main{padding-bottom:2.2rem}
+section{padding:3.4rem 0}
+.eyebrow{text-transform:uppercase;letter-spacing:0.24em;font-size:0.7rem;color:var(--muted);margin-bottom:0.75rem}
+
+h1,h2,h3,.heroTitle,.sectionTitle{font-family:var(--font-serif);letter-spacing:0.01em}
+.heroTitle{font-size:clamp(2.35rem,3.2vw + 1rem,3.55rem);line-height:1.05;margin:0 0 0.75rem;font-weight:600}
+.heroHighlight{color:var(--champagne)}
+.heroSubtitle{font-size:1.05rem;color:var(--muted);max-width:54ch;line-height:1.7;white-space:pre-line}
+
+.btn{
+  border-radius:999px;
+  padding:0.9rem 1.35rem;
+  border:none;outline:none;
+  cursor:pointer;
+  font-size:0.95rem;
+  display:inline-flex;align-items:center;gap:0.45rem;
+  white-space:nowrap;
+  font-weight:600;
+  letter-spacing:0.04em;
+}
+.btnPrimary{
+  background:linear-gradient(135deg, rgba(231,220,198,0.95), rgba(252,252,253,0.92));
+  color:#0b0b10;
+  box-shadow:0 18px 55px rgba(0,0,0,0.40);
+  border:1px solid rgba(231,220,198,0.28);
+}
+.btnSecondary{
+  background:transparent;
+  border:1px solid rgba(231,220,198,0.18);
+  color:rgba(243,241,238,0.88);
+}
+.btnSecondary:hover{border-color:rgba(231,220,198,0.35);background:rgba(255,255,255,0.04)}
+
+.card{
+  background:var(--surface);
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  padding:1.3rem;
+  box-shadow:var(--shadow);
+}
+
+/* Journal page */
+.blogHero{padding-top:2.2rem}
+.blogGrid{margin-top:2rem;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:1.2rem}
+.blogCard{grid-column:span 6;display:grid;grid-template-columns:170px 1fr;gap:1rem;align-items:stretch;cursor:pointer}
+.blogThumb{width:100%;height:100%;min-height:150px;border-radius:16px;object-fit:cover;border:1px solid rgba(231,220,198,0.14)}
+.blogMeta{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;color:var(--muted);font-size:0.82rem}
+.blogPill{display:inline-flex;align-items:center;gap:0.35rem;border-radius:999px;padding:0.18rem 0.6rem;background:rgba(231,220,198,0.06);border:1px solid rgba(231,220,198,0.12);color:rgba(243,241,238,0.78)}
+.blogTitle{margin:0.35rem 0 0.35rem;font-size:1.15rem;line-height:1.25}
+.blogExcerpt{margin:0;color:var(--muted);font-size:0.95rem;line-height:1.65}
+.blogRead{margin-top:0.85rem;display:inline-flex;align-items:center;gap:0.45rem;font-weight:600;color:rgba(243,241,238,0.92)}
+.blogRead span{color:var(--champagne)}
+.blogCard:focus{outline:none;box-shadow:0 0 0 2px rgba(231,220,198,0.28)}
+.blogCardInner{display:flex;flex-direction:column;justify-content:space-between}
+.blogCTA{margin-top:2rem;display:flex;flex-wrap:wrap;gap:0.9rem;align-items:center}
+
+.pricingNote{font-size:0.85rem;color:rgba(243,241,238,0.62);margin-top:1.25rem;line-height:1.7}
+
+@media(max-width:980px){
+  .blogCard{grid-column:span 12}
+}
+@media(max-width:760px){
+  .navLinks{display:none}
+  .hamburger{display:inline-flex}
+  .container{padding:0 1rem}
+}
+@media(max-width:560px){
+  .blogCard{grid-template-columns:1fr}
+  .blogThumb{min-height:190px}
+}
+
+footer{border-top:1px solid rgba(255,255,255,0.06);padding:1.4rem 0;font-size:0.78rem;color:rgba(243,241,238,0.70)}
+.footerInner{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center}
+.footerLeft{justify-self:start}
+.footerCenter{justify-self:center;color:rgba(243,241,238,0.64)}
+.footerRight{justify-self:end}
+.footerRight a{color:rgba(243,241,238,0.70)}
+.footerRight a:hover{color:rgba(243,241,238,0.92)}
+
+@media(max-width:820px){
+  .footerInner{grid-template-columns:1fr;gap:10px;text-align:center}
+  .footerLeft,.footerCenter,.footerRight{justify-self:center}
+}
+  </style>
+
+  <script>
+(function(){
+  const LANGS = ["en","de","it"];
+
+  function getLang(){
+    const p = new URLSearchParams(window.location.search);
+    const q = p.get("lang");
+    if(q && LANGS.includes(q)) return q;
+    const s = localStorage.getItem("lo_lang");
+    if(s && LANGS.includes(s)) return s;
+    return "en";
+  }
+
+  function setLang(next){
+    if(!LANGS.includes(next)) return;
+    localStorage.setItem("lo_lang", next);
+    const u = new URL(window.location.href);
+    u.searchParams.set("lang", next);
+    window.location.href = u.pathname + u.search + u.hash;
+  }
+
+  function buildUrl(path, lang, hash){
+    const u = new URL(path, window.location.href);
+    u.searchParams.set("lang", lang);
+    if(hash) u.hash = hash;
+    return u.pathname + u.search + u.hash;
+  }
+
+  function initLangMenu(lang){
+    const toggle = document.getElementById("langToggle");
+    const menu = document.getElementById("langMenu");
+    const codeEl = document.getElementById("langCode");
+    if(!toggle || !menu || !codeEl) return;
+
+    const codes = { en:"EN", de:"DE", it:"IT" };
+    codeEl.textContent = codes[lang] || "EN";
+
+    function close(){
+      menu.hidden = true;
+      toggle.setAttribute("aria-expanded","false");
+    }
+    function open(){
+      menu.hidden = false;
+      toggle.setAttribute("aria-expanded","true");
+    }
+
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = !menu.hidden;
+      if(isOpen) close();
+      else open();
+    });
+
+    document.addEventListener("click", () => close(), { passive:true });
+    document.addEventListener("keydown", (e) => { if(e.key === "Escape") close(); });
+
+    menu.querySelectorAll("[data-lang]").forEach(btn => {
+      const code = btn.getAttribute("data-lang");
+      btn.setAttribute("aria-current", code === lang ? "true" : "false");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setLang(code);
+      });
+    });
+  }
+
+  function initHamburger(){
+    const btn = document.getElementById("hamburger");
+    const menu = document.getElementById("mobileMenu");
+    if(!btn || !menu) return;
+
+    function close(){
+      menu.style.display = "none";
+      menu.setAttribute("data-open","0");
+      btn.setAttribute("aria-expanded","false");
+    }
+
+    btn.addEventListener("click", () => {
+      const open = menu.getAttribute("data-open") === "1";
+      if(open) close();
+      else {
+        menu.style.display = "block";
+        menu.setAttribute("data-open","1");
+        btn.setAttribute("aria-expanded","true");
+      }
+    });
+
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
+  }
+
+  window.__LO__ = { getLang, setLang, buildUrl, initLangMenu, initHamburger };
+})();
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="navInner">
+        <a class="brand" href="../index.html" aria-label="Luxury Obsession">
+          <img class="brandIcon" src="../images/icon.png" alt="Luxury Obsession icon" />
+          <span class="brandGold">Luxury Obsession</span>
+        </a>
+
+        <div class="navRight">
+          <nav class="navLinks" aria-label="Primary">
+            <a id="navRates" href="pricing.html">Rates</a>
+            <a id="navPhilosophy" href="../philosophy.html">Our Philosophy</a>
+            <a id="navExperiences" href="../experiences.html">Experiences</a>
+            <a id="navBlog" href="blog.html" aria-current="page">Journal</a>
+            <a id="navContact" href="../index.html#contact">Contact</a>
+            <a id="navRequest" class="navCta" href="../index.html#request">Request</a>
+          </nav>
+
+          <div class="langSelect" aria-label="Language">
+            <button type="button" class="langToggle" id="langToggle" aria-haspopup="menu" aria-expanded="false">
+              <span id="langCode" aria-label="Current language">EN</span>
+              <span class="langChevron" aria-hidden="true">▾</span>
+            </button>
+            <div id="langMenu" class="langMenu" role="menu" aria-label="Select language" hidden>
+              <button type="button" class="langOption" role="menuitem" data-lang="en">English</button>
+              <button type="button" class="langOption" role="menuitem" data-lang="de">Deutsch</button>
+              <button type="button" class="langOption" role="menuitem" data-lang="it">Italiano</button>
+            </div>
+          </div>
+
+          <button id="hamburger" type="button" class="hamburger" aria-label="menu" aria-expanded="false">
+            <div class="hamburgerLines"><span></span><span></span><span></span></div>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="mobileMenu" data-open="0" role="navigation" aria-label="Mobile" style="display:none">
+        <a id="mRates" href="pricing.html">Rates<span>›</span></a>
+        <a id="mPhilosophy" href="../philosophy.html">Our Philosophy<span>›</span></a>
+        <a id="mExperiences" href="../experiences.html">Experiences<span>›</span></a>
+        <a id="mBlog" href="blog.html" aria-current="page">Journal<span>›</span></a>
+        <a id="mContact" href="../index.html#contact">Contact<span>›</span></a>
+        <a id="mImpressum" href="../impressum.html">Impressum<span>›</span></a>
+        <div class="mobileMenuDivider"></div>
+        <a id="mRequest" class="mobileMenuCta" href="../index.html#request">Request</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="top" class="blogHero">
+      <div class="container">
+        <div class="eyebrow" id="eyebrow"></div>
+        <h1 class="heroTitle" style="margin-bottom:0.55rem">
+          <span id="heroTitleA"></span> <span class="heroHighlight" id="heroTitleB"></span>
+        </h1>
+        <p class="heroSubtitle" id="heroSubtitle"></p>
+
+        <div class="blogGrid" id="blogGrid"></div>
+
+        <div class="blogCTA">
+          <a class="btn btnSecondary" id="ctaRates" href="pricing.html">View rates</a>
+          <a class="btn btnPrimary" id="ctaRequest" href="../index.html#request">Request</a>
+        </div>
+
+        <p class="pricingNote" id="note"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footerInner">
+      <div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
+      <div class="footerCenter" id="footerCenter">Currently available: Ferrari 458 Italia.</div>
+      <div class="footerRight"><a href="../impressum.html" id="footerImpressum">Impressum</a></div>
+    </div>
+  </footer>
+
+  <script>
+const I18N = {
+  en:{
+    navRates:"Rates", navPhilosophy:"Our Philosophy", navExperiences:"Experiences", navBlog:"Journal", navContact:"Contact", navRequest:"Request",
+    eyebrow:"Journal",
+    heroTitleA:"Routes and notes", heroTitleB:"from Switzerland",
+    heroSubtitle:"A short journal on Ferrari routes, ownership grade details, and transparent terms. Written to help you plan a day where the car is the main event.",
+    ctaRates:"View rates", ctaRequest:"Request availability",
+    note:"New entries are added regularly. If you have a route in mind, we will refine it with timing, stops, and the right amount of kilometres.",
+    readLabel:"Read",
+    footerCenter:"Currently available: Ferrari 458 Italia.",
+    impressum:"Impressum"
+  },
+  de:{
+    navRates:"Tarife", navPhilosophy:"Unsere Philosophie", navExperiences:"Anlässe", navBlog:"Journal", navContact:"Kontakt", navRequest:"Anfrage",
+    eyebrow:"Journal",
+    heroTitleA:"Routen und Notizen", heroTitleB:"aus der Schweiz",
+    heroSubtitle:"Ein kurzes Journal über Ferrari Routen, Details wie beim Besitz, und transparente Konditionen. Geschrieben, um Ihren Tag so zu planen, dass das Auto im Mittelpunkt steht.",
+    ctaRates:"Tarife ansehen", ctaRequest:"Verfügbarkeit anfragen",
+    note:"Neue Einträge regelmässig. Wenn Sie eine Route im Kopf haben, verfeinern wir sie mit Timing, Stopps und der passenden Kilometerzahl.",
+    readLabel:"Lesen",
+    footerCenter:"Aktuell verfügbar: Ferrari 458 Italia.",
+    impressum:"Impressum"
+  },
+  it:{
+    navRates:"Tariffe", navPhilosophy:"La nostra filosofia", navExperiences:"Esperienze", navBlog:"Journal", navContact:"Contatti", navRequest:"Richiesta",
+    eyebrow:"Journal",
+    heroTitleA:"Itinerari e note", heroTitleB:"dalla Svizzera",
+    heroSubtitle:"Un journal breve su itinerari in Ferrari, dettagli da vero appassionato, e condizioni trasparenti. Scritto per aiutarti a progettare una giornata in cui l’auto è protagonista.",
+    ctaRates:"Vedi tariffe", ctaRequest:"Richiedi disponibilità",
+    note:"Nuovi articoli regolarmente. Se hai un itinerario in mente, lo ottimizziamo con tempi, soste e i chilometri giusti.",
+    readLabel:"Leggi",
+    footerCenter:"Disponibile ora: Ferrari 458 Italia.",
+    impressum:"Impressum"
+  }
+};
+
+const ARTICLES = [
+  {
+    slug: "ferrari-458-italia-the-signature-experience-in-switzerland.html",
+    category: {en:"Experience", de:"Erlebnis", it:"Esperienza"},
+    date: "2026-01-01",
+    read: {en:"6 min", de:"6 min", it:"6 min"},
+    title: {
+      en:"Ferrari 458 Italia. The signature experience in Switzerland",
+      de:"Ferrari 458 Italia. Das Signature Erlebnis in der Schweiz",
+      it:"Ferrari 458 Italia. L’esperienza signature in Svizzera"
+    },
+    excerpt: {
+      en:"Why the 458 still feels like the purest modern Ferrari, and how to plan a day where the car is the main event.",
+      de:"Warum der 458 sich wie der reinste moderne Ferrari anfühlt und wie man den perfekten Tag plant.",
+      it:"Perché la 458 è ancora la Ferrari moderna più pura e come progettare una giornata perfetta."
+    },
+    image: "../images/image00300.png"
+  },
+  {
+    slug: "swiss-routes-worth-driving-in-a-ferrari.html",
+    category: {en:"Routes", de:"Routen", it:"Itinerari"},
+    date: "2026-01-01",
+    read: {en:"7 min", de:"7 min", it:"7 min"},
+    title: {
+      en:"Swiss routes worth driving in a Ferrari",
+      de:"Schweizer Routen, die sich im Ferrari lohnen",
+      it:"Itinerari svizzeri da fare in Ferrari"
+    },
+    excerpt: {
+      en:"From lake roads to alpine passes. A shortlist that balances scenery, flow, and the kind of corners the 458 loves.",
+      de:"Von Seen bis Pässen. Eine Auswahl mit Flow, Aussicht und Kurven, die der 458 liebt.",
+      it:"Da laghi a passi alpini. Una selezione con flow, panorama e curve perfette per la 458."
+    },
+    image: "../images/image00500.jpg"
+  },
+  {
+    slug: "transparent-rates-how-we-design-packages-that-make-sense.html",
+    category: {en:"Rates", de:"Tarife", it:"Tariffe"},
+    date: "2026-01-01",
+    read: {en:"5 min", de:"5 min", it:"5 min"},
+    title: {
+      en:"Transparent rates. How we design packages that make sense",
+      de:"Transparente Tarife. So designen wir Pakete die Sinn machen",
+      it:"Tariffe trasparenti. Come costruiamo pacchetti sensati"
+    },
+    excerpt: {
+      en:"Why our rates stay simple, what is included, and how to choose between limited kilometres and unlimited without surprises.",
+      de:"Warum unsere Tarife einfach bleiben, was inklusive ist, und wie man ohne Überraschungen wählt.",
+      it:"Perché le tariffe restano semplici, cosa includono e come scegliere senza sorprese."
+    },
+    image: "../images/image00400.jpg"
+  }
+];
+
+function fmtDate(iso, lang){
+  try{
+    const d = new Date(iso + "T00:00:00");
+    const locale = ({en:"en-GB",de:"de-CH",it:"it-CH"})[lang] || "en-GB";
+    return d.toLocaleDateString(locale, { year:"numeric", month:"short", day:"2-digit" });
+  }catch(e){
+    return iso;
+  }
+}
+
+function renderArticles(lang){
+  const grid = document.getElementById("blogGrid");
+  grid.innerHTML = "";
+  const t = I18N[lang] || I18N.en;
+
+  ARTICLES.forEach(a => {
+    const card = document.createElement("a");
+    card.className = "card blogCard";
+    card.href = window.__LO__.buildUrl(a.slug, lang, "top");
+    card.setAttribute("aria-label", (a.title && (a.title[lang] || a.title.en)) || "Article");
+
+    const cat = (a.category && (a.category[lang] || a.category.en)) || "";
+    const read = (a.read && (a.read[lang] || a.read.en)) || "";
+    const date = fmtDate(a.date, lang);
+
+    card.innerHTML = `
+      <img class="blogThumb" src="${a.image}" alt="">
+      <div class="blogCardInner">
+        <div>
+          <div class="blogMeta">
+            <span class="blogPill">${cat}</span>
+            <span>·</span>
+            <span>${date}</span>
+            <span>·</span>
+            <span>${read}</span>
+          </div>
+          <h3 class="blogTitle">${(a.title && (a.title[lang] || a.title.en)) || ""}</h3>
+          <p class="blogExcerpt">${(a.excerpt && (a.excerpt[lang] || a.excerpt.en)) || ""}</p>
+        </div>
+        <div class="blogRead">${t.readLabel} <span>→</span></div>
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+function init(){
+  const lang = window.__LO__.getLang();
+  document.documentElement.lang = lang;
+  window.__LO__.initLangMenu(lang);
+  window.__LO__.initHamburger();
+
+  const t = I18N[lang] || I18N.en;
+
+  // Nav text
+  document.getElementById("navRates").textContent = t.navRates;
+  document.getElementById("navPhilosophy").textContent = t.navPhilosophy;
+  document.getElementById("navExperiences").textContent = t.navExperiences;
+  document.getElementById("navBlog").textContent = t.navBlog;
+  document.getElementById("navContact").textContent = t.navContact;
+  document.getElementById("navRequest").textContent = t.navRequest;
+
+  document.getElementById("mRates").childNodes[0].nodeValue = t.navRates;
+  document.getElementById("mPhilosophy").childNodes[0].nodeValue = t.navPhilosophy;
+  document.getElementById("mExperiences").childNodes[0].nodeValue = t.navExperiences;
+  document.getElementById("mBlog").childNodes[0].nodeValue = t.navBlog;
+  document.getElementById("mContact").childNodes[0].nodeValue = t.navContact;
+  document.getElementById("mImpressum").childNodes[0].nodeValue = t.impressum;
+  document.getElementById("mRequest").textContent = t.navRequest;
+
+  // Nav hrefs with lang
+  document.getElementById("navRates").href = window.__LO__.buildUrl("pricing.html", lang, "top");
+  document.getElementById("navPhilosophy").href = window.__LO__.buildUrl("../philosophy.html", lang, "top");
+  document.getElementById("navExperiences").href = window.__LO__.buildUrl("../experiences.html", lang, "top");
+  document.getElementById("navBlog").href = window.__LO__.buildUrl("blog.html", lang, "top");
+  document.getElementById("navContact").href = window.__LO__.buildUrl("../index.html", lang, "contact");
+  document.getElementById("navRequest").href = window.__LO__.buildUrl("../index.html", lang, "request");
+
+  document.getElementById("mRates").href = window.__LO__.buildUrl("pricing.html", lang, "top");
+  document.getElementById("mPhilosophy").href = window.__LO__.buildUrl("../philosophy.html", lang, "top");
+  document.getElementById("mExperiences").href = window.__LO__.buildUrl("../experiences.html", lang, "top");
+  document.getElementById("mBlog").href = window.__LO__.buildUrl("blog.html", lang, "top");
+  document.getElementById("mContact").href = window.__LO__.buildUrl("../index.html", lang, "contact");
+  document.getElementById("mImpressum").href = window.__LO__.buildUrl("../impressum.html", lang, "top");
+  document.getElementById("mRequest").href = window.__LO__.buildUrl("../index.html", lang, "request");
+
+  // Hero
+  document.getElementById("eyebrow").textContent = t.eyebrow;
+  document.getElementById("heroTitleA").textContent = t.heroTitleA;
+  document.getElementById("heroTitleB").textContent = t.heroTitleB;
+  document.getElementById("heroSubtitle").textContent = t.heroSubtitle;
+
+  // CTAs
+  document.getElementById("ctaRates").textContent = t.ctaRates;
+  document.getElementById("ctaRates").href = window.__LO__.buildUrl("pricing.html", lang, "top");
+  document.getElementById("ctaRequest").textContent = t.ctaRequest;
+  document.getElementById("ctaRequest").href = window.__LO__.buildUrl("../index.html", lang, "request");
+
+  document.getElementById("note").textContent = t.note;
+
+  // Footer
+  document.getElementById("footerCenter").textContent = t.footerCenter;
+  document.getElementById("footerImpressum").textContent = t.impressum;
+  document.getElementById("footerImpressum").href = window.__LO__.buildUrl("../impressum.html", lang, "top");
+
+  renderArticles(lang);
+
+  document.getElementById("year").textContent = String(new Date().getFullYear());
+}
+
+document.addEventListener("DOMContentLoaded", init);
+  </script>
+</body>
+</html>

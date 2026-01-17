@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Luxury Obsession | Ferrari rental Zurich</title>
+  <meta name="description" content="Refined Ferrari 458 Italia rental in Zurich. Privately hosted handover, clear terms, and concierge support. Request availability." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Luxury Obsession | Ferrari rental Zurich" />
+  <meta property="og:description" content="Ferrari 458 Italia, privately hosted in Zurich. Request availability and terms." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../images/image00100.png" />
+
+  <link rel="icon" href="../images/icon.png" />
+  <link rel="alternate" hreflang="en" href="ferrari-rental-zurich.html?lang=en" />
+  <link rel="alternate" hreflang="de" href="ferrari-rental-zurich.html?lang=de" />
+  <link rel="alternate" hreflang="it" href="ferrari-rental-zurich.html?lang=it" />
+  <link rel="alternate" hreflang="x-default" href="ferrari-rental-zurich.html?lang=en" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+:root{
+  font-family:"Inter", system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --bg:#050509;
+  --accent:#b1121d;
+  --accentSoft:rgba(177,18,29,0.14);
+
+  --champagne:#e7dcc6;
+  --titaniumA:rgba(252,252,253,0.92);
+  --titaniumB:rgba(176,176,186,0.70);
+  --hairline:rgba(231,220,198,0.18);
+
+  --text:#f5f5f5;
+  --muted:rgba(243,241,238,0.74);
+  --border:#262637;
+  --radius:18px;
+  --shadow:0 18px 45px rgba(0,0,0,0.4);
+  --max:1120px;
+  --logoSize: 60px;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(circle at top,#191621 0,var(--bg) 55%);color:var(--text)}
+a{color:inherit;text-decoration:none}
+
+header{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(12px);
+  background:linear-gradient(to bottom, rgba(7,7,10,0.92), rgba(7,7,10,0.74), transparent);
+  border-bottom:1px solid rgba(243,241,238,0.06);
+}
+
+.container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
+
+.navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.55rem 0}
+
+.brand{display:inline-flex;align-items:center;gap:0.65rem}
+.brandIcon{width:var(--logoSize);height:var(--logoSize);object-fit:contain;display:block}
+
+.brandGold{
+  font-family:"Cinzel", serif;
+  font-weight:700;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  font-size: clamp(1.05rem, 1.2vw + 0.9rem, 1.2rem);
+  line-height:1;
+  background:linear-gradient(135deg,
+    rgba(252,252,253,0.92),
+    rgba(231,220,198,0.96),
+    rgba(200,183,155,0.92),
+    rgba(231,220,198,0.96)
+  );
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  text-shadow:0 10px 30px rgba(0,0,0,0.35);
+  white-space:nowrap;
+}
+
+@media (max-width:640px){
+  .brandGold{font-size:0.90rem;letter-spacing:0.14em;}
+  .brandIcon{width:34px;height:34px}
+}
+
+.navRight{display:flex;align-items:center;gap:0.65rem}
+.navLinks{display:flex;align-items:center;gap:0.8rem;font-size:0.9rem}
+.navLinks a{padding:0.35rem 0.65rem;border-radius:999px;color:rgba(243,241,238,0.86);transition:0.2s;font-weight:500;letter-spacing:0.01em}
+.navLinks a:hover{color:var(--text);background:rgba(243,241,238,0.06)}
+
+.navCta{
+  padding:0.45rem 0.9rem;border-radius:999px;
+  background:transparent;
+  border:1px solid rgba(200,183,155,0.75);
+  color:rgba(243,241,238,0.92);
+  box-shadow:none;
+  font-weight:600;
+}
+.navCta:hover{background:rgba(200,183,155,0.12)}
+
+.langSelect{position:relative;display:inline-flex;align-items:center}
+.langToggle{
+  display:inline-flex;align-items:center;gap:0.45rem;
+  padding:0.5rem 0.75rem;border-radius:999px;
+  border:1px solid rgba(243,241,238,0.16);
+  background:rgba(243,241,238,0.03);
+  color:rgba(243,241,238,0.86);
+  cursor:pointer;font-size:0.85rem;letter-spacing:0.08em;
+}
+.langToggle:hover{background:rgba(243,241,238,0.06)}
+.langChevron{font-size:0.9rem;opacity:0.8}
+.langMenu{
+  position:absolute;right:0;top:calc(100% + 0.55rem);
+  min-width:190px;
+  background:rgba(7,7,10,0.92);
+  border:1px solid rgba(243,241,238,0.14);
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  padding:0.4rem;
+  backdrop-filter:blur(10px);
+}
+.langOption{
+  width:100%;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0.65rem 0.75rem;border-radius:12px;
+  background:transparent;border:none;
+  color:rgba(243,241,238,0.92);
+  cursor:pointer;font-size:0.92rem;
+}
+.langOption:hover{background:rgba(243,241,238,0.06)}
+.langOption[aria-current="true"]{background:rgba(200,183,155,0.10);border:1px solid rgba(200,183,155,0.22)}
+
+.hamburger{
+  display:none;width:42px;height:38px;border-radius:999px;
+  border:1px solid rgba(243,241,238,0.16);
+  background:rgba(243,241,238,0.03);
+  cursor:pointer;align-items:center;justify-content:center
+}
+.hamburger:hover{background:rgba(243,241,238,0.06)}
+.hamburgerLines{display:grid;gap:4px}
+.hamburgerLines span{width:18px;height:2px;border-radius:999px;background:rgba(243,241,238,0.88);display:block}
+
+.mobileMenu{
+  display:none;margin:0.65rem 0 0.95rem;padding:0.85rem;
+  border-radius:16px;background:rgba(5,5,9,0.92);
+  border:1px solid rgba(255,255,255,0.10);
+  box-shadow:var(--shadow)
+}
+.mobileMenu a{display:flex;align-items:center;justify-content:space-between;padding:0.7rem 0.75rem;border-radius:12px}
+.mobileMenu a:hover{background:rgba(255,255,255,0.05)}
+.mobileMenuDivider{height:1px;background:rgba(255,255,255,0.08);margin:0.55rem 0}
+.mobileMenuCta{
+  display:flex;justify-content:center;padding:0.75rem 0.85rem;border-radius:14px;
+  background:linear-gradient(135deg, rgba(231,220,198,0.96), rgba(231,220,198,0.82));
+  border:1px solid rgba(0,0,0,0.18);
+  font-weight:700;color:#0a0a0b !important;
+  box-shadow:0 16px 40px rgba(0,0,0,0.35)
+}
+
+main{padding:2.2rem 0 2.2rem}
+section{padding:2.8rem 0}
+
+h1,h2,h3{font-family:"Cormorant Garamond",serif;letter-spacing:0.02em}
+
+.eyebrow{text-transform:uppercase;letter-spacing:0.24em;font-size:0.7rem;color:var(--muted);margin:0 0 0.75rem}
+.heroGrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,0.95fr);gap:2.4rem;align-items:start}
+
+.heroTitle{font-size:clamp(2.2rem,3.0vw + 1rem,3.2rem);line-height:1.05;margin:0 0 0.75rem;font-weight:600}
+.heroHighlight{background:linear-gradient(to right, rgba(231,220,198,0.96), rgba(252,252,253,0.92));-webkit-background-clip:text;background-clip:text;color:transparent}
+.heroSubtitle{font-size:1.05rem;color:var(--muted);max-width:60ch;line-height:1.7;margin:0}
+
+.heroPills{margin-top:1.2rem;display:flex;flex-wrap:wrap;gap:0.6rem}
+.heroPill{border-radius:999px;padding:0.3rem 0.8rem;background:rgba(243,241,238,0.02);border:1px solid rgba(243,241,238,0.12);font-size:0.75rem;color:rgba(243,241,238,0.78);font-weight:500;letter-spacing:0.02em}
+
+.heroActions{margin-top:1.35rem;display:flex;flex-wrap:wrap;gap:0.85rem;align-items:center}
+
+.btn{
+  border-radius:999px;padding:0.8rem 1.25rem;border:none;outline:none;font-weight:800;
+  cursor:pointer;font-size:0.95rem;display:inline-flex;align-items:center;gap:0.45rem;white-space:nowrap
+}
+.btnPrimary{background:linear-gradient(135deg, rgba(231,220,198,0.96), rgba(231,220,198,0.82));color:#07070b;box-shadow:0 18px 45px rgba(0,0,0,0.45);border:1px solid rgba(0,0,0,0.18)}
+.btnSecondary{background:rgba(255,255,255,0.02);color:rgba(243,241,238,0.80);border:1px solid rgba(255,255,255,0.12)}
+
+.card{
+  background:radial-gradient(circle at top left,#151520,#050509 55%);
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  padding:1.3rem;
+  box-shadow:var(--shadow)
+}
+
+.heroMediaCard{border-radius:32px;overflow:hidden;background:radial-gradient(circle at top left,#2a2020,#050509 52%);box-shadow:var(--shadow);position:relative;border:1px solid rgba(255,255,255,0.10)}
+.heroImg{width:100%;height:100%;min-height:360px;object-fit:cover;display:block;transform:scale(1.03)}
+
+.sectionTitle{font-size:1.75rem;margin:0 0 0.4rem}
+.sectionSubtitle{font-size:0.98rem;color:var(--muted);max-width:70ch;margin:0;line-height:1.7}
+
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem;margin-top:1.6rem}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;margin-top:1.6rem}
+
+.kv{display:flex;flex-direction:column;gap:0.35rem;margin-top:0.6rem}
+.kvRow{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(243,241,238,0.08);padding:0.6rem 0}
+.kvRow:last-child{border-bottom:none}
+.kvLabel{color:rgba(243,241,238,0.70);font-size:0.9rem}
+.kvValue{font-weight:700}
+
+.pill{
+  display:inline-block;
+  font-size:0.72rem;
+  padding:0.22rem 0.65rem;
+  border-radius:999px;
+  background:rgba(231,220,198,0.10);
+  border:1px solid rgba(231,220,198,0.22);
+  color:rgba(231,220,198,0.96)
+}
+
+.copy{color:rgba(243,241,238,0.80);line-height:1.8;margin:0.85rem 0 0}
+
+ul.clean{margin:0.9rem 0 0;padding-left:1.2rem;color:rgba(243,241,238,0.80);line-height:1.85}
+ul.clean li{margin:0.35rem 0}
+
+.footer{padding:1.9rem 0 0}
+.footerInner{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;color:rgba(243,241,238,0.64);font-size:0.92rem}
+.footerRight{display:flex;justify-content:flex-end;gap:16px;flex-wrap:wrap}
+.footerRight a{color:rgba(243,241,238,0.64)}
+.footerRight a:hover{color:rgba(243,241,238,0.92)}
+
+@media(max-width:960px){
+  .grid3{grid-template-columns:1fr}
+}
+
+@media(max-width:980px){
+  .heroGrid{grid-template-columns:1fr}
+  .heroMediaCard{max-width:720px}
+}
+
+@media(max-width:760px){
+  .navLinks{display:none}
+  .hamburger{display:inline-flex}
+  .container{padding:0 1rem}
+  .grid2{grid-template-columns:1fr}
+  .footerInner{grid-template-columns:1fr;gap:10px;text-align:center}
+  .footerRight{justify-content:center}
+}
+  </style>
+
+  <script>
+  (function(){
+    const LANGS = ["en","de","it"];
+
+    function getLang(){
+      const p = new URLSearchParams(window.location.search);
+      const q = p.get("lang");
+      if(q && LANGS.includes(q)) return q;
+      const s = localStorage.getItem("lo_lang");
+      if(s && LANGS.includes(s)) return s;
+      return "en";
+    }
+
+    function setLang(next){
+      if(!LANGS.includes(next)) return;
+      localStorage.setItem("lo_lang", next);
+      const u = new URL(window.location.href);
+      u.searchParams.set("lang", next);
+      window.location.href = u.pathname + u.search + u.hash;
+    }
+
+    function buildUrl(path, lang, hash){
+      const u = new URL(path, window.location.href);
+      u.searchParams.set("lang", lang);
+      if(hash) u.hash = hash;
+      return u.pathname + u.search + u.hash;
+    }
+
+    function initLangMenu(lang){
+      const toggle = document.getElementById("langToggle");
+      const menu = document.getElementById("langMenu");
+      const codeEl = document.getElementById("langCode");
+      if(!toggle || !menu || !codeEl) return;
+
+      const codes = { en:"EN", de:"DE", it:"IT" };
+      codeEl.textContent = codes[lang] || "EN";
+
+      function close(){
+        menu.hidden = true;
+        toggle.setAttribute("aria-expanded","false");
+      }
+      function open(){
+        menu.hidden = false;
+        toggle.setAttribute("aria-expanded","true");
+      }
+
+      toggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = !menu.hidden;
+        if(isOpen) close();
+        else open();
+      });
+
+      document.addEventListener("click", () => close(), { passive:true });
+      document.addEventListener("keydown", (e) => { if(e.key === "Escape") close(); });
+
+      menu.querySelectorAll("[data-lang]").forEach(btn => {
+        const code = btn.getAttribute("data-lang");
+        btn.setAttribute("aria-current", code === lang ? "true" : "false");
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          setLang(code);
+        });
+      });
+    }
+
+    function initHamburger(){
+      const btn = document.getElementById("hamburger");
+      const menu = document.getElementById("mobileMenu");
+      if(!btn || !menu) return;
+
+      function close(){
+        menu.style.display = "none";
+        menu.setAttribute("data-open","0");
+        btn.setAttribute("aria-expanded","false");
+      }
+
+      btn.addEventListener("click", () => {
+        const open = menu.getAttribute("data-open") === "1";
+        if(open) close();
+        else {
+          menu.style.display = "block";
+          menu.setAttribute("data-open","1");
+          btn.setAttribute("aria-expanded","true");
+        }
+      });
+
+      menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
+    }
+
+    window.__LO__ = { getLang, setLang, buildUrl, initLangMenu, initHamburger };
+  })();
+  </script>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <div class="navInner">
+      <a class="brand" href="../index.html" aria-label="Luxury Obsession">
+        <img class="brandIcon" src="../images/icon.png" alt="Luxury Obsession icon" />
+        <span class="brandGold">Luxury Obsession</span>
+      </a>
+
+      <div class="navRight">
+        <nav class="navLinks" aria-label="Primary">
+          <a href="pricing.html" id="navRates">Rates</a>
+          <a href="../philosophy.html" id="navPhilosophy">Our Philosophy</a>
+          <a href="../experiences.html" id="navExperiences">Experiences</a>
+          <a href="blog.html" id="navBlog">Journal</a>
+          <a href="../index.html#contact" id="navContact">Contact</a>
+          <a class="navCta" href="../index.html#request" id="navRequest">Request</a>
+        </nav>
+
+        <div class="langSelect" aria-label="Language">
+          <button class="langToggle" id="langToggle" type="button" aria-haspopup="menu" aria-expanded="false">
+            <span id="langCode" aria-label="Current language">EN</span>
+            <span class="langChevron" aria-hidden="true">▾</span>
+          </button>
+          <div class="langMenu" id="langMenu" role="menu" aria-label="Select language" hidden>
+            <button class="langOption" type="button" data-lang="en" role="menuitem">English</button>
+            <button class="langOption" type="button" data-lang="de" role="menuitem">Deutsch</button>
+            <button class="langOption" type="button" data-lang="it" role="menuitem">Italiano</button>
+          </div>
+        </div>
+
+        <button class="hamburger" id="hamburger" type="button" aria-label="menu" aria-expanded="false">
+          <div class="hamburgerLines"><span></span><span></span><span></span></div>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobileMenu" id="mobileMenu" role="navigation" aria-label="Mobile" data-open="0" style="display:none">
+      <a href="pricing.html" id="mRates"><span>Rates</span><span>›</span></a>
+      <a href="../philosophy.html" id="mPhilosophy"><span>Our Philosophy</span><span>›</span></a>
+      <a href="../experiences.html" id="mExperiences"><span>Experiences</span><span>›</span></a>
+      <a href="blog.html" id="mBlog"><span>Journal</span><span>›</span></a>
+      <a href="../index.html#contact" id="mContact"><span>Contact</span><span>›</span></a>
+      <a href="../impressum.html" id="mImpressum"><span>Impressum</span><span>›</span></a>
+      <div class="mobileMenuDivider"></div>
+      <a class="mobileMenuCta" href="../index.html#request" id="mRequest">Request</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="container">
+    <div class="heroGrid">
+      <div>
+        <div class="eyebrow" id="eyebrow"></div>
+        <h1 class="heroTitle">
+          <span id="heroTitleA"></span>
+          <span class="heroHighlight" id="heroTitleB"></span>
+        </h1>
+        <p class="heroSubtitle" id="heroSubtitle"></p>
+
+        <div class="heroPills">
+          <span class="heroPill" id="pill1"></span>
+          <span class="heroPill" id="pill2"></span>
+          <span class="heroPill" id="pill3"></span>
+          <span class="heroPill" id="pill4"></span>
+        </div>
+
+        <div class="heroActions">
+          <a class="btn btnSecondary" href="pricing.html" id="ctaRates">Rates</a>
+          <a class="btn btnPrimary" href="../index.html#request" id="ctaRequest">Request</a>
+          <a class="btn btnSecondary" href="locations.html" id="ctaLocations">Pickup locations</a>
+        </div>
+
+        <p class="copy" id="heroNote"></p>
+      </div>
+
+      <div class="heroMediaCard" aria-label="Ferrari 458 Italia">
+        <img class="heroImg" src="../images/image00100.png" alt="Ferrari 458 Italia" />
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2 class="sectionTitle" id="zurichTitle"></h2>
+    <p class="sectionSubtitle" id="zurichSub"></p>
+
+    <div class="grid3">
+      <div class="card">
+        <h3 style="margin:0 0 0.35rem" id="zCard1Title"></h3>
+        <p class="copy" id="zCard1Body"></p>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 0.35rem" id="zCard2Title"></h3>
+        <p class="copy" id="zCard2Body"></p>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 0.35rem" id="zCard3Title"></h3>
+        <p class="copy" id="zCard3Body"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2 class="sectionTitle" id="handoverTitle"></h2>
+    <p class="sectionSubtitle" id="handoverSub"></p>
+
+    <div class="grid2">
+      <div class="card">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+          <h3 style="margin:0" id="pickupTitle"></h3>
+          <span class="pill" id="pickupPill"></span>
+        </div>
+        <p class="copy" id="pickupBody"></p>
+
+        <div class="kv" aria-label="Pickup details">
+          <div class="kvRow">
+            <div class="kvLabel" id="kv1Label"></div>
+            <div class="kvValue" id="kv1Value"></div>
+          </div>
+          <div class="kvRow">
+            <div class="kvLabel" id="kv2Label"></div>
+            <div class="kvValue" id="kv2Value"></div>
+          </div>
+          <div class="kvRow">
+            <div class="kvLabel" id="kv3Label"></div>
+            <div class="kvValue" id="kv3Value"></div>
+          </div>
+        </div>
+
+        <div style="margin-top:1.2rem;display:flex;flex-wrap:wrap;gap:0.85rem;align-items:center">
+          <a class="btn btnPrimary" href="../index.html#request" id="btnRequest">Request</a>
+          <a class="btn btnSecondary" href="locations.html" id="btnOtherPickup">Other pickup locations</a>
+          <a class="btn btnSecondary" href="https://www.google.com/maps/search/?api=1&query=Zurich,%20Switzerland" target="_blank" rel="noreferrer" id="btnMaps">Open in Google Maps</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 0.35rem" id="includedTitle"></h3>
+        <p class="copy" id="includedSub"></p>
+        <ul class="clean" id="includedList">
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2 class="sectionTitle" id="aboutTitle"></h2>
+    <p class="sectionSubtitle" id="aboutSub"></p>
+
+    <div class="grid2">
+      <div class="card">
+        <h3 style="margin:0 0 0.35rem" id="aboutCardTitle"></h3>
+        <p class="copy" id="aboutCardBody"></p>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 0.35rem" id="routeCardTitle"></h3>
+        <p class="copy" id="routeCardBody"></p>
+        <ul class="clean" id="routeList">
+          <li></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:1.2rem">
+      <h3 style="margin:0 0 0.35rem" id="companyTitle"></h3>
+      <p class="copy" id="companyBody"></p>
+    </div>
+  </section>
+
+  <section class="container footer">
+    <div class="footerInner">
+      <div>© <span id="y"></span> Luxury Obsession.</div>
+      <div id="footerMiddle"></div>
+      <div class="footerRight">
+        <a href="../impressum.html" id="footerImpressum">Impressum</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  const I18N = {
+    en: {
+      navRates: "Rates",
+      navPhilosophy: "Our Philosophy",
+      navExperiences: "Experiences",
+      navBlog: "Journal",
+      navContact: "Contact",
+      navRequest: "Request",
+
+      eyebrow: "Zurich, Switzerland",
+      heroTitleA: "Ferrari 458 Italia",
+      heroTitleB: "in Zurich",
+      heroSubtitle:
+        "A modern classic from Maranello, privately hosted in Zurich. Clear terms, meticulous presentation, and discreet support from first message to handover.",
+      pill1: "Privately hosted",
+      pill2: "Clear terms",
+      pill3: "Zurich handover",
+      pill4: "Concierge support",
+      ctaRates: "View rates",
+      ctaRequest: "Request availability",
+      ctaLocations: "Pickup locations",
+      heroNote:
+        "Tell us your date and preferred tone for the day. We confirm availability personally and suggest a Zurich route that fits your timing.",
+
+      zurichTitle: "Why Zurich",
+      zurichSub:
+        "Zurich is understated, precise, and beautifully placed. From the lakefront to the first open roads, it is a natural starting point for a Ferrari day.",
+      zCard1Title: "Lake and old town",
+      zCard1Body:
+        "Begin with a calm handover, then slip along the lake with the city behind you. Morning light on the waterfront, quiet streets in the old town, and the sense of occasion without noise.",
+      zCard2Title: "Fast access to open roads",
+      zCard2Body:
+        "Within a short drive you are out of the city, with flowing sections around the lake, the Albis ridge, and the hills above Zurich. Perfect for a half day escape.",
+      zCard3Title: "Gateway to the Alps",
+      zCard3Body:
+        "Zurich places you close to Switzerland’s most iconic mountain passes. Seasonal roads open and close with weather, and we can help you choose a route that suits the day.",
+
+      handoverTitle: "Pickup and handover",
+      handoverSub:
+        "A clean, punctual handover with the essentials covered before you start the engine.",
+      pickupTitle: "Pickup in Zurich",
+      pickupPill: "Fee: 0 CHF (2026)",
+      pickupBody:
+        "Pickup in Zurich is complimentary in 2026. For other years, or for a tailored address, simply send a request and we confirm terms in writing.",
+      kv1Label: "Confirmation",
+      kv1Value: "Personal reply",
+      kv2Label: "Handover",
+      kv2Value: "Clean, discreet",
+      kv3Label: "Support",
+      kv3Value: "Before and during",
+      btnRequest: "Request availability",
+      btnOtherPickup: "Other pickup locations",
+      btnMaps: "Open in Google Maps",
+
+      includedTitle: "What is included",
+      includedSub:
+        "We keep it simple, and we keep it refined.",
+      includedItems: [
+        "Clear terms and confirmation in writing",
+        "A prepared handover, with time to settle in",
+        "Concierge support for timing, routes, and pickup options",
+        "A Zurich first approach, then the open road"
+      ],
+
+      aboutTitle: "A Zurich first experience",
+      aboutSub:
+        "This page is designed for guests who want a Zurich centric start. If you prefer another city, we offer alternative pickup locations on request.",
+      aboutCardTitle: "Routes that suit the day",
+      aboutCardBody:
+        "Some drives are for scenery. Others are for flow. Tell us your time window and your pace, and we will suggest a Zurich route with the right rhythm.",
+      routeCardTitle: "A few Zurich ideas",
+      routeCardBody:
+        "Examples, subject to traffic and season.",
+      routeItems: [
+        "Lake loop: Zurich, Rapperswil, return along the opposite shore",
+        "Hills: Zurich, Albis ridge, Sihlwald, quiet back roads",
+        "Day trip: Zurich to the first alpine roads, then a lake return"
+      ],
+
+      companyTitle: "About Luxury Obsession",
+      companyBody:
+        "Luxury Obsession is a privately hosted Ferrari only rental concept based in Zurich. Our selection is intentionally singular, centred on one meticulously maintained Ferrari 458 Italia. We focus on presentation, clarity, and a calm concierge style service, so your day feels personal from the first message to the final handover.",
+
+      footerMiddle: "Ferrari only experiences, Switzerland.",
+      footerImpressum: "Impressum"
+    },
+
+    de: {
+      navRates: "Tarife",
+      navPhilosophy: "Unsere Philosophie",
+      navExperiences: "Anlässe",
+      navBlog: "Journal",
+      navContact: "Kontakt",
+      navRequest: "Anfrage",
+
+      eyebrow: "Zürich, Schweiz",
+      heroTitleA: "Ferrari 458 Italia",
+      heroTitleB: "in Zürich",
+      heroSubtitle:
+        "Ein moderner Klassiker aus Maranello, privat in Zürich betreut. Klare Konditionen, gepflegte Übergabe und diskrete Unterstützung von der ersten Nachricht bis zur Rückgabe.",
+      pill1: "Privat betreut",
+      pill2: "Klare Konditionen",
+      pill3: "Übergabe in Zürich",
+      pill4: "Concierge Support",
+      ctaRates: "Tarife ansehen",
+      ctaRequest: "Verfügbarkeit anfragen",
+      ctaLocations: "Abholorte",
+      heroNote:
+        "Nennen Sie Datum und den gewünschten Stil des Tages. Wir bestätigen Verfügbarkeit persönlich und schlagen eine passende Zürich Route vor.",
+
+      zurichTitle: "Warum Zürich",
+      zurichSub:
+        "Zürich ist zurückhaltend, präzise und ideal gelegen. Vom See bis zur ersten freien Strecke ist es ein natürlicher Startpunkt für einen Ferrari Tag.",
+      zCard1Title: "See und Altstadt",
+      zCard1Body:
+        "Starten Sie mit einer ruhigen Übergabe und gleiten Sie am See entlang, die Stadt im Rücken. Morgenlicht am Ufer, stille Gassen in der Altstadt und ein Gefühl von Anlass ohne Lärm.",
+      zCard2Title: "Schnell auf offenen Strassen",
+      zCard2Body:
+        "Schon nach kurzer Zeit sind Sie ausserhalb der Stadt, mit fliessenden Abschnitten rund um den See, am Albis und in den Hügeln über Zürich. Ideal für einen halben Tag.",
+      zCard3Title: "Tor zu den Alpen",
+      zCard3Body:
+        "Von Zürich aus erreichen Sie die ikonischen Pässe besonders gut. Saisonale Strecken öffnen und schliessen je nach Wetter, und wir helfen bei der Wahl der passenden Route.",
+
+      handoverTitle: "Abholung und Übergabe",
+      handoverSub:
+        "Eine saubere, pünktliche Übergabe, bevor der Motor startet.",
+      pickupTitle: "Abholung in Zürich",
+      pickupPill: "Gebühr: 0 CHF (2026)",
+      pickupBody:
+        "Die Abholung in Zürich ist 2026 kostenfrei. Für andere Jahre oder eine Wunschadresse senden Sie eine Anfrage, wir bestätigen Konditionen schriftlich.",
+      kv1Label: "Bestätigung",
+      kv1Value: "Persönliche Rückmeldung",
+      kv2Label: "Übergabe",
+      kv2Value: "Sauber, diskret",
+      kv3Label: "Support",
+      kv3Value: "Vor und während",
+      btnRequest: "Verfügbarkeit anfragen",
+      btnOtherPickup: "Weitere Abholorte",
+      btnMaps: "In Google Maps öffnen",
+
+      includedTitle: "Was enthalten ist",
+      includedSub:
+        "Einfach gehalten, aber auf Niveau.",
+      includedItems: [
+        "Klare Konditionen und schriftliche Bestätigung",
+        "Vorbereitete Übergabe mit Zeit zum Ankommen",
+        "Concierge Support für Timing, Route und Abholort",
+        "Zürich zuerst, dann die offene Strasse"
+      ],
+
+      aboutTitle: "Ein Zürich fokussiertes Erlebnis",
+      aboutSub:
+        "Diese Seite richtet sich an Gäste, die in Zürich starten möchten. Auf Wunsch sind auch andere Städte als Abholort möglich.",
+      aboutCardTitle: "Routen nach Ihrem Tag",
+      aboutCardBody:
+        "Manche Fahrten sind für die Aussicht. Andere für den Flow. Nennen Sie Zeitfenster und Tempo, wir schlagen eine Zürich Route mit dem passenden Rhythmus vor.",
+      routeCardTitle: "Einige Zürich Ideen",
+      routeCardBody:
+        "Beispiele, abhängig von Verkehr und Saison.",
+      routeItems: [
+        "See Runde: Zürich, Rapperswil, Rückweg am gegenüberliegenden Ufer",
+        "Hügel: Zürich, Albis, Sihlwald, ruhige Nebenstrassen",
+        "Tagesausflug: Zürich bis zu den ersten Alpenstrassen, dann Rückkehr über den See"
+      ],
+
+      companyTitle: "Über Luxury Obsession",
+      companyBody:
+        "Luxury Obsession ist ein privat betreutes Ferrari Only Konzept aus Zürich. Unsere Auswahl ist bewusst singular, im Zentrum steht eine sorgfältig gepflegte Ferrari 458 Italia. Wir setzen auf Präsentation, Klarheit und einen ruhigen Concierge Stil, damit sich Ihr Tag persönlich anfühlt, von der ersten Nachricht bis zur Übergabe.",
+
+      footerMiddle: "Ferrari only experiences, Switzerland.",
+      footerImpressum: "Impressum"
+    },
+
+    it: {
+      navRates: "Tariffe",
+      navPhilosophy: "La nostra filosofia",
+      navExperiences: "Esperienze",
+      navBlog: "Journal",
+      navContact: "Contatti",
+      navRequest: "Richiesta",
+
+      eyebrow: "Zurigo, Svizzera",
+      heroTitleA: "Ferrari 458 Italia",
+      heroTitleB: "a Zurigo",
+      heroSubtitle:
+        "Un classico moderno di Maranello, ospitato privatamente a Zurigo. Condizioni chiare, consegna curata e supporto discreto dal primo messaggio alla riconsegna.",
+      pill1: "Ospitata privatamente",
+      pill2: "Condizioni chiare",
+      pill3: "Consegna a Zurigo",
+      pill4: "Assistenza concierge",
+      ctaRates: "Vedi tariffe",
+      ctaRequest: "Richiedi disponibilità",
+      ctaLocations: "Luoghi di ritiro",
+      heroNote:
+        "Dicci data e stile della giornata. Confermiamo disponibilità personalmente e suggeriamo un itinerario su misura partendo da Zurigo.",
+
+      zurichTitle: "Perché Zurigo",
+      zurichSub:
+        "Zurigo è sobria, precisa e perfettamente posizionata. Dal lungolago alle prime strade libere, è un punto di partenza naturale per una giornata Ferrari.",
+      zCard1Title: "Lago e centro storico",
+      zCard1Body:
+        "Inizia con una consegna calma, poi scorri lungo il lago lasciando la città alle spalle. Luce del mattino sul lungolago, vie silenziose nel centro, e un senso di occasione senza eccessi.",
+      zCard2Title: "Strade aperte a pochi minuti",
+      zCard2Body:
+        "In breve sei fuori città, con tratti scorrevoli intorno al lago, lungo la cresta dell Albis e sulle colline sopra Zurigo. Perfetto per una mezza giornata.",
+      zCard3Title: "Porta verso le Alpi",
+      zCard3Body:
+        "Da Zurigo raggiungi facilmente i passi più iconici. Le strade di montagna sono stagionali e dipendono dal meteo, e possiamo aiutarti a scegliere il percorso giusto.",
+
+      handoverTitle: "Ritiro e consegna",
+      handoverSub:
+        "Una consegna puntuale e pulita, con i punti essenziali chiari prima di partire.",
+      pickupTitle: "Ritiro a Zurigo",
+      pickupPill: "Costo: 0 CHF (2026)",
+      pickupBody:
+        "Il ritiro a Zurigo è gratuito nel 2026. Per altri anni o per un indirizzo dedicato, invia una richiesta e confermiamo le condizioni per iscritto.",
+      kv1Label: "Conferma",
+      kv1Value: "Risposta personale",
+      kv2Label: "Consegna",
+      kv2Value: "Pulita, discreta",
+      kv3Label: "Supporto",
+      kv3Value: "Prima e durante",
+      btnRequest: "Richiedi disponibilità",
+      btnOtherPickup: "Altri luoghi di ritiro",
+      btnMaps: "Apri in Google Maps",
+
+      includedTitle: "Cosa è incluso",
+      includedSub:
+        "Semplice, ma curato.",
+      includedItems: [
+        "Condizioni chiare e conferma per iscritto",
+        "Consegna preparata, con tempo per prendere confidenza",
+        "Supporto concierge per orari, itinerari e opzioni di ritiro",
+        "Prima Zurigo, poi la strada aperta"
+      ],
+
+      aboutTitle: "Un esperienza che parte da Zurigo",
+      aboutSub:
+        "Questa pagina è pensata per chi desidera iniziare in centro a Zurigo. Se preferisci un altra città, possiamo proporre alternative su richiesta.",
+      aboutCardTitle: "Itinerari in base alla giornata",
+      aboutCardBody:
+        "Alcuni giri sono per il panorama. Altri per il ritmo. Dicci tempo a disposizione e passo, e suggeriamo un percorso con la giusta atmosfera.",
+      routeCardTitle: "Alcune idee da Zurigo",
+      routeCardBody:
+        "Esempi, soggetti a traffico e stagione.",
+      routeItems: [
+        "Giro del lago: Zurigo, Rapperswil, rientro lungo l altra sponda",
+        "Colline: Zurigo, cresta dell Albis, Sihlwald, strade tranquille",
+        "Giornata intera: Zurigo verso le prime strade alpine, rientro sul lago"
+      ],
+
+      companyTitle: "Chi è Luxury Obsession",
+      companyBody:
+        "Luxury Obsession è un concetto Ferrari only ospitato privatamente a Zurigo. La selezione è volutamente unica, centrata su una Ferrari 458 Italia mantenuta con cura. Puntiamo su presentazione, chiarezza e uno stile concierge calmo e discreto, così la tua giornata risulta personale dal primo messaggio alla consegna finale.",
+
+      footerMiddle: "Ferrari only experiences, Switzerland.",
+      footerImpressum: "Impressum"
+    }
+  };
+
+  function setText(id, value){
+    const el = document.getElementById(id);
+    if(!el) return;
+    el.textContent = value;
+  }
+  function setHtml(id, value){
+    const el = document.getElementById(id);
+    if(!el) return;
+    el.innerHTML = value;
+  }
+  function setHref(id, href){
+    const el = document.getElementById(id);
+    if(!el) return;
+    el.setAttribute("href", href);
+  }
+
+  const lang = (window.__LO__ && window.__LO__.getLang) ? window.__LO__.getLang() : "en";
+  document.documentElement.lang = lang;
+  if(window.__LO__ && window.__LO__.initLangMenu) window.__LO__.initLangMenu(lang);
+  if(window.__LO__ && window.__LO__.initHamburger) window.__LO__.initHamburger();
+
+  const t = I18N[lang] || I18N.en;
+
+  setText("navRates", t.navRates);
+  setText("navPhilosophy", t.navPhilosophy);
+  setText("navExperiences", t.navExperiences);
+  setText("navBlog", t.navBlog);
+  setText("navContact", t.navContact);
+  setText("navRequest", t.navRequest);
+
+  setText("mRates", t.navRates);
+  setText("mPhilosophy", t.navPhilosophy);
+  setText("mExperiences", t.navExperiences);
+  setText("mBlog", t.navBlog);
+  setText("mContact", t.navContact);
+  setText("mImpressum", t.footerImpressum);
+  setText("mRequest", t.navRequest);
+
+  setText("ctaRates", t.ctaRates);
+  setText("ctaRequest", t.ctaRequest);
+  setText("ctaLocations", t.ctaLocations);
+
+  setText("eyebrow", t.eyebrow);
+  setText("heroTitleA", t.heroTitleA);
+  setText("heroTitleB", t.heroTitleB);
+  setText("heroSubtitle", t.heroSubtitle);
+  setText("pill1", t.pill1);
+  setText("pill2", t.pill2);
+  setText("pill3", t.pill3);
+  setText("pill4", t.pill4);
+  setText("heroNote", t.heroNote);
+
+  setText("zurichTitle", t.zurichTitle);
+  setText("zurichSub", t.zurichSub);
+  setText("zCard1Title", t.zCard1Title);
+  setText("zCard1Body", t.zCard1Body);
+  setText("zCard2Title", t.zCard2Title);
+  setText("zCard2Body", t.zCard2Body);
+  setText("zCard3Title", t.zCard3Title);
+  setText("zCard3Body", t.zCard3Body);
+
+  setText("handoverTitle", t.handoverTitle);
+  setText("handoverSub", t.handoverSub);
+  setText("pickupTitle", t.pickupTitle);
+  setText("pickupPill", t.pickupPill);
+  setText("pickupBody", t.pickupBody);
+  setText("kv1Label", t.kv1Label);
+  setText("kv1Value", t.kv1Value);
+  setText("kv2Label", t.kv2Label);
+  setText("kv2Value", t.kv2Value);
+  setText("kv3Label", t.kv3Label);
+  setText("kv3Value", t.kv3Value);
+
+  setText("btnRequest", t.btnRequest);
+  setText("btnOtherPickup", t.btnOtherPickup);
+  setText("btnMaps", t.btnMaps);
+
+  setText("includedTitle", t.includedTitle);
+  setText("includedSub", t.includedSub);
+  setText("aboutTitle", t.aboutTitle);
+  setText("aboutSub", t.aboutSub);
+  setText("aboutCardTitle", t.aboutCardTitle);
+  setText("aboutCardBody", t.aboutCardBody);
+  setText("routeCardTitle", t.routeCardTitle);
+  setText("routeCardBody", t.routeCardBody);
+  setText("companyTitle", t.companyTitle);
+  setText("companyBody", t.companyBody);
+
+  setText("footerMiddle", t.footerMiddle);
+  setText("footerImpressum", t.footerImpressum);
+
+  // Populate lists
+  const inc = document.getElementById("includedList");
+  if(inc){
+    inc.innerHTML = (t.includedItems || []).map(x => `<li>${x}</li>`).join("");
+  }
+  const routes = document.getElementById("routeList");
+  if(routes){
+    routes.innerHTML = (t.routeItems || []).map(x => `<li>${x}</li>`).join("");
+  }
+
+  // Build consistent navigation urls with language
+  if(window.__LO__ && window.__LO__.buildUrl){
+    setHref("navRates", window.__LO__.buildUrl("pricing.html", lang, "top"));
+    setHref("navPhilosophy", window.__LO__.buildUrl("../philosophy.html", lang, "top"));
+    setHref("navExperiences", window.__LO__.buildUrl("../experiences.html", lang, "top"));
+    setHref("navBlog", window.__LO__.buildUrl("blog.html", lang, "top"));
+    setHref("navContact", window.__LO__.buildUrl("../index.html", lang, "contact"));
+    setHref("navRequest", window.__LO__.buildUrl("../index.html", lang, "request"));
+
+    setHref("mRates", window.__LO__.buildUrl("pricing.html", lang, "top"));
+    setHref("mPhilosophy", window.__LO__.buildUrl("../philosophy.html", lang, "top"));
+    setHref("mExperiences", window.__LO__.buildUrl("../experiences.html", lang, "top"));
+    setHref("mBlog", window.__LO__.buildUrl("blog.html", lang, "top"));
+    setHref("mContact", window.__LO__.buildUrl("../index.html", lang, "contact"));
+    setHref("mImpressum", window.__LO__.buildUrl("../impressum.html", lang, "top"));
+    setHref("mRequest", window.__LO__.buildUrl("../index.html", lang, "request"));
+
+    setHref("ctaRates", window.__LO__.buildUrl("pricing.html", lang, "top"));
+    setHref("ctaRequest", window.__LO__.buildUrl("../index.html", lang, "request"));
+    setHref("ctaLocations", window.__LO__.buildUrl("locations.html", lang, "top"));
+
+    setHref("btnRequest", window.__LO__.buildUrl("../index.html", lang, "request"));
+    setHref("btnOtherPickup", window.__LO__.buildUrl("locations.html", lang, "top"));
+
+    setHref("footerImpressum", window.__LO__.buildUrl("../impressum.html", lang, "top"));
+  }
+</script>
+</body>
+</html>
