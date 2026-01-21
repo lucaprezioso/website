@@ -9,7 +9,7 @@
   --titaniumA:rgba(252,252,253,0.92);
   --titaniumB:rgba(176,176,186,0.70);
   --hairline:rgba(231,220,198,0.18);
-  --carbonImage:url("images/carbon.jpg");
+  --carbonImage:url("../media/carbon.jpg");
   --text:#f5f5f5;
   --muted:#a3a3a3;
   --border:#262637;
@@ -106,6 +106,20 @@ header{
   font-weight:700;color:#0a0a0b !important;
   box-shadow:0 16px 40px rgba(0,0,0,0.35)
 }
+
+/* Header responsive behavior is handled by lo.js and the header patch at the end of this file. */
+
+/* Mobile menu open state */
+.mobileMenu[data-open="1"]{display:block}
+
+
+/* Mobile menu language block */
+.mobileLangBlock{display:grid;gap:0.55rem;padding:0.35rem 0}
+.mobileLangTitle{font-size:0.78rem;color:var(--muted);letter-spacing:0.12em;text-transform:uppercase}
+.mobileLangList{display:flex;flex-wrap:wrap;gap:0.5rem}
+.mobileLangBtn{border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.04);color:var(--text);padding:0.45rem 0.65rem;border-radius:999px;cursor:pointer;font:inherit;font-size:0.88rem}
+.mobileLangBtn[aria-pressed="true"]{border-color:rgba(229,9,20,0.55);box-shadow:0 0 0 1px rgba(229,9,20,0.25)}
+
 main{padding-bottom:2.2rem}
 section{padding:3.4rem 0}
 .eyebrow{text-transform:uppercase;letter-spacing:0.24em;font-size:0.7rem;color:var(--muted);margin-bottom:0.75rem}
@@ -998,3 +1012,52 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 .lbPrev{left:1rem}
 .lbNext{right:1rem}
 @media (max-width:560px){ .lbPrev{left:0.55rem} .lbNext{right:0.55rem} .lbNav{width:46px;height:46px} }
+
+
+/* ===== Header priority navigation patch =====
+   Ensures links never overlap the brand.
+   Driven by lo.js via:
+   - data-lo-hidden on individual items
+   - header[data-burger] and header[data-brand-wrap]
+*/
+
+.navInner{min-width:0;justify-content:flex-start;overflow:visible}
+.brand{flex:0 0 auto;min-width:0}
+.navRight{margin-left:auto;flex:0 0 auto;min-width:0;overflow:visible}
+
+/* Critical: do not allow the nav cluster to shrink and let its children spill over the brand.
+   If it does not fit, lo.js will hide low priority items instead. */
+.navLinks{flex:0 0 auto;width:max-content;white-space:nowrap;overflow:hidden}
+.navLinks a{white-space:nowrap}
+
+.navLinks a[data-lo-hidden="1"]{display:none !important}
+.langSelect[data-lo-hidden="1"]{display:none !important}
+
+.brandGold{min-width:0;display:inline-flex;align-items:baseline;gap:0.35em}
+.brandGold .brandWord{display:inline-block}
+
+@media (min-width: 761px){
+  header[data-burger="1"] .hamburger{display:inline-flex !important}
+  header[data-burger="0"] .hamburger{display:none !important}
+}
+
+header[data-brand-wrap="1"] .brandGold{
+  flex-direction:column;
+  align-items:flex-start;
+  gap:0.10em;
+  white-space:normal;
+  line-height:1.05;
+  letter-spacing:0.16em;
+  font-size:clamp(0.96rem, 0.95vw + 0.70rem, 1.14rem);
+}
+header[data-brand-wrap="1"] .brandGold .brandWord1,
+header[data-brand-wrap="1"] .brandGold .brandWord2{display:block}
+
+@media (min-width: 761px){
+  header[data-brand-wrap="1"] .brandIcon{width:52px;height:52px}
+}
+
+@media (max-width: 760px){
+  /* On mobile, language stays in the hamburger menu */
+  .langSelect{display:none !important}
+}

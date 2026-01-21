@@ -1,30 +1,26 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Luxury Obsession | Transparent pricing</title>
-  <meta name="description" content="Luxury should never feel vague. Here is how we build clear packages around time, distance, and the details that protect the experience." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="index, follow" />
-
-  <meta property="og:title" content="Luxury Obsession | Transparent pricing" />
-  <meta property="og:description" content="Luxury should never feel vague. Here is how we build clear packages around time, distance, and the details that protect the experience." />
-  <meta property="og:type" content="article" />
-  <meta property="og:image" content="../media/image00400.jpg" />
-
-  <link rel="icon" href="../media/icon.png" />
-
-  <link rel="alternate" hreflang="en" href="transparent-pricing-how-we-design-packages-that-make-sense.html?lang=en" />
-  <link rel="alternate" hreflang="de" href="transparent-pricing-how-we-design-packages-that-make-sense.html?lang=de" />
-  <link rel="alternate" hreflang="it" href="transparent-pricing-how-we-design-packages-that-make-sense.html?lang=it" />
-  <link rel="alternate" hreflang="x-default" href="transparent-pricing-how-we-design-packages-that-make-sense.html?lang=en" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <style>
+<meta charset="utf-8"/>
+<title>Luxury Obsession | Transparent pricing</title>
+<meta content="Luxury should never feel vague. Here is how we build clear packages around time, distance, and the details that protect the experience." name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="index, follow" name="robots"/>
+<meta content="Luxury Obsession | Transparent pricing" property="og:title"/>
+<meta content="Luxury should never feel vague. Here is how we build clear packages around time, distance, and the details that protect the experience." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="../media/image00400.jpg" property="og:image"/>
+<link href="../media/icon.png" rel="icon"/>
+<link href="transparent-pricing-how-we-design-packages-that-make-sense.html?lang=en" hreflang="en" rel="alternate"/>
+<link href="transparent-pricing-how-we-design-packages-that-make-sense.html?lang=de" hreflang="de" rel="alternate"/>
+<link href="transparent-pricing-how-we-design-packages-that-make-sense.html?lang=it" hreflang="it" rel="alternate"/>
+<link href="transparent-pricing-how-we-design-packages-that-make-sense.html?lang=en" hreflang="x-default" rel="alternate"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
     :root{
       --bg:#07070a;
       --surface:rgba(12,12,16,0.78);
@@ -259,8 +255,7 @@
     footer{border-top:1px solid rgba(243,241,238,0.10);padding:1.5rem 0;font-size:0.78rem;color:var(--muted)}
     .footerInner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
   </style>
-
-  <script>
+<script>
   (function(){
     const LANGS = ["en","de","it"];
 
@@ -363,280 +358,322 @@
     window.__LO__ = { getLang, setLang, buildUrl, initLangMenu, initHamburger };
   })();
   </script>
-</head>
-
+<link href="../assets/lo.css" rel="stylesheet"/><script defer="" src="../assets/lo.js"></script></head>
 <body>
-  <header>
-    <div class="container">
-      <div class="navInner">
-        <a class="brand" href="../index.html" aria-label="Luxury Obsession" data-withlang="1">
-          <img class="brandIcon" src="../media/icon.png" alt="Luxury Obsession icon" />
-          <span class="brandGold">Luxury Obsession</span>
-        </a>
-
-        <div class="navRight">
-          <nav class="navLinks" aria-label="Primary">
-            <a id="navRates" href="pricing.html" data-withlang="1" data-i18n="nav_rates">Rates</a>
-            <a id="navPhilosophy" href="../philosophy.html" data-withlang="1" data-i18n="nav_philosophy">Our Philosophy</a>
-            <a id="navExperiences" href="../experiences.html" data-withlang="1" data-i18n="nav_experiences">Experiences</a>
-            <a id="navBlog" href="blog.html" data-withlang="1" data-i18n="nav_journal">Journal</a>
-            <a id="navContact" href="../index.html#contact" data-withlang="1" data-i18n="nav_contact">Contact</a>
-            <a id="navRequest" class="navCta" href="../index.html#request" data-withlang="1" data-i18n="nav_request">Request</a>
-          </nav>
-
-          <div class="langSelect" aria-label="Language">
-            <button id="langToggle" class="langToggle" type="button" aria-haspopup="menu" aria-expanded="false">
-              <span id="langCode" aria-label="Current language">EN</span>
-              <span class="langChevron" aria-hidden="true">▾</span>
-            </button>
-            <div id="langMenu" class="langMenu" role="menu" aria-label="Select language" hidden>
-              <button class="langOption" type="button" role="menuitem" data-lang="en">English</button>
-              <button class="langOption" type="button" role="menuitem" data-lang="de">Deutsch</button>
-              <button class="langOption" type="button" role="menuitem" data-lang="it">Italiano</button>
-            </div>
-          </div>
-
-          <button id="hamburger" class="hamburger" type="button" aria-label="menu" aria-expanded="false">
-            <div class="hamburgerLines"><span></span><span></span><span></span></div>
-          </button>
-        </div>
-      </div>
-
-      <div id="mobileMenu" class="mobileMenu" data-open="0" role="navigation" aria-label="Mobile" style="display:none">
-        <a id="mRates" href="pricing.html" data-withlang="1" data-i18n="nav_rates">Rates</a>
-        <a id="mPhilosophy" href="../philosophy.html" data-withlang="1" data-i18n="nav_philosophy">Our Philosophy</a>
-        <a id="mExperiences" href="../experiences.html" data-withlang="1" data-i18n="nav_experiences">Experiences</a>
-        <a id="mBlog" href="blog.html" data-withlang="1" data-i18n="nav_journal">Journal</a>
-        <a id="mContact" href="../index.html#contact" data-withlang="1" data-i18n="nav_contact">Contact</a>
-        <a id="mImpressum" href="../impressum.html" data-withlang="1" data-i18n="nav_impressum">Impressum</a>
-        <div class="mobileMenuDivider"></div>
-        <a id="mRequest" class="mobileMenuCta" href="../index.html#request" data-withlang="1" data-i18n="nav_request">Request</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" style="padding-top:2.2rem">
-      <div class="container articleWrap">
-        <div class="eyebrow" data-i18n="eyebrow">Luxury Obsession</div>
-
-        <h1 class="heroTitle">
-          <span class="heroHighlight" data-i18n="title">Transparent pricing</span>
-          <span data-i18n="title_suffix">how we design packages that make sense</span>
-        </h1>
-
-        <div class="metaRow">
-          <span data-i18n="meta_date">December 10, 2025</span>
-          <span class="metaDot">·</span>
-          <span data-i18n="meta_read">Seven minute read</span>
-          <span class="metaDot">·</span>
-          <span data-i18n="meta_topic">Rates and design</span>
-        </div>
-
-        <div style="margin-top:1rem">
-          <img class="heroImg" src="../media/image00400.jpg" alt="Transparent pricing" />
-        </div>
-
-        <div class="toc card">
-          <h2 class="tocTitle" data-i18n="toc_title">In this article</h2>
-          <ul class="tocList">
-            <li><a href="#principle" data-i18n="toc_1">The principle: time first, distance second</a></li>
-            <li><a href="#allowance" data-i18n="toc_2">Why distance allowances exist</a></li>
-            <li><a href="#choose" data-i18n="toc_3">How to choose the right package</a></li>
-            <li><a href="#examples" data-i18n="toc_4">Examples you can copy</a></li>
-            <li><a href="#details" data-i18n="toc_5">The details that keep it effortless</a></li>
-            <li><a href="#faq" data-i18n="toc_6">Frequently asked questions</a></li>
-          </ul>
-        </div>
-
-        <article class="prose" aria-label="Article">
-          <p data-i18n="p1">Luxury should never feel vague. When pricing is unclear, you spend mental energy on numbers instead of the road. Our goal is a structure that lets you decide in minutes, not in messages.</p>
-          <p data-i18n="p2">That is why our Rates are built around two simple questions: how long do you want the car, and how far do you plan to drive. Everything else is stated upfront as either included, optional, or outside scope.</p>
-
-          <div class="callout card callout">
-            <h3 class="calloutTitle" data-i18n="callout_title">A quick way to think about it</h3>
-            <p class="calloutBody" data-i18n="callout_body">Start with the time window you want. Then choose the distance allowance that matches your route. If you are unsure, request a quote and we will map it to the cleanest package.</p>
-          </div>
-
-          <h2 id="principle" data-i18n="h2_1">The principle: time first, distance second</h2>
-          <p data-i18n="p3">Time is the core of the experience. It covers the reserved slot, the preparation, and the private handover. Distance is simply the variable part, because your itinerary is personal.</p>
-          <p data-i18n="p4">A short, concentrated drive around Zurich is a different use case than an alpine day. Both can be perfect. They just need different distance logic, so the pricing stays fair in both directions.</p>
-
-          <div class="imgGrid">
-            <figure class="imgA">
-              <img src="../media/image00300.png" alt="Ferrari 458 in Zurich" />
-              <figcaption data-i18n="cap_1">Zurich and the lakes are ideal for a refined half day route with a clean distance allowance.</figcaption>
-            </figure>
-            <figure class="imgB">
-              <img src="../media/image00900.png" alt="Cockpit detail" />
-              <figcaption data-i18n="cap_2">A quiet handover and a clear plan keeps the cockpit focused on the drive, not on logistics.</figcaption>
-            </figure>
-          </div>
-
-          <h2 id="allowance" data-i18n="h2_2">Why distance allowances exist</h2>
-          <p data-i18n="p5">A performance car comes with real running costs that scale with distance. A distance allowance makes those costs visible and predictable, while keeping the base package clean.</p>
-          <p data-i18n="p6">We keep it simple: choose the allowance that matches your route, or select an unlimited option when the plan is open ended. Either way, you know the framework before you confirm.</p>
-
-          <div class="tableWrap" role="region" aria-label="Package design table" tabindex="0">
-            <table>
-              <thead>
-                <tr>
-                  <th data-i18n="t1_h1">Decision</th>
-                  <th data-i18n="t1_h2">What to look at</th>
-                  <th data-i18n="t1_h3">Usually best fit</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-i18n="t1_r1_c1">City loop</td>
-                  <td data-i18n="t1_r1_c2">Short route, planned stops, close to Zurich</td>
-                  <td data-i18n="t1_r1_c3">Short time window with standard allowance</td>
-                </tr>
-                <tr>
-                  <td data-i18n="t1_r2_c1">Lake day</td>
-                  <td data-i18n="t1_r2_c2">Scenic pace, photos, lunch, one or two towns</td>
-                  <td data-i18n="t1_r2_c3">Half day or full day with upgraded allowance</td>
-                </tr>
-                <tr>
-                  <td data-i18n="t1_r3_c1">Alpine pass</td>
-                  <td data-i18n="t1_r3_c2">Elevation, longer distances, flexible route choice</td>
-                  <td data-i18n="t1_r3_c3">Full day with high allowance or unlimited</td>
-                </tr>
-                <tr>
-                  <td data-i18n="t1_r4_c1">Open itinerary</td>
-                  <td data-i18n="t1_r4_c2">You decide on the day, no fixed distance plan</td>
-                  <td data-i18n="t1_r4_c3">Unlimited distance option</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h2 id="choose" data-i18n="h2_3">How to choose the right package</h2>
-          <p data-i18n="p7">Most decisions become obvious once you name the purpose of the drive. A proposal has a different rhythm than a birthday surprise. A solo drive is different than an anniversary with photos.</p>
-          <p data-i18n="p8">We design packages to remove friction. That means fewer options, clearer boundaries, and a consistent host experience across every time window. If a detail matters, it is stated. If it does not matter, it is not a checkbox.</p>
-
-          <figure>
-            <img src="../media/image00200a.jpg" alt="Ferrari 458 front" />
-            <figcaption data-i18n="cap_3">A simple framework lets the moment stay cinematic without becoming complicated.</figcaption>
-          </figure>
-
-          <h3 data-i18n="h3_1">A note on add ons</h3>
-          <p data-i18n="p9">Add ons are only useful when they protect time and mood. Concierge delivery is about comfort. A curated route is about confidence. Extra time is about breathing room. None of them should feel like a hidden fee.</p>
-          <p data-i18n="p10">If you request a quote, we show the clean base package first. Then we list any add ons as optional so you can keep the experience minimal or elevate it with intention.</p>
-
-          <h2 id="examples" data-i18n="h2_4">Examples you can copy</h2>
-          <p data-i18n="p11">Below are three routes that match common requests. Think of them as templates. You can copy them, adjust the stops, or ask us to design one around your schedule.</p>
-
-          <div class="tableWrap" role="region" aria-label="Example itineraries table" tabindex="0">
-            <table>
-              <thead>
-                <tr>
-                  <th data-i18n="t2_h1">Route</th>
-                  <th data-i18n="t2_h2">Time</th>
-                  <th data-i18n="t2_h3">Distance</th>
-                  <th data-i18n="t2_h4">Suggested package</th>
-                  <th data-i18n="t2_h5">Notes</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-i18n="t2_r1_c1">Zurich, lake loop, photo stop</td>
-                  <td data-i18n="t2_r1_c2">Two to three hours</td>
-                  <td data-i18n="t2_r1_c3">Low</td>
-                  <td data-i18n="t2_r1_c4">Short window with standard allowance</td>
-                  <td data-i18n="t2_r1_c5">Best for first time drivers and a clean surprise</td>
-                </tr>
-                <tr>
-                  <td data-i18n="t2_r2_c1">Lake towns, lunch, relaxed return</td>
-                  <td data-i18n="t2_r2_c2">Half day</td>
-                  <td data-i18n="t2_r2_c3">Medium</td>
-                  <td data-i18n="t2_r2_c4">Half day with upgraded allowance</td>
-                  <td data-i18n="t2_r2_c5">Comfortable pace with space for photos</td>
-                </tr>
-                <tr>
-                  <td data-i18n="t2_r3_c1">Alpine pass with flexible route choices</td>
-                  <td data-i18n="t2_r3_c2">Full day</td>
-                  <td data-i18n="t2_r3_c3">High</td>
-                  <td data-i18n="t2_r3_c4">Full day with high allowance or unlimited</td>
-                  <td data-i18n="t2_r3_c5">Ideal when the road decides the plan</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <figure>
-            <img src="../media/image00100a.jpg" alt="Ferrari detail" />
-            <figcaption data-i18n="cap_4">When the route is clear, the details feel deliberate and the day flows.</figcaption>
-          </figure>
-
-          <h2 id="details" data-i18n="h2_5">The details that keep it effortless</h2>
-          <p data-i18n="p12">Transparency is not only about numbers. It is also about timing, preparation, and what you can expect at handover. We confirm the essentials in writing so there are no surprises on the day.</p>
-          <p data-i18n="p13">If you are planning a special moment, we recommend choosing a little more time than you think. The extra margin often becomes the difference between rushing and enjoying.</p>
-          <p data-i18n="p14">Finally, we keep communication concise. You should not need a long thread to understand what is included. If you want it simple, it stays simple.</p>
-
-          <div class="card callout">
-            <h3 class="calloutTitle" data-i18n="callout2_title">Where to find exact numbers</h3>
-            <p class="calloutBody" data-i18n="callout2_body">Exact rates, allowances, and optional services live on the Rates page. This article explains the design logic, so the numbers feel predictable when you see them.</p>
-          </div>
-
-          <h2 id="faq" data-i18n="h2_6">Frequently asked questions</h2>
-
-          <h3 data-i18n="faq_q1">Why not just a single flat price</h3>
-          <p data-i18n="faq_a1">A flat price looks simple, but it shifts costs between guests. A clear time plus distance structure stays fair, especially when plans range from a short city loop to an alpine day.</p>
-
-          <h3 data-i18n="faq_q2">What if we change the route during the drive</h3>
-          <p data-i18n="faq_a2">If you selected an allowance, we simply track distance and keep it transparent. If you want full freedom, choose an unlimited option and drive with no second thoughts.</p>
-
-          <h3 data-i18n="faq_q3">Can you help us design the route</h3>
-          <p data-i18n="faq_a3">Yes. If you tell us the mood and the time window, we can suggest a refined route with scenic stops that fits the package cleanly.</p>
-
-          <h3 data-i18n="faq_q4">What is the easiest way to book</h3>
-          <p data-i18n="faq_a4">Request through the form and include your preferred date, time window, and a rough idea of distance. We reply with the best fit package and a concise confirmation.</p>
-
-          <h3 data-i18n="h3_gallery">A few moments from Zurich</h3>
-          <p data-i18n="p15">If you are still deciding, here are a few media to set the mood. The experience is designed to feel the same: private, calm, and effortless.</p>
-
-          <div class="gallery">
-            <div class="gGrid" aria-label="Gallery">
-              <button class="gItem" type="button" data-full="../media/image00300.png" aria-label="Open image 1"><img src="../media/image00300.png" alt="Ferrari in Zurich" /></button>
-              <button class="gItem" type="button" data-full="../media/image00200a.jpg" aria-label="Open image 2"><img src="../media/image00200a.jpg" alt="Ferrari front" /></button>
-              <button class="gItem" type="button" data-full="../media/image00900.png" aria-label="Open image 3"><img src="../media/image00900.png" alt="Cockpit" /></button>
-              <button class="gItem" type="button" data-full="../media/image00100a.jpg" aria-label="Open image 4"><img src="../media/image00100a.jpg" alt="Detail" /></button>
-            </div>
-          </div>
-
-          <div class="ctaRow">
-            <a class="ctaBtn" id="backBlog" href="blog.html" data-withlang="1" data-i18n="back_journal">Back to Journal</a>
-            <a class="ctaBtn ctaBtnPrimary" id="req" href="../index.html#request" data-withlang="1" data-i18n="cta_request">Request</a>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <div id="lightbox" class="lightbox" aria-hidden="true">
-    <div class="lightboxBg" data-close="1"></div>
-    <div class="lightboxCard" role="dialog" aria-modal="true" aria-label="Image preview">
-      <button class="lightboxClose" type="button" data-close="1" aria-label="Close">Close</button>
-      <img id="lightboxImg" src="" alt="" />
-    </div>
-  </div>
-
-  <footer>
-    <div class="container footerInner">
-      <div>© <span id="year"></span> <span data-i18n="footer_brand">Luxury Obsession</span>.</div>
-      <div data-i18n="footer_line">Ferrari only experiences, Switzerland.</div>
-    </div>
-  </footer>
-
-  <script>
+<header>
+<div class="container">
+<div class="navInner">
+<a aria-label="Luxury Obsession" class="brand" data-withlang="1" href="../index.html">
+<img alt="Luxury Obsession icon" class="brandIcon" src="../media/icon.png"/>
+<span class="brandGold">Luxury Obsession</span>
+</a>
+<div class="navRight">
+<nav aria-label="Primary" class="navLinks">
+<a data-i18n="nav_rates" data-withlang="1" href="pricing.html" id="navRates">Rates</a>
+<a data-i18n="nav_philosophy" data-withlang="1" href="../philosophy.html" id="navPhilosophy">Our Philosophy</a>
+<a data-i18n="nav_experiences" data-withlang="1" href="../experiences.html" id="navExperiences">Experiences</a>
+<a data-i18n="nav_journal" data-withlang="1" href="blog.html" id="navBlog">Journal</a>
+<a data-i18n="nav_contact" data-withlang="1" href="../index.html#contact" id="navContact">Contact</a>
+<a class="navCta" data-i18n="nav_request" data-withlang="1" href="../index.html#request" id="navRequest">Request</a>
+</nav>
+<div aria-label="Language" class="langSelect">
+<button aria-expanded="false" aria-haspopup="menu" class="langToggle" id="langToggle" type="button">
+<span aria-label="Current language" id="langCode">EN</span>
+<span aria-hidden="true" class="langChevron">▾</span>
+</button>
+<div aria-label="Select language" class="langMenu" hidden="" id="langMenu" role="menu">
+<button class="langOption" data-lang="en" role="menuitem" type="button">English</button>
+<button class="langOption" data-lang="de" role="menuitem" type="button">Deutsch</button>
+<button class="langOption" data-lang="it" role="menuitem" type="button">Italiano</button>
+</div>
+</div>
+<button aria-expanded="false" aria-label="menu" class="hamburger" id="hamburger" type="button">
+<div class="hamburgerLines"><span></span><span></span><span></span></div>
+</button>
+</div>
+</div>
+<div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation" style="display:none"></div>
+</div>
+</header>
+<main>
+<section class="hero" style="padding-top:2.2rem">
+<div class="container articleWrap">
+<div class="eyebrow" data-i18n="eyebrow">Luxury Obsession</div>
+<h1 class="heroTitle">
+<span class="heroHighlight" data-i18n="title">Transparent pricing</span>
+<span data-i18n="title_suffix">how we design packages that make sense</span>
+</h1>
+<div class="metaRow">
+<span data-i18n="meta_date">December 10, 2025</span>
+<span class="metaDot">·</span>
+<span data-i18n="meta_read">Seven minute read</span>
+<span class="metaDot">·</span>
+<span data-i18n="meta_topic">Rates and design</span>
+</div>
+<div style="margin-top:1rem">
+<img alt="Transparent pricing" class="heroImg" src="../media/image00400.jpg"/>
+</div>
+<div class="toc card">
+<h2 class="tocTitle" data-i18n="toc_title">In this article</h2>
+<ul class="tocList">
+<li><a data-i18n="toc_1" href="#principle">The principle: time first, distance second</a></li>
+<li><a data-i18n="toc_2" href="#allowance">Why distance allowances exist</a></li>
+<li><a data-i18n="toc_3" href="#choose">How to choose the right package</a></li>
+<li><a data-i18n="toc_4" href="#examples">Examples you can copy</a></li>
+<li><a data-i18n="toc_5" href="#details">The details that keep it effortless</a></li>
+<li><a data-i18n="toc_6" href="#faq">Frequently asked questions</a></li>
+</ul>
+</div>
+<article aria-label="Article" class="prose">
+<p data-i18n="p1">Luxury should never feel vague. When pricing is unclear, you spend mental energy on numbers instead of the road. Our goal is a structure that lets you decide in minutes, not in messages.</p>
+<p data-i18n="p2">That is why our Rates are built around two simple questions: how long do you want the car, and how far do you plan to drive. Everything else is stated upfront as either included, optional, or outside scope.</p>
+<div class="callout card callout">
+<h3 class="calloutTitle" data-i18n="callout_title">A quick way to think about it</h3>
+<p class="calloutBody" data-i18n="callout_body">Start with the time window you want. Then choose the distance allowance that matches your route. If you are unsure, request a quote and we will map it to the cleanest package.</p>
+</div>
+<h2 data-i18n="h2_1" id="principle">The principle: time first, distance second</h2>
+<p data-i18n="p3">Time is the core of the experience. It covers the reserved slot, the preparation, and the private handover. Distance is simply the variable part, because your itinerary is personal.</p>
+<p data-i18n="p4">A short, concentrated drive around Zurich is a different use case than an alpine day. Both can be perfect. They just need different distance logic, so the pricing stays fair in both directions.</p>
+<div class="imgGrid">
+<figure class="imgA">
+<img alt="Ferrari 458 in Zurich" src="../media/image02100.jpg"/>
+<figcaption data-i18n="cap_1">Zurich and the lakes are ideal for a refined half day route with a clean distance allowance.</figcaption>
+</figure>
+<figure class="imgB">
+<img alt="Cockpit detail" src="../media/image02000.jpg"/>
+<figcaption data-i18n="cap_2">A quiet handover and a clear plan keeps the cockpit focused on the drive, not on logistics.</figcaption>
+</figure>
+</div>
+<h2 data-i18n="h2_2" id="allowance">Why distance allowances exist</h2>
+<p data-i18n="p5">A performance car comes with real running costs that scale with distance. A distance allowance makes those costs visible and predictable, while keeping the base package clean.</p>
+<p data-i18n="p6">We keep it simple: choose the allowance that matches your route, or select an unlimited option when the plan is open ended. Either way, you know the framework before you confirm.</p>
+<div aria-label="Package design table" class="tableWrap" role="region" tabindex="0">
+<table>
+<thead>
+<tr>
+<th data-i18n="t1_h1">Decision</th>
+<th data-i18n="t1_h2">What to look at</th>
+<th data-i18n="t1_h3">Usually best fit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-i18n="t1_r1_c1">City loop</td>
+<td data-i18n="t1_r1_c2">Short route, planned stops, close to Zurich</td>
+<td data-i18n="t1_r1_c3">Short time window with standard allowance</td>
+</tr>
+<tr>
+<td data-i18n="t1_r2_c1">Lake day</td>
+<td data-i18n="t1_r2_c2">Scenic pace, photos, lunch, one or two towns</td>
+<td data-i18n="t1_r2_c3">Half day or full day with upgraded allowance</td>
+</tr>
+<tr>
+<td data-i18n="t1_r3_c1">Alpine pass</td>
+<td data-i18n="t1_r3_c2">Elevation, longer distances, flexible route choice</td>
+<td data-i18n="t1_r3_c3">Full day with high allowance or unlimited</td>
+</tr>
+<tr>
+<td data-i18n="t1_r4_c1">Open itinerary</td>
+<td data-i18n="t1_r4_c2">You decide on the day, no fixed distance plan</td>
+<td data-i18n="t1_r4_c3">Unlimited distance option</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 data-i18n="h2_3" id="choose">How to choose the right package</h2>
+<p data-i18n="p7">Most decisions become obvious once you name the purpose of the drive. A proposal has a different rhythm than a birthday surprise. A solo drive is different than an anniversary with photos.</p>
+<p data-i18n="p8">We design packages to remove friction. That means fewer options, clearer boundaries, and a consistent host experience across every time window. If a detail matters, it is stated. If it does not matter, it is not a checkbox.</p>
+<figure>
+<img alt="Ferrari 458 front" src="../media/image00200a.jpg"/>
+<figcaption data-i18n="cap_3">A simple framework lets the moment stay cinematic without becoming complicated.</figcaption>
+</figure>
+<h3 data-i18n="h3_1">A note on add ons</h3>
+<p data-i18n="p9">Add ons are only useful when they protect time and mood. Concierge delivery is about comfort. A curated route is about confidence. Extra time is about breathing room. None of them should feel like a hidden fee.</p>
+<p data-i18n="p10">If you request a quote, we show the clean base package first. Then we list any add ons as optional so you can keep the experience minimal or elevate it with intention.</p>
+<h2 data-i18n="h2_4" id="examples">Examples you can copy</h2>
+<p data-i18n="p11">Below are three routes that match common requests. Think of them as templates. You can copy them, adjust the stops, or ask us to design one around your schedule.</p>
+<div aria-label="Example itineraries table" class="tableWrap" role="region" tabindex="0">
+<table>
+<thead>
+<tr>
+<th data-i18n="t2_h1">Route</th>
+<th data-i18n="t2_h2">Time</th>
+<th data-i18n="t2_h3">Distance</th>
+<th data-i18n="t2_h4">Suggested package</th>
+<th data-i18n="t2_h5">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-i18n="t2_r1_c1">Zurich, lake loop, photo stop</td>
+<td data-i18n="t2_r1_c2">Two to three hours</td>
+<td data-i18n="t2_r1_c3">Low</td>
+<td data-i18n="t2_r1_c4">Short window with standard allowance</td>
+<td data-i18n="t2_r1_c5">Best for first time drivers and a clean surprise</td>
+</tr>
+<tr>
+<td data-i18n="t2_r2_c1">Lake towns, lunch, relaxed return</td>
+<td data-i18n="t2_r2_c2">Half day</td>
+<td data-i18n="t2_r2_c3">Medium</td>
+<td data-i18n="t2_r2_c4">Half day with upgraded allowance</td>
+<td data-i18n="t2_r2_c5">Comfortable pace with space for photos</td>
+</tr>
+<tr>
+<td data-i18n="t2_r3_c1">Alpine pass with flexible route choices</td>
+<td data-i18n="t2_r3_c2">Full day</td>
+<td data-i18n="t2_r3_c3">High</td>
+<td data-i18n="t2_r3_c4">Full day with high allowance or unlimited</td>
+<td data-i18n="t2_r3_c5">Ideal when the road decides the plan</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure>
+<img alt="Ferrari detail" src="../media/image01700.jpg"/>
+<figcaption data-i18n="cap_4">When the route is clear, the details feel deliberate and the day flows.</figcaption>
+</figure>
+<h2 data-i18n="h2_5" id="details">The details that keep it effortless</h2>
+<p data-i18n="p12">Transparency is not only about numbers. It is also about timing, preparation, and what you can expect at handover. We confirm the essentials in writing so there are no surprises on the day.</p>
+<p data-i18n="p13">If you are planning a special moment, we recommend choosing a little more time than you think. The extra margin often becomes the difference between rushing and enjoying.</p>
+<p data-i18n="p14">Finally, we keep communication concise. You should not need a long thread to understand what is included. If you want it simple, it stays simple.</p>
+<div class="card callout">
+<h3 class="calloutTitle" data-i18n="callout2_title">Where to find exact numbers</h3>
+<p class="calloutBody" data-i18n="callout2_body">Exact rates, allowances, and optional services live on the Rates page. This article explains the design logic, so the numbers feel predictable when you see them.</p>
+</div>
+<h2 data-i18n="h2_6" id="faq">Frequently asked questions</h2>
+<h3 data-i18n="faq_q1">Why not just a single flat price</h3>
+<p data-i18n="faq_a1">A flat price looks simple, but it shifts costs between guests. A clear time plus distance structure stays fair, especially when plans range from a short city loop to an alpine day.</p>
+<h3 data-i18n="faq_q2">What if we change the route during the drive</h3>
+<p data-i18n="faq_a2">If you selected an allowance, we simply track distance and keep it transparent. If you want full freedom, choose an unlimited option and drive with no second thoughts.</p>
+<h3 data-i18n="faq_q3">Can you help us design the route</h3>
+<p data-i18n="faq_a3">Yes. If you tell us the mood and the time window, we can suggest a refined route with scenic stops that fits the package cleanly.</p>
+<h3 data-i18n="faq_q4">What is the easiest way to book</h3>
+<p data-i18n="faq_a4">Request through the form and include your preferred date, time window, and a rough idea of distance. We reply with the best fit package and a concise confirmation.</p>
+<!--commented for now
+<h3 data-i18n="h3_gallery">A few moments from Zurich</h3>
+<p data-i18n="p15">If you are still deciding, here are a few media to set the mood. The experience is designed to feel the same: private, calm, and effortless.</p>
+<div class="gallery">
+<div aria-label="Gallery" class="gGrid">
+<button aria-label="Open image 1" class="gItem" data-full="../media/image00300.png" type="button"><img alt="Ferrari in Zurich" src="../media/image00300.png"/></button>
+<button aria-label="Open image 2" class="gItem" data-full="../media/image00200a.jpg" type="button"><img alt="Ferrari front" src="../media/image00200a.jpg"/></button>
+<button aria-label="Open image 3" class="gItem" data-full="../media/image00900.png" type="button"><img alt="Cockpit" src="../media/image00900.png"/></button>
+<button aria-label="Open image 4" class="gItem" data-full="../media/image00100a.jpg" type="button"><img alt="Detail" src="../media/image00100a.jpg"/></button>
+</div>
+</div>
+-->
+<div class="ctaRow">
+<a class="ctaBtn" data-i18n="back_journal" data-withlang="1" href="blog.html" id="backBlog">Back to Journal</a>
+<a class="ctaBtn ctaBtnPrimary" data-i18n="cta_request" data-withlang="1" href="../index.html#request" id="req">Request</a>
+</div>
+</article>
+</div>
+</section>
+</main>
+<div aria-hidden="true" class="lightbox" id="lightbox">
+<div class="lightboxBg" data-close="1"></div>
+<div aria-label="Image preview" aria-modal="true" class="lightboxCard" role="dialog">
+<button aria-label="Close" class="lightboxClose" data-close="1" type="button">Close</button>
+<img alt="" id="lightboxImg" src=""/>
+</div>
+</div>
+<footer>
+<div class="container footerInner">
+<div>© <span id="year"></span> <span data-i18n="footer_brand">Luxury Obsession</span>.</div>
+<div data-i18n="footer_line">Ferrari only experiences, Switzerland.</div>
+</div>
+</footer>
+<script>
     (function(){
       const lang = window.__LO__.getLang();
       document.documentElement.lang = lang;
       localStorage.setItem("lo_lang", lang);
 
-      window.__LO__.initLangMenu(lang);
-      window.__LO__.initHamburger();
+      
+      function wireHamburgerFallback(){
+        const btn = document.getElementById("hamburger");
+        const menu = document.getElementById("mobileMenu");
+        if(!btn || !menu) return;
+
+        // Avoid double wiring if this script runs more than once
+        if(btn.dataset.loHamburgerFallback === "1") return;
+        btn.dataset.loHamburgerFallback = "1";
+
+        // If the mobile menu is empty, build it from the desktop nav
+        if(menu.children.length === 0){
+          const desktop = Array.from(document.querySelectorAll(".navLinks a"));
+          const normal = desktop.filter(a => !a.classList.contains("navCta"));
+          const cta = desktop.find(a => a.classList.contains("navCta"));
+
+          normal.forEach(a => {
+            const clone = a.cloneNode(true);
+            clone.classList.remove("navCta");
+            menu.appendChild(clone);
+          });
+
+          const divider = document.createElement("div");
+          divider.className = "mobileMenuDivider";
+          menu.appendChild(divider);
+
+          if(cta){
+            const cloneCta = cta.cloneNode(true);
+            cloneCta.classList.remove("navCta");
+            cloneCta.classList.add("mobileMenuCta");
+            menu.appendChild(cloneCta);
+          }
+        }
+
+        function close(){
+          menu.style.display = "none";
+          menu.setAttribute("data-open","0");
+          btn.setAttribute("aria-expanded","false");
+        }
+
+        function open(){
+          menu.style.display = "block";
+          menu.setAttribute("data-open","1");
+          btn.setAttribute("aria-expanded","true");
+        }
+
+        // Capture phase so we can override any non working handler
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+          const isOpen = menu.getAttribute("data-open") === "1";
+          if(isOpen) close();
+          else open();
+        }, true);
+
+        menu.addEventListener("click", (e) => {
+          if(e.target.closest("a")) close();
+        });
+
+        document.addEventListener("click", (e) => {
+          if(menu.getAttribute("data-open") !== "1") return;
+          if(menu.contains(e.target) || btn.contains(e.target)) return;
+          close();
+        });
+
+        close();
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const lo = window.__LO__;
+        if(lo && typeof lo.initSharedUI === "function") lo.initSharedUI(lang);
+        else if(lo && typeof lo.initLangMenu === "function") lo.initLangMenu(lang);
+
+        // Ensure hamburger works even if page CSS is out of sync with lo.js
+        wireHamburgerFallback();
+
+        // Reapply lang params to any links that were added to the mobile menu
+        document.querySelectorAll("[data-withlang='1']").forEach(a => {
+          const href = a.getAttribute("href");
+          if(href && window.__LO__ && window.__LO__.buildUrl) a.setAttribute("href", window.__LO__.buildUrl(href, lang));
+        });
+      });
+
+
+
 
       document.querySelectorAll("[data-withlang='1']").forEach(a => {
         const href = a.getAttribute("href");

@@ -12,7 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
 
-  <style>
+  <link rel="stylesheet" href="../assets/lo.css"/>
+<style>
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap");
 :root{
   font-family:"Inter", system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
@@ -36,24 +37,24 @@
 }
 *{box-sizing:border-box}
 body{margin:0;background:radial-gradient(circle at top,#191621 0,var(--bg) 55%);color:var(--text)}
-a{color:inherit;text-decoration:none}
-header{
+main a{color:inherit;text-decoration:none}
+main header{
   position:sticky;top:0;z-index:50;
   position:relative;
   backdrop-filter:blur(12px);
   background:linear-gradient(to bottom,rgba(5,5,9,0.92),rgba(5,5,9,0.62),transparent);
   border-bottom:1px solid rgba(255,255,255,0.03)
 }
-.container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
-.navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.50rem 0}/*0.75rem 0*/
-.brand{display:inline-flex;align-items:center;gap:0.65rem}
-.brandIcon{width:var(--logoSize);height:var(--logoSize);object-fit:contain;display:block}
+main .container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
+main .navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.50rem 0}/*0.75rem 0*/
+main .brand{display:inline-flex;align-items:center;gap:0.65rem}
+main .brandIcon{width:var(--logoSize);height:var(--logoSize);object-fit:contain;display:block}
 .brandWordmark{height:var(--wordmarkH);width:auto;object-fit:contain;display:block}
 .brandText{font-size:1.05rem;font-weight:850;letter-spacing:0.02em}
 
 
 /* Brand title in Cinzel with gold motif */
-.brandGold{
+main .brandGold{
   font-family:"Cinzel", serif;
   font-weight:700;
   letter-spacing:0.18em;
@@ -73,19 +74,19 @@ header{
   white-space:nowrap;
 }
 @media (max-width:640px){
-  .brandGold{font-size:0.90rem;letter-spacing:0.14em;}
+  main .brandGold{font-size:0.90rem;letter-spacing:0.14em;}
 }
 
 @media (max-width:640px){
-  .brandIcon{width:34px;height:34px}
+  main .brandIcon{width:34px;height:34px}
   .brandWordmark{height:28px}
   .brandText{font-size:0.98rem}
 }
-.navRight{display:flex;align-items:center;gap:0.65rem}
-.navLinks{display:flex;align-items:center;gap:0.8rem;font-size:0.9rem}
-.navLinks a{padding:0.35rem 0.65rem;border-radius:999px;color:var(--muted);transition:0.2s}
-.navLinks a:hover{color:var(--text);background:rgba(255,255,255,0.05)}
-.navCta{
+main .navRight{display:flex;align-items:center;gap:0.65rem}
+main .navLinks{display:flex;align-items:center;gap:0.8rem;font-size:0.9rem}
+main .navLinks a{padding:0.35rem 0.65rem;border-radius:999px;color:var(--muted);transition:0.2s}
+main .navLinks a:hover{color:var(--text);background:rgba(255,255,255,0.05)}
+main .navCta{
   padding:0.45rem 0.9rem;border-radius:999px;background:var(--accent);
   font-size:0.85rem;font-weight:800;color:#fff;box-shadow:0 10px 26px rgba(229,9,20,0.45)
 }
@@ -98,23 +99,23 @@ header{
 }
 .flagBtn.active{opacity:1;border-color:rgba(229,9,20,0.55);box-shadow:0 0 0 1px rgba(229,9,20,0.25)}
 .flagBtn svg{display:block}
-.hamburger{
+main .hamburger{
   display:none;width:42px;height:38px;border-radius:999px;
   border:1px solid rgba(255,255,255,0.14);
   background:rgba(255,255,255,0.04);
   cursor:pointer;align-items:center;justify-content:center
 }
-.hamburgerLines{display:grid;gap:4px}
-.hamburgerLines span{width:18px;height:2px;border-radius:999px;background:rgba(245,245,245,0.92);display:block}
-.mobileMenu{
+main .hamburgerLines{display:grid;gap:4px}
+main .hamburgerLines span{width:18px;height:2px;border-radius:999px;background:rgba(245,245,245,0.92);display:block}
+main .mobileMenu{
   display:none;margin:0.65rem 0 0.95rem;padding:0.85rem;
   border-radius:16px;background:rgba(5,5,9,0.92);
   border:1px solid rgba(255,255,255,0.10);box-shadow:var(--shadow)
 }
-.mobileMenu a{display:flex;align-items:center;justify-content:space-between;padding:0.7rem 0.75rem;border-radius:12px}
-.mobileMenu a:hover{background:rgba(255,255,255,0.05)}
-.mobileMenuDivider{height:1px;background:rgba(255,255,255,0.08);margin:0.55rem 0}
-.mobileMenuCta{
+main .mobileMenu a{display:flex;align-items:center;justify-content:space-between;padding:0.7rem 0.75rem;border-radius:12px}
+main .mobileMenu a:hover{background:rgba(255,255,255,0.05)}
+main .mobileMenuDivider{height:1px;background:rgba(255,255,255,0.08);margin:0.55rem 0}
+main .mobileMenuCta{
   display:flex;justify-content:center;padding:0.75rem 0.85rem;border-radius:14px;
   background:linear-gradient(135deg, rgba(231,220,198,0.96), rgba(231,220,198,0.82));
   border:1px solid rgba(0,0,0,0.18);
@@ -260,7 +261,7 @@ textarea{min-height:90px;resize:vertical}
   .span-md-12{grid-column:span 12}
 }
 @media(max-width:760px){
-  .navLinks{display:none}
+  main .navLinks{display:none}
   .hamburger{display:inline-flex}
   .container{padding:0 1rem}
 }
@@ -327,8 +328,8 @@ textarea{min-height:90px;resize:vertical}
 .contactList{list-style:none;padding:0;margin:0.75rem 0 0;display:grid;gap:0.5rem}
 .contactList li{display:flex;align-items:center;justify-content:space-between;gap:0.75rem;padding:0.55rem 0.65rem;border-radius:12px;background:rgba(0,0,0,0.22);border:1px solid rgba(255,255,255,0.07)}
 .contactList li span{color:var(--muted);font-size:0.82rem}
-footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.78rem;color:var(--muted)}
-.footerInner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+main footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.78rem;color:var(--muted)}
+main .footerInner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
 
 
 /* ===== Luxury refresh ===== */
@@ -352,26 +353,26 @@ body{
     var(--bg);
   color:var(--text);
 }
-header{
+main header{
   background:linear-gradient(to bottom, rgba(7,7,10,0.92), rgba(7,7,10,0.74), transparent);
   border-bottom:1px solid rgba(243,241,238,0.06);
 }
-.navInner{padding:0.50rem 0;}
-.navLinks a{color:rgba(243,241,238,0.86);font-weight:500;letter-spacing:0.01em}
-.navLinks a:hover{color:var(--text)}
-.navCta{
+main .navInner{padding:0.50rem 0;}
+main .navLinks a{color:rgba(243,241,238,0.86);font-weight:500;letter-spacing:0.01em}
+main .navLinks a:hover{color:var(--text)}
+main .navCta{
   background:transparent;
   border:1px solid rgba(200,183,155,0.75);
   color:rgba(243,241,238,0.92);
   box-shadow:none;
   font-weight:600;
 }
-.navCta:hover{background:rgba(200,183,155,0.12)}
+main .navCta:hover{background:rgba(200,183,155,0.12)}
 
 .langPicker, .flagBtn{display:none !important;} /* replaced by langSelect */
 
-.langSelect{position:relative;display:inline-flex;align-items:center}
-.langToggle{
+main .langSelect{position:relative;display:inline-flex;align-items:center}
+main .langToggle{
   display:inline-flex;align-items:center;gap:0.45rem;
   padding:0.5rem 0.75rem;border-radius:999px;
   border:1px solid rgba(243,241,238,0.16);
@@ -379,9 +380,9 @@ header{
   color:rgba(243,241,238,0.86);
   cursor:pointer;font-size:0.85rem;letter-spacing:0.08em;
 }
-.langToggle:hover{background:rgba(243,241,238,0.06)}
-.langChevron{font-size:0.9rem;opacity:0.8}
-.langMenu{
+main .langToggle:hover{background:rgba(243,241,238,0.06)}
+main .langChevron{font-size:0.9rem;opacity:0.8}
+main .langMenu{
   position:absolute;right:0;top:calc(100% + 0.55rem);
   min-width:190px;
   background:rgba(7,7,10,0.92);
@@ -391,7 +392,7 @@ header{
   padding:0.4rem;
   backdrop-filter:blur(10px);
 }
-.langOption{
+main .langOption{
   width:100%;
   display:flex;align-items:center;justify-content:space-between;
   padding:0.65rem 0.75rem;border-radius:12px;
@@ -399,12 +400,12 @@ header{
   color:rgba(243,241,238,0.92);
   cursor:pointer;font-size:0.92rem;
 }
-.langOption:hover{background:rgba(243,241,238,0.06)}
-.langOption[aria-current="true"]{background:rgba(200,183,155,0.10);border:1px solid rgba(200,183,155,0.22)}
+main .langOption:hover{background:rgba(243,241,238,0.06)}
+main .langOption[aria-current="true"]{background:rgba(200,183,155,0.10);border:1px solid rgba(200,183,155,0.22)}
 
-.hamburger{border:1px solid rgba(243,241,238,0.16);background:rgba(243,241,238,0.03)}
-.hamburger:hover{background:rgba(243,241,238,0.06)}
-.hamburgerLines span{background:rgba(243,241,238,0.88)}
+main .hamburger{border:1px solid rgba(243,241,238,0.16);background:rgba(243,241,238,0.03)}
+main .hamburger:hover{background:rgba(243,241,238,0.06)}
+main .hamburgerLines span{background:rgba(243,241,238,0.88)}
 
 h1,h2,h3,.sectionTitle,.heroTitle{font-family:"Cormorant Garamond",serif;letter-spacing:0.02em}
 .heroTitle{font-weight:600}
@@ -468,12 +469,12 @@ h1,h2,h3,.sectionTitle,.heroTitle{font-family:"Cormorant Garamond",serif;letter-
 .ctaBtn svg{display:block}
 
 .contactList li{border-bottom:1px solid rgba(243,241,238,0.08)}
-footer{border-top:1px solid rgba(243,241,238,0.06)}
+main footer{border-top:1px solid rgba(243,241,238,0.06)}
 
 
 /* --- Luxury refresh: supercar accents + full-bleed imagery --- */
 .heroHighlight{background:linear-gradient(to right, rgba(231,220,198,0.96), rgba(252,252,253,0.92));-webkit-background-clip:text;background-clip:text;color:transparent}
-header{
+main header{
   border-bottom:1px solid rgba(255,255,255,0.06);
 }
 .titaniumDivider{
@@ -484,9 +485,9 @@ header{
 /* Carbon accents (supercar touch) */
 :root{ --carbonScale: 420px; }
 
-header{position:sticky}
-header{isolation:isolate;}
-header::before{
+main header{position:sticky}
+main header{isolation:isolate;}
+main header::before{
   content:"";
   position:absolute; inset:0;
   background-image: var(--carbonImage);
@@ -497,10 +498,10 @@ header::before{
   pointer-events:none;
   z-index:0;
 }
-header > .container{position:relative; z-index:1;}
+main header > .container{position:relative; z-index:1;}
 
 @supports not (mix-blend-mode: overlay){
-  header::before{opacity:0.06;}
+  main header::before{opacity:0.06;}
 }
 
 .card{
@@ -650,13 +651,13 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 .heroHighlight{background:none !important; color:var(--champagne) !important; text-shadow:none !important;}
 
 /* Buttons and CTAs */
-.btnPrimary, .navCta, .mobileMenuCta{
+.btnPrimary, main .navCta, main .mobileMenuCta{
   background:linear-gradient(135deg, rgba(231,220,198,0.95), rgba(252,252,253,0.92)) !important;
   color:#0b0b10 !important;
   box-shadow:0 18px 55px rgba(0,0,0,0.40) !important;
   border:1px solid rgba(231,220,198,0.28) !important;
 }
-.btnPrimary:hover, .navCta:hover, .mobileMenuCta:hover{
+.btnPrimary:hover, main .navCta:hover, main .mobileMenuCta:hover{
   filter:brightness(1.02) contrast(1.02);
 }
 .btnSecondary{
@@ -707,17 +708,17 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 .mediaFull{min-height:96vh !important;}
 
 /* Header and hamburger refinement */
-.hamburger{
+main .hamburger{
   width:44px;height:44px !important;
   border-radius:999px !important;
   border:1px solid rgba(231,220,198,0.18) !important;
   background:rgba(7,7,10,0.35) !important;
 }
-.hamburgerLines span{
+main .hamburgerLines span{
   background:rgba(243,241,238,0.92) !important;
   height:2px !important; width:18px !important;
 }
-.mobileMenu{
+main .mobileMenu{
   margin:0.85rem 0 1.2rem !important;
   padding:0.85rem !important;
   border-radius:20px !important;
@@ -725,10 +726,10 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
   border:1px solid rgba(231,220,198,0.14) !important;
   backdrop-filter:blur(12px) !important;
 }
-.mobileMenu a:not(.mobileMenuCta){
+main .mobileMenu a:not(.mobileMenuCta){
   color:rgba(243,241,238,0.92) !important;
 }
-.mobileMenu a span{opacity:0.55 !important;}
+main .mobileMenu a span{opacity:0.55 !important;}
 
 
 /* Carbon visibility boost (user feedback) */
@@ -757,24 +758,24 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 
 
 /* Mobile navigation – luxury treatment */
-.hamburger{
+main .hamburger{
   border:1px solid rgba(231,220,198,0.18);
   background:linear-gradient(180deg, rgba(231,220,198,0.06), rgba(255,255,255,0.02));
 }
-.hamburgerLines span{background:rgba(231,220,198,0.92);}
+main .hamburgerLines span{background:rgba(231,220,198,0.92);}
 
-.mobileMenu{
+main .mobileMenu{
   background:rgba(5,5,9,0.94);
   border:1px solid rgba(231,220,198,0.14);
   box-shadow:0 18px 55px rgba(0,0,0,0.55);
 }
-.mobileMenu a{
+main .mobileMenu a{
   font-family:var(--font-sans);
   letter-spacing:0.02em;
 }
-.mobileMenuDivider{background:rgba(231,220,198,0.10);}
+main .mobileMenuDivider{background:rgba(231,220,198,0.10);}
 
-.mobileMenuCta{
+main .mobileMenuCta{
   background:linear-gradient(180deg, rgba(231,220,198,0.20), rgba(231,220,198,0.10));
   border:1px solid rgba(231,220,198,0.22);
   color:rgba(245,245,245,0.96);
@@ -782,7 +783,7 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
   font-weight:600;
 }
 @media (hover:hover){
-  .mobileMenuCta:hover{
+  main .mobileMenuCta:hover{
     transform:translateY(-1px);
     border-color:rgba(231,220,198,0.35);
     background:linear-gradient(180deg, rgba(231,220,198,0.24), rgba(231,220,198,0.12));
@@ -843,13 +844,13 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 }
 
 /* Mobile menu CTA: always readable */
-.mobileMenuCta{
+main .mobileMenuCta{
   background:linear-gradient(135deg, rgba(231,220,198,0.95), rgba(252,252,253,0.92)) !important;
   color:#0b0b10 !important;
   border:1px solid rgba(231,220,198,0.28) !important;
 }
-.mobileMenuCta:hover{color:#0b0b10 !important;}
-.mobileMenuCta:link, .mobileMenuCta:visited, .mobileMenuCta:active, .mobileMenuCta:focus{color:#0b0b10 !important;}
+main .mobileMenuCta:hover{color:#0b0b10 !important;}
+main .mobileMenuCta:link, main .mobileMenuCta:visited, main .mobileMenuCta:active, main .mobileMenuCta:focus{color:#0b0b10 !important;}
 
 
 /* Rates: mobile shows all in a single horizontal row with scrollbar */
@@ -870,12 +871,12 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 }
 
 /* footer links */
-.footerInner{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center}
-.footerRight{display:flex;justify-content:flex-end;gap:16px;flex-wrap:wrap}
-.footerRight a{color:var(--muted);text-decoration:none}
-.footerRight a:hover{color:var(--text)}
+main .footerInner{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center}
+main .footerRight{display:flex;justify-content:flex-end;gap:16px;flex-wrap:wrap}
+main .footerRight a{color:var(--muted);text-decoration:none}
+main .footerRight a:hover{color:var(--text)}
 @media (max-width: 760px){
-  .footerInner{grid-template-columns:1fr;gap:10px;text-align:center}
+  main .footerInner{grid-template-columns:1fr;gap:10px;text-align:center}
   .footerRight{justify-content:center}
 }
 
@@ -1006,101 +1007,7 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
 }
 
 </style>
-<script>
-(function(){
-  const LANGS = ["en","de","it"];
-
-  function getLang(){
-    const p = new URLSearchParams(window.location.search);
-    const q = p.get("lang");
-    if(q && LANGS.includes(q)) return q;
-    const s = localStorage.getItem("lo_lang");
-    if(s && LANGS.includes(s)) return s;
-    return "en";
-  }
-
-  function setLang(next){
-    if(!LANGS.includes(next)) return;
-    localStorage.setItem("lo_lang", next);
-    const u = new URL(window.location.href);
-    u.searchParams.set("lang", next);
-    window.location.href = u.pathname + u.search + u.hash;
-  }
-
-  function buildUrl(path, lang, hash){
-    const u = new URL(path, window.location.href);
-    u.searchParams.set("lang", lang);
-    if(hash) u.hash = hash;
-    return u.pathname + u.search + u.hash;
-  }
-
-  function initLangMenu(lang){
-  const toggle = document.getElementById("langToggle");
-  const menu = document.getElementById("langMenu");
-  const codeEl = document.getElementById("langCode");
-  if(!toggle || !menu || !codeEl) return;
-
-  const codes = { en:"EN", de:"DE", it:"IT" };
-  codeEl.textContent = codes[lang] || "EN";
-
-  function close(){
-    menu.hidden = true;
-    toggle.setAttribute("aria-expanded","false");
-  }
-  function open(){
-    menu.hidden = false;
-    toggle.setAttribute("aria-expanded","true");
-  }
-
-  toggle.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const isOpen = !menu.hidden;
-    if(isOpen) close();
-    else open();
-  });
-
-  document.addEventListener("click", () => close(), { passive:true });
-  document.addEventListener("keydown", (e) => { if(e.key === "Escape") close(); });
-
-  menu.querySelectorAll("[data-lang]").forEach(btn => {
-    const code = btn.getAttribute("data-lang");
-    btn.setAttribute("aria-current", code === lang ? "true" : "false");
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      setLang(code);
-    });
-  });
-}
-
-  function initHamburger(){
-    const btn = document.getElementById("hamburger");
-    const menu = document.getElementById("mobileMenu");
-    if(!btn || !menu) return;
-
-    function close(){
-      menu.style.display = "none";
-      menu.setAttribute("data-open","0");
-      btn.setAttribute("aria-expanded","false");
-    }
-
-    btn.addEventListener("click", () => {
-      const open = menu.getAttribute("data-open") === "1";
-      if(open) close();
-      else {
-        menu.style.display = "block";
-        menu.setAttribute("data-open","1");
-        btn.setAttribute("aria-expanded","true");
-      }
-    });
-
-    // close when clicking a link
-    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
-  }
-
-  window.__LO__ = { getLang, setLang, buildUrl, initLangMenu, initHamburger };
-})();
-</script>
+<script src="../assets/lo.js" defer></script>
 </head>
 <body>
 <header>
@@ -1114,6 +1021,7 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
 <nav aria-label="Primary" class="navLinks"><a href="pricing.html#top" id="navRates">Rates</a>
 <a href="../philosophy.html" id="navPhilosophy">Our Philosophy</a>
 <a href="../experiences.html" id="navExperiences">Experiences</a>
+
 <a href="blog.html" id="navBlog">Journal</a>
 <a href="../index.html#contact" id="navContact">Contact</a>
 <a class="navCta" href="../index.html#request" id="navRequest">Request</a></nav>
@@ -1133,14 +1041,7 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
 </button>
 </div>
 </div>
-<div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation" style="display:none"><a href="pricing.html#top" id="mRates">Rates</a>
-<a href="../philosophy.html" id="mPhilosophy">Our Philosophy</a>
-<a href="../experiences.html" id="mExperiences">Experiences</a>
-<a href="blog.html" id="mBlog">Journal</a>
-<a href="../index.html#contact" id="mContact">Contact</a>
-<a href="../impressum.html" id="mImpressum">Impressum</a><div class="mobileMenuDivider"></div>
-<a class="mobileMenuCta" href="../index.html#request" id="mRequest">Request</a>
-</div>
+<div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation"></div>
 </div>
 </header>
 <main>
@@ -1185,6 +1086,84 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
         
         
 
+
+        <div class="card" style="margin-top:1.2rem">
+          <h2 style="margin-top:0" id="pkgTitle">Rates</h2>
+          <div style="overflow:auto;-webkit-overflow-scrolling:touch">
+            <div class="tableWrap"><table>
+              <thead>
+                <tr>
+                  <th id="thPkg">Rate</th>
+                  <th id="thDur">Duration</th>
+                  <th id="thKm">Km</th>
+                  <th id="thPriceLimited">Price Limited</th>
+                  <th id="thPriceUnlimited">Price Unlimited</th>
+                </tr>
+              </thead>
+              <tbody id="pkgBody"></tbody>
+            </table></div>
+          </div>
+          <p class="pricingNote" id="pkgNote">Limited km tiers are shown per rate. Unlimited pricing appears only where available and is shown once per rate.</p>
+        </div>
+
+
+
+        <div class="card" style="margin-top:1.2rem">
+          <h2 style="margin-top:0" id="pickupPricingTitle">Pickup pricing</h2>
+          <div style="overflow:auto;-webkit-overflow-scrolling:touch">
+            <div class="tableWrap"><table>
+              <thead>
+                <tr>
+                  <th id="thPickupArea">Pickup area</th>
+                  <th id="thPickupPrice">Price</th>
+                  <th id="thPickupMain">Main locations</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="pickupArea1">Nänikon</td>
+                  <td id="pickupPrice1">Included</td>
+                  <td id="pickupMain1"></td>
+                </tr>
+                <tr>
+                  <td id="pickupArea2">Zurich Area</td>
+                  <td id="pickupPrice2">Included in 2026</td>
+                  <td id="pickupMain2">Zurich, Zurich Airport, Winterthur</td>
+                </tr>
+                <tr>
+                  <td id="pickupArea3">Regional Pickup</td>
+                  <td id="pickupPrice3">CHF 140</td>
+                  <td id="pickupMain3">Zug, Lucerne, St. Gallen</td>
+                </tr>
+                <tr>
+                  <td id="pickupArea4">Extended Pickup</td>
+                  <td id="pickupPrice4">CHF 290</td>
+                  <td id="pickupMain4">Bern, Basel, Chur</td>
+                </tr>
+              </tbody>
+            </table></div>
+          </div>
+          <p class="pricingNote"><span id="pickupNote1">Other locations can be requested. More information can be found at</span> <a id="pickupNoteLink" href="locations.html">Pickup locations</a>.</p>
+        </div>
+
+
+
+        <div class="card" style="margin-top:1.2rem">
+          <h2 style="margin-top:0" id="termsTitle">Terms and options</h2>
+          <table>
+            <tbody>
+              <tr><th id="deposit">Deposit</th><td id="depositText">1,000 CHF refundable deposit (3,000 CHF for drivers younger than 25)</td></tr>
+              <tr><th id="age">Age</th><td id="ageText">Minimum age is 21</td></tr>
+              <tr><th id="extra">Extra mileage</th><td id="extraText">5 CHF per extra km</td></tr>
+              <tr><th id="options">Options</th><td id="optionsText">Concierge pickup, second driver</td></tr>
+
+
+            </tbody>
+          </table>
+          <p class="pricingNote" id="termsNote">For exact arrangements, use the request form or contact us directly. We confirm availability and the final details personally.</p>
+        </div>
+		
+		
         <div class="card" style="margin-top:1.2rem" id="processCard">
           <h2 style="margin-top:0" id="processTitle">How it works</h2>
           <ol class="processList" aria-label="How it works">
@@ -1221,49 +1200,13 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
         </div>
 
         <div class="card" style="margin-top:1.2rem">
-          <h2 style="margin-top:0" id="pkgTitle">Rates</h2>
-          <div style="overflow:auto;-webkit-overflow-scrolling:touch">
-            <div class="tableWrap"><table>
-              <thead>
-                <tr>
-                  <th id="thPkg">Rate</th>
-                  <th id="thDur">Duration</th>
-                  <th id="thKm">Km</th>
-                  <th id="thPriceLimited">Price Limited</th>
-                  <th id="thPriceUnlimited">Price Unlimited</th>
-                </tr>
-              </thead>
-              <tbody id="pkgBody"></tbody>
-            </table></div>
-          </div>
-          <p class="pricingNote" id="pkgNote">Limited km tiers are shown per rate. Unlimited pricing appears only where available and is shown once per rate.</p>
-        </div>
-
-
-
-        <div class="card" style="margin-top:1.2rem">
-          <h2 style="margin-top:0" id="termsTitle">Terms and options</h2>
-          <table>
-            <tbody>
-              <tr><th id="deposit">Deposit</th><td id="depositText">1,000 CHF refundable deposit (2,000 CHF for drivers younger than 25)</td></tr>
-              <tr><th id="age">Age</th><td id="ageText">Minimum age is 21</td></tr>
-              <tr><th id="extra">Extra mileage</th><td id="extraText">5 CHF per extra km</td></tr>
-              <tr><th id="options">Options</th><td id="optionsText">Concierge pickup, second driver</td></tr>
-
-
-            </tbody>
-          </table>
-          <p class="pricingNote" id="termsNote">For exact arrangements, use the request form or contact us directly. We confirm availability and the final details personally.</p>
-        </div>
-
-        <div class="card" style="margin-top:1.2rem">
           <h2 style="margin-top:0" id="galleryTitle">Gallery</h2>
           
           <div class="gallery" id="gallery">
-            <button class="gItem" type="button" data-full="../media/image00200a.jpg"><img src="../media/image00200a.jpg" alt="Ferrari 458 Italia front"></button>
-            <button class="gItem" type="button" data-full="../media/image00100a.jpg"><img src="../media/image00100a.jpg" alt="Ferrari 458 Italia detail"></button>
-            <button class="gItem" type="button" data-full="../media/image00900.png"><img src="../media/image00900.png" alt="Ferrari 458 Italia cockpit"></button>
-            <button class="gItem" type="button" data-full="../media/image00300.png"><img src="../media/image00300.png" alt="Ferrari 458 Italia in Zurich"></button>
+            <button class="gItem" type="button" data-full="../media/image01200.png"><img src="../media/image01200.png" alt="Ferrari 458 Italia front"></button>
+            <button class="gItem" type="button" data-full="../media/image01300.png"><img src="../media/image01300.png" alt="Ferrari 458 Italia front"></button>
+            <button class="gItem" type="button" data-full="../media/image01400.png"><img src="../media/image01400.png" alt="Ferrari 458 Italia side"></button>
+            <button class="gItem" type="button" data-full="../media/image01500.png"><img src="../media/image01500.png" alt="Ferrari 458 Italia rims"></button>
           </div>
 
 
@@ -1284,14 +1227,16 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
     </section>
   </main>
 <footer>
-  <div class="container footerInner">
-    <div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
-    <div class="footerCenter">Currently available: Ferrari 458 Italia.</div>
-    <div class="footerRight"><a href="../impressum.html">Impressum</a></div>
-  </div>
+<div class="container footerInner">
+<div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
+<div class="footerCenter">Currently available: Ferrari 458 Italia.</div>
+<div class="footerRight">
+<a href="../impressum.html">Impressum</a>
+</div>
+</div>
 </footer>
 <script>
-    const I18N = {"en": {"home": "Home", "pricing": "Pricing", "blog": "Blog", "request": "Request availability", "title": "Rates", "sub": "Select a duration and request availability. Every booking is confirmed personally, with clear terms and discreet handover.", "fleetTitle": "Current fleet", "available": "Available", "availableNow": "Available now", "soon": "Coming soon", "pickup": "Pickup locations", "modelNote": "A stylised preview render. A live configurator will follow.", "pkgTitle": "Rates", "pkg": "Rate", "dur": "Duration", "km": "Km", "price": "Price", "terms": "Terms and options", "deposit": "Deposit", "depositText": "Refundable deposit: CHF 1,000 (CHF 2,000 for drivers under 25).", "age": "Age", "ageText": "Minimum age is 21.", "extra": "Extra mileage", "extraText": "5 CHF per extra km.", "options": "Options", "optionsText": "Concierge pickup, second driver, child seat on request.", "termsNote": "For exact arrangements, use the request form or contact us directly. We confirm availability and the final details personally.", "gallery": "Gallery", "thLimited": "Limited km", "thUnlimited": "Unlimited km", "pkgNote": "Limited km tiers are shown per rate. Unlimited pricing appears only where available and is shown once per rate.", "priceLimited": "Price Limited", "priceUnlimited": "Price Unlimited", "navRates": "Rates", "navPhilosophy": "Our Philosophy", "navExperiences": "Experiences", "navContact": "Contact", "navRequest": "Request", "navImpressum": "Impressum", "navBlog": "Journal", "eyebrow": "Zurich, Switzerland", "comingSoon": "Coming soon", "processTitle": "How it works", "processNote": "Times and locations are agreed individually. Every request is confirmed personally before payment.", "process1Title": "1. Request", "process1Body": "Send your preferred date, time, and rate. We reply personally with availability and a clear confirmation.", "process2Title": "2. Confirmation and payment", "process2Body": "Once confirmed, payment is made in advance to secure the booking. You receive a written confirmation with the agreed details.", "process3Title": "3. Refundable deposit", "process3Body": "A refundable deposit is provided at or before pickup. It is held as security and returned after the drive if the car is returned undamaged.", "process4Title": "4. Meet at the pickup location", "process4Body": "We meet at the agreed location. Identity and licence are verified, and you receive a short briefing on the car and basic rules.", "process5Title": "5. The drive", "process5Body": "Enjoy your time with the car within the agreed duration and mileage. We stay reachable should anything come up.", "process6Title": "6. Return", "process6Body": "Return the car at the agreed location and time. A short walk around and confirmation of fuel and mileage closes the handover.", "process7Title": "7. Deposit refund", "process7Body": "If there is no damage, the deposit is reimbursed immediately or within the agreed window after inspection.", "soonTag": "Soon"}, "de": {"home": "Home", "pricing": "Preise", "blog": "Blog", "request": "Verfügbarkeit anfragen", "title": "Tarife", "sub": "Dauer wählen und Verfügbarkeit anfragen. Jede Buchung wird persönlich bestätigt, mit klaren Bedingungen und diskreter Übergabe.", "fleetTitle": "Aktuelle Flotte", "available": "Verfügbar", "availableNow": "Jetzt verfügbar", "soon": "Bald verfügbar", "pickup": "Abholorte", "modelNote": "Stilisierte Vorschau. Ein Live Konfigurator folgt.", "pkgTitle": "Tarife", "pkg": "Tarif", "dur": "Dauer", "km": "Km", "price": "Preis", "terms": "Bedingungen und Optionen", "deposit": "Depot", "depositText": "Rückzahlbares Depot: CHF 1,000 (CHF 2,000 für Fahrer unter 25).", "extra": "Mehrkilometer", "extraText": "CHF 5 pro zusätzlichem km.", "options": "Optionen", "optionsText": "Concierge Abholung, Zweitfahrer, Kindersitz auf Anfrage.", "termsNote": "Für genaue Details nutze bitte das Anfrageformular oder kontaktiere uns direkt. Verfügbarkeit und finale Details bestätigen wir persönlich.", "gallery": "Galerie", "thLimited": "Km limitiert", "thUnlimited": "Km unbegrenzt", "pkgNote": "Limitierte km Stufen werden pro Tarif angezeigt. Unbegrenzte Preise erscheinen nur, wenn verfügbar, und werden einmal pro Tarif angezeigt.", "priceLimited": "Preis limitiert", "priceUnlimited": "Preis unbegrenzt", "navRates": "Tarife", "navPhilosophy": "Unsere Philosophie", "navExperiences": "Anlässe", "navContact": "Kontakt", "navRequest": "Anfrage", "navImpressum": "Impressum", "navBlog": "Journal", "eyebrow": "Zürich, Schweiz", "ageText": "Mindestalter ist 21.", "comingSoon": "Bald verfügbar", "processTitle": "Ablauf", "processNote": "Zeiten und Orte werden individuell abgestimmt. Jede Anfrage wird persönlich bestätigt, bevor bezahlt wird.", "process1Title": "1. Anfrage", "process1Body": "Sende Datum, Zeit und gewünschten Tarif. Wir antworten persönlich mit Verfügbarkeit und klarer Bestätigung.", "process2Title": "2. Bestätigung und Zahlung", "process2Body": "Nach Bestätigung erfolgt die Zahlung im Voraus zur Sicherung der Buchung. Du erhältst eine schriftliche Bestätigung mit allen Details.", "process3Title": "3. Rückzahlbares Depot", "process3Body": "Das Depot wird bei oder vor der Übergabe hinterlegt. Es dient als Sicherheit und wird nach der Fahrt bei unbeschädigter Rückgabe zurückerstattet.", "process4Title": "4. Treffen am Abholort", "process4Body": "Wir treffen uns am vereinbarten Ort. Ausweis und Führerschein werden geprüft, danach folgt eine kurze Einführung zum Fahrzeug und den Grundregeln.", "process5Title": "5. Fahrt", "process5Body": "Geniesse die Fahrt innerhalb der vereinbarten Dauer und Kilometer. Wir bleiben erreichbar, falls etwas sein sollte.", "process6Title": "6. Rückgabe", "process6Body": "Rückgabe am vereinbarten Ort und zur vereinbarten Zeit. Ein kurzer Rundgang sowie Bestätigung von Treibstoff und Kilometerstand schliessen die Übergabe ab.", "process7Title": "7. Rückerstattung", "process7Body": "Bei keiner Beschädigung wird das Depot sofort oder innerhalb des vereinbarten Zeitfensters nach Kontrolle zurückerstattet.", "age": "Alter", "soonTag": "Bald"}, "it": {"home": "Home", "pricing": "Prezzi", "blog": "Blog", "request": "Richiedi disponibilità", "title": "Tariffe", "sub": "Scegli la durata e richiedi disponibilità. Ogni prenotazione viene confermata personalmente, con termini chiari e consegna discreta.", "fleetTitle": "Flotta attuale", "available": "Disponibile", "availableNow": "Disponibile ora", "soon": "Prossimamente", "pickup": "Punti di ritiro", "modelNote": "Anteprima stilizzata. Un configuratore live arriverà più avanti.", "pkgTitle": "Tariffe", "pkg": "Tariffa", "dur": "Durata", "km": "Km", "price": "Prezzo", "terms": "Termini e opzioni", "deposit": "Deposito", "depositText": "Deposito rimborsabile: CHF 1,000 (CHF 2,000 per conducenti sotto i 25 anni).", "extra": "Km extra", "extraText": "5 CHF per km extra", "options": "Opzioni", "optionsText": "Ritiro concierge, secondo guidatore, seggiolino su richiesta.", "termsNote": "Per i dettagli esatti usa il modulo di richiesta o contattaci direttamente. Confermeremo disponibilità e dettagli finali personalmente.", "gallery": "Galleria", "thLimited": "Km limitati", "thUnlimited": "Km illimitati", "pkgNote": "I livelli di km limitati sono mostrati per tariffa. Il prezzo illimitato appare solo dove disponibile e viene mostrato una sola volta per tariffa.", "priceLimited": "Prezzo limitato", "priceUnlimited": "Prezzo illimitato", "navRates": "Tariffe", "navPhilosophy": "La nostra filosofia", "navExperiences": "Esperienze", "navContact": "Contatti", "navRequest": "Richiesta", "navImpressum": "Impressum", "navBlog": "Journal", "eyebrow": "Zurigo, Svizzera", "ageText": "Età minima 21 anni.", "comingSoon": "Prossimamente", "processTitle": "Come funziona", "processNote": "Orari e luoghi vengono concordati individualmente. Ogni richiesta viene confermata personalmente prima del pagamento.", "process1Title": "1. Richiesta", "process1Body": "Invia data, orario e tariffa desiderata. Rispondiamo personalmente con disponibilità e conferma chiara.", "process2Title": "2. Conferma e pagamento", "process2Body": "Dopo la conferma, il pagamento avviene in anticipo per bloccare la prenotazione. Ricevi una conferma scritta con i dettagli concordati.", "process3Title": "3. Deposito rimborsabile", "process3Body": "Il deposito viene versato al ritiro o prima. Serve come garanzia e viene rimborsato dopo la guida se l'auto viene restituita senza danni.", "process4Title": "4. Incontro al punto di ritiro", "process4Body": "Ci incontriamo nel luogo concordato. Verifica documento e patente, poi una breve spiegazione dell'auto e delle regole di base.", "process5Title": "5. La guida", "process5Body": "Goditi l'esperienza entro durata e chilometraggio concordati. Restiamo reperibili per qualsiasi necessità.", "process6Title": "6. Riconsegna", "process6Body": "Riconsegna nel luogo e nell'orario concordati. Un controllo rapido e conferma di carburante e km chiudono la consegna.", "process7Title": "7. Rimborso deposito", "process7Body": "Se non ci sono danni, il deposito viene rimborsato immediatamente o entro la finestra concordata dopo la verifica.", "age": "Età", "soonTag": "Presto"}};
+    const I18N = {"en": {"home": "Home", "pricing": "Pricing", "blog": "Blog", "request": "Request availability", "title": "Rates", "sub": "Select a duration and request availability. Every booking is confirmed personally, with clear terms and discreet handover.", "fleetTitle": "Current fleet", "available": "Available", "availableNow": "Available now", "soon": "Coming soon", "pickup": "Pickup locations", "modelNote": "A stylised preview render. A live configurator will follow.", "pkgTitle": "Rates", "pkg": "Rate", "dur": "Duration", "km": "Km", "price": "Price", "terms": "Terms and options", "deposit": "Deposit", "depositText": "Refundable deposit: CHF 1,000 (CHF 3,000 for drivers under 25)", "age": "Age", "ageText": "Minimum age is 21", "extra": "Extra mileage", "extraText": "5 CHF per extra km", "options": "Options", "optionsText": "Concierge pickup, second driver, pickup outside standard operating hours", "termsNote": "For exact arrangements, use the request form or contact us directly. We confirm availability and the final details personally.", "gallery": "Gallery", "thLimited": "Limited km", "thUnlimited": "Unlimited km", "pkgNote": "Limited km tiers are shown per rate. Unlimited pricing appears only where available and is shown once per rate.", "priceLimited": "Price Limited", "priceUnlimited": "Price Unlimited", "navRates": "Rates", "navPhilosophy": "Our Philosophy", "navExperiences": "Experiences", "navContact": "Contact", "navRequest": "Request", "navImpressum": "Impressum", "navBlog": "Journal", "eyebrow": "Zurich, Switzerland", "comingSoon": "Coming soon", "processTitle": "How it works", "processNote": "Times and locations are agreed individually. Every request is confirmed personally before payment.", "process1Title": "1. Request", "process1Body": "Send your preferred date, time, and rate. We reply personally with availability and a clear confirmation.", "process2Title": "2. Confirmation and payment", "process2Body": "Once confirmed, payment is made in advance to secure the booking. You receive a written confirmation with the agreed details.", "process3Title": "3. Refundable deposit", "process3Body": "A refundable deposit is provided at or before pickup. It is held as security and returned after the drive if the car is returned undamaged.", "process4Title": "4. Meet at the pickup location", "process4Body": "We meet at the agreed location. Identity and licence are verified, and you receive a short briefing on the car and basic rules.", "process5Title": "5. The drive", "process5Body": "Enjoy your time with the car within the agreed duration and mileage. We stay reachable should anything come up.", "process6Title": "6. Return", "process6Body": "Return the car at the agreed location and time. A short walk around and confirmation of fuel and mileage closes the handover.", "process7Title": "7. Deposit refund", "process7Body": "If there is no damage, the deposit is reimbursed immediately or within the agreed window after inspection.", "pickupPricingTitle": "Pickup pricing", "thPickupArea": "Pickup area", "thPickupPrice": "Price", "thPickupMain": "Main locations", "pickupArea1": "Nänikon", "pickupPrice1": "Included", "pickupMain1": "", "pickupArea2": "Zurich Area", "pickupPrice2": "Included in 2026", "pickupMain2": "Zurich, Zurich Airport, Winterthur", "pickupArea3": "Regional Pickup", "pickupPrice3": "CHF 140", "pickupMain3": "Zug, Lucerne, St. Gallen", "pickupArea4": "Extended Pickup", "pickupPrice4": "CHF 290", "pickupMain4": "Bern, Basel, Chur", "pickupNote1": "Other locations can be requested. More information can be found at", "soonTag": "Soon"}, "de": {"home": "Home", "pricing": "Preise", "blog": "Blog", "request": "Verfügbarkeit anfragen", "title": "Tarife", "sub": "Dauer wählen und Verfügbarkeit anfragen. Jede Buchung wird persönlich bestätigt, mit klaren Bedingungen und diskreter Übergabe.", "fleetTitle": "Aktuelle Flotte", "available": "Verfügbar", "availableNow": "Jetzt verfügbar", "soon": "Bald verfügbar", "pickup": "Abholorte", "modelNote": "Stilisierte Vorschau. Ein Live Konfigurator folgt.", "pkgTitle": "Tarife", "pkg": "Tarif", "dur": "Dauer", "km": "Km", "price": "Preis", "terms": "Bedingungen und Optionen", "deposit": "Depot", "depositText": "Rückzahlbares Depot: CHF 1,000 (CHF 3,000 für Fahrer unter 25)", "extra": "Mehrkilometer", "extraText": "CHF 5 pro zusätzlichem km", "options": "Optionen", "optionsText": "Concierge Abholung, Zweitfahrer, Abholung ausserhalb der Betriebszeiten", "termsNote": "Für genaue Details nutze bitte das Anfrageformular oder kontaktiere uns direkt. Verfügbarkeit und finale Details bestätigen wir persönlich.", "gallery": "Galerie", "thLimited": "Km limitiert", "thUnlimited": "Km unbegrenzt", "pkgNote": "Limitierte km Stufen werden pro Tarif angezeigt. Unbegrenzte Preise erscheinen nur, wenn verfügbar, und werden einmal pro Tarif angezeigt.", "priceLimited": "Preis limitiert", "priceUnlimited": "Preis unbegrenzt", "navRates": "Tarife", "navPhilosophy": "Unsere Philosophie", "navExperiences": "Anlässe", "navContact": "Kontakt", "navRequest": "Anfrage", "navImpressum": "Impressum", "navBlog": "Journal", "eyebrow": "Zürich, Schweiz", "ageText": "Mindestalter ist 21", "comingSoon": "Bald verfügbar", "processTitle": "Ablauf", "processNote": "Zeiten und Orte werden individuell abgestimmt. Jede Anfrage wird persönlich bestätigt, bevor bezahlt wird.", "process1Title": "1. Anfrage", "process1Body": "Sende Datum, Zeit und gewünschten Tarif. Wir antworten persönlich mit Verfügbarkeit und klarer Bestätigung.", "process2Title": "2. Bestätigung und Zahlung", "process2Body": "Nach Bestätigung erfolgt die Zahlung im Voraus zur Sicherung der Buchung. Du erhältst eine schriftliche Bestätigung mit allen Details.", "process3Title": "3. Rückzahlbares Depot", "process3Body": "Das Depot wird bei oder vor der Übergabe hinterlegt. Es dient als Sicherheit und wird nach der Fahrt bei unbeschädigter Rückgabe zurückerstattet.", "process4Title": "4. Treffen am Abholort", "process4Body": "Wir treffen uns am vereinbarten Ort. Ausweis und Führerschein werden geprüft, danach folgt eine kurze Einführung zum Fahrzeug und den Grundregeln.", "process5Title": "5. Fahrt", "process5Body": "Geniesse die Fahrt innerhalb der vereinbarten Dauer und Kilometer. Wir bleiben erreichbar, falls etwas sein sollte.", "process6Title": "6. Rückgabe", "process6Body": "Rückgabe am vereinbarten Ort und zur vereinbarten Zeit. Ein kurzer Rundgang sowie Bestätigung von Treibstoff und Kilometerstand schliessen die Übergabe ab.", "process7Title": "7. Rückerstattung", "process7Body": "Bei keiner Beschädigung wird das Depot sofort oder innerhalb des vereinbarten Zeitfensters nach Kontrolle zurückerstattet.", "age": "Alter", "pickupPricingTitle": "Abholpreise", "thPickupArea": "Abholgebiet", "thPickupPrice": "Preis", "thPickupMain": "Hauptorte", "pickupArea1": "Nänikon", "pickupPrice1": "Inklusive", "pickupMain1": "", "pickupArea2": "Region Zürich", "pickupPrice2": "Inklusive ab 2026", "pickupMain2": "Zürich, Flughafen Zürich, Winterthur", "pickupArea3": "Regionale Abholung", "pickupPrice3": "CHF 140", "pickupMain3": "Zug, Luzern, St. Gallen", "pickupArea4": "Erweiterte Abholung", "pickupPrice4": "CHF 290", "pickupMain4": "Bern, Basel, Chur", "pickupNote1": "Weitere Orte sind auf Anfrage möglich. Mehr Informationen unter", "soonTag": "Bald"}, "it": {"home": "Home", "pricing": "Prezzi", "blog": "Blog", "request": "Richiedi disponibilità", "title": "Tariffe", "sub": "Scegli la durata e richiedi disponibilità. Ogni prenotazione viene confermata personalmente, con termini chiari e consegna discreta.", "fleetTitle": "Flotta attuale", "available": "Disponibile", "availableNow": "Disponibile ora", "soon": "Prossimamente", "pickup": "Punti di ritiro", "modelNote": "Anteprima stilizzata. Un configuratore live arriverà più avanti.", "pkgTitle": "Tariffe", "pkg": "Tariffa", "dur": "Durata", "km": "Km", "price": "Prezzo", "terms": "Termini e opzioni", "deposit": "Deposito", "depositText": "Deposito rimborsabile: CHF 1,000 (CHF 3,000 per conducenti sotto i 25 anni)", "extra": "Km extra", "extraText": "5 CHF per km extra", "options": "Opzioni", "optionsText": "Ritiro concierge, secondo guidatore, ritiro, ritiro al di fuori degli orari operativi", "termsNote": "Per i dettagli esatti usa il modulo di richiesta o contattaci direttamente. Confermeremo disponibilità e dettagli finali personalmente.", "gallery": "Galleria", "thLimited": "Km limitati", "thUnlimited": "Km illimitati", "pkgNote": "I livelli di km limitati sono mostrati per tariffa. Il prezzo illimitato appare solo dove disponibile e viene mostrato una sola volta per tariffa.", "priceLimited": "Prezzo limitato", "priceUnlimited": "Prezzo illimitato", "navRates": "Tariffe", "navPhilosophy": "La nostra filosofia", "navExperiences": "Esperienze", "navContact": "Contatti", "navRequest": "Richiesta", "navImpressum": "Impressum", "navBlog": "Journal", "eyebrow": "Zurigo, Svizzera", "ageText": "Età minima 21 anni", "comingSoon": "Prossimamente", "processTitle": "Come funziona", "processNote": "Orari e luoghi vengono concordati individualmente. Ogni richiesta viene confermata personalmente prima del pagamento.", "process1Title": "1. Richiesta", "process1Body": "Invia data, orario e tariffa desiderata. Rispondiamo personalmente con disponibilità e conferma chiara.", "process2Title": "2. Conferma e pagamento", "process2Body": "Dopo la conferma, il pagamento avviene in anticipo per bloccare la prenotazione. Ricevi una conferma scritta con i dettagli concordati.", "process3Title": "3. Deposito rimborsabile", "process3Body": "Il deposito viene versato al ritiro o prima. Serve come garanzia e viene rimborsato dopo la guida se l'auto viene restituita senza danni.", "process4Title": "4. Incontro al punto di ritiro", "process4Body": "Ci incontriamo nel luogo concordato. Verifica documento e patente, poi una breve spiegazione dell'auto e delle regole di base.", "process5Title": "5. La guida", "process5Body": "Goditi l'esperienza entro durata e chilometraggio concordati. Restiamo reperibili per qualsiasi necessità.", "process6Title": "6. Riconsegna", "process6Body": "Riconsegna nel luogo e nell'orario concordati. Un controllo rapido e conferma di carburante e km chiudono la consegna.", "process7Title": "7. Rimborso deposito", "process7Body": "Se non ci sono danni, il deposito viene rimborsato immediatamente o entro la finestra concordata dopo la verifica.", "age": "Età", "pickupPricingTitle": "Prezzi di ritiro", "thPickupArea": "Area di ritiro", "thPickupPrice": "Prezzo", "thPickupMain": "Principali località", "pickupArea1": "Nänikon", "pickupPrice1": "Incluso", "pickupMain1": "", "pickupArea2": "Area di Zurigo", "pickupPrice2": "Incluso dal 2026", "pickupMain2": "Zurigo, Aeroporto di Zurigo, Winterthur", "pickupArea3": "Ritiro regionale", "pickupPrice3": "CHF 140", "pickupMain3": "Zugo, Lucerna, San Gallo", "pickupArea4": "Ritiro esteso", "pickupPrice4": "CHF 290", "pickupMain4": "Berna, Basilea, Coira", "pickupNote1": "Altre località su richiesta. Maggiori informazioni su", "soonTag": "Presto"}};
     let PACKAGES = [];
 const DEFAULT_PACKAGES = [{"id": "P3", "duration": "3h", "label": {"en": "Brief Escape", "de": "Kurztrip", "it": "Breve Fuga"}, "unlimited": {"price": 440}}, {"id": "P6", "duration": "6h", "label": {"en": "Signature Half Day", "de": "Signature Halbtag", "it": "Signature Mezza giornata"}, "limited": [{"km": 200, "price": 790}], "unlimited": {"price": 890}}, {"id": "GT", "duration": "12h", "label": {"en": "Grand Tour", "de": "Grand Tour", "it": "Grand Tour"}, "limited": [{"km": 300, "price": 890}, {"km": 500, "price": 1290}], "unlimited": {"price": 1590}}, {"id": "FD", "duration": "24h", "label": {"en": "Full Day Icon", "de": "Full Day Icon", "it": "Full Day Icon"}, "limited": [{"km": 500, "price": 1590}], "unlimited": {"price": 1990}}, {"id": "WE", "duration": {"en": "Weekend", "de": "Wochenende", "it": "Weekend"}, "label": {"en": "Weekend Escape", "de": "Weekend Escape", "it": "Weekend Escape"}, "limited": [{"km": 500, "price": 1990}, {"km": 800, "price": 2790}]}, {"id": "WD", "duration": {"en": "Mon–Fri", "de": "Mo–Fr", "it": "Lun–Ven"}, "label": {"en": "Weekday Privilege", "de": "Weekday Privilege", "it": "Weekday Privilege"}, "limited": [{"km": 800, "price": 2190}]}, {"id": "FW", "duration": {"en": "Full week", "de": "Ganze Woche", "it": "Settimana intera"}, "label": {"en": "Full Week", "de": "Ganze Woche", "it": "Settimana intera"}, "limited": [{"km": 1400, "price": 4480}]}];
 
@@ -1485,6 +1430,33 @@ const DEFAULT_PACKAGES = [{"id": "P3", "duration": "3h", "label": {"en": "Brief 
       document.getElementById("thPriceLimited").textContent = t.priceLimited;
       document.getElementById("thPriceUnlimited").textContent = t.priceUnlimited;
       document.getElementById("pkgNote").textContent = t.pkgNote;
+
+
+      // Pickup pricing
+      setText("pickupPricingTitle", t.pickupPricingTitle);
+      setText("thPickupArea", t.thPickupArea);
+      setText("thPickupPrice", t.thPickupPrice);
+      setText("thPickupMain", t.thPickupMain);
+
+      setText("pickupArea1", t.pickupArea1);
+      setText("pickupPrice1", t.pickupPrice1);
+      setText("pickupMain1", t.pickupMain1);
+
+      setText("pickupArea2", t.pickupArea2);
+      setText("pickupPrice2", t.pickupPrice2);
+      setText("pickupMain2", t.pickupMain2);
+
+      setText("pickupArea3", t.pickupArea3);
+      setText("pickupPrice3", t.pickupPrice3);
+      setText("pickupMain3", t.pickupMain3);
+
+      setText("pickupArea4", t.pickupArea4);
+      setText("pickupPrice4", t.pickupPrice4);
+      setText("pickupMain4", t.pickupMain4);
+
+      setText("pickupNote1", t.pickupNote1);
+      setText("pickupNoteLink", t.pickup);
+      setHref("pickupNoteLink", window.__LO__.buildUrl("locations.html", lang, "top"));
 
       const body = document.getElementById("pkgBody");
       body.innerHTML = "";

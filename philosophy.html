@@ -1,21 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <title>Luxury Obsession | Our Philosophy</title>
-<meta name="description" content="Learn the philosophy behind Luxury Obsession and why the Ferrari 458 Italia is our singular, privately hosted selection in Zurich."/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta name="robots" content="index, follow"/>
-<meta property="og:title" content="Luxury Obsession | Our Philosophy"/>
-<meta property="og:description" content="Learn the philosophy behind Luxury Obsession and why the Ferrari 458 Italia is our singular, privately hosted selection in Zurich."/>
-<meta property="og:type" content="website"/>
-<meta property="og:image" content="media/image00100.png"/>
-  <link rel="icon" href="media/icon.png" />
-  <link rel="apple-touch-icon" href="media/icon.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<meta content="Learn the philosophy behind Luxury Obsession and why the Ferrari 458 Italia is our singular, privately hosted selection in Zurich." name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="index, follow" name="robots"/>
+<meta content="Luxury Obsession | Our Philosophy" property="og:title"/>
+<meta content="Learn the philosophy behind Luxury Obsession and why the Ferrari 458 Italia is our singular, privately hosted selection in Zurich." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="media/image00100.png" property="og:image"/>
+<link href="media/icon.png" rel="icon"/>
+<link href="media/icon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="assets/lo.css" rel="stylesheet"/>
 <style>
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap");
@@ -29,7 +31,6 @@
   --titaniumA:rgba(252,252,253,0.92);
   --titaniumB:rgba(176,176,186,0.70);
   --hairline:rgba(231,220,198,0.18);
-  --carbonImage:url("media/carbon.jpg");
   --text:#f5f5f5;
   --muted:#a3a3a3;
   --border:#262637;
@@ -42,85 +43,43 @@
 *{box-sizing:border-box}
 body{margin:0;background:radial-gradient(circle at top,#191621 0,var(--bg) 55%);color:var(--text)}
 a{color:inherit;text-decoration:none}
-header{
-  position:sticky;top:0;z-index:50;
-  position:relative;
-  backdrop-filter:blur(12px);
-  background:linear-gradient(to bottom,rgba(5,5,9,0.92),rgba(5,5,9,0.62),transparent);
-  border-bottom:1px solid rgba(255,255,255,0.03)
-}
+
 .container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
-.navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.20rem 0}/*0.75rem 0*/
-.brand{display:inline-flex;align-items:center;gap:0.75rem}
-.brandIcon{width:var(--logoSize);height:var(--logoSize);object-fit:contain;display:block}
-.brandWordmark{height:var(--wordmarkH);width:auto;object-fit:contain;display:block}
-.brandText{font-size:1.05rem;font-weight:850;letter-spacing:0.02em}
+/*0.75rem 0*/
+
+
+
+
 
 /* Brand wordmark style to match index */
-.brandGold{
-  font-family:"Cinzel", serif;
-  font-weight:700;
-  letter-spacing:0.18em;
-  text-transform:uppercase;
-  font-size: clamp(1.05rem, 1.2vw + 0.9rem, 1.2rem);
-  line-height:1;
-  background:linear-gradient(135deg,
-    rgba(252,252,253,0.92),
-    rgba(231,220,198,0.96),
-    rgba(200,183,155,0.92),
-    rgba(231,220,198,0.96)
-  );
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-  display:inline-block;
-  white-space:nowrap;
+
+
+@media (max-width:640px){
+
 }
 @media (max-width:640px){
-  .brandIcon{width:34px;height:34px}
-  .brandWordmark{height:28px}
-  .brandText{font-size:0.98rem}
+@media (max-width:640px){
+
+
+
 }
-.navRight{display:flex;align-items:center;gap:0.65rem}
-.navLinks{display:flex;align-items:center;gap:0.8rem;font-size:0.9rem}
-.navLinks a{padding:0.35rem 0.65rem;border-radius:999px;color:var(--muted);transition:0.2s}
-.navLinks a:hover{color:var(--text);background:rgba(255,255,255,0.05)}
-.navCta{
-  padding:0.45rem 0.9rem;border-radius:999px;background:var(--accent);
-  font-size:0.85rem;font-weight:800;color:#fff;box-shadow:0 10px 26px rgba(229,9,20,0.45)
-}
-.langPicker{display:inline-flex;align-items:center;gap:0.35rem}
-.flagBtn{
-  border:1px solid rgba(255,255,255,0.14);
-  background:rgba(255,255,255,0.04);
-  border-radius:999px;padding:0.25rem 0.45rem;
-  cursor:pointer;line-height:1;opacity:0.75
-}
-.flagBtn.active{opacity:1;border-color:rgba(229,9,20,0.55);box-shadow:0 0 0 1px rgba(229,9,20,0.25)}
-.flagBtn svg{display:block}
-.hamburger{
-  display:none;width:42px;height:38px;border-radius:999px;
-  border:1px solid rgba(255,255,255,0.14);
-  background:rgba(255,255,255,0.04);
-  cursor:pointer;align-items:center;justify-content:center
-}
-.hamburgerLines{display:grid;gap:4px}
-.hamburgerLines span{width:18px;height:2px;border-radius:999px;background:rgba(245,245,245,0.92);display:block}
-.mobileMenu{
-  display:none;margin:0.65rem 0 0.95rem;padding:0.85rem;
-  border-radius:16px;background:rgba(5,5,9,0.92);
-  border:1px solid rgba(255,255,255,0.10);box-shadow:var(--shadow)
-}
-.mobileMenu a{display:flex;align-items:center;justify-content:space-between;padding:0.7rem 0.75rem;border-radius:12px}
-.mobileMenu a:hover{background:rgba(255,255,255,0.05)}
-.mobileMenuDivider{height:1px;background:rgba(255,255,255,0.08);margin:0.55rem 0}
-.mobileMenuCta{
-  display:flex;justify-content:center;padding:0.75rem 0.85rem;border-radius:14px;
-  background:linear-gradient(135deg, rgba(231,220,198,0.96), rgba(231,220,198,0.82));
-  border:1px solid rgba(0,0,0,0.18);
-  font-weight:700;color:#0a0a0b !important;
-  box-shadow:0 16px 40px rgba(0,0,0,0.35)
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 main{padding-bottom:2.2rem}
 section{padding:3.4rem 0}
 .eyebrow{text-transform:uppercase;letter-spacing:0.24em;font-size:0.7rem;color:var(--muted);margin-bottom:0.75rem}
@@ -260,8 +219,8 @@ textarea{min-height:90px;resize:vertical}
   .span-md-12{grid-column:span 12}
 }
 @media(max-width:760px){
-  .navLinks{display:none}
-  .hamburger{display:inline-flex}
+
+
   .container{padding:0 1rem}
 }
 @media(max-width:560px){
@@ -327,8 +286,8 @@ textarea{min-height:90px;resize:vertical}
 .contactList{list-style:none;padding:0;margin:0.75rem 0 0;display:grid;gap:0.5rem}
 .contactList li{display:flex;align-items:center;justify-content:space-between;gap:0.75rem;padding:0.55rem 0.65rem;border-radius:12px;background:rgba(0,0,0,0.22);border:1px solid rgba(255,255,255,0.07)}
 .contactList li span{color:var(--muted);font-size:0.82rem}
-footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.78rem;color:var(--muted)}
-.footerInner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+
+
 
 
 /* ===== Luxury refresh ===== */
@@ -352,59 +311,27 @@ body{
     var(--bg);
   color:var(--text);
 }
-header{
-  background:linear-gradient(to bottom, rgba(7,7,10,0.92), rgba(7,7,10,0.74), transparent);
-  border-bottom:1px solid rgba(243,241,238,0.06);
-}
-.navInner{padding:0.55rem 0;}
-.navLinks a{color:rgba(243,241,238,0.86);font-weight:500;letter-spacing:0.01em}
-.navLinks a:hover{color:var(--text)}
-.navCta{
-  background:transparent;
-  border:1px solid rgba(200,183,155,0.75);
-  color:rgba(243,241,238,0.92);
-  box-shadow:none;
-  font-weight:600;
-}
-.navCta:hover{background:rgba(200,183,155,0.12)}
 
-.langPicker, .flagBtn{display:none !important;} /* replaced by langSelect */
 
-.langSelect{position:relative;display:inline-flex;align-items:center}
-.langToggle{
-  display:inline-flex;align-items:center;gap:0.45rem;
-  padding:0.5rem 0.75rem;border-radius:999px;
-  border:1px solid rgba(243,241,238,0.16);
-  background:rgba(243,241,238,0.03);
-  color:rgba(243,241,238,0.86);
-  cursor:pointer;font-size:0.85rem;letter-spacing:0.08em;
-}
-.langToggle:hover{background:rgba(243,241,238,0.06)}
-.langChevron{font-size:0.9rem;opacity:0.8}
-.langMenu{
-  position:absolute;right:0;top:calc(100% + 0.55rem);
-  min-width:190px;
-  background:rgba(7,7,10,0.92);
-  border:1px solid rgba(243,241,238,0.14);
-  border-radius:16px;
-  box-shadow:var(--shadow);
-  padding:0.4rem;
-  backdrop-filter:blur(10px);
-}
-.langOption{
-  width:100%;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0.65rem 0.75rem;border-radius:12px;
-  background:transparent;border:none;
-  color:rgba(243,241,238,0.92);
-  cursor:pointer;font-size:0.92rem;
-}
-.langOption:hover{background:rgba(243,241,238,0.06)}
-.langOption[aria-current="true"]{background:rgba(200,183,155,0.10);border:1px solid rgba(200,183,155,0.22)}
 
-.hamburger{border:1px solid rgba(243,241,238,0.16);background:rgba(243,241,238,0.03)}
-.hamburger:hover{background:rgba(243,241,238,0.06)}
-.hamburgerLines span{background:rgba(243,241,238,0.88)}
+
+
+
+
+ /* replaced by langSelect */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 h1,h2,h3,.sectionTitle,.heroTitle{font-family:"Cormorant Garamond",serif;letter-spacing:0.02em}
 .heroTitle{font-weight:600}
@@ -468,14 +395,12 @@ h1,h2,h3,.sectionTitle,.heroTitle{font-family:"Cormorant Garamond",serif;letter-
 .ctaBtn svg{display:block}
 
 .contactList li{border-bottom:1px solid rgba(243,241,238,0.08)}
-footer{border-top:1px solid rgba(243,241,238,0.06)}
+
 
 
 /* --- Luxury refresh: supercar accents + full-bleed imagery --- */
 .heroHighlight{background:linear-gradient(to right, rgba(231,220,198,0.96), rgba(252,252,253,0.92));-webkit-background-clip:text;background-clip:text;color:transparent}
-header{
-  border-bottom:1px solid rgba(255,255,255,0.06);
-}
+
 .titaniumDivider{
   height:1px;
   background:linear-gradient(90deg,transparent,rgba(252,252,253,0.12),rgba(231,220,198,0.24),rgba(252,252,253,0.10),transparent);
@@ -484,23 +409,13 @@ header{
 /* Carbon accents (supercar touch) */
 :root{ --carbonScale: 420px; }
 
-header{position:sticky}
-header{isolation:isolate;}
-header::before{
-  content:"";
-  position:absolute; inset:0;
-  background-image: var(--carbonImage);
-  background-size: var(--carbonScale) var(--carbonScale);
-  background-position: center;
-  opacity:0.10;
-  mix-blend-mode:overlay;
-  pointer-events:none;
-  z-index:0;
-}
-header > .container{position:relative; z-index:1;}
+
+
+
+
 
 @supports not (mix-blend-mode: overlay){
-  header::before{opacity:0.06;}
+
 }
 
 .card{
@@ -617,7 +532,7 @@ header > .container{position:relative; z-index:1;}
   .btnPrimary:hover{filter:brightness(1.02)}
   .heroBadge{background:rgba(231,220,198,0.06);border-color:rgba(231,220,198,0.18)}
   .heroPill{background:rgba(231,220,198,0.06);border-color:rgba(231,220,198,0.14)}
-  .langMenu{background:rgba(7,7,10,0.96)}
+
 }
 
 
@@ -688,13 +603,13 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 .heroHighlight{background:none !important; color:var(--champagne) !important; text-shadow:none !important;}
 
 /* Buttons and CTAs */
-.btnPrimary, .navCta, .mobileMenuCta{
+.btnPrimary{
   background:linear-gradient(135deg, rgba(231,220,198,0.95), rgba(252,252,253,0.92)) !important;
   color:#0b0b10 !important;
   box-shadow:0 18px 55px rgba(0,0,0,0.40) !important;
   border:1px solid rgba(231,220,198,0.28) !important;
 }
-.btnPrimary:hover, .navCta:hover, .mobileMenuCta:hover{
+.btnPrimary:hover{
   filter:brightness(1.02) contrast(1.02);
 }
 .btnSecondary{
@@ -745,28 +660,11 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 .mediaFull{min-height:96vh !important;}
 
 /* Header and hamburger refinement */
-.hamburger{
-  width:44px;height:44px !important;
-  border-radius:999px !important;
-  border:1px solid rgba(231,220,198,0.18) !important;
-  background:rgba(7,7,10,0.35) !important;
-}
-.hamburgerLines span{
-  background:rgba(243,241,238,0.92) !important;
-  height:2px !important; width:18px !important;
-}
-.mobileMenu{
-  margin:0.85rem 0 1.2rem !important;
-  padding:0.85rem !important;
-  border-radius:20px !important;
-  background:rgba(7,7,10,0.78) !important;
-  border:1px solid rgba(231,220,198,0.14) !important;
-  backdrop-filter:blur(12px) !important;
-}
-.mobileMenu a:not(.mobileMenuCta){
-  color:rgba(243,241,238,0.92) !important;
-}
-.mobileMenu a span{opacity:0.55 !important;}
+
+
+
+
+
 
 
 /* Carbon visibility boost (user feedback) */
@@ -784,8 +682,8 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
     --muted:rgba(243,241,238,0.72);
     --border:rgba(231,220,198,0.14);
   }
-  .navInner{padding:0.85rem 0 !important;}
-  .navCta{padding:0.48rem 0.82rem !important; font-weight:600 !important;}
+
+
   .btn{padding:0.82rem 1.0rem !important;}
   .mediaOverlay{padding:2.6rem 0 2.2rem !important;}
   .mediaFull{min-height:100vh !important;}
@@ -795,36 +693,16 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 
 
 /* Mobile navigation – luxury treatment */
-.hamburger{
-  border:1px solid rgba(231,220,198,0.18);
-  background:linear-gradient(180deg, rgba(231,220,198,0.06), rgba(255,255,255,0.02));
-}
-.hamburgerLines span{background:rgba(231,220,198,0.92);}
 
-.mobileMenu{
-  background:rgba(5,5,9,0.94);
-  border:1px solid rgba(231,220,198,0.14);
-  box-shadow:0 18px 55px rgba(0,0,0,0.55);
-}
-.mobileMenu a{
-  font-family:var(--font-sans);
-  letter-spacing:0.02em;
-}
-.mobileMenuDivider{background:rgba(231,220,198,0.10);}
 
-.mobileMenuCta{
-  background:linear-gradient(180deg, rgba(231,220,198,0.20), rgba(231,220,198,0.10));
-  border:1px solid rgba(231,220,198,0.22);
-  color:rgba(245,245,245,0.96);
-  box-shadow:none;
-  font-weight:600;
-}
+
+
+
+
+
+
 @media (hover:hover){
-  .mobileMenuCta:hover{
-    transform:translateY(-1px);
-    border-color:rgba(231,220,198,0.35);
-    background:linear-gradient(180deg, rgba(231,220,198,0.24), rgba(231,220,198,0.12));
-  }
+
 }
 
 
@@ -891,13 +769,9 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 }
 
 /* Mobile menu CTA: always readable */
-.mobileMenuCta{
-  background:linear-gradient(135deg, rgba(231,220,198,0.95), rgba(252,252,253,0.92)) !important;
-  color:#0b0b10 !important;
-  border:1px solid rgba(231,220,198,0.28) !important;
-}
-.mobileMenuCta:hover{color:#0b0b10 !important;}
-.mobileMenuCta:link, .mobileMenuCta:visited, .mobileMenuCta:active, .mobileMenuCta:focus{color:#0b0b10 !important;}
+
+
+
 
 
 /* Rates: mobile shows all in a single horizontal row with scrollbar */
@@ -918,13 +792,13 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 }
 
 /* footer links */
-.footerInner{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center}
-.footerRight{display:flex;justify-content:flex-end;gap:16px;flex-wrap:wrap}
-.footerRight a{color:var(--muted);text-decoration:none}
-.footerRight a:hover{color:var(--text)}
+
+
+
+
 @media (max-width: 760px){
-  .footerInner{grid-template-columns:1fr;gap:10px;text-align:center}
-  .footerRight{justify-content:center}
+
+
 }
 
 
@@ -941,6 +815,7 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 .quotePanel p{margin:0;color:var(--text);font-style:italic}
 .quotePanel .byline{margin-top:0.6rem;color:var(--muted);font-style:normal;font-size:0.92rem}
 </style>
+<script defer="" src="assets/lo.js"></script>
 </head>
 <body>
 <header>
@@ -951,12 +826,12 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 <span class="brandGold">Luxury Obsession</span>
 </a>
 <div class="navRight">
-<nav aria-label="Primary" class="navLinks"><a href="pages/pricing.html" id="navRates">Rates</a>
-<a href="philosophy.html" id="navPhilosophy">Our Philosophy</a>
-<a href="experiences.html" id="navExperiences">Experiences</a>
-<a href="pages/blog.html" id="navBlog">Journal</a>
-<a href="index.html#contact" id="navContact">Contact</a>
-<a class="navCta" href="index.html#request" id="navRequest">Request</a></nav>
+<nav aria-label="Primary" class="navLinks"><a data-i18n="nav.rates" href="pages/pricing.html" id="navRates">Rates</a>
+<a data-i18n="nav.philosophy" href="philosophy.html" id="navPhilosophy">Our Philosophy</a>
+<a data-i18n="nav.experiences" href="experiences.html" id="navExperiences">Experiences</a>
+<a data-i18n="nav.blog" href="pages/blog.html" id="navBlog">Journal</a>
+<a data-i18n="nav.contact" href="#contact" id="navContact">Contact</a>
+<a class="navCta" data-i18n="nav.request" href="#request" id="navRequest">Request</a></nav>
 <div aria-label="Language" class="langSelect">
 <button aria-expanded="false" aria-haspopup="menu" class="langToggle" id="langToggle" type="button">
 <span aria-label="Current language" id="langCode">EN</span>
@@ -973,204 +848,215 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 </button>
 </div>
 </div>
-<div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation" style="display:none"><a href="pages/pricing.html" id="mRates">Rates</a>
-<a href="philosophy.html" id="mPhilosophy">Our Philosophy</a>
-<a href="experiences.html" id="mExperiences">Experiences</a>
-<a href="pages/blog.html" id="mBlog">Journal</a>
-<a href="index.html#contact" id="mContact">Contact</a>
-<a href="impressum.html" id="mImpressum">Impressum</a><div class="mobileMenuDivider"></div>
-<a class="mobileMenuCta" href="index.html#request" id="mRequest">Request</a>
-</div>
+<div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation"></div>
 </div>
 </header>
 <main>
 <section class="showcase" id="top">
-  <div class="mediaFull" style="min-height:68vh">
-    <img src="media/image00100.png" alt="Our Philosophy"/>
-    <blockquote class="heroQuote"><span>Make the dream a reality</span></blockquote>
-    <div class="mediaOverlay" style="align-items:flex-end">
-      <div class="container">
-        <div class="mediaCaption">
-          <div class="mediaCaptionBox">
-            <p class="eyebrow">Zurich, Switzerland</p>
-            <h1 class="mediaTitle">Our Philosophy</h1>
-            <p class="mediaSubtitle">A privately hosted Ferrari experience, built around discretion, craft, and mechanical honesty.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="mediaFull" style="min-height:68vh">
+<img alt="Our Philosophy" src="media/image00100.png"/>
+<blockquote class="heroQuote"><span data-i18n="ph.hero.quote">Make the dream a reality</span></blockquote>
+<div class="mediaOverlay" style="align-items:flex-end; padding-bottom: clamp(3rem, 10vh, 8rem) !important">
+<div class="container">
+<div class="mediaCaption">
+<div class="mediaCaptionBox">
+<p class="eyebrow" data-i18n="ph.hero.eyebrow">Zurich, Switzerland</p>
+<h1 class="mediaTitle" data-i18n="ph.hero.title">Our Philosophy</h1>
+<p class="mediaSubtitle" data-i18n="ph.hero.subtitle">A privately hosted Ferrari experience, built around discretion, craft, and mechanical honesty.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section><section>
-  <div class="container">
-    <div class="pageIntro">
-      <h2 class="sectionTitle">Luxury, without noise</h2>
-      <div class="pageProse">
-        <p>Luxury Obsession is intentionally small. We host one car, one standard, and one way of doing things: quietly, precisely, and with respect for the machine and the person driving it.</p>
-        <p>Instead of a fleet and a counter, we focus on preparation, clarity, and a handover that feels personal. You send a request, we confirm availability and terms, and the rest is handled with the kind of calm you expect from a premium experience in Switzerland.</p>
-      </div>
-    </div>
-
-    <div class="grid12" style="margin-top:2.25rem">
-      <div class="span-6 span-md-12">
-        <div class="inlineMedia">
-          <img src="media/image00200.png" alt="Ferrari 458 Italia detail"/>
-        </div>
-        <div class="figureCaption">A singular selection, maintained and hosted privately.</div>
-      </div>
-      <div class="span-6 span-md-12">
-        <h3 style="margin:0 0 0.65rem 0;font-family:'Cormorant Garamond',serif;font-size:1.8rem">Why the 458 Italia</h3>
-        <div class="pageProse">
-          <p>The Ferrari 458 Italia sits in a special place in modern Ferrari history. It is widely regarded as the last naturally aspirated mid engine V8 Ferrari, a format that enthusiasts love for its immediate throttle response, rising soundtrack, and mechanical clarity.</p>
-          <p>It also introduced a dual clutch transmission in Ferrari’s mid engine V8 line. In simple terms, two clutches manage alternating gear sets so the next gear is already prepared. Shifts happen with near continuous torque and without the pause you feel in older single clutch automated systems. The result is speed, smoothness, and composure when you drive with intent.</p>
-          <p>This is why the 458 remains deeply collectible and endlessly rewarding: it feels modern where it should, and raw where it matters.</p>
-        </div>
-      </div>
-
-      <div class="span-12" style="margin-top:1.25rem">
-        <div class="quotePanel">
-          <p>Our goal is simple: deliver an experience that feels curated, never improvised. A Ferrari should arrive with confidence, not with clutter.</p>
-          <div class="byline">Luxury Obsession, Zurich</div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="pageIntro">
+<h2 class="sectionTitle" data-i18n="ph.sec1.title">Luxury, without noise</h2>
+<div class="pageProse">
+<p data-i18n="ph.sec1.p1">Luxury Obsession is intentionally small. We host one car, one standard, and one way of doing things: quietly, precisely, and with respect for the machine and the person driving it.</p>
+<p data-i18n="ph.sec1.p2">Instead of a fleet and a counter, we focus on preparation, clarity, and a handover that feels personal. You send a request, we confirm availability and terms, and the rest is handled with the kind of calm you expect from a premium experience in Switzerland.</p>
+</div>
+</div>
+<div class="grid12" style="margin-top:2.25rem">
+<div class="span-6 span-md-12">
+<div class="inlineMedia">
+<img alt="Ferrari 458 Italia engine" src="media/image01701.jpg"/>
+</div>
+<div class="figureCaption" data-i18n="ph.sec1.caption1">A singular selection, maintained and hosted privately.</div>
+</div>
+<div class="span-6 span-md-12">
+<h3 data-i18n="ph.sec1.whyTitle" style="margin:0 0 0.65rem 0;font-family:'Cormorant Garamond',serif;font-size:1.8rem">Why the 458 Italia</h3>
+<div class="pageProse">
+<p data-i18n="ph.sec1.whyP1">The Ferrari 458 Italia sits in a special place in modern Ferrari history. It is widely regarded as the last naturally aspirated mid engine V8 Ferrari, a format that enthusiasts love for its immediate throttle response, rising soundtrack, and mechanical clarity.</p>
+<p data-i18n="ph.sec1.whyP2">It also introduced a dual clutch transmission in Ferrari’s mid engine V8 line. In simple terms, two clutches manage alternating gear sets so the next gear is already prepared. Shifts happen with near continuous torque and without the pause you feel in older single clutch automated systems. The result is speed, smoothness, and composure when you drive with intent.</p>
+<p data-i18n="ph.sec1.whyP3">This is why the 458 remains deeply collectible and endlessly rewarding: it feels modern where it should, and raw where it matters.</p>
+</div>
+</div>
+<div class="span-12" style="margin-top:1.25rem">
+<div class="quotePanel">
+<p data-i18n="ph.sec1.quote">Our goal is simple: deliver an experience that feels curated, never improvised. A Ferrari should arrive with confidence, not with clutter.</p>
+<div class="byline" data-i18n="ph.sec1.byline">Luxury Obsession, Zurich</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <section>
-  <div class="container">
-    <h2 class="sectionTitle">How we host a rental</h2>
-    <div class="grid12" style="margin-top:1.4rem">
-      <div class="span-4 span-md-6 span-sm-12">
-        <div class="card" style="height:100%">
-          <div class="cardTop">
-            <div class="cardTitle">Discreet by design</div>
-            <div class="cardDesc">No loud claims, no pressure. Clear communication and a calm process.</div>
-          </div>
-        </div>
-      </div>
-      <div class="span-4 span-md-6 span-sm-12">
-        <div class="card" style="height:100%">
-          <div class="cardTop">
-            <div class="cardTitle">Prepared properly</div>
-            <div class="cardDesc">The car is checked, cleaned, and presented as it should be, every time.</div>
-          </div>
-        </div>
-      </div>
-      <div class="span-4 span-md-12 span-sm-12">
-        <div class="card" style="height:100%">
-          <div class="cardTop">
-            <div class="cardTitle">Transparent terms</div>
-            <div class="cardDesc">You request dates and duration. We confirm availability, pricing, and requirements before anything is finalized.</div>
-          </div>
-        </div>
-      </div>
-      <div class="span-6 span-md-12" style="margin-top:0.5rem">
-        <h3 style="margin:0 0 0.65rem 0;font-family:'Cormorant Garamond',serif;font-size:1.8rem">Who we are</h3>
-        <div class="pageProse">
-          <p>Luxury Obsession is hosted by Anna Loi. The approach is personal and Swiss: thoughtful, punctual, and detail led.</p>
-          <p>We work with a simple principle. If it cannot be delivered with confidence and care, it is not offered. That is why the selection is currently singular, and why each request is handled individually.</p>
-        </div>
-        <ul class="bulletList">
-          <li>Private hosting in Zurich area</li>
-          <li>Selection limited to preserve quality</li>
-          <li>Clear confirmation of availability and terms</li>
-        </ul>
-      </div>
-      <div class="span-6 span-md-12" style="margin-top:0.5rem">
-        <div class="inlineMedia">
-          <img src="media/image00150.png" alt="Driving experience"/>
-        </div>
-        <div class="figureCaption">Curated routes available on request, from city elegance to alpine drama.</div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<h2 class="sectionTitle" data-i18n="ph.sec2.title">How we host a rental</h2>
+<div class="grid12" style="margin-top:1.4rem">
+<div class="span-4 span-md-6 span-sm-12">
+<div class="card" style="height:100%">
+<div class="cardTop">
+<div class="cardTitle" data-i18n="ph.sec2.card1.title">Discreet by design</div>
+<div class="cardDesc" data-i18n="ph.sec2.card1.desc">No loud claims, no pressure. Clear communication and a calm process.</div>
+</div>
+</div>
+</div>
+<div class="span-4 span-md-6 span-sm-12">
+<div class="card" style="height:100%">
+<div class="cardTop">
+<div class="cardTitle" data-i18n="ph.sec2.card2.title">Prepared properly</div>
+<div class="cardDesc" data-i18n="ph.sec2.card2.desc">The car is checked, cleaned, and presented as it should be, every time.</div>
+</div>
+</div>
+</div>
+<div class="span-4 span-md-12 span-sm-12">
+<div class="card" style="height:100%">
+<div class="cardTop">
+<div class="cardTitle" data-i18n="ph.sec2.card3.title">Transparent terms</div>
+<div class="cardDesc" data-i18n="ph.sec2.card3.desc">You request dates and duration. We confirm availability, pricing, and requirements before anything is finalized.</div>
+</div>
+</div>
+</div>
+<div class="span-6 span-md-12" style="margin-top:0.5rem">
+<h3 data-i18n="ph.sec2.whoTitle" style="margin:0 0 0.65rem 0;font-family:'Cormorant Garamond',serif;font-size:1.8rem">Who we are</h3>
+<div class="pageProse">
+<p data-i18n="ph.sec2.whoP1">Luxury Obsession is hosted by Anna Loi. The approach is personal and Swiss: thoughtful, punctual, and detail led.</p>
+<p data-i18n="ph.sec2.whoP2">We work with a simple principle. If it cannot be delivered with confidence and care, it is not offered. That is why the selection is currently singular, and why each request is handled individually.</p>
+</div>
+<ul class="bulletList">
+<li data-i18n="ph.sec2.b1">Private hosting in Zurich area</li>
+<li data-i18n="ph.sec2.b2">Selection limited to preserve quality</li>
+<li data-i18n="ph.sec2.b3">Clear confirmation of availability and terms</li>
+</ul>
+</div>
+<div class="span-6 span-md-12" style="margin-top:0.5rem">
+<div class="inlineMedia">
+<img alt="Driving experience" src="media/image00400.jpg"/>
+</div>
+<div class="figureCaption" data-i18n="ph.sec2.caption1">Curated routes available on request, from city elegance to alpine drama.</div>
+</div>
+</div>
+</div>
 </section>
-
 <section>
-  <div class="container">
-    <h2 class="sectionTitle">Ready to request</h2>
-    <div class="pageProse pageIntro">
-      <p>For now, the experience is defined by one car: the Ferrari 458 Italia. Choose a preferred date and duration on the home page, then submit your request. We reply with confirmation of availability and the terms for your specific use case.</p>
-    </div>
-    <div style="margin-top:1.15rem">
-      <a class="btnPrimary" href="index.html#request">Request availability</a>
-      <a class="btnSecondary" href="pages/pricing.html" style="margin-left:0.75rem">View rates</a>
-    </div>
-  </div>
+<div class="container">
+<h2 class="sectionTitle" data-i18n="ph.sec3.title">Ready to request</h2>
+<div class="pageProse pageIntro">
+<p data-i18n="ph.sec3.p1">For now, the experience is defined by one car: the Ferrari 458 Italia. Choose a preferred date and duration on the home page, then submit your request. We reply with confirmation of availability and the terms for your specific use case.</p>
+</div>
+<div style="margin-top:1.15rem">
+<a class="btnPrimary" data-i18n="ph.sec3.btn1" href="index.html#request">Request availability</a>
+<a class="btnSecondary" data-i18n="ph.sec3.btn2" href="pages/pricing.html" style="margin-left:0.75rem">View rates</a>
+</div>
+</div>
 </section>
 </main>
 <footer>
-  <div class="container footerInner">
-    <div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
-    <div class="footerCenter">Zurich, Switzerland.</div>
-    <div class="footerRight">
-      <a href="pages/pricing.html">Rates</a>
-      <a href="philosophy.html">Our Philosophy</a>
-      <a href="experiences.html">Experiences</a>
-      <a href="pages/blog.html">Journal</a>
-      <a href="impressum.html">Impressum</a>
-    </div>
-  </div>
+<div class="container footerInner">
+<div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
+<div class="footerCenter" data-i18n="ph.footer.center">Currently available: Ferrari 458 Italia.</div>
+<div class="footerRight">
+<a href="impressum.html">Impressum</a>
+</div>
+</div>
 </footer>
-
 <script>
-(function(){
-  const year = document.getElementById('year');
-  if(year) year.textContent = new Date().getFullYear();
+(() => {
+  const TRANSLATIONS = {"en":{"nav.rates":"Rates","nav.philosophy":"Our Philosophy","nav.experiences":"Experiences","nav.blog":"Journal","nav.contact":"Contact","nav.request":"Request","ph.hero.quote":"Make the dream a reality","ph.hero.eyebrow":"Zurich, Switzerland","ph.hero.title":"Our Philosophy","ph.hero.subtitle":"A privately hosted Ferrari experience, built around discretion, craft, and mechanical honesty.","ph.sec1.title":"Luxury, without noise","ph.sec1.p1":"Luxury Obsession is intentionally small. We host one car, one standard, and one way of doing things: quietly, precisely, and with respect for the machine and the person driving it.","ph.sec1.p2":"Instead of a fleet and a counter, we focus on preparation, clarity, and a handover that feels personal. You send a request, we confirm availability and terms, and the rest is handled with the kind of calm you expect from a premium experience in Switzerland.","ph.sec1.caption1":"A singular selection, maintained and hosted privately.","ph.sec1.whyTitle":"Why the 458 Italia","ph.sec1.whyP1":"The Ferrari 458 Italia sits in a special place in modern Ferrari history. It is widely regarded as the last naturally aspirated mid engine V8 Ferrari, a format that enthusiasts love for its immediate throttle response, rising soundtrack, and mechanical clarity.","ph.sec1.whyP2":"It also introduced a dual clutch transmission in Ferrari’s mid engine V8 line. In simple terms, two clutches manage alternating gear sets so the next gear is already prepared. Shifts happen with near continuous torque and without the pause you feel in older single clutch automated systems. The result is speed, smoothness, and composure when you drive with intent.","ph.sec1.whyP3":"This is why the 458 remains deeply collectible and endlessly rewarding: it feels modern where it should, and raw where it matters.","ph.sec1.quote":"Our goal is simple: deliver an experience that feels curated, never improvised. A Ferrari should arrive with confidence, not with clutter.","ph.sec1.byline":"Luxury Obsession, Zurich","ph.sec2.title":"How we host a rental","ph.sec2.card1.title":"Discreet by design","ph.sec2.card1.desc":"No loud claims, no pressure. Clear communication and a calm process.","ph.sec2.card2.title":"Prepared properly","ph.sec2.card2.desc":"The car is checked, cleaned, and presented as it should be, every time.","ph.sec2.card3.title":"Transparent terms","ph.sec2.card3.desc":"You request dates and duration. We confirm availability, pricing, and requirements before anything is finalized.","ph.sec2.whoTitle":"Who we are","ph.sec2.whoP1":"Luxury Obsession is hosted by Anna Loi. The approach is personal and Swiss: thoughtful, punctual, and detail led.","ph.sec2.whoP2":"We work with a simple principle. If it cannot be delivered with confidence and care, it is not offered. That is why the selection is currently singular, and why each request is handled individually.","ph.sec2.b1":"Private hosting in Zurich area","ph.sec2.b2":"Selection limited to preserve quality","ph.sec2.b3":"Clear confirmation of availability and terms","ph.sec2.caption1":"Curated routes available on request, from city elegance to alpine drama.","ph.sec3.title":"Ready to request","ph.sec3.p1":"For now, the experience is defined by one car: the Ferrari 458 Italia. Choose a preferred date and duration on the home page, then submit your request. We reply with confirmation of availability and the terms for your specific use case.","ph.sec3.btn1":"Request availability","ph.sec3.btn2":"View rates","ph.footer.center":"Currently available: Ferrari 458 Italia.","meta.title":"Luxury Obsession | Our Philosophy","meta.description":"Learn the philosophy behind Luxury Obsession and why the Ferrari 458 Italia is our singular, privately hosted selection in Zurich.","og.title":"Luxury Obsession | Our Philosophy","og.description":"Learn the philosophy behind Luxury Obsession and why the Ferrari 458 Italia is our singular, privately hosted selection in Zurich."},"de":{"nav.rates":"Preise","nav.philosophy":"Unsere Philosophie","nav.experiences":"Erlebnisse","nav.blog":"Journal","nav.contact":"Kontakt","nav.request":"Anfragen","ph.hero.quote":"Lass den Traum Wirklichkeit werden","ph.hero.eyebrow":"Zürich, Schweiz","ph.hero.title":"Unsere Philosophie","ph.hero.subtitle":"Ein privat betreutes Ferrari-Erlebnis, geprägt von Diskretion, Handwerk und mechanischer Ehrlichkeit.","ph.sec1.title":"Luxus ohne Getöse","ph.sec1.p1":"Luxury Obsession ist bewusst klein gehalten. Wir bieten ein Fahrzeug, einen Standard und eine Art, Dinge zu tun: leise, präzise und mit Respekt für die Maschine und die Person am Steuer.","ph.sec1.p2":"Statt einer Flotte und eines Schalters konzentrieren wir uns auf Vorbereitung, Klarheit und eine Übergabe, die persönlich wirkt. Sie senden eine Anfrage, wir bestätigen Verfügbarkeit und Konditionen, und alles Weitere läuft mit der Ruhe ab, die man von einem Premium Erlebnis in der Schweiz erwartet.","ph.sec1.caption1":"Eine einzigartige Auswahl, privat gepflegt und betreut.","ph.sec1.whyTitle":"Warum der 458 Italia","ph.sec1.whyP1":"Der Ferrari 458 Italia nimmt in der modernen Ferrari-Geschichte einen besonderen Platz ein. Er gilt weithin als der letzte Mittelmotor-V8 von Ferrari mit Saugmotor, ein Konzept, das Enthusiasten wegen der unmittelbaren Gasannahme, des ansteigenden Klangbilds und der mechanischen Klarheit lieben.","ph.sec1.whyP2":"Er brachte zudem das Doppelkupplungsgetriebe in Ferraris Mittelmotor-V8-Reihe. Einfach gesagt steuern zwei Kupplungen abwechselnde Gangstufen, sodass der nächste Gang bereits vorbereitet ist. Die Schaltvorgänge erfolgen mit nahezu kontinuierlicher Kraftübertragung und ohne die Pause, die man bei älteren automatisierten Einkupplungsgetrieben spürt. Das Ergebnis sind Geschwindigkeit, Sanftheit und Souveränität, wenn man bewusst fährt.","ph.sec1.whyP3":"Darum ist der 458 bis heute begehrt und immer wieder lohnend: modern, wo es sein soll, und roh, wo es darauf ankommt.","ph.sec1.quote":"Unser Ziel ist einfach: ein Erlebnis zu bieten, das kuratiert wirkt, nie improvisiert. Ein Ferrari sollte mit Selbstvertrauen ankommen, nicht mit Unordnung.","ph.sec1.byline":"Luxury Obsession, Zürich","ph.sec2.title":"Wie wir eine Anmietung gestalten","ph.sec2.card1.title":"Diskret gestaltet","ph.sec2.card1.desc":"Keine lauten Versprechen, kein Druck. Klare Kommunikation und ein ruhiger Ablauf.","ph.sec2.card2.title":"Sorgfältig vorbereitet","ph.sec2.card2.desc":"Das Auto wird jedes Mal geprüft, gereinigt und so präsentiert, wie es sich gehört.","ph.sec2.card3.title":"Transparente Bedingungen","ph.sec2.card3.desc":"Sie nennen Datum und Dauer. Wir bestätigen Verfügbarkeit, Preis und Voraussetzungen, bevor etwas verbindlich wird.","ph.sec2.whoTitle":"Wer wir sind","ph.sec2.whoP1":"Luxury Obsession wird von Anna Loi privat betreut. Der Ansatz ist persönlich und schweizerisch: bedacht, pünktlich und detailorientiert.","ph.sec2.whoP2":"Wir folgen einem einfachen Prinzip: Wenn etwas nicht mit Sicherheit und Sorgfalt geliefert werden kann, wird es nicht angeboten. Deshalb ist die Auswahl derzeit bewusst auf ein Fahrzeug beschränkt, und jede Anfrage wird individuell bearbeitet.","ph.sec2.b1":"Private Betreuung im Raum Zürich","ph.sec2.b2":"Begrenzte Auswahl, um Qualität zu sichern","ph.sec2.b3":"Klare Bestätigung von Verfügbarkeit und Bedingungen","ph.sec2.caption1":"Kuratierte Routen sind auf Anfrage verfügbar, von urbaner Eleganz bis zu alpiner Dramatik.","ph.sec3.title":"Bereit für Ihre Anfrage","ph.sec3.p1":"Derzeit wird das Erlebnis durch ein einziges Fahrzeug definiert: den Ferrari 458 Italia. Wählen Sie auf der Startseite Ihr Wunschdatum und die Dauer und senden Sie dann Ihre Anfrage. Wir antworten mit der Bestätigung der Verfügbarkeit und den Konditionen für Ihren konkreten Anlass.","ph.sec3.btn1":"Verfügbarkeit anfragen","ph.sec3.btn2":"Preise ansehen","ph.footer.center":"Derzeit verfügbar: Ferrari 458 Italia.","meta.title":"Luxury Obsession | Unsere Philosophie","meta.description":"Entdecken Sie die Philosophie hinter Luxury Obsession und warum der Ferrari 458 Italia unsere einzige, privat betreute Auswahl in Zürich ist.","og.title":"Luxury Obsession | Unsere Philosophie","og.description":"Entdecken Sie die Philosophie hinter Luxury Obsession und warum der Ferrari 458 Italia unsere einzige, privat betreute Auswahl in Zürich ist."},"it":{"nav.rates":"Tariffe","nav.philosophy":"La nostra filosofia","nav.experiences":"Esperienze","nav.blog":"Journal","nav.contact":"Contatti","nav.request":"Richiesta","ph.hero.quote":"Trasforma il sogno in realtà","ph.hero.eyebrow":"Zurigo, Svizzera","ph.hero.title":"La nostra filosofia","ph.hero.subtitle":"Un’esperienza Ferrari ospitata privatamente, costruita attorno a discrezione, cura artigianale e onestà meccanica.","ph.sec1.title":"Lusso, senza clamore","ph.sec1.p1":"Luxury Obsession è volutamente piccola. Ospitiamo un’auto, uno standard e un solo modo di fare le cose: con discrezione, precisione e rispetto per la macchina e per chi la guida.","ph.sec1.p2":"Invece di una flotta e di un bancone, ci concentriamo su preparazione, chiarezza e una consegna che sia davvero personale. Inviate una richiesta, noi confermiamo disponibilità e condizioni, e tutto il resto viene gestito con la calma che ci si aspetta da un’esperienza premium in Svizzera.","ph.sec1.caption1":"Una selezione unica, mantenuta e ospitata privatamente.","ph.sec1.whyTitle":"Perché la 458 Italia","ph.sec1.whyP1":"La Ferrari 458 Italia occupa un posto speciale nella storia moderna di Ferrari. È ampiamente considerata l’ultima Ferrari V8 a motore centrale con aspirazione naturale, un formato che gli appassionati amano per la risposta immediata all’acceleratore, la colonna sonora in crescendo e la chiarezza meccanica.","ph.sec1.whyP2":"Ha inoltre introdotto il cambio a doppia frizione nella linea Ferrari V8 a motore centrale. In parole semplici, due frizioni gestiscono set di rapporti alternati, così la marcia successiva è già pronta. Le cambiate avvengono con una trazione quasi continua e senza la pausa tipica dei vecchi sistemi automatizzati a frizione singola. Il risultato è velocità, fluidità e compostezza quando si guida con intenzione.","ph.sec1.whyP3":"Per questo la 458 resta altamente collezionabile e sempre gratificante: moderna dove deve esserlo e cruda dove conta davvero.","ph.sec1.quote":"Il nostro obiettivo è semplice: offrire un’esperienza curata, mai improvvisata. Una Ferrari deve arrivare con sicurezza, non con confusione.","ph.sec1.byline":"Luxury Obsession, Zurigo","ph.sec2.title":"Come gestiamo un noleggio","ph.sec2.card1.title":"Discreta per scelta","ph.sec2.card1.desc":"Niente proclami, niente pressioni. Comunicazione chiara e un processo calmo.","ph.sec2.card2.title":"Preparata come si deve","ph.sec2.card2.desc":"L’auto viene controllata, pulita e presentata come si deve, ogni volta.","ph.sec2.card3.title":"Condizioni trasparenti","ph.sec2.card3.desc":"Indicate date e durata. Noi confermiamo disponibilità, prezzo e requisiti prima che qualsiasi cosa sia definitiva.","ph.sec2.whoTitle":"Chi siamo","ph.sec2.whoP1":"Luxury Obsession è ospitata da Anna Loi. L’approccio è personale e svizzero: riflessivo, puntuale e guidato dai dettagli.","ph.sec2.whoP2":"Seguiamo un principio semplice: se non possiamo offrirlo con sicurezza e cura, non lo offriamo. Per questo la selezione è al momento volutamente unica e ogni richiesta viene gestita individualmente.","ph.sec2.b1":"Ospitalità privata nell’area di Zurigo","ph.sec2.b2":"Selezione limitata per preservare la qualità","ph.sec2.b3":"Conferma chiara di disponibilità e condizioni","ph.sec2.caption1":"Percorsi curati disponibili su richiesta, dall’eleganza urbana al dramma alpino.","ph.sec3.title":"Pronti a richiedere","ph.sec3.p1":"Per ora, l’esperienza è definita da un’unica auto: la Ferrari 458 Italia. Scegliete nella home page la data preferita e la durata, poi inviate la richiesta. Vi risponderemo con la conferma della disponibilità e le condizioni per il vostro caso specifico.","ph.sec3.btn1":"Richiedi disponibilità","ph.sec3.btn2":"Vedi tariffe","ph.footer.center":"Attualmente disponibile: Ferrari 458 Italia.","meta.title":"Luxury Obsession | La nostra filosofia","meta.description":"Scoprite la filosofia di Luxury Obsession e perché la Ferrari 458 Italia è la nostra selezione unica, ospitata privatamente a Zurigo.","og.title":"Luxury Obsession | La nostra filosofia","og.description":"Scoprite la filosofia di Luxury Obsession e perché la Ferrari 458 Italia è la nostra selezione unica, ospitata privatamente a Zurigo."}};
+  const STORAGE_KEYS = ["lo_lang","lang","language"];
+  const supported = Object.keys(TRANSLATIONS);
 
-  const mobileMenu = document.getElementById('mobileMenu');
-  const hamburger = document.getElementById('hamburger');
-  function closeMenu(){
-    if(!mobileMenu || !hamburger) return;
-    mobileMenu.style.display = 'none';
-    mobileMenu.dataset.open = '0';
-    hamburger.setAttribute('aria-expanded','false');
+  function readStoredLang() {
+    try {
+      for (const k of STORAGE_KEYS) {
+        const v = localStorage.getItem(k);
+        if (v) return v;
+      }
+    } catch (e) {}
+    return null;
   }
-  function toggleMenu(){
-    if(!mobileMenu || !hamburger) return;
-    const open = mobileMenu.dataset.open === '1';
-    if(open) closeMenu();
-    else {
-      mobileMenu.style.display = 'block';
-      mobileMenu.dataset.open = '1';
-      hamburger.setAttribute('aria-expanded','true');
+
+  function writeStoredLang(lang) {
+    try {
+      for (const k of STORAGE_KEYS) localStorage.setItem(k, lang);
+    } catch (e) {}
+  }
+
+  function resolveLang(lang) {
+    const clean = (lang || "").toLowerCase().trim();
+    return supported.includes(clean) ? clean : "en";
+  }
+
+  function t(lang, key) {
+    return (TRANSLATIONS[lang] && TRANSLATIONS[lang][key]) ||
+           (TRANSLATIONS.en && TRANSLATIONS.en[key]) ||
+           "";
+  }
+
+  function applyLang(lang) {
+    lang = resolveLang(lang);
+    document.documentElement.lang = lang;
+
+    const codeEl = document.getElementById("langCode");
+    if (codeEl) codeEl.textContent = lang.toUpperCase();
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      el.textContent = t(lang, key);
+    });
+
+    const title = t(lang, "meta.title");
+    if (title) document.title = title;
+
+    const desc = t(lang, "meta.description");
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (desc && metaDesc) metaDesc.setAttribute("content", desc);
+
+    const ogTitle = t(lang, "og.title") || title;
+    const ogDesc = t(lang, "og.description") || desc;
+
+    const metaOgTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle && metaOgTitle) metaOgTitle.setAttribute("content", ogTitle);
+
+    const metaOgDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc && metaOgDesc) metaOgDesc.setAttribute("content", ogDesc);
+  }
+
+  const initial = resolveLang(readStoredLang() || document.documentElement.lang || "en");
+  applyLang(initial);
+
+  document.querySelectorAll(".langOption[data-lang]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const lang = resolveLang(btn.getAttribute("data-lang"));
+      writeStoredLang(lang);
+      applyLang(lang);
+    });
+  });
+
+  window.addEventListener("storage", (e) => {
+    if (e && STORAGE_KEYS.includes(e.key)) {
+      applyLang(readStoredLang() || "en");
     }
-  }
-  if(hamburger) hamburger.addEventListener('click', toggleMenu);
-  if(mobileMenu) mobileMenu.addEventListener('click', (e)=>{
-    const t = e.target;
-    if(t && t.tagName === 'A') closeMenu();
   });
 
-  const langToggle = document.getElementById('langToggle');
-  const langMenu = document.getElementById('langMenu');
-  const langCode = document.getElementById('langCode');
-
-  function closeLang(){
-    if(!langMenu || !langToggle) return;
-    langMenu.hidden = true;
-    langToggle.setAttribute('aria-expanded','false');
-  }
-  function openLang(){
-    if(!langMenu || !langToggle) return;
-    langMenu.hidden = false;
-    langToggle.setAttribute('aria-expanded','true');
-  }
-  function toggleLang(){
-    if(!langMenu) return;
-    if(langMenu.hidden) openLang(); else closeLang();
-  }
-  if(langToggle) langToggle.addEventListener('click', (e)=>{ e.stopPropagation(); toggleLang(); });
-  if(langMenu) langMenu.addEventListener('click', (e)=>{
-    const btn = e.target.closest('.langOption');
-    if(!btn) return;
-    const code = (btn.dataset.lang || 'en').toUpperCase();
-    if(langCode) langCode.textContent = code;
-    closeLang();
+  window.addEventListener("DOMContentLoaded", () => {
+    // Reapply after deferred scripts run (e.g., shared nav logic)
+    applyLang(resolveLang(readStoredLang() || initial));
   });
-  document.addEventListener('click', closeLang);
-  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape'){ closeMenu(); closeLang(); } });
+
+  window.LO_applyPageLang = applyLang;
 })();
-</script>
-</body>
+</script></body>
 </html>

@@ -2,21 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <base href="../" />
-  <title>Luxury Obsession | Ferrari 458 Italia, the signature experience in Switzerland</title>
+<title>Luxury Obsession | Ferrari 458 Italia, the signature experience in Switzerland</title>
   <meta name="description" content="A modern Ferrari classic in its most natural setting: early mornings, quiet roads, alpine light, and a handover that feels effortless. How we host the 458 Italia experience in Switzerland." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index, follow" />
   <meta property="og:title" content="Luxury Obsession | Ferrari 458 Italia, the signature experience in Switzerland" />
   <meta property="og:description" content="A modern Ferrari classic in its most natural setting: early mornings, quiet roads, alpine light, and a handover that feels effortless." />
   <meta property="og:type" content="article" />
-  <meta property="og:image" content="media/image00300.png" />
-  <link rel="icon" href="media/icon.png" />
+  <meta property="og:image" content="../media/image00300.png" />
+  <link rel="icon" href="../media/icon.png" />
 
-  <link rel="alternate" hreflang="en" href="pages/ferrari-458-italia-the-signature-experience-in-switzerland.html?lang=en" />
-  <link rel="alternate" hreflang="de" href="pages/ferrari-458-italia-the-signature-experience-in-switzerland.html?lang=de" />
-  <link rel="alternate" hreflang="it" href="pages/ferrari-458-italia-the-signature-experience-in-switzerland.html?lang=it" />
-  <link rel="alternate" hreflang="x-default" href="pages/ferrari-458-italia-the-signature-experience-in-switzerland.html?lang=en" />
+  <link rel="alternate" hreflang="en" href="ferrari-458-italia-the-signature-experience-in-switzerland.html?lang=en" />
+  <link rel="alternate" hreflang="de" href="ferrari-458-italia-the-signature-experience-in-switzerland.html?lang=de" />
+  <link rel="alternate" hreflang="it" href="ferrari-458-italia-the-signature-experience-in-switzerland.html?lang=it" />
+  <link rel="alternate" hreflang="x-default" href="ferrari-458-italia-the-signature-experience-in-switzerland.html?lang=en" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,7 +32,7 @@
   --titaniumA:rgba(252,252,253,0.92);
   --titaniumB:rgba(176,176,186,0.70);
   --hairline:rgba(231,220,198,0.18);
-  --carbonImage:url("media/carbon.jpg");
+  --carbonImage:url("../media/carbon.jpg");
   --text:#f5f5f5;
   --muted:#a3a3a3;
   --border:#262637;
@@ -393,23 +392,123 @@ header{
 .mobileMenuDivider{background:rgba(231,220,198,0.10) !important;}
 .mobileMenu a:not(.mobileMenuCta){color:rgba(243,241,238,0.92) !important;}
   </style>
-</head>
+<script>
+(function(){
+  const LANGS = ["en","de","it"];
+
+  function getLang(){
+    const p = new URLSearchParams(window.location.search);
+    const q = p.get("lang");
+    if(q && LANGS.includes(q)) return q;
+    const s = localStorage.getItem("lo_lang");
+    if(s && LANGS.includes(s)) return s;
+    return "en";
+  }
+
+  function setLang(next){
+    if(!LANGS.includes(next)) return;
+    localStorage.setItem("lo_lang", next);
+    const u = new URL(window.location.href);
+    u.searchParams.set("lang", next);
+    window.location.href = u.pathname + u.search + u.hash;
+  }
+
+  function buildUrl(path, lang, hash){
+    const u = new URL(path, document.baseURI);
+    u.searchParams.set("lang", lang);
+    if(hash) u.hash = hash;
+    return u.pathname + u.search + u.hash;
+  }
+
+  function initLangMenu(lang){
+    const toggle = document.getElementById("langToggle");
+    const menu = document.getElementById("langMenu");
+    const codeEl = document.getElementById("langCode");
+    if(!toggle || !menu || !codeEl) return;
+
+    const codes = { en:"EN", de:"DE", it:"IT" };
+    codeEl.textContent = codes[lang] || "EN";
+
+    function close(){
+      menu.hidden = true;
+      toggle.setAttribute("aria-expanded","false");
+    }
+    function open(){
+      menu.hidden = false;
+      toggle.setAttribute("aria-expanded","true");
+    }
+
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = !menu.hidden;
+      if(isOpen) close();
+      else open();
+    });
+
+    document.addEventListener("click", () => close(), { passive:true });
+    document.addEventListener("keydown", (e) => { if(e.key === "Escape") close(); });
+
+    menu.querySelectorAll("[data-lang]").forEach(btn => {
+      const code = btn.getAttribute("data-lang");
+      btn.setAttribute("aria-current", code === lang ? "true" : "false");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setLang(code);
+      });
+    });
+  }
+
+  function initHamburger(){
+    const btn = document.getElementById("hamburger");
+    const menu = document.getElementById("mobileMenu");
+    if(!btn || !menu) return;
+
+    function close(){
+      menu.style.display = "none";
+      menu.setAttribute("data-open","0");
+      btn.setAttribute("aria-expanded","false");
+    }
+
+    btn.addEventListener("click", () => {
+      const open = menu.getAttribute("data-open") === "1";
+      if(open) close();
+      else {
+        menu.style.display = "block";
+        menu.setAttribute("data-open","1");
+        btn.setAttribute("aria-expanded","true");
+      }
+    });
+
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
+    document.addEventListener("click", (e) => {
+      if(menu.getAttribute("data-open") !== "1") return;
+      if(menu.contains(e.target) || btn.contains(e.target)) return;
+      close();
+    });
+  }
+
+  window.__LO__ = { getLang, setLang, buildUrl, initLangMenu, initHamburger };
+})();
+</script>
+<link href="../assets/lo.css" rel="stylesheet"/><script defer="" src="../assets/lo.js"></script></head>
 <body>
 <header>
 <div class="container">
 <div class="navInner">
-<a aria-label="Luxury Obsession" class="brand" href="index.html">
-<img alt="Luxury Obsession icon" class="brandIcon" src="media/icon.png"/>
+<a aria-label="Luxury Obsession" class="brand" data-withlang="1" href="../index.html">
+<img alt="Luxury Obsession icon" class="brandIcon" src="../media/icon.png"/>
 <span class="brandGold">Luxury Obsession</span>
 </a>
 <div class="navRight">
-<nav aria-label="Primary" class="navLinks"><a href="pages/pricing.html" id="navRates">Rates</a>
-<a href="philosophy.html" id="navPhilosophy">Our Philosophy</a>
-<a href="experiences.html" id="navExperiences">Experiences</a>
-
-<a href="pages/blog.html" id="navBlog">Journal</a>
-<a href="#contact" id="navContact">Contact</a>
-<a class="navCta" href="#request" id="navRequest">Request</a></nav>
+<nav aria-label="Primary" class="navLinks">
+<a data-i18n="nav_rates" data-withlang="1" href="pricing.html" id="navRates">Rates</a>
+<a data-i18n="nav_philosophy" data-withlang="1" href="../philosophy.html" id="navPhilosophy">Our Philosophy</a>
+<a data-i18n="nav_experiences" data-withlang="1" href="../experiences.html" id="navExperiences">Experiences</a>
+<a data-i18n="nav_journal" data-withlang="1" href="blog.html" id="navBlog">Journal</a>
+<a data-i18n="nav_contact" data-withlang="1" href="../index.html#contact" id="navContact">Contact</a>
+<a class="navCta" data-i18n="nav_request" data-withlang="1" href="../index.html#request" id="navRequest">Request</a>
+</nav>
 <div aria-label="Language" class="langSelect">
 <button aria-expanded="false" aria-haspopup="menu" class="langToggle" id="langToggle" type="button">
 <span aria-label="Current language" id="langCode">EN</span>
@@ -426,15 +525,7 @@ header{
 </button>
 </div>
 </div>
-<div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation" style="display:none"><a href="pages/pricing.html" id="mRates">Rates</a>
-<a href="philosophy.html" id="mPhilosophy">Our Philosophy</a>
-<a href="experiences.html" id="mExperiences">Experiences</a>
-
-<a href="pages/blog.html" id="mBlog">Journal</a>
-<a href="#contact" id="mContact">Contact</a>
-<a href="impressum.html" id="mImpressum">Impressum</a><div class="mobileMenuDivider"></div>
-<a class="mobileMenuCta" href="#request" id="mRequest">Request</a>
-</div>
+<div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation" style="display:none"></div>
 </div>
 </header>
 
@@ -445,7 +536,7 @@ header{
     <div class="articleMeta"><span id="publishedLabel">Published</span>: <span id="publishedDate">2025 12 15</span></div>
 
     <div class="heroMedia">
-      <img class="heroImg" src="media/image00300.png" alt="Ferrari 458 Italia in Switzerland" />
+      <img class="heroImg" src="../media/image02400.jpg" alt="Ferrari 458 Italia in Switzerland" />
     </div>
 
     <div class="toc card" id="toc">
@@ -473,7 +564,7 @@ header{
       <p>It is also beautifully proportioned. The surface language is clean, the cabin is focused, and the driving position feels purpose built without becoming harsh. In a landscape like Switzerland, that balance matters. You want a car that can be thrilling on a pass, but still composed when the road narrows through villages and lakeside promenades.</p>
 
       <figure>
-        <img src="media/image00900.png" alt="Detail and atmosphere" />
+        <img src="../media/image00900.png" alt="Detail and atmosphere" />
         <figcaption>Details matter. A signature day is defined by small moments: light on the paint, quiet roads, and the way the cabin frames the view.</figcaption>
       </figure>
 
@@ -522,7 +613,7 @@ header{
       <div class="tableNote">Seasonal notes are practical, not prescriptive. We adjust based on your date, weather, and the kind of drive you want.</div>
 
       <figure>
-        <img src="media/image00500.jpg" alt="Swiss roads and scenery" />
+        <img src="../media/image01900.jpg" alt="Swiss roads and scenery" />
         <figcaption>Switzerland offers variety within a short radius. The best drives feel simple: a flowing road, a clean horizon, and space to enjoy the car.</figcaption>
       </figure>
 
@@ -587,7 +678,7 @@ header{
       </div>
 
       <figure>
-        <img src="media/image00400.jpg" alt="A calm stop along the route" />
+        <img src="../media/image02600.png" alt="A calm stop along the route" />
         <figcaption>A signature day includes pauses. The best stops are quiet, scenic, and close enough to keep the day effortless.</figcaption>
       </figure>
 
@@ -627,36 +718,36 @@ header{
       <div class="pullQuote">
         If you share your vibe, we propose a plan. <strong>Lakes and cafés</strong>, <strong>mountain passes</strong>, or a <strong>clean fast loop</strong> with minimal traffic.
       </div>
-
+<!--
       <h2 id="gallery">Gallery</h2>
       <p>Moments from the 458 in Switzerland. Tap to open.</p>
 
       <div class="gallery" aria-label="Gallery">
         <div class="galleryGrid" id="galleryGrid">
-          <div class="galleryItem" data-full="media/image00300.png" data-caption="The Ferrari 458 Italia in its natural element.">
-            <img src="media/image00300.png" alt="Ferrari 458 Italia" />
+          <div class="galleryItem" data-full="../media/image00300.png" data-caption="The Ferrari 458 Italia in its natural element.">
+            <img src="../media/image00300.png" alt="Ferrari 458 Italia" />
           </div>
-          <div class="galleryItem" data-full="media/image00900.png" data-caption="Detail and atmosphere.">
-            <img src="media/image00900.png" alt="Ferrari detail" />
+          <div class="galleryItem" data-full="../media/image00900.png" data-caption="Detail and atmosphere.">
+            <img src="../media/image00900.png" alt="Ferrari detail" />
           </div>
-          <div class="galleryItem" data-full="media/image00500.jpg" data-caption="Quiet Swiss roads, best enjoyed early.">
-            <img src="media/image00500.jpg" alt="Swiss road" />
+          <div class="galleryItem" data-full="../media/image00500.jpg" data-caption="Quiet Swiss roads, best enjoyed early.">
+            <img src="../media/image00500.jpg" alt="Swiss road" />
           </div>
-          <div class="galleryItem" data-full="media/image00400.jpg" data-caption="A pause that feels like arrival.">
-            <img src="media/image00400.jpg" alt="Scenic stop" />
+          <div class="galleryItem" data-full="../media/image00400.jpg" data-caption="A pause that feels like arrival.">
+            <img src="../media/image00400.jpg" alt="Scenic stop" />
           </div>
-          <div class="galleryItem" data-full="media/image00101.png" data-caption="A refined moment, framed by light.">
-            <img src="media/image00101.png" alt="Atmosphere" />
+          <div class="galleryItem" data-full="../media/image00101.png" data-caption="A refined moment, framed by light.">
+            <img src="../media/image00101.png" alt="Atmosphere" />
           </div>
-          <div class="galleryItem" data-full="media/image00300.png" data-caption="The signature experience is the flow of the day.">
-            <img src="media/image00300.png" alt="Ferrari 458 Italia" />
+          <div class="galleryItem" data-full="../media/image00300.png" data-caption="The signature experience is the flow of the day.">
+            <img src="../media/image00300.png" alt="Ferrari 458 Italia" />
           </div>
         </div>
       </div>
-
+-->
       <div class="ctaRow">
-        <a class="ctaBtn" id="ctaBack" href="pages/blog.html">Back to journal</a>
-        <a class="ctaBtn ctaBtnPrimary" id="ctaRequest" href="index.html#request">Request availability</a>
+        <a class="ctaBtn" id="ctaBack" data-withlang="1" href="blog.html">Back to journal</a>
+        <a class="ctaBtn ctaBtnPrimary" id="ctaRequest" data-withlang="1" href="../index.html#request">Request availability</a>
       </div>
     </div>
   </main>
@@ -676,7 +767,7 @@ header{
       <div>© <span id="year"></span> Luxury Obsession.</div>
       <div>Ferrari only experiences, Switzerland.</div>
       <div class="footerRight">
-        <a href="impressum.html">Impressum</a>
+        <a href="impressum.html" data-withlang="1">Impressum</a>
       </div>
     </div>
   </footer>
@@ -829,17 +920,17 @@ header{
   function initNavLinks(lang){
     const url = (path, hash) => buildUrl(path, lang, hash);
 
-    setHref("navRates", url("pages/pricing.html", "top"));
+    setHref("navRates", url("pricing.html", "top"));
     setHref("navPhilosophy", url("philosophy.html", "top"));
     setHref("navExperiences", url("experiences.html", "top"));
-    setHref("navBlog", url("pages/blog.html", "top"));
+    setHref("navBlog", url("blog.html", "top"));
     setHref("navContact", url("index.html", "contact"));
     setHref("navRequest", url("index.html", "request"));
 
-    setHref("mRates", url("pages/pricing.html", "top"));
+    setHref("mRates", url("pricing.html", "top"));
     setHref("mPhilosophy", url("philosophy.html", "top"));
     setHref("mExperiences", url("experiences.html", "top"));
-    setHref("mBlog", url("pages/blog.html", "top"));
+    setHref("mBlog", url("blog.html", "top"));
     setHref("mContact", url("index.html", "contact"));
     setHref("mImpressum", url("impressum.html", "top"));
     setHref("mRequest", url("index.html", "request"));
@@ -847,7 +938,7 @@ header{
     const brand = document.querySelector("a.brand");
     if(brand) brand.setAttribute("href", url("index.html", "top"));
 
-    setHref("ctaBack", url("pages/blog.html", "top"));
+    setHref("ctaBack", url("blog.html", "top"));
     setHref("ctaRequest", url("index.html", "request"));
   }
 
@@ -920,12 +1011,93 @@ header{
   document.documentElement.lang = lang;
   localStorage.setItem("lo_lang", lang);
 
-  initLangMenu(lang);
-  initHamburger();
-
-  initNavLinks(lang);
-
   applyI18N(lang);
+
+
+  function wireHamburgerFallback(){
+    const btn = document.getElementById("hamburger");
+    const menu = document.getElementById("mobileMenu");
+    if(!btn || !menu) return;
+
+    if(btn.dataset.loHamburgerFallback === "1") return;
+    btn.dataset.loHamburgerFallback = "1";
+
+    if(menu.children.length === 0){
+      const desktop = Array.from(document.querySelectorAll(".navLinks a"));
+      const normal = desktop.filter(a => !a.classList.contains("navCta"));
+      const cta = desktop.find(a => a.classList.contains("navCta"));
+
+      normal.forEach(a => {
+        const clone = a.cloneNode(true);
+        clone.classList.remove("navCta");
+        menu.appendChild(clone);
+      });
+
+      const divider = document.createElement("div");
+      divider.className = "mobileMenuDivider";
+      menu.appendChild(divider);
+
+      if(cta){
+        const cloneCta = cta.cloneNode(true);
+        cloneCta.classList.remove("navCta");
+        cloneCta.classList.add("mobileMenuCta");
+        menu.appendChild(cloneCta);
+      }
+    }
+
+    function close(){
+      menu.style.display = "none";
+      menu.setAttribute("data-open","0");
+      btn.setAttribute("aria-expanded","false");
+    }
+
+    function open(){
+      menu.style.display = "block";
+      menu.setAttribute("data-open","1");
+      btn.setAttribute("aria-expanded","true");
+    }
+
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      const isOpen = menu.getAttribute("data-open") === "1";
+      if(isOpen) close();
+      else open();
+    }, true);
+
+    menu.addEventListener("click", (e) => {
+      if(e.target.closest("a")) close();
+    });
+
+    document.addEventListener("click", (e) => {
+      if(menu.getAttribute("data-open") !== "1") return;
+      if(menu.contains(e.target) || btn.contains(e.target)) return;
+      close();
+    });
+
+    close();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const lo = window.__LO__;
+    if(lo && typeof lo.initSharedUI === "function") lo.initSharedUI(lang);
+    else if(lo && typeof lo.initLangMenu === "function") lo.initLangMenu(lang);
+
+    wireHamburgerFallback();
+
+    document.querySelectorAll("[data-withlang='1']").forEach(a => {
+      const href = a.getAttribute("href");
+      if(href && lo && lo.buildUrl) a.setAttribute("href", lo.buildUrl(href, lang));
+    });
+  });
+
+  // Apply lang params immediately for visible links
+  document.querySelectorAll("[data-withlang='1']").forEach(a => {
+    const href = a.getAttribute("href");
+    if(href && window.__LO__ && window.__LO__.buildUrl) a.setAttribute("href", window.__LO__.buildUrl(href, lang));
+  });
+
   initGallery();
 
   const y = document.getElementById("year");

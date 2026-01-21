@@ -26,7 +26,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/lo.css" />
-  <script src="assets/lo.js"></script>
+  <script src="assets/lo.js" defer></script>
 </head>
 
 <body>
@@ -66,25 +66,16 @@
         </div>
       </div>
 
-      <div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation" style="display:none">
-        <a href="pages/pricing.html" id="mRates">Rates<span>›</span></a>
-        <a href="philosophy.html" id="mPhilosophy">Our Philosophy<span>›</span></a>
-        <a href="experiences.html" id="mExperiences">Experiences<span>›</span></a>
-        <a href="pages/blog.html" id="mBlog">Journal<span>›</span></a>
-        <a href="index.html#contact" id="mContact">Contact<span>›</span></a>
-        <a href="impressum.html" id="mImpressum">Impressum<span>›</span></a>
-        <div class="mobileMenuDivider"></div>
-        <a class="mobileMenuCta" href="index.html#request" id="mRequest">Request</a>
-      </div>
+      <div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation"></div>
     </div>
   </header>
 
   <main>
-    <section id="top">
-      <div class="container" style="padding:3.2rem 0 1.2rem">
+    <section class="pageHero" id="top">
+      <div class="container">
         <p class="eyebrow">Switzerland</p>
-        <h1 class="sectionTitle" style="margin:0 0 0.55rem 0">Impressum</h1>
-        <p class="sectionSubtitle" style="margin:0;max-width:56rem">Legal information and contact details for Luxury Obsession.</p>
+        <h1 class="sectionTitle">Impressum</h1>
+        <p class="sectionSubtitle pageIntro">Legal information and contact details for Luxury Obsession.</p>
       </div>
     </section>
 
@@ -103,7 +94,7 @@
 
         <div class="grid12" style="margin-top:1.8rem">
           <div class="span-12">
-            <h3 style="margin:0 0 0.65rem 0;font-family:'Cormorant Garamond',serif;font-size:1.8rem">Disclaimer</h3>
+            <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Disclaimer</h3>
             <div class="pageProse">
               <p>The content of this website is prepared with care. However, we do not guarantee completeness, accuracy, or timeliness of the information provided.</p>
               <p>Liability claims arising from the use of this website, including direct or indirect damages, are excluded to the extent permitted by law.</p>
@@ -111,14 +102,14 @@
           </div>
 
           <div class="span-12" style="margin-top:1.15rem">
-            <h3 style="margin:0 0 0.65rem 0;font-family:'Cormorant Garamond',serif;font-size:1.8rem">External links</h3>
+            <h3 class="cardTitle" style="margin:0 0 0.65rem 0">External links</h3>
             <div class="pageProse">
               <p>This website may contain links to external websites. We have no influence on external content and therefore do not assume any responsibility for it. The respective provider is responsible for the content of linked pages.</p>
             </div>
           </div>
 
           <div class="span-12" style="margin-top:1.15rem">
-            <h3 style="margin:0 0 0.65rem 0;font-family:'Cormorant Garamond',serif;font-size:1.8rem">Copyright</h3>
+            <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Copyright</h3>
             <div class="pageProse">
               <p>All content on this website, including text and media, is protected by copyright. Any reproduction, distribution, or other use requires prior written consent, unless permitted by law.</p>
             </div>
@@ -137,45 +128,34 @@
       <div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
       <div class="footerCenter">Currently available: Ferrari 458 Italia.</div>
       <div class="footerRight">
-        <a href="impressum.html">Impressum</a>
+        <a href="impressum.html" id="footerImpressum">Impressum</a>
       </div>
     </div>
   </footer>
 
   <script>
-  (function(){
-    const year = document.getElementById('year');
-    if(year) year.textContent = new Date().getFullYear();
+    document.addEventListener("DOMContentLoaded", () => {
+      if(!window.__LO__) return;
+      const lang = window.__LO__.getLang();
+      document.documentElement.lang = lang;
 
-    if(!window.__LO__) return;
-    const lang = window.__LO__.getLang();
-    document.documentElement.lang = lang;
-    window.__LO__.initLangMenu(lang);
-    window.__LO__.initHamburger();
+      const setHref = (id, url, hash) => {
+        const el = document.getElementById(id);
+        if(!el) return;
+        el.href = window.__LO__.buildUrl(url, lang, hash || "top");
+      };
 
-    const setHref = (id, url, hash) => {
-      const el = document.getElementById(id);
-      if(!el) return;
-      el.href = window.__LO__.buildUrl(url, lang, hash || 'top');
-    };
+      // Header links (keep language in the URL)
+      setHref("navRates", "pages/pricing.html", "top");
+      setHref("navPhilosophy", "philosophy.html", "top");
+      setHref("navExperiences", "experiences.html", "top");
+      setHref("navBlog", "pages/blog.html", "top");
+      setHref("navContact", "index.html", "contact");
+      setHref("navRequest", "index.html", "request");
 
-    // Header
-    setHref('navRates', 'pages/pricing.html', 'top');
-    setHref('navPhilosophy', 'philosophy.html', 'top');
-    setHref('navExperiences', 'experiences.html', 'top');
-    setHref('navBlog', 'pages/blog.html', 'top');
-    setHref('navContact', 'index.html', 'contact');
-    setHref('navRequest', 'index.html', 'request');
-
-    // Mobile
-    setHref('mRates', 'pages/pricing.html', 'top');
-    setHref('mPhilosophy', 'philosophy.html', 'top');
-    setHref('mExperiences', 'experiences.html', 'top');
-    setHref('mBlog', 'pages/blog.html', 'top');
-    setHref('mContact', 'index.html', 'contact');
-    setHref('mImpressum', 'impressum.html', 'top');
-    setHref('mRequest', 'index.html', 'request');
-  })();
+      // Re-run shared UI after links are in place
+      if(window.__LO__.initSharedUI) window.__LO__.initSharedUI(lang);
+    });
   </script>
 </body>
 </html>

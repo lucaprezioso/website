@@ -1,21 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <title>Luxury Obsession | Bespoke Experiences</title>
-<meta name="description" content="Explore bespoke Ferrari 458 Italia experiences in Zurich for photoshoots, weddings, special occasions, and curated drives."/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta name="robots" content="index, follow"/>
-<meta property="og:title" content="Luxury Obsession | Bespoke Experiences"/>
-<meta property="og:description" content="Explore bespoke Ferrari 458 Italia experiences in Zurich for photoshoots, weddings, special occasions, and curated drives."/>
-<meta property="og:type" content="website"/>
-<meta property="og:image" content="media/image00200.png"/>
-<link rel="icon" href="media/icon.png"/>
-<link rel="apple-touch-icon" href="media/icon.png"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<meta content="Explore bespoke Ferrari 458 Italia experiences in Zurich for photoshoots, weddings, special occasions, and curated drives." name="description"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="index, follow" name="robots"/>
+<meta content="Luxury Obsession | Bespoke Experiences" property="og:title"/>
+<meta content="Explore bespoke Ferrari 458 Italia experiences in Zurich for photoshoots, weddings, special occasions, and curated drives." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="media/image00200.png" property="og:image"/>
+<link href="media/icon.png" rel="icon"/>
+<link href="media/icon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="assets/lo.css" rel="stylesheet"/>
 <style>
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600&display=swap");
@@ -29,7 +31,6 @@
   --titaniumA:rgba(252,252,253,0.92);
   --titaniumB:rgba(176,176,186,0.70);
   --hairline:rgba(231,220,198,0.18);
-  --carbonImage:url("media/carbon.jpg");
   --text:#f5f5f5;
   --muted:#a3a3a3;
   --border:#262637;
@@ -42,64 +43,35 @@
 *{box-sizing:border-box}
 body{margin:0;background:radial-gradient(circle at top,#191621 0,var(--bg) 55%);color:var(--text)}
 a{color:inherit;text-decoration:none}
-header{
-  position:sticky;top:0;z-index:50;
-  position:relative;
-  backdrop-filter:blur(12px);
-  background:linear-gradient(to bottom,rgba(5,5,9,0.92),rgba(5,5,9,0.62),transparent);
-  border-bottom:1px solid rgba(255,255,255,0.03)
-}
+
 .container{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
-.navInner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.20rem 0}/*0.75rem 0*/
-.brand{display:inline-flex;align-items:center;gap:0.75rem}
-.brandIcon{width:var(--logoSize);height:var(--logoSize);object-fit:contain;display:block}
-.brandWordmark{height:var(--wordmarkH);width:auto;object-fit:contain;display:block}
-.brandText{font-size:1.05rem;font-weight:850;letter-spacing:0.02em}
+/*0.75rem 0*/
+
+
+
+
 @media (max-width:640px){
-  .brandIcon{width:34px;height:34px}
-  .brandWordmark{height:28px}
-  .brandText{font-size:0.98rem}
+
+
+
 }
-.navRight{display:flex;align-items:center;gap:0.65rem}
-.navLinks{display:flex;align-items:center;gap:0.8rem;font-size:0.9rem}
-.navLinks a{padding:0.35rem 0.65rem;border-radius:999px;color:var(--muted);transition:0.2s}
-.navLinks a:hover{color:var(--text);background:rgba(255,255,255,0.05)}
-.navCta{
-  padding:0.45rem 0.9rem;border-radius:999px;background:var(--accent);
-  font-size:0.85rem;font-weight:800;color:#fff;box-shadow:0 10px 26px rgba(229,9,20,0.45)
-}
-.langPicker{display:inline-flex;align-items:center;gap:0.35rem}
-.flagBtn{
-  border:1px solid rgba(255,255,255,0.14);
-  background:rgba(255,255,255,0.04);
-  border-radius:999px;padding:0.25rem 0.45rem;
-  cursor:pointer;line-height:1;opacity:0.75
-}
-.flagBtn.active{opacity:1;border-color:rgba(229,9,20,0.55);box-shadow:0 0 0 1px rgba(229,9,20,0.25)}
-.flagBtn svg{display:block}
-.hamburger{
-  display:none;width:42px;height:38px;border-radius:999px;
-  border:1px solid rgba(255,255,255,0.14);
-  background:rgba(255,255,255,0.04);
-  cursor:pointer;align-items:center;justify-content:center
-}
-.hamburgerLines{display:grid;gap:4px}
-.hamburgerLines span{width:18px;height:2px;border-radius:999px;background:rgba(245,245,245,0.92);display:block}
-.mobileMenu{
-  display:none;margin:0.65rem 0 0.95rem;padding:0.85rem;
-  border-radius:16px;background:rgba(5,5,9,0.92);
-  border:1px solid rgba(255,255,255,0.10);box-shadow:var(--shadow)
-}
-.mobileMenu a{display:flex;align-items:center;justify-content:space-between;padding:0.7rem 0.75rem;border-radius:12px}
-.mobileMenu a:hover{background:rgba(255,255,255,0.05)}
-.mobileMenuDivider{height:1px;background:rgba(255,255,255,0.08);margin:0.55rem 0}
-.mobileMenuCta{
-  display:flex;justify-content:center;padding:0.75rem 0.85rem;border-radius:14px;
-  background:linear-gradient(135deg, rgba(231,220,198,0.96), rgba(231,220,198,0.82));
-  border:1px solid rgba(0,0,0,0.18);
-  font-weight:700;color:#0a0a0b !important;
-  box-shadow:0 16px 40px rgba(0,0,0,0.35)
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 main{padding-bottom:2.2rem}
 section{padding:3.4rem 0}
 .eyebrow{text-transform:uppercase;letter-spacing:0.24em;font-size:0.7rem;color:var(--muted);margin-bottom:0.75rem}
@@ -239,8 +211,8 @@ textarea{min-height:90px;resize:vertical}
   .span-md-12{grid-column:span 12}
 }
 @media(max-width:760px){
-  .navLinks{display:none}
-  .hamburger{display:inline-flex}
+
+
   .container{padding:0 1rem}
 }
 @media(max-width:560px){
@@ -306,8 +278,8 @@ textarea{min-height:90px;resize:vertical}
 .contactList{list-style:none;padding:0;margin:0.75rem 0 0;display:grid;gap:0.5rem}
 .contactList li{display:flex;align-items:center;justify-content:space-between;gap:0.75rem;padding:0.55rem 0.65rem;border-radius:12px;background:rgba(0,0,0,0.22);border:1px solid rgba(255,255,255,0.07)}
 .contactList li span{color:var(--muted);font-size:0.82rem}
-footer{border-top:1px solid rgba(255,255,255,0.08);padding:1.5rem 0;font-size:0.78rem;color:var(--muted)}
-.footerInner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+
+
 
 
 /* ===== Luxury refresh ===== */
@@ -331,59 +303,27 @@ body{
     var(--bg);
   color:var(--text);
 }
-header{
-  background:linear-gradient(to bottom, rgba(7,7,10,0.92), rgba(7,7,10,0.74), transparent);
-  border-bottom:1px solid rgba(243,241,238,0.06);
-}
-.navInner{padding:0.55rem 0;}
-.navLinks a{color:rgba(243,241,238,0.86);font-weight:500;letter-spacing:0.01em}
-.navLinks a:hover{color:var(--text)}
-.navCta{
-  background:transparent;
-  border:1px solid rgba(200,183,155,0.75);
-  color:rgba(243,241,238,0.92);
-  box-shadow:none;
-  font-weight:600;
-}
-.navCta:hover{background:rgba(200,183,155,0.12)}
 
-.langPicker, .flagBtn{display:none !important;} /* replaced by langSelect */
 
-.langSelect{position:relative;display:inline-flex;align-items:center}
-.langToggle{
-  display:inline-flex;align-items:center;gap:0.45rem;
-  padding:0.5rem 0.75rem;border-radius:999px;
-  border:1px solid rgba(243,241,238,0.16);
-  background:rgba(243,241,238,0.03);
-  color:rgba(243,241,238,0.86);
-  cursor:pointer;font-size:0.85rem;letter-spacing:0.08em;
-}
-.langToggle:hover{background:rgba(243,241,238,0.06)}
-.langChevron{font-size:0.9rem;opacity:0.8}
-.langMenu{
-  position:absolute;right:0;top:calc(100% + 0.55rem);
-  min-width:190px;
-  background:rgba(7,7,10,0.92);
-  border:1px solid rgba(243,241,238,0.14);
-  border-radius:16px;
-  box-shadow:var(--shadow);
-  padding:0.4rem;
-  backdrop-filter:blur(10px);
-}
-.langOption{
-  width:100%;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0.65rem 0.75rem;border-radius:12px;
-  background:transparent;border:none;
-  color:rgba(243,241,238,0.92);
-  cursor:pointer;font-size:0.92rem;
-}
-.langOption:hover{background:rgba(243,241,238,0.06)}
-.langOption[aria-current="true"]{background:rgba(200,183,155,0.10);border:1px solid rgba(200,183,155,0.22)}
 
-.hamburger{border:1px solid rgba(243,241,238,0.16);background:rgba(243,241,238,0.03)}
-.hamburger:hover{background:rgba(243,241,238,0.06)}
-.hamburgerLines span{background:rgba(243,241,238,0.88)}
+
+
+
+
+ /* replaced by langSelect */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 h1,h2,h3,.sectionTitle,.heroTitle{font-family:"Cormorant Garamond",serif;letter-spacing:0.02em}
 .heroTitle{font-weight:600}
@@ -447,14 +387,12 @@ h1,h2,h3,.sectionTitle,.heroTitle{font-family:"Cormorant Garamond",serif;letter-
 .ctaBtn svg{display:block}
 
 .contactList li{border-bottom:1px solid rgba(243,241,238,0.08)}
-footer{border-top:1px solid rgba(243,241,238,0.06)}
+
 
 
 /* --- Luxury refresh: supercar accents + full-bleed imagery --- */
 .heroHighlight{background:linear-gradient(to right, rgba(231,220,198,0.96), rgba(252,252,253,0.92));-webkit-background-clip:text;background-clip:text;color:transparent}
-header{
-  border-bottom:1px solid rgba(255,255,255,0.06);
-}
+
 .titaniumDivider{
   height:1px;
   background:linear-gradient(90deg,transparent,rgba(252,252,253,0.12),rgba(231,220,198,0.24),rgba(252,252,253,0.10),transparent);
@@ -463,23 +401,13 @@ header{
 /* Carbon accents (supercar touch) */
 :root{ --carbonScale: 420px; }
 
-header{position:sticky}
-header{isolation:isolate;}
-header::before{
-  content:"";
-  position:absolute; inset:0;
-  background-image: var(--carbonImage);
-  background-size: var(--carbonScale) var(--carbonScale);
-  background-position: center;
-  opacity:0.10;
-  mix-blend-mode:overlay;
-  pointer-events:none;
-  z-index:0;
-}
-header > .container{position:relative; z-index:1;}
+
+
+
+
 
 @supports not (mix-blend-mode: overlay){
-  header::before{opacity:0.06;}
+
 }
 
 .card{
@@ -587,7 +515,8 @@ header > .container{position:relative; z-index:1;}
     border:1px solid rgba(231,220,198,0.14);
   }
   .showcase .mediaOverlay{
-    padding:0.85rem 0 0 !important;
+    /* keep the caption box fully visible above browser UI */
+    padding:0.85rem 0 calc(1.6rem + env(safe-area-inset-bottom)) !important;
   }
   .showcase .mediaCaptionBox{
     padding:1.05rem 1.0rem;
@@ -620,7 +549,7 @@ header > .container{position:relative; z-index:1;}
   .btnPrimary:hover{filter:brightness(1.02)}
   .heroBadge{background:rgba(231,220,198,0.06);border-color:rgba(231,220,198,0.18)}
   .heroPill{background:rgba(231,220,198,0.06);border-color:rgba(231,220,198,0.14)}
-  .langMenu{background:rgba(7,7,10,0.96)}
+
 }
 
 
@@ -691,13 +620,13 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 .heroHighlight{background:none !important; color:var(--champagne) !important; text-shadow:none !important;}
 
 /* Buttons and CTAs */
-.btnPrimary, .navCta, .mobileMenuCta{
+.btnPrimary{
   background:linear-gradient(135deg, rgba(231,220,198,0.95), rgba(252,252,253,0.92)) !important;
   color:#0b0b10 !important;
   box-shadow:0 18px 55px rgba(0,0,0,0.40) !important;
   border:1px solid rgba(231,220,198,0.28) !important;
 }
-.btnPrimary:hover, .navCta:hover, .mobileMenuCta:hover{
+.btnPrimary:hover{
   filter:brightness(1.02) contrast(1.02);
 }
 .btnSecondary{
@@ -748,28 +677,11 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 .mediaFull{min-height:96vh !important;}
 
 /* Header and hamburger refinement */
-.hamburger{
-  width:44px;height:44px !important;
-  border-radius:999px !important;
-  border:1px solid rgba(231,220,198,0.18) !important;
-  background:rgba(7,7,10,0.35) !important;
-}
-.hamburgerLines span{
-  background:rgba(243,241,238,0.92) !important;
-  height:2px !important; width:18px !important;
-}
-.mobileMenu{
-  margin:0.85rem 0 1.2rem !important;
-  padding:0.85rem !important;
-  border-radius:20px !important;
-  background:rgba(7,7,10,0.78) !important;
-  border:1px solid rgba(231,220,198,0.14) !important;
-  backdrop-filter:blur(12px) !important;
-}
-.mobileMenu a:not(.mobileMenuCta){
-  color:rgba(243,241,238,0.92) !important;
-}
-.mobileMenu a span{opacity:0.55 !important;}
+
+
+
+
+
 
 
 /* Carbon visibility boost (user feedback) */
@@ -787,8 +699,8 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
     --muted:rgba(243,241,238,0.72);
     --border:rgba(231,220,198,0.14);
   }
-  .navInner{padding:0.85rem 0 !important;}
-  .navCta{padding:0.48rem 0.82rem !important; font-weight:600 !important;}
+
+
   .btn{padding:0.82rem 1.0rem !important;}
   .mediaOverlay{padding:2.6rem 0 2.2rem !important;}
   .mediaFull{min-height:100vh !important;}
@@ -798,36 +710,16 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 
 
 /* Mobile navigation – luxury treatment */
-.hamburger{
-  border:1px solid rgba(231,220,198,0.18);
-  background:linear-gradient(180deg, rgba(231,220,198,0.06), rgba(255,255,255,0.02));
-}
-.hamburgerLines span{background:rgba(231,220,198,0.92);}
 
-.mobileMenu{
-  background:rgba(5,5,9,0.94);
-  border:1px solid rgba(231,220,198,0.14);
-  box-shadow:0 18px 55px rgba(0,0,0,0.55);
-}
-.mobileMenu a{
-  font-family:var(--font-sans);
-  letter-spacing:0.02em;
-}
-.mobileMenuDivider{background:rgba(231,220,198,0.10);}
 
-.mobileMenuCta{
-  background:linear-gradient(180deg, rgba(231,220,198,0.20), rgba(231,220,198,0.10));
-  border:1px solid rgba(231,220,198,0.22);
-  color:rgba(245,245,245,0.96);
-  box-shadow:none;
-  font-weight:600;
-}
+
+
+
+
+
+
 @media (hover:hover){
-  .mobileMenuCta:hover{
-    transform:translateY(-1px);
-    border-color:rgba(231,220,198,0.35);
-    background:linear-gradient(180deg, rgba(231,220,198,0.24), rgba(231,220,198,0.12));
-  }
+
 }
 
 
@@ -884,13 +776,9 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 }
 
 /* Mobile menu CTA: always readable */
-.mobileMenuCta{
-  background:linear-gradient(135deg, rgba(231,220,198,0.95), rgba(252,252,253,0.92)) !important;
-  color:#0b0b10 !important;
-  border:1px solid rgba(231,220,198,0.28) !important;
-}
-.mobileMenuCta:hover{color:#0b0b10 !important;}
-.mobileMenuCta:link, .mobileMenuCta:visited, .mobileMenuCta:active, .mobileMenuCta:focus{color:#0b0b10 !important;}
+
+
+
 
 
 /* Rates: mobile shows all in a single horizontal row with scrollbar */
@@ -911,13 +799,13 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 }
 
 /* footer links */
-.footerInner{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center}
-.footerRight{display:flex;justify-content:flex-end;gap:16px;flex-wrap:wrap}
-.footerRight a{color:var(--muted);text-decoration:none}
-.footerRight a:hover{color:var(--text)}
+
+
+
+
 @media (max-width: 760px){
-  .footerInner{grid-template-columns:1fr;gap:10px;text-align:center}
-  .footerRight{justify-content:center}
+
+
 }
 
 
@@ -933,7 +821,19 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 .quotePanel{padding:1.2rem 1.25rem;border-radius:18px;border:1px solid rgba(231,220,194,0.16);background:rgba(16,16,16,0.62)}
 .quotePanel p{margin:0;color:var(--text);font-style:italic}
 .quotePanel .byline{margin-top:0.6rem;color:var(--muted);font-style:normal;font-size:0.92rem}
+
+/* Ensure the hero subtitle is fully visible on first view (like index.html) */
+.showcase .mediaOverlay{
+  padding-bottom:calc(5.2rem + env(safe-area-inset-bottom));
+}
+@media (max-width: 820px){
+  .showcase .mediaOverlay{
+    padding-bottom:calc(3.2rem + env(safe-area-inset-bottom));
+  }
+}
+
 </style>
+<script defer="" src="assets/lo.js"></script>
 </head>
 <body>
 <header>
@@ -941,15 +841,15 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 <div class="navInner">
 <a aria-label="Luxury Obsession" class="brand" href="index.html">
 <img alt="Luxury Obsession icon" class="brandIcon" src="media/icon.png"/>
-<img alt="Luxury Obsession wordmark" class="brandWordmark" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" src="media/wordmark.png"/>
-<span class="brandText" style="display:none">Luxury Obsession</span>
+<span class="brandGold">Luxury Obsession</span>
 </a>
 <div class="navRight">
-<nav aria-label="Primary" class="navLinks"><a href="index.html#pricing" id="navRates">Rates</a>
-<a href="philosophy.html" id="navPhilosophy">Our Philosophy</a>
-<a href="experiences.html" id="navExperiences">Bespoke Experiences</a>
-<a href="index.html#contact" id="navContact">Contact</a>
-<a class="navCta" href="index.html#request" id="navRequest">Request</a></nav>
+<nav aria-label="Primary" class="navLinks"><a data-i18n="nav.rates" href="pages/pricing.html" id="navRates">Rates</a>
+<a data-i18n="nav.philosophy" href="philosophy.html" id="navPhilosophy">Our Philosophy</a>
+<a data-i18n="nav.experiences" href="experiences.html" id="navExperiences">Experiences</a>
+<a data-i18n="nav.blog" href="pages/blog.html" id="navBlog">Journal</a>
+<a data-i18n="nav.contact" href="../index.html#contact" id="navContact">Contact</a>
+<a class="navCta" data-i18n="nav.request" href="#request" id="navRequest">Request</a></nav>
 <div aria-label="Language" class="langSelect">
 <button aria-expanded="false" aria-haspopup="menu" class="langToggle" id="langToggle" type="button">
 <span aria-label="Current language" id="langCode">EN</span>
@@ -966,200 +866,214 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 </button>
 </div>
 </div>
-<div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation" style="display:none"><a href="index.html#pricing" id="mRates">Rates</a>
-<a href="philosophy.html" id="mPhilosophy">Our Philosophy</a>
-<a href="experiences.html" id="mExperiences">Bespoke Experiences</a>
-<a href="index.html#contact" id="mContact">Contact</a>
-<a href="impressum.html" id="mImpressum">Impressum</a><div class="mobileMenuDivider"></div>
-<a class="mobileMenuCta" href="index.html#request" id="mRequest">Request</a>
-</div>
+<div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation"></div>
 </div>
 </header>
 <main>
 <section class="showcase" id="top">
-  <div class="mediaFull" style="min-height:68vh">
-    <blockquote class="heroQuote">Life is a journey, not a destination</blockquote>
-    <img src="media/image00200.png" alt="Bespoke Experiences"/>
-    <div class="mediaOverlay" style="align-items:flex-end">
-      <div class="container">
-        <div class="mediaCaption">
-          <div class="mediaCaptionBox">
-            <p class="eyebrow">Curated occasions</p>
-            <h1 class="mediaTitle">Bespoke Experiences</h1>
-            <p class="mediaSubtitle">For moments that deserve more than an ordinary rental. Crafted around one iconic car.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="mediaFull" style="min-height:68vh">
+<blockquote class="heroQuote" data-i18n="ex.hero.quote">Life is a journey, not a destination</blockquote>
+<img alt="Bespoke Experiences" src="media/image00200.png"/>
+<div class="mediaOverlay" style="align-items:flex-end">
+<div class="container">
+<div class="mediaCaption">
+<div class="mediaCaptionBox">
+<p class="eyebrow" data-i18n="ex.hero.eyebrow">Curated occasions</p>
+<h1 class="mediaTitle" data-i18n="ex.hero.title">Bespoke Experiences</h1>
+<p class="mediaSubtitle" data-i18n="ex.hero.subtitle">For moments that deserve more than an ordinary rental. Crafted around one iconic car.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section><section>
-  <div class="container">
-    <div class="pageIntro">
-      <h2 class="sectionTitle">Not every drive is the point</h2>
-      <div class="pageProse">
-        <p>Some rentals are about getting from A to B. These are not.</p>
-        <p>We can host the Ferrari 458 Italia for select occasions where presentation, timing, and discretion matter as much as the car itself. Tell us what you want to create, and we will confirm what is possible, what is required, and how we can deliver it properly.</p>
-      </div>
-    </div>
-
-    <div class="grid12" style="margin-top:2rem">
-      <div class="span-4 span-md-6 span-sm-12">
-        <div class="card" style="height:100%">
-          <div class="cardTop">
-            <div class="cardTitle">Photo and film shoots</div>
-            <div class="cardDesc">Brand, editorial, or personal projects. We can support location timing and calm logistics.</div>
-          </div>
-        </div>
-      </div>
-      <div class="span-4 span-md-6 span-sm-12">
-        <div class="card" style="height:100%">
-          <div class="cardTop">
-            <div class="cardTitle">Weddings and proposals</div>
-            <div class="cardDesc">A statement arrival, handled with discretion. Optional staged moments for photos.</div>
-          </div>
-        </div>
-      </div>
-      <div class="span-4 span-md-12 span-sm-12">
-        <div class="card" style="height:100%">
-          <div class="cardTop">
-            <div class="cardTitle">Special occasions</div>
-            <div class="cardDesc">Anniversaries, birthdays, or surprise gifts. Tell us the story and we will shape the details.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="span-12" style="margin-top:1.35rem">
-        <div class="inlineMedia">
-          <img src="media/image00300.png" alt="Bespoke experience gallery"/>
-        </div>
-        <div class="figureCaption">A Ferrari becomes a setting. The difference is how it is hosted.</div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="pageIntro">
+<h2 class="sectionTitle" data-i18n="ex.sec1.title">Not every drive is the point</h2>
+<div class="pageProse">
+<p data-i18n="ex.sec1.p1">Some rentals are about getting from A to B. These are not.</p>
+<p data-i18n="ex.sec1.p2">We can host the Ferrari 458 Italia for select occasions where presentation, timing, and discretion matter as much as the car itself. Tell us what you want to create, and we will confirm what is possible, what is required, and how we can deliver it properly.</p>
+</div>
+</div>
+<div class="grid12" style="margin-top:2rem">
+<div class="span-4 span-md-6 span-sm-12">
+<div class="card" style="height:100%">
+<div class="cardTop">
+<div class="cardTitle" data-i18n="ex.sec1.card1.title">Photo and film shoots</div>
+<div class="cardDesc" data-i18n="ex.sec1.card1.desc">Brand, editorial, or personal projects. We can support location timing and calm logistics.</div>
+</div>
+</div>
+</div>
+<div class="span-4 span-md-6 span-sm-12">
+<div class="card" style="height:100%">
+<div class="cardTop">
+<div class="cardTitle" data-i18n="ex.sec1.card2.title">Weddings and proposals</div>
+<div class="cardDesc" data-i18n="ex.sec1.card2.desc">A statement arrival, handled with discretion. Optional staged moments for photos.</div>
+</div>
+</div>
+</div>
+<div class="span-4 span-md-12 span-sm-12">
+<div class="card" style="height:100%">
+<div class="cardTop">
+<div class="cardTitle" data-i18n="ex.sec1.card3.title">Special occasions</div>
+<div class="cardDesc" data-i18n="ex.sec1.card3.desc">Anniversaries, birthdays, or surprise gifts. Tell us the story and we will shape the details.</div>
+</div>
+</div>
+</div>
+<div class="span-12" style="margin-top:1.35rem">
+<div class="inlineMedia">
+<img alt="Bespoke experience gallery" src="media/image01800.jpg"/>
+</div>
+<div class="figureCaption" data-i18n="ex.sec1.caption1">A Ferrari becomes a setting. The difference is how it is hosted.</div>
+</div>
+</div>
+</div>
 </section>
-
 <section>
-  <div class="container">
-    <h2 class="sectionTitle">Examples of bespoke hosting</h2>
-    <div class="grid12" style="margin-top:1.4rem">
-      <div class="span-6 span-md-12">
-        <h3 style="margin:0 0 0.65rem 0;font-family:'Cormorant Garamond',serif;font-size:1.8rem">Alpine morning, curated route</h3>
-        <div class="pageProse">
-          <p>An early departure from Zurich, a measured pace through open roads, and a return before the city becomes busy. Ideal for clients who want the sound and precision of the 458 without a crowded schedule.</p>
-          <p>We can suggest a route and timing that fits the season and your comfort level. Availability depends on date and duration.</p>
-        </div>
-        <ul class="bulletList">
-          <li>Timing planned around traffic and light</li>
-          <li>Optional scenic stop suggestions</li>
-          <li>Clear confirmation of terms before booking</li>
-        </ul>
-      </div>
-      <div class="span-6 span-md-12">
-        <div class="inlineMedia">
-          <img src="media/image00120.png" alt="Mountain road"/>
-        </div>
-      </div>
-
-      <div class="span-6 span-md-12" style="margin-top:1.25rem">
-        <div class="inlineMedia">
-          <img src="media/image00130.png" alt="Event arrival"/>
-        </div>
-      </div>
-      <div class="span-6 span-md-12" style="margin-top:1.25rem">
-        <h3 style="margin:0 0 0.65rem 0;font-family:'Cormorant Garamond',serif;font-size:1.8rem">Event arrival with discretion</h3>
-        <div class="pageProse">
-          <p>When the moment is public, the handling should remain private. We coordinate timing, arrival, and any photo windows with a focus on calm execution and respect for the setting.</p>
-          <p>If your event requires special access, staging, or a dedicated schedule, mention it in your request. We confirm feasibility case by case.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<h2 class="sectionTitle" data-i18n="ex.sec2.title">Examples of bespoke hosting</h2>
+<div class="grid12" style="margin-top:1.4rem">
+<div class="span-6 span-md-12">
+<h3 data-i18n="ex.sec2.alpineTitle" style="margin:0 0 0.65rem 0;font-family:'Cormorant Garamond',serif;font-size:1.8rem">Alpine morning, curated route</h3>
+<div class="pageProse">
+<p data-i18n="ex.sec2.alpineP1">An early departure from Zurich, a measured pace through open roads, and a return before the city becomes busy. Ideal for clients who want the sound and precision of the 458 without a crowded schedule.</p>
+<p data-i18n="ex.sec2.alpineP2">We can suggest a route and timing that fits the season and your comfort level. Availability depends on date and duration.</p>
+</div>
+<ul class="bulletList">
+<li data-i18n="ex.sec2.alpineB1">Timing planned around traffic and light</li>
+<li data-i18n="ex.sec2.alpineB2">Optional scenic stop suggestions</li>
+<li data-i18n="ex.sec2.alpineB3">Clear confirmation of terms before booking</li>
+</ul>
+</div>
+<div class="span-6 span-md-12">
+<div class="inlineMedia">
+<img alt="Mountain road" src="media/image01900.jpg"/>
+</div>
+</div>
+<div class="span-6 span-md-12" style="margin-top:1.25rem">
+<div class="inlineMedia">
+<img alt="Event arrival" src="media/image02001.jpg"/>
+</div>
+</div>
+<div class="span-6 span-md-12" style="margin-top:1.25rem">
+<h3 data-i18n="ex.sec2.eventTitle" style="margin:0 0 0.65rem 0;font-family:'Cormorant Garamond',serif;font-size:1.8rem">Event arrival with discretion</h3>
+<div class="pageProse">
+<p data-i18n="ex.sec2.eventP1">When the moment is public, the handling should remain private. We coordinate timing, arrival, and any photo windows with a focus on calm execution and respect for the setting.</p>
+<p data-i18n="ex.sec2.eventP2">If your event requires special access, staging, or a dedicated schedule, mention it in your request. We confirm feasibility case by case.</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <section>
-  <div class="container">
-    <h2 class="sectionTitle">How to request a bespoke experience</h2>
-    <div class="pageProse pageIntro">
-      <p>Use the request form on the home page and describe the occasion. Include date, duration, location, and any timing constraints. We respond with availability and a tailored quote.</p>
-    </div>
-    <div style="margin-top:1.15rem">
-      <a class="btnPrimary" href="index.html#request">Start a request</a>
-      <a class="btnSecondary" href="index.html#contact" style="margin-left:0.75rem">Concierge contact</a>
-    </div>
-  </div>
+<div class="container">
+<h2 class="sectionTitle" data-i18n="ex.sec3.title">How to request a bespoke experience</h2>
+<div class="pageProse pageIntro">
+<p data-i18n="ex.sec3.p1">Use the request form on the home page and describe the occasion. Include date, duration, location, and any timing constraints. We respond with availability and a tailored quote.</p>
+</div>
+<div style="margin-top:1.15rem">
+<a class="btnPrimary" data-i18n="ex.sec3.btn1" href="index.html#request">Start a request</a>
+<a class="btnSecondary" data-i18n="ex.sec3.btn2" href="index.html#contact" style="margin-left:0.75rem">Concierge contact</a>
+</div>
+</div>
 </section>
 </main>
 <footer>
-  <div class="container footerInner">
-    <div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
-    <div class="footerCenter">Zurich, Switzerland.</div>
-    <div class="footerRight">
-      <a href="index.html#pricing">Rates</a>
-      <a href="philosophy.html">Our Philosophy</a>
-      <a href="experiences.html">Bespoke Experiences</a>
-      <a href="impressum.html">Impressum</a>
-    </div>
-  </div>
+<div class="container footerInner">
+<div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
+<div class="footerCenter" data-i18n="ex.footer.center">Zurich, Switzerland.</div>
+<div class="footerRight">
+<a href="impressum.html">Impressum</a>
+<a href="datenschutz.html">Datenschutz</a>
+<a href="agb.html">AGB</a>
+</div>
+</div>
 </footer>
-
 <script>
-(function(){
-  const year = document.getElementById('year');
-  if(year) year.textContent = new Date().getFullYear();
+(() => {
+  const TRANSLATIONS = {"en":{"nav.rates":"Rates","nav.philosophy":"Our Philosophy","nav.experiences":"Experiences","nav.blog":"Journal","nav.contact":"Contact","nav.request":"Request","ex.hero.quote":"Life is a journey, not a destination","ex.hero.eyebrow":"Curated occasions","ex.hero.title":"Bespoke Experiences","ex.hero.subtitle":"For moments that deserve more than an ordinary rental. Crafted around one iconic car.","ex.sec1.title":"Not every drive is the point","ex.sec1.p1":"Some rentals are about getting from A to B. These are not.","ex.sec1.p2":"We can host the Ferrari 458 Italia for select occasions where presentation, timing, and discretion matter as much as the car itself. Tell us what you want to create, and we will confirm what is possible, what is required, and how we can deliver it properly.","ex.sec1.card1.title":"Photo and film shoots","ex.sec1.card1.desc":"Brand, editorial, or personal projects. We can support location timing and calm logistics.","ex.sec1.card2.title":"Weddings and proposals","ex.sec1.card2.desc":"A statement arrival, handled with discretion. Optional staged moments for photos.","ex.sec1.card3.title":"Special occasions","ex.sec1.card3.desc":"Anniversaries, birthdays, or surprise gifts. Tell us the story and we will shape the details.","ex.sec1.caption1":"A Ferrari becomes a setting. The difference is how it is hosted.","ex.sec2.title":"Examples of bespoke hosting","ex.sec2.alpineTitle":"Alpine morning, curated route","ex.sec2.alpineP1":"An early departure from Zurich, a measured pace through open roads, and a return before the city becomes busy. Ideal for clients who want the sound and precision of the 458 without a crowded schedule.","ex.sec2.alpineP2":"We can suggest a route and timing that fits the season and your comfort level. Availability depends on date and duration.","ex.sec2.alpineB1":"Timing planned around traffic and light","ex.sec2.alpineB2":"Optional scenic stop suggestions","ex.sec2.alpineB3":"Clear confirmation of terms before booking","ex.sec2.eventTitle":"Event arrival with discretion","ex.sec2.eventP1":"When the moment is public, the handling should remain private. We coordinate timing, arrival, and any photo windows with a focus on calm execution and respect for the setting.","ex.sec2.eventP2":"If your event requires special access, staging, or a dedicated schedule, mention it in your request. We confirm feasibility case by case.","ex.sec3.title":"How to request a bespoke experience","ex.sec3.p1":"Use the request form on the home page and describe the occasion. Include date, duration, location, and any timing constraints. We respond with availability and a tailored quote.","ex.sec3.btn1":"Start a request","ex.sec3.btn2":"Concierge contact","ex.footer.center":"Zurich, Switzerland.","meta.title":"Luxury Obsession | Bespoke Experiences","meta.description":"Explore bespoke Ferrari 458 Italia experiences in Zurich for photoshoots, weddings, special occasions, and curated drives.","og.title":"Luxury Obsession | Bespoke Experiences","og.description":"Explore bespoke Ferrari 458 Italia experiences in Zurich for photoshoots, weddings, special occasions, and curated drives."},"de":{"nav.rates":"Preise","nav.philosophy":"Unsere Philosophie","nav.experiences":"Erlebnisse","nav.blog":"Journal","nav.contact":"Kontakt","nav.request":"Anfragen","ex.hero.quote":"Das Leben ist eine Reise, kein Ziel","ex.hero.eyebrow":"Kuratiert für Anlässe","ex.hero.title":"Maßgeschneiderte Erlebnisse","ex.hero.subtitle":"Für Momente, die mehr verdienen als eine gewöhnliche Miete. Gestaltet rund um ein ikonisches Auto.","ex.sec1.title":"Nicht jede Fahrt steht im Mittelpunkt","ex.sec1.p1":"Manche Anmietungen dienen dem Weg von A nach B. Diese hier nicht.","ex.sec1.p2":"Wir können den Ferrari 458 Italia für ausgewählte Anlässe bereitstellen, bei denen Auftritt, Timing und Diskretion genauso wichtig sind wie das Auto selbst. Sagen Sie uns, was Sie umsetzen möchten, und wir bestätigen, was möglich ist, was erforderlich ist und wie wir es sauber umsetzen können.","ex.sec1.card1.title":"Foto und Filmproduktionen","ex.sec1.card1.desc":"Marken-, Editorial- oder persönliche Projekte. Wir unterstützen bei Location, Timing und ruhiger Logistik.","ex.sec1.card2.title":"Hochzeiten und Anträge","ex.sec1.card2.desc":"Ein eindrucksvoller Auftritt, diskret umgesetzt. Auf Wunsch inszenierte Momente für Fotos.","ex.sec1.card3.title":"Besondere Anlässe","ex.sec1.card3.desc":"Jahrestage, Geburtstage oder Überraschungsgeschenke. Erzählen Sie uns die Geschichte, wir gestalten die Details.","ex.sec1.caption1":"Ein Ferrari wird zur Kulisse. Der Unterschied liegt darin, wie er betreut wird.","ex.sec2.title":"Beispiele für maßgeschneiderte Betreuung","ex.sec2.alpineTitle":"Alpiner Morgen, kuratierte Route","ex.sec2.alpineP1":"Früher Start in Zürich, ein bewusst gesetztes Tempo auf freien Straßen und die Rückkehr, bevor die Stadt lebhaft wird. Ideal für Gäste, die Klang und Präzision des 458 erleben möchten, ohne einen vollen Kalender.","ex.sec2.alpineP2":"Wir können eine Route und ein Timing vorschlagen, passend zur Saison und zu Ihrem Komfortniveau. Die Verfügbarkeit hängt von Datum und Dauer ab.","ex.sec2.alpineB1":"Timing nach Verkehr und Licht geplant","ex.sec2.alpineB2":"Optionale Vorschläge für Aussichtstopps","ex.sec2.alpineB3":"Klare Bestätigung der Bedingungen vor der Buchung","ex.sec2.eventTitle":"Diskrete Ankunft zum Event","ex.sec2.eventP1":"Wenn der Moment öffentlich ist, sollte die Umsetzung privat bleiben. Wir koordinieren Timing, Ankunft und mögliche Fotofenster mit Fokus auf ruhige Durchführung und Respekt für das Umfeld.","ex.sec2.eventP2":"Wenn Ihr Anlass besonderen Zugang, Inszenierung oder einen eigenen Zeitplan erfordert, erwähnen Sie es in Ihrer Anfrage. Wir bestätigen die Machbarkeit von Fall zu Fall.","ex.sec3.title":"So fragen Sie ein maßgeschneidertes Erlebnis an","ex.sec3.p1":"Nutzen Sie das Anfrageformular auf der Startseite und beschreiben Sie den Anlass. Geben Sie Datum, Dauer, Ort und eventuelle Zeitvorgaben an. Wir antworten mit Verfügbarkeit und einem maßgeschneiderten Angebot.","ex.sec3.btn1":"Anfrage starten","ex.sec3.btn2":"Concierge-Kontakt","ex.footer.center":"Zürich, Schweiz.","meta.title":"Luxury Obsession | Maßgeschneiderte Erlebnisse","meta.description":"Entdecken Sie maßgeschneiderte Ferrari 458 Italia Erlebnisse in Zürich für Foto und Filmshoots, Hochzeiten, besondere Anlässe und kuratierte Ausfahrten.","og.title":"Luxury Obsession | Maßgeschneiderte Erlebnisse","og.description":"Entdecken Sie maßgeschneiderte Ferrari 458 Italia Erlebnisse in Zürich für Foto und Filmshoots, Hochzeiten, besondere Anlässe und kuratierte Ausfahrten."},"it":{"nav.rates":"Tariffe","nav.philosophy":"La nostra filosofia","nav.experiences":"Esperienze","nav.blog":"Journal","nav.contact":"Contatti","nav.request":"Richiesta","ex.hero.quote":"La vita è un viaggio, non una destinazione","ex.hero.eyebrow":"Occasioni curate","ex.hero.title":"Esperienze su misura","ex.hero.subtitle":"Per momenti che meritano più di un noleggio ordinario. Costruite attorno a un’auto iconica.","ex.sec1.title":"Non è sempre la guida il punto","ex.sec1.p1":"Alcuni noleggi servono per andare da A a B. Questi no.","ex.sec1.p2":"Possiamo ospitare la Ferrari 458 Italia per occasioni selezionate in cui presentazione, tempistiche e discrezione contano quanto l’auto stessa. Raccontateci cosa volete creare e vi confermeremo cosa è possibile, cosa è richiesto e come possiamo realizzarlo al meglio.","ex.sec1.card1.title":"Servizi fotografici e riprese","ex.sec1.card1.desc":"Progetti di brand, editoriali o personali. Possiamo supportare tempi, location e una logistica discreta.","ex.sec1.card2.title":"Matrimoni e proposte","ex.sec1.card2.desc":"Un arrivo d’impatto, gestito con discrezione. Su richiesta, momenti dedicati alle foto.","ex.sec1.card3.title":"Occasioni speciali","ex.sec1.card3.desc":"Anniversari, compleanni o regali a sorpresa. Raccontateci la storia e daremo forma ai dettagli.","ex.sec1.caption1":"Una Ferrari diventa uno scenario. La differenza è in come viene ospitata.","ex.sec2.title":"Esempi di ospitalità su misura","ex.sec2.alpineTitle":"Mattina alpina, percorso curato","ex.sec2.alpineP1":"Partenza di prima mattina da Zurigo, ritmo misurato su strade aperte e rientro prima che la città si affolli. Ideale per chi vuole il suono e la precisione della 458 senza un programma serrato.","ex.sec2.alpineP2":"Possiamo suggerire un percorso e un orario adatti alla stagione e al vostro livello di comfort. La disponibilità dipende da data e durata.","ex.sec2.alpineB1":"Tempistiche pianificate in base a traffico e luce","ex.sec2.alpineB2":"Suggerimenti opzionali per soste panoramiche","ex.sec2.alpineB3":"Conferma chiara delle condizioni prima della prenotazione","ex.sec2.eventTitle":"Arrivo all’evento con discrezione","ex.sec2.eventP1":"Quando il momento è pubblico, la gestione deve restare privata. Coordiniamo tempistiche, arrivo ed eventuali finestre per le foto con un focus su un’esecuzione calma e il rispetto del contesto.","ex.sec2.eventP2":"Se il vostro evento richiede accessi speciali, messa in scena o un programma dedicato, indicatelo nella richiesta. Confermiamo la fattibilità caso per caso.","ex.sec3.title":"Come richiedere un’esperienza su misura","ex.sec3.p1":"Usate il modulo di richiesta nella home page e descrivete l’occasione. Indicate data, durata, luogo ed eventuali vincoli di orario. Vi risponderemo con la disponibilità e un preventivo su misura.","ex.sec3.btn1":"Avvia una richiesta","ex.sec3.btn2":"Contatto concierge","ex.footer.center":"Zurigo, Svizzera.","meta.title":"Luxury Obsession | Esperienze su misura","meta.description":"Scoprite esperienze su misura con la Ferrari 458 Italia a Zurigo per servizi fotografici, matrimoni, occasioni speciali e percorsi curati.","og.title":"Luxury Obsession | Esperienze su misura","og.description":"Scoprite esperienze su misura con la Ferrari 458 Italia a Zurigo per servizi fotografici, matrimoni, occasioni speciali e percorsi curati."}};
+  const STORAGE_KEYS = ["lo_lang","lang","language"];
+  const supported = Object.keys(TRANSLATIONS);
 
-  const mobileMenu = document.getElementById('mobileMenu');
-  const hamburger = document.getElementById('hamburger');
-  function closeMenu(){
-    if(!mobileMenu || !hamburger) return;
-    mobileMenu.style.display = 'none';
-    mobileMenu.dataset.open = '0';
-    hamburger.setAttribute('aria-expanded','false');
+  function readStoredLang() {
+    try {
+      for (const k of STORAGE_KEYS) {
+        const v = localStorage.getItem(k);
+        if (v) return v;
+      }
+    } catch (e) {}
+    return null;
   }
-  function toggleMenu(){
-    if(!mobileMenu || !hamburger) return;
-    const open = mobileMenu.dataset.open === '1';
-    if(open) closeMenu();
-    else {
-      mobileMenu.style.display = 'block';
-      mobileMenu.dataset.open = '1';
-      hamburger.setAttribute('aria-expanded','true');
+
+  function writeStoredLang(lang) {
+    try {
+      for (const k of STORAGE_KEYS) localStorage.setItem(k, lang);
+    } catch (e) {}
+  }
+
+  function resolveLang(lang) {
+    const clean = (lang || "").toLowerCase().trim();
+    return supported.includes(clean) ? clean : "en";
+  }
+
+  function t(lang, key) {
+    return (TRANSLATIONS[lang] && TRANSLATIONS[lang][key]) ||
+           (TRANSLATIONS.en && TRANSLATIONS.en[key]) ||
+           "";
+  }
+
+  function applyLang(lang) {
+    lang = resolveLang(lang);
+    document.documentElement.lang = lang;
+
+    const codeEl = document.getElementById("langCode");
+    if (codeEl) codeEl.textContent = lang.toUpperCase();
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      el.textContent = t(lang, key);
+    });
+
+    const title = t(lang, "meta.title");
+    if (title) document.title = title;
+
+    const desc = t(lang, "meta.description");
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (desc && metaDesc) metaDesc.setAttribute("content", desc);
+
+    const ogTitle = t(lang, "og.title") || title;
+    const ogDesc = t(lang, "og.description") || desc;
+
+    const metaOgTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle && metaOgTitle) metaOgTitle.setAttribute("content", ogTitle);
+
+    const metaOgDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc && metaOgDesc) metaOgDesc.setAttribute("content", ogDesc);
+  }
+
+  const initial = resolveLang(readStoredLang() || document.documentElement.lang || "en");
+  applyLang(initial);
+
+  document.querySelectorAll(".langOption[data-lang]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const lang = resolveLang(btn.getAttribute("data-lang"));
+      writeStoredLang(lang);
+      applyLang(lang);
+    });
+  });
+
+  window.addEventListener("storage", (e) => {
+    if (e && STORAGE_KEYS.includes(e.key)) {
+      applyLang(readStoredLang() || "en");
     }
-  }
-  if(hamburger) hamburger.addEventListener('click', toggleMenu);
-  if(mobileMenu) mobileMenu.addEventListener('click', (e)=>{
-    const t = e.target;
-    if(t && t.tagName === 'A') closeMenu();
   });
 
-  const langToggle = document.getElementById('langToggle');
-  const langMenu = document.getElementById('langMenu');
-  const langCode = document.getElementById('langCode');
-
-  function closeLang(){
-    if(!langMenu || !langToggle) return;
-    langMenu.hidden = true;
-    langToggle.setAttribute('aria-expanded','false');
-  }
-  function openLang(){
-    if(!langMenu || !langToggle) return;
-    langMenu.hidden = false;
-    langToggle.setAttribute('aria-expanded','true');
-  }
-  function toggleLang(){
-    if(!langMenu) return;
-    if(langMenu.hidden) openLang(); else closeLang();
-  }
-  if(langToggle) langToggle.addEventListener('click', (e)=>{ e.stopPropagation(); toggleLang(); });
-  if(langMenu) langMenu.addEventListener('click', (e)=>{
-    const btn = e.target.closest('.langOption');
-    if(!btn) return;
-    const code = (btn.dataset.lang || 'en').toUpperCase();
-    if(langCode) langCode.textContent = code;
-    closeLang();
+  window.addEventListener("DOMContentLoaded", () => {
+    // Reapply after deferred scripts run (e.g., shared nav logic)
+    applyLang(resolveLang(readStoredLang() || initial));
   });
-  document.addEventListener('click', closeLang);
-  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape'){ closeMenu(); closeLang(); } });
+
+  window.LO_applyPageLang = applyLang;
 })();
-</script>
-</body>
+</script></body>
 </html>
