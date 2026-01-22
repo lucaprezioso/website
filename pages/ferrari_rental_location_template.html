@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="index, follow"/>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../media/icon.png?v=20260116"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="../media/icon.png?v=20260116"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="../media/icon.png?v=20260116"/>
+  <link rel="shortcut icon" href="../media/icon.png?v=20260116"/>
+  <meta name="theme-color" content="#050509"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap"/>
+
+  <!-- Global site styles and header or footer behavior -->
+  <link rel="stylesheet" href="../assets/lo.css"/>
+
+  <!-- Location page layout styles -->
+  <link rel="stylesheet" href="../assets/lo.locations.css"/>
+
+  <!-- Page head: keep these static per location for SEO and social previews -->
+  <title>Luxury Obsession | Ferrari rental Zurich</title>
+  <meta name="description" content="Ferrari 458 Italia pickup in Zurich. Discreet handover, clear terms, concierge support. Request availability."/>
+  <meta property="og:title" content="Luxury Obsession | Ferrari rental Zurich"/>
+  <meta property="og:description" content="Ferrari 458 Italia pickup in Zurich. Discreet handover, clear terms, concierge support. Request availability."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="../media/image00100.png"/>
+
+  <!-- Hreflang stays per page because the file name changes per location -->
+  <link rel="alternate" hreflang="en" href="ferrari-rental-zurich.html?lang=en"/>
+  <link rel="alternate" hreflang="de" href="ferrari-rental-zurich.html?lang=de"/>
+  <link rel="alternate" hreflang="it" href="ferrari-rental-zurich.html?lang=it"/>
+  <link rel="alternate" hreflang="x-default" href="ferrari-rental-zurich.html?lang=en"/>
+
+  <!-- Location overrides
+       Minimal example: only map query and hero image.
+       You can also override any translation key in i18n per language.
+  -->
+  <script>
+    window.__LO_LOCATION_PAGE__ = {
+      mapsQuery: "Zurich, Switzerland",
+      heroImage: "../media/image00100.png",
+      heroImageAlt: "Ferrari 458 Italia",
+      badgeRight: "Switzerland"
+
+      // Example overrides:
+       i18n: {
+         en: {
+           eyebrow: "Zurich, Switzerland",
+           heroTitleB: "Zurich pickup",
+           heroSubtitle: "Zurich is where the city texture meets the first open kilometres. We keep the handover discreet and the process clean, so your attention stays on the drive.\n\nFrom the lake to the ridgelines, we will help shape a route that fits your timing and your package.",
+		   
+      pill1: "City to countryside",
+      pill2: "Clear terms and insurance",
+      pill3: "Concierge support",
+      pill4: "Discreet handover11111111111",
+	  
+           pickupBody: "We confirm the exact meeting point with your booking. Zurich pickup is arranged around your schedule, with a clean handover and clear written confirmation.\n\nIf you prefer an even quieter start, our headquarters in Nänikon is a calm alternative.",
+		   routesIntro: "Zurich gives you options immediately. Pick the mood, we will suggest the line.",
+		   routes: [
+			"Lake Zurich shore toward Rapperswil for classic scenery",
+			"Albis ridge for quick elevation and wide views",
+			"Sihltal for a smooth, wooded escape from the city",
+			"Zurich Oberland for countryside flow and gentle climbs"
+		   ]
+         },
+		 
+       }
+    };
+  </script>
+
+  <script src="../assets/lo.js" defer></script>
+  <script src="../assets/lo.locations.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="navInner">
+        <a class="brand" href="../index.html" aria-label="Luxury Obsession">
+          <img class="brandIcon" src="../media/icon.png" alt="Luxury Obsession icon"/>
+          <span class="brandGold">Luxury Obsession</span>
+        </a>
+
+        <div class="navRight">
+          <nav class="navLinks" aria-label="Primary">
+            <a id="navRates" href="pricing.html">Rates</a>
+            <a id="navPhilosophy" href="../philosophy.html">Our Philosophy</a>
+            <a id="navExperiences" href="../experiences.html">Experiences</a>
+            <a id="navBlog" href="blog.html">Journal</a>
+            <a id="navContact" href="../index.html#contact">Contact</a>
+            <a id="navRequest" class="navCta" href="../index.html#request">Request</a>
+          </nav>
+
+          <div class="langSelect" aria-label="Language">
+            <button id="langToggle" class="langToggle" type="button" aria-haspopup="menu" aria-expanded="false">
+              <span id="langCode" aria-label="Current language">EN</span>
+              <span class="langChevron" aria-hidden="true">▾</span>
+            </button>
+            <div id="langMenu" class="langMenu" role="menu" aria-label="Select language" hidden>
+              <button class="langOption" type="button" role="menuitem" data-lang="en">English</button>
+              <button class="langOption" type="button" role="menuitem" data-lang="de">Deutsch</button>
+              <button class="langOption" type="button" role="menuitem" data-lang="it">Italiano</button>
+            </div>
+          </div>
+
+          <button id="hamburger" class="hamburger" type="button" aria-label="menu" aria-expanded="false">
+            <div class="hamburgerLines"><span></span><span></span><span></span></div>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="mobileMenu" role="navigation" aria-label="Mobile" data-open="0"></div>
+    </div>
+  </header>
+
+  <main>
+    <section id="top" class="hero">
+      <div class="container heroGrid">
+        <div>
+          <div id="eyebrow" class="eyebrow"></div>
+          <h1 class="heroTitle">
+            <span id="heroTitleA"></span>
+            <span id="heroTitleB" class="heroHighlight"></span>
+          </h1>
+          <p id="heroSubtitle" class="heroSubtitle"></p>
+
+          <div class="heroPills">
+            <span id="pill1" class="heroPill"></span>
+            <span id="pill2" class="heroPill"></span>
+            <span id="pill3" class="heroPill"></span>
+            <span id="pill4" class="heroPill"></span>
+          </div>
+
+          <div class="heroActions">
+            <a id="ctaPricing" class="btn btnSecondary" href="pricing.html">See rates</a>
+            <a id="ctaRequest" class="btn btnPrimary" href="../index.html#request">Request</a>
+          </div>
+
+          <p class="heroNote">
+            <span id="heroNoteLine1"></span><br/>
+            <span id="heroNoteLine2"></span>
+          </p>
+        </div>
+
+        <div class="heroMediaCard heroMediaImage">
+          <img id="heroImage" src="../media/image00100.png" alt="Ferrari 458 Italia" loading="lazy"/>
+          <div class="heroBadge">
+            <div style="display:inline-flex;align-items:center;gap:0.5rem">
+              <span class="heroBadgeDot"></span>
+              <span id="quoteOpen"></span>
+            </div>
+            <span id="badgeRight">Switzerland</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="titaniumDivider"></div>
+
+    <section id="location">
+      <div class="container">
+        <h2 id="locTitle" class="sectionTitle"></h2>
+        <p id="locSub" class="sectionSubtitle"></p>
+
+        <div class="locationGrid">
+          <div class="card carbonPanel">
+            <h3 id="pickupTitle"></h3>
+            <p id="pickupBody" class="locationBody"></p>
+
+            <div class="locationCtas">
+              <a id="btnRequest" class="ctaBtn ctaBtnPrimary" href="../index.html#request"></a>
+              <a id="btnOther" class="ctaBtn" href="locations.html"></a>
+              <a id="btnMaps" class="ctaBtn" href="#" target="_blank" rel="noreferrer"></a>
+            </div>
+          </div>
+
+          <div class="card carbonPanel">
+            <h3 id="routesTitle"></h3>
+            <p id="routesIntro" class="locationBody"></p>
+            <ul id="routesList" class="locationList"></ul>
+          </div>
+
+          <div class="card carbonPanel">
+            <h3 id="notesTitle"></h3>
+            <ul id="notesList" class="locationList"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 id="aboutTitle" class="sectionTitle"></h2>
+        <p id="aboutSub" class="sectionSubtitle"></p>
+        <div class="card carbonPanel">
+          <p id="aboutBody" class="locationBody"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta">
+      <div class="container">
+        <div class="card carbonPanel" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem">
+          <div>
+            <h3 id="ctaTitle" style="margin:0"></h3>
+            <p id="ctaBody" class="locationBody" style="margin-top:0.6rem"></p>
+          </div>
+
+          <div class="ctaRow" style="margin-top:0">
+            <a id="ctaBtnRequest" class="ctaBtn ctaBtnPrimary" href="../index.html#request"></a>
+            <a id="ctaBtnRates" class="ctaBtn" href="pricing.html"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footerInner">
+      <div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
+      <div id="footerCenter" class="footerCenter">Currently available: Ferrari 458 Italia.</div>
+      <div class="footerRight">
+        <a id="footerImpressum" href="../impressum.html">Impressum</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

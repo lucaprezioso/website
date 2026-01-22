@@ -1,61 +1,76 @@
-# Clean URLs (no /subs) -> serve content from /subs
+# Safety: collapse accidental double language prefixes
+/en/en/*                 /en/:splat                301!
+/de/de/*                 /de/:splat                301!
+/it/it/*                 /it/:splat                301!
 
-/swiss-routes-worth-driving-in-a-ferrari      /subs/swiss-routes-worth-driving-in-a-ferrari.html   200
-/swiss-routes-worth-driving-in-a-ferrari/     /subs/swiss-routes-worth-driving-in-a-ferrari.html   200
+# Assets, media and data should always come from the real folders
+/en/assets/*              /assets/:splat            301!
+/de/assets/*              /assets/:splat            301!
+/it/assets/*              /assets/:splat            301!
 
-/transparent-pricing-how-we-design-packages-that-make-sense   /subs/transparent-pricing-how-we-design-packages-that-make-sense   200
-/transparent-pricing-how-we-design-packages-that-make-sense/  /subs/transparent-pricing-how-we-design-packages-that-make-sense/  200
+/en/media/*               /media/:splat             301!
+/de/media/*               /media/:splat             301!
+/it/media/*               /media/:splat             301!
 
-/pricing        /subs/pricing        200
-/pricing/       /subs/pricing/       200
+/en/data/*                /data/:splat              301!
+/de/data/*                /data/:splat              301!
+/it/data/*                /data/:splat              301!
 
-/locations      /subs/locations      200
-/locations/     /subs/locations/     200
+# Fix relative .html links that resolve under the language prefix
+/en/index.html            /en                       301!
+/de/index.html            /de                       301!
+/it/index.html            /it                       301!
 
-/ferrari-rental-zurich-airport       /subs/ferrari-rental-zurich-airport       200
-/ferrari-rental-zurich-airport/      /subs/ferrari-rental-zurich-airport/      200
+/en/experiences.html      /en/experiences           301!
+/de/experiences.html      /de/experiences           301!
+/it/experiences.html      /it/experiences           301!
 
-/ferrari-rental-zurich_rebuilt_from_home      /subs/ferrari-rental-zurich_rebuilt_from_home      200
-/ferrari-rental-zurich_rebuilt_from_home/     /subs/ferrari-rental-zurich_rebuilt_from_home/     200
+/en/philosophy.html       /en/philosophy            301!
+/de/philosophy.html       /de/philosophy            301!
+/it/philosophy.html       /it/philosophy            301!
 
-/ferrari-458-italia-the-signature-experience-in-switzerland      /subs/ferrari-458-italia-the-signature-experience-in-switzerland      200
-/ferrari-458-italia-the-signature-experience-in-switzerland/     /subs/ferrari-458-italia-the-signature-experience-in-switzerland/     200
+/en/impressum.html        /en/impressum             301!
+/de/impressum.html        /de/impressum             301!
+/it/impressum.html        /it/impressum             301!
 
-/blog          /subs/blog          200
-/blog/         /subs/blog/         200
+/en/datenschutz.html      /en/datenschutz           301!
+/de/datenschutz.html      /de/datenschutz           301!
+/it/datenschutz.html      /it/datenschutz           301!
 
-/ferrari-rental-andermatt      /subs/ferrari-rental-andermatt      200
-/ferrari-rental-andermatt/     /subs/ferrari-rental-andermatt/     200
+/en/agb.html              /en/agb                   301!
+/de/agb.html              /de/agb                   301!
+/it/agb.html              /it/agb                   301!
 
-/ferrari-rental-basel          /subs/ferrari-rental-basel          200
-/ferrari-rental-basel/         /subs/ferrari-rental-basel/         200
+# Language home pages
+/en                       /index.html               200
+/en/                      /index.html               200
+/de                       /index.html               200
+/de/                      /index.html               200
+/it                       /index.html               200
+/it/                      /index.html               200
 
-/ferrari-rental-bern           /subs/ferrari-rental-bern           200
-/ferrari-rental-bern/          /subs/ferrari-rental-bern/          200
+# Root pages stored in repo root
+/en/experiences           /experiences.html         200
+/de/experiences           /experiences.html         200
+/it/experiences           /experiences.html         200
 
-/ferrari-rental-biel           /subs/ferrari-rental-biel           200
-/ferrari-rental-biel/          /subs/ferrari-rental-biel/          200
+/en/philosophy            /philosophy.html          200
+/de/philosophy            /philosophy.html          200
+/it/philosophy            /philosophy.html          200
 
-/ferrari-rental-chur           /subs/ferrari-rental-chur           200
-/ferrari-rental-chur/          /subs/ferrari-rental-chur/          200
+/en/impressum             /impressum.html           200
+/de/impressum             /impressum.html           200
+/it/impressum             /impressum.html           200
 
-/ferrari-rental-davos          /subs/ferrari-rental-davos          200
-/ferrari-rental-davos/         /subs/ferrari-rental-davos/         200
+/en/datenschutz           /datenschutz.html         200
+/de/datenschutz           /datenschutz.html         200
+/it/datenschutz           /datenschutz.html         200
 
-/ferrari-rental-lucerne        /subs/ferrari-rental-lucerne        200
-/ferrari-rental-lucerne/       /subs/ferrari-rental-lucerne/       200
+/en/agb                   /agb.html                 200
+/de/agb                   /agb.html                 200
+/it/agb                   /agb.html                 200
 
-/ferrari-rental-nanikon        /subs/ferrari-rental-nanikon        200
-/ferrari-rental-nanikon/       /subs/ferrari-rental-nanikon/       200
-
-/ferrari-rental-st-gallen      /subs/ferrari-rental-st-gallen      200
-/ferrari-rental-st-gallen/     /subs/ferrari-rental-st-gallen/     200
-
-/ferrari-rental-winterthur     /subs/ferrari-rental-winterthur     200
-/ferrari-rental-winterthur/    /subs/ferrari-rental-winterthur/    200
-
-/ferrari-rental-zug            /subs/ferrari-rental-zug            200
-/ferrari-rental-zug/           /subs/ferrari-rental-zug/           200
-
-/index.html        /   301
-/index.html/       /   301
+# Everything else comes from pages/<slug>.html
+/en/*                     /pages/:splat.html        200
+/de/*                     /pages/:splat.html        200
+/it/*                     /pages/:splat.html        200

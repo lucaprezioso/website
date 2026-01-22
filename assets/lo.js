@@ -6,8 +6,126 @@
 
   const LANGS = ["en","de","it"];
 
+
+const __LO_IS_FILE__ = window.location.protocol === "file:";
+
+function loBasePathname(){
+  try{
+    let p = (__LO_SITE_ROOT__ && __LO_SITE_ROOT__.pathname) ? __LO_SITE_ROOT__.pathname : "/";
+    if(!p.endsWith("/")) p += "/";
+    const m = p.match(/^(.*\/)(en|de|it)\/$/i);
+    if(m) p = m[1];
+    return p;
+  } catch(_e){
+    return "/";
+  }
+}
+
+function loLangFromPath(){
+  if(__LO_IS_FILE__) return null;
+  try{
+    const base = loBasePathname();
+    let p = window.location.pathname || "/";
+    if(p.startsWith(base)) p = p.slice(base.length);
+    if(p.startsWith("/")) p = p.slice(1);
+    const seg = p.split("/").filter(Boolean)[0] || "";
+    if(LANGS.includes(seg)) return seg;
+  } catch(_e) {}
+  return null;
+}
+
+function loSlugFromTarget(target){
+  let t = String(target || "");
+  t = t.split("#")[0].split("?")[0];
+  t = t.replace(/^\//, "");
+  t = t.replace(/^\.\//, "");
+  t = t.replace(/^pages\//i, "");
+  const parts = t.split("/").filter(Boolean);
+  const last = parts.length ? parts[parts.length - 1] : "";
+  if(!last) return "";
+  if(last.toLowerCase() === "index.html") return "";
+  if(last.toLowerCase().endsWith(".html")) return last.slice(0, -5);
+  return last;
+}
+
+function loPrettyUrl(target, lang, hash){
+  const effectiveLang = lang || getLang();
+  const base = loBasePathname();
+  const slug = loSlugFromTarget(target);
+
+  let out = base + effectiveLang;
+  if(slug) out += "/" + slug;
+
+  if(hash){
+    const h = String(hash).replace(/^#/, "");
+    if(h) out += "#" + h;
+  }
+  return out;
+}
+
+function loRewriteInternalLinks(effectiveLang){
+  if(__LO_IS_FILE__) return;
+
+  const base = loBasePathname();
+  const rootMap = {
+    "index.html": "",
+    "experiences.html": "experiences",
+    "philosophy.html": "philosophy",
+    "impressum.html": "impressum",
+    "datenschutz.html": "datenschutz",
+    "agb.html": "agb"
+  };
+
+  try{
+    const brand = document.querySelector("a.brand");
+    if(brand) brand.setAttribute("href", base + effectiveLang);
+  } catch(_e) {}
+
+  document.querySelectorAll("a[href]").forEach(a => {
+    const href = a.getAttribute("href");
+    if(!href) return;
+    if(href.startsWith("#")) return;
+
+    const low = href.toLowerCase();
+    if(low.startsWith("http:") || low.startsWith("https:") || low.startsWith("mailto:") || low.startsWith("tel:")) return;
+
+    const parts = href.split("#");
+    const pathPart = (parts[0] || "").trim();
+    const hashPart = parts.length > 1 ? parts.slice(1).join("#") : "";
+
+    // Already absolute
+    if(pathPart.startsWith("/")) return;
+
+    const cleaned = pathPart.replace(/^\.\//, "");
+
+    if(rootMap.hasOwnProperty(cleaned)){
+      const slug = rootMap[cleaned];
+      let out = base + effectiveLang + (slug ? ("/" + slug) : "");
+      if(hashPart) out += "#" + hashPart;
+      a.setAttribute("href", out);
+      return;
+    }
+
+    if(/^pages\/.*\.html$/i.test(cleaned) || /^[a-z0-9\-]+\.html$/i.test(cleaned)){
+      const slug = loSlugFromTarget(cleaned);
+      if(!slug) return;
+      let out = base + effectiveLang + "/" + slug;
+      if(hashPart) out += "#" + hashPart;
+      a.setAttribute("href", out);
+      return;
+    }
+  });
+}
+
+
   function getLang(){
-    // 1) URL
+    // 0) Path language for clean URLs online
+    try{
+      const p = loLangFromPath();
+      if(p) return p;
+    } catch(_e) {}
+
+    // 1) URL query string (legacy and local)
     try{
       const p = new URLSearchParams(window.location.search);
       const q = p.get("lang");
@@ -27,13 +145,43 @@
     if(!LANGS.includes(next)) return;
     try{ localStorage.setItem("lo_lang", next); } catch(_e) {}
 
-    const u = new URL(window.location.href);
-    u.searchParams.set("lang", next);
-    // Keep path and hash
-    window.location.href = u.pathname + u.search + u.hash;
+    // Local file browsing keeps legacy query string
+    if(__LO_IS_FILE__){
+      const u = new URL(window.location.href);
+      u.searchParams.set("lang", next);
+      window.location.href = u.pathname + u.search + u.hash;
+      return;
+    }
+
+    // Online: switch language segment in the path and keep current slug
+    const base = loBasePathname();
+    const currentLang = loLangFromPath();
+
+    let slug = "";
+    try{
+      let p = window.location.pathname || "/";
+      if(p.startsWith(base)) p = p.slice(base.length);
+      if(p.startsWith("/")) p = p.slice(1);
+      const parts = p.split("/").filter(Boolean);
+
+      if(currentLang){
+        slug = parts.slice(1).join("/");
+      } else {
+        slug = loSlugFromTarget(window.location.pathname || "");
+      }
+    } catch(_e) {}
+
+    let dest = base + next;
+    if(slug) dest += "/" + slug;
+
+    window.location.href = dest + (window.location.hash || "");
   }
 
   function buildUrl(path, lang, hash){
+    if(!__LO_IS_FILE__){
+      return loPrettyUrl(path, lang, hash);
+    }
+
     const effectiveLang = lang || getLang();
     const u = new URL(path, window.location.href);
     u.searchParams.set("lang", effectiveLang);
@@ -75,6 +223,10 @@
 
   // Build a URL relative to the site root (not the current page), and keep language.
   function buildRootUrl(path, lang, hash){
+    if(!__LO_IS_FILE__){
+      return loPrettyUrl(String(path || ""), lang, hash);
+    }
+
     const effectiveLang = lang || getLang();
     const u = new URL(String(path || ""), __LO_SITE_ROOT__);
     u.searchParams.set("lang", effectiveLang);
@@ -82,7 +234,6 @@
       const h = String(hash).replace(/^#/, "");
       if(h) u.hash = h;
     }
-    // Keep it same-origin by returning only pathname + search + hash
     return u.pathname + u.search + u.hash;
   }
 
@@ -451,6 +602,9 @@ if(legalLinks.length){
 
   function initSharedUI(lang){
     const effectiveLang = lang || getLang();
+
+
+    try{ loRewriteInternalLinks(effectiveLang); } catch(_e) {}
 
     splitBrandWords();
     promoteRequest();
