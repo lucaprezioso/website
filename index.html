@@ -10,21 +10,21 @@
 <meta content="Luxury Obsession | Ferrari Rental Zurich" property="og:title"/>
 <meta content="Refined Ferrari 458 Italia rental in Zurich, Switzerland. Request a quote via form, WhatsApp, or call." property="og:description"/>
 <meta content="website" property="og:type"/>
-<meta content="media/ogimage.png" property="og:image"/>
+<meta content="media/ogimage.jpg" property="og:image"/>
 
 <meta property="og:site_name" content="Luxury Obsession"/>
 <meta property="og:title" content="Luxury Obsession | Ferrari Rental Zurich"/>
 <meta property="og:description" content="Refined Ferrari 458 Italia rental in Zurich, Switzerland. Request a quote via form, WhatsApp, or call."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://luxuryobsession.ch/"/>
-<meta property="og:image" content="https://luxuryobsession.ch/media/ogimage.png"/>
+<meta property="og:image" content="https://luxuryobsession.ch/media/ogimage.jpg"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Luxury Obsession | Ferrari Rental Zurich"/>
 <meta name="twitter:description" content="Refined Ferrari 458 Italia rental in Zurich, Switzerland. Request a quote via form, WhatsApp, or call."/>
-<meta name="twitter:image" content="https://luxuryobsession.ch/media/ogimage.png"/>
+<meta name="twitter:image" content="https://luxuryobsession.ch/media/ogimage.jpg"/>
 
 <link href="media/icon.png" rel="icon"/>
 <link href="index.html?lang=en" hreflang="en" rel="alternate"/>
@@ -36,6 +36,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="assets/lo.css"/>
+<link rel="alternate" hreflang="en" href="index.html?lang=en" />
+<link rel="alternate" hreflang="de" href="index.html?lang=de" />
+<link rel="alternate" hreflang="it" href="index.html?lang=it" />
+<link rel="alternate" hreflang="x-default" href="index.html?lang=en" />
 <style>
   /* Page-specific refinements for the home page */
 
@@ -183,8 +187,8 @@
 <main>
 <section class="showcase" id="showcase">
 <div class="mediaFull">
-<video id="showcaseVideo" autoplay muted playsinline preload="auto">
-  <source id="showcaseSource" src="./media/video00100.mp4" type="video/mp4">
+<video id="showcaseVideo" autoplay muted playsinline preload="none" poster="media/image00201.jpg">
+  <source id="showcaseSource" data-src="./media/video00100.mp4" type="video/mp4">
 </video>
 <div class="mediaOverlay">
 <div class="container">
@@ -224,8 +228,8 @@
 </p>
 </div>
 <div class="heroMediaCard">
-<video autoplay="" loop="" muted="" playsinline="" poster="media/video00100.mp4">
-<source src="videos/video00100.mp4" type="video/mp4"/>
+<video class="heroMiniVideo" autoplay="" loop="" muted="" playsinline="" preload="none" poster="media/image00201.jpg">
+<source data-src="media/video00100.mp4" type="video/mp4"/>
 </video>
 <div class="heroBadge">
 <div style="display:inline-flex;align-items:center;gap:0.5rem">
@@ -372,8 +376,8 @@
 <p class="pricingNote"><span id="follow"></span> · <span id="followBody"></span></p>
 </div>
 </div>
-<div aria-label="Pickup location map" class="card mapCard">
-<iframe allowfullscreen="" class="mapFrame" id="mapFrame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="card mapCard" role="region" aria-label="Pickup location map">
+<iframe allowfullscreen="" class="mapFrame" id="mapFrame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Pickup location map (Waldaustrasse 2, 8606 Nänikon)"></iframe>
 </div>
 </div>
 </div>
@@ -620,7 +624,7 @@ const DEFAULT_PACKAGES =
     }
 
 
-    const I18N = {"en":{"navPricing":"Rates","navBlog":"Journal","navContact":"Contact","navRequest":"Request","eyebrow":"Zurich, Switzerland","heroTitleA":"Ferrari 458 Italia","heroTitleB":"Privately hosted","heroSubtitle":"Ferrari 458 Italia, the last naturally aspirated mid engine V8 from Maranello and a modern classic penned by Pininfarina.\n\nNaturally aspirated means the power arrives with pure immediacy. No turbo boost, no waiting, just a razor sharp throttle and an unmistakable rising V8 soundtrack as the revs climb.\n\nBorn in the Schumacher era, it captures that unmistakable Ferrari feel, light on its feet, communicative, and thrilling at any speed. The seven speed dual clutch transmission keeps the momentum flowing with seamless, rapid shifts, always ready for the next gear.\n\nOur selection is intentionally singular. One meticulously maintained 458 Italia, privately hosted in Zurich. Send a request, and we confirm availability and terms personally, with discreet service from start to handover.","pill1":"Curated single car","pill2":"Clear terms and insurance","pill3":"Zurich handover","pill4":"Concierge support","ctaPricing":"View rates","ctaRequest":"Request availability","packagesTitle":"Rates","packagesSub":"Choose a duration. All requests are confirmed personally.","requestTitle":"Request availability","requestSub":"Tell us your preferred date and time. We will reply with confirmation and details.","directTitle":"Concierge contact","directBody":"If you prefer to message or call, our concierge will assist you.","bul1":"Discreet, fast replies","bul2":"Transparent confirmation in writing","bul3":"Tailored pickup options","formTitle":"Your request","car":"Car","carNote":"Currently available: Ferrari 458 Italia.","name":"Full name","email":"Email","phone":"Phone","package":"Rate","date":"Preferred date","datePick":"Select","time":"Preferred time","timePick":"Select","coupon":"Referral code","couponHint":"Optional","notes":"Notes","notesHint":"Anything we should know about your request","send":"Send request","prepared":"We will contact you shortly.","pickupTitle":"Pickup","pickupNote":"Main pickup near Zurich. Alternative locations on request.","openMaps":"Open in Google Maps","otherPickup":"Other pickup locations","follow":"Follow","followBody":"Instagram, Facebook, TikTok and YouTube for photos, routes and updates.","quoteOpen":"Requests open","pickupLocation":"Pickup location","packagesNote":"All requests are subject to availability. Minimum age and license requirements apply.","heroNoteLine1":"Available now: <strong>Ferrari 458 Italia</strong>","heroNoteLine2":"Request a date and we will reply quickly.","showcaseEyebrow":"The car","showcaseTitle":"Ferrari 458 Italia","showcaseBody":"Our current selection is intentionally singular. A meticulously maintained 458 Italia, hosted privately in Zurich. Choose a date and duration and we will confirm availability and terms.","showcaseCta":"Request availability","navRates":"Rates","navPhilosophy":"Our Philosophy","navExperiences":"Experiences","navImpressum":"Impressum"},
+    const I18N = {"en":{"navPricing":"Rates","navBlog":"Journal","navContact":"Contact","navRequest":"Request","eyebrow":"Zurich, Switzerland","heroTitleA":"Ferrari 458 Italia","heroTitleB":"Privately hosted","heroSubtitle":"Ferrari 458 Italia, the last naturally aspirated mid engine V8 from Maranello and a modern classic penned by Pininfarina.\n\nNaturally aspirated means the power arrives with pure immediacy. No turbo boost, no waiting, just a razor sharp throttle and an unmistakable rising V8 soundtrack as the revs climb.\n\nBorn in the Schumacher era, it captures that unmistakable Ferrari feel, light on its feet, communicative, and thrilling at any speed. The seven speed dual clutch transmission keeps the momentum flowing with seamless, rapid shifts, always ready for the next gear.\n\nOur selection is intentionally singular. One meticulously maintained 458 Italia, privately hosted in Zurich. Send a request, and we confirm availability and terms personally, with discreet service from start to handover.","pill1":"Curated single car","pill2":"Clear terms and insurance","pill3":"Zurich handover","pill4":"Concierge support","ctaPricing":"View rates","ctaRequest":"Request availability","packagesTitle":"Rates","packagesSub":"Choose a duration. All requests are confirmed personally.","requestTitle":"Request availability","requestSub":"Tell us your preferred date and time. We will reply with confirmation and details.","directTitle":"Concierge contact","directBody":"If you prefer to message or call, we will assist you.","bul1":"Discreet, fast replies","bul2":"Transparent confirmation in writing","bul3":"Tailored pickup options","formTitle":"Your request","car":"Car","carNote":"Currently available: Ferrari 458 Italia.","name":"Full name","email":"Email","phone":"Phone","package":"Rate","date":"Preferred date","datePick":"Select","time":"Preferred time","timePick":"Select","coupon":"Referral code","couponHint":"Optional","notes":"Notes","notesHint":"Anything we should know about your request","send":"Send request","prepared":"We will contact you shortly.","pickupTitle":"Pickup","pickupNote":"Main pickup near Zurich. Alternative locations on request.","openMaps":"Open in Google Maps","otherPickup":"Other pickup locations","follow":"Follow","followBody":"Instagram, Facebook, TikTok and YouTube for photos, routes and updates.","quoteOpen":"Requests open","pickupLocation":"Pickup location","packagesNote":"All requests are subject to availability. Minimum age and license requirements apply.","heroNoteLine1":"Available now: <strong>Ferrari 458 Italia</strong>","heroNoteLine2":"Request a date and we will reply quickly.","showcaseEyebrow":"The car","showcaseTitle":"Ferrari 458 Italia","showcaseBody":"Our current selection is intentionally singular. A meticulously maintained 458 Italia, hosted privately in Zurich. Choose a date and duration and we will confirm availability and terms.","showcaseCta":"Request availability","navRates":"Rates","navPhilosophy":"Our Philosophy","navExperiences":"Experiences","navImpressum":"Impressum"},
 	"de":{"navPricing":"Tarife","navBlog":"Journal","navContact":"Kontakt","navRequest":"Anfrage","eyebrow":"Z\u00fcrich, Schweiz","heroTitleA":"Ferrari 458 Italia","heroTitleB":"Privat betreut","heroSubtitle":"Ferrari 458 Italia, der letzte frei saugende Mittelmotor V8 aus Maranello und ein moderner Klassiker von Pininfarina.\n\nOhne Turbo bedeutet hier unmittelbare Reaktion. Kein Ladedruck, kein Verzögern, nur ein messerscharfes Ansprechverhalten und ein unverwechselbarer V8 Klang, der mit jeder Drehzahl gewinnt.\n\nGeprägt von der Schumacher Ära steht er für das klassische Ferrari Gefühl, leichtfüssig, präzise und emotional. Das Sieben Gang Doppelkupplungsgetriebe hält den Vortrieb ohne Unterbrechung, mit schnellen, nahtlosen Schaltvorgängen.\n\nUnsere Auswahl ist bewusst singular. Eine sorgfältig gepflegte 458 Italia, privat in Zürich gehostet. Sie senden eine Anfrage, wir bestätigen Verfügbarkeit und Konditionen persönlich, mit diskretem Service bis zur Übergabe.","pill1":"Bewusst exklusiv","pill2":"Klare Konditionen und Versicherung","pill3":"\u00dcbergabe in Z\u00fcrich","pill4":"Concierge Support","ctaPricing":"Tarife ansehen","ctaRequest":"Verf\u00fcgbarkeit anfragen","packagesTitle":"Tarife","packagesSub":"Dauer ausw\u00e4hlen. Jede Anfrage wird pers\u00f6nlich best\u00e4tigt.","requestTitle":"Verf\u00fcgbarkeit anfragen","requestSub":"Nennen Sie Datum und Uhrzeit. Wir melden uns mit Best\u00e4tigung und Details.","directTitle":"Concierge Kontakt","directBody":"Wenn Sie lieber schreiben oder anrufen, hilft Ihnen unser Concierge.","bul1":"Diskret, schnell","bul2":"Transparente Best\u00e4tigung schriftlich","bul3":"Abholung nach Wunsch","formTitle":"Ihre Anfrage","car":"Fahrzeug","carNote":"Aktuell verf\u00fcgbar: Ferrari 458 Italia.","name":"Name","email":"E Mail","phone":"Telefon","package":"Tarif","date":"Wunschtermin","datePick":"W\u00e4hlen","time":"Wunschzeit","timePick":"W\u00e4hlen","coupon":"Empfehlungscode","couponHint":"Optional","notes":"Notizen","notesHint":"Gibt es etwas Wichtiges zu Ihrer Anfrage","send":"Anfrage senden","prepared":"Wir melden uns in K\u00fcrze.","pickupTitle":"Abholung","pickupNote":"Hauptabholung bei Z\u00fcrich. Alternative Orte auf Anfrage.","openMaps":"In Google Maps \u00f6ffnen","otherPickup":"Weitere Abholorte","follow":"Folgen","followBody":"Instagram, Facebook, TikTok und YouTube f\u00fcr Bilder, Routen und Updates.","quoteOpen":"Anfragen offen","pickupLocation":"Abholort","packagesNote":"Alle Anfragen vorbehaltlich Verf\u00fcgbarkeit. Mindestalter und F\u00fchrerausweis erforderlich.","heroNoteLine1":"Jetzt verf\u00fcgbar: <strong>Ferrari 458 Italia</strong>","heroNoteLine2":"Datum anfragen, wir melden uns schnell zur\u00fcck.","showcaseEyebrow":"Das Auto","showcaseTitle":"Ferrari 458 Italia","showcaseBody":"Unsere Auswahl ist bewusst exklusiv: eine sorgf\u00e4ltig gepflegte 458 Italia, privat in Z\u00fcrich betreut. Datum und Dauer ausw\u00e4hlen, wir best\u00e4tigen Verf\u00fcgbarkeit und Konditionen.","showcaseCta":"Verf\u00fcgbarkeit anfragen","navRates":"Tarife","navPhilosophy":"Unsere Philosophie","navExperiences":"Anl\u00e4sse","navImpressum":"Impressum"},
 	"it":{"navPricing":"Tariffe","navBlog":"Journal","navContact":"Contatti","navRequest":"Richiesta","eyebrow":"Zurigo, Svizzera","heroTitleA":"Ferrari 458 Italia","heroTitleB":"Gestita privatamente","heroSubtitle":"Ferrari 458 Italia, l'ultimo V8 aspirato a motore centrale di Maranello e un classico moderno firmato Pininfarina.\n\n\"Aspirato\" significa risposta immediata. Niente turbo, niente attesa, solo un acceleratore preciso e un rombo di motore V8 inconfondibile man mano che il motore sale di giri.\n\nNata nell'era Schumacher, conserva quel carattere Ferrari puro: leggera, comunicativa, coinvolgente. Il cambio a doppia frizione a sette rapporti mantiene la spinta continua, con innesti rapidi e fluidi.\n\nLa nostra selezione è volutamente unica. Una sola 458 Italia, mantenuta con cura e gestita privatamente a Zurigo. Inviaci la tua richiesta e noi ti confermiamo disponibilità e condizioni personalmente.","pill1":"Selezione unica","pill2":"Condizioni chiare e assicurazione","pill3":"Consegna a Zurigo","pill4":"Assistenza concierge","ctaPricing":"Vedi tariffe","ctaRequest":"Richiedi disponibilit\u00e0","packagesTitle":"Tariffe","packagesSub":"Scegli la durata. Ogni richiesta viene confermata personalmente.","requestTitle":"Richiedi disponibilit\u00e0","requestSub":"Indicaci la data e l'orario che preferisci. Noi ti rispondiamo con conferma e ulteriori dettagli.","directTitle":"Contatto concierge","directBody":"Se preferisci scriverci o chiamarci, ti assistiamo volentieri.","bul1":"Risposte rapide e discrete","bul2":"Conferma trasparente per iscritto","bul3":"Opzioni di ritiro su richiesta","formTitle":"La tua richiesta","car":"Auto","carNote":"Disponibile ora: Ferrari 458 Italia.","name":"Nome e cognome","email":"Email","phone":"Telefono","package":"Tariffa","date":"Data preferita","datePick":"Seleziona","time":"Orario preferito","timePick":"Seleziona","coupon":"Codice referral","couponHint":"Opzionale","notes":"Note","notesHint":"Indicazioni utili per la tua richiesta","send":"Invia richiesta","prepared":"Ti contattiamo a breve.","pickupTitle":"Ritiro","pickupNote":"Ritiro principale vicino a Zurigo. Altre location su richiesta.","openMaps":"Apri in Google Maps","otherPickup":"Altri luoghi di ritiro","follow":"Seguici","followBody":"Instagram, Facebook, TikTok e YouTube per foto, itinerari e aggiornamenti.","quoteOpen":"Richieste aperte","pickupLocation":"Luogo di ritiro","packagesNote":"Tutte le richieste sono soggette a disponibilit\u00e0. Si applicano requisiti di et\u00e0 e patente.","heroNoteLine1":"Disponibile ora: <strong>Ferrari 458 Italia</strong>","heroNoteLine2":"Richiedi una data, ti rispondiamo rapidamente.","showcaseEyebrow":"L'auto","showcaseTitle":"Ferrari 458 Italia","showcaseBody":"La nostra flotta \u00e8 volutamente unica: una 458 Italia curata nei minimi dettagli, gestita privatamente a Zurigo. Scegli data e durata, noi ti confermiamo la disponibilit\u00e0 e le condizioni del noleggio.","showcaseCta":"Richiedi disponibilit\u00e0","navRates":"Tariffe","navPhilosophy":"La nostra filosofia","navExperiences":"Esperienze","navImpressum":"Impressum"}};    const WEEKDAYS = {
       en:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
@@ -1117,7 +1121,25 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
       document.getElementById("socTiktok").href = SOCIAL.tiktok;
       document.getElementById("socYoutube").href = SOCIAL.youtube;
 
-      document.getElementById("mapFrame").src = MAPS_EMBED;
+      const mapFrame = document.getElementById("mapFrame");
+      if(mapFrame){
+        const loadMap = () => {
+          if(mapFrame.dataset.loaded === "1") return;
+          mapFrame.src = MAPS_EMBED;
+          mapFrame.dataset.loaded = "1";
+        };
+        if("IntersectionObserver" in window){
+          const io = new IntersectionObserver((entries) => {
+            if(!entries[0].isIntersecting) return;
+            loadMap();
+            io.disconnect();
+          }, { rootMargin: "200px" });
+          io.observe(mapFrame);
+        }else{
+          loadMap();
+        }
+      }
+
 
       initCalendar(lang);
 
@@ -1175,36 +1197,63 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
   </script>
 
 <script>
-/* SHOWCASE VIDEO: pick source on desktop by aspect ratio, then play once and hold last frame */
+/* VIDEOS: load MP4 sources after first paint to protect FCP and LCP */
 document.addEventListener("DOMContentLoaded", () => {
-  const v = document.getElementById("showcaseVideo");
-  const s = document.getElementById("showcaseSource");
-  if (!v || !s) return;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const saveData = navigator.connection && navigator.connection.saveData;
 
-  const isMobile = window.matchMedia("(max-width: 760px)").matches;
-  if (!isMobile) {
+  // Showcase video: choose source, then play once and hold last frame
+  const showcaseVideo = document.getElementById("showcaseVideo");
+  const showcaseSource = document.getElementById("showcaseSource");
+  if (showcaseVideo && showcaseSource && !reduceMotion && !saveData) {
+    const isMobile = window.matchMedia("(max-width: 760px)").matches;
     const aspect = window.innerWidth / window.innerHeight;
     const threshold = 5 / 6;
 
-    if (aspect > threshold) {
-      const desired = "./media/video00200.mp4";
-      if (s.getAttribute("src") !== desired) {
-        s.setAttribute("src", desired);
-        v.load();
-        v.play().catch(() => {});
-      }
+    let desired = showcaseSource.dataset.src || "";
+    let poster = showcaseVideo.getAttribute("poster") || "";
+    if (!isMobile && aspect > threshold) {
+      desired = "./media/video00200.mp4";
+      poster = "media/image00103.jpg";
     }
+    if (poster) showcaseVideo.poster = poster;
+
+    requestAnimationFrame(() => {
+      showcaseSource.src = desired;
+      showcaseVideo.load();
+      showcaseVideo.play().catch(() => {});
+    });
+
+    showcaseVideo.addEventListener("ended", () => {
+      showcaseVideo.pause();
+      try { showcaseVideo.currentTime = showcaseVideo.duration; } catch (e) {}
+    });
   }
 
-  v.addEventListener("ended", () => {
-    v.pause();
-    try {
-      v.currentTime = v.duration;
-    } catch (e) {}
-  });
+  // Hero card mini video: load only on desktop and only when near the viewport
+  const heroVideo = document.querySelector(".heroMiniVideo");
+  if (heroVideo && !reduceMotion && !saveData && !window.matchMedia("(max-width: 760px)").matches) {
+    const heroSource = heroVideo.querySelector("source");
+    const loadHero = () => {
+      if (!heroSource || !heroSource.dataset.src) return;
+      heroSource.src = heroSource.dataset.src;
+      heroVideo.load();
+      heroVideo.play().catch(() => {});
+    };
+
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver((entries) => {
+        if (!entries[0].isIntersecting) return;
+        loadHero();
+        io.disconnect();
+      }, { rootMargin: "200px" });
+      io.observe(heroVideo);
+    } else {
+      loadHero();
+    }
+  }
 });
 </script>
-
 
 </body>
 </html>

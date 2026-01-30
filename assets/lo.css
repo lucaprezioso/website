@@ -1061,3 +1061,43 @@ header[data-brand-wrap="1"] .brandGold .brandWord2{display:block}
   /* On mobile, language stays in the hamburger menu */
   .langSelect{display:none !important}
 }
+
+/* Mobile header override: always show Request and language */
+@media (max-width: 760px){
+  .navLinks{display:flex !important;}
+  .navLinks a{display:none !important;}
+  #navRequest{display:inline-flex !important;}
+  #navRequest[data-lo-hidden="1"]{display:inline-flex !important;}
+  .langSelect{display:inline-flex !important;}
+  .langSelect[data-lo-hidden="1"]{display:inline-flex !important;}
+  .hamburger{display:inline-flex !important;}
+  .navRight{gap:0.5rem;}
+  .navCta{padding:0.46rem 0.78rem;font-size:0.82rem;}
+  .langToggle{padding:0.46rem 0.62rem;font-size:0.82rem;}
+}
+
+/* Ultra-small screens: keep Request, language, and hamburger visible without horizontal scrolling */
+@media (max-width: 360px){
+  header .container{padding:0 1rem;}
+  .navInner{gap:0.6rem;padding:0.35rem 0;}
+
+  /* Let brand shrink and ellipsize so the right controls never get pushed off-screen */
+  .brand{flex:1 1 auto;min-width:0;gap:0.5rem;}
+  .brandGold{
+    display:inline-block;
+    max-width:34vw;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+
+  .navRight{gap:0.35rem;}
+  .navCta{padding:0.40rem 0.62rem;font-size:0.78rem;}
+  .langToggle{padding:0.40rem 0.50rem;font-size:0.78rem;}
+  .hamburger{width:40px;height:40px !important;}
+}
+
+/* Extreme narrow devices: show icon only to preserve controls */
+@media (max-width: 320px){
+  .brandGold{display:none;}
+}

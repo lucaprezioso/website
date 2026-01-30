@@ -557,7 +557,7 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
         <div class="divider"></div>
 
         <h2>Factory red: does it matter</h2>
-        <p>Factory red often plays like the iconic Ferrari spec. It is not a rule, but when buyers hesitate between two similar cars, colour can decide. In our Swiss sample where colour was visible on detail pages, red examples tended to sit higher than comparable non red examples.</p>
+        <p>Factory red often plays like the iconic Ferrari spec. It is not a rule, but when buyers hesitate between two similar cars, colour always decides. In our Swiss sample where colour was visible on detail pages, red examples tended to sit higher than comparable non red examples.</p>
 
         <figure class="figure" style="margin-top:1rem">
           <img class="chartImg" src="ferrari_458_color_premium_ch.png" alt="458 Italia red versus non red signal in Switzerland"/>
@@ -601,43 +601,82 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
       footerCenter:"Ferrari Only Erlebnisse, Schweiz.",
 
       body: `
-        <p>Die Schweiz ist ein starker Markt für moderne Ferraris. Viele Fahrzeuge sind gut gepflegt, Service Historie ist sauber, und Käufer zahlen für die richtige Spezifikation. Deshalb lohnt sich ein Blick auf die Preisentwicklung der 458 und 488 Familie.</p>
+        <p>Die Schweiz ist ein starker Markt für moderne Ferraris. Viele Fahrzeuge sind gut gepflegt, die Service Historie ist meist dokumentiert, und Käufer zahlen für die richtige Spezifikation. Das macht die Schweiz zu einem idealen Ort, um zu beobachten, wie sich die Preisstärke der Ferrari 458 und Ferrari 488 Familien entwickelt.</p>
 
         <div class="card callout" style="margin-top:1rem">
           <div class="calloutTitle">Was wir mit vernünftig meinen</div>
-          <p class="calloutBody">Fokus auf Fahrzeuge bis grob 60,000 km, ohne extreme Geschichten und ohne komische Kompromisse. Nicht der billigste Preis, sondern die sauberen, realistischen Optionen.</p>
+          <p class="calloutBody">Dieser Artikel fokussiert auf Autos, die in dieser Klasse frisch wirken, grob bis etwa 60,000 km, ohne extreme Geschichten und ohne seltsame Kompromisse. Es geht nicht um das günstigste Inserat. Es geht um saubere, sinnvolle Optionen, die sich tatsächlich verkaufen.</p>
         </div>
 
         <div class="divider"></div>
 
-        <h2>Trend nach Erstzulassung</h2>
+        <h2>Daten und Methode</h2>
+        <p>Wir haben einen Schweizer Listings Snapshot aus Januar 2026 verwendet und Angebotspreise, Kilometerstände und das Jahr der Erstzulassung je Modell extrahiert. Das sind Angebotspreise, keine bestätigten Transaktionspreise. Trotzdem sind Angebotspreise in einem kleinen Markt wie der Schweiz ein brauchbares Thermometer für relative Stärke und Käuferpräferenzen.</p>
+
+        <div class="divider"></div>
+
+        <h2>Trend Chart nach Erstzulassung</h2>
+        <p>Diese Grafik zeigt die medianen Angebotspreise nach Jahr der Erstzulassung, gefiltert auf vernünftige Kilometerstände. So wird die Markt Kurve sichtbar, ohne private Verkaufsdaten zu benötigen.</p>
+
         <figure class="figure" style="margin-top:1rem">
-          <img class="chartImg" src="ferrari_price_trend_by_year_ch.png" alt="Median Angebotspreis nach Erstzulassung"/>
-          <figcaption>Median Angebotspreise nach Erstzulassung, gefiltert auf vernünftige Kilometerstände.</figcaption>
+          <img class="chartImg" src="ferrari_price_trend_by_year_ch.png" alt="Medianer Angebotspreis nach Erstzulassung in der Schweiz"/>
+          <figcaption>Medianer Angebotspreis nach Erstzulassung für 458 Italia, 458 Spider, 488 GTB und 488 Spider, gefiltert auf vernünftige Kilometerstände.</figcaption>
         </figure>
 
-        <h2>Preis vs Kilometer</h2>
+        <h2>Wie Kilometer den Preis formen</h2>
+        <p>Die Preis Sensitivität gegenüber Kilometern wird sofort klar, wenn man es visualisiert. Es gibt immer Ausreißer, aber der Kern des Schweizer Marktes belohnt niedrigere Kilometerstände und bestraft zu viel Nutzung, selbst wenn das Auto sonst gesund ist.</p>
+
         <figure class="figure" style="margin-top:1rem">
-          <img class="chartImg" src="ferrari_price_vs_km_ch.png" alt="Preis versus Kilometer"/>
-          <figcaption>Angebotspreis versus Kilometer. Der Markt ist klar kilometerbewusst.</figcaption>
+          <img class="chartImg" src="ferrari_price_vs_km_ch.png" alt="Angebotspreis versus Kilometer in der Schweiz"/>
+          <figcaption>Angebotspreis versus Kilometer, gefiltert auf vernünftige Kilometerstände. Der Markt ist konsequent kilometerbewusst.</figcaption>
         </figure>
 
-        <h2>Listing Historie</h2>
+        <div class="divider"></div>
+
+        <h2>458 vs 488: was die Charts nahelegen</h2>
+        <p><strong>Die 458-Familie wirkt ungewöhnlich robust.</strong> Selbst Jahre nach Produktionsende liegen gepflegte Exemplare in einem stabilen Preisband. Die 488-Familie kann ebenfalls stark sein, ist aber stärker von der Marktstimmung abhängig und braucht oft Preisanpassungen, um sich schnell zu verkaufen.</p>
+
+        <div class="grid2" style="margin:1rem 0">
+          <div class="card">
+            <h3 style="margin:0 0 .35rem">458 Italia und 458 Spider</h3>
+            <p style="margin:0">Saugmotor, Ende einer Ära, und hohe emotionale Nachfrage. Für viele Enthusiasten ist das die moderne Klassiker Zone.</p>
+          </div>
+          <div class="card">
+            <h3 style="margin:0 0 .35rem">488 GTB und 488 Spider</h3>
+            <p style="margin:0">Turbo Leistung, unglaubliche Fähigkeiten, und breitere Verfügbarkeit. Der Markt ist tiefer, deshalb reagieren Angebotspreise schneller auf Angebot, Saison und Stimmung.</p>
+          </div>
+        </div>
+
+        <h2>Inserate Historie: ein unperfektes aber nützliches Signal</h2>
+        <p>Schweizer Plattformen zeigen manchmal eine Preisentwicklung für einzelne Inserate. Das bildet nicht den gesamten Markt ab, macht aber sichtbar, in welche Richtung sich Verkäufer im Zeitverlauf bewegen. Damit der Vergleich gut lesbar ist, gleichen wir die Zeitachse auf einen gemeinsamen Datumsbereich ab und führen den zuletzt bekannten Preis zwischen den beobachteten Änderungen fort.</p>
+
         <figure class="figure" style="margin-top:1rem">
-          <img class="chartImg" src="ferrari_listing_price_history_ch.png" alt="Preisverlauf einzelner Listings"/>
-          <figcaption>Beispielhafte Preisverläufe einzelner Listings, auf eine gemeinsame Zeitachse normiert.</figcaption>
+          <img class="chartImg" src="ferrari_listing_price_history_ch.png" alt="Preisverlauf einzelner Inserate in der Schweiz"/>
+          <figcaption>Ausgerichtete Preisverläufe einzelner Inserate. Die Zeitachse ist normalisiert, damit alle Modelle die gleiche Skala teilen, und Lücken werden mit dem zuletzt beobachteten Wert fortgeschrieben.</figcaption>
         </figure>
 
-        <h2>Werksrot</h2>
+        <div class="divider"></div>
+
+        <h2>Werksrot: spielt es eine Rolle</h2>
+        <p>Werksrot wirkt oft wie die ikonische Ferrari-Spezifikation. Das ist keine Regel, aber wenn Käufer zwischen zwei ähnlichen Autos zögern, entscheidet am Ende immer die Farbe. In unserer Schweizer Stichprobe, in der die Farbe auf den Detailseiten sichtbar war, lagen rote Exemplare tendenziell höher als vergleichbare nicht-rote Exemplare.</p>
+
         <figure class="figure" style="margin-top:1rem">
-          <img class="chartImg" src="ferrari_458_color_premium_ch.png" alt="Werksrot Signal 458 Italia"/>
-          <figcaption>Kleines Sample Signal. Werksrot tendiert höher als vergleichbare Nicht Rot Beispiele.</figcaption>
+          <img class="chartImg" src="ferrari_458_color_premium_ch.png" alt="458 Italia Werksrot versus Nicht Rot Signal in der Schweiz"/>
+          <figcaption>Kleines Sample Signal für 458 Italia Angebotspreise. Als Richtung verstehen, nicht als finales Bewertungsmodell.</figcaption>
         </figure>
+
+        <div class="divider"></div>
+
+        <h2>Was als vernünftige Option zählt</h2>
+        <p>Achte auf Kilometer, die zum Alter passen, eine saubere Service Dokumentation, und eine Spezifikation, die Sinn macht. Beim 458 werden enthusiastische Optionen wie das Carbon Lenkrad mit LED Schaltanzeige geschätzt, weil sie sichtbar sind und jedes Mal beim Fahren das Gefühl verändern.</p>
 
         <div class="card callout" style="margin-top:1rem">
           <div class="calloutTitle">Luxury Obsession Hinweis</div>
-          <p class="calloutBody">Unser Werksrot Ferrari 458 Italia in Zurich hat die enthusiastischen Optionen, inklusive Carbon Lenkrad mit LED Schaltanzeige.</p>
+          <p class="calloutBody">Wir fahren einen werksroten Ferrari 458 Italia in Zurich mit den Optionen, die Enthusiasten wirklich bemerken, inklusive Carbon Lenkrad mit LED Schaltanzeige. Das ist die Art von Spezifikation, die sich ab der ersten Kurve richtig anfühlt.</p>
         </div>
+
+        <h2>Fazit</h2>
+        <p>Wenn du in der Schweiz Wertstabilität suchst, stützen die Charts eine einfache These. Die 458 Familie, vor allem saubere Kilometerstände und die richtigen Farben, verhält sich wie ein moderner Klassiker. Die 488 Familie ist ein unglaublicher Performance Kauf, reagiert im Gebrauchtmarkt aber stärker auf Stimmung und Preis.</p>
       `
     },
 
@@ -663,43 +702,82 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
       footerCenter:"Esperienze Ferrari only, Svizzera.",
 
       body: `
-        <p>La Svizzera è un mercato serio per le Ferrari moderne. Auto curate, storico manutenzione ordinato, e acquirenti pronti a pagare per la spec giusta. Per questo i trend di prezzo della famiglia 458 e 488 sono interessanti da leggere.</p>
+        <p>La Svizzera è un mercato serio per le Ferrari moderne. Le auto sono spesso ben tenute, lo storico manutenzione è di solito documentato e gli acquirenti pagano di più per la spec giusta. Per questo è un buon contesto per capire come si comportano, lato prezzo, le famiglie Ferrari 458 e Ferrari 488.</p>
 
         <div class="card callout" style="margin-top:1rem">
           <div class="calloutTitle">Cosa intendiamo per ragionevole</div>
-          <p class="calloutBody">Focus su auto fino a circa 60,000 km, senza storie estreme e senza compromessi strani. Non il prezzo più basso, ma opzioni pulite e sensate.</p>
+          <p class="calloutBody">Questo articolo si concentra su auto che, per il segmento, sembrano fresche, in generale fino a circa 60,000 km, senza storie estreme e senza compromessi strani. Non è una ricerca del listino più basso. È un’analisi delle opzioni pulite e sensate che si vendono davvero.</p>
         </div>
 
         <div class="divider"></div>
 
-        <h2>Trend per anno</h2>
+        <h2>Dati e metodo</h2>
+        <p>Abbiamo usato uno snapshot di annunci svizzeri di gennaio 2026 ed estratto prezzi richiesti, chilometraggio e anno di prima immatricolazione per ciascun modello. Sono prezzi richiesti, non prezzi di transazione confermati. Detto questo, in un mercato piccolo come la Svizzera, i prezzi richiesti sono un buon termometro della forza relativa e delle preferenze degli acquirenti.</p>
+
+        <div class="divider"></div>
+
+        <h2>Grafico trend per anno di immatricolazione</h2>
+        <p>Questo grafico mostra i prezzi mediani richiesti per anno di prima immatricolazione, filtrati su chilometraggi ragionevoli. Aiuta a visualizzare la curva del mercato senza bisogno di dati di vendita privati.</p>
+
         <figure class="figure" style="margin-top:1rem">
-          <img class="chartImg" src="ferrari_price_trend_by_year_ch.png" alt="Prezzo mediano per anno"/>
-          <figcaption>Prezzo mediano per anno di prima immatricolazione, filtrato su chilometraggi ragionevoli.</figcaption>
+          <img class="chartImg" src="ferrari_price_trend_by_year_ch.png" alt="Prezzo mediano richiesto per anno di prima immatricolazione in Svizzera"/>
+          <figcaption>Prezzo mediano richiesto per anno di prima immatricolazione per 458 Italia, 458 Spider, 488 GTB e 488 Spider, filtrato su chilometraggi ragionevoli.</figcaption>
         </figure>
 
-        <h2>Prezzo vs chilometri</h2>
+        <h2>Come il chilometraggio influenza il prezzo</h2>
+        <p>La sensibilità del prezzo ai chilometri diventa evidente quando la metti su un grafico. Ci sono sempre outlier, ma il centro del mercato svizzero premia i chilometraggi più bassi e penalizza un uso eccessivo, anche quando l’auto è altrimenti in buona salute.</p>
+
         <figure class="figure" style="margin-top:1rem">
-          <img class="chartImg" src="ferrari_price_vs_km_ch.png" alt="Prezzo versus chilometri"/>
-          <figcaption>Prezzo richiesto versus chilometri. Il mercato è sensibile al chilometraggio.</figcaption>
+          <img class="chartImg" src="ferrari_price_vs_km_ch.png" alt="Prezzo richiesto versus chilometraggio in Svizzera"/>
+          <figcaption>Prezzo richiesto versus chilometraggio, filtrato su chilometraggi ragionevoli. Il mercato è costantemente sensibile ai chilometri.</figcaption>
         </figure>
 
-        <h2>Storico prezzi annunci</h2>
+        <div class="divider"></div>
+
+        <h2>458 vs 488: cosa suggeriscono i grafici</h2>
+        <p><strong>La famiglia 458 appare insolitamente resiliente.</strong> Anche anni dopo la fine della produzione, gli esemplari in buone condizioni restano in una fascia di prezzo solida. La famiglia 488 può essere ancora forte, ma è più esposta all’umore del mercato e spesso richiede aggiustamenti di prezzo per vendere rapidamente.</p>
+
+        <div class="grid2" style="margin:1rem 0">
+          <div class="card">
+            <h3 style="margin:0 0 .35rem">458 Italia e 458 Spider</h3>
+            <p style="margin:0">Aspirato, fascino da fine di un’epoca e domanda molto emotiva. Per molti appassionati è la zona del moderno classico.</p>
+          </div>
+          <div class="card">
+            <h3 style="margin:0 0 .35rem">488 GTB e 488 Spider</h3>
+            <p style="margin:0">Prestazioni turbo, capacità incredibile e disponibilità più ampia. Il mercato è più profondo, quindi i prezzi richiesti reagiscono più rapidamente a offerta, stagione e sentiment.</p>
+          </div>
+        </div>
+
+        <h2>Storico annunci: un segnale imperfetto ma utile</h2>
+        <p>Le piattaforme svizzere a volte mostrano l’evoluzione del prezzo per annunci specifici. Non rappresenta l’intero mercato, ma rivela comunque la direzione che i venditori scelgono nel tempo. Per rendere il confronto leggibile, allineiamo la timeline su un intervallo di date comune e manteniamo l’ultimo prezzo noto tra una variazione osservata e la successiva.</p>
+
         <figure class="figure" style="margin-top:1rem">
-          <img class="chartImg" src="ferrari_listing_price_history_ch.png" alt="Storico prezzi annunci"/>
-          <figcaption>Esempi di evoluzione prezzo su annunci, normalizzati su una stessa timeline.</figcaption>
+          <img class="chartImg" src="ferrari_listing_price_history_ch.png" alt="Storico prezzi degli annunci in Svizzera"/>
+          <figcaption>Esempi allineati di evoluzione prezzo negli annunci. La timeline è normalizzata per condividere la stessa scala tra i modelli, e i vuoti vengono colmati con l’ultimo valore osservato.</figcaption>
         </figure>
 
-        <h2>Rosso di fabbrica</h2>
+        <div class="divider"></div>
+
+        <h2>Rosso di fabbrica: conta davvero</h2>
+        <p>Il rosso “Factory” richiama spesso l’iconica configurazione Ferrari. Non è una regola, ma quando gli acquirenti esitano tra due auto simili, il colore finisce sempre per fare la differenza. Nel nostro campione svizzero, dove il colore era visibile nelle pagine di dettaglio, gli esemplari rossi tendevano a posizionarsi più in alto rispetto a esemplari comparabili non rossi.</p>
+
         <figure class="figure" style="margin-top:1rem">
-          <img class="chartImg" src="ferrari_458_color_premium_ch.png" alt="Segnale rosso 458 Italia"/>
-          <figcaption>Segnale su campione piccolo. Il rosso tende a posizionarsi più alto.</figcaption>
+          <img class="chartImg" src="ferrari_458_color_premium_ch.png" alt="Segnale rosso 458 Italia versus non rosso in Svizzera"/>
+          <figcaption>Segnale su campione piccolo per i prezzi richiesti della 458 Italia. Da leggere come evidenza direzionale, non come modello di valutazione finale.</figcaption>
         </figure>
+
+        <div class="divider"></div>
+
+        <h2>Cosa rende un’opzione davvero ragionevole</h2>
+        <p>Cerca un chilometraggio coerente con l’età, un fascicolo manutenzione pulito e una spec sensata. Sulla 458, opzioni da appassionati come il volante in carbonio con l’indicatore LED della cambiata tendono a essere apprezzate perché si vedono e cambiano la sensazione di guida a ogni uscita.</p>
 
         <div class="card callout" style="margin-top:1rem">
           <div class="calloutTitle">Nota Luxury Obsession</div>
-          <p class="calloutBody">La nostra Ferrari 458 Italia rosso di fabbrica a Zurich ha opzioni da appassionati, incluso volante in carbonio con indicatore LED cambiata.</p>
+          <p class="calloutBody">A Zurich gestiamo una Ferrari 458 Italia rosso di fabbrica con le opzioni che gli appassionati notano davvero, incluso il volante in carbonio con l’indicatore LED della cambiata. È il tipo di spec che “funziona” dalla prima curva.</p>
         </div>
+
+        <h2>In sintesi</h2>
+        <p>Se in Svizzera ti interessa la stabilità del valore, i grafici supportano una tesi semplice. La famiglia 458, soprattutto con chilometraggi puliti e i colori giusti, si comporta come un moderno classico. La famiglia 488 è un acquisto incredibile per prestazioni, ma nel mercato dell’usato è più reattiva a umore e prezzo.</p>
       `
     }
   };
