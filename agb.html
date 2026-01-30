@@ -32,7 +32,15 @@
     /* Legal pages: show only the selected language block */
     .langBlock{ display:none; }
     .langBlock[data-active="1"]{ display:block; }
-  </style>
+  /* Justify legal text */
+.pageProse p, .pageProse li{
+  text-align: justify !important;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+</style>
 </head>
 <body>
   <header>
