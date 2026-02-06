@@ -1,3 +1,9 @@
+# Force HTTPS
+http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
+
+# Block pages from being indexed
+/pages/*   /404.html   404
+
 # Safety: collapse accidental double language prefixes
 /en/en/*                 /en/:splat                301!
 /de/de/*                 /de/:splat                301!
@@ -40,6 +46,87 @@
 /en/agb.html              /en/agb                   301!
 /de/agb.html              /de/agb                   301!
 /it/agb.html              /it/agb                   301!
+
+/en/pricing.html          /en/pricing               301!
+/de/pricing.html          /de/pricing               301!
+/it/pricing.html          /it/pricing               301!
+
+/en/blog.html             /en/blog                  301!
+/de/blog.html             /de/blog                  301!
+/it/blog.html             /it/blog                  301!
+
+/en/ferrari_458_488_price_trends_switzerland.html             /en/ferrari_458_488_price_trends_switzerland                  301!
+/de/ferrari_458_488_price_trends_switzerland.html             /de/ferrari_458_488_price_trends_switzerland                  301!
+/it/ferrari_458_488_price_trends_switzerland.html             /it/ferrari_458_488_price_trends_switzerland                  301!
+
+/en/ferrari-458-italia-the-signature-experience-in-switzerland.html             /en/ferrari-458-italia-the-signature-experience-in-switzerland                  301!
+/de/ferrari-458-italia-the-signature-experience-in-switzerland.html             /de/ferrari-458-italia-the-signature-experience-in-switzerland                  301!
+/it/ferrari-458-italia-the-signature-experience-in-switzerland.html             /it/ferrari-458-italia-the-signature-experience-in-switzerland                  301!
+
+/en/ferrari458vs488.html             /en/ferrari458vs488                  301!
+/de/ferrari458vs488.html             /de/ferrari458vs488                  301!
+/it/ferrari458vs488.html             /it/ferrari458vs488                  301!
+
+/en/owning_vs_renting_ferrari_switzerland.html             /en/owning_vs_renting_ferrari_switzerland                  301!
+/de/owning_vs_renting_ferrari_switzerland.html             /de/owning_vs_renting_ferrari_switzerland                  301!
+/it/owning_vs_renting_ferrari_switzerland.html             /it/owning_vs_renting_ferrari_switzerland                  301!
+
+/en/swiss-routes-worth-driving-in-a-ferrari.html             /en/swiss-routes-worth-driving-in-a-ferrari                  301!
+/de/swiss-routes-worth-driving-in-a-ferrari.html             /de/swiss-routes-worth-driving-in-a-ferrari                  301!
+/it/swiss-routes-worth-driving-in-a-ferrari.html             /it/swiss-routes-worth-driving-in-a-ferrari                  301!
+
+/en/swiss-routes-worth-driving-in-a-ferrari.html             /en/swiss-routes-worth-driving-in-a-ferrari                  301!
+/de/swiss-routes-worth-driving-in-a-ferrari.html             /de/swiss-routes-worth-driving-in-a-ferrari                  301!
+/it/swiss-routes-worth-driving-in-a-ferrari.html             /it/swiss-routes-worth-driving-in-a-ferrari                  301!
+
+/en/locations.html        /en/locations             301!
+/de/locations.html        /de/locations             301!
+/it/locations.html        /it/locations             301!
+
+/en/ferrari-rental-zurich.html        /en/ferrari-rental-zurich             301!
+/de/ferrari-rental-zurich.html        /de/ferrari-rental-zurich             301!
+/it/ferrari-rental-zurich.html        /it/ferrari-rental-zurich             301!
+
+/en/ferrari-rental-zurich-airport-airport.html        /en/ferrari-rental-zurich-airport             301!
+/de/ferrari-rental-zurich-airport.html        /de/ferrari-rental-zurich-airport             301!
+/it/ferrari-rental-zurich-airport.html        /it/ferrari-rental-zurich-airport             301!
+
+/en/ferrari-rental-lucerne.html        /en/ferrari-rental-lucerne             301!
+/de/ferrari-rental-lucerne.html        /de/ferrari-rental-lucerne             301!
+/it/ferrari-rental-lucerne.html        /it/ferrari-rental-lucerne             301!
+
+/en/ferrari-rental-bern.html        /en/ferrari-rental-bern             301!
+/de/ferrari-rental-bern.html        /de/ferrari-rental-bern             301!
+/it/ferrari-rental-bern.html        /it/ferrari-rental-bern             301!
+
+/en/ferrari-rental-winterthur.html        /en/ferrari-rental-winterthur             301!
+/de/ferrari-rental-winterthur.html        /de/ferrari-rental-winterthur             301!
+/it/ferrari-rental-winterthur.html        /it/ferrari-rental-winterthur             301!
+
+/en/ferrari-rental-zug.html        /en/ferrari-rental-zug             301!
+/de/ferrari-rental-zug.html        /de/ferrari-rental-zug             301!
+/it/ferrari-rental-zug.html        /it/ferrari-rental-zug             301!
+
+/en/ferrari-rental-st-gallen.html        /en/ferrari-rental-st-gallen             301!
+/de/ferrari-rental-st-gallen.html        /de/ferrari-rental-st-gallen             301!
+/it/ferrari-rental-st-gallen.html        /it/ferrari-rental-st-gallen             301!
+
+/en/ferrari-rental-basel.html        /en/ferrari-rental-basel             301!
+/de/ferrari-rental-basel.html        /de/ferrari-rental-basel             301!
+/it/ferrari-rental-basel.html        /it/ferrari-rental-basel             301!
+
+/en/ferrari-rental-chur.html        /en/ferrari-rental-chur             301!
+/de/ferrari-rental-chur.html        /de/ferrari-rental-chur             301!
+/it/ferrari-rental-chur.html        /it/ferrari-rental-chur             301!
+
+/en/ferrari-rental-davos.html        /en/ferrari-rental-davos             301!
+/de/ferrari-rental-davos.html        /de/ferrari-rental-davos             301!
+/it/ferrari-rental-davos.html        /it/ferrari-rental-davos             301!
+
+/en/ferrari-rental-andermatt.html        /en/ferrari-rental-andermatt             301!
+/de/ferrari-rental-andermatt.html        /de/ferrari-rental-andermatt             301!
+/it/ferrari-rental-andermatt.html        /it/ferrari-rental-andermatt             301!
+
 
 # Language home pages
 /en                       /index.html               200
