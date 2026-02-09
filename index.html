@@ -2,6 +2,16 @@
 
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EKE8CWE8SN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EKE8CWE8SN');
+</script>
+
 <meta charset="utf-8"/>
 <title>Luxury Obsession | Ferrari Rental Zurich</title>
 <meta content="Refined Ferrari 458 Italia rental in Zurich, Switzerland. Transparent packages and a private host. Starting from CHF 440. Request a quote via form, WhatsApp, or call." name="description"/>
@@ -21,9 +31,9 @@
 <meta name="twitter:description" content="Refined Ferrari 458 Italia rental in Zurich, Switzerland. Request a quote via form, WhatsApp, or call."/>
 <meta name="twitter:image" content="https://luxuryobsession.ch/media/ogimage.jpg"/>
 
-<link href="https://luxuryobsession.ch/index.html?lang=en" hreflang="en" rel="alternate"/>
-<link href="https://luxuryobsession.ch/index.html?lang=de" hreflang="de" rel="alternate"/>
-<link href="https://luxuryobsession.ch/index.html?lang=it" hreflang="it" rel="alternate"/>
+<link href="https://luxuryobsession.ch/en" hreflang="en" rel="alternate"/>
+<link href="https://luxuryobsession.ch/de" hreflang="de" rel="alternate"/>
+<link href="https://luxuryobsession.ch/it" hreflang="it" rel="alternate"/>
 <link href="https://luxuryobsession.ch/" hreflang="x-default" rel="alternate"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -36,7 +46,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
 <link rel="stylesheet" href="assets/lo.css"/>
 <link rel="manifest" href="/site.webmanifest"/>
-<link rel="canonical" href="https://luxuryobsession.ch/index.html?lang=en"/>
+<link rel="canonical" href="https://luxuryobsession.ch"/>
 <style>
   /* Page-specific refinements for the home page */
 
@@ -127,6 +137,11 @@
   "@type": "AutoRental",
   "name": "Luxury Obsession",
   "url": "https://luxuryobsession.ch/",
+  "image": [
+    "https://luxuryobsession.ch/media/458-960.webp",
+    "https://luxuryobsession.ch/media/458-720.webp",
+    "https://luxuryobsession.ch/media/458-480.webp"
+  ],
   "telephone": "+41768173661",
   "email": "info@luxuryobsession.ch",
   "address": {
@@ -227,9 +242,44 @@
 </p>
 </div>
 <div class="heroMediaCard">
-<video class="heroMiniVideo" autoplay="" loop="" muted="" playsinline="" preload="none" poster="media/image00201.jpg">
-<source data-src="media/video00100.mp4" type="video/mp4"/>
-</video>
+<picture class="heroPhoto">
+  <source
+    type="image/webp"
+    srcset="
+      /media/458-480.webp 480w,
+      /media/458-720.webp 720w,
+      /media/458-960.webp 960w
+    "
+    sizes="(min-width: 1000px) 420px, 0px"
+  >
+  <img
+    src="/media/458-720.webp"
+    width="720"
+    height="900"
+    alt="Ferrari 458 Italia rental in Zurich"
+    decoding="async"
+  >
+</picture>
+
+<!--<picture class="heroPhoto">
+  <source
+    type="image/webp"
+    srcset="
+      /media/458-engine-800.webp 800w,
+      /media/458-engine-1200.webp 1200w,
+      /media/458-engine-1600.webp 1600w
+    "
+    sizes="(min-width: 1000px) 420px, 0px"
+  >
+  <img
+    src="/media/458-engine-1200.webp"
+    width="1200"
+    height="800"
+    alt="Ferrari 458 Italia rental in Zurich"
+    decoding="async"
+  >
+</picture>-->
+
 <div class="heroBadge">
 <div style="display:inline-flex;align-items:center;gap:0.5rem">
 <span class="heroBadgeDot"></span><span id="quoteOpen"></span>

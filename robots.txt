@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+User-agent: Googlebot-Image
+Disallow: /media/image00103.jpg
+Disallow: /media/image00201.jpg
+
 Sitemap: https://luxuryobsession.ch/sitemap.xml

@@ -160,7 +160,26 @@
         </div>
 
         <div class="heroMediaCard heroMediaImage">
-          <img id="heroImage" src="../media/image00100.png" alt="Ferrari 458 Italia" loading="lazy"/>
+
+<picture class="heroPhoto">
+  <source
+    type="image/webp"
+    srcset="
+      /media/458-480.webp 480w,
+      /media/458-720.webp 720w,
+      /media/458-960.webp 960w
+    "
+    sizes="(min-width: 1000px) 420px, 0px"
+  >
+  <img
+    src="/media/458-720.webp"
+    width="720"
+    height="900"
+    alt="Ferrari 458 Italia rental in Zurich"
+    decoding="async"
+  >
+</picture>
+
           <div class="heroBadge">
             <div style="display:inline-flex;align-items:center;gap:0.5rem">
               <span class="heroBadgeDot"></span>
