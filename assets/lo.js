@@ -521,86 +521,199 @@ if(legalLinks.length){
     close();
   }
 
-  function applyPriorityNav(){
-    const header = document.querySelector("header");
-    const navInner = document.querySelector(".navInner");
-    const navLinks = document.querySelector(".navLinks");
-    if(!header || !navInner || !navLinks) return;
+// Responsive nav without layout thrashing (avoids forced reflow warnings).
+let __loNavMeasureHost = null;
 
-    const langSel = document.querySelector(".langSelect");
-    const el = (id) => document.getElementById(id);
+function loGetNavMeasureHost(){
+  try{
+    if(__loNavMeasureHost && __loNavMeasureHost.isConnected) return __loNavMeasureHost;
+    const host = document.createElement("div");
+    host.id = "loNavMeasureHost";
+    host.style.cssText = "position:fixed;left:-10000px;top:0;visibility:hidden;pointer-events:none;contain:layout style size;";
+    document.body.appendChild(host);
+    __loNavMeasureHost = host;
+    return host;
+  } catch(_e){
+    return null;
+  }
+}
 
-    const rates = el("navRates");
-    const contact = el("navContact");
-    const philosophy = el("navPhilosophy");
-    const experiences = el("navExperiences");
-    const journal = el("navBlog") || el("navJournal");
+function loNumPx(v){
+  const n = parseFloat(v);
+  return Number.isFinite(n) ? n : 0;
+}
 
-    const links = Array.from(navLinks.querySelectorAll("a"));
+function loOuterWidth(node){
+  if(!node) return 0;
+  const r = node.getBoundingClientRect();
+  const cs = getComputedStyle(node);
+  return r.width + loNumPx(cs.marginLeft) + loNumPx(cs.marginRight);
+}
 
-    const setHidden = (node, hidden) => {
-      if(!node) return;
-      node.setAttribute("data-lo-hidden", hidden ? "1" : "0");
-    };
+function loMeasureNav({ width, burger, wrap, hideKeys }){
+  const header = document.querySelector("header");
+  const host = loGetNavMeasureHost();
+  if(!header || !host) return null;
 
-    // We deliberately keep navLinks as non-shrinking (see lo.css) so scrollWidth reflects reality.
-    // This avoids the "overlap" bug where the nav shrinks and its children paint over the brand.
-    const fits = () => (navInner.scrollWidth <= navInner.clientWidth + 1);
+  host.innerHTML = "";
 
-    const reset = () => {
-      header.setAttribute("data-brand-wrap", "0");
-      header.setAttribute("data-burger", "0");
-      for(const a of links) setHidden(a, false);
-      if(langSel) setHidden(langSel, false);
-    };
+  // Clone header so data attributes affect layout exactly like the real one.
+  const clone = header.cloneNode(true);
 
-    // 1) Full layout (no hamburger on desktop)
-    reset();
-    if(fits()) return;
+  clone.setAttribute("data-burger", burger ? "1" : "0");
+  clone.setAttribute("data-brand-wrap", wrap ? "1" : "0");
 
-    // 2) Enable hamburger and remove low-priority links first
-    header.setAttribute("data-burger", "1");
+  // Key elements by their id, then remove ids to avoid duplicates in the document.
+  clone.querySelectorAll("[id]").forEach(n => {
+    const id = n.getAttribute("id");
+    if(id) n.setAttribute("data-lo-key", id);
+    n.removeAttribute("id");
+  });
 
-    // Low priority in this exact order:
-    // Our Philosophy, Experiences, Journal
-    // Fallback: any non-CTA link that is not Rates or Contact.
-    const lowPriority = [];
-    if(philosophy) lowPriority.push(philosophy);
-    if(experiences) lowPriority.push(experiences);
-    if(journal) lowPriority.push(journal);
-    if(lowPriority.length === 0){
-      for(const a of links){
-        if(a.classList.contains("navCta")) continue;
-        if(a === rates || a === contact) continue;
-        lowPriority.push(a);
-      }
-    }
+  // Language selector has no id, give it a key.
+  const cloneLang = clone.querySelector(".langSelect");
+  if(cloneLang) cloneLang.setAttribute("data-lo-key", "langSelect");
 
-    for(const node of lowPriority){
-      if(fits()) break;
-      setHidden(node, true);
-    }
-    if(fits()) return;
+  // Apply hidden state in the clone only.
+  const hideSet = new Set(Array.isArray(hideKeys) ? hideKeys : []);
+  const setHiddenClone = (node, hidden) => {
+    if(!node) return;
+    node.setAttribute("data-lo-hidden", hidden ? "1" : "0");
+  };
 
-    // 3) Allow the brand to wrap to two lines (Luxury / Obsession)
-    header.setAttribute("data-brand-wrap", "1");
-    if(fits()) return;
+  ["navRates","navContact","navPhilosophy","navExperiences","navBlog","navJournal"].forEach(k => {
+    setHiddenClone(clone.querySelector('[data-lo-key="' + k + '"]'), hideSet.has(k));
+  });
+  setHiddenClone(cloneLang, hideSet.has("langSelect"));
 
-    // 4) Then hide language selector
-    if(langSel){
-      setHidden(langSel, true);
-      if(fits()) return;
-    }
+  // Constrain width to the live nav width so scrollWidth comparison is meaningful.
+  const inner = clone.querySelector(".navInner");
+  if(inner) inner.style.width = String(Math.max(0, width)) + "px";
 
-    // 5) Then hide Contact
-    setHidden(contact, true);
-    if(fits()) return;
+  host.appendChild(clone);
 
-    // 6) Then hide Rates
-    setHidden(rates, true);
+  const navInner = clone.querySelector(".navInner");
+  const navLinks = clone.querySelector(".navLinks");
+  if(!navInner || !navLinks) return null;
+
+  const csLinks = getComputedStyle(navLinks);
+  const gap = loNumPx(csLinks.columnGap || csLinks.gap || "0");
+
+  const widths = {
+    navRates: loOuterWidth(clone.querySelector('[data-lo-key="navRates"]')),
+    navContact: loOuterWidth(clone.querySelector('[data-lo-key="navContact"]')),
+    navPhilosophy: loOuterWidth(clone.querySelector('[data-lo-key="navPhilosophy"]')),
+    navExperiences: loOuterWidth(clone.querySelector('[data-lo-key="navExperiences"]')),
+    navBlog: loOuterWidth(clone.querySelector('[data-lo-key="navBlog"]')) || loOuterWidth(clone.querySelector('[data-lo-key="navJournal"]')),
+    langSelect: loOuterWidth(cloneLang)
+  };
+
+  const overflow = navInner.scrollWidth - navInner.clientWidth;
+
+  host.innerHTML = "";
+
+  return { overflow, gap, widths };
+}
+
+function applyPriorityNav(){
+  const header = document.querySelector("header");
+  const navInner = document.querySelector(".navInner");
+  const navLinks = document.querySelector(".navLinks");
+  if(!header || !navInner || !navLinks) return;
+
+  const langSel = document.querySelector(".langSelect");
+  const el = (id) => document.getElementById(id);
+
+  const rates = el("navRates");
+  const contact = el("navContact");
+  const philosophy = el("navPhilosophy");
+  const experiences = el("navExperiences");
+  const journal = el("navBlog") || el("navJournal");
+
+  const links = Array.from(navLinks.querySelectorAll("a"));
+
+  const setHidden = (node, hidden) => {
+    if(!node) return;
+    node.setAttribute("data-lo-hidden", hidden ? "1" : "0");
+  };
+
+  const width = Math.ceil(navInner.clientWidth || 0);
+  if(width <= 0) return;
+
+  // 1) Try full layout (no hamburger).
+  const m0 = loMeasureNav({ width, burger:false, wrap:false, hideKeys:[] });
+  if(m0 && m0.overflow <= 1){
+    header.setAttribute("data-brand-wrap", "0");
+    header.setAttribute("data-burger", "0");
+    for(const a of links) setHidden(a, false);
+    if(langSel) setHidden(langSel, false);
+    return;
   }
 
-  function initSharedUI(lang){
+  // 2) Hamburger enabled, hide low priority links as needed.
+  const lowKeys = [];
+  if(philosophy && philosophy.id) lowKeys.push(philosophy.id);
+  if(experiences && experiences.id) lowKeys.push(experiences.id);
+  if(journal && journal.id) lowKeys.push(journal.id);
+
+  const m1 = loMeasureNav({ width, burger:true, wrap:false, hideKeys:[] }) || m0;
+  let overflow = m1 ? m1.overflow : 0;
+  const gap1 = m1 ? m1.gap : 0;
+  const w1 = m1 ? m1.widths : {};
+
+  const hide = [];
+  for(const k of lowKeys){
+    if(overflow <= 1) break;
+    const w = w1[k] || 0;
+    if(w <= 0) continue;
+    hide.push(k);
+    overflow -= (w + gap1);
+  }
+
+  // If it fits with burger and low priority hidden, apply.
+  if(overflow <= 1){
+    header.setAttribute("data-burger", "1");
+    header.setAttribute("data-brand-wrap", "0");
+    for(const a of links) setHidden(a, hide.includes(a.id));
+    if(langSel) setHidden(langSel, false);
+    return;
+  }
+
+  // 3) Allow brand wrap, then hide language selector, Contact, Rates if still needed.
+  const m2 = loMeasureNav({ width, burger:true, wrap:true, hideKeys:hide });
+  let overflow2 = m2 ? m2.overflow : overflow;
+  const gap2 = m2 ? m2.gap : gap1;
+  const w2 = m2 ? m2.widths : w1;
+
+  const moreKeys = ["langSelect"];
+  if(contact && contact.id) moreKeys.push(contact.id);
+  if(rates && rates.id) moreKeys.push(rates.id);
+
+  for(const k of moreKeys){
+    if(overflow2 <= 1) break;
+    const w = w2[k] || 0;
+    if(w <= 0) continue;
+    hide.push(k);
+    overflow2 -= (w + gap2);
+  }
+
+  // Final confirmation, and last resort if still overflowing.
+  const mFinal = loMeasureNav({ width, burger:true, wrap:true, hideKeys:hide });
+  if(mFinal && mFinal.overflow > 1){
+    for(const k of moreKeys){
+      if(!hide.includes(k)) hide.push(k);
+    }
+  }
+
+  header.setAttribute("data-burger", "1");
+  header.setAttribute("data-brand-wrap", "1");
+
+  for(const a of links) setHidden(a, hide.includes(a.id));
+  if(langSel) setHidden(langSel, hide.includes("langSelect"));
+}
+
+function initSharedUI
+(lang){
     const effectiveLang = lang || getLang();
 
 
@@ -616,36 +729,45 @@ if(legalLinks.length){
     buildMobileMenu(effectiveLang);
     initHamburger();
 
-    // Apply mode after fonts and translated text settle
-    const schedule = () => {
-      // Run after layout settles. Two frames catches font swaps and flex recalcs reliably.
-      window.requestAnimationFrame(() => {
-        applyPriorityNav();
-        buildMobileMenu(effectiveLang);
-        window.requestAnimationFrame(() => {
-          applyPriorityNav();
-          buildMobileMenu(effectiveLang);
-        });
-      });
-    };
 
-    // Run now
-    schedule();
+// Apply mode after fonts and translated text settle
+let __loNavScheduled = false;
+const schedule = () => {
+  if(__loNavScheduled) return;
+  __loNavScheduled = true;
+  window.requestAnimationFrame(() => {
+    __loNavScheduled = false;
+    applyPriorityNav();
+    buildMobileMenu(effectiveLang);
+  });
+};
 
-    // Re-run on resize
-    window.addEventListener("resize", schedule, { passive:true });
+// Run now
+schedule();
 
-    // Re-run after fonts load (Cinzel changes width)
-    if(document.fonts && document.fonts.ready){
-      document.fonts.ready.then(schedule).catch(() => {});
-    }
+// Re run on resize (debounced via rAF)
+window.addEventListener("resize", schedule, { passive:true });
 
-    // Re-run when nav text changes (translations)
-    const navLinks = document.querySelector(".navLinks");
-    if(navLinks){
-      const mo = new MutationObserver(schedule);
-      mo.observe(navLinks, { subtree:true, childList:true, characterData:true });
-    }
+// Observe header size changes when available (captures font swaps and layout changes)
+if("ResizeObserver" in window){
+  try{
+    const ro = new ResizeObserver(() => schedule());
+    const h = document.querySelector("header");
+    if(h) ro.observe(h);
+  } catch(_e) {}
+}
+
+// Re run after fonts load (Cinzel changes width)
+if(document.fonts && document.fonts.ready){
+  document.fonts.ready.then(schedule).catch(() => {});
+}
+
+// Re run when nav text changes (translations)
+const navLinks = document.querySelector(".navLinks");
+if(navLinks){
+  const mo = new MutationObserver(() => schedule());
+  mo.observe(navLinks, { subtree:true, childList:true, characterData:true });
+}
   }
 
   // Auto init
