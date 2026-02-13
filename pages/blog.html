@@ -39,7 +39,117 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="../assets/lo.css" />
-  <script defer src="../assets/lo.js"></script>
+  
+  <style>
+    /* Mobile journal cards: dedicated layout to avoid lo.css clipping on small screens */
+    @media (max-width: 760px){
+      .blogGrid{
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.9rem !important;
+      }
+
+      a.blogCardM{
+        display: grid !important;
+        grid-template-columns: minmax(84px, 25%) 1fr;
+        grid-template-areas:
+          "thumb top"
+          "bottom bottom";
+        column-gap: 0.95rem;
+        row-gap: 0.75rem;
+        align-items: stretch;
+        padding: 0.95rem !important;
+        height: auto !important;
+        min-height: 0 !important;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      a.blogCardM .blogThumbWrapM{
+        grid-area: thumb;
+        border-radius: 18px;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        min-height: 96px;
+        background: rgba(255,255,255,0.02);
+      }
+
+      a.blogCardM .blogThumbWrapM img{
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      a.blogCardM .blogTopM{
+        grid-area: top;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      a.blogCardM .blogMetaM{
+        display: flex !important;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.35rem 0.55rem;
+        font-size: 0.78rem;
+        line-height: 1.15;
+        margin: 0;
+        padding: 0;
+        position: static !important;
+        transform: none !important;
+      }
+
+      a.blogCardM .blogMetaM .metaSepM{
+        opacity: 0.55;
+      }
+
+      a.blogCardM .blogTitleM{
+        margin: 0.05rem 0 0 0;
+        line-height: 1.15;
+        white-space: normal;
+        overflow: visible !important;
+        text-overflow: clip;
+      }
+
+      a.blogCardM .blogBottomM{
+        grid-area: bottom;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+      }
+
+      a.blogCardM .blogExcerptM{
+        margin: 0;
+        opacity: 0.86;
+        line-height: 1.35;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+      }
+
+      a.blogCardM .blogReadM{
+        margin-top: 0.05rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+    }
+
+    @media (max-width: 420px){
+      a.blogCardM .blogExcerptM{
+        -webkit-line-clamp: 2;
+      }
+    }
+  </style>
+<script defer src="../assets/lo.js"></script>
 </head>
 
 <body>
@@ -277,36 +387,93 @@ function renderArticles(lang){
   const grid = document.getElementById("blogGrid");
   grid.innerHTML = "";
   const t = I18N[lang] || I18N.en;
+  const isMobile = window.matchMedia && window.matchMedia("(max-width: 760px)").matches;
 
   ARTICLES.forEach(a => {
     const card = document.createElement("a");
-    card.className = "card blogCard";
     card.href = window.__LO__.buildUrl(a.slug, lang, "top");
-    card.setAttribute("aria-label", (a.title && (a.title[lang] || a.title.en)) || "Article");
 
+    const title = (a.title && (a.title[lang] || a.title.en)) || "";
+    const excerpt = (a.excerpt && (a.excerpt[lang] || a.excerpt.en)) || "";
     const cat = (a.category && (a.category[lang] || a.category.en)) || "";
     const read = (a.read && (a.read[lang] || a.read.en)) || "";
     const date = fmtDate(a.date, lang);
 
-    card.innerHTML = `
-      <img class="blogThumb" src="${a.image}" alt="">
-      <div class="blogCardInner">
-        <div>
-          <div class="blogMeta">
+    card.setAttribute("aria-label", title || "Article");
+
+    if(isMobile){
+      card.className = "card blogCardM";
+      card.innerHTML = `
+        <div class="blogThumbWrapM">
+          <img src="${a.image}" alt="${title.replace(/"/g, "&quot;")}" loading="lazy" decoding="async">
+        </div>
+        <div class="blogTopM">
+          <div class="blogMetaM">
             <span class="blogPill">${cat}</span>
-            <span>·</span>
+            <span class="metaSepM">·</span>
             <span>${date}</span>
-            <span>·</span>
+            <span class="metaSepM">·</span>
             <span>${read}</span>
           </div>
-          <h3 class="blogTitle">${(a.title && (a.title[lang] || a.title.en)) || ""}</h3>
-          <p class="blogExcerpt">${(a.excerpt && (a.excerpt[lang] || a.excerpt.en)) || ""}</p>
+          <h3 class="blogTitleM">${title}</h3>
         </div>
-        <div class="blogRead">${t.readLabel} <span>→</span></div>
-      </div>
-    `;
+        <div class="blogBottomM">
+          <p class="blogExcerptM">${excerpt}</p>
+          <div class="blogReadM">${t.readLabel} <span aria-hidden="true">→</span></div>
+        </div>
+      `;
+    }else{
+      card.className = "card blogCard";
+      card.innerHTML = `
+        <img class="blogThumb" src="${a.image}" alt="${title.replace(/"/g, "&quot;")}" loading="lazy" decoding="async">
+        <div class="blogCardInner">
+          <div>
+            <div class="blogMeta">
+              <span class="blogPill">${cat}</span>
+              <span>·</span>
+              <span>${date}</span>
+              <span>·</span>
+              <span>${read}</span>
+            </div>
+            <h3 class="blogTitle">${title}</h3>
+            <p class="blogExcerpt">${excerpt}</p>
+          </div>
+          <div class="blogRead">${t.readLabel} <span>→</span></div>
+        </div>
+      `;
+    }
 
     grid.appendChild(card);
+
+  });
+  if(isMobile) tuneMobileCards();
+}
+
+function tuneMobileCards(){
+  const cards = document.querySelectorAll("a.blogCardM");
+  if(!cards.length) return;
+
+  window.requestAnimationFrame(() => {
+    cards.forEach(card => {
+      const titleEl = card.querySelector(".blogTitleM");
+      const exEl = card.querySelector(".blogExcerptM");
+      if(!titleEl || !exEl) return;
+
+      // default excerpt lines on mobile
+      exEl.style.display = "";
+      exEl.style.setProperty("-webkit-line-clamp", "3");
+
+      const cs = window.getComputedStyle(titleEl);
+      const lh = parseFloat(cs.lineHeight) || 18;
+      const lines = Math.round(titleEl.getBoundingClientRect().height / lh);
+
+      // If title needs more space, let it borrow from the summary
+      if(lines >= 4){
+        exEl.style.display = "none";
+      }else if(lines >= 3){
+        exEl.style.setProperty("-webkit-line-clamp", "2");
+      }
+    });
   });
 }
 
@@ -376,6 +543,13 @@ function init(){
   document.getElementById("footerImpressum").href = window.__LO__.buildUrl("../impressum.html", lang, "top");
 
   renderArticles(lang);
+
+  const mql = window.matchMedia ? window.matchMedia("(max-width: 760px)") : null;
+  if(mql){
+    const rerender = () => renderArticles(lang);
+    if(mql.addEventListener) mql.addEventListener("change", rerender);
+    else if(mql.addListener) mql.addListener(rerender);
+  }
 
   document.getElementById("year").textContent = String(new Date().getFullYear());
 }

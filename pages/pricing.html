@@ -15,7 +15,7 @@
   <meta property="og:image:height" content="630"/>
 
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Luxury Obsession | Rates and Terms<"/>
+  <meta name="twitter:title" content="Luxury Obsession | Rates and Terms"/>
   <meta name="twitter:description" content="Rates, terms, and process for our privately hosted Ferrari 458 Italia in Zurich. Transparent packages, personal confirmation, and discreet handover."/>
   <meta name="twitter:image" content="https://luxuryobsession.ch/media/ogimage.jpg"/>
 
@@ -33,14 +33,15 @@
   <link rel="alternate" hreflang="it" href="https://luxuryobsession.ch/it/pricing"/>
   <link rel="alternate" hreflang="x-default" href="https://luxuryobsession.ch/en/pricing"/>
 
-  <link rel="preload" as="image" href="../media/image00102.jpg">
+  <link rel="preload" as="image" href="../media/image00102.jpg" media="(min-width: 861px)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap"></noscript>
-<link rel="stylesheet" href="../assets/lo.css"/>
+<link rel="preload" href="../assets/lo.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="../assets/lo.css"/></noscript>
 <style>
 :root{
   font-family:"Inter", system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
@@ -901,6 +902,8 @@ table{width:100%;border-collapse:collapse;margin-top:0.9rem;font-size:0.92rem}
     .price{font-weight:900}
     .grid2{display:grid;grid-template-columns:1.1fr 0.9fr;gap:1.2rem;margin-top:1.3rem}
     @media(max-width:980px){.grid2{grid-template-columns:1fr}}
+    @media(max-width:860px){.modelCard{display:none !important;}}
+
     .carRow{display:flex;align-items:center;justify-content:space-between;gap:0.75rem;padding:0.95rem 1rem;border-radius:16px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.02)}
     .carName{font-weight:900}
     .pill{display:inline-block;font-size:0.72rem;padding:0.22rem 0.65rem;border-radius:999px;background:rgba(229,9,20,0.14);border:1px solid rgba(229,9,20,0.30);color:#ffb4b4}
@@ -1264,8 +1267,11 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
             </div>
           </div>
 
-          <div class="card">
-            <img class="model" src="../media/image00102.jpg" alt="Ferrari display" fetchpriority="high" loading="eager" decoding="async" />
+          <div class="card modelCard">
+            <picture>
+              <source media="(min-width: 861px)" srcset="../media/image00102.jpg">
+              <img class="model" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Ferrari display" fetchpriority="high" loading="eager" decoding="async" />
+            </picture>
             <p class="pricingNote" id="modelNote">A stylised preview render. A live configurator will follow.</p>
           </div>
         </div>
@@ -1649,13 +1655,16 @@ const DEFAULT_PACKAGES = [{"id": "P3", "duration": "3h", "label": {"en": "Brief 
       function bindScrollState(wrap){
         if(!wrap) return;
 
+        let raf = 0;
         function update(){
-          const max = wrap.scrollWidth - wrap.clientWidth;
+          raf = 0;
+          // Keep scroll UX without triggering layout reads (scrollWidth/clientWidth)
           const sl = wrap.scrollLeft;
-
-          const atEnd = (max <= 1) || (sl >= max - 1);
-          wrap.classList.toggle("atEnd", atEnd);
           wrap.classList.toggle("scrolledX", sl > 2);
+        }
+        function onScroll(){
+          if(raf) return;
+          raf = window.requestAnimationFrame(update);
         }
 
         if(wrap.dataset && wrap.dataset.stateBound === "1"){
@@ -1664,9 +1673,8 @@ const DEFAULT_PACKAGES = [{"id": "P3", "duration": "3h", "label": {"en": "Brief 
         }
         if(wrap.dataset) wrap.dataset.stateBound = "1";
 
-        wrap.addEventListener("scroll", update, { passive:true });
+        wrap.addEventListener("scroll", onScroll, { passive:true });
         window.setTimeout(update, 0);
-        window.setTimeout(update, 320);
       }
 
       bindScrollState(document.querySelector("#ratesCard .tableWrap"));

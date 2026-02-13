@@ -838,6 +838,32 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 .quotePanel{padding:1.2rem 1.25rem;border-radius:18px;border:1px solid rgba(231,220,194,0.16);background:rgba(16,16,16,0.62)}
 .quotePanel p{margin:0;color:var(--text);font-style:italic}
 .quotePanel .byline{margin-top:0.6rem;color:var(--muted);font-style:normal;font-size:0.92rem}
+
+/* --- Philosophy hero responsive tweaks --- */
+.mediaFull > picture{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.mediaFull > picture > img{width:100%;height:100%;object-fit:cover;border-radius:0;border:none;box-shadow:none;filter:none}
+
+#top .mediaFullPhilo{min-height:68vh;}
+#top .mediaOverlayPhilo{align-items:flex-end;padding-bottom:clamp(3rem, 10vh, 8rem);}
+
+@media (max-width: 720px){
+  /* Hide hero image on mobile and collapse the hero height */
+  #top .heroPhotoPhilo{display:none;}
+  #top .mediaFullPhilo{min-height:auto !important;}
+  #top .mediaOverlayPhilo{
+    position:relative;
+    inset:auto;
+    padding:1.2rem 0 0.9rem;
+    align-items:flex-start;
+    background:none;
+  }
+  /* Stack the quote above the title card (no overlap) */
+  #top .heroQuote{
+    position:relative;
+    top:auto; left:auto; transform:none;
+    margin:1rem auto 0.85rem;
+  }
+}
 </style>
 <script defer="" src="assets/lo.js"></script>
 </head>
@@ -877,10 +903,22 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 </header>
 <main>
 <section class="showcase" id="top">
-<div class="mediaFull" style="min-height:68vh">
-<img alt="Our Philosophy" src="media/image00100.jpg"/>
+<div class="mediaFull mediaFullPhilo">
+<picture class="heroPhoto heroPhotoPhilo">
+  <source media="(min-width: 721px)" type="image/webp" srcset="
+    media/philosophy_desktop_opt_1200.webp 1200w,
+    media/philosophy_desktop_opt_1600.webp 1600w,
+    media/philosophy_desktop_opt_2048.webp 2048w
+  " sizes="100vw">
+  <source media="(min-width: 721px)" type="image/jpeg" srcset="
+    media/philosophy_desktop_opt_1200.jpg 1200w,
+    media/philosophy_desktop_opt_1600.jpg 1600w,
+    media/philosophy_desktop_opt_2048.jpg 2048w
+  " sizes="100vw">
+  <img alt="Our Philosophy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" width="2048" height="1373" decoding="async" fetchpriority="high">
+</picture>
 <blockquote class="heroQuote"><span data-i18n="ph.hero.quote">Make the dream a reality</span></blockquote>
-<div class="mediaOverlay" style="align-items:flex-end; padding-bottom: clamp(3rem, 10vh, 8rem) !important">
+<div class="mediaOverlay mediaOverlayPhilo">
 <div class="container">
 <div class="mediaCaption">
 <div class="mediaCaptionBox">

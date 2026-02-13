@@ -58,7 +58,10 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap"></noscript>
-<link rel="preload" as="image" href="media/poster_960.webp" fetchpriority="high">
+<link rel="preload" as="image" href="/media/poster_480.webp" media="(max-width: 600px)" fetchpriority="high">
+<link rel="preload" as="image" href="/media/poster_720.webp" media="(min-width: 601px) and (max-width: 900px)" fetchpriority="high">
+<link rel="preload" as="image" href="/media/image00103.webp" media="(min-width: 901px) and (min-aspect-ratio: 5/6)" fetchpriority="high">
+<link rel="preload" as="image" href="/media/poster_960.webp" media="(min-width: 901px) and (max-aspect-ratio: 5/6)" fetchpriority="high">
 
 <link href="media/icon.webp" type="image/webp" rel="icon"/>
 <link rel="icon" href="/favicon.ico" sizes="any"/>
@@ -221,9 +224,32 @@
 <main>
 <section class="showcase" id="showcase">
 <div class="mediaFull">
-<video id="showcaseVideo" autoplay muted playsinline preload="none" poster="media/poster_960.webp">
-  <source id="showcaseSource" data-src="./media/video00100.mp4" type="video/mp4">
+<video id="showcaseVideo" autoplay muted playsinline preload="none" poster="">
+  <source id="showcaseSource" data-src="/media/video00100.mp4" type="video/mp4">
 </video>
+<script>
+(function () {
+  const showcaseVideo = document.getElementById("showcaseVideo");
+  if (!showcaseVideo) return;
+
+  const isMobile = window.matchMedia("(max-width: 900px)").matches;
+  const aspect = window.innerWidth / Math.max(1, window.innerHeight);
+  const threshold = 5 / 6;
+
+  let poster;
+  if (!isMobile && aspect > threshold) {
+    poster = "/media/image00103.webp";
+  } else if (isMobile) {
+    poster = window.innerWidth >= 601 ? "/media/poster_720.webp" : "/media/poster_480.webp";
+  } else {
+    poster = "/media/poster_960.webp";
+  }
+
+  showcaseVideo.poster = poster;
+  showcaseVideo.setAttribute("poster", poster);
+})();
+</script>
+
 <div class="mediaOverlay">
 <div class="container">
 <div class="mediaCaption">
@@ -716,7 +742,7 @@ const DEFAULT_PACKAGES =
       const btnNext = document.getElementById("calNext");
       const btnClose = document.getElementById("calClose");
 	  
-	  const blockFrom = new Date(2026, 2, 20); // March is month 2
+	  const blockFrom = new Date(2026, 3, 0); // March is month 2
 	  blockFrom.setHours(0,0,0,0);
 
       let selectedISO = "";
@@ -1284,8 +1310,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let desired = showcaseSource.dataset.src || "";
     let poster = showcaseVideo.getAttribute("poster") || "";
     if (!isMobile && aspect > threshold) {
-      desired = "./media/video00200.mp4";
-      poster = "media/image00103.jpg";
+      desired = "/media/video00200.mp4";
+      poster = "/media/image00103.webp";
     }
     if (poster) showcaseVideo.poster = poster;
 
