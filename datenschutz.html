@@ -15,7 +15,7 @@
   <meta property="og:image:height" content="630"/>
   
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Luxury Obsession | Datenschutz<"/>
+  <meta name="twitter:title" content="Luxury Obsession | Datenschutz"/>
   <meta name="twitter:description" content="Privacy policy for Luxury Obsession in Nänikon, Switzerland."/>
   <meta name="twitter:image" content="https://luxuryobsession.ch/media/ogimage.jpg"/>
 
@@ -42,25 +42,65 @@
   <link rel="stylesheet" href="assets/lo.css" />
   <script src="assets/lo.js" defer></script>
 
-  <style>
+    <style>
     /* Legal pages: show only the selected language block */
     .langBlock{ display:none; }
     .langBlock[data-active="1"]{ display:block; }
-  /* Justify legal text */
-.pageProse p, .pageProse li{
-  text-align: justify !important;
-  text-justify: inter-word;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-}
-</style>
+
+    /* Justify legal text */
+    .pageProse p, .pageProse li{
+      text-align: justify !important;
+      text-justify: inter-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+    }
+
+    /* Layout: clearer separation between sections */
+    .legalStack{
+      max-width: 980px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1.15rem;
+    }
+    .legalCard{
+      padding: 1.4rem 1.5rem;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.02);
+      backdrop-filter: blur(6px);
+    }
+    .legalCardPrimary{
+      padding: 1.65rem 1.5rem;
+    }
+    .legalTitle{
+      margin: 0 0 1rem 0;
+    }
+    .legalSubTitle{
+      margin: 0 0 0.75rem 0;
+    }
+    .legalProvider p{
+      margin: 0 0 0.75rem 0;
+    }
+    .legalProvider p:last-child{
+      margin-bottom: 0;
+    }
+    .legalActions{
+      margin-top: 0.25rem;
+    }
+    @media (max-width: 640px){
+      .legalCard, .legalCardPrimary{
+        padding: 1.15rem 1.1rem;
+        border-radius: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="container">
       <div class="navInner">
-        <a aria-label="Luxury Obsession" class="brand" href="index.html">
+        <a aria-label="Luxury Obsession" class="brand" href="index.html" id="brandHome">
           <img alt="Luxury Obsession icon" class="brandIcon" src="media/icon.webp" />
           <span class="brandGold">Luxury Obsession</span>
         </a>
@@ -119,251 +159,321 @@
 
         <section>
           <div class="container">
-            <div class="langBlock" data-lang="en"><h2 class="sectionTitle">Controller</h2>
-<div class="pageProse pageIntro">
 
-<p><strong>Luxury Obsession, Ferrari Rental Zurich</strong></p>
-<p>Hosted by <strong>Anna Loi</strong></p>
-<p>Waldaustrasse 2<br />8606 Nänikon<br />Switzerland</p>
-<p>
-  Email: <a href="mailto:info@luxuryobsession.ch">info@luxuryobsession.ch</a><br />
-  Phone: <span>+41 76 817 36 61</span>
-</p>
+            <div class="langBlock" data-lang="en">
+              <div class="legalStack">
+                <article class="legalCard legalCardPrimary">
+                  <h2 class="sectionTitle legalTitle">Controller</h2>
+                  <div class="pageProse pageIntro legalProvider">
+                    <p><strong>Luxury Obsession, Ferrari Rental Zurich</strong></p>
+                    <p>Operated by <strong>Anna Loi</strong></p>
+                    <p>Legal form: <span>Sole proprietorship</span></p>
+                    <p>Waldaustrasse 2<br />8606 Nänikon<br />Switzerland</p>
+                    <p>
+                      Email: <a href="mailto:info@luxuryobsession.ch">info@luxuryobsession.ch</a><br />
+                      Phone: <span>+41 76 817 36 61</span>
+                    </p>
+                    <p>If you have questions about data protection, you can contact us at the email address above.</p>
+                  </div>
+                </article>
 
-  <p>If you have questions about data protection, you can contact us at the email address above.</p>
-</div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Scope</h3>
+                  <div class="pageProse">
+                    <p>This Privacy Policy explains how we process personal data when you visit <strong>luxuryobsession.ch</strong>, contact us, or request and book a rental. It applies to our website and to communication via email, phone, and WhatsApp.</p>
+                  </div>
+                </article>
 
-<div class="grid12" style="margin-top:1.8rem">
-  <div class="span-12">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">What we collect</h3>
-    <div class="pageProse">
-      <ul>
-        <li><strong>Contact and request details</strong> that you submit via the website, for example name, email, phone, preferred date and package, pickup preferences, and any message content.</li>
-        <li><strong>Technical data</strong> that your browser sends automatically, for example IP address, device and browser information, time of access, and referring page. This is typically logged by hosting providers and third party services.</li>
-      </ul>
-    </div>
-  </div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Personal data we process</h3>
+                  <div class="pageProse">
+                    <ul>
+                      <li><strong>Website usage and technical data</strong>: IP address, browser and device information, date and time of access, referring page, and logs generated by hosting and security services.</li>
+                      <li><strong>Inquiries and booking requests</strong>: name, email, phone number, preferred dates, package, pickup and delivery preferences, and any message content you send us.</li>
+                      <li><strong>Contract and compliance data</strong>: information needed to conclude and execute the rental contract (for example identity and driving licence details, age verification, address, signatures, payment and deposit records, and correspondence about fines or incidents).</li>
+                      <li><strong>Vehicle handover documentation</strong>: photos and checklists taken at pickup and return (for example condition of the vehicle, mileage, fuel level, time and location).</li>
+                    </ul>
+                  </div>
+                </article>
 
-  <div class="span-12" style="margin-top:1.15rem">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Purpose and legal basis</h3>
-    <div class="pageProse">
-      <p>We process personal data to answer inquiries, to prepare and confirm bookings, to provide customer support, and to protect the security and integrity of the website. Where applicable, processing is based on contract performance, legitimate interests, and legal obligations. If the GDPR applies, consent may be required for certain optional technologies.</p>
-    </div>
-  </div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Purposes and legal basis</h3>
+                  <div class="pageProse">
+                    <p>We process personal data to answer inquiries, prepare and confirm bookings, conclude and perform the rental contract, provide customer support, comply with legal obligations, and protect our rights and assets. Where applicable, processing is based on contract performance, legitimate interests, and legal obligations. If the GDPR applies, consent may be required for certain optional technologies.</p>
+                  </div>
+                </article>
 
-  <div class="span-12" style="margin-top:1.15rem">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Cookies and similar technologies</h3>
-    <div class="pageProse">
-      <p>We aim to keep the website lightweight and do not intentionally use marketing or analytics cookies at this time.</p>
-      <ul>
-        <li><strong>Essential storage</strong>: we may store your language preference in local storage (key: <code>lo_lang</code>) so the site remembers your selected language.</li>
-        <li><strong>Third party content</strong>: embedded content or external services may set cookies or similar identifiers and may receive technical data (for example IP address). See the section below.</li>
-      </ul>
-      <p>You can usually delete cookies in your browser settings and block third party cookies. Blocking cookies may affect certain features.</p>
-    </div>
-  </div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Vehicle security and tracking</h3>
+                  <div class="pageProse">
+                    <p>For theft prevention and asset protection, the rental vehicle may be equipped with security devices such as a GPS tracker and, where applicable, a dash camera. If such devices are in use, we process the related data only for security, incident handling, and enforcement of contractual and legal claims, and we share it only where necessary (for example with insurers, legal counsel, or authorities).</p>
+                  </div>
+                </article>
 
-  <div class="span-12" style="margin-top:1.15rem">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Third party services</h3>
-    <div class="pageProse">
-      <ul>
-        <li><strong>Google Fonts</strong>: fonts are loaded from Google servers, which can result in technical data being transmitted.</li>
-        <li><strong>Google Maps</strong>: the map embed can transmit technical data and may set cookies by Google.</li>
-        <li><strong>WhatsApp link</strong>: if you contact us via WhatsApp, data processing is governed by WhatsApp and Meta.</li>
-      </ul>
-    </div>
-  </div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Cookies and similar technologies</h3>
+                  <div class="pageProse">
+                    <ul>
+                      <li><strong>Essential storage</strong>: we store your language preference in local storage (key: <code>lo_lang</code>) so the site remembers your selected language.</li>
+                      <li><strong>Third party content</strong>: embedded or external services can set cookies or similar identifiers and may receive technical data (for example IP address).</li>
+                    </ul>
+                    <p>We do not intentionally use marketing cookies. If we introduce optional analytics or advertising technologies in the future, we will update this policy accordingly.</p>
+                    <p>You can delete cookies in your browser settings and block third party cookies. Blocking cookies may affect certain features.</p>
+                  </div>
+                </article>
 
-  <div class="span-12" style="margin-top:1.15rem">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Retention</h3>
-    <div class="pageProse">
-      <p>We store inquiry and booking related communication for as long as needed to handle your request and to comply with legal and accounting requirements. Technical logs are usually retained according to the hosting provider settings.</p>
-    </div>
-  </div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Third party services and transfers abroad</h3>
+                  <div class="pageProse">
+                    <p>Depending on how you use the site and which services are loaded, your personal data may be processed by third parties, potentially outside Switzerland:</p>
+                    <ul>
+                      <li><strong>Google Fonts</strong>: fonts are loaded from Google servers.</li>
+                      <li><strong>Google Maps</strong>: map embeds can transmit technical data and may set cookies.</li>
+                      <li><strong>WhatsApp</strong>: if you contact us via WhatsApp, processing is governed by WhatsApp and Meta.</li>
+                      <li><strong>Hosting and security</strong>: our hosting and security providers may process technical logs to operate and protect the website.</li>
+                    </ul>
+                    <p>Where cross border transfers occur, we take measures required by applicable law, such as contractual safeguards and risk assessments.</p>
+                  </div>
+                </article>
 
-  <div class="span-12" style="margin-top:1.15rem">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Your rights</h3>
-    <div class="pageProse">
-      <p>You may have rights to access, correct, delete, or restrict the processing of your personal data, depending on applicable law (Swiss FADP and, where applicable, GDPR). Please contact us to exercise your rights.</p>
-    </div>
-  </div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Retention</h3>
+                  <div class="pageProse">
+                    <p>We store inquiry and booking related communication for as long as needed to handle your request and to comply with legal and accounting requirements. Technical logs are retained according to provider settings and security needs. We delete or anonymize data when it is no longer required.</p>
+                  </div>
+                </article>
 
-  <div class="span-12" style="margin-top:1.15rem">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Security</h3>
-    <div class="pageProse">
-      <p>We apply reasonable technical and organizational measures to protect personal data. However, no method of transmission over the internet is fully secure.</p>
-    </div>
-  </div>
-</div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Your rights</h3>
+                  <div class="pageProse">
+                    <p>Depending on applicable law (Swiss FADP and, where applicable, GDPR), you may have rights to access, correct, delete, or restrict processing of your personal data. To exercise your rights, please contact us using the details above.</p>
+                  </div>
+                </article>
 
-<div style="margin-top:1.8rem">
-  <a class="btn btnSecondary" href="index.html">Back to home</a>
-</div>
-</div>
-            <div class="langBlock" data-lang="de"><h2 class="sectionTitle">Verantwortliche Stelle</h2>
-<div class="pageProse pageIntro">
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Updates</h3>
+                  <div class="pageProse">
+                    <p>We may update this Privacy Policy to reflect changes in our services or legal requirements. The current version is published on this page.</p>
+                  </div>
+                </article>
 
-<p><strong>Luxury Obsession, Ferrari Rental Zurich</strong></p>
-<p>Hosted by <strong>Anna Loi</strong></p>
-<p>Waldaustrasse 2<br />8606 Nänikon<br />Schweiz</p>
-<p>
-  E Mail: <a href="mailto:info@luxuryobsession.ch">info@luxuryobsession.ch</a><br />
-  Telefon: <span>+41 76 817 36 61</span>
-</p>
+                <div class="legalActions">
+                  <a class="btn btnSecondary" href="index.html" data-back-home="1">Back to home</a>
+                </div>
+              </div>
+            </div>
 
-  <p>Bei Fragen zum Datenschutz können Sie uns über die E Mail Adresse oben kontaktieren.</p>
-</div>
 
-<div class="grid12" style="margin-top:1.8rem">
-  <div class="span-12">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Welche Daten wir bearbeiten</h3>
-    <div class="pageProse">
-      <ul>
-        <li><strong>Kontakt und Anfragedaten</strong>, die Sie über die Website übermitteln, z.B. Name, E Mail, Telefon, gewünschtes Datum und Tarif, Abholwunsch sowie Nachrichteninhalt.</li>
-        <li><strong>Technische Daten</strong>, die Ihr Browser automatisch übermittelt, z.B. IP Adresse, Geräte und Browser Informationen, Zeitpunkt des Zugriffs und Referrer. Diese Daten werden typischerweise durch Hosting Anbieter und Drittanbieter protokolliert.</li>
-      </ul>
-    </div>
-  </div>
+            <div class="langBlock" data-lang="de">
+              <div class="legalStack">
+                <article class="legalCard legalCardPrimary">
+                  <h2 class="sectionTitle legalTitle">Verantwortliche Stelle</h2>
+                  <div class="pageProse pageIntro legalProvider">
+                    <p><strong>Luxury Obsession, Ferrari Rental Zurich</strong></p>
+                    <p>Betrieben von <strong>Anna Loi</strong></p>
+                    <p>Rechtsform: <span>Einzelunternehmen</span></p>
+                    <p>Waldaustrasse 2<br />8606 Nänikon<br />Schweiz</p>
+                    <p>
+                      E-Mail: <a href="mailto:info@luxuryobsession.ch">info@luxuryobsession.ch</a><br />
+                      Telefon: <span>+41 76 817 36 61</span>
+                    </p>
+                    <p>Bei Fragen zum Datenschutz können Sie uns über die E-Mail-Adresse oben kontaktieren.</p>
+                  </div>
+                </article>
 
-  <div class="span-12" style="margin-top:1.15rem">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Zweck und Rechtsgrundlagen</h3>
-    <div class="pageProse">
-      <p>Wir bearbeiten personenbezogene Daten zur Beantwortung von Anfragen, zur Vorbereitung und Bestätigung von Buchungen, zur Kundenbetreuung sowie zur Gewährleistung der Sicherheit und Integrität der Website. Soweit anwendbar stützt sich die Bearbeitung auf Vertragsabwicklung, überwiegende Interessen und gesetzliche Pflichten. Falls die DSGVO zur Anwendung kommt, kann für bestimmte optionale Technologien eine Einwilligung erforderlich sein.</p>
-    </div>
-  </div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Geltungsbereich</h3>
+                  <div class="pageProse">
+                    <p>Diese Datenschutzerklärung informiert darüber, wie wir personenbezogene Daten bearbeiten, wenn Sie <strong>luxuryobsession.ch</strong> besuchen, uns kontaktieren oder eine Miete anfragen und buchen. Sie gilt für die Website sowie für die Kommunikation per E-Mail, Telefon und WhatsApp.</p>
+                  </div>
+                </article>
 
-  <div class="span-12" style="margin-top:1.15rem">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Cookies und ähnliche Technologien</h3>
-    <div class="pageProse">
-      <p>Wir halten die Website bewusst schlank und verwenden aktuell keine Marketing oder Analyse Cookies.</p>
-      <ul>
-        <li><strong>Notwendige Speicherung</strong>: wir können Ihre Sprachwahl im Local Storage speichern (Schlüssel: <code>lo_lang</code>), damit die Website Ihre Sprache merkt.</li>
-        <li><strong>Drittinhalte</strong>: eingebettete Inhalte oder externe Dienste können Cookies oder ähnliche Kennungen setzen und technische Daten erhalten (z.B. IP Adresse). Siehe Abschnitt unten.</li>
-      </ul>
-      <p>Sie können Cookies in den Browser Einstellungen löschen und Drittanbieter Cookies blockieren. Das Blockieren kann einzelne Funktionen beeinträchtigen.</p>
-    </div>
-  </div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Welche Daten wir bearbeiten</h3>
+                  <div class="pageProse">
+                    <ul>
+                      <li><strong>Nutzungs und technische Daten</strong>: IP-Adresse, Browser und Geräteinformationen, Datum und Uhrzeit des Zugriffs, Referrer sowie Logs, die durch Hosting und Sicherheitsdienste entstehen.</li>
+                      <li><strong>Anfragen und Buchungen</strong>: Name, E-Mail, Telefonnummer, gewünschte Daten, Paket, Abhol und Zustellwünsche sowie Inhalte Ihrer Nachricht.</li>
+                      <li><strong>Vertrags und Compliance Daten</strong>: Daten, die für Abschluss und Durchführung des Mietvertrags erforderlich sind (z.B. Identitäts und Führerscheindaten, Altersprüfung, Adresse, Unterschriften, Zahlungs und Kautionsnachweise sowie Korrespondenz zu Bussen oder Vorfällen).</li>
+                      <li><strong>Übergabe und Rückgabe Dokumentation</strong>: Fotos und Checklisten bei Übergabe und Rückgabe (z.B. Fahrzeugzustand, Kilometerstand, Tankstand, Zeitpunkt und Ort).</li>
+                    </ul>
+                  </div>
+                </article>
 
-  <div class="span-12" style="margin-top:1.15rem">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Drittanbieter Dienste</h3>
-    <div class="pageProse">
-      <ul>
-        <li><strong>Google Fonts</strong>: Schriftarten werden von Google Servern geladen. Dabei können technische Daten übertragen werden.</li>
-        <li><strong>Google Maps</strong>: die Karten Einbettung kann technische Daten übertragen und Cookies von Google setzen.</li>
-        <li><strong>WhatsApp Link</strong>: wenn Sie uns via WhatsApp kontaktieren, richtet sich die Bearbeitung nach WhatsApp und Meta.</li>
-      </ul>
-    </div>
-  </div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Zwecke und Rechtsgrundlagen</h3>
+                  <div class="pageProse">
+                    <p>Wir bearbeiten personenbezogene Daten zur Beantwortung von Anfragen, zur Vorbereitung und Bestätigung von Buchungen, zur Vertragsabwicklung, zur Kundenbetreuung, zur Einhaltung gesetzlicher Pflichten sowie zum Schutz unserer Rechte und Vermögenswerte. Soweit anwendbar stützt sich die Bearbeitung auf Vertragsabwicklung, überwiegende Interessen und gesetzliche Pflichten. Falls die DSGVO zur Anwendung kommt, kann für bestimmte optionale Technologien eine Einwilligung erforderlich sein.</p>
+                  </div>
+                </article>
 
-  <div class="span-12" style="margin-top:1.15rem">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Aufbewahrung</h3>
-    <div class="pageProse">
-      <p>Wir bewahren Anfragen und buchungsbezogene Kommunikation so lange auf, wie dies zur Bearbeitung und zur Einhaltung gesetzlicher und buchhalterischer Pflichten erforderlich ist. Technische Logs werden in der Regel gemäss den Einstellungen des Hosting Anbieters aufbewahrt.</p>
-    </div>
-  </div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Fahrzeugsicherheit und Tracking</h3>
+                  <div class="pageProse">
+                    <p>Zum Diebstahlschutz und zur Sicherung unseres Eigentums kann das Mietfahrzeug mit Sicherheitskomponenten wie einem GPS-Tracker und gegebenenfalls einer Dashcam ausgerüstet sein. Falls solche Geräte eingesetzt werden, bearbeiten wir die entsprechenden Daten ausschliesslich für Sicherheit, Vorfallbearbeitung sowie die Durchsetzung vertraglicher und gesetzlicher Ansprüche und geben sie nur bei Bedarf weiter (z.B. an Versicherer, Rechtsbeistand oder Behörden).</p>
+                  </div>
+                </article>
 
-  <div class="span-12" style="margin-top:1.15rem">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Ihre Rechte</h3>
-    <div class="pageProse">
-      <p>Je nach anwendbarem Recht (revDSG und, falls anwendbar, DSGVO) können Sie Auskunft, Berichtigung, Löschung oder Einschränkung verlangen. Bitte kontaktieren Sie uns zur Ausübung Ihrer Rechte.</p>
-    </div>
-  </div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Cookies und ähnliche Technologien</h3>
+                  <div class="pageProse">
+                    <ul>
+                      <li><strong>Notwendige Speicherung</strong>: wir speichern Ihre Sprachwahl im Local Storage (Schlüssel: <code>lo_lang</code>), damit die Website Ihre Sprache merkt.</li>
+                      <li><strong>Drittinhalte</strong>: eingebettete oder externe Dienste können Cookies oder ähnliche Kennungen setzen und technische Daten erhalten (z.B. IP-Adresse).</li>
+                    </ul>
+                    <p>Wir verwenden keine Marketing-Cookies in absichtlicher Weise. Falls wir künftig optionale Analyse oder Werbetechnologien einsetzen, werden wir diese Datenschutzerklärung entsprechend aktualisieren.</p>
+                    <p>Sie können Cookies in den Browser-Einstellungen löschen und Drittanbieter-Cookies blockieren. Das Blockieren kann einzelne Funktionen beeinträchtigen.</p>
+                  </div>
+                </article>
 
-  <div class="span-12" style="margin-top:1.15rem">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Sicherheit</h3>
-    <div class="pageProse">
-      <p>Wir treffen angemessene technische und organisatorische Massnahmen zum Schutz personenbezogener Daten. Dennoch ist keine Übertragung im Internet vollständig sicher.</p>
-    </div>
-  </div>
-</div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Drittanbieter und Datenübermittlung ins Ausland</h3>
+                  <div class="pageProse">
+                    <p>Je nach Nutzung der Website und geladenen Diensten können personenbezogene Daten durch Drittanbieter bearbeitet werden, gegebenenfalls ausserhalb der Schweiz:</p>
+                    <ul>
+                      <li><strong>Google Fonts</strong>: Schriftarten werden von Google-Servern geladen.</li>
+                      <li><strong>Google Maps</strong>: Karten Einbettungen können technische Daten übertragen und Cookies setzen.</li>
+                      <li><strong>WhatsApp</strong>: wenn Sie uns via WhatsApp kontaktieren, richtet sich die Bearbeitung nach WhatsApp und Meta.</li>
+                      <li><strong>Hosting und Sicherheit</strong>: Hosting und Sicherheitsanbieter bearbeiten technische Logs zum Betrieb und Schutz der Website.</li>
+                    </ul>
+                    <p>Bei Datenübermittlungen ins Ausland treffen wir die nach anwendbarem Recht erforderlichen Massnahmen, z.B. vertragliche Garantien und Risikoabwägungen.</p>
+                  </div>
+                </article>
 
-<div style="margin-top:1.8rem">
-  <a class="btn btnSecondary" href="index.html">Zur Startseite</a>
-</div>
-</div>
-            <div class="langBlock" data-lang="it"><h2 class="sectionTitle">Titolare del trattamento</h2>
-<div class="pageProse pageIntro">
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Aufbewahrung</h3>
+                  <div class="pageProse">
+                    <p>Wir bewahren anfrage und buchungsbezogene Kommunikation so lange auf, wie dies zur Bearbeitung und zur Einhaltung gesetzlicher und buchhalterischer Pflichten erforderlich ist. Technische Logs werden gemäss den Einstellungen der Anbieter und nach Sicherheitsbedarf aufbewahrt. Daten werden gelöscht oder anonymisiert, sobald sie nicht mehr erforderlich sind.</p>
+                  </div>
+                </article>
 
-<p><strong>Luxury Obsession, Ferrari Rental Zurich</strong></p>
-<p>Hosted by <strong>Anna Loi</strong></p>
-<p>Waldaustrasse 2<br />8606 Nänikon<br />Svizzera</p>
-<p>
-  Email: <a href="mailto:info@luxuryobsession.ch">info@luxuryobsession.ch</a><br />
-  Telefono: <span>+41 76 817 36 61</span>
-</p>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Ihre Rechte</h3>
+                  <div class="pageProse">
+                    <p>Je nach anwendbarem Recht (revDSG und, falls anwendbar, DSGVO) können Sie Auskunft, Berichtigung, Löschung oder Einschränkung verlangen. Bitte kontaktieren Sie uns zur Ausübung Ihrer Rechte über die Kontaktdaten oben.</p>
+                  </div>
+                </article>
 
-  <p>Per domande sulla privacy puoi contattarci tramite l email sopra indicata.</p>
-</div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Änderungen</h3>
+                  <div class="pageProse">
+                    <p>Wir können diese Datenschutzerklärung anpassen, wenn sich unsere Dienstleistungen oder rechtliche Anforderungen ändern. Die aktuelle Version ist auf dieser Seite verfügbar.</p>
+                  </div>
+                </article>
 
-<div class="grid12" style="margin-top:1.8rem">
-  <div class="span-12">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Dati trattati</h3>
-    <div class="pageProse">
-      <ul>
-        <li><strong>Dati di contatto e richiesta</strong> inviati tramite il sito, per esempio nome, email, telefono, data e tariffa preferite, opzioni di ritiro e messaggio.</li>
-        <li><strong>Dati tecnici</strong> trasmessi dal browser, per esempio indirizzo IP, informazioni su dispositivo e browser, ora di accesso e referrer. Di norma sono registrati dal provider di hosting e da servizi terzi.</li>
-      </ul>
-    </div>
-  </div>
+                <div class="legalActions">
+                  <a class="btn btnSecondary" href="index.html" data-back-home="1">Zur Startseite</a>
+                </div>
+              </div>
+            </div>
 
-  <div class="span-12" style="margin-top:1.15rem">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Finalità e basi giuridiche</h3>
-    <div class="pageProse">
-      <p>Trattiamo i dati per rispondere alle richieste, preparare e confermare prenotazioni, offrire supporto e proteggere la sicurezza del sito. Quando applicabile, la base giuridica include esecuzione del contratto, interessi legittimi e obblighi di legge. Se si applica il GDPR, potrebbe essere necessario il consenso per alcune tecnologie opzionali.</p>
-    </div>
-  </div>
 
-  <div class="span-12" style="margin-top:1.15rem">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Cookies e tecnologie simili</h3>
-    <div class="pageProse">
-      <p>Il sito è volutamente leggero e al momento non utilizziamo cookies di marketing o analytics in modo intenzionale.</p>
-      <ul>
-        <li><strong>Memoria essenziale</strong>: possiamo salvare la lingua selezionata in local storage (chiave: <code>lo_lang</code>) per ricordare la preferenza.</li>
-        <li><strong>Contenuti di terze parti</strong>: contenuti incorporati o servizi esterni possono impostare cookies o identificatori simili e ricevere dati tecnici (per esempio IP). Vedi sotto.</li>
-      </ul>
-      <p>Puoi eliminare i cookies tramite le impostazioni del browser e bloccare cookies di terze parti. Il blocco può influire su alcune funzioni.</p>
-    </div>
-  </div>
+            <div class="langBlock" data-lang="it">
+              <div class="legalStack">
+                <article class="legalCard legalCardPrimary">
+                  <h2 class="sectionTitle legalTitle">Titolare del trattamento</h2>
+                  <div class="pageProse pageIntro legalProvider">
+                    <p><strong>Luxury Obsession, Ferrari Rental Zurich</strong></p>
+                    <p>Gestito da <strong>Anna Loi</strong></p>
+                    <p>Forma giuridica: <span>Ditta individuale</span></p>
+                    <p>Waldaustrasse 2<br />8606 Nänikon<br />Svizzera</p>
+                    <p>
+                      Email: <a href="mailto:info@luxuryobsession.ch">info@luxuryobsession.ch</a><br />
+                      Telefono: <span>+41 76 817 36 61</span>
+                    </p>
+                    <p>Per domande sulla privacy puoi contattarci tramite l’email sopra indicata.</p>
+                  </div>
+                </article>
 
-  <div class="span-12" style="margin-top:1.15rem">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Servizi di terze parti</h3>
-    <div class="pageProse">
-      <ul>
-        <li><strong>Google Fonts</strong>: i font sono caricati dai server di Google e possono comportare trasmissione di dati tecnici.</li>
-        <li><strong>Google Maps</strong>: l embed della mappa può trasmettere dati tecnici e impostare cookies di Google.</li>
-        <li><strong>Link WhatsApp</strong>: se ci contatti via WhatsApp, il trattamento è regolato da WhatsApp e Meta.</li>
-      </ul>
-    </div>
-  </div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Ambito di applicazione</h3>
+                  <div class="pageProse">
+                    <p>Questa informativa spiega come trattiamo i dati personali quando visiti <strong>luxuryobsession.ch</strong>, ci contatti oppure richiedi e prenoti un noleggio. Si applica al sito e alle comunicazioni via email, telefono e WhatsApp.</p>
+                  </div>
+                </article>
 
-  <div class="span-12" style="margin-top:1.15rem">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Conservazione</h3>
-    <div class="pageProse">
-      <p>Conserviamo la comunicazione relativa a richieste e prenotazioni per il tempo necessario a gestire la richiesta e a rispettare obblighi legali e contabili. I log tecnici dipendono dalle impostazioni del provider di hosting.</p>
-    </div>
-  </div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Dati personali trattati</h3>
+                  <div class="pageProse">
+                    <ul>
+                      <li><strong>Dati tecnici e di utilizzo</strong>: indirizzo IP, informazioni su browser e dispositivo, data e ora di accesso, referrer e log generati da servizi di hosting e sicurezza.</li>
+                      <li><strong>Richieste e prenotazioni</strong>: nome, email, numero di telefono, date desiderate, pacchetto, preferenze di ritiro e consegna e contenuto del messaggio.</li>
+                      <li><strong>Dati contrattuali e di compliance</strong>: dati necessari per concludere ed eseguire il contratto di noleggio (ad esempio dati identificativi e della patente, verifica dell’età, indirizzo, firme, evidenze di pagamento e deposito cauzionale, nonché comunicazioni su multe o incidenti).</li>
+                      <li><strong>Documentazione di consegna e rientro</strong>: foto e checklist al ritiro e alla restituzione (ad esempio condizioni del veicolo, chilometraggio, livello carburante, luogo e orario).</li>
+                    </ul>
+                  </div>
+                </article>
 
-  <div class="span-12" style="margin-top:1.15rem">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Diritti</h3>
-    <div class="pageProse">
-      <p>A seconda della legge applicabile (revDSG svizzera e, se applicabile, GDPR), puoi avere diritto di accesso, rettifica, cancellazione o limitazione. Contattaci per esercitare i tuoi diritti.</p>
-    </div>
-  </div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Finalità e basi giuridiche</h3>
+                  <div class="pageProse">
+                    <p>Trattiamo i dati per rispondere alle richieste, preparare e confermare prenotazioni, concludere ed eseguire il contratto di noleggio, offrire supporto, rispettare obblighi di legge e proteggere i nostri diritti e beni. Quando applicabile, la base giuridica include esecuzione del contratto, interessi legittimi e obblighi di legge. Se si applica il GDPR, potrebbe essere necessario il consenso per alcune tecnologie opzionali.</p>
+                  </div>
+                </article>
 
-  <div class="span-12" style="margin-top:1.15rem">
-    <h3 class="cardTitle" style="margin:0 0 0.65rem 0">Sicurezza</h3>
-    <div class="pageProse">
-      <p>Adottiamo misure tecniche e organizzative ragionevoli per proteggere i dati personali. Tuttavia, nessuna trasmissione su internet è completamente sicura.</p>
-    </div>
-  </div>
-</div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Sicurezza del veicolo e tracciamento</h3>
+                  <div class="pageProse">
+                    <p>Per prevenzione furti e tutela del veicolo, l’auto a noleggio può essere dotata di dispositivi di sicurezza come un tracker GPS e, ove applicabile, una dashcam. Se tali dispositivi sono in uso, trattiamo i relativi dati solo per sicurezza, gestione di incidenti e tutela di pretese contrattuali e legali, condividendoli solo quando necessario (ad esempio con assicurazioni, consulenti legali o autorità).</p>
+                  </div>
+                </article>
 
-<div style="margin-top:1.8rem">
-  <a class="btn btnSecondary" href="index.html">Torna alla home</a>
-</div>
-</div>
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Cookies e tecnologie simili</h3>
+                  <div class="pageProse">
+                    <ul>
+                      <li><strong>Memoria essenziale</strong>: salviamo la lingua selezionata in local storage (chiave: <code>lo_lang</code>) per ricordare la preferenza.</li>
+                      <li><strong>Contenuti di terze parti</strong>: servizi esterni o contenuti incorporati possono impostare cookies o identificatori simili e ricevere dati tecnici (ad esempio IP).</li>
+                    </ul>
+                    <p>Non utilizziamo cookies di marketing in modo intenzionale. Se in futuro introducessimo tecnologie opzionali di analisi o pubblicità, aggiorneremo questa informativa.</p>
+                    <p>Puoi eliminare i cookies dalle impostazioni del browser e bloccare quelli di terze parti. Il blocco può influire su alcune funzioni.</p>
+                  </div>
+                </article>
+
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Servizi di terze parti e trasferimenti all’estero</h3>
+                  <div class="pageProse">
+                    <p>A seconda dell’uso del sito e dei servizi caricati, i dati personali possono essere trattati da terze parti, anche fuori dalla Svizzera:</p>
+                    <ul>
+                      <li><strong>Google Fonts</strong>: i font sono caricati dai server di Google.</li>
+                      <li><strong>Google Maps</strong>: l’embed della mappa può trasmettere dati tecnici e impostare cookies.</li>
+                      <li><strong>WhatsApp</strong>: se ci contatti via WhatsApp, il trattamento è regolato da WhatsApp e Meta.</li>
+                      <li><strong>Hosting e sicurezza</strong>: i fornitori di hosting e sicurezza possono trattare log tecnici per gestire e proteggere il sito.</li>
+                    </ul>
+                    <p>In caso di trasferimenti transfrontalieri, adottiamo le misure richieste dalla normativa applicabile, ad esempio garanzie contrattuali e valutazioni dei rischi.</p>
+                  </div>
+                </article>
+
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Conservazione</h3>
+                  <div class="pageProse">
+                    <p>Conserviamo la comunicazione relativa a richieste e prenotazioni per il tempo necessario a gestire la richiesta e a rispettare obblighi legali e contabili. I log tecnici dipendono dalle impostazioni dei fornitori e dalle esigenze di sicurezza. Cancelliamo o anonimizziamo i dati quando non sono più necessari.</p>
+                  </div>
+                </article>
+
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Diritti</h3>
+                  <div class="pageProse">
+                    <p>A seconda della legge applicabile (LPD svizzera e, se applicabile, GDPR), puoi avere diritto di accesso, rettifica, cancellazione o limitazione. Contattaci per esercitare i tuoi diritti usando i contatti sopra.</p>
+                  </div>
+                </article>
+
+                <article class="legalCard">
+                  <h3 class="cardTitle legalSubTitle">Aggiornamenti</h3>
+                  <div class="pageProse">
+                    <p>Possiamo aggiornare questa informativa per riflettere cambiamenti nei nostri servizi o nella normativa. La versione attuale è pubblicata su questa pagina.</p>
+                  </div>
+                </article>
+
+                <div class="legalActions">
+                  <a class="btn btnSecondary" href="index.html" data-back-home="1">Torna alla home</a>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
+
       </main>
 <footer>
   <div class="container footerInner">
@@ -395,6 +505,18 @@
       setHref("navBlog", "pages/blog.html", "top");
       setHref("navContact", "index.html", "contact");
       setHref("navRequest", "index.html", "request");
+
+      // Brand and footer links (keep language in the URL)
+      setHref("brandHome", "index.html", "top");
+      setHref("footerImpressum", "impressum.html", "top");
+      setHref("footerPrivacy", "datenschutz.html", "top");
+      setHref("footerTerms", "agb.html", "top");
+
+      // Buttons inside legal content
+      document.querySelectorAll('a[data-back-home="1"]').forEach(a => {
+        a.href = window.__LO__.buildUrl("index.html", lang, "top");
+      });
+
 
       // Activate language block
       const blocks = document.querySelectorAll(".langBlock[data-lang]");

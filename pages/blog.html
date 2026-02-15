@@ -148,6 +148,124 @@
         -webkit-line-clamp: 2;
       }
     }
+
+    /* Journal controls: search and category filter */
+    .srOnly{
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+
+    .blogControls{
+      margin-top: 1.15rem;
+      margin-bottom: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    .blogControlsLeft{
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex: 1 1 560px;
+      min-width: 240px;
+    }
+
+    .blogSearch{
+      flex: 1 1 360px;
+      min-width: 220px;
+    }
+
+    .blogSearch input{
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: inherit;
+      outline: none;
+    }
+
+    .blogSearch input::placeholder{
+      opacity: 0.65;
+    }
+
+    .blogFilterWrap{
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .blogFilterWrap::after{
+      content: "▾";
+      position: absolute;
+      right: 0.95rem;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .blogFilter select{
+      padding: 0.85rem 2.35rem 0.85rem 1rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      background-color: rgba(16,16,18,0.85);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.92);
+      color-scheme: dark;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+
+    .blogFilter select:focus{
+      border-color: rgba(255,255,255,0.28);
+      box-shadow: 0 0 0 3px rgba(255,255,255,0.08);
+    }
+
+    .blogFilter select option{
+      background-color: #0d0d10;
+      color: #ffffff;
+    }
+
+    .blogResults{
+      font-size: 0.92rem;
+      opacity: 0.78;
+      flex: 0 0 auto;
+    }
+
+    @media (max-width: 760px){
+      .blogControls{
+        margin-top: 1.05rem;
+        margin-bottom: 0.85rem;
+      }
+      .blogControlsLeft{
+        flex: 1 1 100%;
+        min-width: 0;
+      }
+      .blogSearch{
+        flex: 1 1 100%;
+        min-width: 0;
+      }
+      .blogFilterWrap{
+        flex: 1 1 100%;
+        min-width: 0;
+      }
+      .blogFilter select{
+        width: 100%;
+      }
+    }
+
   </style>
 <script defer src="../assets/lo.js"></script>
 </head>
@@ -211,6 +329,22 @@
         </h1>
         <p class="heroSubtitle" id="heroSubtitle"></p>
 
+        <div class="blogControls" aria-label="Journal filters">
+          <div class="blogControlsLeft">
+            <div class="blogSearch">
+              <label class="srOnly" id="blogSearchLabel" for="blogSearch"></label>
+              <input id="blogSearch" type="search" autocomplete="off" spellcheck="false" />
+            </div>
+
+            <div class="blogFilter blogFilterWrap">
+              <label class="srOnly" id="blogFilterLabel" for="blogCategory"></label>
+              <select id="blogCategory"></select>
+            </div>
+          </div>
+
+          <div class="blogResults" id="blogResults" aria-live="polite"></div>
+        </div>
+
         <div class="blogGrid" id="blogGrid"></div>
 
         <div class="blogCTA">
@@ -242,7 +376,13 @@ const I18N = {
     note:"New entries are added regularly. If you have a route in mind, we will refine it with timing, stops, and the right amount of kilometres.",
     readLabel:"Read",
     footerCenter:"Currently available: Ferrari 458 Italia.",
-    impressum:"Impressum"
+    impressum:"Impressum",
+    searchLabel:"Search",
+    searchPlaceholder:"Search articles",
+    filterLabel:"Category",
+    filterAll:"All categories",
+    resultsLabel:"Showing {x} of {y}",
+    empty:"No entries match your search."
   },
   de:{
     navRates:"Tarife", navPhilosophy:"Unsere Philosophie", navExperiences:"Anlässe", navBlog:"Journal", navContact:"Kontakt", navRequest:"Anfrage",
@@ -253,7 +393,13 @@ const I18N = {
     note:"Neue Einträge regelmässig. Wenn Sie eine Route im Kopf haben, verfeinern wir sie mit Timing, Stopps und der passenden Kilometerzahl.",
     readLabel:"Lesen",
     footerCenter:"Aktuell verfügbar: Ferrari 458 Italia.",
-    impressum:"Impressum"
+    impressum:"Impressum",
+    searchLabel:"Suche",
+    searchPlaceholder:"Artikel suchen",
+    filterLabel:"Kategorie",
+    filterAll:"Alle Kategorien",
+    resultsLabel:"{x} von {y} angezeigt",
+    empty:"Keine Einträge passen zur Suche."
   },
   it:{
     navRates:"Tariffe", navPhilosophy:"La nostra filosofia", navExperiences:"Esperienze", navBlog:"Journal", navContact:"Contatti", navRequest:"Richiesta",
@@ -264,11 +410,52 @@ const I18N = {
     note:"Nuovi articoli regolarmente. Se hai un itinerario in mente, lo ottimizziamo con tempi, soste e i chilometri giusti.",
     readLabel:"Leggi",
     footerCenter:"Disponibile ora: Ferrari 458 Italia.",
-    impressum:"Impressum"
+    impressum:"Impressum",
+    searchLabel:"Cerca",
+    searchPlaceholder:"Cerca articoli",
+    filterLabel:"Categoria",
+    filterAll:"Tutte le categorie",
+    resultsLabel:"Mostrati {x} di {y}",
+    empty:"Nessun articolo corrisponde alla ricerca."
   }
 };
 
 const ARTICLES = [
+  {
+    slug: "switzerland_supercar_rental_vs_italy_germany_france.html",
+    category: {en:"Guide", de:"Guide", it:"Guida"},
+    date: "2026-02-13",
+    read: {en:"8 min", de:"8 min", it:"8 min"},
+    title: {
+      en:"Why renting a supercar can feel easier and better value in Switzerland",
+      de:"Warum Supercar Miete in der Schweiz oft einfacher und preislich attraktiver wirkt",
+      it:"Perché noleggiare una supercar in Svizzera può essere più semplice e conveniente"
+    },
+    excerpt: {
+      en:"A tourist’s perspective on roads, rules, logistics, and the cost structure that can make Switzerland a surprisingly efficient place for a premium driving day.",
+      de:"Aus Touristensicht. Strassen, Regeln, Logistik und Kostenstruktur, die die Schweiz zu einem erstaunlich effizienten Ort für einen Premium Fahrtag machen.",
+      it:"Dal punto di vista del turista. Strade, regole, logistica e struttura dei costi che rendono la Svizzera un posto sorprendentemente efficiente per una giornata premium."
+    },
+    image: "../media/458-engine-800.webp"
+  },
+  {
+    slug: "scenic_switzerland_drives_from_zurich.html",
+    category: {en:"Routes", de:"Routen", it:"Itinerari"},
+    date: "2026-02-06",
+    read: {en:"7 min", de:"7 min", it:"7 min"},
+    title: {
+      en:"Scenic Switzerland drives from Zurich. Lakes, passes, and perfect half day loops",
+      de:"Panorama Fahrten ab Zürich. Seen, Pässe und perfekte Halbtages Runden",
+      it:"Giri panoramici da Zurigo. Laghi, passi e anelli perfetti in mezza giornata"
+    },
+    excerpt: {
+      en:"A shortlist of routes that work well for visitors flying into Zurich, with realistic timings, photo stops, and scenery that never feels rushed.",
+      de:"Eine Auswahl an Routen für Gäste, die nach Zürich fliegen, mit realistischen Zeiten, Fotostopps und Panorama ohne Stress.",
+      it:"Una selezione di itinerari per chi arriva in aereo a Zurigo, con tempi realistici, soste fotografiche e paesaggi senza fretta."
+    },
+    image: "../media/image01900.jpg"
+  },
+
   {
     slug: "ferrari458vs488.html",
     category: {en:"Comparison", de:"Vergleich", it:"Confronto"},
@@ -373,6 +560,87 @@ const ARTICLES = [
   }
 ];
 
+
+const STATE = { q:"", cat:"" };
+
+function getCatLabel(a, lang){
+  return (a.category && (a.category[lang] || a.category.en)) || "";
+}
+
+function matchesArticle(a, lang, q, cat){
+  const c = getCatLabel(a, lang);
+  if(cat && c !== cat) return false;
+  if(!q) return true;
+
+  const title = (a.title && (a.title[lang] || a.title.en)) || "";
+  const excerpt = (a.excerpt && (a.excerpt[lang] || a.excerpt.en)) || "";
+  const hay = (title + " " + excerpt + " " + c).toLowerCase();
+
+  return hay.indexOf(q) !== -1;
+}
+
+function setResults(shown, total, lang){
+  const t = I18N[lang] || I18N.en;
+  const el = document.getElementById("blogResults");
+  if(!el) return;
+  const tpl = t.resultsLabel || "";
+  el.textContent = tpl.replace("{x}", String(shown)).replace("{y}", String(total));
+}
+
+function initControls(lang){
+  const t = I18N[lang] || I18N.en;
+
+  const search = document.getElementById("blogSearch");
+  if(search){
+    search.placeholder = t.searchPlaceholder || "";
+    search.setAttribute("aria-label", t.searchLabel || "");
+    search.value = STATE.q || "";
+    search.addEventListener("input", () => {
+      STATE.q = search.value || "";
+      renderArticles(lang);
+    });
+  }
+
+  const catSel = document.getElementById("blogCategory");
+  if(catSel){
+    const cats = [];
+    const seen = new Set();
+    ARTICLES.forEach(a => {
+      const c = getCatLabel(a, lang);
+      if(c && !seen.has(c)){
+        seen.add(c);
+        cats.push(c);
+      }
+    });
+
+    catSel.innerHTML = "";
+    const optAll = document.createElement("option");
+    optAll.value = "";
+    optAll.textContent = t.filterAll || "";
+    catSel.appendChild(optAll);
+
+    cats.forEach(c => {
+      const opt = document.createElement("option");
+      opt.value = c;
+      opt.textContent = c;
+      catSel.appendChild(opt);
+    });
+
+    catSel.value = STATE.cat || "";
+    catSel.setAttribute("aria-label", t.filterLabel || "");
+    catSel.addEventListener("change", () => {
+      STATE.cat = catSel.value || "";
+      renderArticles(lang);
+    });
+  }
+
+  const lblSearch = document.getElementById("blogSearchLabel");
+  if(lblSearch) lblSearch.textContent = t.searchLabel || "";
+
+  const lblFilter = document.getElementById("blogFilterLabel");
+  if(lblFilter) lblFilter.textContent = t.filterLabel || "";
+}
+
 function fmtDate(iso, lang){
   try{
     const d = new Date(iso + "T00:00:00");
@@ -389,7 +657,17 @@ function renderArticles(lang){
   const t = I18N[lang] || I18N.en;
   const isMobile = window.matchMedia && window.matchMedia("(max-width: 760px)").matches;
 
-  ARTICLES.forEach(a => {
+  const q = (STATE.q || "").trim().toLowerCase();
+  const catFilter = STATE.cat || "";
+  const filtered = ARTICLES.filter(a => matchesArticle(a, lang, q, catFilter));
+  setResults(filtered.length, ARTICLES.length, lang);
+
+  if(!filtered.length){
+    grid.innerHTML = `<div class="card" style="padding:1.2rem;opacity:0.86">${t.empty || ""}</div>`;
+    return;
+  }
+
+  filtered.forEach(a => {
     const card = document.createElement("a");
     card.href = window.__LO__.buildUrl(a.slug, lang, "top");
 
@@ -541,6 +819,8 @@ function init(){
   document.getElementById("footerCenter").textContent = t.footerCenter;
   document.getElementById("footerImpressum").textContent = t.impressum;
   document.getElementById("footerImpressum").href = window.__LO__.buildUrl("../impressum.html", lang, "top");
+
+  initControls(lang);
 
   renderArticles(lang);
 
