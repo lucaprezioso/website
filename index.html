@@ -25,10 +25,7 @@
     }
 
     window.loadAnalytics = loadGtag;
-
-    if (localStorage.getItem("analyticsConsent") === "yes") {
-      loadGtag();
-    }
+    loadGtag();
   })();
 </script>
 <meta charset="utf-8"/>
