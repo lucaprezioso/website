@@ -138,12 +138,12 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 
 # Root pages stored in repo root
 /en/experiences           /experiences.html         200
-/de/experiences           /de/experiences.html         200
-/it/experiences           /it/experiences.html         200
+/de/experiences           /experiences.html         200
+/it/experiences           /experiences.html         200
 
 /en/philosophy            /philosophy.html          200
-/de/philosophy            /de/philosophy.html          200
-/it/philosophy            /it/philosophy.html          200
+/de/philosophy            /philosophy.html          200
+/it/philosophy            /philosophy.html          200
 
 /en/impressum             /impressum.html           200
 /de/impressum             /impressum.html           200
@@ -159,5 +159,11 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 
 # Everything else comes from pages/<slug>.html
 /en/*                     /pages/:splat.html        200
+# Pages with real DE content (batch 5)
+/de/instagrammable_places_zurich_uster_part1 /pages/de/instagrammable_places_zurich_uster_part1.html 200
+
 /de/*                     /pages/:splat.html        200
+# Pages with real IT content (batch 5)
+/it/instagrammable_places_zurich_uster_part1 /pages/it/instagrammable_places_zurich_uster_part1.html 200
+
 /it/*                     /pages/:splat.html        200
