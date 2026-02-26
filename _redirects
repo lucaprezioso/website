@@ -158,6 +158,11 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /it/agb                   /agb.html                 200
 
 # Everything else comes from pages/<slug>.html
+# Static language pages for swiss-routes-worth-driving-in-a-ferrari
+/en/swiss-routes-worth-driving-in-a-ferrari    /pages/en/swiss-routes-worth-driving-in-a-ferrari.html   200
+/de/swiss-routes-worth-driving-in-a-ferrari    /pages/de/swiss-routes-worth-driving-in-a-ferrari.html   200
+/it/swiss-routes-worth-driving-in-a-ferrari    /pages/it/swiss-routes-worth-driving-in-a-ferrari.html   200
+
 /en/*                     /pages/:splat.html        200
 # Pages with real DE content (batch 5)
 /de/instagrammable_places_zurich_uster_part1 /pages/de/instagrammable_places_zurich_uster_part1.html 200
