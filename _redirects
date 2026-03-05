@@ -159,7 +159,7 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 
 # Everything else comes from pages/<slug>.html
 # Dedicated language pages for Ferrari rental Zurich
-/en/ferrari-rental-zurich        /pages/en/ferrari-rental-zurich.html        200
+/en/ferrari-rental-zurich        /pages/ferrari-rental-zurich.html        200
 /de/ferrari-rental-zurich        /pages/de/ferrari-rental-zurich.html        200
 /it/ferrari-rental-zurich        /pages/it/ferrari-rental-zurich.html        200
 
