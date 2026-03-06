@@ -52,8 +52,11 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /it/pricing.html          /it/pricing               301!
 
 /en/blog.html             /en/blog                  301!
+/en/blog             /en/journal                  301!
 /de/blog.html             /de/blog                  301!
+/de/blog             /de/journal                  301!
 /it/blog.html             /it/blog                  301!
+/it/blog             /it/journal                  301!
 
 /en/ferrari_458_488_price_trends_switzerland.html             /en/ferrari_458_488_price_trends_switzerland                  301!
 /de/ferrari_458_488_price_trends_switzerland.html             /de/ferrari_458_488_price_trends_switzerland                  301!
@@ -158,18 +161,78 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /it/agb                   /agb.html                 200
 
 # Everything else comes from pages/<slug>.html
-# Dedicated language pages for Ferrari rental Zurich
-/en/ferrari-rental-zurich        /pages/ferrari-rental-zurich.html        200
-/de/ferrari-rental-zurich        /pages/de/ferrari-rental-zurich.html        200
-/it/ferrari-rental-zurich        /pages/it/ferrari-rental-zurich.html        200
-
-/en/*                     /pages/:splat.html        200
-# Pages with real DE content (batch 5)
+# Dedicated language pages for next batch (articles and locations)
+/en/owning_vs_renting_ferrari_switzerland        /pages/owning_vs_renting_ferrari_switzerland.html        200
+/de/owning_vs_renting_ferrari_switzerland        /pages/de/owning_vs_renting_ferrari_switzerland.html        200
+/it/owning_vs_renting_ferrari_switzerland        /pages/it/owning_vs_renting_ferrari_switzerland.html        200
+/en/scenic_switzerland_drives_from_zurich        /pages/scenic_switzerland_drives_from_zurich.html        200
+/de/scenic_switzerland_drives_from_zurich        /pages/de/scenic_switzerland_drives_from_zurich.html        200
+/it/scenic_switzerland_drives_from_zurich        /pages/it/scenic_switzerland_drives_from_zurich.html        200
+/en/ferrari_458_488_price_trends_switzerland        /pages/ferrari_458_488_price_trends_switzerland.html        200
+/de/ferrari_458_488_price_trends_switzerland        /pages/de/ferrari_458_488_price_trends_switzerland.html        200
+/it/ferrari_458_488_price_trends_switzerland        /pages/it/ferrari_458_488_price_trends_switzerland.html        200
+/en/ferrari_458_wedding_car_rental_zurich        /pages/ferrari_458_wedding_car_rental_zurich.html        200
+/de/ferrari_458_wedding_car_rental_zurich        /pages/de/ferrari_458_wedding_car_rental_zurich.html        200
+/it/ferrari_458_wedding_car_rental_zurich        /pages/it/ferrari_458_wedding_car_rental_zurich.html        200
+/en/ferrari-458-italia-the-signature-experience-in-switzerland        /pages/ferrari-458-italia-the-signature-experience-in-switzerland.html        200
+/de/ferrari-458-italia-the-signature-experience-in-switzerland        /pages/de/ferrari-458-italia-the-signature-experience-in-switzerland.html        200
+/it/ferrari-458-italia-the-signature-experience-in-switzerland        /pages/it/ferrari-458-italia-the-signature-experience-in-switzerland.html        200
+/en/ferrari458vs488        /pages/ferrari458vs488.html        200
+/de/ferrari458vs488        /pages/de/ferrari458vs488.html        200
+/it/ferrari458vs488        /pages/it/ferrari458vs488.html        200
+/en/swiss-routes-worth-driving-in-a-ferrari        /pages/swiss-routes-worth-driving-in-a-ferrari.html        200
+/de/swiss-routes-worth-driving-in-a-ferrari        /pages/de/swiss-routes-worth-driving-in-a-ferrari.html        200
+/it/swiss-routes-worth-driving-in-a-ferrari        /pages/it/swiss-routes-worth-driving-in-a-ferrari.html        200
+/en/switzerland_supercar_rental_vs_italy_germany_france        /pages/switzerland_supercar_rental_vs_italy_germany_france.html        200
+/de/switzerland_supercar_rental_vs_italy_germany_france        /pages/de/switzerland_supercar_rental_vs_italy_germany_france.html        200
+/it/switzerland_supercar_rental_vs_italy_germany_france        /pages/it/switzerland_supercar_rental_vs_italy_germany_france.html        200
+/en/transparent-rates-how-we-design-packages-that-make-sense        /pages/transparent-rates-how-we-design-packages-that-make-sense.html        200
+/de/transparent-rates-how-we-design-packages-that-make-sense        /pages/de/transparent-rates-how-we-design-packages-that-make-sense.html        200
+/it/transparent-rates-how-we-design-packages-that-make-sense        /pages/it/transparent-rates-how-we-design-packages-that-make-sense.html        200
+/en/ferrari-rental-winterthur        /pages/ferrari-rental-winterthur.html        200
+/de/ferrari-rental-winterthur        /pages/de/ferrari-rental-winterthur.html        200
+/it/ferrari-rental-winterthur        /pages/it/ferrari-rental-winterthur.html        200
+/en/ferrari-rental-zug        /pages/ferrari-rental-zug.html        200
+/de/ferrari-rental-zug        /pages/de/ferrari-rental-zug.html        200
+/it/ferrari-rental-zug        /pages/it/ferrari-rental-zug.html        200
+/en/ferrari-rental-zurich-airport        /pages/ferrari-rental-zurich-airport.html        200
+/de/ferrari-rental-zurich-airport        /pages/de/ferrari-rental-zurich-airport.html        200
+/it/ferrari-rental-zurich-airport        /pages/it/ferrari-rental-zurich-airport.html        200
+/en/ferrari-rental-andermatt        /pages/ferrari-rental-andermatt.html        200
+/de/ferrari-rental-andermatt        /pages/de/ferrari-rental-andermatt.html        200
+/it/ferrari-rental-andermatt        /pages/it/ferrari-rental-andermatt.html        200
+/en/ferrari-rental-basel        /pages/ferrari-rental-basel.html        200
+/de/ferrari-rental-basel        /pages/de/ferrari-rental-basel.html        200
+/it/ferrari-rental-basel        /pages/it/ferrari-rental-basel.html        200
+/en/ferrari-rental-bern        /pages/ferrari-rental-bern.html        200
+/de/ferrari-rental-bern        /pages/de/ferrari-rental-bern.html        200
+/it/ferrari-rental-bern        /pages/it/ferrari-rental-bern.html        200
+/en/ferrari-rental-biel        /pages/ferrari-rental-biel.html        200
+/de/ferrari-rental-biel        /pages/de/ferrari-rental-biel.html        200
+/it/ferrari-rental-biel        /pages/it/ferrari-rental-biel.html        200
+/en/ferrari-rental-chur        /pages/ferrari-rental-chur.html        200
+/de/ferrari-rental-chur        /pages/de/ferrari-rental-chur.html        200
+/it/ferrari-rental-chur        /pages/it/ferrari-rental-chur.html        200
+/en/ferrari-rental-lucerne        /pages/ferrari-rental-lucerne.html        200
+/de/ferrari-rental-lucerne        /pages/de/ferrari-rental-lucerne.html        200
+/it/ferrari-rental-lucerne        /pages/it/ferrari-rental-lucerne.html        200
+/en/ferrari-rental-st-gallen        /pages/ferrari-rental-st-gallen.html        200
+/de/ferrari-rental-st-gallen        /pages/de/ferrari-rental-st-gallen.html        200
+/it/ferrari-rental-st-gallen        /pages/it/ferrari-rental-st-gallen.html        200
+/en/ferrari-rental-davos        /pages/ferrari-rental-davos.html        200
+/de/ferrari-rental-davos        /pages/de/ferrari-rental-davos.html        200
+/it/ferrari-rental-davos        /pages/it/ferrari-rental-davos.html        200
+/en/ferrari-rental-naenikon        /pages/ferrari-rental-naenikon.html        200
+/de/ferrari-rental-naenikon        /pages/de/ferrari-rental-naenikon.html        200
+/it/ferrari-rental-naenikon        /pages/it/ferrari-rental-naenikon.html        200
+/en/instagrammable_places_zurich_uster_part1        /pages/instagrammable_places_zurich_uster_part1.html        200
 /de/instagrammable_places_zurich_uster_part1 /pages/de/instagrammable_places_zurich_uster_part1.html 200
-
-/de/*                     /pages/:splat.html        200
-
-# Pages with real IT content (batch 5)
 /it/instagrammable_places_zurich_uster_part1 /pages/it/instagrammable_places_zurich_uster_part1.html 200
 
+/en/*                     /pages/:splat.html        200
+/de/*                     /pages/:splat.html        200
 /it/*                     /pages/:splat.html        200
+
+/en/journal        /pages/blog.html        200
+/de/journal        /pages/blog.html        200
+/it/journal        /pages/blog.html        200
