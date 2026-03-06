@@ -52,11 +52,8 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /it/pricing.html          /it/pricing               301!
 
 /en/blog.html             /en/blog                  301!
-/en/blog             /en/journal                  301!
 /de/blog.html             /de/blog                  301!
-/de/blog             /de/journal                  301!
 /it/blog.html             /it/blog                  301!
-/it/blog             /it/journal                  301!
 
 /en/ferrari_458_488_price_trends_switzerland.html             /en/ferrari_458_488_price_trends_switzerland                  301!
 /de/ferrari_458_488_price_trends_switzerland.html             /de/ferrari_458_488_price_trends_switzerland                  301!
@@ -233,6 +230,3 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /de/*                     /pages/:splat.html        200
 /it/*                     /pages/:splat.html        200
 
-/en/journal        /pages/blog.html        200
-/de/journal        /pages/blog.html        200
-/it/journal        /pages/blog.html        200
