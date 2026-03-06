@@ -15,7 +15,7 @@
 <meta content="630" property="og:image:height"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Luxury Obsession | Perché noleggiare una supercar in Svizzera" name="twitter:title"/>
-<meta content="Perché la Svizzera è spesso più comoda di Italia, Germania e Francia per noleggiare una supercar. Consigli pratici per turisti da Zurigo e aeroporto di Zurigo." name="twitter:description"/>
+<meta content="Panorami compatti, strade di qualità e logistica semplice. Confronto Svizzera versus Italia, Germania e Francia per noleggio supercar." name="twitter:description"/>
 <meta content="https://luxuryobsession.ch/media/ogimage.jpg" name="twitter:image"/>
 <link href="../media/icon.webp" rel="icon" type="image/webp"/>
 <link href="../favicon.ico" rel="icon" sizes="any"/>
@@ -319,7 +319,7 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
   .footerRight{justify-content:center}
 }
   </style>
-<script>
+<script>try { localStorage.setItem("lo_lang", "it"); } catch (e) {}</script><script>
 (function(){
   const LANGS = ["en","de","it"];
 
@@ -423,18 +423,18 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
 <header>
 <div class="container">
 <div class="navInner">
-<a aria-label="Luxury Obsession" class="brand" data-withlang="1" href="/it">
+<a aria-label="Luxury Obsession" class="brand" data-withlang="1" href="../index.html">
 <img alt="Luxury Obsession icon" class="brandIcon" src="../media/icon.webp"/>
 <span class="brandGold">Luxury Obsession</span>
 </a>
 <div class="navRight">
 <nav aria-label="Primary" class="navLinks">
-<a data-i18n="nav_rates" data-withlang="1" href="/it/pricing" id="navRates">Tariffe</a>
-<a data-i18n="nav_philosophy" data-withlang="1" href="/it/philosophy" id="navPhilosophy">La nostra filosofia</a>
-<a data-i18n="nav_experiences" data-withlang="1" href="/it/experiences" id="navExperiences">Esperienze</a>
-<a data-i18n="nav_journal" data-withlang="1" href="/it/blog" id="navBlog">Journal</a>
-<a data-i18n="nav_contact" data-withlang="1" href="/it#contact" id="navContact">Contatto</a>
-<a class="navCta" data-i18n="nav_request" data-withlang="1" href="/it#request" id="navRequest">Richiesta</a>
+<a data-i18n="nav_rates" data-withlang="1" href="pricing.html" id="navRates">Tariffe</a>
+<a data-i18n="nav_philosophy" data-withlang="1" href="../philosophy.html" id="navPhilosophy">La nostra filosofia</a>
+<a data-i18n="nav_experiences" data-withlang="1" href="../experiences.html" id="navExperiences">Esperienze</a>
+<a data-i18n="nav_journal" data-withlang="1" href="blog.html" id="navBlog">Journal</a>
+<a data-i18n="nav_contact" data-withlang="1" href="../index.html#contact" id="navContact">Contatto</a>
+<a class="navCta" data-i18n="nav_request" data-withlang="1" href="../index.html#request" id="navRequest">Richiesta</a>
 </nav>
 <div aria-label="Language" class="langSelect">
 <button aria-expanded="false" aria-haspopup="menu" class="langToggle" id="langToggle" type="button">
@@ -482,16 +482,16 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
 
 </div>
 <div class="ctaRow">
-<a class="ctaBtn" data-withlang="1" href="/it/blog" id="backBlog">Back to journal</a>
-<a class="ctaBtn ctaBtnPrimary" data-withlang="1" href="/it#request" id="reqQuote">Request availability</a>
+<a class="ctaBtn" data-withlang="1" href="blog.html" id="backBlog">Torna al journal</a>
+<a class="ctaBtn ctaBtnPrimary" data-withlang="1" href="../index.html#request" id="reqQuote">Richiedi disponibilità</a>
 </div>
 </div></section>
 </main>
 <footer>
 <div class="container footerInner">
-<div class="footerLeft">© <span id="year">2026</span> Luxury Obsession.</div>
+<div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
 <div class="footerCenter" id="footerCenter">Esperienze Ferrari, Svizzera.</div>
-<div class="footerRight"><a data-withlang="1" href="/it/impressum" id="footerImpressum">Impressum</a></div>
+<div class="footerRight"><a data-withlang="1" href="../impressum.html" id="footerImpressum">Impressum</a></div>
 </div>
 </footer>
 <script>(function(){
@@ -893,5 +893,21 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
   document.getElementById("year").textContent = String(new Date().getFullYear());
 })();
 </script>
-</body>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var map = {
+    en: "/en/switzerland_supercar_rental_vs_italy_germany_france",
+    de: "/de/switzerland_supercar_rental_vs_italy_germany_france",
+    it: "/it/switzerland_supercar_rental_vs_italy_germany_france"
+  };
+  document.querySelectorAll(".langOption").forEach(function(btn){
+    btn.addEventListener("click", function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      var code = (btn.getAttribute("data-lang") || "en").toLowerCase();
+      window.location.href = map[code] || map.en;
+    }, true);
+  });
+});
+</script></body>
 </html>

@@ -10,28 +10,24 @@
 <meta content="Luxury Obsession | Transparent pricing" property="og:title"/>
 <meta content="Luxury should never feel vague. Here is how we build clear packages around time, distance, and the details that protect the experience." property="og:description"/>
 <meta content="article" property="og:type"/>
-  <meta property="og:image" content="https://luxuryobsession.ch/media/ogimage.jpg"/>
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Luxury Obsession | Transparent pricing<"/>
-  <meta name="twitter:description" content="Luxury should never feel vague. Here is how we build clear packages around time, distance, and the details that protect the experience.."/>
-  <meta name="twitter:image" content="https://luxuryobsession.ch/media/ogimage.jpg"/>
-
-  <link href="../media/icon.webp" type="image/webp" rel="icon"/>
-  <link rel="icon" href="../favicon.ico" sizes="any"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png"/>
-  <link rel="icon" type="image/png" sizes="48x48" href="../favicon-48x48.png"/>
-  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"/>
-  <link rel="manifest" href="../site.webmanifest"/>
-  
-  <link rel="canonical" href="https://luxuryobsession.ch/en/transparent-pricing-how-we-design-packages-that-make-sense"/>
-
-  <link rel="alternate" hreflang="en" href="https://luxuryobsession.ch/en/transparent-pricing-how-we-design-packages-that-make-sense"/>
-  <link rel="alternate" hreflang="de" href="https://luxuryobsession.ch/de/transparent-pricing-how-we-design-packages-that-make-sense"/>
-  <link rel="alternate" hreflang="it" href="https://luxuryobsession.ch/it/transparent-pricing-how-we-design-packages-that-make-sense"/>
-  <link rel="alternate" hreflang="x-default" href="https://luxuryobsession.ch/en/transparent-pricing-how-we-design-packages-that-make-sense"/>
+<meta content="https://luxuryobsession.ch/media/ogimage.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Luxury Obsession | Transparent pricing" name="twitter:title"/>
+<meta content="Luxury should never feel vague. Here is how we build clear packages around time, distance, and the details that protect the experience." name="twitter:description"/>
+<meta content="https://luxuryobsession.ch/media/ogimage.jpg" name="twitter:image"/>
+<link href="../media/icon.webp" rel="icon" type="image/webp"/>
+<link href="../favicon.ico" rel="icon" sizes="any"/>
+<link href="../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
+<link href="../apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../site.webmanifest" rel="manifest"/>
+<link href="https://luxuryobsession.ch/en/transparent-rates-how-we-design-packages-that-make-sense" rel="canonical"/>
+<link href="https://luxuryobsession.ch/en/transparent-rates-how-we-design-packages-that-make-sense" hreflang="en" rel="alternate"/>
+<link href="https://luxuryobsession.ch/de/transparent-rates-how-we-design-packages-that-make-sense" hreflang="de" rel="alternate"/>
+<link href="https://luxuryobsession.ch/it/transparent-rates-how-we-design-packages-that-make-sense" hreflang="it" rel="alternate"/>
+<link href="https://luxuryobsession.ch/en/transparent-rates-how-we-design-packages-that-make-sense" hreflang="x-default" rel="alternate"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
@@ -271,7 +267,7 @@
     footer{border-top:1px solid rgba(243,241,238,0.10);padding:1.5rem 0;font-size:0.78rem;color:var(--muted)}
     .footerInner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
   </style>
-<script>
+<script>try { localStorage.setItem("lo_lang", "en"); } catch (e) {}</script><script>
   (function(){
     const LANGS = ["en","de","it"];
 
@@ -1102,5 +1098,21 @@
       }
     })();
   </script>
-</body>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var map = {
+    en: "/en/transparent-rates-how-we-design-packages-that-make-sense",
+    de: "/de/transparent-rates-how-we-design-packages-that-make-sense",
+    it: "/it/transparent-rates-how-we-design-packages-that-make-sense"
+  };
+  document.querySelectorAll(".langOption").forEach(function(btn){
+    btn.addEventListener("click", function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      var code = (btn.getAttribute("data-lang") || "en").toLowerCase();
+      window.location.href = map[code] || map.en;
+    }, true);
+  });
+});
+</script></body>
 </html>

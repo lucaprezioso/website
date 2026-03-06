@@ -15,7 +15,7 @@
 <meta content="630" property="og:image:height"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Luxury Obsession | Preisentwicklung 458 und 488 in der Schweiz" name="twitter:title"/>
-<meta content="Schweizer Preis Trend Charts für Ferrari 458 Italia, 458 Spider, 488 GTB und 488 Spider. Fokus auf vernünftige Kilometerstände und Werthaltigkeit von Werksrot." name="twitter:description"/>
+<meta content="Schweizer Preis Trend Charts für Ferrari 458 und 488 mit Fokus auf vernünftige Kilometerstände und Werksrot." name="twitter:description"/>
 <meta content="https://luxuryobsession.ch/media/ogimage.jpg" name="twitter:image"/>
 <link href="../media/icon.webp" rel="icon" type="image/webp"/>
 <link href="../favicon.ico" rel="icon" sizes="any"/>
@@ -418,23 +418,32 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
   window.__LO__ = { getLang, setLang, buildUrl, initLangMenu, initHamburger };
 })();
   </script>
-<link href="../assets/lo.css" rel="stylesheet"/><script defer="" src="../assets/lo.js"></script></head>
+<link href="../assets/lo.css" rel="stylesheet"/><script defer="" src="../assets/lo.js"></script><script>
+try {
+  localStorage.setItem("lo_lang", "de");
+  const u = new URL(window.location.href);
+  if (u.searchParams.has("lang")) {
+    u.searchParams.delete("lang");
+    window.history.replaceState(null, "", u.pathname + u.hash);
+  }
+} catch (e) {}
+</script></head>
 <body>
 <header>
 <div class="container">
 <div class="navInner">
-<a aria-label="Luxury Obsession" class="brand" data-withlang="1" href="/de">
+<a aria-label="Luxury Obsession" class="brand" data-withlang="1" href="../index.html">
 <img alt="Luxury Obsession icon" class="brandIcon" src="../media/icon.webp"/>
 <span class="brandGold">Luxury Obsession</span>
 </a>
 <div class="navRight">
 <nav aria-label="Primary" class="navLinks">
 <a data-i18n="nav_rates" data-withlang="1" href="pricing.html" id="navRates">Tarife</a>
-<a data-i18n="nav_philosophy" data-withlang="1" href="/de/philosophy" id="navPhilosophy">Unsere Philosophie</a>
-<a data-i18n="nav_experiences" data-withlang="1" href="/de/experiences" id="navExperiences">Erlebnisse</a>
+<a data-i18n="nav_philosophy" data-withlang="1" href="../philosophy.html" id="navPhilosophy">Unsere Philosophie</a>
+<a data-i18n="nav_experiences" data-withlang="1" href="../experiences.html" id="navExperiences">Erlebnisse</a>
 <a data-i18n="nav_journal" data-withlang="1" href="blog.html" id="navBlog">Journal</a>
-<a data-i18n="nav_contact" data-withlang="1" href="/de#contact" id="navContact">Kontakt</a>
-<a class="navCta" data-i18n="nav_request" data-withlang="1" href="/de#request" id="navRequest">Anfrage</a>
+<a data-i18n="nav_contact" data-withlang="1" href="../index.html#contact" id="navContact">Kontakt</a>
+<a class="navCta" data-i18n="nav_request" data-withlang="1" href="../index.html#request" id="navRequest">Anfrage</a>
 </nav>
 <div aria-label="Language" class="langSelect">
 <button aria-expanded="false" aria-haspopup="menu" class="langToggle" id="langToggle" type="button">
@@ -494,16 +503,16 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
 
 </div>
 <div class="ctaRow">
-<a class="ctaBtn" data-withlang="1" href="blog.html" id="backBlog">Back to journal</a>
-<a class="ctaBtn ctaBtnPrimary" data-withlang="1" href="/de#request" id="reqQuote">Request availability</a>
+<a class="ctaBtn" data-withlang="1" href="blog.html" id="backBlog">Zurück zum Journal</a>
+<a class="ctaBtn ctaBtnPrimary" data-withlang="1" href="../index.html#request" id="reqQuote">Verfügbarkeit anfragen</a>
 </div>
 </div></section>
 </main>
 <footer>
 <div class="container footerInner">
-<div class="footerLeft">© <span id="year">2026</span> Luxury Obsession.</div>
+<div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
 <div class="footerCenter" id="footerCenter">Ferrari Only Erlebnisse, Schweiz.</div>
-<div class="footerRight"><a data-withlang="1" href="/de/impressum" id="footerImpressum">Impressum</a></div>
+<div class="footerRight"><a data-withlang="1" href="../impressum.html" id="footerImpressum">Impressum</a></div>
 </div>
 </footer>
 <script>
@@ -1040,5 +1049,22 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
   document.getElementById("year").textContent = String(new Date().getFullYear());
 })();
 </script>
-</body>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var map = {
+    en: "/en/ferrari_458_488_price_trends_switzerland",
+    de: "/de/ferrari_458_488_price_trends_switzerland",
+    it: "/it/ferrari_458_488_price_trends_switzerland"
+  };
+  var buttons = document.querySelectorAll(".langOption");
+  buttons.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var code = (btn.getAttribute("data-lang") || "en").toLowerCase();
+      window.location.href = map[code] || map.en;
+    }, true);
+  });
+});
+</script></body>
 </html>

@@ -15,7 +15,7 @@
 <meta content="630" property="og:image:height"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Luxury Obsession | Instagrammable Orte rund um Zürich und Uster Teil 1" name="twitter:title"/>
-<meta content="Fünf instagrammable Orte nahe Zürich und Uster, inklusive interaktiver Karte und Foto Tipps." name="twitter:description"/>
+<meta content="Teil 1: fünf fotogene Orte nahe Zürich und Uster, mit Karte und Checkliste." name="twitter:description"/>
 <meta content="https://luxuryobsession.ch/media/ogimage.jpg" name="twitter:image"/>
 <link href="../media/icon.webp" rel="icon" type="image/webp"/>
 <link href="../favicon.ico" rel="icon" sizes="any"/>
@@ -426,23 +426,32 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
     .mapNote{opacity:.9; font-size:.95rem}
 	.heroMedia{display:none;}
   </style>
-</head>
+<script>
+try {
+  localStorage.setItem("lo_lang", "de");
+  const u = new URL(window.location.href);
+  if (u.searchParams.has("lang")) {
+    u.searchParams.delete("lang");
+    window.history.replaceState(null, "", u.pathname + u.hash);
+  }
+} catch (e) {}
+</script></head>
 <body>
 <header>
 <div class="container">
 <div class="navInner">
-<a aria-label="Luxury Obsession" class="brand" data-withlang="1" href="/de">
+<a aria-label="Luxury Obsession" class="brand" data-withlang="1" href="../index.html">
 <img alt="Luxury Obsession icon" class="brandIcon" src="../media/icon.webp"/>
 <span class="brandGold">Luxury Obsession</span>
 </a>
 <div class="navRight">
 <nav aria-label="Primary" class="navLinks">
-<a data-i18n="nav_rates" data-withlang="1" href="/de/pricing" id="navRates">Preise</a>
-<a data-i18n="nav_philosophy" data-withlang="1" href="/de/philosophy" id="navPhilosophy">Unsere Philosophie</a>
-<a data-i18n="nav_experiences" data-withlang="1" href="/de/experiences" id="navExperiences">Erlebnisse</a>
-<a data-i18n="nav_journal" data-withlang="1" href="/de/blog" id="navBlog">Journal</a>
-<a data-i18n="nav_contact" data-withlang="1" href="/de#contact" id="navContact">Kontakt</a>
-<a class="navCta" data-i18n="nav_request" data-withlang="1" href="/de#request" id="navRequest">Anfragen</a>
+<a data-i18n="nav_rates" data-withlang="1" href="pricing.html" id="navRates">Preise</a>
+<a data-i18n="nav_philosophy" data-withlang="1" href="../philosophy.html" id="navPhilosophy">Unsere Philosophie</a>
+<a data-i18n="nav_experiences" data-withlang="1" href="../experiences.html" id="navExperiences">Erlebnisse</a>
+<a data-i18n="nav_journal" data-withlang="1" href="blog.html" id="navBlog">Journal</a>
+<a data-i18n="nav_contact" data-withlang="1" href="../index.html#contact" id="navContact">Kontakt</a>
+<a class="navCta" data-i18n="nav_request" data-withlang="1" href="../index.html#request" id="navRequest">Anfragen</a>
 </nav>
 <div aria-label="Language" class="langSelect">
 <button aria-expanded="false" aria-haspopup="menu" class="langToggle" id="langToggle" type="button">
@@ -469,7 +478,7 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
 <div class="eyebrow" id="eyebrow">Luxury Obsession Journal</div>
 <h1 class="heroTitle"><span id="titleA">Instagrammable Orte</span> <span class="heroHighlight" id="titleB">rund um Zürich und Uster, Teil 1</span></h1>
 <p class="heroDeck" id="deck">Fünf fotogene Spots nahe Uster: Schloss, Seeufer, Hofblick und die Holzbrücke in Rapperswil. Mit Karte und einfachen Foto Tipps.</p>
-<div class="meta" id="metaDate">2026 02 24</div>
+<div class="meta" id="metaDate">2026 02 21</div>
 <div class="prose" id="articleBody">
 
 
@@ -497,8 +506,8 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
 
 </div>
 <div class="ctaRow">
-<a class="ctaBtn" data-withlang="1" href="/de/blog" id="backBlog">Back to journal</a>
-<a class="ctaBtn ctaBtnPrimary" data-withlang="1" href="/de#request" id="reqQuote">Request availability</a>
+<a class="ctaBtn" data-withlang="1" href="blog.html" id="backBlog">Zurück zum Journal</a>
+<a class="ctaBtn ctaBtnPrimary" data-withlang="1" href="../index.html#request" id="reqQuote">Verfügbarkeit anfragen</a>
 </div>
 <!-- Lightbox for gallery -->
 <div aria-hidden="true" aria-label="Gallery" class="lightbox" id="lightbox" role="dialog" tabindex="-1">
@@ -518,9 +527,9 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
 </main>
 <footer>
 <div class="container footerInner">
-<div class="footerLeft">© <span id="year">2026</span> Luxury Obsession.</div>
+<div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
 <div class="footerCenter" id="footerCenter">Ferrari only experiences, Switzerland.</div>
-<div class="footerRight"><a data-withlang="1" href="/de/impressum" id="footerImpressum">Impressum</a></div>
+<div class="footerRight"><a data-withlang="1" href="../impressum.html" id="footerImpressum">Impressum</a></div>
 </div>
 </footer>
 <script>
@@ -1152,5 +1161,22 @@ window.__LO__renderPackages = async function(lang){
   document.getElementById("year").textContent = String(new Date().getFullYear());
 })();
 </script>
-</body>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var map = {
+    en: "/en/instagrammable_places_zurich_uster_part1",
+    de: "/de/instagrammable_places_zurich_uster_part1",
+    it: "/it/instagrammable_places_zurich_uster_part1"
+  };
+  var buttons = document.querySelectorAll(".langOption");
+  buttons.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var code = (btn.getAttribute("data-lang") || "en").toLowerCase();
+      window.location.href = map[code] || map.en;
+    }, true);
+  });
+});
+</script></body>
 </html>
