@@ -385,8 +385,8 @@
 <a data-i18n="nav_philosophy" data-withlang="1" href="../philosophy.html" id="navPhilosophy">Our Philosophy</a>
 <a data-i18n="nav_experiences" data-withlang="1" href="../experiences.html" id="navExperiences">Experiences</a>
 <a data-i18n="nav_journal" data-withlang="1" href="blog.html" id="navBlog">Journal</a>
-<a data-i18n="nav_contact" data-withlang="1" href="../index.html#contact" id="navContact">Contact</a>
-<a class="navCta" data-i18n="nav_request" data-withlang="1" href="../index.html#request" id="navRequest">Request</a>
+<a data-i18n="nav_contact" href="../index.html#contact" id="navContact">Contact</a>
+<a class="navCta" data-i18n="nav_request" href="../index.html#request" id="navRequest">Request</a>
 </nav>
 <div aria-label="Language" class="langSelect">
 <button aria-expanded="false" aria-haspopup="menu" class="langToggle" id="langToggle" type="button">
@@ -575,7 +575,7 @@
 -->
 <div class="ctaRow">
 <a class="ctaBtn" data-i18n="back_journal" data-withlang="1" href="blog.html" id="backBlog">Back to Journal</a>
-<a class="ctaBtn ctaBtnPrimary" data-i18n="cta_request" data-withlang="1" href="../index.html#request" id="req">Request</a>
+<a class="ctaBtn ctaBtnPrimary" data-i18n="cta_request" href="../index.html#request" id="req">Request</a>
 </div>
 </article>
 </div>
@@ -599,7 +599,15 @@
       const lang = window.__LO__.getLang();
       document.documentElement.lang = lang;
       localStorage.setItem("lo_lang", lang);
+	  
+		const setHref = (id, href) => {
+			const el = document.getElementById(id);
+			if (el) el.setAttribute("href", href);
+		};
 
+setHref("navContact", window.__LO__.buildUrl("../index.html#contact", lang));
+setHref("navRequest", window.__LO__.buildUrl("../index.html#request", lang));
+setHref("req", window.__LO__.buildUrl("../index.html#request", lang));
       
       function wireHamburgerFallback(){
         const btn = document.getElementById("hamburger");

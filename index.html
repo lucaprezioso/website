@@ -167,13 +167,16 @@
 {
   "@context": "https://schema.org",
   "@type": "AutoRental",
+  "@id": "https://luxuryobsession.ch/#business",
   "name": "Luxury Obsession",
   "url": "https://luxuryobsession.ch/",
+  "logo": "https://luxuryobsession.ch/media/icon.webp",
   "image": [
     "https://luxuryobsession.ch/media/458-960.webp",
     "https://luxuryobsession.ch/media/458-720.webp",
     "https://luxuryobsession.ch/media/458-480.webp"
   ],
+  "description": "Luxury Ferrari 458 Italia rental in Zurich and across Switzerland. Premium driving experiences, transparent packages, and private concierge style service.",
   "telephone": "+41765870458",
   "email": "info@luxuryobsession.ch",
   "address": {
@@ -183,12 +186,32 @@
     "addressLocality": "Nänikon",
     "addressCountry": "CH"
   },
-  "areaServed": "CH",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Zurich"
+    },
+    {
+      "@type": "Country",
+      "name": "Switzerland"
+    }
+  ],
   "sameAs": [
     "https://instagram.com/luxuryobsession.ch",
     "https://www.tiktok.com/@luxuryobsession_ch",
     "https://www.facebook.com/share/1GnE57WMua/?mibextid=wwXIfr"
-  ]
+  ],
+  "makesOffer": {
+    "@type": "Offer",
+    "itemOffered": {
+      "@type": "Car",
+      "name": "Ferrari 458 Italia",
+      "brand": {
+        "@type": "Brand",
+        "name": "Ferrari"
+      }
+    }
+  }
 }
 </script>
 
@@ -562,7 +585,7 @@
 
     const PICKUP_ADDRESS = "Waldaustrasse 2, 8606 Nänikon, Switzerland";
     const MAPS_QUERY = encodeURIComponent(PICKUP_ADDRESS);
-    const MAPS_LINK = "https://www.google.com/maps/search/?api=1&query=" + MAPS_QUERY;
+    const MAPS_LINK = "https://maps.app.goo.gl/NUBnAA8kKw68ugHv7";
     const MAPS_EMBED = "https://www.google.com/maps?q=" + MAPS_QUERY + "&output=embed";
 
     let PACKAGES = [];
