@@ -52,6 +52,7 @@
   i18n: {"en": {"navRates": "Rates", "navPhilosophy": "Our Philosophy", "navExperiences": "Experiences", "navBlog": "Journal", "navContact": "Contact", "navRequest": "Request", "navImpressum": "Impressum", "aboutTitle": "About Luxury Obsession", "aboutSub": "A privately hosted Ferrari experience.", "aboutBody": "Luxury Obsession is a privately hosted Ferrari experience in Switzerland. We keep the selection intentionally singular: one carefully maintained 458 Italia. Every request is confirmed personally, with clear terms, a discreet handover, and concierge support before and during your drive.", "btnRequest": "Request availability", "btnOther": "Other pickup locations", "btnMaps": "Open map", "ctaTitle": "Request your date", "ctaBody": "Tell us when you would like to drive. We reply with confirmation and the relevant details.", "ctaBtnRequest": "Request", "ctaBtnRates": "See rates", "quoteOpen": "Requests open", "footerCenter": "Currently available: Ferrari 458 Italia.", "eyebrow": "Zurich Airport, Switzerland", "heroTitleA": "Ferrari 458 Italia", "heroTitleB": "ZRH pickup", "heroSubtitle": "A seamless arrival: step off the plane and into a naturally aspirated V8.\n\nWe arrange a discreet handover near the terminals, then you are minutes from the lake, the city, and open countryside.", "pill1": "Arrival friendly", "pill2": "Clear terms and insurance", "pill3": "Concierge support", "pill4": "Time efficient", "ctaPricing": "See rates", "ctaRequest": "Request availability", "heroNoteLine1": "Currently available: <strong>Ferrari 458 Italia</strong>", "heroNoteLine2": "Share your flight timing and preferred duration.", "locTitle": "Ferrari pickup near Zurich Airport", "locSub": "Designed for travellers: simple handover, quick departure, minimal friction.", "pickupTitle": "Pickup and handover", "pickupBody": "We confirm the exact meeting point with your booking and align with your arrival time. If you share your flight number, we can keep the handover smooth even if schedules shift.\n\nReturn can be arranged near the airport or in Zurich, depending on your plan.", "routesTitle": "Curated routes", "routesIntro": "Short on time or carrying momentum from a long flight. These routes are easy, elegant, and efficient.", "routes": ["Lake Zurich to Rapperswil for a clean, scenic first drive", "Albis ridge for quick elevation and wide views over the city", "Limmat valley for flowing roads and an effortless return", "Zurich Oberland when you want countryside without detours"], "notesTitle": "Practical notes", "notes": ["Valid driving licence and an ID document required", "Please travel light, luggage space is limited", "Handover is confirmed in writing with exact timing", "Fuel policy and kilometres depend on the chosen package"]}}
 };
   </script>
+
 <script defer="" src="../assets/lo.js"></script>
 <script defer="" src="../assets/lo.locations.js"></script>
 </head>
@@ -117,7 +118,14 @@
 </p>
 </div>
 <div class="heroMediaCard heroMediaImage">
-<img alt="Ferrari 458 Italia" id="heroImage" loading="lazy" src="../media/image00100.png"/>
+<picture class="heroPhoto">
+<source sizes="(min-width: 1000px) 420px, 0px" srcset="
+      /media/458-480.webp 480w,
+      /media/458-720.webp 720w,
+      /media/458-960.webp 960w
+    " type="image/webp"/>
+<img alt="Ferrari 458 Italia" decoding="async" height="900" src="/media/458-720.webp" width="720"/>
+</picture>
 <div class="heroBadge">
 <div style="display:inline-flex;align-items:center;gap:0.5rem">
 <span class="heroBadgeDot"></span>
@@ -164,6 +172,7 @@
 </div>
 </div>
 </section>
+
 <section id="cta">
 <div class="container">
 <div class="card carbonPanel" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem">
@@ -189,21 +198,22 @@
 </div>
 </footer>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  var map = {
-    en: "/en/ferrari-rental-zurich-airport",
-    de: "/de/ferrari-rental-zurich-airport",
-    it: "/it/ferrari-rental-zurich-airport"
-  };
-  var buttons = document.querySelectorAll(".langOption");
-  buttons.forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var code = (btn.getAttribute("data-lang") || "en").toLowerCase();
-      window.location.href = map[code] || map.en;
-    }, true);
-  });
-});
-</script></body>
+    document.addEventListener("DOMContentLoaded", function () {
+      var map = {
+        en: "/en/ferrari-rental-zurich-airport",
+        de: "/de/ferrari-rental-zurich-airport",
+        it: "/it/ferrari-rental-zurich-airport"
+      };
+      var buttons = document.querySelectorAll(".langOption");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          var code = (btn.getAttribute("data-lang") || "en").toLowerCase();
+          window.location.href = map[code] || map.en;
+        }, true);
+      });
+    });
+  </script>
+</body>
 </html>
