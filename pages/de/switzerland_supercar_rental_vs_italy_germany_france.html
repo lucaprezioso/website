@@ -752,5 +752,111 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
   });
 })();
 </script>
+
+<script>
+(function(){
+  const lang = "de";
+  const languageMap = {
+    en: "/en/switzerland_supercar_rental_vs_italy_germany_france",
+    de: "/de/switzerland_supercar_rental_vs_italy_germany_france",
+    it: "/it/switzerland_supercar_rental_vs_italy_germany_france"
+  };
+
+  function buildMobileMenu(){
+    const menu = document.getElementById("mobileMenu");
+    if(!menu || menu.children.length) return;
+
+    const desktop = Array.from(document.querySelectorAll(".navLinks a"));
+    const normal = desktop.filter(a => !a.classList.contains("navCta"));
+    const cta = desktop.find(a => a.classList.contains("navCta"));
+
+    normal.forEach(a => {
+      const clone = a.cloneNode(true);
+      clone.classList.remove("navCta");
+      menu.appendChild(clone);
+    });
+
+    const divider = document.createElement("div");
+    divider.className = "mobileMenuDivider";
+    menu.appendChild(divider);
+
+    if(cta){
+      const cloneCta = cta.cloneNode(true);
+      cloneCta.classList.remove("navCta");
+      cloneCta.classList.add("mobileMenuCta");
+      menu.appendChild(cloneCta);
+    }
+  }
+
+  function wireHamburgerFallback(){
+    const btn = document.getElementById("hamburger");
+    const menu = document.getElementById("mobileMenu");
+    if(!btn || !menu) return;
+    if(btn.dataset.loHamburgerFallback === "1") return;
+    btn.dataset.loHamburgerFallback = "1";
+
+    buildMobileMenu();
+
+    function close(){
+      menu.style.display = "none";
+      menu.setAttribute("data-open", "0");
+      btn.setAttribute("aria-expanded", "false");
+    }
+
+    function open(){
+      menu.style.display = "block";
+      menu.setAttribute("data-open", "1");
+      btn.setAttribute("aria-expanded", "true");
+    }
+
+    btn.addEventListener("click", function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      const isOpen = menu.getAttribute("data-open") === "1";
+      if(isOpen) close();
+      else open();
+    }, true);
+
+    menu.addEventListener("click", function(e){
+      if(e.target.closest("a")) close();
+    });
+
+    document.addEventListener("click", function(e){
+      if(menu.getAttribute("data-open") !== "1") return;
+      if(menu.contains(e.target) || btn.contains(e.target)) return;
+      close();
+    });
+
+    close();
+  }
+
+  function initLocalizedPageUI(){
+    document.documentElement.lang = lang;
+    try { localStorage.setItem("lo_lang", lang); } catch (e) {}
+
+    const lo = window.__LO__;
+    try {
+      if(lo && typeof lo.initLangMenu === "function") lo.initLangMenu(lang);
+    } catch (e) {}
+
+    wireHamburgerFallback();
+
+    document.querySelectorAll(".langOption").forEach(function(btn){
+      if(btn.dataset.loLangBound === "1") return;
+      btn.dataset.loLangBound = "1";
+      btn.addEventListener("click", function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        const code = (btn.getAttribute("data-lang") || "en").toLowerCase();
+        window.location.href = languageMap[code] || languageMap[lang] || "/de/switzerland_supercar_rental_vs_italy_germany_france";
+      });
+    });
+  }
+
+  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", initLocalizedPageUI, { once:true });
+  else initLocalizedPageUI();
+})();
+</script>
 </body>
 </html>

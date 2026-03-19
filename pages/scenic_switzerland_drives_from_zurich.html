@@ -741,5 +741,79 @@ document.addEventListener("DOMContentLoaded", function () {
     }, true);
   });
 });
-</script></body>
+</script>
+<script>
+(function(){
+  function initHardFallbackHamburger(){
+    const btn = document.getElementById("hamburger");
+    const menu = document.getElementById("mobileMenu");
+    if(!btn || !menu) return;
+    if(btn.dataset.loHardFallback === "1") return;
+    btn.dataset.loHardFallback = "1";
+
+    if(menu.children.length === 0){
+      const desktopLinks = Array.from(document.querySelectorAll(".navLinks a"));
+      const normalLinks = desktopLinks.filter(a => !a.classList.contains("navCta"));
+      const ctaLink = desktopLinks.find(a => a.classList.contains("navCta"));
+
+      normalLinks.forEach(a => {
+        const clone = a.cloneNode(true);
+        clone.classList.remove("navCta");
+        menu.appendChild(clone);
+      });
+
+      if(ctaLink){
+        const divider = document.createElement("div");
+        divider.className = "mobileMenuDivider";
+        menu.appendChild(divider);
+
+        const cloneCta = ctaLink.cloneNode(true);
+        cloneCta.classList.remove("navCta");
+        cloneCta.classList.add("mobileMenuCta");
+        menu.appendChild(cloneCta);
+      }
+    }
+
+    function closeMenu(){
+      menu.style.display = "none";
+      menu.setAttribute("data-open", "0");
+      btn.setAttribute("aria-expanded", "false");
+    }
+
+    function openMenu(){
+      menu.style.display = "block";
+      menu.setAttribute("data-open", "1");
+      btn.setAttribute("aria-expanded", "true");
+    }
+
+    btn.addEventListener("click", function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      if(typeof e.stopImmediatePropagation === "function") e.stopImmediatePropagation();
+      const isOpen = menu.getAttribute("data-open") === "1";
+      if(isOpen) closeMenu();
+      else openMenu();
+    }, true);
+
+    menu.addEventListener("click", function(e){
+      if(e.target.closest("a")) closeMenu();
+    }, true);
+
+    document.addEventListener("click", function(e){
+      if(menu.getAttribute("data-open") !== "1") return;
+      if(menu.contains(e.target) || btn.contains(e.target)) return;
+      closeMenu();
+    }, true);
+
+    closeMenu();
+  }
+
+  if(document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initHardFallbackHamburger, { once:true });
+  } else {
+    initHardFallbackHamburger();
+  }
+})();
+</script>
+</body>
 </html>

@@ -1449,10 +1449,13 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
     close();
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
+  function initLocalizedPageUI(){
     const lo = window.__LO__;
-    if(lo && typeof lo.initSharedUI === "function") lo.initSharedUI(lang);
-    else if(lo && typeof lo.initLangMenu === "function") lo.initLangMenu(lang);
+    try {
+      if(lo && typeof lo.initLangMenu === "function") lo.initLangMenu(lang);
+    } catch (e) {
+      console.warn("initLangMenu failed", e);
+    }
 
     wireHamburgerFallback();
 
@@ -1460,7 +1463,10 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
       const href = a.getAttribute("href");
       if(href && lo && lo.buildUrl) a.setAttribute("href", lo.buildUrl(href, lang));
     });
-  });
+  }
+
+  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", initLocalizedPageUI, { once:true });
+  else initLocalizedPageUI();
 
   // Apply lang params immediately for visible links
   document.querySelectorAll("[data-withlang='1']").forEach(a => {
