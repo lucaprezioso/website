@@ -55,6 +55,14 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /de/blog.html             /de/blog                  301!
 /it/blog.html             /it/blog                  301!
 
+/en/why-a-ferrari-458-italia-feels-different-in-switzerland.html             /en/why-a-ferrari-458-italia-feels-different-in-switzerland                 301!
+/de/why-a-ferrari-458-italia-feels-different-in-switzerland.html             /de/why-a-ferrari-458-italia-feels-different-in-switzerland                  301!
+/it/why-a-ferrari-458-italia-feels-different-in-switzerland.html             /it/why-a-ferrari-458-italia-feels-different-in-switzerland                  301!
+
+/en/ferrari-458-italia-details-most-people-miss.html             /en/ferrari-458-italia-details-most-people-miss                  301!
+/de/ferrari-458-italia-details-most-people-miss.html             /de/ferrari-458-italia-details-most-people-miss                  301!
+/it/ferrari-458-italia-details-most-people-miss.html             /it/ferrari-458-italia-details-most-people-miss                  301!
+
 /en/ferrari_458_488_price_trends_switzerland.html             /en/ferrari_458_488_price_trends_switzerland                  301!
 /de/ferrari_458_488_price_trends_switzerland.html             /de/ferrari_458_488_price_trends_switzerland                  301!
 /it/ferrari_458_488_price_trends_switzerland.html             /it/ferrari_458_488_price_trends_switzerland                  301!
@@ -165,6 +173,12 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /en/scenic_switzerland_drives_from_zurich        /pages/scenic_switzerland_drives_from_zurich.html        200
 /de/scenic_switzerland_drives_from_zurich        /pages/de/scenic_switzerland_drives_from_zurich.html        200
 /it/scenic_switzerland_drives_from_zurich        /pages/it/scenic_switzerland_drives_from_zurich.html        200
+/en/why-a-ferrari-458-italia-feels-different-in-switzerland        /pages/why-a-ferrari-458-italia-feels-different-in-switzerland.html        200
+/de/why-a-ferrari-458-italia-feels-different-in-switzerland        /pages/de/why-a-ferrari-458-italia-feels-different-in-switzerland.html        200
+/it/why-a-ferrari-458-italia-feels-different-in-switzerland        /pages/it/why-a-ferrari-458-italia-feels-different-in-switzerland.html        200
+/en/ferrari-458-italia-details-most-people-miss        /pages/ferrari-458-italia-details-most-people-miss.html        200
+/de/ferrari-458-italia-details-most-people-miss        /pages/de/ferrari-458-italia-details-most-people-miss.html        200
+/it/ferrari-458-italia-details-most-people-miss        /pages/it/ferrari-458-italia-details-most-people-miss.html        200
 /en/ferrari_458_488_price_trends_switzerland        /pages/ferrari_458_488_price_trends_switzerland.html        200
 /de/ferrari_458_488_price_trends_switzerland        /pages/de/ferrari_458_488_price_trends_switzerland.html        200
 /it/ferrari_458_488_price_trends_switzerland        /pages/it/ferrari_458_488_price_trends_switzerland.html        200

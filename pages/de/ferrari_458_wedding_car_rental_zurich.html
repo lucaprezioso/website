@@ -4,18 +4,19 @@
 <head>
 <meta charset="utf-8"/>
 <title>Luxury Obsession | Ferrari 458 Italia Hochzeitsauto mieten Zürich</title>
-<meta content="Ferrari 458 Italia als Hochzeitsauto in Zürich und der Schweiz. Saugmotor V8, zeitloses Design, privater Host, klare Bedingungen, foto ready Erlebnis." name="description"/>
+<meta content="Ferrari 458 Italia als Hochzeitsauto in Zürich und der Schweiz. Saugmotor V8, zeitloses Design, private Übergabe, klare Bedingungen und ein fotobereites Self drive Erlebnis." name="description"/>
+<meta content="Ferrari wedding car Zurich, Ferrari 458 Italia wedding rental, wedding car rental Switzerland, Ferrari wedding photos, Ferrari self drive wedding" name="keywords"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="index, follow" name="robots"/>
 <meta content="Luxury Obsession | Ferrari 458 Italia Hochzeitsauto mieten Zürich" property="og:title"/>
-<meta content="Saugmotor V8 Ikone für deinen Hochzeitstag. Privater Host, Abholung in Zürich nach Termin, klare Bedingungen, foto ready Ferrari 458 Italia Erlebnis." property="og:description"/>
+<meta content="Ferrari 458 Italia als Hochzeitsauto in Zürich. Zeitloses Design, Saugmotor V8 Emotion, privater Host, klare Bedingungen und ein fotobereites Self drive Erlebnis." property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="https://luxuryobsession.ch/media/ogimage.jpg" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Luxury Obsession | Ferrari 458 Italia Hochzeitsauto mieten Zürich" name="twitter:title"/>
-<meta content="Saugmotor V8 Ikone für deinen Hochzeitstag. Privater Host, Abholung in Zürich nach Termin, klare Bedingungen, foto ready Ferrari 458 Italia Erlebnis." name="twitter:description"/>
+<meta content="Ferrari 458 Italia als Hochzeitsauto in Zürich. Zeitloses Design, Saugmotor V8 Emotion, privater Host, klare Bedingungen und ein fotobereites Self drive Erlebnis." name="twitter:description"/>
 <meta content="https://luxuryobsession.ch/media/ogimage.jpg" name="twitter:image"/>
 <link href="../media/icon.webp" rel="icon" type="image/webp"/>
 <link href="../favicon.ico" rel="icon" sizes="any"/>
@@ -322,29 +323,25 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
 <script>
 (function(){
   const LANGS = ["en","de","it"];
+  const FIXED_LANG = "de";
+  const PAGE_BY_LANG = {"en": "ferrari_458_wedding_car_rental_zurich_en_seo_preserved.html", "de": "ferrari_458_wedding_car_rental_zurich_de_seo_preserved.html", "it": "ferrari_458_wedding_car_rental_zurich_it_seo_preserved.html"};
 
   function getLang(){
-    const p = new URLSearchParams(window.location.search);
-    const q = p.get("lang");
-    if(q && LANGS.includes(q)) return q;
-    const s = localStorage.getItem("lo_lang");
-    if(s && LANGS.includes(s)) return s;
-    return "en";
+    return FIXED_LANG;
   }
 
   function setLang(next){
     if(!LANGS.includes(next)) return;
-    localStorage.setItem("lo_lang", next);
-    const u = new URL(window.location.href);
-    u.searchParams.set("lang", next);
-    window.location.href = u.pathname + u.search + u.hash;
+    try { localStorage.setItem("lo_lang", next); } catch(e) {}
+    const target = PAGE_BY_LANG[next] || PAGE_BY_LANG.en || window.location.pathname;
+    window.location.href = target;
   }
 
   function buildUrl(path, lang, hash){
     const u = new URL(path, window.location.href);
-    u.searchParams.set("lang", lang);
+    u.search = "";
     if(hash) u.hash = hash;
-    return u.pathname + u.search + u.hash;
+    return u.pathname + u.hash;
   }
 
   function initLangMenu(lang){
@@ -421,13 +418,84 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
 <link href="../assets/lo.css" rel="stylesheet"/><script defer="" src="../assets/lo.js"></script><script>
 try {
   localStorage.setItem("lo_lang", "de");
-  const u = new URL(window.location.href);
-  if (u.searchParams.has("lang")) {
-    u.searchParams.delete("lang");
-    window.history.replaceState(null, "", u.pathname + u.hash);
-  }
 } catch (e) {}
-</script></head>
+</script><script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Ferrari 458 Italia Hochzeitsauto mieten Zürich",
+    "description": "Ferrari 458 Italia als Hochzeitsauto in Zürich und der Schweiz. Saugmotor V8, zeitloses Design, private Übergabe, klare Bedingungen und ein fotobereites Self drive Erlebnis.",
+    "image": "https://luxuryobsession.ch/media/ogimage.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "Luxury Obsession"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Luxury Obsession",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://luxuryobsession.ch/media/icon.webp"
+      }
+    },
+    "datePublished": "2026-02-25",
+    "dateModified": "2026-03-20",
+    "inLanguage": "de",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://luxuryobsession.ch/de/ferrari_458_wedding_car_rental_zurich"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Kann man den Ferrari 458 nur für ein paar Stunden mieten?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Viele Hochzeitsbuchungen sind bewusst kurz und konzentrieren sich auf Ankunft, Fotos und eine sauber geplante Fahrt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ist das ein Chauffeur Service?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nein. Es ist ein Self drive Erlebnis mit privatem Host, nicht ein chauffierter Hochzeitsservice."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann das Auto zum Hotel oder nach Hause geliefert werden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, eine Lieferung in Zürich und Umgebung kann nach Termin und je nach Ablauf organisiert werden."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Muss im Voraus bezahlt werden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Die Zahlung erfolgt im Voraus und vor Beginn der Buchung ist ein rückerstattbares Depot erforderlich."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ist der Ferrari auch dann sinnvoll, wenn wir ihn nur kurz fahren?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolut. Viele Paare wählen den 458 vor allem für die Ankunft und die Fotografie, weil er Atmosphäre, Design und echtes Anlassgefühl mitbringt."
+        }
+      }
+    ]
+  }
+]
+</script>
+</head>
 <body>
 <header>
 <div class="container">
@@ -438,16 +506,16 @@ try {
 </a>
 <div class="navRight">
 <nav aria-label="Primary" class="navLinks">
-<a data-i18n="nav_rates" data-withlang="1" href="pricing.html" id="navRates">Tarife</a>
-<a data-i18n="nav_philosophy" data-withlang="1" href="../philosophy.html" id="navPhilosophy">Unsere Philosophie</a>
-<a data-i18n="nav_experiences" data-withlang="1" href="../experiences.html" id="navExperiences">Erlebnisse</a>
+<a data-i18n="nav_rates" data-withlang="1" href="pricing.html" id="navRates">Rates</a>
+<a data-i18n="nav_philosophy" data-withlang="1" href="../philosophy.html" id="navPhilosophy">Our Philosophy</a>
+<a data-i18n="nav_experiences" data-withlang="1" href="../experiences.html" id="navExperiences">Experiences</a>
 <a data-i18n="nav_journal" data-withlang="1" href="blog.html" id="navBlog">Journal</a>
-<a data-i18n="nav_contact" data-withlang="1" href="../index.html#contact" id="navContact">Kontakt</a>
-<a class="navCta" data-i18n="nav_request" data-withlang="1" href="../index.html#request" id="navRequest">Anfrage</a>
+<a data-i18n="nav_contact" href="/de#contact" id="navContact">Contact</a>
+<a class="navCta" data-i18n="nav_request" href="/de#request" id="navRequest">Request</a>
 </nav>
 <div aria-label="Language" class="langSelect">
 <button aria-expanded="false" aria-haspopup="menu" class="langToggle" id="langToggle" type="button">
-<span aria-label="Current language" id="langCode">DE</span>
+<span aria-label="Current language" id="langCode">EN</span>
 <span aria-hidden="true" class="langChevron">▾</span>
 </button>
 <div aria-label="Select language" class="langMenu" hidden="" id="langMenu" role="menu">
@@ -467,46 +535,133 @@ try {
 <main>
 <section class="hero">
 <div class="container articleWrap">
-<div class="eyebrow" id="eyebrow">Luxury Obsession</div>
-<h1 class="heroTitle"><span id="titleA">Ferrari 458 Italia</span> <span class="heroHighlight" id="titleB">Hochzeitsauto mieten Zürich</span></h1>
-<p class="heroDeck" id="deck">Eine Saugmotor V8 Ikone für den Hochzeitstag. Zeitloses Design, echte Emotion, und ruhiges Hosting mit klaren Bedingungen.</p>
+<div class="eyebrow" id="eyebrow">Luxury Obsession Journal</div>
+<h1 class="heroTitle"><span id="titleA">Ferrari 458 Italia</span> <span class="heroHighlight" id="titleB">Hochzeitsauto mieten in Zürich</span></h1>
+<p class="heroDeck" id="deck">Ein Ferrari Hochzeitsauto in Zürich, das zeitlos wirkt, stark fotografiert und sich wirklich besonders anfühlt. Privater Host, klare Bedingungen und ein Self drive Erlebnis rund um euren Tag.</p>
 <div class="meta" id="metaDate">2026 02 25</div>
 <div class="prose" id="articleBody">
+<figure class="figure" style="margin-top:1rem">
+  <img data-fallback="Ferrari 458 Hochzeit" src="../pages/wedding_458_hero.png" alt="Roter Ferrari 458 Italia als Hochzeitsauto in Zürich, Schweiz" />
+  <figcaption>Ferrari 458 Italia als Hochzeitsauto in Zürich. Saugmotor V8, zeitlose Linien und starke Präsenz für Fotos.</figcaption>
+</figure>
 
+<p><strong>Ferrari 458 Italia Hochzeitsauto mieten in Zürich</strong> ist für Paare gedacht, die mehr wollen als nur einen Transport von A nach B. Der 458 bringt Anlass, Klang, Design und Emotion auf eine Weise zusammen, wie es heute nur noch wenige Sportwagen schaffen. Für einen Hochzeitstag ist genau das wichtig. Das Auto wirkt elegant auf Fotos, besonders bei der Ankunft, und macht selbst eine kurze Fahrt zu einer Erinnerung, die bleibt.</p>
 
+<p>Was den Ferrari 458 Italia in der Schweiz so besonders macht, ist nicht nur das Emblem. Er ist die letzte Saugmotor V8 Berlinetta dieser Linie, mit einem sauberen, ansteigenden Klangbild und Proportionen, die auf Fotos immer noch zeitlos wirken. Wer in <strong>Zürich oder in der Schweiz ein Hochzeitsauto mieten</strong> möchte, findet im 458 eines der seltenen Autos, das zugleich filmisch und lebendig wirkt.</p>
 
+<div class="card callout" style="margin-top:1rem">
+  <div class="calloutTitle">Warum Paare den Ferrari 458 wählen</div>
+  <p class="calloutBody">Er sieht auf Fotos zeitlos aus, klingt besonders ohne übertrieben zu wirken und macht aus einer kurzen Hochzeitsfahrt einen echten Moment statt bloss einer Kulisse.</p>
+</div>
 
+<div class="divider"></div>
 
+<h2>Warum der Ferrari 458 als Hochzeitsauto in Zürich so gut passt</h2>
 
+<h3>Zeitloses Design für Hochzeitsfotos</h3>
+<p>Der 458 hat eine Form, die mit Anzug, Kleid, Architektur und natürlichem Licht hervorragend funktioniert. Er bringt Präsenz ins Bild, ohne schwer oder protzig zu wirken. Ob vor dem Hotel, bei der zivilen Trauung, vor der Kirche oder an einem ruhigen Spot am See, er setzt einen klaren Akzent und bleibt dabei stilvoll.</p>
 
+<h3>Ein Saugmotor V8, der in Erinnerung bleibt</h3>
+<p>Viele Hochzeitsautos sehen gut aus, solange sie stehen. Der 458 kann mehr. Der erste Start, die direkte Gasannahme und der natürlich ansteigende Klang gehören zum Erlebnis. Das Resultat ist emotional, aber immer noch kultiviert. Es fühlt sich nach Feier an, nicht nach blosser Lautstärke.</p>
 
+<h3>Self drive, aber ruhig und sauber begleitet</h3>
+<p>Dieses Erlebnis ist ein <strong>Self drive Ferrari Hochzeitsauto</strong> mit privatem Host und klarer Übergabe. Gerade am Hochzeitstag ist das wichtig, weil alles unkompliziert, pünktlich und fotobereit ablaufen soll.</p>
 
+<div class="divider"></div>
 
+<h2>Was im Hochzeitsauto Erlebnis enthalten ist</h2>
+<p>Luxury Obsession steht für transparente Pakete und klare Bedingungen. Bei Hochzeiten liegt der Fokus auf Zuverlässigkeit, Präsentation und einem ruhigen Ablauf von der Bestätigung bis zur Übergabe.</p>
 
+<ul>
+  <li><strong>Privater Host</strong> für eine ruhige Übergabe und ein klares Briefing</li>
+  <li><strong>Vorauszahlung</strong> mit schriftlicher Bestätigung von Datum, Dauer und Bedingungen</li>
+  <li><strong>Rückerstattbares Depot</strong>
+    <ul>
+      <li>CHF 1,500 für berechtigte Fahrerinnen und Fahrer ab 25 Jahren</li>
+      <li>CHF 3,000 sonst</li>
+    </ul>
+  </li>
+  <li><strong>Abholung in Zürich nach Termin</strong> sowie Lieferung zum Hotel oder zur Adresse von Braut oder Bräutigam nach vorheriger Absprache</li>
+  <li><strong>Fotobereites Fahrzeug</strong> sauber vorbereitet für Fotos und Video</li>
+  <li><strong>Klare Zeitplanung</strong> damit Ankunft, Porträts und kurze Fahrt sauber organisiert werden können</li>
+</ul>
 
+<div class="divider"></div>
 
+<h2>Beliebte Einsatzideen am Hochzeitstag</h2>
 
+<div class="routeCards">
+  <div class="card routeCard">
+    <div class="routeHead">
+      <h3 class="routeTitle">Ankunft zur Zeremonie</h3>
+      <div class="routeMeta">Elegant und unvergesslich</div>
+    </div>
+    <p>Ein starker Auftritt mit echter Präsenz. Der 458 macht die Ankunft besonders, ohne übertrieben zu wirken.</p>
+  </div>
 
+  <div class="card routeCard">
+    <div class="routeHead">
+      <h3 class="routeTitle">Porträt Session</h3>
+      <div class="routeMeta">Foto fokussiert und stilvoll</div>
+    </div>
+    <p>Das Auto funktioniert hervorragend für Paarporträts, Detailaufnahmen und kurze cineastische Sequenzen rund um die Location oder bei einem geplanten Fotostopp.</p>
+  </div>
 
+  <div class="card routeCard">
+    <div class="routeHead">
+      <h3 class="routeTitle">Geschenk für das Paar</h3>
+      <div class="routeMeta">Erinnerungswert statt Standard</div>
+    </div>
+    <p>Freunde oder Familie buchen den 458 manchmal als Überraschung. Das schafft einen echten Moment und bleibt dem Paar lange in Erinnerung.</p>
+  </div>
 
+  <div class="card routeCard">
+    <div class="routeHead">
+      <h3 class="routeTitle">Kurze Auszeit nach der Trauung</h3>
+      <div class="routeMeta">Ein privater Moment zu zweit</div>
+    </div>
+    <p>Viele Paare geniessen eine kurze Fahrt nach der Zeremonie, um kurz durchzuatmen und den Moment zu spüren, bevor es zurück zu den Gästen geht.</p>
+  </div>
+</div>
 
+<div class="divider"></div>
 
+<h2>Praktische Tipps für Ferrari Hochzeitsauto Miete in der Schweiz</h2>
+<ul>
+  <li><strong>Frühzeitig buchen.</strong> Beliebte Daten im Frühling und Sommer sind zuerst weg.</li>
+  <li><strong>Zeitpuffer einplanen.</strong> Eine Hochzeit profitiert immer von ein paar zusätzlichen Minuten.</li>
+  <li><strong>Dekoration nur schonend.</strong> Schleifen sind nach Absprache möglich. Kleber und alles, was den Lack markieren könnte, sollte vermieden werden.</li>
+  <li><strong>Route einfach halten.</strong> Eine Ankunft, ein Fotostopp oder eine kurze Fahrt funktionieren meist besser als ein überladener Ablauf.</li>
+  <li><strong>Die richtige Fahrperson wählen.</strong> Self drive bedeutet, dass die vorgesehene Fahrperson berechtigt, sicher und komplett alkoholfrei sein muss.</li>
+</ul>
 
+<div class="divider"></div>
 
+<h2>FAQ zum Ferrari Hochzeitsauto in Zürich</h2>
 
+<h3>Kann man den Ferrari 458 nur für ein paar Stunden mieten?</h3>
+<p>Ja. Viele Hochzeitsbuchungen sind bewusst kurz und konzentrieren sich auf Ankunft, Fotos und eine sauber geplante Fahrt.</p>
 
+<h3>Ist das ein Chauffeur Service?</h3>
+<p>Nein. Es ist ein Self drive Erlebnis mit privatem Host, nicht ein chauffierter Hochzeitsservice.</p>
 
+<h3>Kann das Auto zum Hotel oder nach Hause geliefert werden?</h3>
+<p>Ja, eine Lieferung in Zürich und Umgebung kann nach Termin und je nach Ablauf organisiert werden.</p>
 
+<h3>Muss im Voraus bezahlt werden?</h3>
+<p>Ja. Die Zahlung erfolgt im Voraus und vor Beginn der Buchung ist ein rückerstattbares Depot erforderlich.</p>
 
+<h3>Ist der Ferrari auch dann sinnvoll, wenn wir ihn nur kurz fahren?</h3>
+<p>Absolut. Viele Paare wählen den 458 vor allem für die Ankunft und die Fotografie, weil er Atmosphäre, Design und echtes Anlassgefühl mitbringt.</p>
 
-
-
-
-
+<div class="card callout" style="margin-top:1.1rem">
+  <div class="calloutTitle">Hochzeitsdatum anfragen</div>
+  <p class="calloutBody">Sende uns dein Datum, den ungefähren Ablauf und wie du das Auto nutzen möchtest. Wir bestätigen Verfügbarkeit, passendes Paket und Bedingungen klar und direkt.</p>
+</div>
 </div>
 <div class="ctaRow">
-<a class="ctaBtn" data-withlang="1" href="blog.html" id="backBlog">Zurück zum Journal</a>
-<a class="ctaBtn ctaBtnPrimary" data-withlang="1" href="../index.html#request" id="reqQuote">Verfügbarkeit anfragen</a>
+<a class="ctaBtn" data-withlang="1" href="blog.html" id="backBlog">Back to journal</a>
+<a class="ctaBtn ctaBtnPrimary" href="/de#request" id="reqQuote">Request availability</a>
 </div>
 <!-- Lightbox for gallery -->
 <div aria-hidden="true" aria-label="Gallery" class="lightbox" id="lightbox" role="dialog" tabindex="-1">
@@ -527,7 +682,7 @@ try {
 <footer>
 <div class="container footerInner">
 <div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
-<div class="footerCenter" id="footerCenter">Ferrari Only Erlebnisse, Schweiz.</div>
+<div class="footerCenter" id="footerCenter">Ferrari only experiences, Switzerland.</div>
 <div class="footerRight"><a data-withlang="1" href="../impressum.html" id="footerImpressum">Impressum</a></div>
 </div>
 </footer>
@@ -671,8 +826,8 @@ try {
 
   de: {
     pageTitle: "Luxury Obsession | Ferrari 458 Italia Hochzeitsauto mieten Zürich",
-    metaDesc: "Ferrari 458 Italia als Hochzeitsauto in Zürich und der Schweiz. Saugmotor V8, zeitloses Design, privater Host, klare Bedingungen, foto ready Erlebnis.",
-    ogDesc: "Saugmotor V8 Ikone für deinen Hochzeitstag. Privater Host, Abholung in Zürich nach Termin, klare Bedingungen, foto ready Ferrari 458 Italia Erlebnis.",
+    metaDesc: "Ferrari 458 Italia als Hochzeitsauto in Zürich und der Schweiz. Saugmotor V8, zeitloses Design, private Übergabe, klare Bedingungen und ein fotobereites Self drive Erlebnis.",
+    ogDesc: "Ferrari 458 Italia als Hochzeitsauto in Zürich. Zeitloses Design, Saugmotor V8 Emotion, privater Host, klare Bedingungen und ein fotobereites Self drive Erlebnis.",
 
     navRates:"Tarife",
     navPhilosophy:"Unsere Philosophie",
@@ -682,10 +837,10 @@ try {
     navRequest:"Anfrage",
     navImpressum:"Impressum",
 
-    eyebrow:"Luxury Obsession",
+    eyebrow:"Luxury Obsession Journal",
     titleA:"Ferrari 458 Italia",
-    titleB:"Hochzeitsauto mieten Zürich",
-    deck:"Eine Saugmotor V8 Ikone für den Hochzeitstag. Zeitloses Design, echte Emotion, und ruhiges Hosting mit klaren Bedingungen.",
+    titleB:"Hochzeitsauto mieten in Zürich",
+    deck:"Ein Ferrari Hochzeitsauto in Zürich, das zeitlos wirkt, stark fotografiert und sich wirklich besonders anfühlt. Privater Host, klare Bedingungen und ein Self drive Erlebnis rund um euren Tag.",
     back:"Zurück zum Journal",
     request:"Verfügbarkeit anfragen",
     footerCenter:"Ferrari Only Erlebnisse, Schweiz.",
@@ -1047,9 +1202,9 @@ window.__LO__renderPackages = async function(lang){
 };
 
 
-  const lang = window.__LO__.getLang();
+  const lang = "de";
   document.documentElement.lang = lang;
-  localStorage.setItem("lo_lang", lang);
+  try { localStorage.setItem("lo_lang", lang); } catch (e) {}
 
   function wireHamburgerFallback(){
     const btn = document.getElementById("hamburger");
@@ -1159,6 +1314,10 @@ window.__LO__renderPackages = async function(lang){
     if(el) el.href = value;
   };
 
+  setHref("navContact", "/de#contact");
+  setHref("navRequest", "/de#request");
+  setHref("reqQuote", "/de#request");
+
   // Nav labels
   setText("navRates", t.navRates);
   setText("navPhilosophy", t.navPhilosophy);
@@ -1184,9 +1343,7 @@ window.__LO__renderPackages = async function(lang){
   setText("reqQuote", t.request);
   setText("footerCenter", t.footerCenter);
   setText("footerImpressum", t.navImpressum);
-
-  // Body HTML
-  setHTML("articleBody", t.body);
+  // Body HTML is static in dedicated language pages for crawlability.
   if (window.__LO__renderPackages) { window.__LO__renderPackages(lang); }
 
   // Hero image alt text can remain English; keep consistent if needed later.

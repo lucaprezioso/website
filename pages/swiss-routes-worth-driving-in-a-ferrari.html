@@ -450,7 +450,7 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
 <button class="langOption" data-lang="it" role="menuitem" type="button">Italiano</button>
 </div>
 </div>
-<button aria-expanded="false" aria-label="menu" class="hamburger" id="hamburger" type="button">
+<button aria-expanded="false" aria-label="menu" class="hamburger" id="hamburger" type="button" onclick="return window.__LO_TOGGLE_MENU__ && window.__LO_TOGGLE_MENU__(event)">
 <div class="hamburgerLines"><span></span><span></span><span></span></div>
 </button>
 </div>
@@ -762,6 +762,63 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
 <div class="footerRight"><a data-withlang="1" href="../impressum.html" id="footerImpressum">Impressum</a></div>
 </div>
 </footer>
+<script>
+window.__LO_TOGGLE_MENU__ = function(event){
+  if(event){
+    try { event.preventDefault(); event.stopPropagation(); } catch(e) {}
+  }
+  var btn = document.getElementById("hamburger");
+  var menu = document.getElementById("mobileMenu");
+  if(!btn || !menu) return false;
+
+  if(menu.children.length === 0){
+    var desktop = Array.prototype.slice.call(document.querySelectorAll(".navLinks a"));
+    var normal = desktop.filter(function(a){ return !a.classList.contains("navCta"); });
+    var cta = desktop.find(function(a){ return a.classList.contains("navCta"); });
+
+    normal.forEach(function(a){
+      var clone = a.cloneNode(true);
+      clone.classList.remove("navCta");
+      menu.appendChild(clone);
+    });
+
+    var divider = document.createElement("div");
+    divider.className = "mobileMenuDivider";
+    menu.appendChild(divider);
+
+    if(cta){
+      var cloneCta = cta.cloneNode(true);
+      cloneCta.classList.remove("navCta");
+      cloneCta.classList.add("mobileMenuCta");
+      menu.appendChild(cloneCta);
+    }
+  }
+
+  var isOpen = menu.getAttribute("data-open") === "1";
+  if(isOpen){
+    menu.style.display = "none";
+    menu.setAttribute("data-open", "0");
+    btn.setAttribute("aria-expanded", "false");
+  } else {
+    menu.style.display = "block";
+    menu.setAttribute("data-open", "1");
+    btn.setAttribute("aria-expanded", "true");
+  }
+  return false;
+};
+
+window.addEventListener("click", function(event){
+  var btn = document.getElementById("hamburger");
+  var menu = document.getElementById("mobileMenu");
+  if(!btn || !menu) return;
+  if(menu.getAttribute("data-open") !== "1") return;
+  if(btn.contains(event.target) || menu.contains(event.target)) return;
+  menu.style.display = "none";
+  menu.setAttribute("data-open", "0");
+  btn.setAttribute("aria-expanded", "false");
+}, true);
+</script>
+
 <script>(function(){
   const lang = "en";
   document.documentElement.lang = "en";
@@ -828,9 +885,13 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
     close();
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
+  function initLocalizedPageUI(){
     const lo = window.__LO__;
-    if(lo && typeof lo.initLangMenu === "function") lo.initLangMenu(lang);
+    try {
+      if(lo && typeof lo.initLangMenu === "function") lo.initLangMenu(lang);
+    } catch (e) {
+      console.warn("initLangMenu failed", e);
+    }
 
     const setHref = (id, value) => {
       const el = document.getElementById(id);
@@ -851,7 +912,10 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
 
     const year = document.getElementById("year");
     if(year) year.textContent = String(new Date().getFullYear());
-  });
+  }
+
+  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", initLocalizedPageUI, { once:true });
+  else initLocalizedPageUI();
 })();
 </script>
 

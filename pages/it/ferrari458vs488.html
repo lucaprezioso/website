@@ -3,19 +3,19 @@
 <html lang="it">
 <head>
 <meta charset="utf-8"/>
-<title>Luxury Obsession | Ferrari 458 vs 488</title>
-<meta content="Ferrari 458 vs 488. Un confronto in chiave Svizzera, ispirato a The Car Guys, pensato per una guida di lusso in Svizzera." name="description"/>
+<title>Ferrari 458 vs 488 in Svizzera | Luxury Obsession</title>
+<meta content="Ferrari 458 vs 488 in Svizzera. Un confronto orientato al guidatore tra sound, sensazioni, facilità d’uso e perché la 458 resta così speciale sulle strade svizzere." name="description"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="index, follow" name="robots"/>
-<meta content="Luxury Obsession | Ferrari 458 vs 488" property="og:title"/>
-<meta content="Ferrari 458 vs 488. Un confronto in chiave Svizzera, ispirato a The Car Guys, pensato per una guida di lusso in Svizzera." property="og:description"/>
+<meta content="index, follow" name="robots"/><meta content="Luxury Obsession" name="author"/><meta content="#050509" name="theme-color"/><meta content="https://luxuryobsession.ch/it/ferrari458vs488" property="og:url"/><meta content="it_CH" property="og:locale"/><meta content="2026-01-30" property="article:published_time"/><meta content="2026-03-20" property="article:modified_time"/>
+<meta content="Ferrari 458 vs 488 in Svizzera | Luxury Obsession" property="og:title"/>
+<meta content="Ferrari 458 vs 488 in Svizzera. Un confronto orientato al guidatore tra sound, sensazioni, facilità d’uso e perché la 458 resta così speciale sulle strade svizzere." property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="https://luxuryobsession.ch/media/ogimage.jpg" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Luxury Obsession | Ferrari 458 vs 488" name="twitter:title"/>
-<meta content="Ferrari 458 vs 488. Un confronto in chiave Svizzera, ispirato a The Car Guys, pensato per una guida di lusso in Svizzera." name="twitter:description"/>
+<meta content="Ferrari 458 vs 488 in Svizzera | Luxury Obsession" name="twitter:title"/>
+<meta content="Ferrari 458 vs 488 in Svizzera. Un confronto orientato al guidatore tra sound, sensazioni, facilità d’uso e perché la 458 resta così speciale sulle strade svizzere." name="twitter:description"/>
 <meta content="https://luxuryobsession.ch/media/ogimage.jpg" name="twitter:image"/>
 <link href="../media/icon.webp" rel="icon" type="image/webp"/>
 <link href="../favicon.ico" rel="icon" sizes="any"/>
@@ -310,30 +310,34 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
   </style>
 <script>
 (function(){
+  const CURRENT_LANG = "it";
   const LANGS = ["en","de","it"];
+  const PAGE_MAP = {
+    en: "/en/ferrari458vs488",
+    de: "/de/ferrari458vs488",
+    it: "/it/ferrari458vs488"
+  };
 
   function getLang(){
-    const p = new URLSearchParams(window.location.search);
-    const q = p.get("lang");
-    if(q && LANGS.includes(q)) return q;
-    const s = localStorage.getItem("lo_lang");
-    if(s && LANGS.includes(s)) return s;
-    return "en";
+    return CURRENT_LANG;
   }
 
   function setLang(next){
     if(!LANGS.includes(next)) return;
-    localStorage.setItem("lo_lang", next);
-    const u = new URL(window.location.href);
-    u.searchParams.set("lang", next);
-    window.location.href = u.pathname + u.search + u.hash;
+    try { localStorage.setItem("lo_lang", next); } catch(e) {}
+    const target = PAGE_MAP[next] || PAGE_MAP[CURRENT_LANG];
+    if(target) window.location.href = target;
   }
 
   function buildUrl(path, lang, hash){
-    const u = new URL(path, window.location.href);
-    u.searchParams.set("lang", lang);
-    if(hash) u.hash = hash;
-    return u.pathname + u.search + u.hash;
+    try{
+      const u = new URL(path, window.location.href);
+      u.searchParams.set("lang", lang || CURRENT_LANG);
+      if(hash) u.hash = hash;
+      return u.pathname + u.search + u.hash;
+    }catch(e){
+      return path;
+    }
   }
 
   function initLangMenu(lang){
@@ -343,7 +347,7 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
     if(!toggle || !menu || !codeEl) return;
 
     const codes = { en:"EN", de:"DE", it:"IT" };
-    codeEl.textContent = codes[lang] || "EN";
+    codeEl.textContent = codes[lang] || codes[CURRENT_LANG];
 
     function close(){
       menu.hidden = true;
@@ -406,7 +410,7 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
 
   window.__LO__ = { getLang, setLang, buildUrl, initLangMenu, initHamburger };
 })();
-  </script>
+</script>
 <link href="../assets/lo.css" rel="stylesheet"/><script defer="" src="../assets/lo.js"></script><script>
 try {
   localStorage.setItem("lo_lang", "it");
@@ -416,7 +420,7 @@ try {
     window.history.replaceState(null, "", u.pathname + u.hash);
   }
 } catch (e) {}
-</script></head>
+</script><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Ferrari 458 vs 488 in Svizzera | Luxury Obsession","description":"Ferrari 458 vs 488 in Svizzera. Un confronto orientato al guidatore tra sound, sensazioni, facilità d’uso e perché la 458 resta così speciale sulle strade svizzere.","image":["https://luxuryobsession.ch/media/ogimage.jpg"],"author":{"@type":"Organization","name":"Luxury Obsession"},"publisher":{"@type":"Organization","name":"Luxury Obsession","logo":{"@type":"ImageObject","url":"https://luxuryobsession.ch/media/icon.webp"}},"datePublished":"2026-01-30","dateModified":"2026-03-20","inLanguage":"it","mainEntityOfPage":{"@type":"WebPage","@id":"https://luxuryobsession.ch/it/ferrari458vs488"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"La Ferrari 488 è migliore della 458 sulla carta?","acceptedAnswer":{"@type":"Answer","text":"Sì. La 488 è più nuova, più potente e più veloce. Molti guidatori però continuano a preferire la 458 per sound, linearità e coinvolgimento emotivo."}},{"@type":"Question","name":"Perché la Ferrari 458 è così adatta alla Svizzera?","acceptedAnswer":{"@type":"Answer","text":"Perché in Svizzera conta spesso il ritmo della strada, il panorama e la precisione più della velocità assoluta. La 458 si gusta molto bene a velocità realistiche."}},{"@type":"Question","name":"Quale Ferrari sceglierebbe Luxury Obsession per una giornata speciale da Zurigo?","acceptedAnswer":{"@type":"Answer","text":"Per un’esperienza ospitata e memorabile, la Ferrari 458 Italia resta di solito la scelta più emozionante."}}]}]}</script></head>
 <body>
 <header>
 <div class="container">
@@ -431,8 +435,8 @@ try {
 <a data-i18n="nav_philosophy" data-withlang="1" href="../philosophy.html" id="navPhilosophy">La nostra filosofia</a>
 <a data-i18n="nav_experiences" data-withlang="1" href="../experiences.html" id="navExperiences">Esperienze</a>
 <a data-i18n="nav_journal" data-withlang="1" href="blog.html" id="navBlog">Journal</a>
-<a data-i18n="nav_contact" data-withlang="1" href="../index.html#contact" id="navContact">Contatto</a>
-<a class="navCta" data-i18n="nav_request" data-withlang="1" href="../index.html#request" id="navRequest">Richiesta</a>
+<a data-i18n="nav_contact" href="/it#contact" id="navContact">Contatti</a>
+<a class="navCta" data-i18n="nav_request" href="/it#request" id="navRequest">Richiesta</a>
 </nav>
 <div aria-label="Language" class="langSelect">
 <button aria-expanded="false" aria-haspopup="menu" class="langToggle" id="langToggle" type="button">
@@ -456,254 +460,141 @@ try {
 <main>
 <section class="hero">
 <div class="container articleWrap">
-<div class="eyebrow" id="eyebrow">Luxury Obsession</div>
-<h1 class="heroTitle"><span id="titleA">Ferrari 458 vs 488</span> <span class="heroHighlight" id="titleB">la 458 è quella che ricordi</span></h1>
-<p class="heroDeck" id="deck">La 488 è più nuova e più veloce. Ma nel confronto di The Car Guys la 458 conquista per emozione, suono e connessione. Per un appassionato, è la scelta più memorabile.</p>
-<div class="meta" id="metaDate">2026 01 30</div>
+<div class="eyebrow" id="eyebrow">Luxury Obsession Journal</div>
+<h1 class="heroTitle"><span id="titleA">Ferrari 458 vs 488</span> <span class="heroHighlight" id="titleB">quale Ferrari ha più senso in Svizzera?</span></h1>
+<p class="heroDeck" id="deck">La 488 è più nuova, più rapida e più muscolosa. La 458 è più leggera nelle reazioni, più ricca nel sound e più emozionante a velocità reali. In Svizzera, questa differenza conta.</p>
+<div class="meta" id="metaDate">2026 03 20</div>
 <div class="prose" id="articleBody">
+<p>Ferrari 458 Italia e Ferrari 488 GTB sono vicine abbastanza da essere confrontate in modo naturale, ma su strada regalano emozioni molto diverse. Se stai cercando di capire quale Ferrari abbia più senso per un’esperienza di lusso in Svizzera, la risposta non dipende solo dai numeri. Conta il modo in cui l’auto ti accompagna su strade vere, con scenari bellissimi, ritmo fluido e velocità realistiche.</p>
 
+        <p>La 488 è oggettivamente la più veloce e la più moderna. Ha più coppia, più spinta immediata e una facilità impressionante nel prendere velocità. La 458 però è l’ultima berlinetta V8 aspirata di questa linea, e questo cambia completamente il carattere dell’esperienza. Sulle strade svizzere, dove precisione, sound, atmosfera e piacere di guida spesso contano più della pura accelerazione, la 458 resta per molti la Ferrari più memorabile.</p>
 
+        <div class="card callout" style="margin:1.1rem 0 0">
+          <div class="calloutTitle">In breve</div>
+          <p class="calloutBody">Scegli la 488 se vuoi la Ferrari più moderna ed efficace. Scegli la 458 se vuoi la Ferrari più emotiva, più sonora e più memorabile per la Svizzera.</p>
+        </div>
 
+        <div class="divider"></div>
 
+        <h2>Colpo d’occhio</h2>
+        <div class="tableWrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Area</th>
+                <th>Ferrari 458 Italia</th>
+                <th>Ferrari 488 GTB</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carattere del motore</td>
+                <td>V8 aspirato 4,5 litri, lineare, affamato di giri, teatrale</td>
+                <td>V8 biturbo 3,9 litri, coppia enorme, più veloce ovunque</td>
+              </tr>
+              <tr>
+                <td>Sound</td>
+                <td>Cresce con chiarezza, inconfondibilmente Ferrari</td>
+                <td>Più profondo e muscoloso, ma meno operistico</td>
+              </tr>
+              <tr>
+                <td>Feeling su strada</td>
+                <td>Leggera, comunicativa, facile da godere a ritmi umani</td>
+                <td>Molto efficace, molto rapida, più seria nel carattere</td>
+              </tr>
+              <tr>
+                <td>Adatta alla Svizzera</td>
+                <td>Perfetta per passi, tunnel, strade sul lago e gite panoramiche</td>
+                <td>Perfetta per grande spinta e passo da GT moderna</td>
+              </tr>
+              <tr>
+                <td>Richiamo emotivo</td>
+                <td>Di solito lascia il ricordo più forte</td>
+                <td>Di solito offre il numero più impressionante</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
+        <h2>Cosa cambia davvero dalla 458 alla 488</h2>
+        <p>Ferrari non ha semplicemente reso la 458 più veloce. Con la 488 ha cambiato il modo in cui arriva la prestazione. Il V8 turbo regala molta più spinta ai bassi, sorpassi più facili e una sensazione generale di efficacia moderna. Se giudichi le due auto solo dalla prestazione pura, la 488 vince senza difficoltà.</p>
 
+        <p>Proprio per questo la 458 continua ad avere un fascino speciale. La sua prestazione si costruisce in modo diverso. Devi cercare i giri, sentire il motore che si affila, partecipare di più. La velocità arriva con dramma, non solo con forza. È questa qualità, più stratificata e più coinvolgente, che per tanti appassionati rende ancora oggi la 458 così desiderabile.</p>
 
+        <h2>Perché la 458 funziona così bene in Svizzera</h2>
+        <p>La Svizzera non è un posto in cui si può sfruttare continuamente una potenza estrema su strada aperta. In compenso offre ritmo: passi alpini, strade sul lago, tunnel, mattine pulite e panorami che fanno sembrare ogni uscita più importante. La 458 si inserisce perfettamente in questo contesto. Si sente viva senza richiedere velocità assurde per essere apprezzata davvero.</p>
 
+        <p>Questo vale ancora di più se la giornata comincia da Zurigo. Spesso non si cerca una dimostrazione di forza in autostrada, ma un itinerario elegante, vario e memorabile. In quel contesto la 458 è spesso lo strumento più raffinato. È speciale dal primo metro e continua a esserlo quando la strada diventa più stretta, più tecnica o più rilassata.</p>
 
+        <h2>Dove la 488 è superiore</h2>
+        <p>Tutto questo non toglie nulla alla 488. È una Ferrari eccellente. La coppia è coinvolgente, la stabilità è notevole e il modo in cui accumula velocità è impressionante. Se vuoi l’interpretazione più moderna della Ferrari V8 centrale, la 488 è la risposta più logica. È più facile da guidare forte e trasmette quella sensazione di prestazione immediata che molti cercano.</p>
 
+        <p>Per alcuni guidatori è proprio questo il punto. Preferiscono la spinta poderosa del turbo, la maggiore facilità nel ritmo alto e la superiorità oggettiva in termini di performance. Sotto questo aspetto, la 488 è chiaramente l’evoluzione.</p>
+
+        <h2>Sound, risposta del gas e presenza scenica</h2>
+        <p>L’argomento più forte a favore della 458 non è la nostalgia, ma la qualità sensoriale. Il V8 aspirato non suona solo in modo più romantico. Suona in modo più pulito e progressivo. La risposta dell’acceleratore è più lineare e il legame tra piede, motore e strada è più diretto. Ogni tunnel, ogni scalata e ogni accelerazione ben dosata sembrano più intenzionali.</p>
+
+        <p>C’è poi la questione dell’immagine. La 458 ha qualcosa di già classico nella sua linea Pininfarina. Le proporzioni sono eleganti, l’abitacolo è focalizzato e l’insieme ha una purezza che oggi è diventata più rara. La 488 è più aggressiva. La 458 è più senza tempo.</p>
+
+        <h2>Quale Ferrari sceglieremmo per un’esperienza da Zurigo?</h2>
+        <p>Per un’esperienza Luxury Obsession in Svizzera continueremmo a orientarci sulla Ferrari 458 Italia. Non perché alla 488 manchi qualcosa, ma perché la 458 trasforma più momenti della giornata in ricordo. Si abbina bene a itinerari curati, consegne tranquille, strade panoramiche, salite verso i passi e a quel mix di stile ed emozione che rende speciale una vera giornata Ferrari.</p>
+
+        <h2>Conclusione</h2>
+        <p>Se vuoi la risposta più veloce, scegli la 488. Se vuoi la Ferrari che tende a rimanerti addosso dopo la guida, scegli la 458. In Svizzera questa differenza diventa ancora più chiara. Le strade premiano sensibilità, sound e connessione, e la 458 continua a offrire tutti e tre in modo straordinariamente completo.</p>
+
+        <div class="divider"></div>
+
+        <h2>Come appare questo confronto nel video</h2>
+        <p>La base di questo articolo è il video di The Car Guys dedicato a Ferrari 458 Italia e Ferrari 488 GTB. È utile proprio perché non si ferma ai numeri. Parla anche di suono, design, abitacolo, utilizzo nel tempo e di quale Ferrari riesca a lasciare più sensazioni su una strada vera.</p>
+
+        <p>Nel corso del video il giudizio prende forma in modo abbastanza naturale. La 488 resta la scelta più moderna e più veloce in senso assoluto. La 458 continua però a vincere per suono, risposta lineare, leggerezza e carattere. È esattamente il tipo di differenza che in Svizzera conta più della sola brutalità.</p>
+
+        <h2>Guarda il video</h2>
+        <p>Guarda l episodio completo e sentirai come il loro giudizio si forma mentre passano da un auto all altra e valutano ogni categoria.</p>
+
+        <div class="card" style="margin-top:0.9rem; padding:0; overflow:hidden">
+          <div style="position:relative; width:100%; padding-top:56.25%">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/i6jAD2p9Q2o?rel=0"
+              title="Ferrari 458 vs 488 video"
+              style="position:absolute; inset:0; width:100%; height:100%; border:0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <p style="margin-top:0.85rem">
+          <a class="ctaBtn ctaBtnPrimary" href="https://www.youtube.com/watch?v=i6jAD2p9Q2o&amp;pp=ygUMdGhlIGNhciBndXlz0gcJCXwKAYcqIYzv" target="_blank" rel="noopener">Apri su YouTube</a>
+        </p>
 
 </div>
 <div class="ctaRow">
-<a class="ctaBtn" data-withlang="1" href="blog.html" id="backBlog">Torna al Journal</a>
-<a class="ctaBtn ctaBtnPrimary" data-withlang="1" href="../index.html#request" id="reqQuote">Richiedi disponibilità</a>
+<a class="ctaBtn" data-withlang="1" href="blog.html" id="backBlog">Torna al journal</a>
+<a class="ctaBtn ctaBtnPrimary" href="/it#request" id="reqQuote">Richiedi disponibilità</a>
 </div>
 </div></section>
 </main>
 <footer>
 <div class="container footerInner">
 <div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
-<div class="footerCenter" id="footerCenter">Esperienze Ferrari only, Svizzera.</div>
+<div class="footerCenter" id="footerCenter">Esperienze Ferrari in Svizzera.</div>
 <div class="footerRight"><a data-withlang="1" href="../impressum.html" id="footerImpressum">Impressum</a></div>
 </div>
 </footer>
 <script>
 (function(){
-  const I18N = {
-    en: {
-      pageTitle: "Luxury Obsession | Ferrari 458 vs 488",
-      metaDesc: "Ferrari 458 vs 488. A Swiss framed comparison inspired by The Car Guys, and designed for luxury driving in Switzerland.",
-      ogDesc: "Ferrari 458 vs 488. A Swiss framed comparison inspired by The Car Guys, and designed for luxury driving in Switzerland.",
+  const lang = "it";
 
-      navRates:"Rates",
-      navPhilosophy:"Our Philosophy",
-      navExperiences:"Experiences",
-      navBlog:"Journal",
-      navContact:"Contact",
-      navRequest:"Request",
-      navImpressum:"Impressum",
+const setHref = (id, value) => {
+  const el = document.getElementById(id);
+  if(el) el.href = value;
+};
 
-      eyebrow:"Luxury Obsession",
-      titleA:"Ferrari 458 vs 488",
-      titleB:"the 458 is the one you remember",
-      deck:"The 488 is the newer and faster car. But in The Car Guys back to back test, category after category keeps pulling them toward the 458. It is the last naturally aspirated V8 berlinetta of its line, and it delivers the kind of connection that makes an enthusiast take the long way home.",
-      back:"Back to journal",
-      request:"Request availability",
-      footerCenter:"Ferrari only experiences, Switzerland.",
+setHref("navContact", "/it#contact");
+setHref("navRequest", "/it#request");
+setHref("reqQuote", "/it#request");
 
-      body: `
-        <p>Ferrari 458 Italia versus 488 GTB is one of those debates where both sides are right, depending on what you want. The Car Guys approach it the way enthusiasts actually think about cars. They put a new 488 GTB against Damian’s long term 458 Italia and score them on performance, noise, exterior looks, cabin quality, and long term ownership and value.</p>
-
-        <p>Here is what matters for this article. The episode leans heavily toward the 458. In fact, some viewers on owner forums joked that The Car Guys sounded almost pre decided to prefer the 458 because so many categories ended up in its favour. That is exactly why the 458 is still the dream pick for a driver first experience.</p>
-
-        <div class="card callout" style="margin:1.1rem 0 0">
-          <div class="calloutTitle">Quick read</div>
-          <p class="calloutBody">If you want the quickest, most capable tool, the 488 is hard to beat. If you want the most memorable Ferrari moment, the 458 wins on emotion, sound, and connection.</p>
-        </div>
-
-        <div class="divider"></div>
-
-        <h2>Why the 458 feels special from the first kilometer</h2>
-        <p>The 458 is the last naturally aspirated, mid engine V8 Ferrari berlinetta before the turbo era took over. On paper the 488 rewrites the numbers, especially torque. On the road, the 458 rewrites your mood. It builds drama with revs, it rewards precise inputs, and it makes every tunnel, every downshift, and every clean corner feel like a scene.</p>
-
-        <h2>Performance: the 488 wins the stopwatch, the 458 wins the road</h2>
-        <p>The Car Guys are clear that the 488 is ferociously fast. Turbo torque makes it feel effortless and brutally effective. But that same ease is the reason the 458 is often more fun at sane speeds. Switzerland is perfect for this. Alpine hairpins, lakeside sweepers, and short straights reward balance and rhythm more than outright thrust. The 458 lets you use more of the car more of the time.</p>
-
-        <div class="grid2" style="margin:1rem 0">
-          <div class="card">
-            <h3 style="margin:0 0 .35rem">488 GTB</h3>
-            <p style="margin:0">Incredible shove and traction. You get to serious speed immediately, and you spend more time managing speed than building it.</p>
-          </div>
-          <div class="card">
-            <h3 style="margin:0 0 .35rem">458 Italia</h3>
-            <p style="margin:0">You create the pace. Gear selection matters. Rev chasing feels addictive. It is engaging without needing reckless speed.</p>
-          </div>
-        </div>
-
-        <h2>Noise: the 458 is the soundtrack of the era</h2>
-        <p>Owners always bring it back to the same point: a naturally aspirated Ferrari V8 at high revs is not just louder, it is clearer. It is a signal you drive with. The 488 can sound strong, and The Car Guys even ask whether it has soul in their 488 review, but the character is different. If your idea of Ferrari includes a rising scream and a clean, instant response, the 458 is the one.</p>
-
-        <h2>Steering and throttle: linearity is the magic word</h2>
-        <p>A big reason enthusiasts love the 458 is how honest it feels. Inputs translate directly. Throttle response is beautifully linear, and that helps you place the car on a tight road with confidence. In forum discussions about this exact episode, even people who prefer the 488 often concede that sound, looks, and that naturally aspirated throttle feel are the core reasons to choose a 458.</p>
-
-        <div class="divider"></div>
-
-        <h2>Exterior and interior: modern aggression versus timeless purity</h2>
-        <p>The 488 looks more aggressive and aerodynamic. The 458 looks cleaner and more sculptural. It is the modern Pininfarina classic that already feels timeless. Inside, the 488 is a touch newer, but the 458 still delivers that pure Ferrari cockpit feeling with the manettino, the shift lights, and the sense that the whole car is built around the driver.</p>
-
-        <h2>Long term ownership and value: the 458 is proven</h2>
-        <p>The Car Guys bring a rare ingredient to this comparison: long term experience. They have lived with a 458 as a daily style Ferrari over thousands of miles and even ask the big question in their long term review: could it be the best modern Ferrari ever made. That matters, because it turns the 458 from a poster car into a real, usable thrill. They also note the context of their comparison: a 15k mile 458 Italia versus an 800 mile 488 GTB, both unmodified, with performance figures quoted from their own cars.</p>
-
-        <div class="card callout" style="margin-top:1rem">
-          <div class="calloutTitle">The Luxury Obsession view</div>
-          <p class="calloutBody">For a car enthusiast in Switzerland, the 458 Italia is the sweet spot. Modern enough to feel confident, raw enough to feel alive, and iconic enough to turn every stop into an occasion.</p>
-        </div>
-
-        <h2>Rent the one with the soul</h2>
-        <p>We offer a Ferrari 458 Italia for rent in Zurich as a luxury experience in Switzerland. Think alpine passes, lake roads, and the kind of tunnel runs that make you laugh out loud. The 488 is brilliant, but the 458 is the one that stays with you.</p>
-
-        <h2>Watch the episode</h2>
-        <p>Watch the full video and you will feel how their opinion forms as they swap cars and score each category.</p>
-
-        <div class="card" style="margin-top:0.9rem; padding:0; overflow:hidden">
-          <div style="position:relative; width:100%; padding-top:56.25%">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/i6jAD2p9Q2o?rel=0"
-              title="Ferrari 458 vs 488 video"
-              style="position:absolute; inset:0; width:100%; height:100%; border:0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-
-        <p style="margin-top:0.85rem">
-          <a class="ctaBtn ctaBtnPrimary" href="https://www.youtube.com/watch?v=i6jAD2p9Q2o&pp=ygUMdGhlIGNhciBndXlz0gcJCXwKAYcqIYzv" target="_blank" rel="noopener">Open on YouTube</a>
-        </p>
-`
-    },
-
-    de: {
-      pageTitle: "Luxury Obsession | Ferrari 458 vs 488",
-      metaDesc: "Ferrari 458 vs 488. Ein Vergleich im Schweizer Rahmen, inspiriert von The Car Guys, für luxuriöses Fahren in der Schweiz.",
-      ogDesc: "Ferrari 458 vs 488. Ein Vergleich im Schweizer Rahmen, inspiriert von The Car Guys, für luxuriöses Fahren in der Schweiz.",
-
-      navRates:"Tarife",
-      navPhilosophy:"Unsere Philosophie",
-      navExperiences:"Erlebnisse",
-      navBlog:"Journal",
-      navContact:"Kontakt",
-      navRequest:"Anfrage",
-      navImpressum:"Impressum",
-
-      eyebrow:"Luxury Obsession",
-      titleA:"Ferrari 458 vs 488",
-      titleB:"der 458 bleibt im Kopf",
-      deck:"Der 488 ist neuer und schneller. Doch im direkten Vergleich von The Car Guys gewinnt der 458 immer wieder über Emotion, Sound und Verbindung. Für Enthusiasten ist er der Ferrari Moment.",
-      back:"Zurück zum Journal",
-      request:"Verfügbarkeit anfragen",
-      footerCenter:"Ferrari Only Erlebnisse, Schweiz.",
-
-      body: `
-        <p>Ferrari 458 Italia versus 488 GTB ist eine Diskussion ohne Ende. The Car Guys vergleichen beide so, wie Enthusiasten es wirklich tun: Performance, Sound, Design, Innenraum, Langzeitbesitz und Wert. Und der Ton des Videos ist klar: sehr viel Sympathie für den 458.</p>
-
-        <p>In Foren wird sogar gewitzelt, dass sie fast schon festgelegt waren, den 458 zu bevorzugen, weil Kategorie für Kategorie in seine Richtung kippt. Genau dieses Gefühl wollen viele Fahrer: weniger Tool, mehr Erlebnis.</p>
-
-        <div class="card callout" style="margin:1.1rem 0 0">
-          <div class="calloutTitle">Kurzfazit</div>
-          <p class="calloutBody">488: brutale Kompetenz. 458: Sound, Linearität und Gänsehaut. Wenn du den Ferrari suchst, der dich emotional packt, ist es der 458.</p>
-        </div>
-
-        <div class="divider"></div>
-
-        <h2>Warum der 458 so besonders ist</h2>
-        <p>Der 458 ist der letzte Saug V8 Mittelmotor Berlinetta dieser Linie. Der 488 ist schneller, keine Frage. Der 458 ist jedoch auf echten Strassen oft die bessere Zeit, weil du mehr vom Auto nutzen kannst, ohne gleich im illegalen Bereich zu sein.</p>
-
-        <h2>Sound und Verbindung</h2>
-        <p>Ein hochdrehender Saug V8 ist ein Erlebnis. Der 458 liefert genau dieses klare, steigende Ferrari Gefühl. Viele, die den 488 wählen, geben trotzdem zu: Sound, Optik und die lineare Gasannahme sind die Hauptargumente für den 458.</p>
-
-        <h2>Luxury Obsession in Zurich</h2>
-        <p>Wir bieten den Ferrari 458 Italia zur Miete in Zurich als Luxus Erlebnis in der Schweiz. Pässe, Seestrassen, Tunnel. Der 488 ist beeindruckend. Der 458 bleibt im Herzen.</p>
-
-        <h2>Episode ansehen</h2>
-        <div class="card" style="margin-top:0.9rem; padding:0; overflow:hidden">
-          <div style="position:relative; width:100%; padding-top:56.25%">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/i6jAD2p9Q2o?rel=0"
-              title="Ferrari 458 vs 488 Video"
-              style="position:absolute; inset:0; width:100%; height:100%; border:0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-
-        <p style="margin-top:0.85rem">
-          <a class="ctaBtn ctaBtnPrimary" href="https://www.youtube.com/watch?v=i6jAD2p9Q2o&pp=ygUMdGhlIGNhciBndXlz0gcJCXwKAYcqIYzv" target="_blank" rel="noopener">Auf YouTube öffnen</a>
-        </p>
-`
-    },
-
-    it: {
-      pageTitle: "Luxury Obsession | Ferrari 458 vs 488",
-      metaDesc: "Ferrari 458 vs 488. Un confronto in chiave Svizzera, ispirato a The Car Guys, pensato per una guida di lusso in Svizzera.",
-      ogDesc: "Ferrari 458 vs 488. Un confronto in chiave Svizzera, ispirato a The Car Guys, pensato per una guida di lusso in Svizzera.",
-
-      navRates:"Tariffe",
-      navPhilosophy:"La nostra filosofia",
-      navExperiences:"Esperienze",
-      navBlog:"Journal",
-      navContact:"Contatto",
-      navRequest:"Richiesta",
-      navImpressum:"Impressum",
-
-      eyebrow:"Luxury Obsession",
-      titleA:"Ferrari 458 vs 488",
-      titleB:"la 458 è quella che ricordi",
-      deck:"La 488 è più nuova e più veloce. Ma nel confronto di The Car Guys la 458 conquista per emozione, suono e connessione. Per un appassionato, è la scelta più memorabile.",
-      back:"Torna al Journal",
-      request:"Richiedi disponibilità",
-      footerCenter:"Esperienze Ferrari only, Svizzera.",
-
-      body: `
-        <p>Ferrari 458 Italia contro 488 GTB è una di quelle scelte dove entrambe hanno senso. The Car Guys le confrontano sulle cose che contano: prestazioni, suono, linee, abitacolo, possesso nel tempo e valore. E il loro tono è chiaramente molto favorevole alla 458.</p>
-
-        <p>Nei forum qualcuno scherza che sembravano già decisi a preferire la 458, perché tante categorie finiscono dalla sua parte. È proprio questo che rende la 458 l esperienza da appassionato.</p>
-
-        <div class="card callout" style="margin:1.1rem 0 0">
-          <div class="calloutTitle">In breve</div>
-          <p class="calloutBody">488: efficacia e velocità. 458: suono, risposta lineare e pelle d oca. Se vuoi il Ferrari che ti resta addosso, è la 458.</p>
-        </div>
-
-        <div class="divider"></div>
-
-        <h2>Perché la 458 è speciale</h2>
-        <p>È l ultima V8 aspirata a motore centrale in questa famiglia. La 488 vince sul cronometro, ma su strada spesso la 458 è più divertente perché puoi usare più dell auto a velocità più ragionevoli.</p>
-
-        <h2>Luxury Obsession a Zurich</h2>
-        <p>Noleggio Ferrari 458 Italia a Zurich come esperienza di lusso in Svizzera. Passi alpini, strade sul lago, tunnel. La 488 impressiona. La 458 emoziona.</p>
-
-        <h2>Guarda il video</h2>
-        <div class="card" style="margin-top:0.9rem; padding:0; overflow:hidden">
-          <div style="position:relative; width:100%; padding-top:56.25%">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/i6jAD2p9Q2o?rel=0"
-              title="Ferrari 458 vs 488 video"
-              style="position:absolute; inset:0; width:100%; height:100%; border:0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-
-        <p style="margin-top:0.85rem">
-          <a class="ctaBtn ctaBtnPrimary" href="https://www.youtube.com/watch?v=i6jAD2p9Q2o&pp=ygUMdGhlIGNhciBndXlz0gcJCXwKAYcqIYzv" target="_blank" rel="noopener">Apri su YouTube</a>
-        </p>
-`
-    }
-  };
-  const lang = window.__LO__.getLang();
-  document.documentElement.lang = lang;
-  localStorage.setItem("lo_lang", lang);
 
   function wireHamburgerFallback(){
     const btn = document.getElementById("hamburger");
@@ -781,151 +672,10 @@ try {
       const href = a.getAttribute("href");
       if(href && lo && lo.buildUrl) a.setAttribute("href", lo.buildUrl(href, lang));
     });
+
+    const year = document.getElementById("year");
+    if(year) year.textContent = String(new Date().getFullYear());
   });
-
-  // Apply lang params immediately for visible links
-  document.querySelectorAll("[data-withlang='1']").forEach(a => {
-    const href = a.getAttribute("href");
-    if(href && window.__LO__ && window.__LO__.buildUrl) a.setAttribute("href", window.__LO__.buildUrl(href, lang));
-  });
-
-
-  const t = I18N[lang] || I18N.en;
-
-  // Update head metadata
-  document.title = t.pageTitle;
-  const md = document.querySelector('meta[name="description"]');
-  if(md) md.setAttribute("content", t.metaDesc);
-  const ogd = document.querySelector('meta[property="og:description"]');
-  if(ogd) ogd.setAttribute("content", t.ogDesc);
-
-  // Text helpers
-  const setText = (id, value) => {
-    const el = document.getElementById(id);
-    if(el) el.textContent = value;
-  };
-  const setHTML = (id, value) => {
-    const el = document.getElementById(id);
-    if(el) el.innerHTML = value;
-  };
-  const setHref = (id, value) => {
-    const el = document.getElementById(id);
-    if(el) el.href = value;
-  };
-
-  // Nav labels
-  setText("navRates", t.navRates);
-  setText("navPhilosophy", t.navPhilosophy);
-  setText("navExperiences", t.navExperiences);
-  setText("navBlog", t.navBlog);
-  setText("navContact", t.navContact);
-  setText("navRequest", t.navRequest);
-
-  setText("mRates", t.navRates);
-  setText("mPhilosophy", t.navPhilosophy);
-  setText("mExperiences", t.navExperiences);
-  setText("mBlog", t.navBlog);
-  setText("mContact", t.navContact);
-  setText("mImpressum", t.navImpressum);
-  setText("mRequest", t.navRequest);
-
-  // Article header
-  setText("eyebrow", t.eyebrow);
-  setText("titleA", t.titleA);
-  setText("titleB", t.titleB);
-  setText("deck", t.deck);
-  setText("backBlog", t.back);
-  setText("reqQuote", t.request);
-  setText("footerCenter", t.footerCenter);
-  setText("footerImpressum", t.navImpressum);
-
-  // Body HTML
-  setHTML("articleBody", t.body);
-
-  // Hero image alt text can remain English; keep consistent if needed later.
-
-  // Image fallback placeholders
-  function svgPlaceholder(label){
-    const safe = (label || "Luxury Obsession").replace(/</g,"&lt;").replace(/>/g,"&gt;");
-    const svg = `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#15151b"/>
-      <stop offset="0.55" stop-color="#07070a"/>
-      <stop offset="1" stop-color="#1a1215"/>
-    </linearGradient>
-    <linearGradient id="h" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="rgba(231,220,198,0.0)"/>
-      <stop offset="0.5" stop-color="rgba(231,220,198,0.32)"/>
-      <stop offset="1" stop-color="rgba(231,220,198,0.0)"/>
-    </linearGradient>
-  </defs>
-  <rect width="1600" height="900" fill="url(#g)"/>
-  <rect x="180" y="540" width="1240" height="1" fill="url(#h)" opacity="0.85"/>
-  <text x="50%" y="48%" text-anchor="middle" font-family="Cinzel, serif" font-size="38" letter-spacing="6" fill="rgba(231,220,198,0.92)">LUXURY OBSESSION</text>
-  <text x="50%" y="56%" text-anchor="middle" font-family="Inter, sans-serif" font-size="22" letter-spacing="1" fill="rgba(243,241,238,0.78)">${safe}</text>
-</svg>`;
-    return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
-  }
-
-  document.querySelectorAll("img[data-fallback]").forEach(img => {
-    img.addEventListener("error", () => {
-      if(img.dataset.fallbackApplied === "1") return;
-      img.dataset.fallbackApplied = "1";
-      img.src = svgPlaceholder(img.getAttribute("data-fallback"));
-    });
-  });
-
-  // Lightbox
-  function initLightbox(){
-    const box = document.getElementById("lightbox");
-    const img = document.getElementById("lbImg");
-    const cap = document.getElementById("lbCap");
-    if(!box || !img || !cap) return;
-
-    const items = Array.from(document.querySelectorAll(".gItem"));
-    if(!items.length) return;
-    let idx = 0;
-
-    function openAt(i){
-      idx = (i + items.length) % items.length;
-      const it = items[idx];
-      const src = it.getAttribute("data-full") || "";
-      const c = it.getAttribute("data-cap") || "";
-      img.src = src;
-      img.alt = c || "Gallery image";
-      cap.textContent = c;
-      box.setAttribute("aria-hidden","false");
-      box.focus();
-    }
-
-    function close(){
-      box.setAttribute("aria-hidden","true");
-      img.src = "";
-      cap.textContent = "";
-    }
-
-    function next(){ openAt(idx + 1); }
-    function prev(){ openAt(idx - 1); }
-
-    items.forEach((btn, i) => btn.addEventListener("click", () => openAt(i)));
-    box.querySelectorAll("[data-lb-close]").forEach(el => el.addEventListener("click", close));
-    const n = box.querySelector(".lbNext");
-    const p = box.querySelector(".lbPrev");
-    if(n) n.addEventListener("click", next);
-    if(p) p.addEventListener("click", prev);
-
-    document.addEventListener("keydown", (e) => {
-      if(box.getAttribute("aria-hidden") !== "false") return;
-      if(e.key === "Escape") close();
-      if(e.key === "ArrowRight") next();
-      if(e.key === "ArrowLeft") prev();
-    });
-  }
-  initLightbox();
-
-  document.getElementById("year").textContent = String(new Date().getFullYear());
 })();
 </script>
 <script>
@@ -935,15 +685,15 @@ document.addEventListener("DOMContentLoaded", function () {
     de: "/de/ferrari458vs488",
     it: "/it/ferrari458vs488"
   };
-  var buttons = document.querySelectorAll(".langOption");
-  buttons.forEach(function (btn) {
+  document.querySelectorAll(".langOption").forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       e.preventDefault();
       e.stopPropagation();
-      var code = (btn.getAttribute("data-lang") || "en").toLowerCase();
-      window.location.href = map[code] || map.en;
+      var code = (btn.getAttribute("data-lang") || "it").toLowerCase();
+      window.location.href = map[code] || map["it"];
     }, true);
   });
 });
-</script></body>
+</script>
+</body>
 </html>

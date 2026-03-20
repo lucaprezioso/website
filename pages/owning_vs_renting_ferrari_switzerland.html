@@ -442,8 +442,8 @@ try {
 <a data-i18n="nav_philosophy" data-withlang="1" href="../philosophy.html" id="navPhilosophy">Our Philosophy</a>
 <a data-i18n="nav_experiences" data-withlang="1" href="../experiences.html" id="navExperiences">Experiences</a>
 <a data-i18n="nav_journal" data-withlang="1" href="blog.html" id="navBlog">Journal</a>
-<a data-i18n="nav_contact" data-withlang="1" href="../index.html#contact" id="navContact">Contact</a>
-<a class="navCta" data-i18n="nav_request" data-withlang="1" href="../index.html#request" id="navRequest">Request</a>
+<a data-i18n="nav_contact" href="/en#contact" id="navContact">Contact</a>
+<a class="navCta" data-i18n="nav_request" href="/en#request" id="navRequest">Request</a>
 </nav>
 <div aria-label="Language" class="langSelect">
 <button aria-expanded="false" aria-haspopup="menu" class="langToggle" id="langToggle" type="button">
@@ -504,7 +504,7 @@ try {
 </div>
 <div class="ctaRow">
 <a class="ctaBtn" data-withlang="1" href="blog.html" id="backBlog">Back to journal</a>
-<a class="ctaBtn ctaBtnPrimary" data-withlang="1" href="../index.html#request" id="reqQuote">Request availability</a>
+<a class="ctaBtn ctaBtnPrimary" href="/en#request" id="reqQuote">Request availability</a>
 </div>
 <!-- Lightbox for gallery -->
 <div aria-hidden="true" aria-label="Gallery" class="lightbox" id="lightbox" role="dialog" tabindex="-1">
@@ -1159,6 +1159,9 @@ window.__LO__renderPackages = async function(lang){
     const el = document.getElementById(id);
     if(el) el.href = value;
   };
+setHref("navContact", "/en#contact");
+setHref("navRequest", "/en#request");
+setHref("reqQuote", "/en#request");
 
   // Nav labels
   setText("navRates", t.navRates);
