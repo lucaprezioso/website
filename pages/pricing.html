@@ -1000,14 +1000,26 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
     overflow-x:auto;
     -webkit-overflow-scrolling:touch;
     scroll-snap-type:x mandatory;
-    gap:0.85rem;
-    padding-bottom:0.75rem;
+    gap:0.9rem;
+    padding-bottom:0.85rem;
+    scroll-padding-inline:0.1rem;
   }
   .gItem{
-    flex:0 0 min(78vw, 360px);
+    flex:0 0 min(72vw, 360px);
     scroll-snap-align:start;
   }
-  .gItem img{height:210px}
+  .gItem picture{display:block}
+  .gItem img{
+    height:auto;
+    aspect-ratio:4 / 5;
+    object-fit:cover;
+    object-position:center;
+    border-radius:18px;
+  }
+  .gItem--front img{object-position:center 62%}
+  .gItem--side img{object-position:center 56%}
+  .gItem--detail img{object-position:center 50%}
+  .gItem--interior img{object-position:center 48%}
 }
 
 /* Mobile usability: sticky package column and header for Rates table */
@@ -1423,11 +1435,32 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
         <div class="card" style="margin-top:1.2rem">
           <h2 style="margin-top:0" id="galleryTitle">Gallery</h2>
           
+
           <div class="gallery" id="gallery">
-            <button class="gItem" type="button" data-full="../media/image01200.webp"><img src="../media/image01200.webp" alt="Ferrari 458 Italia front"></button>
-            <button class="gItem" type="button" data-full="../media/image01300.webp"><img src="../media/image01300.webp" alt="Ferrari 458 Italia front"></button>
-            <button class="gItem" type="button" data-full="../media/image01400.webp"><img src="../media/image01400.webp" alt="Ferrari 458 Italia side"></button>
-            <button class="gItem" type="button" data-full="../media/image01500.webp"><img src="../media/image01500.webp" alt="Ferrari 458 Italia rims"></button>
+            <button class="gItem gItem--front" type="button" aria-label="Open gallery image: Front view" data-full="../media/image01200.webp" data-mobile-src="../media/rates-gallery-mobile-01-768.webp" data-mobile-srcset="../media/rates-gallery-mobile-01-480.webp 480w, ../media/rates-gallery-mobile-01-768.webp 768w, ../media/rates-gallery-mobile-01-1200.webp 1200w, ../media/rates-gallery-mobile-01-1536.webp 1536w" data-caption="Front view" data-description="Rosso Corsa front angle with the low, sculpted nose of the Ferrari 458 Italia." data-desktop-caption="Three quarter front view" data-desktop-description="Rosso Corsa Ferrari 458 Italia with a clean three quarter stance and natural outdoor backdrop.">
+              <picture>
+                <source media="(max-width: 760px)" type="image/webp" srcset="../media/rates-gallery-mobile-01-480.webp 480w, ../media/rates-gallery-mobile-01-768.webp 768w, ../media/rates-gallery-mobile-01-1200.webp 1200w, ../media/rates-gallery-mobile-01-1536.webp 1536w" sizes="(max-width: 500px) 72vw, 360px">
+                <img src="../media/image01200.webp" alt="Ferrari 458 Italia front view in Rosso Corsa" loading="lazy" decoding="async">
+              </picture>
+            </button>
+            <button class="gItem gItem--side" type="button" aria-label="Open gallery image: Side profile" data-full="../media/image01400.webp" data-mobile-src="../media/rates-gallery-mobile-02-768.webp" data-mobile-srcset="../media/rates-gallery-mobile-02-480.webp 480w, ../media/rates-gallery-mobile-02-768.webp 768w, ../media/rates-gallery-mobile-02-1200.webp 1200w, ../media/rates-gallery-mobile-02-1536.webp 1536w" data-caption="Side profile" data-description="Clean side view highlighting the Pininfarina lines, stance, and wheels." data-desktop-caption="Side profile" data-desktop-description="Full side profile highlighting the Pininfarina silhouette, proportions, and stance.">
+              <picture>
+                <source media="(max-width: 760px)" type="image/webp" srcset="../media/rates-gallery-mobile-02-480.webp 480w, ../media/rates-gallery-mobile-02-768.webp 768w, ../media/rates-gallery-mobile-02-1200.webp 1200w, ../media/rates-gallery-mobile-02-1536.webp 1536w" sizes="(max-width: 500px) 72vw, 360px">
+                <img src="../media/image01400.webp" alt="Ferrari 458 Italia side profile" loading="lazy" decoding="async">
+              </picture>
+            </button>
+            <button class="gItem gItem--detail" type="button" aria-label="Open gallery image: Ferrari shield detail" data-full="../media/image01500.webp" data-mobile-src="../media/rates-gallery-mobile-03-768.webp" data-mobile-srcset="../media/rates-gallery-mobile-03-480.webp 480w, ../media/rates-gallery-mobile-03-768.webp 768w, ../media/rates-gallery-mobile-03-1200.webp 1200w, ../media/rates-gallery-mobile-03-1536.webp 1536w" data-caption="Ferrari shield detail" data-description="Close up of the Scuderia shield, front wheel, and Rosso Corsa bodywork." data-desktop-caption="Wheel and brake detail" data-desktop-description="Close up of the forged wheel, carbon ceramic brake disc, and red Ferrari caliper.">
+              <picture>
+                <source media="(max-width: 760px)" type="image/webp" srcset="../media/rates-gallery-mobile-03-480.webp 480w, ../media/rates-gallery-mobile-03-768.webp 768w, ../media/rates-gallery-mobile-03-1200.webp 1200w, ../media/rates-gallery-mobile-03-1536.webp 1536w" sizes="(max-width: 500px) 72vw, 360px">
+                <img src="../media/image01500.webp" alt="Ferrari 458 Italia Scuderia shield and wheel detail" loading="lazy" decoding="async">
+              </picture>
+            </button>
+            <button class="gItem gItem--interior" type="button" aria-label="Open gallery image: Manettino detail" data-full="../media/image01300.webp" data-mobile-src="../media/rates-gallery-mobile-04-768.webp" data-mobile-srcset="../media/rates-gallery-mobile-04-480.webp 480w, ../media/rates-gallery-mobile-04-768.webp 768w, ../media/rates-gallery-mobile-04-1200.webp 1200w, ../media/rates-gallery-mobile-04-1536.webp 1536w" data-caption="Manettino detail" data-description="Carbon fibre steering wheel detail with the Ferrari drive mode selector." data-desktop-caption="Low front angle" data-desktop-description="Low front three quarter angle showing the sculpted nose, front intake, and wheel design.">
+              <picture>
+                <source media="(max-width: 760px)" type="image/webp" srcset="../media/rates-gallery-mobile-04-480.webp 480w, ../media/rates-gallery-mobile-04-768.webp 768w, ../media/rates-gallery-mobile-04-1200.webp 1200w, ../media/rates-gallery-mobile-04-1536.webp 1536w" sizes="(max-width: 500px) 72vw, 360px">
+                <img src="../media/image01300.webp" alt="Ferrari 458 Italia manettino steering wheel detail" loading="lazy" decoding="async">
+              </picture>
+            </button>
           </div>
 
 
@@ -1882,13 +1915,35 @@ const DEFAULT_PACKAGES = [{"id": "P3", "duration": "3h", "label": {"en": "Brief 
 
       let idx = 0;
 
+      const isMobileGallery = () => window.matchMedia("(max-width: 760px)").matches;
+
       function openAt(i){
         idx = (i + items.length) % items.length;
-        const full = items[idx].getAttribute("data-full");
-        const alt = items[idx].querySelector("img")?.getAttribute("alt") || "Gallery image";
-        lbImg.src = full;
+        const item = items[idx];
+        const desktopFull = item.getAttribute("data-full");
+        const mobileSrc = item.getAttribute("data-mobile-src");
+        const mobileSrcset = item.getAttribute("data-mobile-srcset");
+        const alt = item.querySelector("img")?.getAttribute("alt") || "Gallery image";
+        const caption = isMobileGallery()
+          ? (item.getAttribute("data-caption") || "")
+          : (item.getAttribute("data-desktop-caption") || item.getAttribute("data-caption") || "");
+        const description = isMobileGallery()
+          ? (item.getAttribute("data-description") || "")
+          : (item.getAttribute("data-desktop-description") || item.getAttribute("data-description") || "");
+
+        if(isMobileGallery() && mobileSrc){
+          lbImg.src = mobileSrc;
+          lbImg.srcset = mobileSrcset || "";
+          lbImg.sizes = "92vw";
+        } else {
+          lbImg.src = desktopFull;
+          lbImg.srcset = "";
+          lbImg.sizes = "";
+        }
+
         lbImg.alt = alt;
-        lbCap.textContent = (idx + 1) + " / " + items.length;
+        const captionParts = [caption, description, (idx + 1) + " / " + items.length].filter(Boolean);
+        lbCap.textContent = captionParts.join(" · ");
         lb.classList.add("open");
         lb.setAttribute("aria-hidden","false");
         lb.focus();

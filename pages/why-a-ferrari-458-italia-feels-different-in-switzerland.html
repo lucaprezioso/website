@@ -248,12 +248,39 @@ h1,h2,h3,.sectionTitle,.heroTitle{font-family:"Cormorant Garamond",serif;letter-
 .calloutTitle{font-family:"Cormorant Garamond",serif;font-size:1.35rem;margin:0 0 0.25rem}
 .calloutBody{margin:0;color:rgba(243,241,238,0.84);line-height:1.8}
 
-.tableWrap{overflow:auto;border-radius:16px;border:1px solid rgba(243,241,238,0.10);background:rgba(0,0,0,0.18)}
-.table{width:100%;border-collapse:collapse;min-width:720px}
-.table th, .table td{padding:0.9rem 0.9rem;border-bottom:1px solid rgba(243,241,238,0.08);text-align:left;vertical-align:top}
+.tableWrap{
+  overflow:auto;
+  border-radius:16px;
+  border:1px solid rgba(243,241,238,0.10);
+  background:#07070a;
+  box-shadow:none;
+  -webkit-mask-image:none;
+  mask-image:none;
+}
+
+.table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:720px;
+  font-size:0.96rem;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+  background:#07070a;
+}
+
+.table th,
+.table td{
+  padding:0.9rem 0.9rem;
+  border-bottom:1px solid rgba(243,241,238,0.08);
+  text-align:left;
+  vertical-align:top;
+  background:#07070a;
+  background-clip:padding-box;
+}
 .table th{font-size:0.82rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(243,241,238,0.78)}
 .table td{color:rgba(243,241,238,0.90);line-height:1.65}
 .table tr:last-child td{border-bottom:none}
+@media (max-width: 640px){ .table{font-size:0.92rem} .table th,.table td{padding:0.78rem 0.78rem} }
 .tag{display:inline-flex;align-items:center;gap:0.4rem;padding:0.25rem 0.55rem;border-radius:999px;border:1px solid rgba(231,220,198,0.18);background:rgba(231,220,198,0.06);color:rgba(231,220,198,0.92);font-size:0.78rem;white-space:nowrap}
 
 .routeCards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1rem 0 0}
@@ -313,9 +340,9 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
   const CURRENT_LANG = "en";
   const LANGS = ["en","de","it"];
   const PAGE_MAP = {
-      "en": "/en/ferrari-458-italia-details-most-people-miss",
-      "de": "/de/ferrari-458-italia-details-most-people-miss",
-      "it": "/it/ferrari-458-italia-details-most-people-miss"
+      "en": "/en/why-a-ferrari-458-italia-feels-different-in-switzerland",
+      "de": "/de/why-a-ferrari-458-italia-feels-different-in-switzerland",
+      "it": "/it/why-a-ferrari-458-italia-feels-different-in-switzerland"
   };
 
   function getLang(){
@@ -411,7 +438,7 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
   window.__LO__ = { getLang, setLang, buildUrl, initLangMenu, initHamburger };
 })();
 </script>
-<link href="../assets/lo.css" rel="stylesheet"/><script defer="" src="../assets/lo.js"></script><script>
+<link href="../assets/lo.css" rel="stylesheet"/><script>
 try {
   localStorage.setItem("lo_lang", "en");
   const u = new URL(window.location.href);
@@ -435,8 +462,8 @@ try {
 <a data-i18n="nav_philosophy" data-withlang="1" href="../philosophy.html" id="navPhilosophy">Our Philosophy</a>
 <a data-i18n="nav_experiences" data-withlang="1" href="../experiences.html" id="navExperiences">Experiences</a>
 <a data-i18n="nav_journal" data-withlang="1" href="blog.html" id="navBlog">Journal</a>
-<a data-i18n="nav_contact" href="/en#contact" id="navContact">Contact</a>
-<a class="navCta" data-i18n="nav_request" href="/en#request" id="navRequest">Request</a>
+<a data-i18n="nav_contact" data-withlang="1" href="../index.html#contact" id="navContact">Contact</a>
+<a class="navCta" data-i18n="nav_request" data-withlang="1" href="../index.html#request" id="navRequest">Request</a>
 </nav>
 <div aria-label="Language" class="langSelect">
 <button aria-expanded="false" aria-haspopup="menu" class="langToggle" id="langToggle" type="button">
@@ -523,7 +550,7 @@ try {
 </div>
 <div class="ctaRow">
 <a class="ctaBtn" data-withlang="1" href="blog.html" id="backBlog">Back to journal</a>
-<a class="ctaBtn ctaBtnPrimary" href="/en#request" id="reqQuote">Request availability</a>
+<a class="ctaBtn ctaBtnPrimary" data-withlang="1" href="../index.html#request" id="reqQuote">Request availability</a>
 </div>
 </div></section>
 </main>
@@ -537,15 +564,6 @@ try {
 <script>
 (function(){
   const lang = "en";
-
-const setHref = (id, value) => {
-  const el = document.getElementById(id);
-  if(el) el.href = value;
-};
-
-setHref("navContact", "/en#contact");
-setHref("navRequest", "/en#request");
-setHref("reqQuote", "/en#request");
 
   function wireHamburgerFallback(){
     const btn = document.getElementById("hamburger");
@@ -629,22 +647,6 @@ setHref("reqQuote", "/en#request");
   });
 })();
 </script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var map = {
-      "en": "/en/why-a-ferrari-458-italia-feels-different-in-switzerland",
-      "de": "/de/why-a-ferrari-458-italia-feels-different-in-switzerland",
-      "it": "/it/why-a-ferrari-458-italia-feels-different-in-switzerland"
-  };
-  document.querySelectorAll(".langOption").forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var code = (btn.getAttribute("data-lang") || "en").toLowerCase();
-      window.location.href = map[code] || map["en"];
-    }, true);
-  });
-});
-</script>
+
 </body>
 </html>
