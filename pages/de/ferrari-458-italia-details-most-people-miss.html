@@ -3,6 +3,8 @@
 <html lang="de">
 <head>
 <meta charset="utf-8"/>
+<meta name="format-detection" content="telephone=no, email=no, address=no">
+<meta name="chrome" content="nointentdetection">
 <title>Ferrari 458 Italia Details, die viele übersehen | Luxury Obsession</title>
 <meta content="Ferrari 458 Italia Details, die viele übersehen. Pininfarina, Schumacher, Poltrona Frau und warum sich der 458 auf Schweizer Straßen bis heute so besonders anfühlt." name="description"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -411,7 +413,50 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
   window.__LO__ = { getLang, setLang, buildUrl, initLangMenu, initHamburger };
 })();
 </script>
-<link href="../assets/lo.css" rel="stylesheet"/><script defer="" src="../assets/lo.js"></script><script>
+<link href="../assets/lo.css" rel="stylesheet"/>
+<style>
+.tableWrap{
+  overflow:auto !important;
+  position:relative !important;
+  border-radius:16px !important;
+  border:1px solid rgba(243,241,238,0.10) !important;
+  background:#07070a !important;
+  box-shadow:none !important;
+  -webkit-mask-image:none !important;
+  mask-image:none !important;
+}
+
+.tableWrap::before,
+.tableWrap::after{
+  content:none !important;
+  display:none !important;
+  background:none !important;
+  box-shadow:none !important;
+  opacity:0 !important;
+}
+
+.table{
+  width:100% !important;
+  border-collapse:collapse !important;
+  min-width:720px !important;
+  background:#07070a !important;
+}
+
+.table th,
+.table td{
+  background:#07070a !important;
+  background-clip:padding-box !important;
+}
+
+.table th:first-child,
+.table td:first-child{
+  position:static !important;
+  left:auto !important;
+  z-index:auto !important;
+  box-shadow:none !important;
+}
+</style>
+<script defer="" src="../assets/lo.js"></script><script>
 try {
   localStorage.setItem("lo_lang", "en");
   const u = new URL(window.location.href);

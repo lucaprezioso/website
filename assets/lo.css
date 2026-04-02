@@ -1013,7 +1013,10 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 .tableWrap thead th:first-child{z-index:4}
 .tableWrap td:first-child{border-right:1px solid rgba(231,220,198,0.12)}
 @media (max-width: 760px){ .tableWrap th, .tableWrap td{padding:0.65rem 0.55rem} .tableWrap table{font-size:0.90rem} }
-.tableWrap::after{content:"";position:absolute;top:0;right:0;width:36px;height:100%;pointer-events:none;background:linear-gradient(90deg, transparent, rgba(7,7,10,0.85));opacity:0.9}
+.tableWrap::after{
+  content:none;
+  display:none;
+}
 
 .lightbox{position:fixed;inset:0;display:none;z-index:200}
 .lightbox.open{display:block}
