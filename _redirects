@@ -55,6 +55,14 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /de/blog.html             /de/blog                  301!
 /it/blog.html             /it/blog                  301!
 
+/en/carbon-fiber-luxury-cars-zurich.html             /en/carbon-fiber-luxury-cars-zurich                 301!
+/de/carbon-fiber-luxury-cars-zurich.html             /de/carbon-fiber-luxury-cars-zurich                 301!
+/it/carbon-fiber-luxury-cars-zurich.html             /it/carbon-fiber-luxury-cars-zurich                  301!
+
+/en/ferrari-458-common-issues-zurich.html             /en/ferrari-458-common-issues-zurich                 301!
+/de/ferrari-458-common-issues-zurich.html             /de/ferrari-458-common-issues-zurich                 301!
+/it/ferrari-458-common-issues-zurich.html             /it/ferrari-458-common-issues-zurich                  301!
+
 /en/ferrari-rental-zurich-worth-it.html.html             /en/ferrari-rental-zurich-worth-it.html                 301!
 /de/ferrari-rental-zurich-worth-it.html.html             /de/ferrari-rental-zurich-worth-it.html                 301!
 /it/ferrari-rental-zurich-worth-it.html.html             /it/ferrari-rental-zurich-worth-it.html                  301!
@@ -179,6 +187,12 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 
 # Everything else comes from pages/<slug>.html
 # Dedicated language pages for next batch (articles and locations)
+/en/carbon-fiber-luxury-cars-zurich        /pages/carbon-fiber-luxury-cars-zurich.html        200
+/de/carbon-fiber-luxury-cars-zurich        /pages/de/carbon-fiber-luxury-cars-zurich.html        200
+/it/carbon-fiber-luxury-cars-zurich        /pages/it/carbon-fiber-luxury-cars-zurich.html        200
+/en/ferrari-458-common-issues-zurich        /pages/ferrari-458-common-issues-zurich.html        200
+/de/ferrari-458-common-issues-zurich        /pages/de/ferrari-458-common-issues-zurich.html        200
+/it/ferrari-458-common-issues-zurich        /pages/it/ferrari-458-common-issues-zurich.html        200
 /en/ferrari-rental-zurich-worth-it        /pages/ferrari-rental-zurich-worth-it.html        200
 /de/ferrari-rental-zurich-worth-it        /pages/de/ferrari-rental-zurich-worth-it.html        200
 /it/ferrari-rental-zurich-worth-it        /pages/it/ferrari-rental-zurich-worth-it.html        200
