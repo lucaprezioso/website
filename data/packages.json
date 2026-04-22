@@ -97,14 +97,30 @@
       }
     },
     {
-      "id": "P24_L",
+      "id": "P24_L200",
+      "duration": "24h",
+      "km": "200",
+      "price": 1340,
+      "label": {
+        "en": "Full Day Icon 200",
+        "de": "Full Day Icon 200",
+        "it": "Full Day Icon 200"
+      },
+      "tag": {
+        "en": "Full day",
+        "de": "Ganzer Tag",
+        "it": "Intera giornata"
+      }
+    },
+    {
+      "id": "P24_L500",
       "duration": "24h",
       "km": "500",
       "price": 1590,
       "label": {
-        "en": "Full Day Icon",
-        "de": "Full Day Icon",
-        "it": "Full Day Icon"
+        "en": "Full Day Icon 500",
+        "de": "Full Day Icon 500",
+        "it": "Full Day Icon 500"
       },
       "tag": {
         "en": "Full day",
