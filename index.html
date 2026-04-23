@@ -57,9 +57,9 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap"></noscript>
-<link rel="preload" as="image" href="/media/poster_480.webp" media="(max-width: 600px)" fetchpriority="high">
-<link rel="preload" as="image" href="/media/poster_720.webp" media="(min-width: 601px) and (max-width: 900px)" fetchpriority="high">
-<link rel="preload" as="image" href="/media/image00103.webp" media="(min-width: 901px) and (min-aspect-ratio: 5/6)" fetchpriority="high">
+<link rel="preload" as="image" href="/media/poster_vertical_480.webp" media="(max-width: 600px)" fetchpriority="high">
+<link rel="preload" as="image" href="/media/poster_vertical_720.webp" media="(min-width: 601px) and (max-width: 900px)" fetchpriority="high">
+<link rel="preload" as="image" href="/media/poster_1200.webp" media="(min-width: 901px) and (min-aspect-ratio: 5/6)" fetchpriority="high">
 <link rel="preload" as="image" href="/media/poster_960.webp" media="(min-width: 901px) and (max-aspect-ratio: 5/6)" fetchpriority="high">
 
 <link href="media/icon.webp" type="image/webp" rel="icon"/>
@@ -84,6 +84,75 @@
       padding-bottom:calc(3.2rem + env(safe-area-inset-bottom));
     }
   }
+  @media (max-width: 760px){
+  .showcase .mediaOverlay{
+    display:flex;
+    align-items:flex-end;
+    justify-content:flex-end;
+    padding:0 0 1rem !important;
+    padding-bottom:calc(1rem + env(safe-area-inset-bottom)) !important;
+    background:linear-gradient(
+      to top,
+      rgba(0,0,0,0.92) 0%,
+      rgba(0,0,0,0.82) 18%,
+      rgba(0,0,0,0.60) 36%,
+      rgba(0,0,0,0.28) 56%,
+      rgba(0,0,0,0.08) 72%,
+      rgba(0,0,0,0.00) 84%
+    );
+  }
+
+  .showcase .mediaOverlay .container{
+    width:100%;
+    display:flex;
+    align-items:flex-end;
+    min-height:100%;
+  }
+
+  .showcase .mediaCaption{
+    width:100%;
+    margin-top:auto;
+  }
+
+  .showcase .mediaCaptionBox{
+    width:100%;
+    max-width:100%;
+    background:rgba(12,12,14,0.52);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:18px;
+    padding:1rem 0.95rem 1rem;
+    box-shadow:0 10px 30px rgba(0,0,0,0.30);
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+  }
+
+  .showcase .eyebrow{
+    color:rgba(255,255,255,0.72);
+    text-shadow:0 2px 14px rgba(0,0,0,0.55);
+    margin-bottom:0.35rem;
+  }
+
+  .showcase .mediaTitle{
+    color:#fff;
+    text-shadow:0 2px 16px rgba(0,0,0,0.60);
+    margin-bottom:0.45rem;
+    line-height:1.05;
+    font-size:clamp(2rem, 8vw, 2.5rem);
+  }
+
+  .showcase .mediaBody{
+    color:rgba(255,255,255,0.96);
+    text-shadow:0 2px 14px rgba(0,0,0,0.60);
+    font-size:0.98rem;
+    line-height:1.42;
+    max-width:26rem;
+    margin-bottom:0.95rem;
+  }
+
+  .showcase .mediaCaptionBox .btn{
+    margin-top:0.1rem;
+  }
+}
 
   /* 2) Full justification for the main description copy */
   #heroSubtitle{
@@ -232,11 +301,11 @@
   "name": "Ferrari 458 Italia cinematic drone video in Switzerland",
   "description": "A cinematic drone video of the Ferrari 458 Italia by Luxury Obsession, filmed in Swiss vineyards and mountain roads near Zurich.",
   "thumbnailUrl": [
-    "https://luxuryobsession.ch/media/image00103.webp"
+    "https://luxuryobsession.ch/media/homepage-poster.webp"
   ],
-  "uploadDate": "2026-04-22",
+  "uploadDate": "2026-04-22T08:00:00+02:00",
   "duration": "PT15S",
-  "contentUrl": "https://luxuryobsession.ch/media/FerrariWebShort_LowRes.MP4",
+  "contentUrl": "https://luxuryobsession.ch/media/FerrariWebShort_VeryLowRes_rev1.MP4",
   "embedUrl": "https://luxuryobsession.ch/",
   "publisher": {
     "@type": "Organization",
@@ -288,23 +357,25 @@
 <main>
 <section class="showcase" id="showcase">
 <div class="mediaFull">
-<video id="showcaseVideo" autoplay muted playsinline preload="none" poster="">
-  <source id="showcaseSource" data-src="/media/video00100.mp4" type="video/mp4">
+<video id="showcaseVideo" autoplay muted playsinline preload="none" poster="" aria-label="Cinematic drone video of the Ferrari 458 Italia in Switzerland">
+  <source id="showcaseSource" data-src="/media/FerrariWebShort_VeryLowRes_vertical.mp4" type="video/mp4">
 </video>
 <script>
 (function () {
   const showcaseVideo = document.getElementById("showcaseVideo");
   if (!showcaseVideo) return;
 
-  const isMobile = window.matchMedia("(max-width: 900px)").matches;
+  const isMobile = window.matchMedia("(max-width: 760px)").matches;
   const aspect = window.innerWidth / Math.max(1, window.innerHeight);
   const threshold = 5 / 6;
 
   let poster;
-  if (!isMobile && aspect > threshold) {
-    poster = "/media/image00103.webp";
-  } else if (isMobile) {
-    poster = window.innerWidth >= 601 ? "/media/poster_720.webp" : "/media/poster_480.webp";
+  if (isMobile) {
+    poster = window.innerWidth >= 601
+      ? "/media/poster_vertical_720.webp"
+      : "/media/poster_vertical_480.webp";
+  } else if (aspect > threshold) {
+    poster = "/media/poster_1200.webp";
   } else {
     poster = "/media/poster_960.webp";
   }
@@ -1452,7 +1523,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // "stop553" -> pauses at 5.53 seconds
   const DESKTOP_WIDE_VIDEO_MODE = "loop";
 
-  const showcaseVideo = document.getElementById("showcaseVideo");
+    const showcaseVideo = document.getElementById("showcaseVideo");
   const showcaseSource = document.getElementById("showcaseSource");
   if (showcaseVideo && showcaseSource && !reduceMotion && !saveData) {
     const isMobile = window.matchMedia("(max-width: 760px)").matches;
@@ -1463,9 +1534,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let poster = showcaseVideo.getAttribute("poster") || "";
     let isDesktopWide = false;
 
-    if (!isMobile && aspect > threshold) {
-      desired = "/media/FerrariWebShort_LowRes.MP4";
-      poster = "/media/image00103.webp";
+    if (isMobile) {
+      desired = "/media/FerrariWebShort_VeryLowRes_vertical.mp4";
+    } else if (aspect > threshold) {
+      desired = "/media/FerrariWebShort_VeryLowRes_rev1.MP4";
+      poster = "/media/homepage-poster.webp";
       isDesktopWide = true;
     }
 
@@ -1475,7 +1548,9 @@ document.addEventListener("DOMContentLoaded", () => {
       showcaseSource.src = desired;
       showcaseVideo.load();
 
-      if (isDesktopWide && DESKTOP_WIDE_VIDEO_MODE === "loop") {
+      if (isMobile) {
+        showcaseVideo.loop = true;
+      } else if (isDesktopWide && DESKTOP_WIDE_VIDEO_MODE === "loop") {
         showcaseVideo.loop = true;
       } else {
         showcaseVideo.loop = false;
@@ -1496,7 +1571,7 @@ document.addEventListener("DOMContentLoaded", () => {
           try { showcaseVideo.currentTime = stopAt; } catch (e) {}
         }
       });
-    } else if (!(isDesktopWide && DESKTOP_WIDE_VIDEO_MODE === "loop")) {
+    } else if (!isMobile && !(isDesktopWide && DESKTOP_WIDE_VIDEO_MODE === "loop")) {
       showcaseVideo.addEventListener("ended", () => {
         showcaseVideo.pause();
         try { showcaseVideo.currentTime = showcaseVideo.duration; } catch (e) {}
