@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script>
+  (function () {
+    const GA_ID = "G-EKE8CWE8SN";
+    const ADS_ID = "AW-17961819738";
+
+    function loadGtag() {
+      if (window.__gtagLoaded) return;
+      window.__gtagLoaded = true;
+
+      const s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
+      document.head.appendChild(s);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ window.dataLayer.push(arguments); }
+      window.gtag = gtag;
+
+      gtag("js", new Date());
+
+      gtag("config", GA_ID, { anonymize_ip: true });
+      gtag("config", ADS_ID);
+    }
+
+    window.loadAnalytics = loadGtag;
+    loadGtag();
+  })();
+</script>
+
 <meta charset="utf-8"/>
 <title>Ferrari Rental in Zurich: Is It Worth It? | Luxury Obsession</title>
 <meta content="Is Ferrari rental in Zurich worth it? A refined guide to why a Ferrari 458 Italia in Switzerland becomes truly special when the roads, timing, and experience are chosen properly." name="description"/>

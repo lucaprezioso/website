@@ -5,6 +5,7 @@
 <script>
   (function () {
     const GA_ID = "G-EKE8CWE8SN";
+    const ADS_ID = "AW-17961819738";
 
     function loadGtag() {
       if (window.__gtagLoaded) return;
@@ -20,7 +21,9 @@
       window.gtag = gtag;
 
       gtag("js", new Date());
+
       gtag("config", GA_ID, { anonymize_ip: true });
+      gtag("config", ADS_ID);
     }
 
     window.loadAnalytics = loadGtag;

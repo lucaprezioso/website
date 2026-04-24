@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+<!-- Google tag (gtag.js) -->
+<script>
+  (function () {
+    const GA_ID = "G-EKE8CWE8SN";
+    const ADS_ID = "AW-17961819738";
+
+    function loadGtag() {
+      if (window.__gtagLoaded) return;
+      window.__gtagLoaded = true;
+
+      const s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
+      document.head.appendChild(s);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ window.dataLayer.push(arguments); }
+      window.gtag = gtag;
+
+      gtag("js", new Date());
+
+      gtag("config", GA_ID, { anonymize_ip: true });
+      gtag("config", ADS_ID);
+    }
+
+    window.loadAnalytics = loadGtag;
+    loadGtag();
+  })();
+</script>
+
 <meta charset="utf-8"/>
 <title>Ferrari 458 Italia typische Probleme: Worauf man vor einer Fahrt in Zürich achten sollte | Luxury Obsession</title>
 <meta content="Sticky Buttons, abgenutztes Leder, Rasseln, Fahrwerksfragen und optische Alterung gehören zu bekannten Ferrari 458 Themen. Hier erfahren Sie, worauf Sie achten sollten und warum sich der Luxury Obsession Ferrari 458 Italia in Zürich abhebt." name="description"/>
