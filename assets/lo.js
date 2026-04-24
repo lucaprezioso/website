@@ -715,6 +715,140 @@ function applyPriorityNav(){
   if(langSel) setHidden(langSel, hide.includes("langSelect"));
 }
 
+function initAnalyticsEvents(){
+  if(window.__loAnalyticsEventsBound === true) return;
+  window.__loAnalyticsEventsBound = true;
+
+  function sendLoEvent(eventName, params){
+    if(typeof window.gtag !== "function") return;
+
+    const payload = Object.assign({
+      page_location: window.location.href,
+      page_path: window.location.pathname,
+      language: getLang(),
+      transport_type: "beacon"
+    }, params || {});
+
+    window.gtag("event", eventName, payload);
+  }
+
+  function cleanText(el){
+    return ((el && el.textContent) || "").trim().replace(/\s+/g, " ").slice(0, 120);
+  }
+
+  document.addEventListener("click", function(event){
+    const link = event.target.closest && event.target.closest("a");
+    if(!link) return;
+
+    const hrefRaw = link.getAttribute("href") || "";
+    const href = hrefRaw.toLowerCase();
+    const id = link.id || "";
+    const text = cleanText(link);
+
+    const params = {
+      link_id: id,
+      link_text: text,
+      link_url: link.href || hrefRaw
+    };
+
+    const isWhatsApp =
+      id === "btnWhatsApp" ||
+      id === "contactWhatsApp" ||
+      href.includes("wa.me/") ||
+      href.includes("whatsapp.com");
+
+    if(isWhatsApp){
+      sendLoEvent("whatsapp_click", params);
+      return;
+    }
+
+    const isPhone =
+      id === "btnCall" ||
+      id === "contactPhone" ||
+      href.startsWith("tel:");
+
+    if(isPhone){
+      sendLoEvent("phone_click", params);
+      return;
+    }
+
+    const isEmail =
+      id === "btnEmail" ||
+      id === "contactEmail" ||
+      href.startsWith("mailto:");
+
+    if(isEmail){
+      sendLoEvent("email_click", params);
+      return;
+    }
+
+    const isDirections =
+      id === "btnOpenMaps" ||
+      href.includes("maps.app.goo.gl") ||
+      href.includes("google.com/maps");
+
+    if(isDirections){
+      sendLoEvent("directions_click", params);
+      return;
+    }
+
+    const isRequestCta =
+      id === "navRequest" ||
+      id === "showcaseCta" ||
+      id === "ctaRequest" ||
+      href === "#request" ||
+      href.endsWith("#request");
+
+    if(isRequestCta){
+      sendLoEvent("request_cta_click", params);
+      return;
+    }
+
+    const isPricing =
+      id === "navRates" ||
+      id === "ctaPricing" ||
+      href.includes("/pricing") ||
+      href.includes("pricing.html");
+
+    if(isPricing){
+      sendLoEvent("pricing_click", params);
+      return;
+    }
+
+    const isGallery =
+      id === "navGallery" ||
+      href.includes("gallerytitle") ||
+      href.includes("/gallery") ||
+      href.includes("gallery.html");
+
+    if(isGallery){
+      sendLoEvent("gallery_click", params);
+      return;
+    }
+  }, true);
+
+  document.addEventListener("submit", function(event){
+    const form = event.target;
+    if(!form || form.id !== "quoteForm") return;
+
+    if(typeof form.checkValidity === "function" && !form.checkValidity()) return;
+
+    const name = document.getElementById("fullName");
+    const email = document.getElementById("email");
+    const pkg = document.getElementById("packageId");
+    const date = document.getElementById("preferredDate");
+
+    if(!name || !email || !pkg) return;
+    if(!name.value.trim() || !email.value.trim() || !pkg.value.trim()) return;
+
+    sendLoEvent("request_form_submit", {
+      form_id: "quoteForm",
+      package_id: pkg.value || "",
+      preferred_date: date ? date.value.trim() : ""
+    });
+  }, true);
+}
+
 function initSharedUI
 (lang){
     const effectiveLang = lang || getLang();
@@ -731,6 +865,7 @@ function initSharedUI
 
     buildMobileMenu(effectiveLang);
     initHamburger();
+    initAnalyticsEvents();
 
 
 // Apply mode after fonts and translated text settle
