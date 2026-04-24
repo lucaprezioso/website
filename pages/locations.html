@@ -58,6 +58,7 @@
         <div class="navRight">
           <nav class="navLinks" aria-label="Primary">
             <a id="navRates" href="pricing.html">Rates</a>
+            <a id="mGallery" href="pricing.html#galleryTitle">Gallery<span>›</span></a>
             <a id="navPhilosophy" href="../philosophy.html">Our Philosophy</a>
             <a id="navExperiences" href="../experiences.html">Experiences</a>
             <a id="navBlog" href="blog.html">Journal</a>
@@ -191,7 +192,7 @@
   <script>
     const I18N = {
       en:{
-        navRates:"Rates",
+        navRates:"Rates", navGallery:"Gallery",
         navPhilosophy:"Our Philosophy",
         navExperiences:"Experiences",
         navBlog:"Journal",
@@ -246,7 +247,7 @@
         locNaenikon:"Nänikon"
       },
       de:{
-        navRates:"Tarife",
+        navRates:"Tarife", navGallery:"Galerie",
         navPhilosophy:"Unsere Philosophie",
         navExperiences:"Anlässe",
         navBlog:"Journal",
@@ -301,7 +302,7 @@
         locNaenikon:"Nänikon"
       },
       it:{
-        navRates:"Tariffe",
+        navRates:"Tariffe", navGallery:"Galleria",
         navPhilosophy:"La nostra filosofia",
         navExperiences:"Esperienze",
         navBlog:"Journal",
@@ -369,6 +370,7 @@
       const setHref = (id, href) => { const el = document.getElementById(id); if(el) el.setAttribute("href", href); };
 
       setText("navRates", t.navRates);
+  setText("navGallery", t.navGallery);
       setText("navPhilosophy", t.navPhilosophy);
       setText("navExperiences", t.navExperiences);
       setText("navBlog", t.navBlog);
@@ -376,6 +378,7 @@
       setText("navRequest", t.navRequest);
 
       setText("mRates", t.navRates);
+  setText("mGallery", t.navGallery);
       setText("mPhilosophy", t.navPhilosophy);
       setText("mExperiences", t.navExperiences);
       setText("mBlog", t.navBlog);
@@ -435,6 +438,7 @@
 
       setHref("brandHome", window.__LO__.buildUrl("../index.html", lang));
       setHref("navRates", window.__LO__.buildUrl("pricing.html", lang));
+  setHref("mGallery", window.__LO__.buildUrl("pricing.html", lang, "galleryTitle"));
       setHref("navPhilosophy", window.__LO__.buildUrl("../philosophy.html", lang));
       setHref("navExperiences", window.__LO__.buildUrl("../experiences.html", lang));
       setHref("navBlog", window.__LO__.buildUrl("blog.html", lang));

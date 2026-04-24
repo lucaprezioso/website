@@ -581,7 +581,7 @@ function loMeasureNav({ width, burger, wrap, hideKeys }){
     node.setAttribute("data-lo-hidden", hidden ? "1" : "0");
   };
 
-  ["navRates","navContact","navPhilosophy","navExperiences","navBlog","navJournal"].forEach(k => {
+  ["navRates","navGallery","navContact","navPhilosophy","navExperiences","navBlog","navJournal"].forEach(k => {
     setHiddenClone(clone.querySelector('[data-lo-key="' + k + '"]'), hideSet.has(k));
   });
   setHiddenClone(cloneLang, hideSet.has("langSelect"));
@@ -601,6 +601,7 @@ function loMeasureNav({ width, burger, wrap, hideKeys }){
 
   const widths = {
     navRates: loOuterWidth(clone.querySelector('[data-lo-key="navRates"]')),
+    navGallery: loOuterWidth(clone.querySelector('[data-lo-key="navGallery"]')),
     navContact: loOuterWidth(clone.querySelector('[data-lo-key="navContact"]')),
     navPhilosophy: loOuterWidth(clone.querySelector('[data-lo-key="navPhilosophy"]')),
     navExperiences: loOuterWidth(clone.querySelector('[data-lo-key="navExperiences"]')),
@@ -625,6 +626,7 @@ function applyPriorityNav(){
   const el = (id) => document.getElementById(id);
 
   const rates = el("navRates");
+  const gallery = el("navGallery");
   const contact = el("navContact");
   const philosophy = el("navPhilosophy");
   const experiences = el("navExperiences");
@@ -655,6 +657,7 @@ function applyPriorityNav(){
   if(philosophy && philosophy.id) lowKeys.push(philosophy.id);
   if(experiences && experiences.id) lowKeys.push(experiences.id);
   if(journal && journal.id) lowKeys.push(journal.id);
+  if(gallery && gallery.id) lowKeys.push(gallery.id);
 
   const m1 = loMeasureNav({ width, burger:true, wrap:false, hideKeys:[] }) || m0;
   let overflow = m1 ? m1.overflow : 0;

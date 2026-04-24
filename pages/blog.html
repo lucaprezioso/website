@@ -282,6 +282,7 @@
         <div class="navRight">
           <nav class="navLinks" aria-label="Primary">
             <a id="navRates" href="pricing.html">Rates</a>
+            <a id="navGallery" href="pricing.html#galleryTitle">Gallery</a>
             <a id="navPhilosophy" href="../philosophy.html">Our Philosophy</a>
             <a id="navExperiences" href="../experiences.html">Experiences</a>
             <a id="navBlog" href="blog.html" aria-current="page">Journal</a>
@@ -309,6 +310,7 @@
 
       <div id="mobileMenu" class="mobileMenu" data-open="0" role="navigation" aria-label="Mobile">
         <a id="mRates" href="pricing.html">Rates<span>›</span></a>
+        <a id="mGallery" href="pricing.html#galleryTitle">Gallery<span>›</span></a>
         <a id="mPhilosophy" href="../philosophy.html">Our Philosophy<span>›</span></a>
         <a id="mExperiences" href="../experiences.html">Experiences<span>›</span></a>
         <a id="mBlog" href="blog.html" aria-current="page">Journal<span>›</span></a>
@@ -368,7 +370,7 @@
   <script>
 const I18N = {
   en:{
-    navRates:"Rates", navPhilosophy:"Our Philosophy", navExperiences:"Experiences", navBlog:"Journal", navContact:"Contact", navRequest:"Request",
+    navRates:"Rates", navGallery:"Gallery", navPhilosophy:"Our Philosophy", navExperiences:"Experiences", navBlog:"Journal", navContact:"Contact", navRequest:"Request",
     eyebrow:"Journal",
     heroTitleA:"Routes and notes", heroTitleB:"from Switzerland",
     heroSubtitle:"A short journal on Ferrari routes, ownership grade details, and transparent terms. Written to help you plan a day where the car is the main event.",
@@ -385,7 +387,7 @@ const I18N = {
     empty:"No entries match your search."
   },
   de:{
-    navRates:"Tarife", navPhilosophy:"Unsere Philosophie", navExperiences:"Anlässe", navBlog:"Journal", navContact:"Kontakt", navRequest:"Anfrage",
+    navRates:"Tarife", navGallery:"Galerie", navPhilosophy:"Unsere Philosophie", navExperiences:"Anlässe", navBlog:"Journal", navContact:"Kontakt", navRequest:"Anfrage",
     eyebrow:"Journal",
     heroTitleA:"Routen und Notizen", heroTitleB:"aus der Schweiz",
     heroSubtitle:"Ein kurzes Journal über Ferrari Routen, Details wie beim Besitz, und transparente Konditionen. Geschrieben, um Ihren Tag so zu planen, dass das Auto im Mittelpunkt steht.",
@@ -402,7 +404,7 @@ const I18N = {
     empty:"Keine Einträge passen zur Suche."
   },
   it:{
-    navRates:"Tariffe", navPhilosophy:"La nostra filosofia", navExperiences:"Esperienze", navBlog:"Journal", navContact:"Contatti", navRequest:"Richiesta",
+    navRates:"Tariffe", navGallery:"Galleria", navPhilosophy:"La nostra filosofia", navExperiences:"Esperienze", navBlog:"Journal", navContact:"Contatti", navRequest:"Richiesta",
     eyebrow:"Journal",
     heroTitleA:"Itinerari e note", heroTitleB:"dalla Svizzera",
     heroSubtitle:"Un journal breve su itinerari in Ferrari, dettagli da vero appassionato, e condizioni trasparenti. Scritto per aiutarti a progettare una giornata in cui l’auto è protagonista.",
@@ -924,6 +926,7 @@ function init(){
   const setHref = (id, href) => { const el = document.getElementById(id); if(el) el.setAttribute("href", href); };
 
   setText("navRates", t.navRates);
+  setText("navGallery", t.navGallery);
   setText("navPhilosophy", t.navPhilosophy);
   setText("navExperiences", t.navExperiences);
   setText("navBlog", t.navBlog);
@@ -931,6 +934,7 @@ function init(){
   setText("navRequest", t.navRequest);
 
   setHref("navRates", window.__LO__.buildUrl("pricing.html", lang, "top"));
+  setHref("navGallery", window.__LO__.buildUrl("pricing.html", lang, "galleryTitle"));
   setHref("navPhilosophy", window.__LO__.buildUrl("../philosophy.html", lang, "top"));
   setHref("navExperiences", window.__LO__.buildUrl("../experiences.html", lang, "top"));
   setHref("navBlog", window.__LO__.buildUrl("blog.html", lang, "top"));
@@ -946,6 +950,7 @@ function init(){
   };
 
   setMobileText("mRates", t.navRates);
+  setMobileText("mGallery", t.navGallery);
   setMobileText("mPhilosophy", t.navPhilosophy);
   setMobileText("mExperiences", t.navExperiences);
   setMobileText("mBlog", t.navBlog);
@@ -954,6 +959,7 @@ function init(){
   setText("mRequest", t.navRequest);
 
   setHref("mRates", window.__LO__.buildUrl("pricing.html", lang, "top"));
+  setHref("mGallery", window.__LO__.buildUrl("pricing.html", lang, "galleryTitle"));
   setHref("mPhilosophy", window.__LO__.buildUrl("../philosophy.html", lang, "top"));
   setHref("mExperiences", window.__LO__.buildUrl("../experiences.html", lang, "top"));
   setHref("mBlog", window.__LO__.buildUrl("blog.html", lang, "top"));

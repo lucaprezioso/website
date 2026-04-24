@@ -57,10 +57,10 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;family=Cinzel:wght@400;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
 <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;family=Cinzel:wght@400;600;700&amp;display=swap" rel="stylesheet"/></noscript>
-<link as="image" fetchpriority="high" href="/media/poster_480.webp" media="(max-width: 600px)" rel="preload"/>
-<link as="image" fetchpriority="high" href="/media/poster_720.webp" media="(min-width: 601px) and (max-width: 900px)" rel="preload"/>
-<link as="image" fetchpriority="high" href="/media/image00103.webp" media="(min-width: 901px) and (min-aspect-ratio: 5/6)" rel="preload"/>
-<link as="image" fetchpriority="high" href="/media/poster_960.webp" media="(min-width: 901px) and (max-aspect-ratio: 5/6)" rel="preload"/>
+<link rel="preload" as="image" href="/media/poster_vertical_480.webp" media="(max-width: 600px)" fetchpriority="high">
+<link rel="preload" as="image" href="/media/poster_vertical_720.webp" media="(min-width: 601px) and (max-width: 900px)" fetchpriority="high">
+<link rel="preload" as="image" href="/media/poster_1200.webp" media="(min-width: 901px) and (min-aspect-ratio: 5/6)" fetchpriority="high">
+<link rel="preload" as="image" href="/media/poster_960.webp" media="(min-width: 901px) and (max-aspect-ratio: 5/6)" fetchpriority="high">
 <link href="/media/icon.webp" rel="icon" type="image/webp"/>
 <link href="/favicon.ico" rel="icon" sizes="any"/>
 <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
@@ -83,6 +83,93 @@
       padding-bottom:calc(3.2rem + env(safe-area-inset-bottom));
     }
   }
+
+/* TO CHANGE THE PANEL IN THE MOBILE VERSION */
+@media (max-width: 760px){
+  .showcase .mediaOverlay{
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    padding:0.4em 0.55rem 0 !important;/*to move the panel*/
+    padding-bottom:0 !important;
+    background:linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.34) 0%,
+      rgba(0,0,0,0.14) 16%,
+      rgba(0,0,0,0.00) 34%
+    );
+  }
+
+  .showcase .mediaOverlay .container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    min-height:100%;
+    padding-left:0;
+    padding-right:0;
+  }
+
+  .showcase .mediaCaption{
+    width:100%;
+    margin-top:0;
+    display:flex;
+    justify-content:center;
+  }
+
+  .showcase .mediaCaptionBox{
+    width:min(92%, 24rem);
+    max-width:24rem;
+    background:rgba(18,18,20,0.60);
+    border:1px solid rgba(255,255,255,0.10);
+    border-radius:22px;
+    padding:0.45rem 0.85rem 0.8rem;
+    box-shadow:0 12px 34px rgba(0,0,0,0.24);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+  }
+
+  #showcaseEyebrow{
+    margin:0 0 0.15rem 0 !important;
+    padding:0 !important;
+    line-height:1.1;
+    font-size:0.72rem;
+    letter-spacing:0.18em;
+    opacity:0.72;
+  }
+
+  .showcase .mediaCaptionBox #showcaseTitle{
+    color:#fff;
+    text-shadow:0 2px 16px rgba(0,0,0,0.50);
+    margin-bottom:0.45rem;
+    line-height:1.02;
+    font-size:2rem !important;
+  }
+
+  #showcaseMicro{
+    margin:0 0 0.4rem 0;
+    font-size:0.92rem;
+    line-height:1.25;
+    color:rgba(255,255,255,0.82);
+  }
+
+  #showcaseEyebrow,
+  #showcaseBody{
+    display:none;
+  }
+
+.showcase .mediaCaptionBox .btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:auto;
+  margin-top:0.1rem;
+  min-height:42px;
+  padding:0.68rem 1rem;
+  font-size:0.95rem;
+}
+}
+
 
   /* 2) Full justification for the main description copy */
   #heroSubtitle{
@@ -291,6 +378,29 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Ferrari 458 Italia cinematic drone video in Switzerland",
+  "description": "A cinematic drone video of the Ferrari 458 Italia by Luxury Obsession, filmed in Swiss vineyards and mountain roads near Zurich.",
+  "thumbnailUrl": [
+    "https://luxuryobsession.ch/media/homepage-poster.webp"
+  ],
+  "uploadDate": "2026-04-22T08:00:00+02:00",
+  "duration": "PT15S",
+  "contentUrl": "https://luxuryobsession.ch/media/FerrariWebShort_VeryLowRes_rev1.MP4",
+  "embedUrl": "https://luxuryobsession.ch/de/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Luxury Obsession",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://luxuryobsession.ch/media/icon.webp"
+    }
+  }
+}
+</script>
 </head>
 <body>
 <header>
@@ -302,6 +412,7 @@
 </a>
 <div class="navRight">
 <nav aria-label="Primary" class="navLinks"><a href="/de/pricing" id="navRates">Tarife</a>
+<a href="/de/pricing#galleryTitle" id="navGallery">Galerie</a>
 <a href="/de/philosophy" id="navPhilosophy">Unsere Philosophie</a>
 <a href="/de/experiences" id="navExperiences">Anlässe</a>
 <a href="/de/blog" id="navBlog">Journal</a>
@@ -329,23 +440,25 @@
 <main>
 <section class="showcase" id="showcase">
 <div class="mediaFull">
-<video autoplay="" id="showcaseVideo" muted="" playsinline="" poster="" preload="none">
-<source data-src="/media/video00100.mp4" id="showcaseSource" type="video/mp4">
-</source></video>
+<video id="showcaseVideo" autoplay muted playsinline preload="none" poster="" aria-label="Cinematic Drohnenvideo der Ferrari 458 Italia in der Schweiz">
+  <source id="showcaseSource" data-src="/media/FerrariWebShort_VeryLowRes_vertical.mp4" type="video/mp4">
+</video>
 <script>
 (function () {
   const showcaseVideo = document.getElementById("showcaseVideo");
   if (!showcaseVideo) return;
 
-  const isMobile = window.matchMedia("(max-width: 900px)").matches;
+  const isMobile = window.matchMedia("(max-width: 760px)").matches;
   const aspect = window.innerWidth / Math.max(1, window.innerHeight);
   const threshold = 5 / 6;
 
   let poster;
-  if (!isMobile && aspect > threshold) {
-    poster = "/media/image00103.webp";
-  } else if (isMobile) {
-    poster = window.innerWidth >= 601 ? "/media/poster_720.webp" : "/media/poster_480.webp";
+  if (isMobile) {
+    poster = window.innerWidth >= 601
+      ? "/media/poster_vertical_720.webp"
+      : "/media/poster_vertical_480.webp";
+  } else if (aspect > threshold) {
+    poster = "/media/poster_1200.webp";
   } else {
     poster = "/media/poster_960.webp";
   }
@@ -358,10 +471,11 @@
 <div class="container">
 <div class="mediaCaption">
 <div class="mediaCaptionBox">
-<p class="eyebrow" id="showcaseEyebrow">Ferrari mieten in Zürich</p>
+<p class="eyebrow" id="showcaseEyebrow">Ferrari mieten Zürich</p>
 <h2 class="mediaTitle" id="showcaseTitle">Ferrari 458 Italia</h2>
+<p class="mediaMicro" id="showcaseMicro">Inhabergeführtes Sportwagenerlebnis in der Schweiz</p>
 <p class="mediaBody" id="showcaseBody">Ein sorgfältig gepflegter, inhabergeführter Ferrari 458 Italia in Zürich mit transparenten Tarifen, diskreter Übergabe und flexiblen Abholoptionen in der ganzen Schweiz.</p>
-<a class="btn btnPrimary" href="#request" id="showcaseCta">Ferrari Verfügbarkeit anfragen</a>
+<a class="btn btnPrimary" href="#request" id="showcaseCta">Verfügbarkeit anfragen</a>
 </div>
 </div>
 </div>
@@ -881,7 +995,7 @@ const DEFAULT_PACKAGES =
     }
 
 
-    const I18N = {"en":{"navPricing":"Rates","navBlog":"Journal","navContact":"Contact","navRequest":"Request","eyebrow":"Zurich, Switzerland","heroTitleA":"Ferrari rental in Zurich","heroTitleB":"Luxury sports car experience","heroSubtitle":"Looking for Ferrari rental in Zurich, sports car rental in Zurich, or a more personal luxury car rental experience? Luxury Obsession offers an owner operated Ferrari 458 Italia in Zurich with transparent rates, discreet handover, and tailored pickup options. The Ferrari 458 Italia is the last naturally aspirated mid engine V8 from Maranello and a modern classic penned by Pininfarina. Our selection is intentionally singular, with one meticulously maintained Ferrari 458 Italia available for half day, full day, weekend, and special occasion bookings across Switzerland.","pill0":"Ferrari rental Zurich","pill1":"Luxury car rental Zurich","pill2":"Sports car rental Zurich","pill3":"Zurich handover","pill4":"Transparent rates","ctaPricing":"View rates","ctaRequest":"Request availability","packagesTitle":"Ferrari rental rates in Zurich","packagesSub":"Half day, full day, weekend, and full week Ferrari rental packages with personal confirmation.","requestTitle":"Request your Ferrari rental in Zurich","requestSub":"Tell us your preferred date, time, and pickup point. We will reply personally with availability and details.","directTitle":"Concierge contact","directBody":"If you prefer to message or call, we will assist you.","bul1":"Discreet, fast replies","bul2":"Transparent confirmation in writing","bul3":"Tailored pickup options","formTitle":"Your request","car":"Car","carNote":"Currently available: Ferrari 458 Italia.","name":"Full name","email":"Email","phone":"Phone","package":"Rate","date":"Preferred date","datePick":"Select","time":"Preferred time","timePick":"Select","coupon":"Referral code","couponHint":"Optional","notes":"Notes","notesHint":"Anything we should know about your request","send":"Send request","prepared":"We will contact you shortly.","pickupTitle":"Pickup","pickupNote":"Main pickup near Zurich. Alternative locations on request.","openMaps":"Open in Google Maps","otherPickup":"Other pickup locations","follow":"Follow","followBody":"Instagram, Facebook, TikTok and YouTube for photos, routes and updates.","quoteOpen":"Requests open","pickupLocation":"Pickup location","packagesNote":"All requests are subject to availability. Minimum age and license requirements apply.","heroNoteLine1":"Available now: <strong>Ferrari 458 Italia</strong>","heroNoteLine2":"Request a date and we will reply quickly.","showcaseEyebrow":"Ferrari rental in Zurich","showcaseTitle":"Ferrari 458 Italia","showcaseBody":"An owner operated Ferrari 458 Italia in Zurich with transparent rates, discreet handover, and tailored pickup options across Switzerland.","showcaseCta":"Request Ferrari availability","navRates":"Rates","navPhilosophy":"Our Philosophy","navExperiences":"Experiences","navImpressum":"Impressum","faqTitle":"FAQ","faqSub":"Common questions about Ferrari rental in Zurich.","faqs":[{"q":"What is included in the Ferrari rental experience","a":"Direct owner support, a full handover and briefing, and concierge support during your booking."},{"q":"How do I request a date","a":"Use the request form or WhatsApp. We confirm availability and terms personally."},{"q":"Do I pay in advance","a":"Yes. Payment is always in advance. Your booking is confirmed after payment and written acceptance of the terms."},{"q":"Is a security deposit required","a":"Yes. A refundable deposit is required. CHF 1,500 for drivers aged 25 or above, CHF 3,000 otherwise. It is refunded after the return check."},{"q":"What documents do I need","a":"A valid driving licence and a valid ID or passport. We may request additional details for insurance."},{"q":"Can tourists or international visitors rent","a":"Yes, if your licence is valid for driving in Switzerland and you meet our requirements."},{"q":"Where is pickup and do you offer delivery in Zurich","a":"Pickup is near Zurich. Delivery or alternative pickup is available on request, with transparent fees shared during confirmation."},{"q":"How many kilometres are included","a":"Each package includes a stated kilometre allowance. Extra kilometres are charged as confirmed for your booking."},{"q":"Can I add a second driver","a":"Yes, on request. The second driver must meet the same requirements."},{"q":"What is your cancellation policy","a":"It depends on timing and availability. We confirm the exact cancellation and rescheduling terms in writing before payment."}]},"de":{"navPricing":"Tarife","navBlog":"Journal","navContact":"Kontakt","navRequest":"Anfrage","eyebrow":"Zürich, Schweiz","heroTitleA":"Ferrari mieten in Zürich","heroTitleB":"Luxus und Sportwagenerlebnis","heroSubtitle":"Für Gäste, die in Zürich einen Ferrari mieten, einen Sportwagen suchen oder eine persönlichere Luxusautovermietung bevorzugen, bietet Luxury Obsession einen inhabergeführten Ferrari 458 Italia mit transparenten Tarifen, diskreter Übergabe und flexiblen Abholmöglichkeiten.\n\nDer Ferrari 458 Italia ist der letzte frei saugende Mittelmotor V8 aus Maranello und ein moderner Klassiker von Pininfarina.\n\nUnser Angebot ist bewusst klar gehalten: ein einzelner Ferrari 458 Italia, sorgfältig gepflegt und verfügbar für Halbtage, ganze Tage, Wochenenden und besondere Anlässe in der ganzen Schweiz.","pill0":"Ferrari mieten Zürich","pill1":"Luxusauto mieten Zürich","pill2":"Sportwagen mieten Zürich","pill3":"Übergabe in Zürich","pill4":"Transparente Tarife","ctaPricing":"Tarife ansehen","ctaRequest":"Verfügbarkeit anfragen","packagesTitle":"Tarife für Ferrari Miete in Zürich","packagesSub":"Halbtag, Ganztag, Wochenende und ganze Woche mit persönlicher Bestätigung.","requestTitle":"Ferrari in Zürich anfragen","requestSub":"Nennen Sie Datum, Uhrzeit und gewünschten Abholort. Wir bestätigen Verfügbarkeit und Details persönlich.","directTitle":"Direkter Kontakt","directBody":"Wenn Sie lieber schreiben oder anrufen, helfen wir Ihnen persönlich.","bul1":"Diskret, schnell","bul2":"Transparente Bestätigung schriftlich","bul3":"Abholung nach Wunsch","formTitle":"Ihre Anfrage","car":"Fahrzeug","carNote":"Aktuell verfügbar: Ferrari 458 Italia.","name":"Name","email":"E-Mail","phone":"Telefon","package":"Tarif","date":"Wunschtermin","datePick":"Wählen","time":"Wunschzeit","timePick":"Wählen","coupon":"Empfehlungscode","couponHint":"Optional","notes":"Notizen","notesHint":"Gibt es etwas Wichtiges zu Ihrer Anfrage","send":"Anfrage senden","prepared":"Wir melden uns in Kürze.","pickupTitle":"Abholung","pickupNote":"Hauptabholung bei Zürich. Alternative Orte auf Anfrage.","openMaps":"In Google Maps öffnen","otherPickup":"Weitere Abholorte","follow":"Folgen","followBody":"Instagram, Facebook, TikTok und YouTube für Bilder, Routen und Updates.","quoteOpen":"Anfragen offen","pickupLocation":"Abholort","packagesNote":"Alle Anfragen vorbehaltlich Verfügbarkeit. Mindestalter und Führerausweis erforderlich.","heroNoteLine1":"Jetzt verfügbar: <strong>Ferrari 458 Italia</strong>","heroNoteLine2":"Datum anfragen, wir melden uns schnell zurück.","showcaseEyebrow":"Ferrari mieten in Zürich","showcaseTitle":"Ferrari 458 Italia","showcaseBody":"Ein inhabergeführter Ferrari 458 Italia in Zürich mit transparenten Tarifen, diskreter Übergabe und flexiblen Abholoptionen in der ganzen Schweiz.","showcaseCta":"Ferrari Verfügbarkeit anfragen","navRates":"Tarife","navPhilosophy":"Unsere Philosophie","navExperiences":"Anlässe","navImpressum":"Impressum","faqTitle":"FAQ","faqSub":"Häufige Fragen zur Ferrari Miete in Zürich.","faqs":[{"q":"Was ist in der Ferrari Miete enthalten","a":"Direkte Inhaberbetreuung, ausführliche Übergabe und Einweisung sowie persönliche Unterstützung während Ihrer Buchung."},{"q":"Wie frage ich einen Termin an","a":"Über das Anfrageformular oder per WhatsApp. Wir bestätigen Verfügbarkeit und Konditionen persönlich."},{"q":"Muss ich im Voraus bezahlen","a":"Ja. Die Zahlung erfolgt immer im Voraus. Die Buchung gilt nach Zahlung und schriftlicher Bestätigung der Bedingungen als fix."},{"q":"Ist eine Kaution erforderlich","a":"Ja. Eine rückerstattbare Kaution ist erforderlich. CHF 1,500 ab 25 Jahren, CHF 3,000 unter 25. Rückzahlung nach Rückgabe und Kontrolle."},{"q":"Welche Dokumente brauche ich","a":"Gültiger Führerausweis sowie gültiger Ausweis oder Reisepass. Für die Versicherung können weitere Angaben nötig sein."},{"q":"Können Touristen mieten","a":"Ja, sofern Ihr Führerausweis in der Schweiz gültig ist und Sie die Anforderungen erfüllen."},{"q":"Wo findet die Übergabe statt und bietet ihr Lieferung an","a":"Die Übergabe ist nahe Zürich. Lieferung oder alternative Übergabe ist auf Anfrage möglich, mit transparenten Gebühren bei der Bestätigung."},{"q":"Wie viele Kilometer sind inklusive","a":"Jedes Paket enthält ein definiertes Kilometerkontingent. Mehrkilometer werden gemäss Bestätigung verrechnet."},{"q":"Kann ich einen zweiten Fahrer hinzufügen","a":"Ja, auf Anfrage. Der zweite Fahrer muss die gleichen Anforderungen erfüllen."},{"q":"Wie sind Storno und Umbuchung geregelt","a":"Das hängt vom Zeitpunkt und von der Verfügbarkeit ab. Die genauen Bedingungen bestätigen wir schriftlich vor der Zahlung."}]},"it":{"navPricing":"Tariffe","navBlog":"Journal","navContact":"Contatti","navRequest":"Richiesta","eyebrow":"Zurigo, Svizzera","heroTitleA":"Noleggio Ferrari a Zurigo","heroTitleB":"Esperienza con auto sportive di lusso","heroSubtitle":"Se stai cercando noleggio Ferrari a Zurigo, noleggio auto sportive a Zurigo, o un'esperienza di noleggio auto di lusso più personale, Luxury Obsession propone una Ferrari 458 Italia gestita dalla proprietaria a Zurigo con tariffe trasparenti, consegna discreta e opzioni di ritiro flessibili. La Ferrari 458 Italia è l'ultimo V8 aspirato a motore centrale di Maranello e un classico moderno firmato Pininfarina. La nostra proposta è volutamente unica, con una sola Ferrari 458 Italia mantenuta con cura per mezze giornate, giornate intere, weekend e occasioni speciali in tutta la Svizzera.","pill0":"Noleggio Ferrari Zurigo","pill1":"Auto di lusso Zurigo","pill2":"Auto sportive Zurigo","pill3":"Consegna a Zurigo","pill4":"Tariffe trasparenti","ctaPricing":"Vedi tariffe","ctaRequest":"Richiedi disponibilità","packagesTitle":"Tariffe per il noleggio Ferrari a Zurigo","packagesSub":"Mezza giornata, giornata intera, weekend e settimana intera con conferma personale.","requestTitle":"Richiedi il tuo noleggio Ferrari a Zurigo","requestSub":"Indicaci data, orario e punto di ritiro preferito. Ti rispondiamo personalmente con disponibilità e dettagli.","directTitle":"Contatto diretto","directBody":"Se preferisci scriverci o chiamarci, ti assistiamo personalmente.","bul1":"Risposte rapide e discrete","bul2":"Conferma trasparente per iscritto","bul3":"Opzioni di ritiro su richiesta","formTitle":"La tua richiesta","car":"Auto","carNote":"Disponibile ora: Ferrari 458 Italia.","name":"Nome e cognome","email":"Email","phone":"Telefono","package":"Tariffa","date":"Data preferita","datePick":"Seleziona","time":"Orario preferito","timePick":"Seleziona","coupon":"Codice referral","couponHint":"Opzionale","notes":"Note","notesHint":"Indicazioni utili per la tua richiesta","send":"Invia richiesta","prepared":"Ti contattiamo a breve.","pickupTitle":"Ritiro","pickupNote":"Ritiro principale vicino a Zurigo. Altre location su richiesta.","openMaps":"Apri in Google Maps","otherPickup":"Altri luoghi di ritiro","follow":"Seguici","followBody":"Instagram, Facebook, TikTok e YouTube per foto, itinerari e aggiornamenti.","quoteOpen":"Richieste aperte","pickupLocation":"Luogo di ritiro","packagesNote":"Tutte le richieste sono soggette a disponibilità. Si applicano requisiti di età e patente.","heroNoteLine1":"Disponibile ora: <strong>Ferrari 458 Italia</strong>","heroNoteLine2":"Richiedi una data, ti rispondiamo rapidamente.","showcaseEyebrow":"Noleggio Ferrari a Zurigo","showcaseTitle":"Ferrari 458 Italia","showcaseBody":"Una Ferrari 458 Italia curata con grande attenzione e gestita dalla proprietaria a Zurigo, con tariffe trasparenti, consegna discreta e opzioni di ritiro flessibili in tutta la Svizzera.","showcaseCta":"Richiedi disponibilità Ferrari","navRates":"Tariffe","navPhilosophy":"La nostra filosofia","navExperiences":"Esperienze","navImpressum":"Impressum","faqTitle":"FAQ","faqSub":"Domande frequenti sul noleggio Ferrari a Zurigo.","faqs":[{"q":"Cosa è incluso nel noleggio","a":"Assistenza diretta della proprietaria, consegna con briefing completo e supporto diretto durante la tua esperienza."},{"q":"Come posso richiedere una data","a":"Compila il modulo di richiesta o scrivici su WhatsApp. Confermiamo disponibilità e condizioni personalmente."},{"q":"Il pagamento è anticipato","a":"Sì. Il pagamento è sempre anticipato. La prenotazione è confermata dopo il pagamento e l'accettazione scritta delle condizioni."},{"q":"È richiesta una cauzione","a":"Sì. È richiesta una cauzione rimborsabile. CHF 1,500 dai 25 anni in su, CHF 3,000 sotto i 25. Rimborso dopo riconsegna e controllo."},{"q":"Quali documenti servono","a":"Patente valida e documento di identità o passaporto. Potremmo richiedere ulteriori informazioni per l'assicurazione."},{"q":"Possono noleggiare anche i turisti","a":"Sì, se la tua patente è valida per guidare in Svizzera e soddisfi i requisiti."},{"q":"Dove avviene la consegna e fate anche delivery a Zurigo","a":"La consegna è vicino a Zurigo. Consegna a domicilio o punto alternativo su richiesta, con costi chiari al momento della conferma."},{"q":"Quanti chilometri sono inclusi","a":"Ogni pacchetto include un limite chilometrico. I chilometri extra sono addebitati come indicato nella conferma."},{"q":"Posso aggiungere un secondo guidatore","a":"Sì, su richiesta. Il secondo guidatore deve soddisfare gli stessi requisiti."},{"q":"Qual è la politica di cancellazione","a":"Dipende dal momento e dalla disponibilità. Confermiamo le condizioni di cancellazione e riprogrammazione per iscritto prima del pagamento."}]}};    const WEEKDAYS = {
+    const I18N = {"en":{"navPricing":"Rates","navBlog":"Journal","navContact":"Contact","navRequest":"Request","eyebrow":"Zurich, Switzerland","heroTitleA":"Ferrari rental in Zurich","heroTitleB":"Luxury sports car experience","heroSubtitle":"Looking for Ferrari rental in Zurich, sports car rental in Zurich, or a more personal luxury car rental experience? Luxury Obsession offers an owner operated Ferrari 458 Italia in Zurich with transparent rates, discreet handover, and tailored pickup options. The Ferrari 458 Italia is the last naturally aspirated mid engine V8 from Maranello and a modern classic penned by Pininfarina. Our selection is intentionally singular, with one meticulously maintained Ferrari 458 Italia available for half day, full day, weekend, and special occasion bookings across Switzerland.","pill0":"Ferrari rental Zurich","pill1":"Luxury car rental Zurich","pill2":"Sports car rental Zurich","pill3":"Zurich handover","pill4":"Transparent rates","ctaPricing":"View rates","ctaRequest":"Request availability","packagesTitle":"Ferrari rental rates in Zurich","packagesSub":"Half day, full day, weekend, and full week Ferrari rental packages with personal confirmation.","requestTitle":"Request your Ferrari rental in Zurich","requestSub":"Tell us your preferred date, time, and pickup point. We will reply personally with availability and details.","directTitle":"Concierge contact","directBody":"If you prefer to message or call, we will assist you.","bul1":"Discreet, fast replies","bul2":"Transparent confirmation in writing","bul3":"Tailored pickup options","formTitle":"Your request","car":"Car","carNote":"Currently available: Ferrari 458 Italia.","name":"Full name","email":"Email","phone":"Phone","package":"Rate","date":"Preferred date","datePick":"Select","time":"Preferred time","timePick":"Select","coupon":"Referral code","couponHint":"Optional","notes":"Notes","notesHint":"Anything we should know about your request","send":"Send request","prepared":"We will contact you shortly.","pickupTitle":"Pickup","pickupNote":"Main pickup near Zurich. Alternative locations on request.","openMaps":"Open in Google Maps","otherPickup":"Other pickup locations","follow":"Follow","followBody":"Instagram, Facebook, TikTok and YouTube for photos, routes and updates.","quoteOpen":"Requests open","pickupLocation":"Pickup location","packagesNote":"All requests are subject to availability. Minimum age and license requirements apply.","heroNoteLine1":"Available now: <strong>Ferrari 458 Italia</strong>","heroNoteLine2":"Request a date and we will reply quickly.","showcaseEyebrow":"Ferrari rental Zurich","showcaseTitle":"Ferrari 458 Italia","showcaseBody":"An owner operated Ferrari 458 Italia in Zurich with transparent rates, discreet handover, and tailored pickup options across Switzerland.","showcaseCta":"Request Ferrari availability","navRates":"Rates","navPhilosophy":"Our Philosophy","navExperiences":"Experiences","navImpressum":"Impressum","faqTitle":"FAQ","faqSub":"Common questions about Ferrari rental in Zurich.","faqs":[{"q":"What is included in the Ferrari rental experience","a":"Direct owner support, a full handover and briefing, and concierge support during your booking."},{"q":"How do I request a date","a":"Use the request form or WhatsApp. We confirm availability and terms personally."},{"q":"Do I pay in advance","a":"Yes. Payment is always in advance. Your booking is confirmed after payment and written acceptance of the terms."},{"q":"Is a security deposit required","a":"Yes. A refundable deposit is required. CHF 1,500 for drivers aged 25 or above, CHF 3,000 otherwise. It is refunded after the return check."},{"q":"What documents do I need","a":"A valid driving licence and a valid ID or passport. We may request additional details for insurance."},{"q":"Can tourists or international visitors rent","a":"Yes, if your licence is valid for driving in Switzerland and you meet our requirements."},{"q":"Where is pickup and do you offer delivery in Zurich","a":"Pickup is near Zurich. Delivery or alternative pickup is available on request, with transparent fees shared during confirmation."},{"q":"How many kilometres are included","a":"Each package includes a stated kilometre allowance. Extra kilometres are charged as confirmed for your booking."},{"q":"Can I add a second driver","a":"Yes, on request. The second driver must meet the same requirements."},{"q":"What is your cancellation policy","a":"It depends on timing and availability. We confirm the exact cancellation and rescheduling terms in writing before payment."}]},"de":{"navPricing":"Tarife","navBlog":"Journal","navContact":"Kontakt","navRequest":"Anfrage","eyebrow":"Zürich, Schweiz","heroTitleA":"Ferrari mieten in Zürich","heroTitleB":"Luxus und Sportwagenerlebnis","heroSubtitle":"Für Gäste, die in Zürich einen Ferrari mieten, einen Sportwagen suchen oder eine persönlichere Luxusautovermietung bevorzugen, bietet Luxury Obsession einen inhabergeführten Ferrari 458 Italia mit transparenten Tarifen, diskreter Übergabe und flexiblen Abholmöglichkeiten.\n\nDer Ferrari 458 Italia ist der letzte frei saugende Mittelmotor V8 aus Maranello und ein moderner Klassiker von Pininfarina.\n\nUnser Angebot ist bewusst klar gehalten: ein einzelner Ferrari 458 Italia, sorgfältig gepflegt und verfügbar für Halbtage, ganze Tage, Wochenenden und besondere Anlässe in der ganzen Schweiz.","pill0":"Ferrari mieten Zürich","pill1":"Luxusauto mieten Zürich","pill2":"Sportwagen mieten Zürich","pill3":"Übergabe in Zürich","pill4":"Transparente Tarife","ctaPricing":"Tarife ansehen","ctaRequest":"Verfügbarkeit anfragen","packagesTitle":"Tarife für Ferrari Miete in Zürich","packagesSub":"Halbtag, Ganztag, Wochenende und ganze Woche mit persönlicher Bestätigung.","requestTitle":"Ferrari in Zürich anfragen","requestSub":"Nennen Sie Datum, Uhrzeit und gewünschten Abholort. Wir bestätigen Verfügbarkeit und Details persönlich.","directTitle":"Direkter Kontakt","directBody":"Wenn Sie lieber schreiben oder anrufen, helfen wir Ihnen persönlich.","bul1":"Diskret, schnell","bul2":"Transparente Bestätigung schriftlich","bul3":"Abholung nach Wunsch","formTitle":"Ihre Anfrage","car":"Fahrzeug","carNote":"Aktuell verfügbar: Ferrari 458 Italia.","name":"Name","email":"E-Mail","phone":"Telefon","package":"Tarif","date":"Wunschtermin","datePick":"Wählen","time":"Wunschzeit","timePick":"Wählen","coupon":"Empfehlungscode","couponHint":"Optional","notes":"Notizen","notesHint":"Gibt es etwas Wichtiges zu Ihrer Anfrage","send":"Anfrage senden","prepared":"Wir melden uns in Kürze.","pickupTitle":"Abholung","pickupNote":"Hauptabholung bei Zürich. Alternative Orte auf Anfrage.","openMaps":"In Google Maps öffnen","otherPickup":"Weitere Abholorte","follow":"Folgen","followBody":"Instagram, Facebook, TikTok und YouTube für Bilder, Routen und Updates.","quoteOpen":"Anfragen offen","pickupLocation":"Abholort","packagesNote":"Alle Anfragen vorbehaltlich Verfügbarkeit. Mindestalter und Führerausweis erforderlich.","heroNoteLine1":"Jetzt verfügbar: <strong>Ferrari 458 Italia</strong>","heroNoteLine2":"Datum anfragen, wir melden uns schnell zurück.","showcaseEyebrow":"Ferrari mieten Zürich","showcaseTitle":"Ferrari 458 Italia","showcaseBody":"Ein inhabergeführter Ferrari 458 Italia in Zürich mit transparenten Tarifen, diskreter Übergabe und flexiblen Abholoptionen in der ganzen Schweiz.","showcaseCta":"Verfügbarkeit anfragen","navRates":"Tarife","navPhilosophy":"Unsere Philosophie","navExperiences":"Anlässe","navImpressum":"Impressum","faqTitle":"FAQ","faqSub":"Häufige Fragen zur Ferrari Miete in Zürich.","faqs":[{"q":"Was ist in der Ferrari Miete enthalten","a":"Direkte Inhaberbetreuung, ausführliche Übergabe und Einweisung sowie persönliche Unterstützung während Ihrer Buchung."},{"q":"Wie frage ich einen Termin an","a":"Über das Anfrageformular oder per WhatsApp. Wir bestätigen Verfügbarkeit und Konditionen persönlich."},{"q":"Muss ich im Voraus bezahlen","a":"Ja. Die Zahlung erfolgt immer im Voraus. Die Buchung gilt nach Zahlung und schriftlicher Bestätigung der Bedingungen als fix."},{"q":"Ist eine Kaution erforderlich","a":"Ja. Eine rückerstattbare Kaution ist erforderlich. CHF 1,500 ab 25 Jahren, CHF 3,000 unter 25. Rückzahlung nach Rückgabe und Kontrolle."},{"q":"Welche Dokumente brauche ich","a":"Gültiger Führerausweis sowie gültiger Ausweis oder Reisepass. Für die Versicherung können weitere Angaben nötig sein."},{"q":"Können Touristen mieten","a":"Ja, sofern Ihr Führerausweis in der Schweiz gültig ist und Sie die Anforderungen erfüllen."},{"q":"Wo findet die Übergabe statt und bietet ihr Lieferung an","a":"Die Übergabe ist nahe Zürich. Lieferung oder alternative Übergabe ist auf Anfrage möglich, mit transparenten Gebühren bei der Bestätigung."},{"q":"Wie viele Kilometer sind inklusive","a":"Jedes Paket enthält ein definiertes Kilometerkontingent. Mehrkilometer werden gemäss Bestätigung verrechnet."},{"q":"Kann ich einen zweiten Fahrer hinzufügen","a":"Ja, auf Anfrage. Der zweite Fahrer muss die gleichen Anforderungen erfüllen."},{"q":"Wie sind Storno und Umbuchung geregelt","a":"Das hängt vom Zeitpunkt und von der Verfügbarkeit ab. Die genauen Bedingungen bestätigen wir schriftlich vor der Zahlung."}]},"it":{"navPricing":"Tariffe","navBlog":"Journal","navContact":"Contatti","navRequest":"Richiesta","eyebrow":"Zurigo, Svizzera","heroTitleA":"Noleggio Ferrari a Zurigo","heroTitleB":"Esperienza con auto sportive di lusso","heroSubtitle":"Se stai cercando noleggio Ferrari a Zurigo, noleggio auto sportive a Zurigo, o un'esperienza di noleggio auto di lusso più personale, Luxury Obsession propone una Ferrari 458 Italia gestita dalla proprietaria a Zurigo con tariffe trasparenti, consegna discreta e opzioni di ritiro flessibili. La Ferrari 458 Italia è l'ultimo V8 aspirato a motore centrale di Maranello e un classico moderno firmato Pininfarina. La nostra proposta è volutamente unica, con una sola Ferrari 458 Italia mantenuta con cura per mezze giornate, giornate intere, weekend e occasioni speciali in tutta la Svizzera.","pill0":"Noleggio Ferrari Zurigo","pill1":"Auto di lusso Zurigo","pill2":"Auto sportive Zurigo","pill3":"Consegna a Zurigo","pill4":"Tariffe trasparenti","ctaPricing":"Vedi tariffe","ctaRequest":"Richiedi disponibilità","packagesTitle":"Tariffe per il noleggio Ferrari a Zurigo","packagesSub":"Mezza giornata, giornata intera, weekend e settimana intera con conferma personale.","requestTitle":"Richiedi il tuo noleggio Ferrari a Zurigo","requestSub":"Indicaci data, orario e punto di ritiro preferito. Ti rispondiamo personalmente con disponibilità e dettagli.","directTitle":"Contatto diretto","directBody":"Se preferisci scriverci o chiamarci, ti assistiamo personalmente.","bul1":"Risposte rapide e discrete","bul2":"Conferma trasparente per iscritto","bul3":"Opzioni di ritiro su richiesta","formTitle":"La tua richiesta","car":"Auto","carNote":"Disponibile ora: Ferrari 458 Italia.","name":"Nome e cognome","email":"Email","phone":"Telefono","package":"Tariffa","date":"Data preferita","datePick":"Seleziona","time":"Orario preferito","timePick":"Seleziona","coupon":"Codice referral","couponHint":"Opzionale","notes":"Note","notesHint":"Indicazioni utili per la tua richiesta","send":"Invia richiesta","prepared":"Ti contattiamo a breve.","pickupTitle":"Ritiro","pickupNote":"Ritiro principale vicino a Zurigo. Altre location su richiesta.","openMaps":"Apri in Google Maps","otherPickup":"Altri luoghi di ritiro","follow":"Seguici","followBody":"Instagram, Facebook, TikTok e YouTube per foto, itinerari e aggiornamenti.","quoteOpen":"Richieste aperte","pickupLocation":"Luogo di ritiro","packagesNote":"Tutte le richieste sono soggette a disponibilità. Si applicano requisiti di età e patente.","heroNoteLine1":"Disponibile ora: <strong>Ferrari 458 Italia</strong>","heroNoteLine2":"Richiedi una data, ti rispondiamo rapidamente.","showcaseEyebrow":"Noleggio Ferrari Zurigo","showcaseTitle":"Ferrari 458 Italia","showcaseBody":"Una Ferrari 458 Italia curata con grande attenzione e gestita dalla proprietaria a Zurigo, con tariffe trasparenti, consegna discreta e opzioni di ritiro flessibili in tutta la Svizzera.","showcaseCta":"Richiedi disponibilità Ferrari","navRates":"Tariffe","navPhilosophy":"La nostra filosofia","navExperiences":"Esperienze","navImpressum":"Impressum","faqTitle":"FAQ","faqSub":"Domande frequenti sul noleggio Ferrari a Zurigo.","faqs":[{"q":"Cosa è incluso nel noleggio","a":"Assistenza diretta della proprietaria, consegna con briefing completo e supporto diretto durante la tua esperienza."},{"q":"Come posso richiedere una data","a":"Compila il modulo di richiesta o scrivici su WhatsApp. Confermiamo disponibilità e condizioni personalmente."},{"q":"Il pagamento è anticipato","a":"Sì. Il pagamento è sempre anticipato. La prenotazione è confermata dopo il pagamento e l'accettazione scritta delle condizioni."},{"q":"È richiesta una cauzione","a":"Sì. È richiesta una cauzione rimborsabile. CHF 1,500 dai 25 anni in su, CHF 3,000 sotto i 25. Rimborso dopo riconsegna e controllo."},{"q":"Quali documenti servono","a":"Patente valida e documento di identità o passaporto. Potremmo richiedere ulteriori informazioni per l'assicurazione."},{"q":"Possono noleggiare anche i turisti","a":"Sì, se la tua patente è valida per guidare in Svizzera e soddisfi i requisiti."},{"q":"Dove avviene la consegna e fate anche delivery a Zurigo","a":"La consegna è vicino a Zurigo. Consegna a domicilio o punto alternativo su richiesta, con costi chiari al momento della conferma."},{"q":"Quanti chilometri sono inclusi","a":"Ogni pacchetto include un limite chilometrico. I chilometri extra sono addebitati come indicato nella conferma."},{"q":"Posso aggiungere un secondo guidatore","a":"Sì, su richiesta. Il secondo guidatore deve soddisfare gli stessi requisiti."},{"q":"Qual è la politica di cancellazione","a":"Dipende dal momento e dalla disponibilità. Confermiamo le condizioni di cancellazione e riprogrammazione per iscritto prima del pagamento."}]}};    const WEEKDAYS = {
       en:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
       de:["Mo","Di","Mi","Do","Fr","Sa","So"],
       it:["Lun","Mar","Mer","Gio","Ven","Sab","Dom"]
@@ -1057,6 +1171,7 @@ const DEFAULT_PACKAGES =
       setText("navRequest", t.navRequest);
 
       setHref("navRates", window.__LO__.buildUrl("pages/pricing.html", lang, "top"));
+      setHref("navGallery", window.__LO__.buildUrl("pages/pricing.html", lang, "galleryTitle"));
       setHref("navPhilosophy", window.__LO__.buildUrl("philosophy.html", lang, "top"));
       setHref("navExperiences", window.__LO__.buildUrl("experiences.html", lang, "top"));
       setHref("navBlog", window.__LO__.buildUrl("pages/blog.html", lang, "top"));
@@ -1496,8 +1611,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const saveData = navigator.connection && navigator.connection.saveData;
 
-  // Showcase video: choose source, then play once and hold last frame
-  const showcaseVideo = document.getElementById("showcaseVideo");
+  // Choose one mode for testing:
+  // "loop"    -> repeats forever
+  // "stop553" -> pauses at 5.53 seconds
+  const DESKTOP_WIDE_VIDEO_MODE = "loop";
+
+    const showcaseVideo = document.getElementById("showcaseVideo");
   const showcaseSource = document.getElementById("showcaseSource");
   if (showcaseVideo && showcaseSource && !reduceMotion && !saveData) {
     const isMobile = window.matchMedia("(max-width: 760px)").matches;
@@ -1506,22 +1625,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let desired = showcaseSource.dataset.src || "";
     let poster = showcaseVideo.getAttribute("poster") || "";
-    if (!isMobile && aspect > threshold) {
-      desired = "/media/video00200.mp4";
-      poster = "/media/image00103.webp";
+    let isDesktopWide = false;
+
+    if (isMobile) {
+      desired = "/media/FerrariWebShort_VeryLowRes_vertical.mp4";
+    } else if (aspect > threshold) {
+      desired = "/media/FerrariWebShort_VeryLowRes_rev1.MP4";
+      poster = "/media/homepage-poster.webp";
+      isDesktopWide = true;
     }
+
     if (poster) showcaseVideo.poster = poster;
 
     requestAnimationFrame(() => {
       showcaseSource.src = desired;
       showcaseVideo.load();
+
+      if (isMobile) {
+        showcaseVideo.loop = true;
+      } else if (isDesktopWide && DESKTOP_WIDE_VIDEO_MODE === "loop") {
+        showcaseVideo.loop = true;
+      } else {
+        showcaseVideo.loop = false;
+      }
+
       showcaseVideo.play().catch(() => {});
     });
 
-    showcaseVideo.addEventListener("ended", () => {
-      showcaseVideo.pause();
-      try { showcaseVideo.currentTime = showcaseVideo.duration; } catch (e) {}
-    });
+    if (isDesktopWide && DESKTOP_WIDE_VIDEO_MODE === "stop553") {
+      const stopAt = 5.53;
+      let stopped = false;
+
+      showcaseVideo.addEventListener("timeupdate", () => {
+        if (stopped) return;
+        if (showcaseVideo.currentTime >= stopAt) {
+          stopped = true;
+          showcaseVideo.pause();
+          try { showcaseVideo.currentTime = stopAt; } catch (e) {}
+        }
+      });
+    } else if (!isMobile && !(isDesktopWide && DESKTOP_WIDE_VIDEO_MODE === "loop")) {
+      showcaseVideo.addEventListener("ended", () => {
+        showcaseVideo.pause();
+        try { showcaseVideo.currentTime = showcaseVideo.duration; } catch (e) {}
+      });
+    }
   }
 
   // Hero card mini video: load only on desktop and only when near the viewport
