@@ -72,6 +72,7 @@
 <link href="/assets/lo.css" rel="stylesheet"/>
 <link href="/site.webmanifest" rel="manifest"/>
 <link href="https://luxuryobsession.ch/it/" rel="canonical"/>
+<link href="https://www.youtube.com/@luxuryobsessionch" rel="me"/>
 <style>
   /* Page-specific refinements for the home page */
 
@@ -306,7 +307,8 @@
   "sameAs": [
     "https://instagram.com/luxuryobsession.ch",
     "https://www.tiktok.com/@luxuryobsession_ch",
-    "https://www.facebook.com/share/1GnE57WMua/?mibextid=wwXIfr"
+    "https://www.facebook.com/share/1GnE57WMua/?mibextid=wwXIfr",
+	"https://www.youtube.com/@luxuryobsessionch"
   ],
   "makesOffer": {
     "@type": "Offer",
@@ -335,7 +337,8 @@
       "sameAs": [
         "https://instagram.com/luxuryobsession.ch",
         "https://www.tiktok.com/@luxuryobsession_ch",
-        "https://www.facebook.com/share/1GnE57WMua/?mibextid=wwXIfr"
+        "https://www.facebook.com/share/1GnE57WMua/?mibextid=wwXIfr",
+		"https://www.youtube.com/@luxuryobsessionch"
       ],
       "contactPoint": {
         "@type": "ContactPoint",
@@ -380,6 +383,41 @@
         {"@type": "Question", "name": "Posso aggiungere un secondo guidatore", "acceptedAnswer": {"@type": "Answer", "text": "Sì, su richiesta. Il secondo guidatore deve soddisfare gli stessi requisiti."}},
         {"@type": "Question", "name": "Qual è la politica di cancellazione", "acceptedAnswer": {"@type": "Answer", "text": "Dipende dal momento e dalla disponibilità. Confermiamo le condizioni di cancellazione e riprogrammazione per iscritto prima del pagamento."}}
       ]
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://luxuryobsession.ch/#website",
+      "url": "https://luxuryobsession.ch/",
+      "name": "Luxury Obsession",
+      "alternateName": [
+        "Luxury Obsession Switzerland",
+        "Luxury Obsession Ferrari Rental",
+        "luxuryobsession.ch"
+      ],
+      "inLanguage": ["en-CH", "de-CH", "it-CH"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://luxuryobsession.ch/it/#webpage",
+      "url": "https://luxuryobsession.ch/it/",
+      "name": "Noleggio Ferrari Zurigo | Auto sportive di lusso",
+      "description": "Noleggio Ferrari a Zurigo con una Ferrari 458 Italia gestita dalla proprietaria. Noleggio auto di lusso e sportive a Zurigo con tariffe trasparenti, consegna discreta e opzioni di ritiro flessibili in Svizzera.",
+      "inLanguage": "it-CH",
+      "isPartOf": {
+        "@id": "https://luxuryobsession.ch/#website"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://luxuryobsession.ch/media/ogimage.jpg"
+      }
     }
   ]
 }
@@ -764,11 +802,11 @@
 <footer>
 <div class="container footerInner">
 <div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
-<div class="footerCenter">Disponibile ora: Ferrari 458 Italia.</div>
+<div class="footerCenter" id="footerStatus">Disponibile ora: Ferrari 458 Italia.</div>
 <div class="footerRight">
 <a href="/it/impressum">Impressum</a>
 <a href="/it/datenschutz">Privacy</a>
-<a href="/it/agb">Terms</a>
+<a href="/it/agb">Condizioni</a>
 </div>
 </div>
 </footer>
@@ -783,7 +821,7 @@
       instagram: "https://instagram.com/luxuryobsession.ch",
       facebook: "https://www.facebook.com/share/1GnE57WMua/?mibextid=wwXIfr",
       tiktok: "https://www.tiktok.com/@luxuryobsession_ch",
-      youtube: "https://youtube.com/"
+      youtube: "https://www.youtube.com/@luxuryobsessionch"
     };
 
     const PICKUP_ADDRESS = "Waldaustrasse 2, 8606 Nänikon, Switzerland";
@@ -1177,13 +1215,16 @@ const DEFAULT_PACKAGES =
       setText("navContact", t.navContact);
       setText("navRequest", t.navRequest);
 
-      setHref("navRates", window.__LO__.buildUrl("pages/pricing.html", lang, "top"));
-      setHref("navGallery", window.__LO__.buildUrl("pages/pricing.html", lang, "galleryTitle"));
-      setHref("navPhilosophy", window.__LO__.buildUrl("philosophy.html", lang, "top"));
-      setHref("navExperiences", window.__LO__.buildUrl("experiences.html", lang, "top"));
-      setHref("navBlog", window.__LO__.buildUrl("pages/blog.html", lang, "top"));
-      setHref("navContact", window.__LO__.buildUrl("index.html", lang, "contact"));
-      setHref("navRequest", window.__LO__.buildUrl("index.html", lang, "request"));
+      const prefix = lang === "de" ? "/de" : lang === "it" ? "/it" : "";
+      const homePath = prefix ? `${prefix}/` : "/";
+
+      setHref("navRates", `${prefix}/pricing`);
+      setHref("navGallery", `${prefix}/pricing#galleryTitle`);
+      setHref("navPhilosophy", `${prefix}/philosophy`);
+      setHref("navExperiences", `${prefix}/experiences`);
+      setHref("navBlog", `${prefix}/blog`);
+      setHref("navContact", `${homePath}#contact`);
+      setHref("navRequest", `${homePath}#request`);
 
       if(window.__LO__ && window.__LO__.initSharedUI) window.__LO__.initSharedUI(lang);
       // Hero
@@ -1197,11 +1238,14 @@ const DEFAULT_PACKAGES =
       document.getElementById("pill3").textContent = t.pill3;
       document.getElementById("pill4").textContent = t.pill4;
       document.getElementById("ctaPricing").textContent = t.ctaPricing;
-      document.getElementById("ctaPricing").href = window.__LO__.buildUrl("pages/pricing.html", lang, "top");
+      document.getElementById("ctaPricing").href = `${prefix}/pricing`;
       document.getElementById("ctaRequest").textContent = t.ctaRequest;
 
       document.getElementById("heroNoteLine1").innerHTML = (t.heroNoteLine1 || "Available now: <strong>Ferrari 458 Italia</strong>");
       document.getElementById("heroNoteLine2").textContent = (t.heroNoteLine2 || "Request a date and we will reply quickly.");
+
+      const footerStatus = document.getElementById("footerStatus");
+      if (footerStatus) footerStatus.textContent = t.carNote;
 
 
 // Showcase
