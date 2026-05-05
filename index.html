@@ -549,11 +549,11 @@
 <span class="brandGold">Luxury Obsession</span>
 </a>
 <div class="navRight">
-<nav aria-label="Primary" class="navLinks"><a href="/pricing" id="navRates">Rates</a>
-<a href="/pricing#galleryTitle" id="navGallery">Gallery</a>
-<a href="/philosophy" id="navPhilosophy">Our Philosophy</a>
-<a href="/experiences" id="navExperiences">Experiences</a>
-<a href="/blog" id="navBlog">Journal</a>
+<nav aria-label="Primary" class="navLinks"><a href="/en/pricing" id="navRates">Rates</a>
+<a href="/en/pricing#galleryTitle" id="navGallery">Gallery</a>
+<a href="/en/philosophy" id="navPhilosophy">Our Philosophy</a>
+<a href="/en/experiences" id="navExperiences">Experiences</a>
+<a href="/en/blog" id="navBlog">Journal</a>
 <a href="#contact" id="navContact">Contact</a>
 <a class="navCta" href="#request" id="navRequest">Request</a></nav>
 <div aria-label="Language" class="langSelect">
@@ -636,7 +636,7 @@
 <span class="heroPill" id="pill4">Transparent rates</span>
 </div>
 <div class="heroActions">
-<a class="btn btnSecondary" href="/pricing" id="ctaPricing">View rates</a>
+<a class="btn btnSecondary" href="/en/pricing" id="ctaPricing">View rates</a>
 <a class="btn btnPrimary" href="#request" id="ctaRequest">Request availability</a>
 </div>
 <p class="heroNote">
@@ -706,7 +706,7 @@
 </article>
 <article class="card carbonPanel carbonDark seoIntroCard">
 <h3 id="seoCard3Title">Useful links for planning</h3>
-<p id="seoCard3Body">View our <a href="/pricing">Ferrari rental rates in Zurich</a>, explore <a href="/experiences">driving occasions and experiences</a>, read <a href="/philosophy">our philosophy</a>, or visit the <a href="/blog">journal for Swiss driving ideas</a>.</p>
+<p id="seoCard3Body">View our <a href="/en/pricing">Ferrari rental rates in Zurich</a>, explore <a href="/en/experiences">driving occasions and experiences</a>, read <a href="/en/philosophy">our philosophy</a>, or visit the <a href="/en/blog">journal for Swiss driving ideas</a>.</p>
 </article>
 </div>
 </div>
@@ -1353,9 +1353,9 @@ const DEFAULT_PACKAGES =
       document.documentElement.lang = lang;
       const t = I18N[lang] || I18N.en;
       const ux = UX_I18N[lang] || UX_I18N.en;
-      const prefix = lang === "de" ? "/de" : (lang === "it" ? "/it" : "");
+      const prefix = lang === "de" ? "/de" : (lang === "it" ? "/it" : "/en");
       const localUrl = (path) => prefix + path;
-      const homeUrl = prefix ? prefix + "/" : "/";
+      const homeUrl = prefix + "/";
 
       // Nav
       const setText = (id, txt) => { const el = document.getElementById(id); if(el) el.textContent = txt; };
