@@ -268,6 +268,352 @@
   #faq .faqItem[open] .faqSummary::after{content:"×";}
   #faq .faqAnswer{padding-top:0.65rem;}
   #faq .faqAnswer p{margin:0;color:rgba(255,255,255,0.82);}
+
+/* 6) Limited offer banner and modal */
+.loPromoBanner[hidden],
+.loPromoModal[hidden]{
+  display:none !important;
+}
+
+.loPromoBanner{
+  position:fixed;
+  left:1.15rem;
+  bottom:1.15rem;
+  z-index:9999;
+  width:min(90vw, 360px);
+  opacity:0;
+  transform:translateY(14px);
+  pointer-events:none;
+  transition:opacity .28s ease, transform .28s ease;
+}
+
+.loPromoBanner.isVisible{
+  opacity:1;
+  transform:translateY(0);
+  pointer-events:auto;
+}
+
+.loPromoBannerInner{
+  position:relative;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:0.85rem;
+  align-items:center;
+  padding:1rem 1rem 0.95rem;
+  border-radius:24px;
+  border:1px solid rgba(212,175,55,0.32);
+  background:
+    linear-gradient(135deg, rgba(212,175,55,0.12), rgba(255,255,255,0.035)),
+    rgba(13,13,15,0.92);
+  box-shadow:0 18px 50px rgba(0,0,0,0.38);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+}
+
+.loPromoClose{
+  position:absolute;
+  top:0.45rem;
+  right:0.55rem;
+  width:28px;
+  height:28px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:0;
+  border-radius:999px;
+  background:transparent;
+  color:rgba(255,255,255,0.74);
+  font-size:1.25rem;
+  line-height:1;
+  cursor:pointer;
+}
+
+.loPromoClose:hover{
+  color:#fff;
+  background:rgba(255,255,255,0.07);
+}
+
+.loPromoPercent{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:74px;
+  height:74px;
+  border-radius:20px;
+  border:1px solid rgba(212,175,55,0.35);
+  background:rgba(212,175,55,0.10);
+  color:#fff;
+  font-family:"Cinzel", serif;
+  font-size:1.65rem;
+  font-weight:700;
+  letter-spacing:0.02em;
+}
+
+.loPromoContent{
+  min-width:0;
+  padding-right:1.35rem;
+}
+
+.loPromoKicker{
+  margin:0 0 0.18rem;
+  color:rgba(255,255,255,0.58);
+  font-size:0.68rem;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+}
+
+.loPromoTitle{
+  margin:0 0 0.6rem;
+  color:#fff;
+  font-family:"Cormorant Garamond", serif;
+  font-size:1.15rem;
+  line-height:1.15;
+  font-weight:600;
+}
+
+.loPromoButton{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:36px;
+  padding:0.55rem 0.82rem;
+  border-radius:999px;
+  border:1px solid rgba(212,175,55,0.48);
+  background:rgba(212,175,55,0.14);
+  color:#fff;
+  font-size:0.82rem;
+  font-weight:600;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+.loPromoButton:hover{
+  background:rgba(212,175,55,0.22);
+}
+
+.loPromoModal{
+  position:fixed;
+  inset:0;
+  z-index:10000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:1.2rem;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .22s ease;
+}
+
+.loPromoModal.isOpen{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.loPromoBackdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.68);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+}
+
+.loPromoDialog{
+  position:relative;
+  z-index:1;
+  width:min(92vw, 570px);
+  max-height:min(86vh, 760px);
+  overflow:auto;
+  padding:1.55rem;
+  border-radius:28px;
+  border:1px solid rgba(212,175,55,0.28);
+  background:
+    linear-gradient(140deg, rgba(212,175,55,0.10), rgba(255,255,255,0.025)),
+    rgba(15,15,18,0.96);
+  color:#fff;
+  box-shadow:0 30px 90px rgba(0,0,0,0.62);
+}
+
+.loPromoModalClose{
+  position:absolute;
+  top:0.85rem;
+  right:0.95rem;
+  width:34px;
+  height:34px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:0;
+  border-radius:999px;
+  background:rgba(255,255,255,0.06);
+  color:rgba(255,255,255,0.82);
+  font-size:1.55rem;
+  line-height:1;
+  cursor:pointer;
+}
+
+.loPromoModalClose:hover{
+  color:#fff;
+  background:rgba(255,255,255,0.10);
+}
+
+.loPromoModalEyebrow{
+  margin:0 0 0.45rem;
+  color:rgba(212,175,55,0.82);
+  font-size:0.74rem;
+  letter-spacing:0.17em;
+  text-transform:uppercase;
+}
+
+.loPromoDialog h2{
+  margin:0 2.5rem 0.65rem 0;
+  font-family:"Cormorant Garamond", serif;
+  font-size:clamp(2rem, 5vw, 3rem);
+  line-height:1.02;
+  font-weight:600;
+}
+
+.loPromoDialog p{
+  color:rgba(255,255,255,0.78);
+  line-height:1.65;
+}
+
+.loPromoCodeBox{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  margin:1rem 0;
+  padding:0.9rem 1rem;
+  border-radius:18px;
+  border:1px solid rgba(212,175,55,0.30);
+  background:rgba(212,175,55,0.08);
+}
+
+.loPromoCodeLabel{
+  color:rgba(255,255,255,0.62);
+  font-size:0.78rem;
+  letter-spacing:0.11em;
+  text-transform:uppercase;
+}
+
+.loPromoCode{
+  color:#fff;
+  font-family:"Cinzel", serif;
+  font-size:1.35rem;
+  font-weight:700;
+  letter-spacing:0.08em;
+}
+
+.loPromoGrid{
+  display:grid;
+  gap:0.85rem;
+  grid-template-columns:1fr 1fr;
+  margin:1rem 0;
+}
+
+.loPromoDetail{
+  padding:0.95rem 1rem;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,0.10);
+  background:rgba(255,255,255,0.045);
+}
+
+.loPromoDetail h3{
+  margin:0 0 0.45rem;
+  color:#fff;
+  font-size:0.95rem;
+}
+
+.loPromoDetail ul{
+  margin:0;
+  padding-left:1.05rem;
+  color:rgba(255,255,255,0.76);
+  line-height:1.7;
+  font-size:0.92rem;
+}
+
+.loPromoActions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.7rem;
+  align-items:center;
+  margin-top:1.1rem;
+}
+
+.loPromoActions .btn{
+  text-decoration:none;
+}
+
+.loPromoFineprint{
+  margin:0.9rem 0 0;
+  color:rgba(255,255,255,0.52) !important;
+  font-size:0.82rem;
+}
+
+body.loPromoNoScroll{
+  overflow:hidden;
+}
+
+@media (max-width: 640px){
+  .loPromoBanner{
+    left:0.8rem;
+    right:0.8rem;
+    bottom:0.8rem;
+    width:auto;
+  }
+
+  .loPromoBannerInner{
+    grid-template-columns:auto 1fr;
+    padding:0.9rem 0.9rem;
+    border-radius:22px;
+  }
+
+  .loPromoPercent{
+    width:62px;
+    height:62px;
+    border-radius:18px;
+    font-size:1.38rem;
+  }
+
+  .loPromoTitle{
+    font-size:1.02rem;
+  }
+
+  .loPromoModal{
+    align-items:stretch;
+    justify-content:stretch;
+    padding:0;
+  }
+
+  .loPromoDialog{
+    width:100%;
+    height:100%;
+    max-height:none;
+    border-radius:0;
+    border:0;
+    padding:4.5rem 1.25rem 1.35rem;
+  }
+
+  .loPromoModalClose{
+    top:1rem;
+    right:1rem;
+  }
+
+  .loPromoGrid{
+    grid-template-columns:1fr;
+  }
+
+  .loPromoActions{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .loPromoActions .btn,
+  .loPromoActions .loPromoButton{
+    width:100%;
+  }
+}
+
 </style>
 <script defer="" src="/assets/lo.js"></script>
 <script type="application/ld+json">
@@ -810,6 +1156,63 @@
 </div>
 </div>
 </footer>
+
+<div aria-live="polite" class="loPromoBanner" hidden id="loPromoBanner">
+  <div class="loPromoBannerInner">
+    <button aria-label="Close offer" class="loPromoClose" id="loPromoClose" type="button">×</button>
+    <div aria-hidden="true" class="loPromoPercent">15%</div>
+    <div class="loPromoContent">
+      <p class="loPromoKicker" id="loPromoKicker">Limited driving offer</p>
+      <p class="loPromoTitle" id="loPromoTitle">On selected extended Ferrari experiences.</p>
+      <button class="loPromoButton" id="loPromoOpen" type="button">Get to know more</button>
+    </div>
+  </div>
+</div>
+
+<div aria-hidden="true" class="loPromoModal" hidden id="loPromoModal">
+  <div class="loPromoBackdrop" data-lo-promo-close></div>
+  <section aria-describedby="loPromoModalDescription" aria-labelledby="loPromoModalTitle" aria-modal="true" class="loPromoDialog" role="dialog">
+    <button aria-label="Close offer details" class="loPromoModalClose" data-lo-promo-close id="loPromoModalClose" type="button">×</button>
+    <p class="loPromoModalEyebrow" id="loPromoModalEyebrow">Luxury Obsession offer</p>
+    <h2 id="loPromoModalTitle">15% on selected Ferrari 458 Italia experiences</h2>
+    <p id="loPromoModalDescription">A limited driving offer for guests who want more time with the Ferrari 458 Italia, from half day escapes to full week experiences.</p>
+
+    <div class="loPromoCodeBox">
+      <span class="loPromoCodeLabel" id="loPromoCodeLabel">Coupon code</span>
+      <strong class="loPromoCode">DRIVE458</strong>
+    </div>
+
+    <div class="loPromoGrid">
+      <div class="loPromoDetail">
+        <h3 id="loPromoAppliesTitle">Applies to</h3>
+        <ul id="loPromoAppliesList">
+          <li>6h experiences</li>
+          <li>12h experiences</li>
+          <li>24h experiences</li>
+          <li>48h experiences</li>
+          <li>Full week experiences</li>
+        </ul>
+      </div>
+      <div class="loPromoDetail">
+        <h3 id="loPromoValidityTitle">Validity</h3>
+        <ul id="loPromoValidityList">
+          <li>Valid until May 18, 2026</li>
+          <li>Subject to availability</li>
+          <li>Coupon must be mentioned when requesting the booking</li>
+          <li>Not applicable to the 3h Brief Escape</li>
+          <li>Not applicable to the Weekday Privilege package</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="loPromoActions">
+      <a class="btn btnPrimary" id="loPromoEmail" href="mailto:info@luxuryobsession.ch">Get more information by email</a>
+      <button class="loPromoButton" data-lo-promo-close id="loPromoMaybeLater" type="button">Maybe later</button>
+    </div>
+    <p class="loPromoFineprint" id="loPromoFineprint">Final confirmation, date availability, driver requirements and booking conditions are confirmed personally before payment.</p>
+  </section>
+</div>
+
 <script>
     const CONTACT = {
       whatsappNumberE164: "+41765870458",
@@ -1555,6 +1958,25 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
           const qEl = document.getElementById("faqQ" + i);
           if(qEl && qEl.parentElement) qEl.parentElement.hidden = true;
         }
+        try{
+          const schema = {
+            "@context":"https://schema.org",
+            "@type":"FAQPage",
+            "mainEntity": faqs.map(qa => ({
+              "@type":"Question",
+              "name": qa.q,
+              "acceptedAnswer": { "@type":"Answer", "text": qa.a }
+            }))
+          };
+          let s = document.getElementById("faqSchema");
+          if(!s){
+            s = document.createElement("script");
+            s.type = "application/ld+json";
+            s.id = "faqSchema";
+            document.head.appendChild(s);
+          }
+          s.textContent = JSON.stringify(schema);
+        }catch(e){}
       }
 
 
@@ -1637,6 +2059,262 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
 
     document.addEventListener("DOMContentLoaded", initPage);
   </script>
+
+<script>
+/* Limited offer banner and modal */
+(function(){
+  const PROMO_COPY = {
+    en: {
+      closeOffer: "Close offer",
+      closeDetails: "Close offer details",
+      kicker: "Limited driving offer",
+      bannerTitle: "On selected extended Ferrari experiences.",
+      openButton: "Get to know more",
+      eyebrow: "Luxury Obsession offer",
+      modalTitle: "15% on selected Ferrari 458 Italia experiences",
+      description: "A limited driving offer for guests who want more time with the Ferrari 458 Italia, from half day escapes to full week experiences.",
+      codeLabel: "Coupon code",
+      appliesTitle: "Applies to",
+      applies: ["6h experiences", "12h experiences", "24h experiences", "48h experiences", "Full week experiences"],
+      validityTitle: "Validity",
+      validity: ["Valid until May 18, 2026", "Subject to availability", "Coupon must be mentioned when requesting the booking", "Not applicable to the 3h Brief Escape", "Not applicable to the Weekday Privilege package"],
+      emailButton: "Get more information by email",
+      maybeLater: "Maybe later",
+      fineprint: "Final confirmation, date availability, driver requirements and booking conditions are confirmed personally before payment.",
+      mailSubject: "15% Ferrari driving offer",
+      mailBody: [
+        "Hello Luxury Obsession,",
+        "",
+        "I would like to receive more information about the 15% Ferrari 458 Italia offer.",
+        "",
+        "Coupon code: DRIVE458",
+        "Validity: until May 18, 2026",
+        "Applies to: 6h, 12h, 24h, 48h or Full Week",
+        "Exclusions: 3h Brief Escape and Weekday Privilege",
+        "",
+        "Preferred date:",
+        "Preferred package:",
+        "Name:",
+        "Phone:",
+        "",
+        "Kind regards"
+      ]
+    },
+    de: {
+      closeOffer: "Angebot schliessen",
+      closeDetails: "Angebotsdetails schliessen",
+      kicker: "Limitierte Ferrari Aktion",
+      bannerTitle: "15% auf ausgewählte längere Ferrari Erlebnisse.",
+      openButton: "Mehr erfahren",
+      eyebrow: "Luxury Obsession Angebot",
+      modalTitle: "15% auf ausgewählte Ferrari 458 Italia Erlebnisse",
+      description: "Ein zeitlich begrenztes Angebot für Gäste, die mehr Zeit mit der Ferrari 458 Italia wünschen, vom halben Tag bis zur ganzen Woche.",
+      codeLabel: "Coupon Code",
+      appliesTitle: "Gültig für",
+      applies: ["6h Erlebnisse", "12h Erlebnisse", "24h Erlebnisse", "48h Erlebnisse", "Ganze Woche"],
+      validityTitle: "Gültigkeit",
+      validity: ["Gültig bis 18. Mai 2026", "Vorbehaltlich Verfügbarkeit", "Der Coupon Code muss bei der Anfrage angegeben werden", "Nicht gültig für den 3h Kurztrip", "Nicht gültig für das Weekday Privilege Paket"],
+      emailButton: "Mehr Informationen per E Mail erhalten",
+      maybeLater: "Später vielleicht",
+      fineprint: "Finale Bestätigung, Verfügbarkeit, Fahreranforderungen und Buchungsbedingungen werden vor der Zahlung persönlich bestätigt.",
+      mailSubject: "15% Ferrari Angebot",
+      mailBody: [
+        "Guten Tag Luxury Obsession,",
+        "",
+        "Ich möchte mehr Informationen zum 15% Angebot für die Ferrari 458 Italia erhalten.",
+        "",
+        "Coupon Code: DRIVE458",
+        "Gültigkeit: bis 18. Mai 2026",
+        "Gültig für: 6h, 12h, 24h, 48h oder ganze Woche",
+        "Ausgeschlossen: 3h Kurztrip und Weekday Privilege",
+        "",
+        "Gewünschtes Datum:",
+        "Gewünschtes Paket:",
+        "Name:",
+        "Telefon:",
+        "",
+        "Freundliche Grüsse"
+      ]
+    },
+    it: {
+      closeOffer: "Chiudi offerta",
+      closeDetails: "Chiudi dettagli offerta",
+      kicker: "Offerta limitata Ferrari",
+      bannerTitle: "15% su esperienze Ferrari selezionate.",
+      openButton: "Scopri di più",
+      eyebrow: "Offerta Luxury Obsession",
+      modalTitle: "15% su esperienze selezionate con Ferrari 458 Italia",
+      description: "Un'offerta limitata per chi desidera più tempo con la Ferrari 458 Italia, dalle esperienze di mezza giornata alla settimana intera.",
+      codeLabel: "Codice coupon",
+      appliesTitle: "Si applica a",
+      applies: ["Esperienze da 6h", "Esperienze da 12h", "Esperienze da 24h", "Esperienze da 48h", "Settimana intera"],
+      validityTitle: "Validità",
+      validity: ["Valida fino al 18 maggio 2026", "Soggetta a disponibilità", "Il codice va indicato al momento della richiesta", "Non applicabile al pacchetto 3h Brief Escape", "Non applicabile al pacchetto Weekday Privilege"],
+      emailButton: "Ricevi più informazioni via email",
+      maybeLater: "Forse più tardi",
+      fineprint: "Confermiamo personalmente disponibilità, requisiti del conducente e condizioni di prenotazione prima del pagamento.",
+      mailSubject: "Offerta Ferrari 15%",
+      mailBody: [
+        "Ciao Luxury Obsession,",
+        "",
+        "Vorrei ricevere più informazioni sull'offerta del 15% per la Ferrari 458 Italia.",
+        "",
+        "Codice coupon: DRIVE458",
+        "Validità: fino al 18 maggio 2026",
+        "Valida per: 6h, 12h, 24h, 48h o settimana intera",
+        "Esclusioni: 3h Brief Escape e Weekday Privilege",
+        "",
+        "Data preferita:",
+        "Pacchetto preferito:",
+        "Nome:",
+        "Telefono:",
+        "",
+        "Cordiali saluti"
+      ]
+    }
+  };
+
+  function initLimitedOffer(){
+    const banner = document.getElementById("loPromoBanner");
+    const bannerClose = document.getElementById("loPromoClose");
+    const openBtn = document.getElementById("loPromoOpen");
+    const modal = document.getElementById("loPromoModal");
+    const emailBtn = document.getElementById("loPromoEmail");
+    const closeEls = document.querySelectorAll("[data-lo-promo-close]");
+    let autoHideTimer = null;
+    let finishHideTimer = null;
+
+    function getPromoLang(){
+      const htmlLang = (document.documentElement.getAttribute("lang") || "en").slice(0, 2).toLowerCase();
+      return PROMO_COPY[htmlLang] ? htmlLang : "en";
+    }
+
+    function setText(id, value){
+      const el = document.getElementById(id);
+      if(el) el.textContent = value;
+    }
+
+    function fillList(id, values){
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.innerHTML = values.map(function(value){
+        return "<li>" + value + "</li>";
+      }).join("");
+    }
+
+    function applyPromoCopy(){
+      const t = PROMO_COPY[getPromoLang()];
+      if(bannerClose) bannerClose.setAttribute("aria-label", t.closeOffer);
+      const modalClose = document.getElementById("loPromoModalClose");
+      if(modalClose) modalClose.setAttribute("aria-label", t.closeDetails);
+      setText("loPromoKicker", t.kicker);
+      setText("loPromoTitle", t.bannerTitle);
+      setText("loPromoOpen", t.openButton);
+      setText("loPromoModalEyebrow", t.eyebrow);
+      setText("loPromoModalTitle", t.modalTitle);
+      setText("loPromoModalDescription", t.description);
+      setText("loPromoCodeLabel", t.codeLabel);
+      setText("loPromoAppliesTitle", t.appliesTitle);
+      fillList("loPromoAppliesList", t.applies);
+      setText("loPromoValidityTitle", t.validityTitle);
+      fillList("loPromoValidityList", t.validity);
+      setText("loPromoEmail", t.emailButton);
+      setText("loPromoMaybeLater", t.maybeLater);
+      setText("loPromoFineprint", t.fineprint);
+    }
+
+    function buildOfferMailto(){
+      const t = PROMO_COPY[getPromoLang()];
+      const subject = encodeURIComponent(t.mailSubject);
+      const body = encodeURIComponent(t.mailBody.join("\n"));
+      return "mailto:info@luxuryobsession.ch?subject=" + subject + "&body=" + body;
+    }
+
+    function isOfferLive(){
+      const today = new Date();
+      const current = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      const start = new Date(2026, 4, 8);
+      const end = new Date(2026, 4, 18);
+      return current >= start && current <= end;
+    }
+
+    function showBanner(){
+      if(!banner || !isOfferLive()) return;
+      applyPromoCopy();
+      if(emailBtn) emailBtn.href = buildOfferMailto();
+      banner.hidden = false;
+      requestAnimationFrame(function(){
+        banner.classList.add("isVisible");
+      });
+      autoHideTimer = window.setTimeout(hideBanner, 15000);
+    }
+
+    function hideBanner(){
+      if(!banner || banner.hidden) return;
+      window.clearTimeout(autoHideTimer);
+      window.clearTimeout(finishHideTimer);
+      banner.classList.remove("isVisible");
+      finishHideTimer = window.setTimeout(function(){
+        banner.hidden = true;
+      }, 320);
+    }
+
+    function openModal(){
+      hideBanner();
+      if(!modal) return;
+      applyPromoCopy();
+      if(emailBtn) emailBtn.href = buildOfferMailto();
+      modal.hidden = false;
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("loPromoNoScroll");
+      requestAnimationFrame(function(){
+        modal.classList.add("isOpen");
+      });
+      if(window.gtag){
+        window.gtag("event", "promo_offer_open");
+      }
+    }
+
+    function closeModal(){
+      if(!modal || modal.hidden) return;
+      modal.classList.remove("isOpen");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("loPromoNoScroll");
+      window.setTimeout(function(){
+        modal.hidden = true;
+      }, 240);
+    }
+
+    applyPromoCopy();
+    if(emailBtn){
+      emailBtn.href = buildOfferMailto();
+      emailBtn.addEventListener("click", function(){
+        if(window.gtag){
+          window.gtag("event", "promo_offer_email_click");
+        }
+      });
+    }
+
+    if(bannerClose) bannerClose.addEventListener("click", hideBanner);
+    if(openBtn) openBtn.addEventListener("click", openModal);
+    closeEls.forEach(function(el){
+      el.addEventListener("click", closeModal);
+    });
+    document.addEventListener("keydown", function(e){
+      if(e.key === "Escape") closeModal();
+    });
+
+    window.setTimeout(showBanner, 1000);
+  }
+
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", initLimitedOffer);
+  }else{
+    initLimitedOffer();
+  }
+})();
+</script>
+
 <script>
 /* VIDEOS: load MP4 sources after first paint to protect FCP and LCP */
 document.addEventListener("DOMContentLoaded", () => {
