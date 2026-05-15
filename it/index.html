@@ -987,14 +987,15 @@ body.loPromoNoScroll{
 <form
 class="card bookingForm carbonPanel carbonDark formCard"
 id="quoteForm"
-name="quote-request"
+name="quote-request-v2"
 method="POST"
 data-netlify="true"
 netlify-honeypot="bot-field"
 action="/submitted_form?lang=it&amp;submitted=1"
 >
-<input type="hidden" name="form-name" value="quote-request"/>
+<input type="hidden" name="form-name" value="quote-request-v2"/>
 <input type="hidden" id="formLanguage" name="language" value="it"/>
+<input type="hidden" name="request_summary" id="requestSummary">
 <p hidden>
 <label>Do not fill this out: <input name="bot-field"/></label>
 </p>
@@ -2022,73 +2023,127 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
 
       // Netlify form submission and language-aware confirmation page
       const form = document.getElementById("quoteForm");
-      const formLanguage = document.getElementById("formLanguage");
       const status = document.getElementById("formStatus");
       const submitBtn = document.getElementById("btnSubmit");
-      const successPath = "/submitted_form?lang=" + encodeURIComponent(lang) + "&submitted=1";
+      const formLanguage = document.getElementById("formLanguage");
+      const requestSummary = document.getElementById("requestSummary");
 
-      if (form) {
-        form.action = successPath;
-        if (formLanguage) formLanguage.value = lang;
+      if (form && status) {
+        form.addEventListener("submit", async function(e) {
+          e.preventDefault();
 
-        if (form.dataset.netlifyAjaxBound !== "1") {
-          form.dataset.netlifyAjaxBound = "1";
+          const formLang =
+            (typeof lang === "string" && lang) ||
+            document.documentElement.lang ||
+            (formLanguage ? formLanguage.value : "") ||
+            "en";
 
-          form.addEventListener("submit", async function(e) {
-            e.preventDefault();
+          const successPath = "/submitted_form?lang=" + encodeURIComponent(formLang) + "&submitted=1";
 
-            if (!form.checkValidity()) {
-              form.reportValidity();
-              return;
+          const valueOf = (id) => {
+            const el = document.getElementById(id);
+            return el ? String(el.value || "").trim() : "";
+          };
+
+          const selectedText = (id) => {
+            const el = document.getElementById(id);
+            if (!el || !el.options || el.selectedIndex < 0) return "";
+            return el.options[el.selectedIndex].textContent.replace(/\s+/g, " ").trim();
+          };
+
+          if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+          }
+
+          const name = valueOf("fullName");
+          const email = valueOf("email");
+          const phone = valueOf("phone");
+          const pkg = valueOf("packageId");
+          const date = valueOf("preferredDate");
+          const coupon = valueOf("coupon");
+          const notes = valueOf("notes");
+
+          const carLabel = selectedText("carId") || "Ferrari 458 Italia";
+          const rateLabel = selectedText("packageId") || pkg || "Not provided";
+          const timeLabel = selectedText("pickupTime") || valueOf("pickupTime") || "Not provided";
+          const pickupLabel = selectedText("pickupLocation") || valueOf("pickupLocation") || "Not provided";
+
+          const summary = [
+            "New Ferrari rental request",
+            "",
+            "Language: " + formLang,
+            "Car: " + carLabel,
+            "Full name: " + name,
+            "Email: " + email,
+            "Phone: " + (phone || "Not provided"),
+            "Rate: " + rateLabel,
+            "Preferred date: " + (date || "Not provided"),
+            "Preferred time: " + timeLabel,
+            "Pickup location: " + pickupLabel,
+            "Referral code: " + (coupon || "None"),
+            "Notes: " + (notes || "None")
+          ].join("\n");
+
+          if (formLanguage) formLanguage.value = formLang;
+          if (requestSummary) requestSummary.value = summary;
+
+          if (status) {
+            status.style.display = "block";
+            status.style.color = "rgba(255,255,255,0.78)";
+            status.textContent = formLang === "de"
+              ? "Anfrage wird gesendet..."
+              : (formLang === "it"
+                ? "Invio della richiesta..."
+                : "Sending your request...");
+          }
+
+          if (submitBtn) submitBtn.disabled = true;
+
+          const isLocal =
+            window.location.hostname === "localhost" ||
+            window.location.hostname === "127.0.0.1";
+
+          if (isLocal) {
+            window.location.assign(successPath + "&local=1");
+            return;
+          }
+
+          try {
+            const formData = new FormData(form);
+
+            formData.set("form-name", form.getAttribute("name") || "quote-request-v2");
+            formData.set("language", formLang);
+            formData.set("request_summary", summary);
+
+            const response = await fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams(formData).toString()
+            });
+
+            if (!response.ok) {
+              throw new Error("Netlify form submission failed");
             }
+
+            sessionStorage.setItem("lo_submit_form_conversion_allowed", "1");
+            window.location.assign(successPath);
+          } catch (err) {
+            if (submitBtn) submitBtn.disabled = false;
 
             if (status) {
               status.style.display = "block";
-              status.style.color = "rgba(255,255,255,0.78)";
-              status.textContent = lang === "de" ? "Anfrage wird gesendet..." : (lang === "it" ? "Invio della richiesta..." : "Sending your request...");
+              status.style.color = "#f97373";
+              status.textContent = formLang === "de"
+                ? "Die Anfrage konnte nicht gesendet werden. Bitte kontaktieren Sie uns per WhatsApp oder E-Mail."
+                : (formLang === "it"
+                  ? "Non è stato possibile inviare la richiesta. La preghiamo di contattarci via WhatsApp o email."
+                  : "The request could not be sent. Please contact us by WhatsApp or email.");
             }
-            if (submitBtn) submitBtn.disabled = true;
-
-            const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
-
-            // Netlify Forms are processed by Netlify after deploy. Local preview cannot store the submission,
-            // so for localhost we only test the confirmation page without firing the Google Ads conversion.
-            if (isLocal) {
-              window.location.assign(successPath + "&local=1");
-              return;
-            }
-
-            try {
-              const formData = new FormData(form);
-              formData.set("form-name", form.getAttribute("name") || "quote-request");
-              formData.set("language", lang);
-
-              const response = await fetch("/", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams(formData).toString()
-              });
-
-              if (!response.ok) throw new Error("Netlify form submission failed");
-
-              sessionStorage.setItem("lo_submit_form_conversion_allowed", "1");
-              window.location.assign(successPath);
-            } catch (err) {
-              if (submitBtn) submitBtn.disabled = false;
-              if (status) {
-                status.style.display = "block";
-                status.style.color = "#f97373";
-                status.textContent = lang === "de"
-                  ? "Die Anfrage konnte nicht gesendet werden. Bitte kontaktieren Sie uns per WhatsApp oder E-Mail."
-                  : (lang === "it"
-                    ? "Non è stato possibile inviare la richiesta. La preghiamo di contattarci via WhatsApp o email."
-                    : "The request could not be sent. Please contact us by WhatsApp or email.");
-              }
-            }
-          });
-        }
+          }
+        });
       }
-    }
+	}
 
     document.addEventListener("DOMContentLoaded", initPage);
   </script>
