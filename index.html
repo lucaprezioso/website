@@ -1095,13 +1095,13 @@ body.loPromoNoScroll{
 <form
 class="card bookingForm carbonPanel carbonDark formCard"
 id="quoteForm"
-name="quote-request"
+name="quote-request-v2"
 method="POST"
 data-netlify="true"
 netlify-honeypot="bot-field"
 action="/submitted_form?lang=en&amp;submitted=1"
 >
-<input type="hidden" name="form-name" value="quote-request"/>
+<input type="hidden" name="form-name" value="quote-request-v2"/>
 <input type="hidden" id="formLanguage" name="language" value="en"/>
 <input type="hidden" name="request_summary" id="requestSummary">
 <p hidden>
@@ -2276,7 +2276,7 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
           try {
             const formData = new FormData(form);
 
-            formData.set("form-name", form.getAttribute("name") || "quote-request");
+            formData.set("form-name", form.getAttribute("name") || "quote-request-v2");
             formData.set("language", formLang);
             formData.set("request_summary", summary);
 
