@@ -2011,25 +2011,7 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
           const qEl = document.getElementById("faqQ" + i);
           if(qEl && qEl.parentElement) qEl.parentElement.hidden = true;
         }
-        try{
-          const schema = {
-            "@context":"https://schema.org",
-            "@type":"FAQPage",
-            "mainEntity": faqs.map(qa => ({
-              "@type":"Question",
-              "name": qa.q,
-              "acceptedAnswer": { "@type":"Answer", "text": qa.a }
-            }))
-          };
-          let s = document.getElementById("faqSchema");
-          if(!s){
-            s = document.createElement("script");
-            s.type = "application/ld+json";
-            s.id = "faqSchema";
-            document.head.appendChild(s);
-          }
-          s.textContent = JSON.stringify(schema);
-        }catch(e){}
+                /* FAQPage JSON-LD is defined statically in the head. Do not generate a second FAQPage here. */
       }
 
       document.getElementById("socInstagram").href = SOCIAL.instagram;
