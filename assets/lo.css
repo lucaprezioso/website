@@ -1119,3 +1119,235 @@ header[data-brand-wrap="1"] .brandGold .brandWord2{display:block}
 @media (max-width: 320px){
   .brandGold{display:none;}
 }
+
+/* =========================================================
+   Contact + Footer refinement
+   Scope: visual refinement only. Added at the end so it
+   overrides earlier duplicate contact/footer rules safely.
+   ========================================================= */
+
+/* Contact list: cleaner, less bulky, better mobile wrapping */
+.contactList{
+  gap:0.62rem !important;
+}
+
+.contactList li{
+  display:grid !important;
+  grid-template-columns:minmax(86px, 0.34fr) minmax(0, 1fr) !important;
+  align-items:center !important;
+  gap:0.85rem !important;
+  padding:0.72rem 0.82rem !important;
+  border-radius:15px !important;
+  background:rgba(255,255,255,0.025) !important;
+  border:1px solid rgba(231,220,198,0.105) !important;
+  border-bottom:1px solid rgba(231,220,198,0.105) !important;
+}
+
+/* Left labels: Business, Location, E-Mail, Phone, WhatsApp */
+.contactList li > :first-child{
+  justify-self:start !important;
+  color:rgba(243,241,238,0.54) !important;
+  font-size:0.72rem !important;
+  font-weight:500 !important;
+  line-height:1.2 !important;
+  letter-spacing:0.08em !important;
+  text-transform:uppercase !important;
+}
+
+/* Right values: company name, address, email, phone */
+.contactList li > :not(:first-child){
+  justify-self:end !important;
+  min-width:0 !important;
+  max-width:100% !important;
+  color:rgba(243,241,238,0.90) !important;
+  font-size:0.96rem !important;
+  font-weight:500 !important;
+  line-height:1.28 !important;
+  letter-spacing:-0.01em !important;
+  text-align:right !important;
+  overflow-wrap:anywhere !important;
+}
+
+.contactList li > strong{
+  font-weight:600 !important;
+}
+
+.contactList li > a{
+  text-decoration:none !important;
+}
+
+.contactList li > a:hover{
+  color:#fff !important;
+}
+
+/* Social buttons: less chunky, more premium */
+.socialRow{
+  gap:0.55rem 0.65rem !important;
+}
+
+.socialBtn{
+  padding:0.58rem 0.9rem !important;
+  font-size:0.91rem !important;
+  font-weight:600 !important;
+  letter-spacing:0.01em !important;
+  line-height:1 !important;
+  color:rgba(243,241,238,0.88) !important;
+  background:rgba(255,255,255,0.025) !important;
+  border-color:rgba(231,220,198,0.13) !important;
+}
+
+.socialBtn svg{
+  width:17px !important;
+  height:17px !important;
+  opacity:0.88 !important;
+}
+
+.socialBtn:hover{
+  background:rgba(255,255,255,0.055) !important;
+  border-color:rgba(231,220,198,0.22) !important;
+}
+
+/* Mobile contact refinement */
+@media (max-width:560px){
+  .contactList{
+    gap:0.55rem !important;
+  }
+
+  .contactList li{
+    grid-template-columns:82px minmax(0, 1fr) !important;
+    padding:0.68rem 0.72rem !important;
+  }
+
+  .contactList li > :first-child{
+    font-size:0.68rem !important;
+    letter-spacing:0.075em !important;
+  }
+
+  .contactList li > :not(:first-child){
+    font-size:0.91rem !important;
+    font-weight:500 !important;
+  }
+
+  .socialBtn{
+    padding:0.56rem 0.82rem !important;
+    font-size:0.88rem !important;
+    font-weight:600 !important;
+  }
+}
+
+/* Very narrow screens: stack label and value to avoid ugly wrapping */
+@media (max-width:390px){
+  .contactList li{
+    grid-template-columns:1fr !important;
+    gap:0.32rem !important;
+  }
+
+  .contactList li > :first-child,
+  .contactList li > :not(:first-child){
+    justify-self:start !important;
+    text-align:left !important;
+  }
+}
+
+/* Footer: cleaner desktop layout */
+footer{
+  border-top:1px solid rgba(231,220,198,0.12) !important;
+  padding:1.7rem 0 1.9rem !important;
+  background:
+    radial-gradient(700px 220px at 50% 0%, rgba(231,220,198,0.055), transparent 60%),
+    rgba(5,5,9,0.78) !important;
+}
+
+.footerInner{
+  display:grid !important;
+  grid-template-columns:minmax(0, 1fr) minmax(280px, 440px) minmax(0, 1fr) !important;
+  grid-template-areas:
+    "left nap right"
+    "status nap right" !important;
+  align-items:center !important;
+  gap:0.35rem 1.3rem !important;
+}
+
+.footerLeft{
+  grid-area:left !important;
+  align-self:end !important;
+  justify-self:start !important;
+  font-size:0.78rem !important;
+  color:rgba(243,241,238,0.58) !important;
+}
+
+.footerCenter{
+  grid-area:status !important;
+  justify-self:start !important;
+  align-self:start !important;
+  font-size:0.78rem !important;
+  color:rgba(243,241,238,0.48) !important;
+}
+
+.footerNap{
+  grid-area:nap !important;
+  justify-self:center !important;
+  max-width:440px !important;
+  padding:0.82rem 1.05rem !important;
+  border-radius:18px !important;
+  border:1px solid rgba(231,220,198,0.13) !important;
+  background:rgba(255,255,255,0.025) !important;
+  color:rgba(243,241,238,0.68) !important;
+  font-size:0.78rem !important;
+  line-height:1.65 !important;
+  text-align:center !important;
+}
+
+.footerNap a{
+  color:rgba(243,241,238,0.84) !important;
+  text-decoration:none !important;
+}
+
+.footerNap a:hover{
+  color:#fff !important;
+}
+
+.footerRight{
+  grid-area:right !important;
+  display:flex !important;
+  justify-content:flex-end !important;
+  align-items:center !important;
+  gap:1rem !important;
+  flex-wrap:wrap !important;
+}
+
+.footerRight a{
+  color:rgba(243,241,238,0.58) !important;
+  font-size:0.78rem !important;
+  text-decoration:none !important;
+}
+
+.footerRight a:hover{
+  color:rgba(243,241,238,0.92) !important;
+}
+
+/* Footer mobile: stacked and centered */
+@media (max-width:900px){
+  .footerInner{
+    grid-template-columns:1fr !important;
+    grid-template-areas:
+      "nap"
+      "status"
+      "right"
+      "left" !important;
+    text-align:center !important;
+    gap:0.85rem !important;
+  }
+
+  .footerLeft,
+  .footerCenter,
+  .footerNap,
+  .footerRight{
+    justify-self:center !important;
+  }
+
+  .footerRight{
+    justify-content:center !important;
+  }
+}
+
