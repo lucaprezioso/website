@@ -84,6 +84,87 @@
   </script>
 <script defer="" src="../assets/lo.js"></script>
 <script defer="" src="../assets/lo.locations.js"></script>
+  <style>
+    /* Paid-search rates preview: static HTML for crawlers, hydrated from ../data/packages.json */
+    .ratesPreview{padding:2.8rem 0 3.1rem}
+    .ratesPreviewHead{display:flex;align-items:flex-end;justify-content:space-between;gap:1.2rem;margin-bottom:1.35rem}
+    .ratesPreviewGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0.85rem}
+    .ratesPreviewCard{
+      padding:1rem;
+      min-height:138px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:0.7rem
+    }
+    .ratesPreviewKicker{
+      display:block;
+      font-size:0.68rem;
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:0.25rem
+    }
+    .ratesPreviewName{
+      display:block;
+      font-size:0.98rem;
+      line-height:1.35;
+      color:rgba(243,241,238,0.92)
+    }
+    .ratesPreviewPrice{
+      display:block;
+      font-size:1.35rem;
+      line-height:1;
+      font-weight:700;
+      color:var(--champagne)
+    }
+    .ratesPreviewMeta{
+      display:block;
+      margin-top:0.35rem;
+      font-size:0.78rem;
+      color:var(--muted)
+    }
+    .ratesPreviewFoot{
+      margin-top:1.05rem;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:0.75rem 0.9rem
+    }
+    .ratesPreviewNote{
+      flex:1 1 100%;
+      margin:0;
+      color:var(--muted);
+      font-size:0.88rem;
+      line-height:1.65;
+      max-width:70rem
+    }
+    .ratesPreviewActions{
+      flex:1 1 100%;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-start;
+      gap:0.75rem;
+      margin-top:0 !important
+    }
+    @media (max-width: 860px){
+      .ratesPreviewHead{display:block}
+      .ratesPreviewGrid{
+        display:flex;
+        flex-wrap:nowrap;
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+        scroll-snap-type:x mandatory;
+        padding-bottom:0.75rem
+      }
+      .ratesPreviewCard{
+        flex:0 0 min(78vw, 310px);
+        scroll-snap-align:start
+      }
+    }
+  </style>
+
 </head>
 <body>
 <header>
@@ -167,6 +248,67 @@
 </div>
 </section>
 <div class="titaniumDivider"></div>
+<section id="rates-preview" class="ratesPreview">
+<div class="container">
+<div class="ratesPreviewHead">
+<div>
+<div class="eyebrow">Ferrari rental Basel</div>
+<h2 class="sectionTitle">Popular Ferrari 458 Italia packages</h2>
+<p class="sectionSubtitle">A quick price orientation before the Basel pickup details.</p>
+</div>
+</div>
+<div id="ratesPreviewCards" class="ratesPreviewGrid" aria-label="Popular Ferrari 458 Italia rental packages">
+<article class="card carbonPanel ratesPreviewCard" data-rate-card="P3" data-rate-tier="unlimited">
+<div>
+<span class="ratesPreviewKicker">Brief Escape</span>
+<strong class="ratesPreviewName" data-rate-name>3 hours · unlimited km</strong>
+</div>
+<div>
+<span class="ratesPreviewPrice" data-rate-price>CHF 440</span>
+<span class="ratesPreviewMeta" data-rate-meta>Short city-to-countryside escape</span>
+</div>
+</article>
+<article class="card carbonPanel ratesPreviewCard" data-rate-card="P6" data-rate-km="200">
+<div>
+<span class="ratesPreviewKicker">Signature Half Day</span>
+<strong class="ratesPreviewName" data-rate-name>6 hours · 200 km</strong>
+</div>
+<div>
+<span class="ratesPreviewPrice" data-rate-price>CHF 790</span>
+<span class="ratesPreviewMeta" data-rate-meta>Balanced half-day drive</span>
+</div>
+</article>
+<article class="card carbonPanel ratesPreviewCard" data-rate-card="GT" data-rate-km="300">
+<div>
+<span class="ratesPreviewKicker">Grand Tour</span>
+<strong class="ratesPreviewName" data-rate-name>12 hours · 300 km</strong>
+</div>
+<div>
+<span class="ratesPreviewPrice" data-rate-price>CHF 940</span>
+<span class="ratesPreviewMeta" data-rate-meta>Full-day Basel route potential</span>
+</div>
+</article>
+<article class="card carbonPanel ratesPreviewCard" data-rate-card="FD" data-rate-km="500">
+<div>
+<span class="ratesPreviewKicker">Full Day Icon</span>
+<strong class="ratesPreviewName" data-rate-name>24 hours · 500 km</strong>
+</div>
+<div>
+<span class="ratesPreviewPrice" data-rate-price>CHF 1,590</span>
+<span class="ratesPreviewMeta" data-rate-meta>One full day with the 458</span>
+</div>
+</article>
+</div>
+<div class="ratesPreviewFoot">
+<p class="ratesPreviewNote">Pickup in Basel is available with a CHF 290 delivery fee. Refundable deposit from CHF 1,500 for drivers over 25.</p>
+<div class="ctaRow ratesPreviewActions">
+<a class="ctaBtn" href="pricing.html">View all rates</a>
+<a class="ctaBtn ctaBtnPrimary" href="../index.html#request">Request availability</a>
+</div>
+</div>
+</div>
+</section>
+<div class="titaniumDivider"></div>
 <section id="location">
 <div class="container">
 <h2 class="sectionTitle" id="locTitle">Ferrari pickup in Basel</h2>
@@ -243,5 +385,150 @@ document.addEventListener("DOMContentLoaded", function () {
     }, true);
   });
 });
-</script></body>
+</script><script>
+    (function () {
+      const packageUrl = new URL("../data/packages.json", window.location.href).toString();
+
+      function money(value) {
+        const n = Number(value);
+        if (!Number.isFinite(n)) return String(value || "");
+        return "CHF " + n.toLocaleString("en-CH");
+      }
+
+      function textForLang(value, lang) {
+        if (value && typeof value === "object") return value[lang] || value.en || Object.values(value)[0] || "";
+        return value == null ? "" : String(value);
+      }
+
+      function stripTierSuffix(value) {
+        return String(value || "").replace(/\s+(unlimited|\d+)\s*$/i, "").trim();
+      }
+
+      function isPricingSchema(obj) {
+        return obj && Array.isArray(obj.limited);
+      }
+
+      function isHomeSchema(obj) {
+        return obj && ("km" in obj) && ("price" in obj) && !("limited" in obj);
+      }
+
+      function kmValue(km) {
+        if (km == null) return null;
+        const s = String(km).trim();
+        if (!s) return null;
+        if (s.toLowerCase() === "unlimited") return "Unlimited";
+        const n = Number(s);
+        return Number.isFinite(n) ? n : s;
+      }
+
+      function homeToPricing(list) {
+        const groups = [];
+        const map = new Map();
+
+        list.forEach(function (it) {
+          const duration = it.duration != null ? String(it.duration) : "";
+          const labelObj = it.label && typeof it.label === "object" ? it.label : {};
+          const baseKey = stripTierSuffix(labelObj.en || it.id || "Package");
+          const key = baseKey + "||" + duration;
+
+          let group = map.get(key);
+          if (!group) {
+            const cleanLabel = {};
+            Object.keys(labelObj).forEach(function (k) {
+              cleanLabel[k] = stripTierSuffix(labelObj[k]);
+            });
+            if (!cleanLabel.en) cleanLabel.en = baseKey;
+
+            group = { id: it.id, label: cleanLabel, duration: duration, limited: [] };
+            groups.push(group);
+            map.set(key, group);
+          }
+
+          const km = kmValue(it.km);
+          if (km === "Unlimited") {
+            group.unlimited = { price: it.price };
+          } else if (km != null) {
+            group.limited.push({ km: km, price: it.price });
+          }
+        });
+
+        groups.forEach(function (group) {
+          group.limited.sort(function (a, b) {
+            return (Number(a.km) || 0) - (Number(b.km) || 0);
+          });
+        });
+
+        return groups;
+      }
+
+      function normalizePackages(data) {
+        const list = data && Array.isArray(data.packages) ? data.packages : (Array.isArray(data) ? data : null);
+        if (!list || !list.length) return null;
+        if (isPricingSchema(list[0])) return list;
+        if (isHomeSchema(list[0])) return homeToPricing(list);
+        return null;
+      }
+
+      function findPackage(packages, card) {
+        const id = card.getAttribute("data-rate-card");
+        return packages.find(function (p) { return p.id === id; }) || null;
+      }
+
+      function findTier(pkg, card) {
+        if (card.getAttribute("data-rate-tier") === "unlimited") {
+          return pkg.unlimited && pkg.unlimited.price != null
+            ? { km: "unlimited km", price: pkg.unlimited.price }
+            : null;
+        }
+
+        const targetKm = Number(card.getAttribute("data-rate-km"));
+        const limited = Array.isArray(pkg.limited) ? pkg.limited : [];
+        const tier = limited.find(function (opt) { return Number(opt.km) === targetKm; }) || limited[0];
+
+        return tier && tier.price != null
+          ? { km: String(tier.km) + " km", price: tier.price }
+          : null;
+      }
+
+      async function hydrateRatesPreview() {
+        const cards = Array.from(document.querySelectorAll("[data-rate-card]"));
+        if (!cards.length) return;
+
+        try {
+          const response = await fetch(packageUrl, { cache: "no-store" });
+          if (!response.ok) return;
+
+          const packages = normalizePackages(await response.json());
+          if (!packages) return;
+
+          cards.forEach(function (card) {
+            const pkg = findPackage(packages, card);
+            if (!pkg) return;
+
+            const tier = findTier(pkg, card);
+            if (!tier) return;
+
+            const lang = document.documentElement.lang || "en";
+            const duration = textForLang(pkg.duration, lang);
+            const name = card.querySelector("[data-rate-name]");
+            const price = card.querySelector("[data-rate-price]");
+            const kicker = card.querySelector(".ratesPreviewKicker");
+
+            if (kicker) kicker.textContent = textForLang(pkg.label, lang) || kicker.textContent;
+            if (name) name.textContent = duration ? (duration + " · " + tier.km) : tier.km;
+            if (price) price.textContent = money(tier.price);
+          });
+        } catch (error) {
+          console.warn("Rates preview fallback to static HTML. Could not load ../data/packages.json.", error);
+        }
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", hydrateRatesPreview);
+      } else {
+        hydrateRatesPreview();
+      }
+    })();
+  </script>
+</body>
 </html>

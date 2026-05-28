@@ -84,6 +84,92 @@
   </script>
 <script defer="" src="../assets/lo.js"></script>
 <script defer="" src="../assets/lo.locations.js"></script>
+
+  <style>
+    /* Paid-search rates preview: static HTML for crawlers, hydrated from ../data/packages.json */
+    .ratesPreview{padding:2.8rem 0 3.1rem}
+    .ratesPreviewHead{display:flex;align-items:flex-end;justify-content:space-between;gap:1.2rem;margin-bottom:1.35rem}
+    .ratesPreviewGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0.85rem}
+    .ratesPreviewCard{
+      padding:1rem;
+      min-height:138px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:0.7rem
+    }
+    .ratesPreviewKicker{
+      display:block;
+      font-size:0.68rem;
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:0.25rem
+    }
+    .ratesPreviewName{
+      display:block;
+      font-size:0.98rem;
+      line-height:1.35;
+      color:rgba(243,241,238,0.92)
+    }
+    .ratesPreviewPrice{
+      display:block;
+      font-size:1.35rem;
+      line-height:1;
+      font-weight:700;
+      color:var(--champagne)
+    }
+    .ratesPreviewMeta{
+      display:block;
+      margin-top:0.35rem;
+      font-size:0.78rem;
+      color:var(--muted)
+    }
+    .ratesPreviewFoot{
+      margin-top:1.05rem;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:0.9rem
+    }
+    .ratesPreviewNote{
+      flex:1 1 100%;
+      margin:0;
+      color:var(--muted);
+      font-size:0.88rem;
+      line-height:1.65;
+      max-width:56rem
+    }
+    .ratesPreviewActions{
+      flex:1 1 100%;
+      width:100%;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-start;
+      gap:0.75rem;
+      margin-top:0 !important
+    }
+    @media (max-width: 860px){
+      .ratesPreviewHead{display:block}
+      .ratesPreviewGrid{
+        display:flex;
+        flex-wrap:nowrap;
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+        scroll-snap-type:x mandatory;
+        padding-bottom:0.75rem
+      }
+      .ratesPreviewCard{
+        flex:0 0 min(78vw, 310px);
+        scroll-snap-align:start
+      }
+      .ratesPreviewActions .ctaBtn{
+        flex:1 1 180px;
+        justify-content:center
+      }
+    }
+  </style>
+
 </head>
 <body>
 <header>
@@ -167,7 +253,76 @@
 </div>
 </section>
 <div class="titaniumDivider"></div>
-<section id="location">
+
+    <section id="rates-preview" class="ratesPreview" aria-labelledby="ratesPreviewTitle">
+      <div class="container">
+        <div class="ratesPreviewHead">
+          <div>
+            <div class="eyebrow">Noleggio Ferrari Winterthur</div>
+            <h2 class="sectionTitle" id="ratesPreviewTitle">Pacchetti Ferrari 458 Italia più richiesti</h2>
+            <p class="sectionSubtitle">Un rapido orientamento sui prezzi prima dei dettagli di ritiro a Winterthur.</p>
+          </div>
+        </div>
+
+        <div class="ratesPreviewGrid">
+          <article class="card ratesPreviewCard" data-rate-card="P3" data-rate-tier="unlimited" data-rate-duration-fallback="3h">
+            <div>
+              <span class="ratesPreviewKicker" data-rate-label>BREVE FUGA</span>
+              <strong class="ratesPreviewName"><span data-rate-duration>3 ore</span> · <span data-rate-km-label>km illimitati</span></strong>
+            </div>
+            <div>
+              <span class="ratesPreviewPrice" data-rate-price>CHF 440</span>
+              <span class="ratesPreviewMeta">Breve uscita città-campagna</span>
+            </div>
+          </article>
+
+          <article class="card ratesPreviewCard" data-rate-card="P6" data-rate-km="200" data-rate-duration-fallback="6h">
+            <div>
+              <span class="ratesPreviewKicker" data-rate-label>SIGNATURE MEZZA GIORNATA</span>
+              <strong class="ratesPreviewName"><span data-rate-duration>6 ore</span> · <span data-rate-km-label>200 km</span></strong>
+            </div>
+            <div>
+              <span class="ratesPreviewPrice" data-rate-price>CHF 790</span>
+              <span class="ratesPreviewMeta">Tour bilanciato di mezza giornata</span>
+            </div>
+          </article>
+
+          <article class="card ratesPreviewCard" data-rate-card="GT" data-rate-km="300" data-rate-duration-fallback="12h">
+            <div>
+              <span class="ratesPreviewKicker" data-rate-label>GRAND TOUR</span>
+              <strong class="ratesPreviewName"><span data-rate-duration>12 ore</span> · <span data-rate-km-label>300 km</span></strong>
+            </div>
+            <div>
+              <span class="ratesPreviewPrice" data-rate-price>CHF 940</span>
+              <span class="ratesPreviewMeta">Potenziale itinerario giornaliero da Winterthur</span>
+            </div>
+          </article>
+
+          <article class="card ratesPreviewCard" data-rate-card="FD" data-rate-km="500" data-rate-duration-fallback="24h">
+            <div>
+              <span class="ratesPreviewKicker" data-rate-label>GIORNATA ICONICA</span>
+              <strong class="ratesPreviewName"><span data-rate-duration>24 ore</span> · <span data-rate-km-label>500 km</span></strong>
+            </div>
+            <div>
+              <span class="ratesPreviewPrice" data-rate-price>CHF 1’590</span>
+              <span class="ratesPreviewMeta">Un’intera giornata con la 458</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="ratesPreviewFoot">
+          <p class="ratesPreviewNote">I dettagli di ritiro a Winterthur vengono confermati con la prenotazione. Cauzione rimborsabile da CHF 1’500 per conducenti oltre i 25 anni.</p>
+          <div class="ctaRow ratesPreviewActions">
+            <a class="ctaBtn" href="pricing.html">Vedi tutte le tariffe</a>
+            <a class="ctaBtn ctaBtnPrimary" href="../index.html#request">Richiedi disponibilità</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="titaniumDivider"></div>
+
+    <section id="location">
 <div class="container">
 <h2 class="sectionTitle" id="locTitle">Ritiro Ferrari a Winterthur</h2>
 <p class="sectionSubtitle" id="locSub">Un punto d’incontro pratico con partenza rilassata e uscita veloce verso strade più libere.</p>
@@ -243,5 +398,174 @@ document.addEventListener("DOMContentLoaded", function () {
     }, true);
   });
 });
-</script></body>
+</script>
+  <script>
+    (function () {
+      function getLangText(value, lang) {
+        if (value && typeof value === "object" && !Array.isArray(value)) {
+          return value[lang] || value.en || Object.values(value)[0] || "";
+        }
+        return value == null ? "" : String(value);
+      }
+
+      function priceText(value) {
+        const n = Number(value);
+        if (!Number.isFinite(n)) return "";
+        return "CHF " + String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, "’");
+      }
+
+      function durationText(value) {
+        const raw = getLangText(value, "it").trim();
+        const compact = raw.toLowerCase().replace(/\s/g, "");
+        const hours = compact.match(/^(\d+)h$/);
+        if (hours) return hours[1] + " ore";
+        return raw || "";
+      }
+
+      function kmText(value) {
+        if (value == null) return "";
+        const s = String(value).trim();
+        if (!s) return "";
+        if (s.toLowerCase() === "unlimited") return "km illimitati";
+        return s + " km";
+      }
+
+      function stripTierSuffix(value) {
+        return String(value || "").replace(/\s+(unlimited|\d+)\s*$/i, "").trim();
+      }
+
+      function kmValue(value) {
+        if (value == null) return null;
+        const s = String(value).trim();
+        if (!s) return null;
+        if (s.toLowerCase() === "unlimited") return "Unlimited";
+        const n = Number(s);
+        return Number.isFinite(n) ? n : s;
+      }
+
+      function isPricingSchema(obj) {
+        return obj && (Array.isArray(obj.limited) || obj.unlimited);
+      }
+
+      function isHomeSchema(obj) {
+        return obj && ("km" in obj) && ("price" in obj) && !("limited" in obj);
+      }
+
+      function homeToPricing(list) {
+        const groups = [];
+        const map = new Map();
+
+        list.forEach(function (it) {
+          const duration = it.duration != null ? String(it.duration) : "";
+          const labelObj = it.label && typeof it.label === "object" ? it.label : {};
+          const baseKey = stripTierSuffix(labelObj.it || labelObj.en || it.id || "Package");
+          const key = baseKey + "||" + duration;
+
+          let g = map.get(key);
+          if (!g) {
+            const cleanLabel = {};
+            Object.keys(labelObj).forEach(function (k) { cleanLabel[k] = stripTierSuffix(labelObj[k]); });
+            if (!cleanLabel.it) cleanLabel.it = baseKey;
+
+            g = { id: it.id || "", label: cleanLabel, duration: duration, limited: [] };
+            groups.push(g);
+            map.set(key, g);
+          }
+
+          const km = kmValue(it.km);
+          if (km === "Unlimited") {
+            g.unlimited = { price: it.price };
+          } else if (km != null) {
+            g.limited.push({ km: km, price: it.price });
+          }
+        });
+
+        groups.forEach(function (g) {
+          g.limited.sort(function (a, b) { return (Number(a.km) || 0) - (Number(b.km) || 0); });
+        });
+
+        return groups;
+      }
+
+      function normalisePackages(data) {
+        const list = data && Array.isArray(data.packages) ? data.packages : (Array.isArray(data) ? data : null);
+        if (!list || !list.length) return null;
+        if (isPricingSchema(list[0])) return list;
+        if (isHomeSchema(list[0])) return homeToPricing(list);
+        return null;
+      }
+
+      function findPackage(list, id, durationFallback) {
+        let found = list.find(function (p) { return String(p.id || "").toUpperCase() === id; });
+        if (found) return found;
+
+        return list.find(function (p) {
+          const d = getLangText(p.duration, "it").toLowerCase().replace(/\s/g, "");
+          return d === durationFallback;
+        });
+      }
+
+      function updateRatesPreview(packages) {
+        const cards = document.querySelectorAll("[data-rate-card]");
+        cards.forEach(function (card) {
+          const id = String(card.getAttribute("data-rate-card") || "").toUpperCase();
+          const kmTarget = card.getAttribute("data-rate-km");
+          const tier = card.getAttribute("data-rate-tier");
+          const durationFallback = card.getAttribute("data-rate-duration-fallback") || "";
+
+          const pkg = findPackage(packages, id, durationFallback);
+          if (!pkg) return;
+
+          const labelEl = card.querySelector("[data-rate-label]");
+          const durationEl = card.querySelector("[data-rate-duration]");
+          const kmEl = card.querySelector("[data-rate-km-label]");
+          const priceEl = card.querySelector("[data-rate-price]");
+
+          const label = getLangText(pkg.label, "it");
+          if (labelEl && label) labelEl.textContent = label.toUpperCase();
+          if (durationEl) {
+            const d = durationText(pkg.duration);
+            if (d) durationEl.textContent = d;
+          }
+
+          let offer = null;
+          let kmValueForLabel = null;
+
+          if (tier === "unlimited" && pkg.unlimited) {
+            offer = pkg.unlimited;
+            kmValueForLabel = "Unlimited";
+          } else if (Array.isArray(pkg.limited)) {
+            const desired = Number(kmTarget);
+            offer = pkg.limited.find(function (x) { return Number(x.km) === desired; });
+            kmValueForLabel = offer ? offer.km : kmTarget;
+          }
+
+          if (kmEl) kmEl.textContent = kmText(kmValueForLabel);
+          if (priceEl && offer && offer.price != null) {
+            const formatted = priceText(offer.price);
+            if (formatted) priceEl.textContent = formatted;
+          }
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const section = document.getElementById("rates-preview");
+        if (!section) return;
+
+        const packageUrl = new URL("../data/packages.json", window.location.href).toString();
+
+        fetch(packageUrl, { cache: "no-store" })
+          .then(function (res) { return res.ok ? res.json() : null; })
+          .then(function (data) {
+            const packages = normalisePackages(data);
+            if (packages && packages.length) updateRatesPreview(packages);
+          })
+          .catch(function () {
+            console.warn("Rates preview fallback to static HTML. Could not load ../data/packages.json.");
+          });
+      });
+    })();
+  </script>
+
+</body>
 </html>
