@@ -155,6 +155,14 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /de/ferrari-rental-andermatt.html        /de/ferrari-rental-andermatt             301!
 /it/ferrari-rental-andermatt.html        /it/ferrari-rental-andermatt             301!
 
+/en/ferrari-rental-aargau.html        /en/ferrari-rental-aargau             301!
+/de/ferrari-rental-aargau.html        /de/ferrari-rental-aargau             301!
+/it/ferrari-rental-aargau.html        /it/ferrari-rental-aargau             301!
+
+/en/ferrari-rental-solothurn.html        /en/ferrari-rental-solothurn             301!
+/de/ferrari-rental-solothurn.html        /de/ferrari-rental-solothurn             301!
+/it/ferrari-rental-solothurn.html        /it/ferrari-rental-solothurn             301!
+
 
 # Language home pages
 /en                       /index.html               200
@@ -271,6 +279,12 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /en/ferrari-rental-naenikon        /pages/ferrari-rental-naenikon.html        200
 /de/ferrari-rental-naenikon        /pages/de/ferrari-rental-naenikon.html        200
 /it/ferrari-rental-naenikon        /pages/it/ferrari-rental-naenikon.html        200
+/en/ferrari-rental-aargau        /pages/ferrari-rental-aargau.html        200
+/de/ferrari-rental-aargau        /pages/de/ferrari-rental-aargau.html        200
+/it/ferrari-rental-aargau        /pages/it/ferrari-rental-aargau.html        200
+/en/ferrari-rental-solothurn        /pages/ferrari-rental-solothurn.html        200
+/de/ferrari-rental-solothurn        /pages/de/ferrari-rental-solothurn.html        200
+/it/ferrari-rental-solothurn        /pages/it/ferrari-rental-solothurn.html        200
 /en/instagrammable_places_zurich_uster_part1        /pages/instagrammable_places_zurich_uster_part1.html        200
 /de/instagrammable_places_zurich_uster_part1 /pages/de/instagrammable_places_zurich_uster_part1.html 200
 /it/instagrammable_places_zurich_uster_part1 /pages/it/instagrammable_places_zurich_uster_part1.html 200
