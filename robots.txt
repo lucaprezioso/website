@@ -9,13 +9,13 @@ Disallow: /media/homepage-poster-vertical.webp
 Disallow: /media/homepage-poster.jpg
 Disallow: /media/homepage-poster.webp
 Disallow: /media/poster-vertical_360.jpg
-Disallow: /media/poster-vertical_360.web
+Disallow: /media/poster-vertical_360.webp
 Disallow: /media/poster-vertical_480.jpg
-Disallow: /media/poster-vertical_480.web
+Disallow: /media/poster-vertical_480.webp
 Disallow: /media/poster-vertical_720.jpg
-Disallow: /media/poster-vertical_720.web
+Disallow: /media/poster-vertical_720.webp
 Disallow: /media/poster-vertical_960.jpg
-Disallow: /media/poster-vertical_960.web
+Disallow: /media/poster-vertical_960.webp
 Disallow: /media/poster_vertical_placeholder_48.webp
 Disallow: /media/poster_1920.jpg
 Disallow: /media/poster_1920.webp
