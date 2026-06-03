@@ -252,6 +252,9 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /en/ferrari-rental-zurich-airport        /pages/ferrari-rental-zurich-airport.html        200
 /de/ferrari-rental-zurich-airport        /pages/de/ferrari-rental-zurich-airport.html        200
 /it/ferrari-rental-zurich-airport        /pages/it/ferrari-rental-zurich-airport.html        200
+/en/ferrari-rental-zurich        /pages/ferrari-rental-zurich.html        200
+/de/ferrari-rental-zurich        /pages/de/ferrari-rental-zurich.html        200
+/it/ferrari-rental-zurich        /pages/it/ferrari-rental-zurich.html        200
 /en/ferrari-rental-andermatt        /pages/ferrari-rental-andermatt.html        200
 /de/ferrari-rental-andermatt        /pages/de/ferrari-rental-andermatt.html        200
 /it/ferrari-rental-andermatt        /pages/it/ferrari-rental-andermatt.html        200

@@ -103,9 +103,9 @@
       navImpressum: "Impressum",
 
       aboutTitle: "About Luxury Obsession",
-      aboutSub: "A privately hosted Ferrari experience.",
+      aboutSub: "One Ferrari 458 Italia. An experience built around her.",
       aboutBody:
-        "Luxury Obsession is a privately hosted Ferrari experience in Switzerland. We keep the selection intentionally singular: one carefully maintained 458 Italia. Every request is confirmed personally, with clear terms, a discreet handover, and concierge support before and during your drive.",
+        "Luxury Obsession offers a personally hosted Ferrari experience in Switzerland. The choice is intentionally exclusive: one Ferrari 458 Italia, carefully maintained and presented with impeccable attention to detail. Every request is handled directly, with clear terms, a discreet handover and concierge support before and during the drive.",
 
       btnRequest: "Request availability",
       btnOther: "Other pickup locations",
@@ -171,9 +171,9 @@
       navImpressum: "Impressum",
 
       aboutTitle: "Über Luxury Obsession",
-      aboutSub: "Ein privat betreutes Ferrari Erlebnis.",
+      aboutSub: "Ein einziger Ferrari 458 Italia. Ein Erlebnis, das ganz auf diese Ikone ausgerichtet ist.",
       aboutBody:
-        "Luxury Obsession ist ein privat gehostetes Ferrari Erlebnis in der Schweiz. Unsere Auswahl ist bewusst singular: eine sorgfältig gepflegte 458 Italia. Jede Anfrage wird persönlich bestätigt, mit klaren Konditionen, diskreter Übergabe und Concierge Support vor und während der Fahrt.",
+        "Luxury Obsession bietet ein persönlich betreutes Ferrari-Erlebnis in der Schweiz. Die Auswahl ist bewusst exklusiv: ein einzelner Ferrari 458 Italia, sorgfältig gepflegt und makellos präsentiert. Jede Anfrage wird persönlich begleitet – mit klaren Konditionen, diskreter Übergabe und Concierge-Support vor und während der Fahrt.",
 
       btnRequest: "Verfügbarkeit anfragen",
       btnOther: "Weitere Abholorte",
@@ -238,10 +238,10 @@
       navRequest: "Richiesta",
       navImpressum: "Impressum",
 
-      aboutTitle: "Chi è Luxury Obsession",
-      aboutSub: "Un’esperienza Ferrari gestita in modo privato.",
+      aboutTitle: "Informazioni su Luxury Obsession",
+      aboutSub: "Una sola Ferrari 458 Italia. Un’esperienza costruita intorno a lei.",
       aboutBody:
-        "Luxury Obsession è un’esperienza Ferrari gestita in modo privato in Svizzera. La scelta è volutamente singolare: una 458 Italia curata con attenzione. Ogni richiesta viene confermata personalmente, con condizioni chiare, consegna discreta e supporto concierge prima e durante la guida.",
+        "Luxury Obsession offre un’esperienza Ferrari gestita personalmente in Svizzera. La scelta è intenzionalmente esclusiva: una sola Ferrari 458 Italia, curata con attenzione e presentata in modo impeccabile. Ogni richiesta viene seguita direttamente, con condizioni chiare, consegna discreta e supporto concierge prima e durante la guida.",
 
       btnRequest: "Richiedi disponibilità",
       btnOther: "Altri luoghi di ritiro",
