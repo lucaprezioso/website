@@ -1,6 +1,144 @@
 # Force HTTPS
 http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 
+# SEO strategy canonical architecture - German first
+/de                       /                       301!
+/de/                      /                       301!
+/de/pricing               /preise                 301!
+/de/pricing.html          /preise                 301!
+/de/blog                  /journal                301!
+/de/blog.html             /journal                301!
+/de/experiences           /erlebnisse             301!
+/de/experiences.html      /erlebnisse             301!
+/de/philosophy            /philosophie            301!
+/de/philosophy.html       /philosophie            301!
+/standorte/uster          /ferrari-mieten-uster    301!
+# Defensive cleanup for accidental Windows-style paths
+
+
+# German-first canonical pages
+/preise                   /pages/de/pricing.html   200
+/erlebnisse               /de/experiences.html     200
+/philosophie              /de/philosophy.html      200
+/journal                  /pages/de/blog.html      200
+/impressum                /impressum.html           200
+/datenschutz              /datenschutz.html         200
+/agb                      /agb.html                 200
+/ferrari-mieten-zuerich   /pages/de/ferrari-mieten-zuerich.html 200
+/ferrari458-mieten-zuerich /pages/de/ferrari-rental-zurich.html 200
+/sportwagen-mieten-zuerich /pages/de/sportwagen-mieten-zuerich.html 200
+/luxusauto-mieten-zuerich /pages/de/luxusauto-mieten-zuerich.html 200
+/ferrari-mieten-schweiz   /pages/de/ferrari-mieten-schweiz.html 200
+/ferrari-mieten-uster     /pages/de/ferrari-mieten-uster.html 200
+/ferrari-seite  /ferrari-458-italia  301!
+/ferrari-458-italia       /pages/de/ferrari-458-italia.html 200
+/ferrari-mieten-zuerich-preise-anforderungen-ablauf /pages/de/ferrari-mieten-zuerich-preise-anforderungen-ablauf.html 200
+/autostrecken-schweiz-ferrari-zuerich /pages/de/autostrecken-schweiz-ferrari-zuerich.html 200
+/it/blog                  /pages/it/blog.html      200
+
+
+# Round 8 language, locations and city-slug fixes
+/standorte                /pages/locations.html     200
+/locations                /pages/locations.html     200
+/de/locations             /standorte               301!
+/de/locations.html        /standorte               301!
+/en/journal               /pages/blog.html         200
+/en/blog                  /en/journal              301!
+/en/blog.html             /en/journal              301!
+/pages/blog.html          /en/journal              301!
+/pages/de/ferrari-rental-zurich.html /ferrari458-mieten-zuerich 301!
+/pages/pricing.html       /en/pricing              301!
+/ferrari-vermietung-zuerich /ferrari-mieten-zuerich 301!
+/de/ferrari-rental-zurich             /ferrari458-mieten-zuerich 301!
+/de/ferrari-rental-zurich.html /ferrari458-mieten-zuerich 301!
+/it/ferrari-rental-zurich             /noleggio-ferrari-zurigo 301!
+/it/ferrari-rental-zurich.html /noleggio-ferrari-zurigo 301!
+/noleggio-ferrari-zurigo            /pages/it/ferrari-rental-zurich.html 200
+/de/ferrari-rental-zurich-airport     /ferrari-mieten-zuerich-flughafen 301!
+/de/ferrari-rental-zurich-airport.html /ferrari-mieten-zuerich-flughafen 301!
+/ferrari-mieten-zuerich-flughafen   /pages/de/ferrari-rental-zurich-airport.html 200
+/it/ferrari-rental-zurich-airport     /noleggio-ferrari-aeroporto-zurigo 301!
+/it/ferrari-rental-zurich-airport.html /noleggio-ferrari-aeroporto-zurigo 301!
+/noleggio-ferrari-aeroporto-zurigo  /pages/it/ferrari-rental-zurich-airport.html 200
+/de/ferrari-rental-lucerne            /ferrari-mieten-luzern 301!
+/de/ferrari-rental-lucerne.html /ferrari-mieten-luzern 301!
+/ferrari-mieten-luzern              /pages/de/ferrari-rental-lucerne.html 200
+/it/ferrari-rental-lucerne            /noleggio-ferrari-lucerna 301!
+/it/ferrari-rental-lucerne.html /noleggio-ferrari-lucerna 301!
+/noleggio-ferrari-lucerna           /pages/it/ferrari-rental-lucerne.html 200
+/de/ferrari-rental-bern               /ferrari-mieten-bern 301!
+/de/ferrari-rental-bern.html /ferrari-mieten-bern 301!
+/ferrari-mieten-bern                /pages/de/ferrari-rental-bern.html 200
+/it/ferrari-rental-bern               /noleggio-ferrari-berna 301!
+/it/ferrari-rental-bern.html /noleggio-ferrari-berna 301!
+/noleggio-ferrari-berna             /pages/it/ferrari-rental-bern.html 200
+/de/ferrari-rental-winterthur         /ferrari-mieten-winterthur 301!
+/de/ferrari-rental-winterthur.html /ferrari-mieten-winterthur 301!
+/ferrari-mieten-winterthur          /pages/de/ferrari-rental-winterthur.html 200
+/it/ferrari-rental-winterthur         /noleggio-ferrari-winterthur 301!
+/it/ferrari-rental-winterthur.html /noleggio-ferrari-winterthur 301!
+/noleggio-ferrari-winterthur        /pages/it/ferrari-rental-winterthur.html 200
+/de/ferrari-rental-zug                /ferrari-mieten-zug 301!
+/de/ferrari-rental-zug.html /ferrari-mieten-zug 301!
+/ferrari-mieten-zug                 /pages/de/ferrari-rental-zug.html 200
+/it/ferrari-rental-zug                /noleggio-ferrari-zugo 301!
+/it/ferrari-rental-zug.html /noleggio-ferrari-zugo 301!
+/noleggio-ferrari-zugo              /pages/it/ferrari-rental-zug.html 200
+/de/ferrari-rental-st-gallen          /ferrari-mieten-st-gallen 301!
+/de/ferrari-rental-st-gallen.html /ferrari-mieten-st-gallen 301!
+/ferrari-mieten-st-gallen           /pages/de/ferrari-rental-st-gallen.html 200
+/it/ferrari-rental-st-gallen          /noleggio-ferrari-san-gallo 301!
+/it/ferrari-rental-st-gallen.html /noleggio-ferrari-san-gallo 301!
+/noleggio-ferrari-san-gallo         /pages/it/ferrari-rental-st-gallen.html 200
+/de/ferrari-rental-basel              /ferrari-mieten-basel 301!
+/de/ferrari-rental-basel.html /ferrari-mieten-basel 301!
+/ferrari-mieten-basel               /pages/de/ferrari-rental-basel.html 200
+/it/ferrari-rental-basel              /noleggio-ferrari-basilea 301!
+/it/ferrari-rental-basel.html /noleggio-ferrari-basilea 301!
+/noleggio-ferrari-basilea           /pages/it/ferrari-rental-basel.html 200
+/de/ferrari-rental-chur               /ferrari-mieten-chur 301!
+/de/ferrari-rental-chur.html /ferrari-mieten-chur 301!
+/ferrari-mieten-chur                /pages/de/ferrari-rental-chur.html 200
+/it/ferrari-rental-chur               /noleggio-ferrari-coira 301!
+/it/ferrari-rental-chur.html /noleggio-ferrari-coira 301!
+/noleggio-ferrari-coira             /pages/it/ferrari-rental-chur.html 200
+/de/ferrari-rental-davos              /ferrari-mieten-davos 301!
+/de/ferrari-rental-davos.html /ferrari-mieten-davos 301!
+/ferrari-mieten-davos               /pages/de/ferrari-rental-davos.html 200
+/it/ferrari-rental-davos              /noleggio-ferrari-davos 301!
+/it/ferrari-rental-davos.html /noleggio-ferrari-davos 301!
+/noleggio-ferrari-davos             /pages/it/ferrari-rental-davos.html 200
+/de/ferrari-rental-andermatt          /ferrari-mieten-andermatt 301!
+/de/ferrari-rental-andermatt.html /ferrari-mieten-andermatt 301!
+/ferrari-mieten-andermatt           /pages/de/ferrari-rental-andermatt.html 200
+/it/ferrari-rental-andermatt          /noleggio-ferrari-andermatt 301!
+/it/ferrari-rental-andermatt.html /noleggio-ferrari-andermatt 301!
+/noleggio-ferrari-andermatt         /pages/it/ferrari-rental-andermatt.html 200
+/de/ferrari-rental-aargau             /ferrari-mieten-aargau 301!
+/de/ferrari-rental-aargau.html /ferrari-mieten-aargau 301!
+/ferrari-mieten-aargau              /pages/de/ferrari-rental-aargau.html 200
+/it/ferrari-rental-aargau             /noleggio-ferrari-argovia 301!
+/it/ferrari-rental-aargau.html /noleggio-ferrari-argovia 301!
+/noleggio-ferrari-argovia           /pages/it/ferrari-rental-aargau.html 200
+/de/ferrari-rental-solothurn          /ferrari-mieten-solothurn 301!
+/de/ferrari-rental-solothurn.html /ferrari-mieten-solothurn 301!
+/ferrari-mieten-solothurn           /pages/de/ferrari-rental-solothurn.html 200
+/it/ferrari-rental-solothurn          /noleggio-ferrari-soletta 301!
+/it/ferrari-rental-solothurn.html /noleggio-ferrari-soletta 301!
+/noleggio-ferrari-soletta           /pages/it/ferrari-rental-solothurn.html 200
+/de/ferrari-rental-biel               /ferrari-mieten-biel 301!
+/de/ferrari-rental-biel.html /ferrari-mieten-biel 301!
+/ferrari-mieten-biel                /pages/de/ferrari-rental-biel.html 200
+/it/ferrari-rental-biel               /noleggio-ferrari-bienne 301!
+/it/ferrari-rental-biel.html /noleggio-ferrari-bienne 301!
+/noleggio-ferrari-bienne            /pages/it/ferrari-rental-biel.html 200
+/de/ferrari-rental-naenikon           /ferrari-mieten-uster 301!
+/de/ferrari-rental-naenikon.html /ferrari-mieten-uster 301!
+/ferrari-mieten-uster               /pages/de/ferrari-mieten-uster.html 200
+/it/ferrari-rental-naenikon           /noleggio-ferrari-uster 301!
+/it/ferrari-rental-naenikon.html /noleggio-ferrari-uster 301!
+/noleggio-ferrari-uster             /pages/it/ferrari-rental-naenikon.html 200
+
 # Block pages from being indexed
 /pages/*   /404.html   404
 
@@ -23,9 +161,6 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /it/data/*                /data/:splat              301!
 
 # Fix relative .html links that resolve under the language prefix
-/en/index.html            /en                       301!
-/de/index.html            /de                       301!
-/it/index.html            /it                       301!
 
 /en/experiences.html      /en/experiences           301!
 /de/experiences.html      /de/experiences           301!
@@ -51,7 +186,6 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /de/pricing.html          /de/pricing               301!
 /it/pricing.html          /it/pricing               301!
 
-/en/blog.html             /en/blog                  301!
 /de/blog.html             /de/blog                  301!
 /it/blog.html             /it/blog                  301!
 
@@ -108,78 +242,43 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /it/swiss-routes-worth-driving-in-a-ferrari.html             /it/swiss-routes-worth-driving-in-a-ferrari                  301!
 
 /en/locations.html        /en/locations             301!
-/de/locations.html        /de/locations             301!
 /it/locations.html        /it/locations             301!
 
 /en/ferrari-rental-zurich.html        /en/ferrari-rental-zurich             301!
-/de/ferrari-rental-zurich.html        /de/ferrari-rental-zurich             301!
-/it/ferrari-rental-zurich.html        /it/ferrari-rental-zurich             301!
 
 /en/ferrari-rental-zurich-airport-airport.html        /en/ferrari-rental-zurich-airport             301!
-/de/ferrari-rental-zurich-airport.html        /de/ferrari-rental-zurich-airport             301!
-/it/ferrari-rental-zurich-airport.html        /it/ferrari-rental-zurich-airport             301!
 
 /en/ferrari-rental-lucerne.html        /en/ferrari-rental-lucerne             301!
-/de/ferrari-rental-lucerne.html        /de/ferrari-rental-lucerne             301!
-/it/ferrari-rental-lucerne.html        /it/ferrari-rental-lucerne             301!
 
 /en/ferrari-rental-bern.html        /en/ferrari-rental-bern             301!
-/de/ferrari-rental-bern.html        /de/ferrari-rental-bern             301!
-/it/ferrari-rental-bern.html        /it/ferrari-rental-bern             301!
 
 /en/ferrari-rental-winterthur.html        /en/ferrari-rental-winterthur             301!
-/de/ferrari-rental-winterthur.html        /de/ferrari-rental-winterthur             301!
-/it/ferrari-rental-winterthur.html        /it/ferrari-rental-winterthur             301!
 
 /en/ferrari-rental-zug.html        /en/ferrari-rental-zug             301!
-/de/ferrari-rental-zug.html        /de/ferrari-rental-zug             301!
-/it/ferrari-rental-zug.html        /it/ferrari-rental-zug             301!
 
 /en/ferrari-rental-st-gallen.html        /en/ferrari-rental-st-gallen             301!
-/de/ferrari-rental-st-gallen.html        /de/ferrari-rental-st-gallen             301!
-/it/ferrari-rental-st-gallen.html        /it/ferrari-rental-st-gallen             301!
 
 /en/ferrari-rental-basel.html        /en/ferrari-rental-basel             301!
-/de/ferrari-rental-basel.html        /de/ferrari-rental-basel             301!
-/it/ferrari-rental-basel.html        /it/ferrari-rental-basel             301!
 
 /en/ferrari-rental-chur.html        /en/ferrari-rental-chur             301!
-/de/ferrari-rental-chur.html        /de/ferrari-rental-chur             301!
-/it/ferrari-rental-chur.html        /it/ferrari-rental-chur             301!
 
 /en/ferrari-rental-davos.html        /en/ferrari-rental-davos             301!
-/de/ferrari-rental-davos.html        /de/ferrari-rental-davos             301!
-/it/ferrari-rental-davos.html        /it/ferrari-rental-davos             301!
 
 /en/ferrari-rental-andermatt.html        /en/ferrari-rental-andermatt             301!
-/de/ferrari-rental-andermatt.html        /de/ferrari-rental-andermatt             301!
-/it/ferrari-rental-andermatt.html        /it/ferrari-rental-andermatt             301!
 
 /en/ferrari-rental-aargau.html        /en/ferrari-rental-aargau             301!
-/de/ferrari-rental-aargau.html        /de/ferrari-rental-aargau             301!
-/it/ferrari-rental-aargau.html        /it/ferrari-rental-aargau             301!
 
 /en/ferrari-rental-solothurn.html        /en/ferrari-rental-solothurn             301!
-/de/ferrari-rental-solothurn.html        /de/ferrari-rental-solothurn             301!
-/it/ferrari-rental-solothurn.html        /it/ferrari-rental-solothurn             301!
 
-
-# Language home pages
-/en                       /index.html               200
-/en/                      /index.html               200
-/de                       /index.html               200
-/de/                      /index.html               200
-/it                       /index.html               200
-/it/                      /index.html               200
 
 # Root pages stored in repo root
 /en/experiences           /experiences.html         200
-/de/experiences           /experiences.html         200
-/it/experiences           /experiences.html         200
+/de/experiences           /de/experiences.html      200
+/it/experiences           /it/experiences.html      200
 
 /en/philosophy            /philosophy.html          200
-/de/philosophy            /philosophy.html          200
-/it/philosophy            /philosophy.html          200
+/de/philosophy            /de/philosophy.html       200
+/it/philosophy            /it/philosophy.html       200
 
 /en/impressum             /impressum.html           200
 /de/impressum             /impressum.html           200
@@ -244,55 +343,37 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /de/transparent-rates-how-we-design-packages-that-make-sense        /pages/de/transparent-rates-how-we-design-packages-that-make-sense.html        200
 /it/transparent-rates-how-we-design-packages-that-make-sense        /pages/it/transparent-rates-how-we-design-packages-that-make-sense.html        200
 /en/ferrari-rental-winterthur        /pages/ferrari-rental-winterthur.html        200
-/de/ferrari-rental-winterthur        /pages/de/ferrari-rental-winterthur.html        200
-/it/ferrari-rental-winterthur        /pages/it/ferrari-rental-winterthur.html        200
 /en/ferrari-rental-zug        /pages/ferrari-rental-zug.html        200
-/de/ferrari-rental-zug        /pages/de/ferrari-rental-zug.html        200
-/it/ferrari-rental-zug        /pages/it/ferrari-rental-zug.html        200
 /en/ferrari-rental-zurich-airport        /pages/ferrari-rental-zurich-airport.html        200
-/de/ferrari-rental-zurich-airport        /pages/de/ferrari-rental-zurich-airport.html        200
-/it/ferrari-rental-zurich-airport        /pages/it/ferrari-rental-zurich-airport.html        200
 /en/ferrari-rental-zurich        /pages/ferrari-rental-zurich.html        200
-/de/ferrari-rental-zurich        /pages/de/ferrari-rental-zurich.html        200
-/it/ferrari-rental-zurich        /pages/it/ferrari-rental-zurich.html        200
 /en/ferrari-rental-andermatt        /pages/ferrari-rental-andermatt.html        200
-/de/ferrari-rental-andermatt        /pages/de/ferrari-rental-andermatt.html        200
-/it/ferrari-rental-andermatt        /pages/it/ferrari-rental-andermatt.html        200
 /en/ferrari-rental-basel        /pages/ferrari-rental-basel.html        200
-/de/ferrari-rental-basel        /pages/de/ferrari-rental-basel.html        200
-/it/ferrari-rental-basel        /pages/it/ferrari-rental-basel.html        200
 /en/ferrari-rental-bern        /pages/ferrari-rental-bern.html        200
-/de/ferrari-rental-bern        /pages/de/ferrari-rental-bern.html        200
-/it/ferrari-rental-bern        /pages/it/ferrari-rental-bern.html        200
 /en/ferrari-rental-biel        /pages/ferrari-rental-biel.html        200
-/de/ferrari-rental-biel        /pages/de/ferrari-rental-biel.html        200
-/it/ferrari-rental-biel        /pages/it/ferrari-rental-biel.html        200
 /en/ferrari-rental-chur        /pages/ferrari-rental-chur.html        200
-/de/ferrari-rental-chur        /pages/de/ferrari-rental-chur.html        200
-/it/ferrari-rental-chur        /pages/it/ferrari-rental-chur.html        200
 /en/ferrari-rental-lucerne        /pages/ferrari-rental-lucerne.html        200
-/de/ferrari-rental-lucerne        /pages/de/ferrari-rental-lucerne.html        200
-/it/ferrari-rental-lucerne        /pages/it/ferrari-rental-lucerne.html        200
 /en/ferrari-rental-st-gallen        /pages/ferrari-rental-st-gallen.html        200
-/de/ferrari-rental-st-gallen        /pages/de/ferrari-rental-st-gallen.html        200
-/it/ferrari-rental-st-gallen        /pages/it/ferrari-rental-st-gallen.html        200
 /en/ferrari-rental-davos        /pages/ferrari-rental-davos.html        200
-/de/ferrari-rental-davos        /pages/de/ferrari-rental-davos.html        200
-/it/ferrari-rental-davos        /pages/it/ferrari-rental-davos.html        200
 /en/ferrari-rental-naenikon        /pages/ferrari-rental-naenikon.html        200
-/de/ferrari-rental-naenikon        /pages/de/ferrari-rental-naenikon.html        200
-/it/ferrari-rental-naenikon        /pages/it/ferrari-rental-naenikon.html        200
 /en/ferrari-rental-aargau        /pages/ferrari-rental-aargau.html        200
-/de/ferrari-rental-aargau        /pages/de/ferrari-rental-aargau.html        200
-/it/ferrari-rental-aargau        /pages/it/ferrari-rental-aargau.html        200
 /en/ferrari-rental-solothurn        /pages/ferrari-rental-solothurn.html        200
-/de/ferrari-rental-solothurn        /pages/de/ferrari-rental-solothurn.html        200
-/it/ferrari-rental-solothurn        /pages/it/ferrari-rental-solothurn.html        200
 /en/instagrammable_places_zurich_uster_part1        /pages/instagrammable_places_zurich_uster_part1.html        200
 /de/instagrammable_places_zurich_uster_part1 /pages/de/instagrammable_places_zurich_uster_part1.html 200
 /it/instagrammable_places_zurich_uster_part1 /pages/it/instagrammable_places_zurich_uster_part1.html 200
 
-/en/*                     /pages/:splat.html        200
-/de/*                     /pages/:splat.html        200
-/it/*                     /pages/:splat.html        200
 
+
+# Explicit page routes generated to replace the old /en/*, /de/* and /it/* catchalls.
+# This avoids Netlify directory-index loops on /en/ and /it/.
+/en/locations                                           /pages/locations.html                                   200
+/it/locations                                           /pages/locations.html                                   200
+/en/pricing                                             /pages/pricing.html                                     200
+/de/autostrecken-schweiz-ferrari-zuerich                /pages/de/autostrecken-schweiz-ferrari-zuerich.html     200
+/de/ferrari-458-italia                                  /pages/de/ferrari-458-italia.html                       200
+/de/ferrari-mieten-schweiz                              /pages/de/ferrari-mieten-schweiz.html                   200
+/de/ferrari-mieten-uster                                /pages/de/ferrari-mieten-uster.html                     200
+/de/ferrari-mieten-zuerich-preise-anforderungen-ablauf  /pages/de/ferrari-mieten-zuerich-preise-anforderungen-ablauf.html 200
+/de/ferrari-mieten-zuerich                              /ferrari-mieten-zuerich                          301!
+/de/luxusauto-mieten-zuerich                            /pages/de/luxusauto-mieten-zuerich.html                 200
+/de/sportwagen-mieten-zuerich                           /pages/de/sportwagen-mieten-zuerich.html                200
+/it/pricing                                             /pages/it/pricing.html                                  200

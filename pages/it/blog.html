@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<!-- Google tag (gtag.js) -->
+<script>
+  (function () {
+    const GA_ID = "G-EKE8CWE8SN";
+    const ADS_ID = "AW-17961819738";
+
+    function loadGtag() {
+      if (window.__gtagLoaded) return;
+      window.__gtagLoaded = true;
+
+      const s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
+      document.head.appendChild(s);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ window.dataLayer.push(arguments); }
+      window.gtag = gtag;
+
+      gtag("js", new Date());
+
+      gtag("config", GA_ID, { anonymize_ip: true });
+      gtag("config", ADS_ID);
+    }
+
+    window.loadAnalytics = loadGtag;
+    loadGtag();
+  })();
+</script>
+
+
+  <meta charset="UTF-8" />
+  <title>Luxury Obsession | Journal</title>
+  <meta name="description" content="Luxury Obsession Journal: itinerari in Ferrari in Svizzera, tariffe trasparenti e dettagli sulla Ferrari 458 Italia." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Luxury Obsession | Journal" />
+  <meta property="og:description" content="Luxury Obsession Journal: itinerari in Ferrari in Svizzera, tariffe trasparenti e dettagli sulla Ferrari 458 Italia." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://luxuryobsession.ch/media/ogimage.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Luxury Obsession | Journal"/>
+  <meta name="twitter:description" content="Luxury Obsession Journal: itinerari in Ferrari in Svizzera, tariffe trasparenti e dettagli sulla Ferrari 458 Italia."/>
+  <meta name="twitter:image" content="https://luxuryobsession.ch/media/ogimage.jpg"/>
+
+  <link href="/media/icon.webp" type="image/webp" rel="icon"/>
+  <link rel="icon" href="/favicon.ico" sizes="any"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+  <link rel="manifest" href="/site.webmanifest"/>
+
+  <link rel="canonical" href="https://luxuryobsession.ch/it/blog"/>
+
+  <link rel="alternate" hreflang="de-CH" href="https://luxuryobsession.ch/journal"/>
+  <link rel="alternate" hreflang="en-CH" href="https://luxuryobsession.ch/en/blog"/>
+  <link rel="alternate" hreflang="it-CH" href="https://luxuryobsession.ch/it/blog"/>
+  <link rel="alternate" hreflang="x-default" href="https://luxuryobsession.ch/journal"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/assets/lo.css" />
+  
+  <style>
+    /* Mobile journal cards: dedicated layout to avoid lo.css clipping on small screens */
+    @media (max-width: 760px){
+      .blogGrid{
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.9rem !important;
+      }
+
+      a.blogCardM{
+        display: grid !important;
+        grid-template-columns: minmax(84px, 25%) 1fr;
+        grid-template-areas:
+          "thumb top"
+          "bottom bottom";
+        column-gap: 0.95rem;
+        row-gap: 0.75rem;
+        align-items: stretch;
+        padding: 0.95rem !important;
+        height: auto !important;
+        min-height: 0 !important;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      a.blogCardM .blogThumbWrapM{
+        grid-area: thumb;
+        border-radius: 18px;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        min-height: 96px;
+        background: rgba(255,255,255,0.02);
+      }
+
+      a.blogCardM .blogThumbWrapM img{
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      a.blogCardM .blogTopM{
+        grid-area: top;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      a.blogCardM .blogMetaM{
+        display: flex !important;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.35rem 0.55rem;
+        font-size: 0.78rem;
+        line-height: 1.15;
+        margin: 0;
+        padding: 0;
+        position: static !important;
+        transform: none !important;
+      }
+
+      a.blogCardM .blogMetaM .metaSepM{
+        opacity: 0.55;
+      }
+
+      a.blogCardM .blogTitleM{
+        margin: 0.05rem 0 0 0;
+        line-height: 1.15;
+        white-space: normal;
+        overflow: visible !important;
+        text-overflow: clip;
+      }
+
+      a.blogCardM .blogBottomM{
+        grid-area: bottom;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+      }
+
+      a.blogCardM .blogExcerptM{
+        margin: 0;
+        opacity: 0.86;
+        line-height: 1.35;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+      }
+
+      a.blogCardM .blogReadM{
+        margin-top: 0.05rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+    }
+
+    @media (max-width: 420px){
+      a.blogCardM .blogExcerptM{
+        -webkit-line-clamp: 2;
+      }
+    }
+
+    /* Journal controls: search and category filter */
+    .srOnly{
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+
+    .blogControls{
+      margin-top: 1.15rem;
+      margin-bottom: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    .blogControlsLeft{
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex: 1 1 560px;
+      min-width: 240px;
+    }
+
+    .blogSearch{
+      flex: 1 1 360px;
+      min-width: 220px;
+    }
+
+    .blogSearch input{
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: inherit;
+      outline: none;
+    }
+
+    .blogSearch input::placeholder{
+      opacity: 0.65;
+    }
+
+    .blogFilterWrap{
+      position: relative;
+      flex: 0 0 auto;
+    }
+
+    .blogFilterWrap::after{
+      content: "▾";
+      position: absolute;
+      right: 0.95rem;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .blogFilter select{
+      padding: 0.85rem 2.35rem 0.85rem 1rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      background-color: rgba(16,16,18,0.85);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.92);
+      color-scheme: dark;
+      outline: none;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+
+    .blogFilter select:focus{
+      border-color: rgba(255,255,255,0.28);
+      box-shadow: 0 0 0 3px rgba(255,255,255,0.08);
+    }
+
+    .blogFilter select option{
+      background-color: #0d0d10;
+      color: #ffffff;
+    }
+
+    .blogResults{
+      font-size: 0.92rem;
+      opacity: 0.78;
+      flex: 0 0 auto;
+    }
+
+    @media (max-width: 760px){
+      .blogControls{
+        margin-top: 1.05rem;
+        margin-bottom: 0.85rem;
+      }
+      .blogControlsLeft{
+        flex: 1 1 100%;
+        min-width: 0;
+      }
+      .blogSearch{
+        flex: 1 1 100%;
+        min-width: 0;
+      }
+      .blogFilterWrap{
+        flex: 1 1 100%;
+        min-width: 0;
+      }
+      .blogFilter select{
+        width: 100%;
+      }
+    }
+
+  </style>
+<script defer src="/assets/lo.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="navInner">
+        <a class="brand" href="../index.html" aria-label="Luxury Obsession">
+          <img class="brandIcon" src="/media/icon.webp" alt="Luxury Obsession icon" />
+          <span class="brandGold">Luxury Obsession</span>
+        </a>
+
+        <div class="navRight">
+          <nav class="navLinks" aria-label="Primary">
+            <a id="navRates" href="pricing.html">Rates</a>
+            <a id="navGallery" href="pricing.html#galleryTitle">Gallery</a>
+            <a id="navPhilosophy" href="../philosophy.html">Our Philosophy</a>
+            <a id="navExperiences" href="../experiences.html">Experiences</a>
+            <a id="navBlog" href="blog.html" aria-current="page">Journal</a>
+            <a id="navContact" href="../index.html#contact">Contact</a>
+            <a id="navRequest" class="navCta" href="../index.html#request">Request</a>
+          </nav>
+
+          <div class="langSelect" aria-label="Language">
+            <button type="button" class="langToggle" id="langToggle" aria-haspopup="menu" aria-expanded="false">
+              <span id="langCode" aria-label="Current language">EN</span>
+              <span class="langChevron" aria-hidden="true">▾</span>
+            </button>
+            <div id="langMenu" class="langMenu" role="menu" aria-label="Select language" hidden>
+              <button type="button" class="langOption" role="menuitem" data-lang="en">English</button>
+              <button type="button" class="langOption" role="menuitem" data-lang="de">Deutsch</button>
+              <button type="button" class="langOption" role="menuitem" data-lang="it">Italiano</button>
+            </div>
+          </div>
+
+          <button id="hamburger" type="button" class="hamburger" aria-label="menu" aria-expanded="false">
+            <div class="hamburgerLines"><span></span><span></span><span></span></div>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="mobileMenu" data-open="0" role="navigation" aria-label="Mobile">
+        <a id="mRates" href="pricing.html">Rates<span>›</span></a>
+        <a id="mGallery" href="pricing.html#galleryTitle">Gallery<span>›</span></a>
+        <a id="mPhilosophy" href="../philosophy.html">Our Philosophy<span>›</span></a>
+        <a id="mExperiences" href="../experiences.html">Experiences<span>›</span></a>
+        <a id="mBlog" href="blog.html" aria-current="page">Journal<span>›</span></a>
+        <a id="mContact" href="../index.html#contact">Contact<span>›</span></a>
+        <a id="mImpressum" href="../impressum.html">Impressum<span>›</span></a>
+        <div class="mobileMenuDivider"></div>
+        <a id="mRequest" class="mobileMenuCta" href="../index.html#request">Request</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="top" class="blogHero">
+      <div class="container">
+        <div class="eyebrow" id="eyebrow">Journal</div>
+        <h1 class="heroTitle" style="margin-bottom:0.55rem">
+          <span id="heroTitleA">Itinerari e note</span> <span class="heroHighlight" id="heroTitleB">dalla Svizzera</span>
+        </h1>
+        <p class="heroSubtitle" id="heroSubtitle">Un journal breve su itinerari in Ferrari, dettagli da vero appassionato, e condizioni trasparenti. Scritto per aiutarti a progettare una giornata in cui l’auto è protagonista.</p>
+
+        <div class="blogControls" aria-label="Journal filters">
+          <div class="blogControlsLeft">
+            <div class="blogSearch">
+              <label class="srOnly" id="blogSearchLabel" for="blogSearch">Cerca articoli</label>
+              <input id="blogSearch" type="search" autocomplete="off" spellcheck="false" placeholder="Cerca articoli" />
+            </div>
+
+            <div class="blogFilter blogFilterWrap">
+              <label class="srOnly" id="blogFilterLabel" for="blogCategory">Categoria</label>
+              <select id="blogCategory"><option value="">Tutte le categorie</option></select>
+            </div>
+          </div>
+
+          <div class="blogResults" id="blogResults" aria-live="polite">Mostrati 17 di 17</div>
+        </div>
+
+        <div class="blogGrid" id="blogGrid">
+          <a class="card blogCard" href="/it/carbon-fiber-luxury-cars-zurich#top" aria-label="Perché fibra di carbonio e materiali premium contano nelle auto di lusso">
+            <img class="blogThumb" src="/media/ferrari-interior-480.webp" alt="Perché fibra di carbonio e materiali premium contano nelle auto di lusso" loading="lazy" decoding="async">
+            <div class="blogCardInner">
+              <div>
+                <div class="blogMeta">
+                  <span class="blogPill">Guida</span>
+                  <span>·</span>
+                  <time datetime="2026-04-20">2026-04-20</time>
+                  <span>·</span>
+                  <span>8 min</span>
+                </div>
+                <h3 class="blogTitle">Perché fibra di carbonio e materiali premium contano nelle auto di lusso</h3>
+                <p class="blogExcerpt">Fibra di carbonio, alluminio, pelle e altri materiali premium cambiano il modo in cui una Ferrari si percepisce. Questo articolo spiega perché contano sulla Ferrari 458 Italia e perché l’auto Luxury Obsession a Zurigo si distingue.</p>
+              </div>
+              <div class="blogRead">Leggi <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="card blogCard" href="/it/ferrari-458-common-issues-zurich#top" aria-label="Problemi comuni Ferrari 458 Italia. Cosa controllare prima di guidarne una a Zurigo">
+            <img class="blogThumb" src="/media/ferrari-steering-v3-480.webp" alt="Problemi comuni Ferrari 458 Italia. Cosa controllare prima di guidarne una a Zurigo" loading="lazy" decoding="async">
+            <div class="blogCardInner">
+              <div>
+                <div class="blogMeta">
+                  <span class="blogPill">Guida</span>
+                  <span>·</span>
+                  <time datetime="2026-04-12">2026-04-12</time>
+                  <span>·</span>
+                  <span>8 min</span>
+                </div>
+                <h3 class="blogTitle">Problemi comuni Ferrari 458 Italia. Cosa controllare prima di guidarne una a Zurigo</h3>
+                <p class="blogExcerpt">Sticky buttons, pelle usurata, scricchiolii, sospensioni e invecchiamento estetico sono temi comuni sulla Ferrari 458. Ecco cosa controllare e perché la Ferrari 458 Italia di Luxury Obsession a Zurigo si distingue.</p>
+              </div>
+              <div class="blogRead">Leggi <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="card blogCard" href="/it/ferrari-rental-zurich-worth-it#top" aria-label="Noleggio Ferrari a Zurigo. Perché ne vale la pena se fatto nel modo giusto">
+            <img class="blogThumb" src="/media/ferrari-road-underpass-480.webp" alt="Noleggio Ferrari a Zurigo. Perché ne vale la pena se fatto nel modo giusto" loading="lazy" decoding="async">
+            <div class="blogCardInner">
+              <div>
+                <div class="blogMeta">
+                  <span class="blogPill">Guida</span>
+                  <span>·</span>
+                  <time datetime="2026-04-07">2026-04-07</time>
+                  <span>·</span>
+                  <span>8 min</span>
+                </div>
+                <h3 class="blogTitle">Noleggio Ferrari a Zurigo. Perché ne vale la pena se fatto nel modo giusto</h3>
+                <p class="blogExcerpt">Un noleggio Ferrari a Zurigo vale davvero la pena quando l’esperienza è pensata intorno alle strade giuste, al momento giusto e all’auto giusta. In Svizzera il valore nasce meno dalla velocità e più dalla sensazione che la guida ti lascia addosso.</p>
+              </div>
+              <div class="blogRead">Leggi <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="card blogCard" href="/it/ferrari-458-vs-lamborghini-huracan-zurich#top" aria-label="Ferrari 458 Italia vs Lamborghini Huracan a Zurigo">
+            <img class="blogThumb" src="/media/image02800.jpg" alt="Ferrari 458 Italia vs Lamborghini Huracan a Zurigo" loading="lazy" decoding="async">
+            <div class="blogCardInner">
+              <div>
+                <div class="blogMeta">
+                  <span class="blogPill">Confronto</span>
+                  <span>·</span>
+                  <time datetime="2026-03-28">2026-03-28</time>
+                  <span>·</span>
+                  <span>8 min</span>
+                </div>
+                <h3 class="blogTitle">Ferrari 458 Italia vs Lamborghini Huracan a Zurigo</h3>
+                <p class="blogExcerpt">Un confronto ragionato per Zurigo e le strade svizzere. La Huracan colpisce sulla carta, ma la 458 spesso risulta più leggera, più organica e più memorabile nell’arco di una vera giornata al volante.</p>
+              </div>
+              <div class="blogRead">Leggi <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="card blogCard" href="/it/ferrari-f430-vs-ferrari-458-italia#top" aria-label="Ferrari F430 vs Ferrari 458 Italia">
+            <img class="blogThumb" src="/media/image02700.jpg" alt="Ferrari F430 vs Ferrari 458 Italia" loading="lazy" decoding="async">
+            <div class="blogCardInner">
+              <div>
+                <div class="blogMeta">
+                  <span class="blogPill">Confronto</span>
+                  <span>·</span>
+                  <time datetime="2026-03-21">2026-03-21</time>
+                  <span>·</span>
+                  <span>8 min</span>
+                </div>
+                <h3 class="blogTitle">Ferrari F430 vs Ferrari 458 Italia</h3>
+                <p class="blogExcerpt">La F430 ha ancora un carattere autentico e merita rispetto. Questo confronto spiega perché la 458 sembri l’evoluzione più completa per chi vuole organizzare una giornata Ferrari a Zurigo o in Svizzera.</p>
+              </div>
+              <div class="blogRead">Leggi <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="card blogCard" href="/it/why-a-ferrari-458-italia-feels-different-in-switzerland#top" aria-label="Perché guidare una Ferrari 458 Italia in Svizzera è un’esperienza diversa">
+            <img class="blogThumb" src="/media/image00520.png" alt="Perché guidare una Ferrari 458 Italia in Svizzera è un’esperienza diversa" loading="lazy" decoding="async">
+            <div class="blogCardInner">
+              <div>
+                <div class="blogMeta">
+                  <span class="blogPill">Guida</span>
+                  <span>·</span>
+                  <time datetime="2026-03-13">2026-03-13</time>
+                  <span>·</span>
+                  <span>7 min</span>
+                </div>
+                <h3 class="blogTitle">Perché guidare una Ferrari 458 Italia in Svizzera è un’esperienza diversa</h3>
+                <p class="blogExcerpt">Aria fresca, passi alpini, gallerie e panorami permettono a una Ferrari aspirata di sentirsi più aperta, più sonora e più memorabile rispetto a climi molto caldi.</p>
+              </div>
+              <div class="blogRead">Leggi <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="card blogCard" href="/it/ferrari-458-italia-details-most-people-miss#top" aria-label="Dettagli della Ferrari 458 Italia che molti non notano">
+            <img class="blogThumb" src="/media/image01701.jpg" alt="Dettagli della Ferrari 458 Italia che molti non notano" loading="lazy" decoding="async">
+            <div class="blogCardInner">
+              <div>
+                <div class="blogMeta">
+                  <span class="blogPill">Guida</span>
+                  <span>·</span>
+                  <time datetime="2026-03-06">2026-03-06</time>
+                  <span>·</span>
+                  <span>7 min</span>
+                </div>
+                <h3 class="blogTitle">Dettagli della Ferrari 458 Italia che molti non notano</h3>
+                <p class="blogExcerpt">Pininfarina, Schumacher, Poltrona Frau e quei dettagli che aiutano a capire perché la Ferrari 458 Italia sembri ancora oggi un’icona moderna così completa.</p>
+              </div>
+              <div class="blogRead">Leggi <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="card blogCard" href="/it/ferrari_458_wedding_car_rental_zurich#top" aria-label="Ferrari 458 Italia noleggio matrimonio a Zurigo">
+            <img class="blogThumb" src="/pages/wedding_458_hero.png" alt="Ferrari 458 Italia noleggio matrimonio a Zurigo" loading="lazy" decoding="async">
+            <div class="blogCardInner">
+              <div>
+                <div class="blogMeta">
+                  <span class="blogPill">Esperienza</span>
+                  <span>·</span>
+                  <time datetime="2026-02-25">2026-02-25</time>
+                  <span>·</span>
+                  <span>3 min</span>
+                </div>
+                <h3 class="blogTitle">Ferrari 458 Italia noleggio matrimonio a Zurigo</h3>
+                <p class="blogExcerpt">Un&#x27;iconico motore V8 aspirato per il giorno del matrimonio. Design senza tempo, emozione vera, hosting discreto e termini chiari.</p>
+              </div>
+              <div class="blogRead">Leggi <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="card blogCard" href="/it/instagrammable_places_zurich_uster_part1#top" aria-label="Posti instagrammabili vicino a Zurigo e Uster, Parte 1">
+            <img class="blogThumb" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjkwMCIgdmlld0JveD0iMCAwIDE2MDAgOTAwIj4KPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMGIwYjBkIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNTE1MWEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxsaW5lYXJHcmFkaWVudCBpZD0iZ29sZCIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYjM4YTJlIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjAuNSIgc3RvcC1jb2xvcj0iI2U2Yzg2ZSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjYjM4YTJlIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI5MDAiIGZpbGw9InVybCgjYmcpIi8+CjxnIG9wYWNpdHk9IjAuMjUiPgogIDxjaXJjbGUgY3g9IjEyMjAiIGN5PSIyNTAiIHI9IjI2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dvbGQpIiBzdHJva2Utd2lkdGg9IjYiLz4KICA8Y2lyY2xlIGN4PSIxMjIwIiBjeT0iMjUwIiByPSIyMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkKSIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPGNpcmNsZSBjeD0iMTIyMCIgY3k9IjI1MCIgcj0iMTQwIiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZCkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L2c+Cgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMTAsMjMwKSI+CiAgPHBhdGggZD0iTTI2MCAxMTBjMC0yMiAxOC00MCA0MC00MGgxOTBsMzQtNDBoMTEyYzIyIDAgNDAgMTggNDAgNDB2NjBoNzBjMjIgMCA0MCAxOCA0MCA0MHYyOTBjMCAyMi0xOCA0MC00MCA0MEgxMTBjLTIyIDAtNDAtMTgtNDAtNDBWMTkwYzAtMjIgMTgtNDAgNDAtNDBoNzB6IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZCkiIHN0cm9rZS13aWR0aD0iMTAiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSI1MjAiIGN5PSIzNDAiIHI9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dvbGQpIiBzdHJva2Utd2lkdGg9IjEwIi8+CiAgPGNpcmNsZSBjeD0iNTIwIiBjeT0iMzQwIiByPSI1NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dvbGQpIiBzdHJva2Utd2lkdGg9IjgiIG9wYWNpdHk9IjAuNyIvPgogIDxwYXRoIGQ9Ik04NzAgMjIwYzQwIDAgNzIgMzIgNzIgNzIgMCA3NC03MiAxNjAtNzIgMTYwcy03Mi04Ni03Mi0xNjBjMC00MCAzMi03MiA3Mi03MnoiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkKSIgc3Ryb2tlLXdpZHRoPSIxMCIvPgogIDxjaXJjbGUgY3g9Ijg3MCIgY3k9IjI5MiIgcj0iMjIiIGZpbGw9InVybCgjZ29sZCkiLz4KPC9nPgoKPGcgZm9udC1mYW1pbHk9InN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgU2Vnb2UgVUksIFJvYm90bywgQXJpYWwiIHRleHQtYW5jaG9yPSJzdGFydCI+CiAgPHRleHQgeD0iMTIwIiB5PSIxMTAiIGZvbnQtc2l6ZT0iNTYiIGZpbGw9InVybCgjZ29sZCkiIGZvbnQtd2VpZ2h0PSI3MDAiPkluc3RhZ3JhbW1hYmxlIHBsYWNlczwvdGV4dD4KICA8dGV4dCB4PSIxMjAiIHk9IjE3MCIgZm9udC1zaXplPSIzNCIgZmlsbD0iI2U4ZThlZSIgb3BhY2l0eT0iMC45Ij5adXJpY2ggYXJlYSwgY2xvc2VyIHRvIFVzdGVyIOKAoiBQYXJ0IDE8L3RleHQ+CjwvZz4KPC9zdmc+" alt="Posti instagrammabili vicino a Zurigo e Uster, Parte 1" loading="lazy" decoding="async">
+            <div class="blogCardInner">
+              <div>
+                <div class="blogMeta">
+                  <span class="blogPill">Guida</span>
+                  <span>·</span>
+                  <time datetime="2026-02-21">2026-02-21</time>
+                  <span>·</span>
+                  <span>3 min</span>
+                </div>
+                <h3 class="blogTitle">Posti instagrammabili vicino a Zurigo e Uster, Parte 1</h3>
+                <p class="blogExcerpt">Cinque spot fotogenici vicino a Uster: castelli, passeggiate sul lago, vista campagna e la passerella in legno a Rapperswil. Con mappa e consigli semplici.</p>
+              </div>
+              <div class="blogRead">Leggi <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="card blogCard" href="/it/switzerland_supercar_rental_vs_italy_germany_france#top" aria-label="Perché noleggiare una supercar in Svizzera può essere più semplice e conveniente">
+            <img class="blogThumb" src="/media/458-engine-800.webp" alt="Perché noleggiare una supercar in Svizzera può essere più semplice e conveniente" loading="lazy" decoding="async">
+            <div class="blogCardInner">
+              <div>
+                <div class="blogMeta">
+                  <span class="blogPill">Guida</span>
+                  <span>·</span>
+                  <time datetime="2026-02-13">2026-02-13</time>
+                  <span>·</span>
+                  <span>8 min</span>
+                </div>
+                <h3 class="blogTitle">Perché noleggiare una supercar in Svizzera può essere più semplice e conveniente</h3>
+                <p class="blogExcerpt">Dal punto di vista del turista. Strade, regole, logistica e struttura dei costi che rendono la Svizzera un posto sorprendentemente efficiente per una giornata premium.</p>
+              </div>
+              <div class="blogRead">Leggi <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="card blogCard" href="/it/scenic_switzerland_drives_from_zurich#top" aria-label="Giri panoramici da Zurigo. Laghi, passi e percorsi perfetti in mezza giornata">
+            <img class="blogThumb" src="/media/image01900.jpg" alt="Giri panoramici da Zurigo. Laghi, passi e percorsi perfetti in mezza giornata" loading="lazy" decoding="async">
+            <div class="blogCardInner">
+              <div>
+                <div class="blogMeta">
+                  <span class="blogPill">Itinerari</span>
+                  <span>·</span>
+                  <time datetime="2026-02-06">2026-02-06</time>
+                  <span>·</span>
+                  <span>7 min</span>
+                </div>
+                <h3 class="blogTitle">Giri panoramici da Zurigo. Laghi, passi e percorsi perfetti in mezza giornata</h3>
+                <p class="blogExcerpt">Una selezione di itinerari per chi arriva in aereo a Zurigo, con tempi realistici, soste fotografiche e paesaggi senza fretta.</p>
+              </div>
+              <div class="blogRead">Leggi <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="card blogCard" href="/it/ferrari458vs488#top" aria-label="Ferrari 458 vs 488. Perché la 458 è quella che ricordi">
+            <img class="blogThumb" src="/media/image03000.png" alt="Ferrari 458 vs 488. Perché la 458 è quella che ricordi" loading="lazy" decoding="async">
+            <div class="blogCardInner">
+              <div>
+                <div class="blogMeta">
+                  <span class="blogPill">Confronto</span>
+                  <span>·</span>
+                  <time datetime="2026-01-30">2026-01-30</time>
+                  <span>·</span>
+                  <span>9 min</span>
+                </div>
+                <h3 class="blogTitle">Ferrari 458 vs 488. Perché la 458 è quella che ricordi</h3>
+                <p class="blogExcerpt">Ispirato a The Car Guys. La 488 è più nuova e leggermente più veloce, ma la 458 vince per suono, linearità e connessione reale su strada, perfetta in Svizzera.</p>
+              </div>
+              <div class="blogRead">Leggi <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="card blogCard" href="/it/ferrari_458_488_price_trends_switzerland#top" aria-label="Ferrari 458 e 488. Trend dei prezzi in Svizzera">
+            <img class="blogThumb" src="/media/image03100.jpg" alt="Ferrari 458 e 488. Trend dei prezzi in Svizzera" loading="lazy" decoding="async">
+            <div class="blogCardInner">
+              <div>
+                <div class="blogMeta">
+                  <span class="blogPill">Mercato</span>
+                  <span>·</span>
+                  <time datetime="2026-01-23">2026-01-23</time>
+                  <span>·</span>
+                  <span>8 min</span>
+                </div>
+                <h3 class="blogTitle">Ferrari 458 e 488. Trend dei prezzi in Svizzera</h3>
+                <p class="blogExcerpt">Snapshot del mercato svizzero con grafici per 458 Italia, 458 Spider, 488 GTB e 488 Spider, con focus su chilometraggi sensati e premio per il rosso di fabbrica.</p>
+              </div>
+              <div class="blogRead">Leggi <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="card blogCard" href="/it/owning_vs_renting_ferrari_switzerland#top" aria-label="Possedere o noleggiare. Ferrari a motore centrale in Svizzera">
+            <img class="blogThumb" src="/media/image03200.jpg" alt="Possedere o noleggiare. Ferrari a motore centrale in Svizzera" loading="lazy" decoding="async">
+            <div class="blogCardInner">
+              <div>
+                <div class="blogMeta">
+                  <span class="blogPill">Possesso</span>
+                  <span>·</span>
+                  <time datetime="2026-01-17">2026-01-17</time>
+                  <span>·</span>
+                  <span>10 min</span>
+                </div>
+                <h3 class="blogTitle">Possedere o noleggiare. Ferrari a motore centrale in Svizzera</h3>
+                <p class="blogExcerpt">Un modello costi svizzero per l’auto da weekend. Perché noleggiare un paio di volte al mese può battere il leasing quando includi assicurazione, tasse, tagliandi, gomme, MFK e imprevisti.</p>
+              </div>
+              <div class="blogRead">Leggi <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="card blogCard" href="/it/ferrari-458-italia-the-signature-experience-in-switzerland#top" aria-label="Ferrari 458 Italia. L’esperienza signature in Svizzera">
+            <img class="blogThumb" src="/media/image02500.jpg" alt="Ferrari 458 Italia. L’esperienza signature in Svizzera" loading="lazy" decoding="async">
+            <div class="blogCardInner">
+              <div>
+                <div class="blogMeta">
+                  <span class="blogPill">Esperienza</span>
+                  <span>·</span>
+                  <time datetime="2026-01-10">2026-01-10</time>
+                  <span>·</span>
+                  <span>6 min</span>
+                </div>
+                <h3 class="blogTitle">Ferrari 458 Italia. L’esperienza signature in Svizzera</h3>
+                <p class="blogExcerpt">Perché la 458 è ancora la Ferrari moderna più pura e come progettare una giornata perfetta.</p>
+              </div>
+              <div class="blogRead">Leggi <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="card blogCard" href="/it/swiss-routes-worth-driving-in-a-ferrari#top" aria-label="Itinerari svizzeri da fare in Ferrari">
+            <img class="blogThumb" src="/media/image00300.jpg" alt="Itinerari svizzeri da fare in Ferrari" loading="lazy" decoding="async">
+            <div class="blogCardInner">
+              <div>
+                <div class="blogMeta">
+                  <span class="blogPill">Itinerari</span>
+                  <span>·</span>
+                  <time datetime="2026-01-03">2026-01-03</time>
+                  <span>·</span>
+                  <span>7 min</span>
+                </div>
+                <h3 class="blogTitle">Itinerari svizzeri da fare in Ferrari</h3>
+                <p class="blogExcerpt">Da laghi a passi alpini. Una selezione con flow, panorama e curve perfette per la 458.</p>
+              </div>
+              <div class="blogRead">Leggi <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+          <a class="card blogCard" href="/it/transparent-rates-how-we-design-packages-that-make-sense#top" aria-label="Tariffe trasparenti. Come costruiamo pacchetti sensati">
+            <img class="blogThumb" src="/media/image00400.jpg" alt="Tariffe trasparenti. Come costruiamo pacchetti sensati" loading="lazy" decoding="async">
+            <div class="blogCardInner">
+              <div>
+                <div class="blogMeta">
+                  <span class="blogPill">Tariffe</span>
+                  <span>·</span>
+                  <time datetime="2025-12-27">2025-12-27</time>
+                  <span>·</span>
+                  <span>5 min</span>
+                </div>
+                <h3 class="blogTitle">Tariffe trasparenti. Come costruiamo pacchetti sensati</h3>
+                <p class="blogExcerpt">Perché le tariffe restano semplici, cosa includono e come scegliere senza sorprese.</p>
+              </div>
+              <div class="blogRead">Leggi <span aria-hidden="true">→</span></div>
+            </div>
+          </a>
+        </div>
+
+        <div class="blogCTA">
+          <a class="btn btnSecondary" id="ctaRates" href="/it/pricing">Vedi tariffe</a>
+          <a class="btn btnPrimary" id="ctaRequest" href="/it/#request">Richiedi disponibilità</a>
+        </div>
+
+        <p class="pricingNote" id="note">Nuovi articoli regolarmente. Se hai un itinerario in mente, lo ottimizziamo con tempi, soste e i chilometri giusti.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+<div class="container footerInner">
+<div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
+<div class="footerCenter" id="footerCenter">Currently available: Ferrari 458 Italia.</div>
+<div class="footerNap" style="flex-basis:100%;color:var(--muted);font-size:0.78rem">Luxury Obsession by Anna Loi · Nänikon 8606, Switzerland · <a href="mailto:info@luxuryobsession.ch">info@luxuryobsession.ch</a> · <a href="tel:+41765870458">+41 76 587 04 58</a></div>
+<div class="footerRight">
+<a href="/impressum" id="footerImpressum">Impressum</a>
+<a href="/datenschutz" id="footerPrivacy">Privacy</a>
+<a href="/agb" id="footerTerms">Terms</a>
+</div>
+</div>
+</footer>
+
+  <script>
+const I18N = {
+  en:{
+    navRates:"Rates", navGallery:"Gallery", navPhilosophy:"Our Philosophy", navExperiences:"Experiences", navBlog:"Journal", navContact:"Contact", navRequest:"Request",
+    eyebrow:"Journal",
+    heroTitleA:"Routes and notes", heroTitleB:"from Switzerland",
+    heroSubtitle:"A short journal on Ferrari routes, ownership grade details, and transparent terms. Written to help you plan a day where the car is the main event.",
+    ctaRates:"View rates", ctaRequest:"Request availability",
+    note:"New entries are added regularly. If you have a route in mind, we will refine it with timing, stops, and the right amount of kilometres.",
+    readLabel:"Read",
+    footerCenter:"Currently available: Ferrari 458 Italia.",
+    impressum:"Impressum",
+    searchLabel:"Search",
+    searchPlaceholder:"Search articles",
+    filterLabel:"Category",
+    filterAll:"All categories",
+    resultsLabel:"Showing {x} of {y}",
+    empty:"No entries match your search."
+  },
+  de:{
+    navRates:"Tarife", navGallery:"Galerie", navPhilosophy:"Unsere Philosophie", navExperiences:"Anlässe", navBlog:"Journal", navContact:"Kontakt", navRequest:"Anfrage",
+    eyebrow:"Journal",
+    heroTitleA:"Routen und Notizen", heroTitleB:"aus der Schweiz",
+    heroSubtitle:"Ein kurzes Journal über Ferrari Routen, Details wie beim Besitz, und transparente Konditionen. Geschrieben, um Ihren Tag so zu planen, dass das Auto im Mittelpunkt steht.",
+    ctaRates:"Tarife ansehen", ctaRequest:"Verfügbarkeit anfragen",
+    note:"Neue Einträge regelmässig. Wenn Sie eine Route im Kopf haben, verfeinern wir sie mit Timing, Stopps und der passenden Kilometerzahl.",
+    readLabel:"Lesen",
+    footerCenter:"Aktuell verfügbar: Ferrari 458 Italia.",
+    impressum:"Impressum",
+    searchLabel:"Suche",
+    searchPlaceholder:"Artikel suchen",
+    filterLabel:"Kategorie",
+    filterAll:"Alle Kategorien",
+    resultsLabel:"{x} von {y} angezeigt",
+    empty:"Keine Einträge passen zur Suche."
+  },
+  it:{
+    navRates:"Tariffe", navGallery:"Galleria", navPhilosophy:"La nostra filosofia", navExperiences:"Esperienze", navBlog:"Journal", navContact:"Contatti", navRequest:"Richiesta",
+    eyebrow:"Journal",
+    heroTitleA:"Itinerari e note", heroTitleB:"dalla Svizzera",
+    heroSubtitle:"Un journal breve su itinerari in Ferrari, dettagli da vero appassionato, e condizioni trasparenti. Scritto per aiutarti a progettare una giornata in cui l’auto è protagonista.",
+    ctaRates:"Vedi tariffe", ctaRequest:"Richiedi disponibilità",
+    note:"Nuovi articoli regolarmente. Se hai un itinerario in mente, lo ottimizziamo con tempi, soste e i chilometri giusti.",
+    readLabel:"Leggi",
+    footerCenter:"Disponibile ora: Ferrari 458 Italia.",
+    impressum:"Impressum",
+    searchLabel:"Cerca",
+    searchPlaceholder:"Cerca articoli",
+    filterLabel:"Categoria",
+    filterAll:"Tutte le categorie",
+    resultsLabel:"Mostrati {x} di {y}",
+    empty:"Nessun articolo corrisponde alla ricerca."
+  }
+};
+
+const ARTICLES = [
+
+{
+  slug: "carbon-fiber-luxury-cars-zurich.html",
+  category: {en:"Guide", de:"Guide", it:"Guida"},
+  date: "2026-04-20",
+  read: {en:"8 min", de:"8 min", it:"8 min"},
+  title: {
+    en:"Why Carbon Fiber and Premium Materials Matter in Luxury Cars",
+    de:"Warum Carbon und Premium Materialien in Luxusautos wichtig sind",
+    it:"Perché fibra di carbonio e materiali premium contano nelle auto di lusso"
+  },
+  excerpt: {
+    en:"Carbon fiber, aluminum, leather, and other premium materials shape how a Ferrari feels. This article explains why they matter on the Ferrari 458 Italia and why the Luxury Obsession car in Zurich stands apart.",
+    de:"Carbon, Aluminium, Leder und andere hochwertige Materialien prägen, wie sich ein Ferrari anfühlt. Dieser Artikel erklärt, warum sie beim Ferrari 458 Italia wichtig sind und warum sich das Luxury Obsession Fahrzeug in Zürich abhebt.",
+    it:"Fibra di carbonio, alluminio, pelle e altri materiali premium cambiano il modo in cui una Ferrari si percepisce. Questo articolo spiega perché contano sulla Ferrari 458 Italia e perché l’auto Luxury Obsession a Zurigo si distingue."
+  },
+  image: "/media/ferrari-interior-480.webp"
+},
+
+{
+  slug: "ferrari-458-common-issues-zurich.html",
+  category: {en:"Guide", de:"Guide", it:"Guida"},
+  date: "2026-04-12",
+  read: {en:"8 min", de:"8 min", it:"8 min"},
+  title: {
+    en:"Ferrari 458 Italia Common Issues. What to check before driving one in Zurich",
+    de:"Ferrari 458 Italia typische Probleme. Worauf man vor einer Fahrt in Zürich achten sollte",
+    it:"Problemi comuni Ferrari 458 Italia. Cosa controllare prima di guidarne una a Zurigo"
+  },
+  excerpt: {
+    en:"Sticky buttons, worn leather, rattles, suspension concerns, and cosmetic ageing are common Ferrari 458 topics. Here is what to look for and why the Luxury Obsession Ferrari 458 Italia in Zurich stands apart.",
+    de:"Sticky Buttons, abgenutztes Leder, Rasseln, Fahrwerksfragen und optische Alterung gehören zu bekannten Ferrari 458 Themen. Hier erfahren Sie, worauf Sie achten sollten und warum sich der Luxury Obsession Ferrari 458 Italia in Zürich abhebt.",
+    it:"Sticky buttons, pelle usurata, scricchiolii, sospensioni e invecchiamento estetico sono temi comuni sulla Ferrari 458. Ecco cosa controllare e perché la Ferrari 458 Italia di Luxury Obsession a Zurigo si distingue."
+  },
+  image: "/media/ferrari-steering-v3-480.webp"
+},
+
+{
+  slug: "ferrari-rental-zurich-worth-it.html",
+  category: {en:"Guide", de:"Guide", it:"Guida"},
+  date: "2026-04-07",
+  read: {en:"8 min", de:"8 min", it:"8 min"},
+  title: {
+    en:"Ferrari Rental in Zurich. Why it is worth it if you do it right",
+    de:"Ferrari mieten in Zürich. Warum es sich lohnt, wenn man es richtig macht",
+    it:"Noleggio Ferrari a Zurigo. Perché ne vale la pena se fatto nel modo giusto"
+  },
+  excerpt: {
+    en:"A Ferrari rental in Zurich is worth it when the experience is planned around the right roads, the right timing, and the right car. In Switzerland, the value comes less from speed and more from the feeling the drive leaves with you.",
+    de:"Ferrari mieten in Zürich lohnt sich dann, wenn das Erlebnis um die richtigen Strassen, das richtige Timing und das richtige Auto geplant ist. In der Schweiz entsteht der Wert weniger durch Tempo als durch das Gefühl, das die Fahrt hinterlässt.",
+    it:"Un noleggio Ferrari a Zurigo vale davvero la pena quando l’esperienza è pensata intorno alle strade giuste, al momento giusto e all’auto giusta. In Svizzera il valore nasce meno dalla velocità e più dalla sensazione che la guida ti lascia addosso."
+  },
+  image: "/media/ferrari-road-underpass-480.webp"
+},
+
+{
+  slug: "ferrari-458-vs-lamborghini-huracan-zurich.html",
+  category: {en:"Comparison", de:"Vergleich", it:"Confronto"},
+  date: "2026-03-28",
+  read: {en:"8 min", de:"8 min", it:"8 min"},
+  title: {
+    en:"Ferrari 458 Italia vs Lamborghini Huracan in Zurich",
+    de:"Ferrari 458 Italia vs Lamborghini Huracan in Zürich",
+    it:"Ferrari 458 Italia vs Lamborghini Huracan a Zurigo"
+  },
+  excerpt: {
+    en:"A measured comparison for Zurich and Swiss roads. The Huracan is dramatic on paper, but the 458 often feels lighter, more organic, and more memorable over a real day behind the wheel.",
+    de:"Ein ausgewogener Vergleich für Zürich und Schweizer Strassen. Der Huracan wirkt auf dem Papier dramatisch, doch der 458 fühlt sich über einen echten Fahrtag oft leichter, organischer und nachhaltiger an.",
+    it:"Un confronto ragionato per Zurigo e le strade svizzere. La Huracan colpisce sulla carta, ma la 458 spesso risulta più leggera, più organica e più memorabile nell’arco di una vera giornata al volante."
+  },
+  image: "/media/image02800.jpg"
+},
+{
+  slug: "ferrari-f430-vs-ferrari-458-italia.html",
+  category: {en:"Comparison", de:"Vergleich", it:"Confronto"},
+  date: "2026-03-21",
+  read: {en:"8 min", de:"8 min", it:"8 min"},
+  title: {
+    en:"Ferrari F430 vs Ferrari 458 Italia",
+    de:"Ferrari F430 vs Ferrari 458 Italia",
+    it:"Ferrari F430 vs Ferrari 458 Italia"
+  },
+  excerpt: {
+    en:"The F430 still has real character and deserves respect. This comparison explains why the 458 feels like the more complete evolution for drivers planning a Ferrari day in Zurich or across Switzerland.",
+    de:"Der F430 hat weiterhin echten Charakter und verdient Respekt. Dieser Vergleich zeigt, warum sich der 458 für Fahrer, die in Zürich oder der Schweiz einen Ferrari Tag planen, wie die vollständigere Evolution anfühlt.",
+    it:"La F430 ha ancora un carattere autentico e merita rispetto. Questo confronto spiega perché la 458 sembri l’evoluzione più completa per chi vuole organizzare una giornata Ferrari a Zurigo o in Svizzera."
+  },
+  image: "/media/image02700.jpg"
+},
+  {
+    slug: "why-a-ferrari-458-italia-feels-different-in-switzerland.html",
+    category: {en:"Guide", de:"Guide", it:"Guida"},
+    date: "2026-03-13",
+    read: {en:"7 min", de:"7 min", it:"7 min"},
+    title: {
+      en:"Why a Ferrari 458 Italia feels different in Switzerland",
+      de:"Warum sich ein Ferrari 458 Italia in der Schweiz anders anfühlt",
+      it:"Perché guidare una Ferrari 458 Italia in Svizzera è un’esperienza diversa"
+    },
+    excerpt: {
+      en:"Cool air, mountain passes, tunnels, and alpine views let a naturally aspirated Ferrari feel more open, more audible, and more memorable than in very hot climates.",
+      de:"Kühle Luft, Alpenpässe, Tunnel und Ausblicke lassen einen frei saugenden Ferrari offener, hörbarer und eindrucksvoller wirken als in sehr heißen Klimazonen.",
+      it:"Aria fresca, passi alpini, gallerie e panorami permettono a una Ferrari aspirata di sentirsi più aperta, più sonora e più memorabile rispetto a climi molto caldi."
+    },
+    image: "/media/image00520.png"
+  },
+  {
+    slug: "ferrari-458-italia-details-most-people-miss.html",
+    category: {en:"Guide", de:"Guide", it:"Guida"},
+    date: "2026-03-06",
+    read: {en:"7 min", de:"7 min", it:"7 min"},
+    title: {
+      en:"Ferrari 458 Italia details most people miss",
+      de:"Ferrari 458 Italia Details, die viele übersehen",
+      it:"Dettagli della Ferrari 458 Italia che molti non notano"
+    },
+    excerpt: {
+      en:"Pininfarina, Schumacher, Poltrona Frau, and the small details that help explain why the Ferrari 458 Italia still feels like such a complete modern icon.",
+      de:"Pininfarina, Schumacher, Poltrona Frau und die kleinen Details, die erklären, warum sich der Ferrari 458 Italia bis heute wie eine vollständige moderne Ikone anfühlt.",
+      it:"Pininfarina, Schumacher, Poltrona Frau e quei dettagli che aiutano a capire perché la Ferrari 458 Italia sembri ancora oggi un’icona moderna così completa."
+    },
+    image: "/media/image01701.jpg"
+  },
+  {
+    slug: "ferrari_458_wedding_car_rental_zurich.html",
+    category: {en:"Experience", de:"Erlebnis", it:"Esperienza"},
+    date: "2026-02-25",
+    read: {en:"3 min", de:"3 min", it:"3 min"},
+    title: {
+      en:"Ferrari 458 Italia wedding car rental in Zurich",
+      de:"Ferrari 458 Italia Hochzeitsauto mieten Zürich",
+      it:"Ferrari 458 Italia noleggio matrimonio a Zurigo"
+    },
+    excerpt: {
+      en:"A naturally aspirated V8 icon for your wedding day. Timeless design, real emotion, and a calm hosted experience with clear terms.",
+      de:"Eine Saugmotor V8 Ikone für den Hochzeitstag. Zeitloses Design, echte Emotion, und ruhiges Hosting mit klaren Bedingungen.",
+      it:"Un'iconico motore V8 aspirato per il giorno del matrimonio. Design senza tempo, emozione vera, hosting discreto e termini chiari."
+    },
+    image: "/pages/wedding_458_hero.png"
+  },
+  {
+    slug: "instagrammable_places_zurich_uster_part1.html",
+    category: {en:"Guide", de:"Guide", it:"Guida"},
+    date: "2026-02-21",
+    read: {en:"3 min", de:"3 min", it:"3 min"},
+    title: {
+      en:"Instagrammable places around Zurich and Uster, Part 1",
+      de:"Instagrammable Orte rund um Zürich und Uster, Teil 1",
+      it:"Posti instagrammabili vicino a Zurigo e Uster, Parte 1"
+    },
+    excerpt: {
+      en:"Five photogenic spots close to Uster: castles, lake promenades, farm views, and the wooden bridge in Rapperswil. Includes a map and easy shooting tips.",
+      de:"Fünf fotogene Spots nahe Uster: Schloss, Seeufer, Hofblick und die Holzbrücke in Rapperswil. Mit Karte und einfachen Foto Tipps.",
+      it:"Cinque spot fotogenici vicino a Uster: castelli, passeggiate sul lago, vista campagna e la passerella in legno a Rapperswil. Con mappa e consigli semplici."
+    },
+    image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjkwMCIgdmlld0JveD0iMCAwIDE2MDAgOTAwIj4KPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMGIwYjBkIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNTE1MWEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxsaW5lYXJHcmFkaWVudCBpZD0iZ29sZCIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYjM4YTJlIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjAuNSIgc3RvcC1jb2xvcj0iI2U2Yzg2ZSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjYjM4YTJlIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI5MDAiIGZpbGw9InVybCgjYmcpIi8+CjxnIG9wYWNpdHk9IjAuMjUiPgogIDxjaXJjbGUgY3g9IjEyMjAiIGN5PSIyNTAiIHI9IjI2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dvbGQpIiBzdHJva2Utd2lkdGg9IjYiLz4KICA8Y2lyY2xlIGN4PSIxMjIwIiBjeT0iMjUwIiByPSIyMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkKSIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPGNpcmNsZSBjeD0iMTIyMCIgY3k9IjI1MCIgcj0iMTQwIiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZCkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L2c+Cgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMTAsMjMwKSI+CiAgPHBhdGggZD0iTTI2MCAxMTBjMC0yMiAxOC00MCA0MC00MGgxOTBsMzQtNDBoMTEyYzIyIDAgNDAgMTggNDAgNDB2NjBoNzBjMjIgMCA0MCAxOCA0MCA0MHYyOTBjMCAyMi0xOCA0MC00MCA0MEgxMTBjLTIyIDAtNDAtMTgtNDAtNDBWMTkwYzAtMjIgMTgtNDAgNDAtNDBoNzB6IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZCkiIHN0cm9rZS13aWR0aD0iMTAiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSI1MjAiIGN5PSIzNDAiIHI9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dvbGQpIiBzdHJva2Utd2lkdGg9IjEwIi8+CiAgPGNpcmNsZSBjeD0iNTIwIiBjeT0iMzQwIiByPSI1NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dvbGQpIiBzdHJva2Utd2lkdGg9IjgiIG9wYWNpdHk9IjAuNyIvPgogIDxwYXRoIGQ9Ik04NzAgMjIwYzQwIDAgNzIgMzIgNzIgNzIgMCA3NC03MiAxNjAtNzIgMTYwcy03Mi04Ni03Mi0xNjBjMC00MCAzMi03MiA3Mi03MnoiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkKSIgc3Ryb2tlLXdpZHRoPSIxMCIvPgogIDxjaXJjbGUgY3g9Ijg3MCIgY3k9IjI5MiIgcj0iMjIiIGZpbGw9InVybCgjZ29sZCkiLz4KPC9nPgoKPGcgZm9udC1mYW1pbHk9InN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgU2Vnb2UgVUksIFJvYm90bywgQXJpYWwiIHRleHQtYW5jaG9yPSJzdGFydCI+CiAgPHRleHQgeD0iMTIwIiB5PSIxMTAiIGZvbnQtc2l6ZT0iNTYiIGZpbGw9InVybCgjZ29sZCkiIGZvbnQtd2VpZ2h0PSI3MDAiPkluc3RhZ3JhbW1hYmxlIHBsYWNlczwvdGV4dD4KICA8dGV4dCB4PSIxMjAiIHk9IjE3MCIgZm9udC1zaXplPSIzNCIgZmlsbD0iI2U4ZThlZSIgb3BhY2l0eT0iMC45Ij5adXJpY2ggYXJlYSwgY2xvc2VyIHRvIFVzdGVyIOKAoiBQYXJ0IDE8L3RleHQ+CjwvZz4KPC9zdmc+"
+  },
+  {
+    slug: "switzerland_supercar_rental_vs_italy_germany_france.html",
+    category: {en:"Guide", de:"Guide", it:"Guida"},
+    date: "2026-02-13",
+    read: {en:"8 min", de:"8 min", it:"8 min"},
+    title: {
+      en:"Why renting a supercar can feel easier and better value in Switzerland",
+      de:"Warum Supercar Miete in der Schweiz oft einfacher und preislich attraktiver wirkt",
+      it:"Perché noleggiare una supercar in Svizzera può essere più semplice e conveniente"
+    },
+    excerpt: {
+      en:"A tourist’s perspective on roads, rules, logistics, and the cost structure that can make Switzerland a surprisingly efficient place for a premium driving day.",
+      de:"Aus Touristensicht. Strassen, Regeln, Logistik und Kostenstruktur, die die Schweiz zu einem erstaunlich effizienten Ort für einen Premium Fahrtag machen.",
+      it:"Dal punto di vista del turista. Strade, regole, logistica e struttura dei costi che rendono la Svizzera un posto sorprendentemente efficiente per una giornata premium."
+    },
+    image: "/media/458-engine-800.webp"
+  },
+  {
+    slug: "scenic_switzerland_drives_from_zurich.html",
+    category: {en:"Routes", de:"Routen", it:"Itinerari"},
+    date: "2026-02-06",
+    read: {en:"7 min", de:"7 min", it:"7 min"},
+    title: {
+      en:"Scenic Switzerland drives from Zurich. Lakes, passes, and perfect half day loops",
+      de:"Panorama Fahrten ab Zürich. Seen, Pässe und perfekte Halbtages Runden",
+      it:"Giri panoramici da Zurigo. Laghi, passi e percorsi perfetti in mezza giornata"
+    },
+    excerpt: {
+      en:"A shortlist of routes that work well for visitors flying into Zurich, with realistic timings, photo stops, and scenery that never feels rushed.",
+      de:"Eine Auswahl an Routen für Gäste, die nach Zürich fliegen, mit realistischen Zeiten, Fotostopps und Panorama ohne Stress.",
+      it:"Una selezione di itinerari per chi arriva in aereo a Zurigo, con tempi realistici, soste fotografiche e paesaggi senza fretta."
+    },
+    image: "/media/image01900.jpg"
+  },
+
+  {
+    slug: "ferrari458vs488.html",
+    category: {en:"Comparison", de:"Vergleich", it:"Confronto"},
+    date: "2026-01-30",
+    read: {en:"9 min", de:"9 min", it:"9 min"},
+    title: {
+      en:"Ferrari 458 vs 488. Why the 458 is the one you remember",
+      de:"Ferrari 458 vs 488. Warum der 458 im Kopf bleibt",
+      it:"Ferrari 458 vs 488. Perché la 458 è quella che ricordi"
+    },
+    excerpt: {
+      en:"Inspired by The Car Guys. The 488 is newer and faster, but the 458 wins on sound, linearity, and real road connection, especially on Swiss routes.",
+      de:"Inspiriert von The Car Guys. Der 488 ist neuer und schneller, doch der 458 gewinnt mit Sound, Linearität und echter Verbindung zur Strasse, perfekt für die Schweiz.",
+      it:"Ispirato a The Car Guys. La 488 è più nuova e leggermente più veloce, ma la 458 vince per suono, linearità e connessione reale su strada, perfetta in Svizzera."
+    },
+    image: "/media/image03000.png"
+  },
+  {
+    slug: "ferrari_458_488_price_trends_switzerland.html",
+    category: {en:"Market", de:"Markt", it:"Mercato"},
+    date: "2026-01-23",
+    read: {en:"8 min", de:"8 min", it:"8 min"},
+    title: {
+      en:"Ferrari 458 and 488 price trends in Switzerland",
+      de:"Ferrari 458 und 488. Preisentwicklung in der Schweiz",
+      it:"Ferrari 458 e 488. Trend dei prezzi in Svizzera"
+    },
+    excerpt: {
+      en:"A Swiss market snapshot with charts for 458 Italia, 458 Spider, 488 GTB and 488 Spider, focusing on reasonable mileage and the premium for factory red.",
+      de:"Markt Snapshot mit Charts für 458 Italia, 458 Spider, 488 GTB und 488 Spider, mit Fokus auf vernünftige Kilometer und den Aufpreis für Werksrot.",
+      it:"Snapshot del mercato svizzero con grafici per 458 Italia, 458 Spider, 488 GTB e 488 Spider, con focus su chilometraggi sensati e premio per il rosso di fabbrica."
+    },
+    image: "/media/image03100.jpg"
+  },
+  {
+    slug: "owning_vs_renting_ferrari_switzerland.html",
+    category: {en:"Ownership", de:"Besitz", it:"Possesso"},
+    date: "2026-01-17",
+    read: {en:"10 min", de:"10 min", it:"10 min"},
+    title: {
+      en:"Owning vs renting a midengine Ferrari in Switzerland",
+      de:"Besitz vs Miete. Mittelmotor Ferrari in der Schweiz",
+      it:"Possedere o noleggiare. Ferrari a motore centrale in Svizzera"
+    },
+    excerpt: {
+      en:"A Swiss weekend car cost model. Why renting a few times per month can beat leased ownership once you include insurance, tax, service, tyres, MFK, and surprise repairs.",
+      de:"Ein Schweizer Kostenmodell fürs Wochenende. Warum Mieten ein paar Mal pro Monat Leasing Besitz schlagen kann, sobald Versicherung, Steuer, Service, Reifen, MFK und Reparaturen zählen.",
+      it:"Un modello costi svizzero per l’auto da weekend. Perché noleggiare un paio di volte al mese può battere il leasing quando includi assicurazione, tasse, tagliandi, gomme, MFK e imprevisti."
+    },
+    image: "/media/image03200.jpg"
+  },
+  {
+    slug: "ferrari-458-italia-the-signature-experience-in-switzerland.html",
+    category: {en:"Experience", de:"Erlebnis", it:"Esperienza"},
+    date: "2026-01-10",
+    read: {en:"6 min", de:"6 min", it:"6 min"},
+    title: {
+      en:"Ferrari 458 Italia. The signature experience in Switzerland",
+      de:"Ferrari 458 Italia. Das Signature Erlebnis in der Schweiz",
+      it:"Ferrari 458 Italia. L’esperienza signature in Svizzera"
+    },
+    excerpt: {
+      en:"Why the 458 still feels like the purest modern Ferrari, and how to plan a day where the car is the main event.",
+      de:"Warum der 458 sich wie der reinste moderne Ferrari anfühlt und wie man den perfekten Tag plant.",
+      it:"Perché la 458 è ancora la Ferrari moderna più pura e come progettare una giornata perfetta."
+    },
+    image: "/media/image02500.jpg"
+  },
+  {
+    slug: "swiss-routes-worth-driving-in-a-ferrari.html",
+    category: {en:"Routes", de:"Routen", it:"Itinerari"},
+    date: "2026-01-03",
+    read: {en:"7 min", de:"7 min", it:"7 min"},
+    title: {
+      en:"Swiss routes worth driving in a Ferrari",
+      de:"Schweizer Routen, die sich im Ferrari lohnen",
+      it:"Itinerari svizzeri da fare in Ferrari"
+    },
+    excerpt: {
+      en:"From lake roads to alpine passes. A shortlist that balances scenery, flow, and the kind of corners the 458 loves.",
+      de:"Von Seen bis Pässen. Eine Auswahl mit Flow, Aussicht und Kurven, die der 458 liebt.",
+      it:"Da laghi a passi alpini. Una selezione con flow, panorama e curve perfette per la 458."
+    },
+    image: "/media/image00300.jpg"
+  },
+  {
+    slug: "transparent-rates-how-we-design-packages-that-make-sense.html",
+    category: {en:"Rates", de:"Tarife", it:"Tariffe"},
+    date: "2025-12-27",
+    read: {en:"5 min", de:"5 min", it:"5 min"},
+    title: {
+      en:"Transparent rates. How we design packages that make sense",
+      de:"Transparente Tarife. So designen wir Pakete die Sinn machen",
+      it:"Tariffe trasparenti. Come costruiamo pacchetti sensati"
+    },
+    excerpt: {
+      en:"Why our rates stay simple, what is included, and how to choose between limited kilometres and unlimited without surprises.",
+      de:"Warum unsere Tarife einfach bleiben, was inklusive ist, und wie man ohne Überraschungen wählt.",
+      it:"Perché le tariffe restano semplici, cosa includono e come scegliere senza sorprese."
+    },
+    image: "/media/image00400.jpg"
+  }
+];
+
+
+const STATE = { q:"", cat:"" };
+
+function getCatLabel(a, lang){
+  return (a.category && (a.category[lang] || a.category.en)) || "";
+}
+
+function matchesArticle(a, lang, q, cat){
+  const c = getCatLabel(a, lang);
+  if(cat && c !== cat) return false;
+  if(!q) return true;
+
+  const title = (a.title && (a.title[lang] || a.title.en)) || "";
+  const excerpt = (a.excerpt && (a.excerpt[lang] || a.excerpt.en)) || "";
+  const hay = (title + " " + excerpt + " " + c).toLowerCase();
+
+  return hay.indexOf(q) !== -1;
+}
+
+function setResults(shown, total, lang){
+  const t = I18N[lang] || I18N.en;
+  const el = document.getElementById("blogResults");
+  if(!el) return;
+  const tpl = t.resultsLabel || "";
+  el.textContent = tpl.replace("{x}", String(shown)).replace("{y}", String(total));
+}
+
+function initControls(lang){
+  const t = I18N[lang] || I18N.en;
+
+  const search = document.getElementById("blogSearch");
+  if(search){
+    search.placeholder = t.searchPlaceholder || "";
+    search.setAttribute("aria-label", t.searchLabel || "");
+    search.value = STATE.q || "";
+    search.addEventListener("input", () => {
+      STATE.q = search.value || "";
+      renderArticles(lang);
+    });
+  }
+
+  const catSel = document.getElementById("blogCategory");
+  if(catSel){
+    const cats = [];
+    const seen = new Set();
+    ARTICLES.forEach(a => {
+      const c = getCatLabel(a, lang);
+      if(c && !seen.has(c)){
+        seen.add(c);
+        cats.push(c);
+      }
+    });
+
+    catSel.innerHTML = "";
+    const optAll = document.createElement("option");
+    optAll.value = "";
+    optAll.textContent = t.filterAll || "";
+    catSel.appendChild(optAll);
+
+    cats.forEach(c => {
+      const opt = document.createElement("option");
+      opt.value = c;
+      opt.textContent = c;
+      catSel.appendChild(opt);
+    });
+
+    catSel.value = STATE.cat || "";
+    catSel.setAttribute("aria-label", t.filterLabel || "");
+    catSel.addEventListener("change", () => {
+      STATE.cat = catSel.value || "";
+      renderArticles(lang);
+    });
+  }
+
+  const lblSearch = document.getElementById("blogSearchLabel");
+  if(lblSearch) lblSearch.textContent = t.searchLabel || "";
+
+  const lblFilter = document.getElementById("blogFilterLabel");
+  if(lblFilter) lblFilter.textContent = t.filterLabel || "";
+}
+
+function fmtDate(iso, lang){
+  try{
+    const d = new Date(iso + "T00:00:00");
+    const locale = ({en:"en-GB",de:"de-CH",it:"it-CH"})[lang] || "en-GB";
+    return d.toLocaleDateString(locale, { year:"numeric", month:"short", day:"2-digit" });
+  }catch(e){
+    return iso;
+  }
+}
+
+function renderArticles(lang){
+  const grid = document.getElementById("blogGrid");
+  grid.innerHTML = "";
+  const t = I18N[lang] || I18N.en;
+  const isMobile = window.matchMedia && window.matchMedia("(max-width: 760px)").matches;
+
+  const q = (STATE.q || "").trim().toLowerCase();
+  const catFilter = STATE.cat || "";
+  const filtered = ARTICLES.filter(a => matchesArticle(a, lang, q, catFilter));
+  setResults(filtered.length, ARTICLES.length, lang);
+
+  if(!filtered.length){
+    grid.innerHTML = `<div class="card" style="padding:1.2rem;opacity:0.86">${t.empty || ""}</div>`;
+    return;
+  }
+
+  filtered.forEach(a => {
+    const card = document.createElement("a");
+    const cleanSlug = String(a.slug || "").replace(/\.html$/i, "");
+    const articlePrefix = lang === "de" ? "/de/" : (lang === "it" ? "/it/" : "/en/");
+    card.href = articlePrefix + cleanSlug + "#top";
+
+    const title = (a.title && (a.title[lang] || a.title.en)) || "";
+    const excerpt = (a.excerpt && (a.excerpt[lang] || a.excerpt.en)) || "";
+    const cat = (a.category && (a.category[lang] || a.category.en)) || "";
+    const read = (a.read && (a.read[lang] || a.read.en)) || "";
+    const date = fmtDate(a.date, lang);
+
+    card.setAttribute("aria-label", title || "Article");
+
+    if(isMobile){
+      card.className = "card blogCardM";
+      card.innerHTML = `
+        <div class="blogThumbWrapM">
+          <img src="${a.image}" alt="${title.replace(/"/g, "&quot;")}" loading="lazy" decoding="async">
+        </div>
+        <div class="blogTopM">
+          <div class="blogMetaM">
+            <span class="blogPill">${cat}</span>
+            <span class="metaSepM">·</span>
+            <span>${date}</span>
+            <span class="metaSepM">·</span>
+            <span>${read}</span>
+          </div>
+          <h3 class="blogTitleM">${title}</h3>
+        </div>
+        <div class="blogBottomM">
+          <p class="blogExcerptM">${excerpt}</p>
+          <div class="blogReadM">${t.readLabel} <span aria-hidden="true">→</span></div>
+        </div>
+      `;
+    }else{
+      card.className = "card blogCard";
+      card.innerHTML = `
+        <img class="blogThumb" src="${a.image}" alt="${title.replace(/"/g, "&quot;")}" loading="lazy" decoding="async">
+        <div class="blogCardInner">
+          <div>
+            <div class="blogMeta">
+              <span class="blogPill">${cat}</span>
+              <span>·</span>
+              <span>${date}</span>
+              <span>·</span>
+              <span>${read}</span>
+            </div>
+            <h3 class="blogTitle">${title}</h3>
+            <p class="blogExcerpt">${excerpt}</p>
+          </div>
+          <div class="blogRead">${t.readLabel} <span>→</span></div>
+        </div>
+      `;
+    }
+
+    grid.appendChild(card);
+
+  });
+  if(isMobile) tuneMobileCards();
+}
+
+function tuneMobileCards(){
+  const cards = document.querySelectorAll("a.blogCardM");
+  if(!cards.length) return;
+
+  window.requestAnimationFrame(() => {
+    cards.forEach(card => {
+      const titleEl = card.querySelector(".blogTitleM");
+      const exEl = card.querySelector(".blogExcerptM");
+      if(!titleEl || !exEl) return;
+
+      // default excerpt lines on mobile
+      exEl.style.display = "";
+      exEl.style.setProperty("-webkit-line-clamp", "3");
+
+      const cs = window.getComputedStyle(titleEl);
+      const lh = parseFloat(cs.lineHeight) || 18;
+      const lines = Math.round(titleEl.getBoundingClientRect().height / lh);
+
+      // If title needs more space, let it borrow from the summary
+      if(lines >= 4){
+        exEl.style.display = "none";
+      }else if(lines >= 3){
+        exEl.style.setProperty("-webkit-line-clamp", "2");
+      }
+    });
+  });
+}
+
+function init(){
+  const lang = window.__LO__.getLang();
+  document.documentElement.lang = lang;
+  window.__LO__.initLangMenu(lang);
+  window.__LO__.initHamburger();
+
+  const t = I18N[lang] || I18N.en;
+
+  const setText = (id, txt) => { const el = document.getElementById(id); if(el) el.textContent = txt; };
+  const setHref = (id, href) => { const el = document.getElementById(id); if(el) el.setAttribute("href", href); };
+
+  setText("navRates", t.navRates);
+  setText("navGallery", t.navGallery);
+  setText("navPhilosophy", t.navPhilosophy);
+  setText("navExperiences", t.navExperiences);
+  setText("navBlog", t.navBlog);
+  setText("navContact", t.navContact);
+  setText("navRequest", t.navRequest);
+
+  setHref("navRates", window.__LO__.buildUrl("pricing.html", lang, "top"));
+  setHref("navGallery", window.__LO__.buildUrl("pricing.html", lang, "galleryTitle"));
+  setHref("navPhilosophy", window.__LO__.buildUrl("../philosophy.html", lang, "top"));
+  setHref("navExperiences", window.__LO__.buildUrl("../experiences.html", lang, "top"));
+  setHref("navBlog", window.__LO__.buildUrl("blog.html", lang, "top"));
+  setHref("navContact", window.__LO__.buildUrl("../index.html", lang, "contact"));
+  setHref("navRequest", window.__LO__.buildUrl("../index.html", lang, "request"));
+
+  const setMobileText = (id, txt) => {
+    const el = document.getElementById(id);
+    if(!el) return;
+    const first = el.childNodes && el.childNodes[0];
+    if(first) first.nodeValue = txt;
+    else el.textContent = txt;
+  };
+
+  setMobileText("mRates", t.navRates);
+  setMobileText("mGallery", t.navGallery);
+  setMobileText("mPhilosophy", t.navPhilosophy);
+  setMobileText("mExperiences", t.navExperiences);
+  setMobileText("mBlog", t.navBlog);
+  setMobileText("mContact", t.navContact);
+  setMobileText("mImpressum", t.impressum);
+  setText("mRequest", t.navRequest);
+
+  setHref("mRates", window.__LO__.buildUrl("pricing.html", lang, "top"));
+  setHref("mGallery", window.__LO__.buildUrl("pricing.html", lang, "galleryTitle"));
+  setHref("mPhilosophy", window.__LO__.buildUrl("../philosophy.html", lang, "top"));
+  setHref("mExperiences", window.__LO__.buildUrl("../experiences.html", lang, "top"));
+  setHref("mBlog", window.__LO__.buildUrl("blog.html", lang, "top"));
+  setHref("mContact", window.__LO__.buildUrl("../index.html", lang, "contact"));
+  setHref("mImpressum", window.__LO__.buildUrl("../impressum.html", lang, "top"));
+  setHref("mRequest", window.__LO__.buildUrl("../index.html", lang, "request"));
+
+  document.getElementById("eyebrow").textContent = t.eyebrow;
+  document.getElementById("heroTitleA").textContent = t.heroTitleA;
+  document.getElementById("heroTitleB").textContent = t.heroTitleB;
+  document.getElementById("heroSubtitle").textContent = t.heroSubtitle;
+
+  document.getElementById("ctaRates").textContent = t.ctaRates;
+  document.getElementById("ctaRates").href = window.__LO__.buildUrl("pricing.html", lang, "top");
+  document.getElementById("ctaRequest").textContent = t.ctaRequest;
+  document.getElementById("ctaRequest").href = window.__LO__.buildUrl("../index.html", lang, "request");
+
+  document.getElementById("note").textContent = t.note;
+
+  const footerCenterEl = document.getElementById("footerCenter"); if(footerCenterEl) footerCenterEl.textContent = t.footerCenter;
+  const footerImpEl = document.getElementById("footerImpressum"); if(footerImpEl) footerImpEl.textContent = t.impressum;
+  if(footerImpEl) footerImpEl.href = window.__LO__.buildUrl("../impressum.html", lang, "top");
+
+  initControls(lang);
+
+  renderArticles(lang);
+
+  const mql = window.matchMedia ? window.matchMedia("(max-width: 760px)") : null;
+  if(mql){
+    const rerender = () => renderArticles(lang);
+    if(mql.addEventListener) mql.addEventListener("change", rerender);
+    else if(mql.addListener) mql.addListener(rerender);
+  }
+
+  document.getElementById("year").textContent = String(new Date().getFullYear());
+}
+
+document.addEventListener("DOMContentLoaded", init);
+  </script>
+</body>
+</html>

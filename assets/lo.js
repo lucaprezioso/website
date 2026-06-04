@@ -6,6 +6,73 @@
 
   const LANGS = ["en","de","it"];
 
+  const LO_SLUG_MAP = {
+    en: {
+      "": "", "pricing": "pricing", "blog": "journal", "journal": "journal", "experiences": "experiences", "philosophy": "philosophy", "locations": "locations",
+      "impressum": "impressum", "datenschutz": "datenschutz", "agb": "agb",
+      "ferrari-rental-zurich": "ferrari-rental-zurich", "ferrari-rental-zurich-airport": "ferrari-rental-zurich-airport", "ferrari-rental-lucerne": "ferrari-rental-lucerne", "ferrari-rental-bern": "ferrari-rental-bern", "ferrari-rental-winterthur": "ferrari-rental-winterthur", "ferrari-rental-zug": "ferrari-rental-zug", "ferrari-rental-st-gallen": "ferrari-rental-st-gallen", "ferrari-rental-basel": "ferrari-rental-basel", "ferrari-rental-chur": "ferrari-rental-chur", "ferrari-rental-davos": "ferrari-rental-davos", "ferrari-rental-andermatt": "ferrari-rental-andermatt", "ferrari-rental-aargau": "ferrari-rental-aargau", "ferrari-rental-solothurn": "ferrari-rental-solothurn", "ferrari-rental-biel": "ferrari-rental-biel", "ferrari-rental-naenikon": "ferrari-rental-naenikon"
+    },
+    de: {
+      "": "", "pricing": "preise", "blog": "journal", "journal": "journal", "experiences": "erlebnisse", "philosophy": "philosophie", "locations": "standorte",
+      "impressum": "impressum", "datenschutz": "datenschutz", "agb": "agb",
+      "ferrari-rental-zurich": "ferrari458-mieten-zuerich",
+      "ferrari-mieten-zuerich": "ferrari-mieten-zuerich",
+      "ferrari-rental-zurich-airport": "ferrari-mieten-zuerich-flughafen",
+      "ferrari-rental-lucerne": "ferrari-mieten-luzern",
+      "ferrari-rental-bern": "ferrari-mieten-bern",
+      "ferrari-rental-winterthur": "ferrari-mieten-winterthur",
+      "ferrari-rental-zug": "ferrari-mieten-zug",
+      "ferrari-rental-st-gallen": "ferrari-mieten-st-gallen",
+      "ferrari-rental-basel": "ferrari-mieten-basel",
+      "ferrari-rental-chur": "ferrari-mieten-chur",
+      "ferrari-rental-davos": "ferrari-mieten-davos",
+      "ferrari-rental-andermatt": "ferrari-mieten-andermatt",
+      "ferrari-rental-aargau": "ferrari-mieten-aargau",
+      "ferrari-rental-solothurn": "ferrari-mieten-solothurn",
+      "ferrari-rental-biel": "ferrari-mieten-biel",
+      "ferrari-rental-naenikon": "ferrari-mieten-uster",
+      "luxusauto-mieten-zuerich": "luxusauto-mieten-zuerich", "sportwagen-mieten-zuerich": "sportwagen-mieten-zuerich",
+      "ferrari-mieten-schweiz": "ferrari-mieten-schweiz", "ferrari-458-italia": "ferrari-458-italia",
+      "ferrari-vermietung-zuerich": "ferrari-mieten-zuerich"
+    },
+    it: {
+      "": "", "pricing": "pricing", "blog": "blog", "journal": "blog", "experiences": "experiences", "philosophy": "philosophy", "locations": "locations",
+      "impressum": "impressum", "datenschutz": "datenschutz", "agb": "agb",
+      "ferrari-rental-zurich": "noleggio-ferrari-zurigo",
+      "ferrari-rental-zurich-airport": "noleggio-ferrari-aeroporto-zurigo",
+      "ferrari-rental-lucerne": "noleggio-ferrari-lucerna",
+      "ferrari-rental-bern": "noleggio-ferrari-berna",
+      "ferrari-rental-winterthur": "noleggio-ferrari-winterthur",
+      "ferrari-rental-zug": "noleggio-ferrari-zugo",
+      "ferrari-rental-st-gallen": "noleggio-ferrari-san-gallo",
+      "ferrari-rental-basel": "noleggio-ferrari-basilea",
+      "ferrari-rental-chur": "noleggio-ferrari-coira",
+      "ferrari-rental-davos": "noleggio-ferrari-davos",
+      "ferrari-rental-andermatt": "noleggio-ferrari-andermatt",
+      "ferrari-rental-aargau": "noleggio-ferrari-argovia",
+      "ferrari-rental-solothurn": "noleggio-ferrari-soletta",
+      "ferrari-rental-biel": "noleggio-ferrari-bienne",
+      "ferrari-rental-naenikon": "noleggio-ferrari-uster"
+    }
+  };
+
+  function loSlugKeyFromSlug(slug){
+    slug = String(slug || "").replace(/^\/+|\/+$/g, "");
+    for(const lang of Object.keys(LO_SLUG_MAP)){
+      const map = LO_SLUG_MAP[lang] || {};
+      for(const key of Object.keys(map)){
+        if(map[key] === slug || key === slug) return key;
+      }
+    }
+    return slug;
+  }
+
+  function loSlugForLang(slugOrKey, lang){
+    const key = loSlugKeyFromSlug(slugOrKey);
+    const map = LO_SLUG_MAP[lang] || {};
+    return Object.prototype.hasOwnProperty.call(map, key) ? map[key] : key;
+  }
+
 
 const __LO_IS_FILE__ = window.location.protocol === "file:";
 
@@ -30,6 +97,17 @@ function loLangFromPath(){
     if(p.startsWith("/")) p = p.slice(1);
     const seg = p.split("/").filter(Boolean)[0] || "";
     if(LANGS.includes(seg)) return seg;
+
+    // German-first clean URLs live at root. These pages are intentionally not under /de/.
+    const deRootSlugs = new Set([
+      "preise", "erlebnisse", "philosophie", "journal", "standorte",
+      "impressum", "datenschutz", "agb", "ferrari-458-italia",
+      "ferrari-mieten-zuerich-preise-anforderungen-ablauf", "autostrecken-schweiz-ferrari-zuerich"
+    ]);
+    if(deRootSlugs.has(seg) || seg.startsWith("ferrari-mieten-") || seg.startsWith("ferrari458-mieten-") || seg.startsWith("sportwagen-mieten-") || seg.startsWith("luxusauto-mieten-") || seg.startsWith("ferrari-vermietung-")) return "de";
+
+    // Italian SEO location URLs are also clean root URLs.
+    if(seg.startsWith("noleggio-ferrari-")) return "it";
   } catch(_e) {}
   return null;
 }
@@ -51,10 +129,22 @@ function loSlugFromTarget(target){
 function loPrettyUrl(target, lang, hash){
   const effectiveLang = lang || getLang();
   const base = loBasePathname();
-  const slug = loSlugFromTarget(target);
+  const rawSlug = loSlugFromTarget(target);
+  const slug = loSlugForLang(rawSlug, effectiveLang);
 
-  let out = base + effectiveLang;
-  if(slug) out += "/" + slug;
+  let out = base;
+  if(effectiveLang !== "de"){
+    out += effectiveLang;
+    // Language homepages should be /en/ and /it/ rather than /en or /it.
+    // This avoids an unnecessary Netlify 301 and prevents local redirect-loop edge cases.
+    if(!slug && !out.endsWith("/")) out += "/";
+  }
+  if(slug){
+    if(!out.endsWith("/")) out += "/";
+    out += slug;
+  }
+  out = out.replace(/\/+/g, "/");
+  if(!out.startsWith("/")) out = "/" + out;
 
   if(hash){
     const h = String(hash).replace(/^#/, "");
@@ -78,7 +168,7 @@ function loRewriteInternalLinks(effectiveLang){
 
   try{
     const brand = document.querySelector("a.brand");
-    if(brand) brand.setAttribute("href", base + effectiveLang);
+    if(brand) brand.setAttribute("href", loPrettyUrl("index.html", effectiveLang));
   } catch(_e) {}
 
   document.querySelectorAll("a[href]").forEach(a => {
@@ -93,25 +183,33 @@ function loRewriteInternalLinks(effectiveLang){
     const pathPart = (parts[0] || "").trim();
     const hashPart = parts.length > 1 ? parts.slice(1).join("#") : "";
 
-    // Already absolute
-    if(pathPart.startsWith("/")) return;
-
-    const cleaned = pathPart.replace(/^\.\//, "");
+    // Absolute internal links should still be normalised if they point to old /pages/*.html
+    // or to a root clean URL that has a language-specific equivalent (e.g. /locations -> /standorte in German).
+    let cleaned = pathPart.replace(/^\.\//, "");
+    if(cleaned.startsWith("/")){
+      const absoluteClean = cleaned.replace(/^\/+/g, "");
+      const segs = absoluteClean.split("/").filter(Boolean);
+      const first = segs[0] || "";
+      if(first === "pages"){
+        cleaned = absoluteClean;
+      } else if(segs.length === 1 && (/^[a-z0-9\-]+(\.html)?$/i.test(first))){
+        cleaned = first;
+      } else {
+        return;
+      }
+    }
 
     if(rootMap.hasOwnProperty(cleaned)){
       const slug = rootMap[cleaned];
-      let out = base + effectiveLang + (slug ? ("/" + slug) : "");
-      if(hashPart) out += "#" + hashPart;
-      a.setAttribute("href", out);
+      const target = slug ? (slug + ".html") : "index.html";
+      a.setAttribute("href", loPrettyUrl(target, effectiveLang, hashPart));
       return;
     }
 
     if(/^pages\/.*\.html$/i.test(cleaned) || /^[a-z0-9\-]+\.html$/i.test(cleaned)){
       const slug = loSlugFromTarget(cleaned);
       if(!slug) return;
-      let out = base + effectiveLang + "/" + slug;
-      if(hashPart) out += "#" + hashPart;
-      a.setAttribute("href", out);
+      a.setAttribute("href", loPrettyUrl(slug + ".html", effectiveLang, hashPart));
       return;
     }
   });
@@ -132,18 +230,51 @@ function loRewriteInternalLinks(effectiveLang){
       if(q && LANGS.includes(q)) return q;
     } catch(_e) {}
 
-    // 2) localStorage
+    // 2) Static document language is authoritative for clean, server-rendered pages
+    try{
+      const dl = (document.documentElement.getAttribute("lang") || "").slice(0,2).toLowerCase();
+      if(dl && LANGS.includes(dl)) return dl;
+    } catch(_e) {}
+
+    // 3) localStorage is only a fallback for legacy/local browsing
     try{
       const s = localStorage.getItem("lo_lang");
       if(s && LANGS.includes(s)) return s;
     } catch(_e) {}
 
-    return "en";
+    return "de";
+  }
+
+
+  function loAlternateHrefForLang(lang){
+    try{
+      const wanted = String(lang || "").toLowerCase();
+      if(!LANGS.includes(wanted)) return "";
+      const links = Array.from(document.querySelectorAll('link[rel~="alternate"][hreflang][href]'));
+      const hit = links.find(l => {
+        const h = (l.getAttribute("hreflang") || "").toLowerCase();
+        return h === wanted || h.startsWith(wanted + "-");
+      });
+      if(!hit) return "";
+      const url = new URL(hit.getAttribute("href"), window.location.href);
+      return url.pathname + url.search;
+    } catch(_e) { return ""; }
   }
 
   function setLang(next){
     if(!LANGS.includes(next)) return;
     try{ localStorage.setItem("lo_lang", next); } catch(_e) {}
+
+    // Prefer explicit hreflang alternates when they are present on the page.
+    // This is the safest way to switch between /, /en/ and /it/ from the German-first homepage,
+    // and it also prevents accidental slug guesses on specialist landing pages.
+    if(!__LO_IS_FILE__){
+      const altHref = loAlternateHrefForLang(next);
+      if(altHref){
+        window.location.href = altHref + (window.location.hash || "");
+        return;
+      }
+    }
 
     // Local file browsing keeps legacy query string
     if(__LO_IS_FILE__){
@@ -171,8 +302,15 @@ function loRewriteInternalLinks(effectiveLang){
       }
     } catch(_e) {}
 
-    let dest = base + next;
-    if(slug) dest += "/" + slug;
+    const nextSlug = loSlugForLang(slug, next);
+    let dest = base;
+    if(next !== "de") dest += next;
+    if(nextSlug){
+      if(!dest.endsWith("/")) dest += "/";
+      dest += nextSlug;
+    }
+    dest = dest.replace(/\/+/g, "/");
+    if(!dest.startsWith("/")) dest = "/" + dest;
 
     window.location.href = dest + (window.location.hash || "");
   }
@@ -298,7 +436,7 @@ function initFooterLegalLinks(lang){
   const labels = {
     en: { imp:"Impressum", priv:"Privacy", terms:"Terms" },
     de: { imp:"Impressum", priv:"Datenschutz", terms:"AGB" },
-    it: { imp:"Impressum", priv:"Privacy", terms:"Termini" }
+    it: { imp:"Impressum", priv:"Privacy", terms:"Condizioni" }
   };
 
   const t = labels[effectiveLang] || labels.en;
@@ -410,7 +548,7 @@ if(legalLinks.length){
   const fallback = [
     { text: "Impressum", href: buildRootUrl("impressum.html", effectiveLang, "top") },
     { text: (effectiveLang === "de" ? "Datenschutz" : "Privacy"), href: buildRootUrl("datenschutz.html", effectiveLang, "top") },
-    { text: (effectiveLang === "de" ? "AGB" : (effectiveLang === "it" ? "Termini" : "Terms")), href: buildRootUrl("agb.html", effectiveLang, "top") }
+    { text: (effectiveLang === "de" ? "AGB" : (effectiveLang === "it" ? "Condizioni" : "Terms")), href: buildRootUrl("agb.html", effectiveLang, "top") }
   ];
   for(const it of fallback){
     const a = document.createElement("a");
