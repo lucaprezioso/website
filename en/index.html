@@ -616,7 +616,7 @@ body.loPromoNoScroll{
 
 </style>
 <script defer="" src="/assets/lo.js"></script>
-<link href="https://luxuryobsession.ch/en/" rel="canonical"/><link href="https://luxuryobsession.ch/" hreflang="de-CH" rel="alternate"/><link href="https://luxuryobsession.ch/en/" hreflang="en-CH" rel="alternate"/><link href="https://luxuryobsession.ch/it/" hreflang="it-CH" rel="alternate"/><link href="https://luxuryobsession.ch/" hreflang="x-default" rel="alternate"/></head>
+<link href="https://luxuryobsession.ch/en/" rel="canonical"/><link href="https://luxuryobsession.ch/" hreflang="de-CH" rel="alternate"/><link href="https://luxuryobsession.ch/en/" hreflang="en-CH" rel="alternate"/><link href="https://luxuryobsession.ch/it/" hreflang="it-CH" rel="alternate"/><link href="https://luxuryobsession.ch/" hreflang="x-default" rel="alternate"/><style id="lo-occasion-links-style">#occasionLinks{position:relative;padding-top:clamp(2.8rem,6vw,4.2rem)}#occasionLinks .sectionSubtitle{max-width:56rem}.seoLinkGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.85rem;margin-top:1.35rem}.seoLinkGrid a{display:flex;align-items:center;justify-content:center;min-height:4.1rem;padding:.95rem 1rem;border:1px solid rgba(231,220,198,.14);border-radius:20px;background:linear-gradient(150deg,rgba(255,255,255,.045),rgba(231,220,198,.025));color:rgba(231,220,198,.86);text-align:center;text-decoration:none;font-weight:600;letter-spacing:.01em;box-shadow:inset 0 1px 0 rgba(255,255,255,.04);transition:transform .2s ease,border-color .2s ease,background .2s ease,color .2s ease,box-shadow .2s ease}.seoLinkGrid a:hover{transform:translateY(-2px);border-color:rgba(231,220,198,.30);background:linear-gradient(150deg,rgba(231,220,198,.065),rgba(255,255,255,.04));color:#fff;box-shadow:0 14px 34px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.055)}@media(max-width:980px){.seoLinkGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.seoLinkGrid{grid-template-columns:1fr}}</style></head>
 <body>
 <header>
 <div class="container">
@@ -629,7 +629,7 @@ body.loPromoNoScroll{
 <nav aria-label="Primary" class="navLinks"><a href="/en/pricing" id="navRates">Rates</a>
 <a href="/en/pricing#galleryTitle" id="navGallery">Gallery</a>
 <a href="/en/philosophy" id="navPhilosophy">Our Philosophy</a>
-<a href="/en/experiences" id="navExperiences">Experiences</a>
+<a href="/en/experiences" id="navExperiences">Experiences</a><a href="/en/ferrari-gift-voucher-zurich" id="navVoucher">Gift voucher</a>
 <a href="/en/journal" id="navBlog">Journal</a>
 <a href="#contact" id="navContact">Contact</a>
 <a class="navCta" href="#request" id="navRequest">Request</a></nav>
@@ -781,7 +781,7 @@ body.loPromoNoScroll{
 </div>
 </div>
 </section>
-<section id="pricing">
+<section aria-labelledby="occasionLinksTitle" id="occasionLinks"><div class="container"><h2 class="sectionTitle" id="occasionLinksTitle">Ferrari rental for special occasions</h2><p class="sectionSubtitle">The Ferrari 458 Italia can be more than a drive: a gift, wedding car, birthday surprise, photoshoot setting or premium corporate moment.</p><div class="seoLinkGrid"><a href="/en/ferrari-gift-voucher-zurich">Ferrari gift voucher Zurich</a><a href="/en/ferrari-wedding-car-rental-zurich">Ferrari wedding car rental</a><a href="/en/ferrari-birthday-rental-zurich">Ferrari birthday rental</a><a href="/en/ferrari-photoshoot-rental-zurich">Ferrari photoshoot rental</a><a href="/en/ferrari-corporate-event-rental-zurich">Ferrari corporate event rental</a></div></div></section><section id="pricing">
 <div class="container">
 <h2 class="sectionTitle" id="packagesTitle">Ferrari rental rates in Zurich</h2>
 <p class="sectionSubtitle" id="packagesSub">Half day, full day, weekend, and full week Ferrari rental packages with personal confirmation.</p>
@@ -986,9 +986,9 @@ body.loPromoNoScroll{
 <div class="footerCenter" id="footerCenter">Currently available: Ferrari 458 Italia.</div>
 <div class="footerNap" style="flex-basis:100%;color:var(--muted);font-size:0.78rem">Luxury Obsession by Anna Loi · Nänikon 8606, Switzerland · <a href="mailto:info@luxuryobsession.ch">info@luxuryobsession.ch</a> · <a href="tel:+41765870458">+41 76 587 04 58</a></div>
 <div class="footerRight">
-<a href="/en/impressum" id="footerImpressum">Impressum</a>
-<a href="/en/datenschutz" id="footerPrivacy">Privacy</a>
-<a href="/en/agb" id="footerTerms">Terms</a>
+<a href="/impressum" id="footerImpressum">Impressum</a>
+<a href="/datenschutz" id="footerPrivacy">Privacy</a>
+<a href="/agb" id="footerTerms">Terms</a>
 </div>
 </div>
 </footer>
@@ -1496,6 +1496,7 @@ const DEFAULT_PACKAGES =
       setText("navRates", t.navRates);
       setText("navPhilosophy", t.navPhilosophy);
       setText("navExperiences", t.navExperiences);
+      setText("navVoucher", t.navVoucher || "Gift voucher");
       setText("navBlog", t.navBlog);
       setText("navContact", t.navContact);
       setText("navRequest", t.navRequest);

@@ -10,7 +10,7 @@
     en: {
       "": "", "pricing": "pricing", "blog": "journal", "journal": "journal", "experiences": "experiences", "philosophy": "philosophy", "locations": "locations",
       "impressum": "impressum", "datenschutz": "datenschutz", "agb": "agb",
-      "ferrari-rental-zurich": "ferrari-rental-zurich", "ferrari-rental-zurich-airport": "ferrari-rental-zurich-airport", "ferrari-rental-lucerne": "ferrari-rental-lucerne", "ferrari-rental-bern": "ferrari-rental-bern", "ferrari-rental-winterthur": "ferrari-rental-winterthur", "ferrari-rental-zug": "ferrari-rental-zug", "ferrari-rental-st-gallen": "ferrari-rental-st-gallen", "ferrari-rental-basel": "ferrari-rental-basel", "ferrari-rental-chur": "ferrari-rental-chur", "ferrari-rental-davos": "ferrari-rental-davos", "ferrari-rental-andermatt": "ferrari-rental-andermatt", "ferrari-rental-aargau": "ferrari-rental-aargau", "ferrari-rental-solothurn": "ferrari-rental-solothurn", "ferrari-rental-biel": "ferrari-rental-biel", "ferrari-rental-naenikon": "ferrari-rental-naenikon"
+      "ferrari-rental-zurich": "ferrari-rental-zurich", "ferrari-rental-zurich-airport": "ferrari-rental-zurich-airport", "ferrari-rental-lucerne": "ferrari-rental-lucerne", "ferrari-rental-bern": "ferrari-rental-bern", "ferrari-rental-winterthur": "ferrari-rental-winterthur", "ferrari-rental-zug": "ferrari-rental-zug", "ferrari-rental-st-gallen": "ferrari-rental-st-gallen", "ferrari-rental-basel": "ferrari-rental-basel", "ferrari-rental-chur": "ferrari-rental-chur", "ferrari-rental-davos": "ferrari-rental-davos", "ferrari-rental-andermatt": "ferrari-rental-andermatt", "ferrari-rental-aargau": "ferrari-rental-aargau", "ferrari-rental-solothurn": "ferrari-rental-solothurn", "ferrari-rental-biel": "ferrari-rental-biel", "ferrari-rental-naenikon": "ferrari-rental-naenikon", "ferrari-gift-voucher-zurich": "ferrari-gift-voucher-zurich", "ferrari-wedding-car-rental-zurich": "ferrari-wedding-car-rental-zurich", "ferrari-birthday-rental-zurich": "ferrari-birthday-rental-zurich", "ferrari-photoshoot-rental-zurich": "ferrari-photoshoot-rental-zurich", "ferrari-corporate-event-rental-zurich": "ferrari-corporate-event-rental-zurich"
     },
     de: {
       "": "", "pricing": "preise", "blog": "journal", "journal": "journal", "experiences": "erlebnisse", "philosophy": "philosophie", "locations": "standorte",
@@ -33,7 +33,7 @@
       "ferrari-rental-naenikon": "ferrari-mieten-uster",
       "luxusauto-mieten-zuerich": "luxusauto-mieten-zuerich", "sportwagen-mieten-zuerich": "sportwagen-mieten-zuerich",
       "ferrari-mieten-schweiz": "ferrari-mieten-schweiz", "ferrari-458-italia": "ferrari-458-italia",
-      "ferrari-vermietung-zuerich": "ferrari-mieten-zuerich"
+      "ferrari-vermietung-zuerich": "ferrari-mieten-zuerich", "ferrari-gift-voucher-zurich": "ferrari-gutschein-zuerich", "ferrari-wedding-car-rental-zurich": "ferrari-mieten-hochzeit-zuerich", "ferrari-birthday-rental-zurich": "ferrari-mieten-geburtstag-zuerich", "ferrari-photoshoot-rental-zurich": "ferrari-mieten-fotoshooting-zuerich", "ferrari-corporate-event-rental-zurich": "ferrari-mieten-firmenanlass-zuerich"
     },
     it: {
       "": "", "pricing": "pricing", "blog": "blog", "journal": "blog", "experiences": "experiences", "philosophy": "philosophy", "locations": "locations",
@@ -52,7 +52,7 @@
       "ferrari-rental-aargau": "noleggio-ferrari-argovia",
       "ferrari-rental-solothurn": "noleggio-ferrari-soletta",
       "ferrari-rental-biel": "noleggio-ferrari-bienne",
-      "ferrari-rental-naenikon": "noleggio-ferrari-uster"
+      "ferrari-rental-naenikon": "noleggio-ferrari-uster", "ferrari-gift-voucher-zurich": "buono-regalo-ferrari-zurigo", "ferrari-wedding-car-rental-zurich": "noleggio-ferrari-matrimonio-zurigo", "ferrari-birthday-rental-zurich": "noleggio-ferrari-compleanno-zurigo", "ferrari-photoshoot-rental-zurich": "noleggio-ferrari-fotoshooting-zurigo", "ferrari-corporate-event-rental-zurich": "noleggio-ferrari-evento-aziendale-zurigo"
     }
   };
 
@@ -102,7 +102,7 @@ function loLangFromPath(){
     const deRootSlugs = new Set([
       "preise", "erlebnisse", "philosophie", "journal", "standorte",
       "impressum", "datenschutz", "agb", "ferrari-458-italia",
-      "ferrari-mieten-zuerich-preise-anforderungen-ablauf", "autostrecken-schweiz-ferrari-zuerich"
+      "ferrari-mieten-zuerich-preise-anforderungen-ablauf", "autostrecken-schweiz-ferrari-zuerich", "ferrari-gutschein-zuerich", "ferrari-mieten-hochzeit-zuerich", "ferrari-mieten-geburtstag-zuerich", "ferrari-mieten-fotoshooting-zuerich", "ferrari-mieten-firmenanlass-zuerich"
     ]);
     if(deRootSlugs.has(seg) || seg.startsWith("ferrari-mieten-") || seg.startsWith("ferrari458-mieten-") || seg.startsWith("sportwagen-mieten-") || seg.startsWith("luxusauto-mieten-") || seg.startsWith("ferrari-vermietung-")) return "de";
 
@@ -442,9 +442,9 @@ function initFooterLegalLinks(lang){
   const t = labels[effectiveLang] || labels.en;
 
   const items = [
-    { id:"footerImpressum", text:t.imp, href: buildRootUrl("impressum.html", effectiveLang, "top") },
-    { id:"footerPrivacy", text:t.priv, href: buildRootUrl("datenschutz.html", effectiveLang, "top") },
-    { id:"footerTerms", text:t.terms, href: buildRootUrl("agb.html", effectiveLang, "top") }
+    { id:"footerImpressum", text:t.imp, href: "/impressum#top" },
+    { id:"footerPrivacy", text:t.priv, href: "/datenschutz#top" },
+    { id:"footerTerms", text:t.terms, href: "/agb#top" }
   ];
 
   footerRight.innerHTML = "";
@@ -546,9 +546,9 @@ if(legalLinks.length){
   }
 } else {
   const fallback = [
-    { text: "Impressum", href: buildRootUrl("impressum.html", effectiveLang, "top") },
-    { text: (effectiveLang === "de" ? "Datenschutz" : "Privacy"), href: buildRootUrl("datenschutz.html", effectiveLang, "top") },
-    { text: (effectiveLang === "de" ? "AGB" : (effectiveLang === "it" ? "Condizioni" : "Terms")), href: buildRootUrl("agb.html", effectiveLang, "top") }
+    { text: "Impressum", href: "/impressum#top" },
+    { text: (effectiveLang === "de" ? "Datenschutz" : "Privacy"), href: "/datenschutz#top" },
+    { text: (effectiveLang === "de" ? "AGB" : (effectiveLang === "it" ? "Condizioni" : "Terms")), href: "/agb#top" }
   ];
   for(const it of fallback){
     const a = document.createElement("a");
