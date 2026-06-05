@@ -106,7 +106,7 @@ function loLangFromPath(){
     ]);
     if(deRootSlugs.has(seg) || seg.startsWith("ferrari-mieten-") || seg.startsWith("ferrari458-mieten-") || seg.startsWith("sportwagen-mieten-") || seg.startsWith("luxusauto-mieten-") || seg.startsWith("ferrari-vermietung-")) return "de";
 
-    // Italian SEO location URLs are also clean root URLs.
+    // Legacy root Italian location URLs may still be seen before their 301 redirect.
     if(seg.startsWith("noleggio-ferrari-")) return "it";
   } catch(_e) {}
   return null;
