@@ -433,19 +433,25 @@ function initFooterLegalLinks(lang){
 
   const effectiveLang = lang || getLang();
 
-  const labels = {
-    en: { imp:"Impressum", priv:"Privacy", terms:"Terms" },
-    de: { imp:"Impressum", priv:"Datenschutz", terms:"AGB" },
-    it: { imp:"Impressum", priv:"Privacy", terms:"Condizioni" }
+  const itemsByLang = {
+    en: [
+      { id:"footerImpressum", text:"Imprint", href:"/imprint#top" },
+      { id:"footerPrivacy", text:"Privacy", href:"/privacy-policy#top" },
+      { id:"footerTerms", text:"Terms", href:"/terms-and-conditions#top" }
+    ],
+    de: [
+      { id:"footerImpressum", text:"Impressum", href:"/impressum#top" },
+      { id:"footerPrivacy", text:"Datenschutz", href:"/datenschutz#top" },
+      { id:"footerTerms", text:"AGB", href:"/agb#top" }
+    ],
+    it: [
+      { id:"footerImpressum", text:"Note legali", href:"/note-legali#top" },
+      { id:"footerPrivacy", text:"Privacy", href:"/informativa-privacy#top" },
+      { id:"footerTerms", text:"Condizioni", href:"/condizioni-generali#top" }
+    ]
   };
 
-  const t = labels[effectiveLang] || labels.en;
-
-  const items = [
-    { id:"footerImpressum", text:t.imp, href: "/impressum#top" },
-    { id:"footerPrivacy", text:t.priv, href: "/datenschutz#top" },
-    { id:"footerTerms", text:t.terms, href: "/agb#top" }
-  ];
+  const items = itemsByLang[effectiveLang] || itemsByLang.de;
 
   footerRight.innerHTML = "";
   items.forEach((it, idx) => {
