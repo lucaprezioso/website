@@ -1762,7 +1762,7 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
           ["NANIKON", "Nänikon · GRATIS"],
           ["ZURICH", "Zurigo · GRATIS nel 2026"],
           ["ZURICH_AIRPORT", "Aeroporto di Zurigo · GRATIS nel 2026"],
-          ["WINTERTHUR", "Winterthur ·  GRATIS nel 2026"],
+          ["WINTERTHUR", "Winterthur · GRATIS nel 2026"],
           ["ZUG", "Zug · CHF 140"],
           ["LUCERNE", "Lucerna · CHF 140"],
           ["ST_GALLEN", "St. Gallen · CHF 140"],
@@ -1774,13 +1774,45 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
         ]
       };
 
-      (pickupOptions[lang] || pickupOptions.en).forEach(([val, label], i) => {
-        const opt = document.createElement("option");
-        opt.value = val;
-        opt.textContent = label;
-        if(i === 0) opt.selected = true; // Nänikon default
-        pickupSel.appendChild(opt);
-      });
+      const briefEscapePaidPickupValues = ["ZURICH", "ZURICH_AIRPORT", "WINTERTHUR"];
+      const briefEscapePaidPickupLabels = {
+        en: {
+          ZURICH: "Zurich · CHF 50",
+          ZURICH_AIRPORT: "Zurich Airport · CHF 50",
+          WINTERTHUR: "Winterthur · CHF 50"
+        },
+        de: {
+          ZURICH: "Zürich · CHF 50",
+          ZURICH_AIRPORT: "Flughafen Zürich · CHF 50",
+          WINTERTHUR: "Winterthur · CHF 50"
+        },
+        it: {
+          ZURICH: "Zurigo · CHF 50",
+          ZURICH_AIRPORT: "Aeroporto di Zurigo · CHF 50",
+          WINTERTHUR: "Winterthur · CHF 50"
+        }
+      };
+
+      const renderPickupOptions = () => {
+        const previousValue = pickupSel.value;
+        const packageSel = document.getElementById("packageId");
+        const selectedPackageId = packageSel ? packageSel.value : "";
+        const isBriefEscape = selectedPackageId === "P3_U";
+        const paidLabels = briefEscapePaidPickupLabels[lang] || briefEscapePaidPickupLabels.en;
+
+        pickupSel.innerHTML = "";
+        (pickupOptions[lang] || pickupOptions.en).forEach(([val, label], i) => {
+          if(isBriefEscape && briefEscapePaidPickupValues.includes(val)){
+            label = paidLabels[val] || label;
+          }
+
+          const opt = document.createElement("option");
+          opt.value = val;
+          opt.textContent = label;
+          if(previousValue ? val === previousValue : i === 0) opt.selected = true; // Nänikon default
+          pickupSel.appendChild(opt);
+        });
+      };
 	  
       document.getElementById("lblCoupon").textContent = t.coupon;
       document.getElementById("couponHint").textContent = t.couponHint;
@@ -1800,6 +1832,8 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
         opt.textContent = name + ' · ' + p.duration + ' · ' + km + ' · ' + p.price + ' CHF';
         pkgSel.appendChild(opt);
       });
+      renderPickupOptions();
+      pkgSel.onchange = renderPickupOptions;
 
       // Populate time options
       const timeSel = document.getElementById("pickupTime");
