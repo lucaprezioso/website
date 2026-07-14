@@ -2246,16 +2246,23 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
           }
 
           try {
-            const formData = new FormData(form);
+            // Submit only the curated summary to Netlify.
+            // The visible form fields are already included inside request_summary,
+            // so posting them separately would duplicate the notification email.
+            const formData = new URLSearchParams();
 
             formData.set("form-name", form.getAttribute("name") || "quote-request-v2");
-            formData.set("language", formLang);
             formData.set("request_summary", summary);
+
+            const botField = form.querySelector('[name="bot-field"]');
+            if (botField && botField.value) {
+              formData.set("bot-field", botField.value);
+            }
 
             const response = await fetch("/", {
               method: "POST",
               headers: { "Content-Type": "application/x-www-form-urlencoded" },
-              body: new URLSearchParams(formData).toString()
+              body: formData.toString()
             });
 
             if (!response.ok) {
