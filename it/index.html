@@ -1104,7 +1104,7 @@ body.loPromoNoScroll{
 </div>
 <form action="/submitted_form?lang=it&amp;submitted=1" class="card bookingForm carbonPanel carbonDark formCard" data-netlify="true" id="quoteForm" method="POST" name="quote-request-v2" netlify-honeypot="bot-field">
 <input name="form-name" type="hidden" value="quote-request-v2"/>
-<input id="formLanguage" name="language" type="hidden" value="it"/>
+<input id="formLanguage" type="hidden" value="it"/>
 <input id="requestSummary" name="request_summary" type="hidden"/>
 <p hidden="">
 <label>Do not fill this out: <input name="bot-field"/></label>
@@ -1112,7 +1112,7 @@ body.loPromoNoScroll{
 <h3 id="formTitle" style="margin-top:0">La tua richiesta</h3>
 <div class="fieldGroup">
 <label for="carId" id="lblCar"></label>
-<select id="carId" name="carId">
+<select id="carId">
 <option value="458">Ferrari 458 Italia</option>
 </select>
 <p class="pricingNote" id="carNote" style="margin:0.35rem 0 0">Disponibile ora: Ferrari 458 Italia.</p>
@@ -1120,25 +1120,25 @@ body.loPromoNoScroll{
 <div class="grid12">
 <div class="fieldGroup span-4 span-md-6 span-sm-12">
 <label for="fullName" id="lblName"></label>
-<input id="fullName" name="fullName" required=""/>
+<input id="fullName" required=""/>
 </div>
 <div class="fieldGroup span-4 span-md-6 span-sm-12">
 <label for="email" id="lblEmail"></label>
-<input id="email" name="email" required="" type="email"/>
+<input id="email" required="" type="email"/>
 </div>
 <div class="fieldGroup span-4 span-md-12 span-sm-12">
 <label for="phone" id="lblPhone"></label>
-<input id="phone" name="phone"/>
+<input id="phone"/>
 </div>
 </div>
 <div class="grid12">
 <div class="fieldGroup span-4 span-md-12 span-sm-12">
 <label for="packageId" id="lblPackage"></label>
-<select id="packageId" name="packageId" required=""></select>
+<select id="packageId" required=""></select>
 </div>
 <div class="fieldGroup calWrap span-4 span-md-6 span-sm-12">
 <label id="lblDate"></label>
-<input id="preferredDate" name="preferredDate" readonly="" type="text"/>
+<input id="preferredDate" readonly="" type="text"/>
 <div aria-label="Calendar" class="calPopup" id="calPopup">
 <div class="calHeader">
 <button class="calNavBtn" id="calPrev" type="button">‹</button>
@@ -1154,7 +1154,7 @@ body.loPromoNoScroll{
 </div>
 <div class="fieldGroup span-4 span-md-6 span-sm-12">
 <label for="pickupTime" id="lblTime"></label>
-<select id="pickupTime" name="pickupTime">
+<select id="pickupTime">
 <option id="timePick" value="">Seleziona</option>
 </select>
 </div>
@@ -1162,17 +1162,17 @@ body.loPromoNoScroll{
 <div class="grid12">
 <div class="fieldGroup span-6 span-sm-12">
 <label for="pickupLocation" id="lblPickupLoc"></label>
-<select id="pickupLocation" name="pickupLocation"></select>
+<select id="pickupLocation"></select>
 </div>
 <div class="fieldGroup span-6 span-sm-12">
 <label for="coupon" id="lblCoupon"></label>
-<input id="coupon" name="coupon" placeholder="Optional"/>
+<input id="coupon" placeholder="Optional"/>
 <p class="pricingNote" id="couponHint" style="margin:0.35rem 0 0">Opzionale</p>
 </div>
 </div>
 <div class="fieldGroup">
 <label for="notes" id="lblNotes"></label>
-<textarea id="notes" name="notes"></textarea>
+<textarea id="notes"></textarea>
 <p class="pricingNote" id="notesHint" style="margin:0.35rem 0 0">Indicazioni utili per la tua richiesta</p>
 </div>
 <button class="btn btnPrimary" id="btnSubmit" type="submit"></button>
