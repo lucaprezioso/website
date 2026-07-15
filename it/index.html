@@ -1102,11 +1102,12 @@ body.loPromoNoScroll{
 <a class="ctaBtn" href="mailto:info@luxuryobsession.ch" id="btnEmail">Email</a>
 </div>
 </div>
-<form action="/submitted_form?lang=it&amp;submitted=1" class="card bookingForm carbonPanel carbonDark formCard" id="quoteForm" method="POST">
+<form action="/submitted_form?lang=it&amp;submitted=1" class="card bookingForm carbonPanel carbonDark formCard" id="quoteForm" method="POST" data-netlify="true" name="quote-request-v2" netlify-honeypot="bot-field">
+<input name="form-name" type="hidden" value="quote-request-v2"/>
 <input id="formLanguage" type="hidden" value="it"/>
-<input id="requestSummary" type="hidden"/>
+<input id="requestSummary" name="request_summary" type="hidden"/>
 <p hidden="">
-<label>Do not fill this out: <input id="botField"/></label>
+<label>Do not fill this out: <input id="botField" name="bot-field"/></label>
 </p>
 <h3 id="formTitle" style="margin-top:0">La tua richiesta</h3>
 <div class="fieldGroup">
@@ -1176,10 +1177,6 @@ body.loPromoNoScroll{
 </div>
 <button class="btn btnPrimary" id="btnSubmit" type="submit"></button>
 <div class="pricingNote" id="formStatus" style="display:none;margin-top:0.6rem"></div>
-</form>
-<form aria-hidden="true" data-netlify="true" hidden="" name="quote-request-summary-v3" netlify-honeypot="bot-field">
-<input name="request_summary" type="hidden"/>
-<input name="bot-field" type="hidden"/>
 </form>
 </div>
 </div>
@@ -2255,7 +2252,7 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
             // so posting them separately would duplicate the notification email.
             const formData = new URLSearchParams();
 
-            formData.set("form-name", "quote-request-summary-v3");
+            formData.set("form-name", "quote-request-v2");
             formData.set("request_summary", summary);
 
             const botField = document.getElementById("botField");
@@ -2293,7 +2290,7 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
 				send_to: "G-EKE8CWE8SN",
 				event_category: "lead",
 				event_label: "quote_request_form",
-				form_name: "quote-request-summary-v3",
+				form_name: "quote-request-v2",
 				value: 1,
 				currency: "CHF",
 				event_callback: safeRedirect,
