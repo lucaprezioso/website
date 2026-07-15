@@ -811,17 +811,24 @@ body.loPromoNoScroll{
 <a class="ctaBtn" href="mailto:info@luxuryobsession.ch" id="btnEmail">Email</a>
 </div>
 </div>
-<form action="/submitted_form?lang=en&amp;submitted=1" class="card bookingForm carbonPanel carbonDark formCard" data-netlify="true" id="quoteForm" method="POST" name="quote-request-v2" netlify-honeypot="bot-field">
-<input name="form-name" type="hidden" value="quote-request-v2"/>
-<input id="formLanguage" name="language" type="hidden" value="en"/>
-<input id="requestSummary" name="request_summary" type="hidden"/>
+<!-- Static Netlify blueprint. This is the only detected booking form schema. -->
+<form name="quote-request-summary-v6" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+<input type="hidden" name="form-name" value="quote-request-summary-v6"/>
+<textarea name="request_summary"></textarea>
+<input name="bot-field"/>
+</form>
+
+<!-- Visible booking UI. Submitted by JavaScript to the Netlify blueprint above. -->
+<form action="/submitted_form?lang=en&amp;submitted=1" class="card bookingForm carbonPanel carbonDark formCard" id="quoteForm" method="POST">
+<input id="formLanguage" type="hidden" value="en"/>
+<input id="requestSummary" type="hidden"/>
 <p hidden="">
-<label>Do not fill this out: <input name="bot-field"/></label>
+<label>Do not fill this out: <input id="botField"/></label>
 </p>
 <h3 id="formTitle" style="margin-top:0">Your request</h3>
 <div class="fieldGroup">
 <label for="carId" id="lblCar">Car</label>
-<select id="carId" name="carId">
+<select id="carId">
 <option value="458">Ferrari 458 Italia</option>
 </select>
 <p class="pricingNote" id="carNote" style="margin:0.35rem 0 0">Currently available: Ferrari 458 Italia.</p>
@@ -829,25 +836,25 @@ body.loPromoNoScroll{
 <div class="grid12">
 <div class="fieldGroup span-4 span-md-6 span-sm-12">
 <label for="fullName" id="lblName">Full name</label>
-<input id="fullName" name="fullName" required=""/>
+<input id="fullName" required=""/>
 </div>
 <div class="fieldGroup span-4 span-md-6 span-sm-12">
 <label for="email" id="lblEmail">Email</label>
-<input id="email" name="email" required="" type="email"/>
+<input id="email" required="" type="email"/>
 </div>
 <div class="fieldGroup span-4 span-md-12 span-sm-12">
 <label for="phone" id="lblPhone">Phone</label>
-<input id="phone" name="phone"/>
+<input id="phone"/>
 </div>
 </div>
 <div class="grid12">
 <div class="fieldGroup span-4 span-md-12 span-sm-12">
 <label for="packageId" id="lblPackage">Rate</label>
-<select id="packageId" name="packageId" required=""></select>
+<select id="packageId" required=""></select>
 </div>
 <div class="fieldGroup calWrap span-4 span-md-6 span-sm-12">
 <label id="lblDate">Preferred date</label>
-<input id="preferredDate" name="preferredDate" readonly="" type="text"/>
+<input id="preferredDate" readonly="" type="text"/>
 <div aria-label="Calendar" class="calPopup" id="calPopup">
 <div class="calHeader">
 <button class="calNavBtn" id="calPrev" type="button">‹</button>
@@ -863,7 +870,7 @@ body.loPromoNoScroll{
 </div>
 <div class="fieldGroup span-4 span-md-6 span-sm-12">
 <label for="pickupTime" id="lblTime">Preferred time</label>
-<select id="pickupTime" name="pickupTime">
+<select id="pickupTime">
 <option id="timePick" value="">Select</option>
 </select>
 </div>
@@ -871,17 +878,17 @@ body.loPromoNoScroll{
 <div class="grid12">
 <div class="fieldGroup span-6 span-sm-12">
 <label for="pickupLocation" id="lblPickupLoc">Pickup location</label>
-<select id="pickupLocation" name="pickupLocation"></select>
+<select id="pickupLocation"></select>
 </div>
 <div class="fieldGroup span-6 span-sm-12">
 <label for="coupon" id="lblCoupon">Referral code</label>
-<input id="coupon" name="coupon" placeholder="Optional"/>
+<input id="coupon" placeholder="Optional"/>
 <p class="pricingNote" id="couponHint" style="margin:0.35rem 0 0">Optional</p>
 </div>
 </div>
 <div class="fieldGroup">
 <label for="notes" id="lblNotes">Notes</label>
-<textarea id="notes" name="notes"></textarea>
+<textarea id="notes"></textarea>
 <p class="pricingNote" id="notesHint" style="margin:0.35rem 0 0">Anything we should know about your request</p>
 </div>
 <button class="btn btnPrimary" id="btnSubmit" type="submit">Send request</button>
@@ -1977,7 +1984,8 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
           const phone = valueOf("phone");
           const pkg = valueOf("packageId");
           const date = valueOf("preferredDate");
-          const coupon = valueOf("coupon");
+          const couponRaw = valueOf("coupon");
+          const coupon = /[\p{L}\p{N}]/u.test(couponRaw) ? couponRaw : "";
           const notes = valueOf("notes");
 
           const carLabel = selectedText("carId") || "Ferrari 458 Italia";
@@ -2026,16 +2034,23 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
           }
 
           try {
-            const formData = new FormData(form);
+            // Submit only the curated summary to Netlify.
+            // The visible form fields are already included inside request_summary,
+            // so posting them separately would duplicate the notification email.
+            const formData = new URLSearchParams();
 
-            formData.set("form-name", form.getAttribute("name") || "quote-request-v2");
-            formData.set("language", formLang);
+            formData.set("form-name", "quote-request-summary-v6");
             formData.set("request_summary", summary);
 
-            const response = await fetch("/", {
+            const botField = document.getElementById("botField");
+            if (botField && botField.value) {
+              formData.set("bot-field", botField.value);
+            }
+
+            const response = await fetch(window.location.pathname || "/", {
               method: "POST",
               headers: { "Content-Type": "application/x-www-form-urlencoded" },
-              body: new URLSearchParams(formData).toString()
+              body: formData.toString()
             });
 
             if (!response.ok) {
@@ -2062,7 +2077,7 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
 				send_to: "G-EKE8CWE8SN",
 				event_category: "lead",
 				event_label: "quote_request_form",
-				form_name: form.getAttribute("name") || "quote-request-v2",
+				form_name: "quote-request-summary-v6",
 				value: 1,
 				currency: "CHF",
 				event_callback: safeRedirect,
