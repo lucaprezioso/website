@@ -302,7 +302,7 @@
 <div class="navRight">
 <nav aria-label="Primary" class="navLinks">
 <a href="/en/pricing" id="navRates">Rates</a>
-<a href="/en/pricing#galleryTitle" id="navGallery">Gallery</a>
+<a href="/en/gallery" id="navGallery">Gallery</a>
 <a href="/en/philosophy" id="navPhilosophy">Our Philosophy</a>
 <a href="/en/experiences" id="navExperiences">Experiences</a><a href="/en/ferrari-gift-voucher-zurich" id="navVoucher">Gift voucher</a>
 <a aria-current="page" href="/en/journal" id="navBlog">Journal</a>
@@ -327,7 +327,7 @@
 </div>
 <div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation">
 <a href="/en/pricing" id="mRates">Rates<span>›</span></a>
-<a href="/en/pricing#galleryTitle" id="mGallery">Gallery<span>›</span></a>
+<a href="/en/gallery" id="mGallery">Gallery<span>›</span></a>
 <a href="/en/philosophy" id="mPhilosophy">Our Philosophy<span>›</span></a>
 <a href="/en/experiences" id="mExperiences">Experiences<span>›</span></a>
 <a aria-current="page" href="/en/journal" id="mBlog">Journal<span>›</span></a>
@@ -1239,7 +1239,7 @@ function init(){
   setText("navRequest", t.navRequest);
 
   setHref("navRates", window.__LO__.buildUrl("pricing.html", lang, "top"));
-  setHref("navGallery", window.__LO__.buildUrl("pricing.html", lang, "galleryTitle"));
+  setHref("navGallery", window.__LO__.buildUrl("gallery.html", lang));
   setHref("navPhilosophy", window.__LO__.buildUrl("../philosophy.html", lang, "top"));
   setHref("navExperiences", window.__LO__.buildUrl("../experiences.html", lang, "top"));
   setHref("navBlog", window.__LO__.buildUrl("blog.html", lang, "top"));
@@ -1264,7 +1264,7 @@ function init(){
   setText("mRequest", t.navRequest);
 
   setHref("mRates", window.__LO__.buildUrl("pricing.html", lang, "top"));
-  setHref("mGallery", window.__LO__.buildUrl("pricing.html", lang, "galleryTitle"));
+  setHref("mGallery", window.__LO__.buildUrl("gallery.html", lang));
   setHref("mPhilosophy", window.__LO__.buildUrl("../philosophy.html", lang, "top"));
   setHref("mExperiences", window.__LO__.buildUrl("../experiences.html", lang, "top"));
   setHref("mBlog", window.__LO__.buildUrl("blog.html", lang, "top"));

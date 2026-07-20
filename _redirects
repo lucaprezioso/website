@@ -1,3 +1,9 @@
+/gallery.html             /en/gallery             301!
+/gallery                  /en/gallery             301!
+/de/gallery               /galerie                301!
+/de/gallery.html          /galerie                301!
+/it/gallery               /it/galleria            301!
+/it/gallery.html          /it/galleria            301!
 # Force HTTPS
 http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 
@@ -491,3 +497,6 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /en/pricing                                             /pages/pricing.html                                     200
 /de/ferrari-mieten-zuerich                              /ferrari-mieten-zuerich                          301!
 /it/pricing                                             /pages/it/pricing.html                                  200
+/galerie                  /galerie.html            200
+/en/gallery               /en/gallery.html         200
+/it/galleria              /it/galleria.html        200

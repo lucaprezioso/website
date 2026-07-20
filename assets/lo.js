@@ -8,12 +8,12 @@
 
   const LO_SLUG_MAP = {
     en: {
-      "": "", "pricing": "pricing", "blog": "journal", "journal": "journal", "experiences": "experiences", "philosophy": "philosophy", "locations": "locations",
+      "": "", "pricing": "pricing", "gallery": "gallery", "blog": "journal", "journal": "journal", "experiences": "experiences", "philosophy": "philosophy", "locations": "locations",
       "impressum": "impressum", "datenschutz": "datenschutz", "agb": "agb",
       "ferrari-rental-zurich": "ferrari-rental-zurich", "ferrari-rental-zurich-airport": "ferrari-rental-zurich-airport", "ferrari-rental-lucerne": "ferrari-rental-lucerne", "ferrari-rental-bern": "ferrari-rental-bern", "ferrari-rental-winterthur": "ferrari-rental-winterthur", "ferrari-rental-zug": "ferrari-rental-zug", "ferrari-rental-st-gallen": "ferrari-rental-st-gallen", "ferrari-rental-basel": "ferrari-rental-basel", "ferrari-rental-chur": "ferrari-rental-chur", "ferrari-rental-davos": "ferrari-rental-davos", "ferrari-rental-andermatt": "ferrari-rental-andermatt", "ferrari-rental-aargau": "ferrari-rental-aargau", "ferrari-rental-solothurn": "ferrari-rental-solothurn", "ferrari-rental-biel": "ferrari-rental-biel", "ferrari-rental-naenikon": "ferrari-rental-naenikon", "ferrari-gift-voucher-zurich": "ferrari-gift-voucher-zurich", "ferrari-wedding-car-rental-zurich": "ferrari-wedding-car-rental-zurich", "ferrari-birthday-rental-zurich": "ferrari-birthday-rental-zurich", "ferrari-photoshoot-rental-zurich": "ferrari-photoshoot-rental-zurich", "ferrari-corporate-event-rental-zurich": "ferrari-corporate-event-rental-zurich"
     },
     de: {
-      "": "", "pricing": "preise", "blog": "journal", "journal": "journal", "experiences": "erlebnisse", "philosophy": "philosophie", "locations": "standorte",
+      "": "", "pricing": "preise", "gallery": "galerie", "blog": "journal", "journal": "journal", "experiences": "erlebnisse", "philosophy": "philosophie", "locations": "standorte",
       "impressum": "impressum", "datenschutz": "datenschutz", "agb": "agb",
       "ferrari-rental-zurich": "ferrari458-mieten-zuerich",
       "ferrari-mieten-zuerich": "ferrari-mieten-zuerich",
@@ -36,7 +36,7 @@
       "ferrari-vermietung-zuerich": "ferrari-mieten-zuerich", "ferrari-gift-voucher-zurich": "ferrari-gutschein-zuerich", "ferrari-wedding-car-rental-zurich": "ferrari-mieten-hochzeit-zuerich", "ferrari-birthday-rental-zurich": "ferrari-mieten-geburtstag-zuerich", "ferrari-photoshoot-rental-zurich": "ferrari-mieten-fotoshooting-zuerich", "ferrari-corporate-event-rental-zurich": "ferrari-mieten-firmenanlass-zuerich"
     },
     it: {
-      "": "", "pricing": "pricing", "blog": "blog", "journal": "blog", "experiences": "experiences", "philosophy": "philosophy", "locations": "locations",
+      "": "", "pricing": "pricing", "gallery": "galleria", "blog": "blog", "journal": "blog", "experiences": "experiences", "philosophy": "philosophy", "locations": "locations",
       "impressum": "impressum", "datenschutz": "datenschutz", "agb": "agb",
       "ferrari-rental-zurich": "noleggio-ferrari-zurigo",
       "ferrari-rental-zurich-airport": "noleggio-ferrari-aeroporto-zurigo",
@@ -100,7 +100,7 @@ function loLangFromPath(){
 
     // German-first clean URLs live at root. These pages are intentionally not under /de/.
     const deRootSlugs = new Set([
-      "preise", "erlebnisse", "philosophie", "journal", "standorte",
+      "preise", "galerie", "erlebnisse", "philosophie", "journal", "standorte",
       "impressum", "datenschutz", "agb", "ferrari-458-italia",
       "ferrari-mieten-zuerich-preise-anforderungen-ablauf", "autostrecken-schweiz-ferrari-zuerich", "ferrari-gutschein-zuerich", "ferrari-mieten-hochzeit-zuerich", "ferrari-mieten-geburtstag-zuerich", "ferrari-mieten-fotoshooting-zuerich", "ferrari-mieten-firmenanlass-zuerich"
     ]);
@@ -159,6 +159,7 @@ function loRewriteInternalLinks(effectiveLang){
   const base = loBasePathname();
   const rootMap = {
     "index.html": "",
+    "gallery.html": "gallery",
     "experiences.html": "experiences",
     "philosophy.html": "philosophy",
     "impressum.html": "impressum",

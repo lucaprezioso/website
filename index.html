@@ -1027,7 +1027,7 @@ body.loPromoNoScroll{
 </a>
 <div class="navRight">
 <nav aria-label="Primary" class="navLinks"><a href="/preise" id="navRates">Tarife</a>
-<a href="/preise#galleryTitle" id="navGallery">Galerie</a>
+<a href="/galerie" id="navGallery">Galerie</a>
 <a href="/philosophie" id="navPhilosophy">Unsere Philosophie</a>
 <a href="/erlebnisse" id="navExperiences">Anlässe</a><a href="/ferrari-gutschein-zuerich" id="navVoucher">Gutschein</a>
 <a href="/journal" id="navBlog">Journal</a>
@@ -1891,7 +1891,7 @@ const DEFAULT_PACKAGES =
       const homePath = prefix ? prefix + "/" : "/";
 
       setHref("navRates", `${prefix}/pricing`);
-      setHref("navGallery", `${prefix}/pricing#galleryTitle`);
+      setHref("navGallery", lang === "de" ? "/galerie" : (lang === "it" ? "/it/galleria" : "/en/gallery"));
       setHref("navPhilosophy", `${prefix}/philosophy`);
       setHref("navExperiences", `${prefix}/experiences`);
       setHref("navVoucher", lang === "de" ? "/ferrari-gutschein-zuerich" : (lang === "it" ? "/it/buono-regalo-ferrari-zurigo" : "/en/ferrari-gift-voucher-zurich"));

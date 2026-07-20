@@ -642,7 +642,7 @@ body.loPromoNoScroll{
 </a>
 <div class="navRight">
 <nav aria-label="Primary" class="navLinks"><a href="/en/pricing" id="navRates">Rates</a>
-<a href="/en/pricing#galleryTitle" id="navGallery">Gallery</a>
+<a href="/en/gallery" id="navGallery">Gallery</a>
 <a href="/en/philosophy" id="navPhilosophy">Our Philosophy</a>
 <a href="/en/experiences" id="navExperiences">Experiences</a><a href="/en/ferrari-gift-voucher-zurich" id="navVoucher">Gift voucher</a>
 <a href="/en/journal" id="navBlog">Journal</a>
@@ -1529,7 +1529,7 @@ const DEFAULT_PACKAGES =
       setText("navRequest", t.navRequest);
 
       setHref("navRates", localUrl("/pricing"));
-      setHref("navGallery", localUrl("/pricing#galleryTitle"));
+      setHref("navGallery", lang === "de" ? "/galerie" : (lang === "it" ? "/it/galleria" : "/en/gallery"));
       setHref("navPhilosophy", localUrl("/philosophy"));
       setHref("navExperiences", localUrl("/experiences"));
       setHref("navBlog", localUrl("/blog"));

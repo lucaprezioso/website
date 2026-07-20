@@ -1620,7 +1620,7 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
 <div class="navRight">
 <nav aria-label="Primary" class="navLinks">
 <a href="/it/pricing#top" id="navRates">Tariffe</a>
-<a href="/it/pricing#galleryTitle" id="navGallery">Galleria</a>
+<a href="/it/galleria" id="navGallery">Galleria</a>
 <a href="/it/philosophy" id="navPhilosophy">La nostra filosofia</a>
 <a href="/it/experiences" id="navExperiences">Esperienze</a><a href="/it/buono-regalo-ferrari-zurigo" id="navVoucher">Buono regalo</a>
 <a href="/it/blog" id="navBlog">Journal</a>
@@ -1663,7 +1663,7 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
 <div class="heroQuickLinks">
 <a class="ctaBtn" href="/it/" id="homeLink">Home</a>
 <a class="ctaBtn" href="/it/locations" id="pickupLink">Punti di ritiro</a>
-<a class="ctaBtn" href="/it/pricing#galleryTitle" id="galleryLink">Galleria</a>
+<a class="ctaBtn" href="/it/galleria" id="galleryLink">Galleria</a>
 <a class="ctaBtn ctaBtnPrimary" href="/it/#request" id="requestLink">Richiedi disponibilità</a>
 </div>
 </div>
@@ -2147,7 +2147,7 @@ const DEFAULT_PACKAGES = [{"id":"P3_U","duration":"3h","label":{"en":"Brief Esca
       setText("navRequest", t.navRequest);
 
       setHref("navRates", window.__LO__.buildUrl("pricing.html", lang, "top"));
-	  setHref("navGallery", window.__LO__.buildUrl("pricing.html", lang, "galleryTitle"));
+	  setHref("navGallery", window.__LO__.buildUrl("gallery.html", lang));
       setHref("navPhilosophy", window.__LO__.buildUrl("../philosophy.html", lang, "top"));
       setHref("navExperiences", window.__LO__.buildUrl("../experiences.html", lang, "top"));
       setHref("navBlog", window.__LO__.buildUrl("blog.html", lang, "top"));
@@ -2188,7 +2188,7 @@ const DEFAULT_PACKAGES = [{"id":"P3_U","duration":"3h","label":{"en":"Brief Esca
       setHref("requestLink", window.__LO__.buildUrl("../index.html", lang, "request"));
 
       setText("galleryLink", t.gallery);
-      setHref("galleryLink", window.__LO__.buildUrl("pricing.html", lang, "galleryTitle"));
+      setHref("galleryLink", window.__LO__.buildUrl("gallery.html", lang));
 
 
       // How it works
