@@ -250,6 +250,14 @@ function loRewriteInternalLinks(effectiveLang){
     try{
       const wanted = String(lang || "").toLowerCase();
       if(!LANGS.includes(wanted)) return "";
+
+      // Optional page-specific destinations for UI language switching.
+      // These do not create hreflang relationships and are useful for standalone SEO pages.
+      const explicit = window.LO_LANGUAGE_URLS && window.LO_LANGUAGE_URLS[wanted];
+      if(explicit){
+        const explicitUrl = new URL(explicit, window.location.href);
+        return explicitUrl.pathname + explicitUrl.search;
+      }
       const links = Array.from(document.querySelectorAll('link[rel~="alternate"][hreflang][href]'));
       const hit = links.find(l => {
         const h = (l.getAttribute("hreflang") || "").toLowerCase();

@@ -247,6 +247,16 @@
 
 
 /* 4) SEO support copy */
+#seoSupport .seoAccordion{border-radius:24px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.025);box-shadow:0 18px 44px rgba(0,0,0,0.22);overflow:hidden;}
+#seoSupport .seoAccordionSummary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.15rem 1.25rem;}
+#seoSupport .seoAccordionSummary::-webkit-details-marker{display:none;}
+#seoSupport .seoAccordionSummary::after{content:"+";display:inline-grid;place-items:center;flex:0 0 auto;width:2rem;height:2rem;border-radius:999px;border:1px solid rgba(255,255,255,0.16);color:rgba(255,255,255,0.86);font-size:1.15rem;line-height:1;}
+#seoSupport .seoAccordion[open] .seoAccordionSummary::after{content:"×";}
+#seoSupport .seoAccordionTitle{margin:0;font-family:var(--display);font-size:clamp(1.35rem,2.7vw,2.35rem);line-height:1.08;color:var(--text);}
+#seoSupport .seoAccordionContent{padding:0 1.25rem 1.25rem;}
+#seoSupport .seoAccordionBlock{padding-top:1.15rem;}
+#seoSupport .seoAccordionBlock + .seoAccordionBlock{margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,0.10);}
+#seoSupport .sectionTitle{font-size:clamp(1.25rem,2.4vw,2rem);}
 #seoIntro .seoIntroGrid{display:grid;gap:1rem;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:1rem;}
 #seoIntro .seoIntroCard{padding:1.15rem 1.15rem 1rem;}
 #seoIntro .seoIntroCard h3{margin:0 0 0.55rem;}
@@ -254,8 +264,18 @@
 #seoIntro .seoIntroCard a{color:inherit;text-decoration:underline;text-underline-offset:0.14em;}
 #seoIntro .seoIntroExtra{margin-top:1.1rem;display:grid;gap:0.85rem;max-width:78ch;}
 #seoIntro .seoIntroExtra p{margin:0;color:rgba(255,255,255,0.80);line-height:1.7;}
+#seoMoneyLinks .seoIntroGrid{display:grid;gap:1rem;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:1rem;}
+#seoMoneyLinks .seoIntroCard{padding:1.15rem 1.15rem 1rem;}
+#seoMoneyLinks .seoIntroCard h3{margin:0 0 0.55rem;}
+#seoMoneyLinks .seoIntroCard p{margin:0 0 0.75rem;color:rgba(255,255,255,0.82);line-height:1.65;}
+#seoMoneyLinks .seoIntroCard a{color:inherit;text-decoration:underline;text-underline-offset:0.14em;font-weight:700;}
 @media (max-width: 980px){
-  #seoIntro .seoIntroGrid{grid-template-columns:1fr;}
+  #seoIntro .seoIntroGrid, #seoMoneyLinks .seoIntroGrid{grid-template-columns:1fr;}
+}
+@media (max-width: 640px){
+  #seoSupport .seoAccordionSummary{align-items:flex-start;padding:1rem 1rem;}
+  #seoSupport .seoAccordionContent{padding:0 1rem 1rem;}
+  #seoSupport .seoAccordionTitle{font-size:1.28rem;}
 }
 
 /* 5) FAQ */
@@ -614,6 +634,94 @@ body.loPromoNoScroll{
 }
 
 </style>
+
+<style id="lo-language-suggest-style">
+/* Language suggestion banner: UX helper only, no redirects and no SEO-critical URL changes */
+.loLangSuggest[hidden]{display:none !important;}
+.loLangSuggest{
+  border-top:1px solid rgba(255,255,255,0.08);
+  border-bottom:1px solid rgba(231,220,198,0.14);
+  background:linear-gradient(135deg,rgba(18,18,20,0.96),rgba(35,30,24,0.92));
+  color:rgba(255,255,255,0.86);
+}
+.loLangSuggestInner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:0.72rem 0;
+}
+.loLangSuggestText{
+  margin:0;
+  font-size:0.88rem;
+  line-height:1.45;
+  color:rgba(255,255,255,0.78);
+}
+.loLangSuggestText strong{
+  color:rgba(255,255,255,0.94);
+  font-weight:600;
+}
+.loLangSuggestLink{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-left:0.45rem;
+  padding:0.42rem 0.72rem;
+  border-radius:999px;
+  border:1px solid rgba(231,220,198,0.28);
+  color:var(--gold);
+  text-decoration:none;
+  font-weight:700;
+  white-space:nowrap;
+  background:rgba(231,220,198,0.05);
+}
+.loLangSuggestLink:hover{
+  border-color:rgba(231,220,198,0.48);
+  color:#fff;
+  background:rgba(231,220,198,0.09);
+}
+.loLangSuggestClose{
+  appearance:none;
+  border:1px solid rgba(255,255,255,0.14);
+  background:rgba(255,255,255,0.04);
+  color:rgba(255,255,255,0.78);
+  width:2rem;
+  height:2rem;
+  border-radius:999px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  flex:0 0 auto;
+  line-height:1;
+  font-size:1.15rem;
+}
+.loLangSuggestClose:hover{
+  color:#fff;
+  border-color:rgba(255,255,255,0.28);
+  background:rgba(255,255,255,0.08);
+}
+@media (max-width: 760px){
+  .loLangSuggestInner{
+    align-items:flex-start;
+    gap:0.75rem;
+    padding:0.68rem 0;
+  }
+  .loLangSuggestText{
+    font-size:0.82rem;
+    line-height:1.42;
+  }
+  .loLangSuggestLink{
+    margin:0.35rem 0 0;
+    padding:0.38rem 0.68rem;
+  }
+  .loLangSuggestClose{
+    width:1.9rem;
+    height:1.9rem;
+    margin-top:0.05rem;
+  }
+}
+</style>
 <script defer="" src="/assets/lo.js"></script>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -624,9 +732,9 @@ body.loPromoNoScroll{
   "inLanguage": "de-CH",
   "logo": "https://luxuryobsession.ch/media/icon.webp",
   "image": [
-    "https://luxuryobsession.ch/media/458-960.webp",
-    "https://luxuryobsession.ch/media/458-720.webp",
-    "https://luxuryobsession.ch/media/458-480.webp"
+    "https://luxuryobsession.ch/media/panorama-zurich-sunset-960.webp",
+    "https://luxuryobsession.ch/media/panorama-zurich-sunset-720.webp",
+    "https://luxuryobsession.ch/media/panorama-zurich-sunset-480.webp"
   ],
   "description": "Ferrari mieten in Zürich mit einer inhabergeführten Ferrari 458 Italia. Luxusauto und Sportwagen mieten in Zürich mit transparenten Tarifen, diskreter Übergabe und flexiblen Abholoptionen in der Schweiz.",
   "telephone": "+41765870458",
@@ -751,7 +859,7 @@ body.loPromoNoScroll{
       "vehicleSeatingCapacity": 2,
       "fuelType": "Petrol",
       "image": [
-        "https://luxuryobsession.ch/media/458-960.webp",
+        "https://luxuryobsession.ch/media/panorama-zurich-sunset-960.webp",
         "https://luxuryobsession.ch/media/ferrari-458-italia-zurich-ogimage.jpg"
       ],
       "offers": {
@@ -944,6 +1052,12 @@ body.loPromoNoScroll{
 <div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation"></div>
 </div>
 </header>
+<div class="loLangSuggest" id="loLangSuggest" hidden aria-live="polite">
+<div class="container loLangSuggestInner">
+<p class="loLangSuggestText" id="loLangSuggestText"></p>
+<button class="loLangSuggestClose" id="loLangSuggestClose" type="button" aria-label="Dismiss language suggestion">×</button>
+</div>
+</div>
 <main>
 <section class="showcase" id="showcase">
 <div class="mediaFull">
@@ -1016,11 +1130,11 @@ body.loPromoNoScroll{
 <div class="heroMediaCard">
 <picture class="heroPhoto">
 <source sizes="(min-width: 1000px) 420px, 0px" srcset="
-      /media/458-480.webp 480w,
-      /media/458-720.webp 720w,
-      /media/458-960.webp 960w
+      /media/panorama-zurich-sunset-480.webp 480w,
+      /media/panorama-zurich-sunset-720.webp 720w,
+      /media/panorama-zurich-sunset-960.webp 960w
     " type="image/webp"/>
-<img alt="Rote Ferrari 458 Italia für Luxus und Sportwagen Miete in Zürich, Schweiz" decoding="async" fetchpriority="high" height="900" src="/media/458-720.webp" width="720"/>
+<img alt="Roter Ferrari 458 Italia bei Sonnenuntergang in Zürich für Luxus und Sportwagen Miete in der Schweiz" decoding="async" fetchpriority="high" height="900" src="/media/panorama-zurich-sunset-720.webp" width="720"/>
 </picture>
 <!--<picture class="heroPhoto">
   <source
@@ -1036,7 +1150,7 @@ body.loPromoNoScroll{
     src="/media/458-engine-1200.webp"
     width="1200"
     height="800"
-    alt="Rote Ferrari 458 Italia für Luxus und Sportwagen Miete in Zürich, Schweiz"
+    alt="Roter Ferrari 458 Italia bei Sonnenuntergang in Zürich für Luxus und Sportwagen Miete in der Schweiz"
     decoding="async"
   >
 </picture>-->
@@ -1049,8 +1163,14 @@ body.loPromoNoScroll{
 </div>
 </div>
 </section><div class="titaniumDivider"></div>
-<section aria-labelledby="seoIntroTitle" id="seoIntro">
+<section aria-labelledby="seoSupportTitle" id="seoSupport">
 <div class="container">
+<details class="seoAccordion" id="seoSupportDetails">
+<summary class="seoAccordionSummary">
+<h2 class="seoAccordionTitle" id="seoSupportTitle">Mehr über unser Ferrari-Angebot in Zürich</h2>
+</summary>
+<div class="seoAccordionContent">
+<div aria-labelledby="seoIntroTitle" class="seoAccordionBlock" id="seoIntro">
 <h2 class="sectionTitle" id="seoIntroTitle">Luxusauto und Sportwagen Miete in Zürich, fokussiert auf einen Ferrari</h2>
 <p class="sectionSubtitle" id="seoIntroSub">Luxury Obsession konzentriert sich bewusst auf eine einzige, sorgfältig gepflegte Ferrari 458 Italia. Das schafft ein persönlicheres und stimmigeres Erlebnis für Gäste, die in Zürich eine diskrete Ferrari Miete statt einer anonymen grossen Flotte schätzen.</p>
 <div class="seoIntroGrid">
@@ -1071,6 +1191,30 @@ body.loPromoNoScroll{
 <p>Ab Zürich eignet sich die Ferrari 458 Italia besonders für eine sorgfältig geplante Halbtagestour am Zürichsee, eine längere Fahrt Richtung Walensee oder einen ganzen Tag auf den ersten Alpenstrassen, sobald Wetter und Saison passen. Wir helfen bei der Wahl einer Route, die zum Zeitfenster, zum Verkehr und zum gebuchten Kilometerpaket passt.</p>
 <p>Die Erfahrung ist bewusst anders als bei einer grossen Mietwagenflotte: ein Fahrzeug, persönliche Übergabe, klare Zahlungs- und Depotbedingungen und direkte Betreuung vor und während der Fahrt. Das passt für Geburtstage, Jahrestage, Geschenkgutscheine, Firmenanlässe, Wochenenden und Gäste in der Schweiz, die ein diskretes Sportwagenerlebnis suchen.</p>
 </div>
+</div>
+<div aria-labelledby="seoMoneyLinksTitle" class="seoAccordionBlock" id="seoMoneyLinks">
+<h2 class="sectionTitle" id="seoMoneyLinksTitle">Direkt zu den passenden Ferrari- und Sportwagen-Seiten</h2>
+<p class="sectionSubtitle">Die Übersicht oben erklärt das Konzept. Diese Einstiege führen gezielt zu den wichtigsten Suchintentionen: Ferrari mieten in Zürich, Sportwagen mieten und Luxusauto mieten.</p>
+<div class="seoIntroGrid">
+<article class="card carbonPanel carbonDark seoIntroCard">
+<h3>Ferrari mieten Zürich</h3>
+<p>Die zentrale Seite für Gäste, die konkret eine Ferrari 458 Italia in Zürich suchen – mit Ablauf, Anforderungen, Routen und Preisen.</p>
+<a href="/ferrari-mieten-zuerich">Zur Ferrari-Seite</a>
+</article>
+<article class="card carbonPanel carbonDark seoIntroCard">
+<h3>Sportwagen mieten Zürich</h3>
+<p>Für Suchende, die ein emotionales Sportwagenerlebnis statt eines normalen Mietwagens möchten.</p>
+<a href="/sportwagen-mieten-zuerich">Sportwagen-Seite öffnen</a>
+</article>
+<article class="card carbonPanel carbonDark seoIntroCard">
+<h3>Luxusauto mieten Zürich</h3>
+<p>Diskrete, persönliche Luxusauto-Miete mit klaren Konditionen und einem gepflegten Einzel-Fahrzeug.</p>
+<a href="/luxusauto-mieten-zuerich">Luxusauto-Seite öffnen</a>
+</article>
+</div>
+</div>
+</div>
+</details>
 </div>
 </section>
 <section id="pricing">
@@ -1103,24 +1247,17 @@ body.loPromoNoScroll{
 <a class="ctaBtn" href="mailto:info@luxuryobsession.ch" id="btnEmail">E-Mail</a>
 </div>
 </div>
-<!-- Static Netlify blueprint. This is the only detected booking form schema. -->
-<form name="quote-request-summary-v6" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
-<input type="hidden" name="form-name" value="quote-request-summary-v6"/>
-<textarea name="request_summary"></textarea>
-<input name="bot-field"/>
-</form>
-
-<!-- Visible booking UI. Submitted by JavaScript to the Netlify blueprint above. -->
-<form action="/submitted_form?lang=de&amp;submitted=1" class="card bookingForm carbonPanel carbonDark formCard" id="quoteForm" method="POST">
-<input id="formLanguage" type="hidden" value="de"/>
-<input id="requestSummary" type="hidden"/>
+<form action="/submitted_form?lang=de&amp;submitted=1" class="card bookingForm carbonPanel carbonDark formCard" data-netlify="true" id="quoteForm" method="POST" name="quote-request-v2" netlify-honeypot="bot-field">
+<input name="form-name" type="hidden" value="quote-request-v2"/>
+<input id="formLanguage" name="language" type="hidden" value="de"/>
+<input id="requestSummary" name="request_summary" type="hidden"/>
 <p hidden="">
-<label>Do not fill this out: <input id="botField"/></label>
+<label>Do not fill this out: <input name="bot-field"/></label>
 </p>
 <h3 id="formTitle" style="margin-top:0">Ihre Anfrage</h3>
 <div class="fieldGroup">
 <label for="carId" id="lblCar"></label>
-<select id="carId">
+<select id="carId" name="carId">
 <option value="458">Ferrari 458 Italia</option>
 </select>
 <p class="pricingNote" id="carNote" style="margin:0.35rem 0 0">Aktuell verfügbar: Ferrari 458 Italia.</p>
@@ -1128,25 +1265,25 @@ body.loPromoNoScroll{
 <div class="grid12">
 <div class="fieldGroup span-4 span-md-6 span-sm-12">
 <label for="fullName" id="lblName"></label>
-<input id="fullName" required=""/>
+<input id="fullName" name="fullName" required=""/>
 </div>
 <div class="fieldGroup span-4 span-md-6 span-sm-12">
 <label for="email" id="lblEmail"></label>
-<input id="email" required="" type="email"/>
+<input id="email" name="email" required="" type="email"/>
 </div>
 <div class="fieldGroup span-4 span-md-12 span-sm-12">
 <label for="phone" id="lblPhone"></label>
-<input id="phone"/>
+<input id="phone" name="phone"/>
 </div>
 </div>
 <div class="grid12">
 <div class="fieldGroup span-4 span-md-12 span-sm-12">
 <label for="packageId" id="lblPackage"></label>
-<select id="packageId" required=""></select>
+<select id="packageId" name="packageId" required=""></select>
 </div>
 <div class="fieldGroup calWrap span-4 span-md-6 span-sm-12">
 <label id="lblDate"></label>
-<input id="preferredDate" readonly="" type="text"/>
+<input id="preferredDate" name="preferredDate" readonly="" type="text"/>
 <div aria-label="Calendar" class="calPopup" id="calPopup">
 <div class="calHeader">
 <button class="calNavBtn" id="calPrev" type="button">‹</button>
@@ -1162,7 +1299,7 @@ body.loPromoNoScroll{
 </div>
 <div class="fieldGroup span-4 span-md-6 span-sm-12">
 <label for="pickupTime" id="lblTime"></label>
-<select id="pickupTime">
+<select id="pickupTime" name="pickupTime">
 <option id="timePick" value="">Wählen</option>
 </select>
 </div>
@@ -1170,17 +1307,17 @@ body.loPromoNoScroll{
 <div class="grid12">
 <div class="fieldGroup span-6 span-sm-12">
 <label for="pickupLocation" id="lblPickupLoc"></label>
-<select id="pickupLocation"></select>
+<select id="pickupLocation" name="pickupLocation"></select>
 </div>
 <div class="fieldGroup span-6 span-sm-12">
 <label for="coupon" id="lblCoupon"></label>
-<input id="coupon" placeholder="Optional"/>
+<input id="coupon" name="coupon" placeholder="Optional"/>
 <p class="pricingNote" id="couponHint" style="margin:0.35rem 0 0">Optional</p>
 </div>
 </div>
 <div class="fieldGroup">
 <label for="notes" id="lblNotes"></label>
-<textarea id="notes"></textarea>
+<textarea id="notes" name="notes"></textarea>
 <p class="pricingNote" id="notesHint" style="margin:0.35rem 0 0">Gibt es etwas Wichtiges zu Ihrer Anfrage</p>
 </div>
 <button class="btn btnPrimary" id="btnSubmit" type="submit"></button>
@@ -2203,8 +2340,7 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
           const phone = valueOf("phone");
           const pkg = valueOf("packageId");
           const date = valueOf("preferredDate");
-          const couponRaw = valueOf("coupon");
-          const coupon = /[\p{L}\p{N}]/u.test(couponRaw) ? couponRaw : "";
+          const coupon = valueOf("coupon");
           const notes = valueOf("notes");
 
           const carLabel = selectedText("carId") || "Ferrari 458 Italia";
@@ -2258,15 +2394,15 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
             // so posting them separately would duplicate the notification email.
             const formData = new URLSearchParams();
 
-            formData.set("form-name", "quote-request-summary-v6");
+            formData.set("form-name", form.getAttribute("name") || "quote-request-v2");
             formData.set("request_summary", summary);
 
-            const botField = document.getElementById("botField");
+            const botField = form.querySelector('[name="bot-field"]');
             if (botField && botField.value) {
               formData.set("bot-field", botField.value);
             }
 
-            const response = await fetch(window.location.pathname || "/", {
+            const response = await fetch("/", {
               method: "POST",
               headers: { "Content-Type": "application/x-www-form-urlencoded" },
               body: formData.toString()
@@ -2296,7 +2432,7 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
 				send_to: "G-EKE8CWE8SN",
 				event_category: "lead",
 				event_label: "quote_request_form",
-				form_name: "quote-request-summary-v6",
+				form_name: form.getAttribute("name") || "quote-request-v2",
 				value: 1,
 				currency: "CHF",
 				event_callback: safeRedirect,
@@ -2673,6 +2809,104 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+</script>
+
+<script>
+(function(){
+  "use strict";
+
+  function firstBrowserLang(){
+    const langs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ""];
+    return String(langs[0] || "").toLowerCase();
+  }
+
+  function storedLang(){
+    try{
+      const v = localStorage.getItem("lo_lang");
+      return /^(en|de|it)$/.test(v || "") ? v : "";
+    }catch(_e){ return ""; }
+  }
+
+  function targetLang(){
+    const chosen = storedLang();
+    if(chosen === "en" || chosen === "it") return chosen;
+
+    // Do not let a stored German value suppress the suggestion.
+    // On the German/root homepage, lo_lang can be set to "de" by earlier browsing or testing,
+    // even when the visitor's browser preference is English or Italian.
+    const browser = firstBrowserLang();
+    if(browser.startsWith("de")) return "";
+    if(browser.startsWith("it")) return "it";
+    return "en";
+  }
+
+  function hasDismissed(lang){
+    try{ return localStorage.getItem("lo_lang_suggest_dismissed_" + lang) === "1"; }
+    catch(_e){ return false; }
+  }
+
+  function dismiss(lang){
+    try{ localStorage.setItem("lo_lang_suggest_dismissed_" + lang, "1"); }
+    catch(_e){}
+  }
+
+  function initLanguageSuggestion(){
+    const current = (document.documentElement.getAttribute("lang") || "").slice(0,2).toLowerCase();
+    if(current !== "de") return;
+
+    const banner = document.getElementById("loLangSuggest");
+    const text = document.getElementById("loLangSuggestText");
+    const close = document.getElementById("loLangSuggestClose");
+    if(!banner || !text || !close) return;
+
+    const lang = targetLang();
+    if(!lang || hasDismissed(lang)) return;
+
+    const copy = {
+      it: {
+        label: "Preferisci navigare in italiano?",
+        link: "Vai alla versione italiana",
+        href: "/it/",
+        close: "Nascondi suggerimento lingua"
+      },
+      en: {
+        label: "Prefer English?",
+        link: "Go to the English version",
+        href: "/en/",
+        close: "Dismiss language suggestion"
+      }
+    }[lang];
+    if(!copy) return;
+
+    const strong = document.createElement("strong");
+    strong.textContent = copy.label;
+    const a = document.createElement("a");
+    a.className = "loLangSuggestLink";
+    a.href = copy.href;
+    a.textContent = copy.link;
+    a.addEventListener("click", function(){
+      try{ localStorage.setItem("lo_lang", lang); }catch(_e){}
+    });
+
+    text.textContent = "";
+    text.appendChild(strong);
+    text.appendChild(document.createTextNode(" "));
+    text.appendChild(a);
+    close.setAttribute("aria-label", copy.close);
+    close.addEventListener("click", function(){
+      dismiss(lang);
+      banner.hidden = true;
+    });
+
+    banner.hidden = false;
+  }
+
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", initLanguageSuggestion);
+  }else{
+    initLanguageSuggestion();
+  }
+})();
 </script>
 </body>
 </html>

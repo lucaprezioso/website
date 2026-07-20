@@ -312,7 +312,6 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /it/noleggio-ferrari-bienne                                /pages/it/ferrari-rental-biel.html                         200
 /de/ferrari-rental-naenikon           /ferrari-mieten-uster 301!
 /de/ferrari-rental-naenikon.html /ferrari-mieten-uster 301!
-/ferrari-mieten-uster               /pages/de/ferrari-mieten-uster.html 200
 /it/ferrari-rental-naenikon           /it/noleggio-ferrari-uster 301!
 /it/ferrari-rental-naenikon.html /it/noleggio-ferrari-uster 301!
 /noleggio-ferrari-uster                                    /it/noleggio-ferrari-uster 301!
@@ -342,11 +341,9 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 # Fix relative .html links that resolve under the language prefix
 
 /en/experiences.html      /en/experiences           301!
-/de/experiences.html      /de/experiences           301!
 /it/experiences.html      /it/experiences           301!
 
 /en/philosophy.html       /en/philosophy            301!
-/de/philosophy.html       /de/philosophy            301!
 /it/philosophy.html       /it/philosophy            301!
 
 /en/impressum.html        /en/impressum             301!
@@ -362,10 +359,8 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /it/agb.html              /it/agb                   301!
 
 /en/pricing.html          /en/pricing               301!
-/de/pricing.html          /de/pricing               301!
 /it/pricing.html          /it/pricing               301!
 
-/de/blog.html             /de/blog                  301!
 /it/blog.html             /it/blog                  301!
 
 /en/carbon-fiber-luxury-cars-zurich.html             /en/carbon-fiber-luxury-cars-zurich                 301!
@@ -416,9 +411,6 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /de/swiss-routes-worth-driving-in-a-ferrari.html             /de/swiss-routes-worth-driving-in-a-ferrari                  301!
 /it/swiss-routes-worth-driving-in-a-ferrari.html             /it/swiss-routes-worth-driving-in-a-ferrari                  301!
 
-/en/swiss-routes-worth-driving-in-a-ferrari.html             /en/swiss-routes-worth-driving-in-a-ferrari                  301!
-/de/swiss-routes-worth-driving-in-a-ferrari.html             /de/swiss-routes-worth-driving-in-a-ferrari                  301!
-/it/swiss-routes-worth-driving-in-a-ferrari.html             /it/swiss-routes-worth-driving-in-a-ferrari                  301!
 
 /en/locations.html        /en/locations             301!
 /it/locations.html        /it/locations             301!
@@ -452,75 +444,28 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 
 # Root pages stored in repo root
 /en/experiences           /experiences.html         200
-/de/experiences           /de/experiences.html      200
 /it/experiences           /it/experiences.html      200
 
 /en/philosophy            /philosophy.html          200
-/de/philosophy            /de/philosophy.html       200
 /it/philosophy            /it/philosophy.html       200
 
-/en/impressum             /impressum.html           200
-/de/impressum             /impressum.html           200
-/it/impressum             /impressum.html           200
 
-/en/datenschutz           /datenschutz.html         200
-/de/datenschutz           /datenschutz.html         200
-/it/datenschutz           /datenschutz.html         200
 
-/en/agb                   /agb.html                 200
-/de/agb                   /agb.html                 200
-/it/agb                   /agb.html                 200
 
 # Everything else comes from pages/<slug>.html
 # Dedicated language pages for next batch (articles and locations)
 /en/carbon-fiber-luxury-cars-zurich        /pages/carbon-fiber-luxury-cars-zurich.html        200
-/de/carbon-fiber-luxury-cars-zurich        /pages/de/carbon-fiber-luxury-cars-zurich.html        200
-/it/carbon-fiber-luxury-cars-zurich        /pages/it/carbon-fiber-luxury-cars-zurich.html        200
 /en/ferrari-458-common-issues-zurich        /pages/ferrari-458-common-issues-zurich.html        200
-/de/ferrari-458-common-issues-zurich        /pages/de/ferrari-458-common-issues-zurich.html        200
-/it/ferrari-458-common-issues-zurich        /pages/it/ferrari-458-common-issues-zurich.html        200
 /en/ferrari-rental-zurich-worth-it        /pages/ferrari-rental-zurich-worth-it.html        200
-/de/ferrari-rental-zurich-worth-it        /pages/de/ferrari-rental-zurich-worth-it.html        200
-/it/ferrari-rental-zurich-worth-it        /pages/it/ferrari-rental-zurich-worth-it.html        200
 /en/ferrari-458-vs-lamborghini-huracan-zurich        /pages/ferrari-458-vs-lamborghini-huracan-zurich.html        200
-/de/ferrari-458-vs-lamborghini-huracan-zurich        /pages/de/ferrari-458-vs-lamborghini-huracan-zurich.html        200
-/it/ferrari-458-vs-lamborghini-huracan-zurich        /pages/it/ferrari-458-vs-lamborghini-huracan-zurich.html        200
 /en/ferrari-f430-vs-ferrari-458-italia        /pages/ferrari-f430-vs-ferrari-458-italia.html        200
 /de/ferrari-f430-vs-ferrari-458-italia        /pages/de/ferrari-f430-vs-ferrari-458-italia.html        200
 /it/ferrari-f430-vs-ferrari-458-italia        /pages/it/ferrari-f430-vs-ferrari-458-italia.html        200
-/en/owning_vs_renting_ferrari_switzerland        /pages/owning_vs_renting_ferrari_switzerland.html        200
-/de/owning_vs_renting_ferrari_switzerland        /pages/de/owning_vs_renting_ferrari_switzerland.html        200
-/it/owning_vs_renting_ferrari_switzerland        /pages/it/owning_vs_renting_ferrari_switzerland.html        200
-/en/scenic_switzerland_drives_from_zurich        /pages/scenic_switzerland_drives_from_zurich.html        200
-/de/scenic_switzerland_drives_from_zurich        /pages/de/scenic_switzerland_drives_from_zurich.html        200
-/it/scenic_switzerland_drives_from_zurich        /pages/it/scenic_switzerland_drives_from_zurich.html        200
 /en/why-a-ferrari-458-italia-feels-different-in-switzerland        /pages/why-a-ferrari-458-italia-feels-different-in-switzerland.html        200
-/de/why-a-ferrari-458-italia-feels-different-in-switzerland        /pages/de/why-a-ferrari-458-italia-feels-different-in-switzerland.html        200
-/it/why-a-ferrari-458-italia-feels-different-in-switzerland        /pages/it/why-a-ferrari-458-italia-feels-different-in-switzerland.html        200
 /en/ferrari-458-italia-details-most-people-miss        /pages/ferrari-458-italia-details-most-people-miss.html        200
-/de/ferrari-458-italia-details-most-people-miss        /pages/de/ferrari-458-italia-details-most-people-miss.html        200
-/it/ferrari-458-italia-details-most-people-miss        /pages/it/ferrari-458-italia-details-most-people-miss.html        200
-/en/ferrari_458_488_price_trends_switzerland        /pages/ferrari_458_488_price_trends_switzerland.html        200
-/de/ferrari_458_488_price_trends_switzerland        /pages/de/ferrari_458_488_price_trends_switzerland.html        200
-/it/ferrari_458_488_price_trends_switzerland        /pages/it/ferrari_458_488_price_trends_switzerland.html        200
-/en/ferrari_458_wedding_car_rental_zurich        /pages/ferrari_458_wedding_car_rental_zurich.html        200
-/de/ferrari_458_wedding_car_rental_zurich        /pages/de/ferrari_458_wedding_car_rental_zurich.html        200
-/it/ferrari_458_wedding_car_rental_zurich        /pages/it/ferrari_458_wedding_car_rental_zurich.html        200
 /en/ferrari-458-italia-the-signature-experience-in-switzerland        /pages/ferrari-458-italia-the-signature-experience-in-switzerland.html        200
-/de/ferrari-458-italia-the-signature-experience-in-switzerland        /pages/de/ferrari-458-italia-the-signature-experience-in-switzerland.html        200
-/it/ferrari-458-italia-the-signature-experience-in-switzerland        /pages/it/ferrari-458-italia-the-signature-experience-in-switzerland.html        200
-/en/ferrari458vs488        /pages/ferrari458vs488.html        200
-/de/ferrari458vs488        /pages/de/ferrari458vs488.html        200
-/it/ferrari458vs488        /pages/it/ferrari458vs488.html        200
 /en/swiss-routes-worth-driving-in-a-ferrari        /pages/swiss-routes-worth-driving-in-a-ferrari.html        200
-/de/swiss-routes-worth-driving-in-a-ferrari        /pages/de/swiss-routes-worth-driving-in-a-ferrari.html        200
-/it/swiss-routes-worth-driving-in-a-ferrari        /pages/it/swiss-routes-worth-driving-in-a-ferrari.html        200
-/en/switzerland_supercar_rental_vs_italy_germany_france        /pages/switzerland_supercar_rental_vs_italy_germany_france.html        200
-/de/switzerland_supercar_rental_vs_italy_germany_france        /pages/de/switzerland_supercar_rental_vs_italy_germany_france.html        200
-/it/switzerland_supercar_rental_vs_italy_germany_france        /pages/it/switzerland_supercar_rental_vs_italy_germany_france.html        200
 /en/transparent-rates-how-we-design-packages-that-make-sense        /pages/transparent-rates-how-we-design-packages-that-make-sense.html        200
-/de/transparent-rates-how-we-design-packages-that-make-sense        /pages/de/transparent-rates-how-we-design-packages-that-make-sense.html        200
-/it/transparent-rates-how-we-design-packages-that-make-sense        /pages/it/transparent-rates-how-we-design-packages-that-make-sense.html        200
 /en/ferrari-rental-winterthur        /pages/ferrari-rental-winterthur.html        200
 /en/ferrari-rental-zug        /pages/ferrari-rental-zug.html        200
 /en/ferrari-rental-zurich-airport        /pages/ferrari-rental-zurich-airport.html        200
@@ -536,9 +481,6 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /en/ferrari-rental-naenikon        /pages/ferrari-rental-naenikon.html        200
 /en/ferrari-rental-aargau        /pages/ferrari-rental-aargau.html        200
 /en/ferrari-rental-solothurn        /pages/ferrari-rental-solothurn.html        200
-/en/instagrammable_places_zurich_uster_part1        /pages/instagrammable_places_zurich_uster_part1.html        200
-/de/instagrammable_places_zurich_uster_part1 /pages/de/instagrammable_places_zurich_uster_part1.html 200
-/it/instagrammable_places_zurich_uster_part1 /pages/it/instagrammable_places_zurich_uster_part1.html 200
 
 
 
@@ -547,12 +489,5 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /en/locations                                           /pages/locations.html                                   200
 /it/locations                                           /pages/it/locations.html                                200
 /en/pricing                                             /pages/pricing.html                                     200
-/de/autostrecken-schweiz-ferrari-zuerich                /pages/de/autostrecken-schweiz-ferrari-zuerich.html     200
-/de/ferrari-458-italia                                  /pages/de/ferrari-458-italia.html                       200
-/de/ferrari-mieten-schweiz                              /pages/de/ferrari-mieten-schweiz.html                   200
-/de/ferrari-mieten-uster                                /pages/de/ferrari-mieten-uster.html                     200
-/de/ferrari-mieten-zuerich-preise-anforderungen-ablauf  /pages/de/ferrari-mieten-zuerich-preise-anforderungen-ablauf.html 200
 /de/ferrari-mieten-zuerich                              /ferrari-mieten-zuerich                          301!
-/de/luxusauto-mieten-zuerich                            /pages/de/luxusauto-mieten-zuerich.html                 200
-/de/sportwagen-mieten-zuerich                           /pages/de/sportwagen-mieten-zuerich.html                200
 /it/pricing                                             /pages/it/pricing.html                                  200

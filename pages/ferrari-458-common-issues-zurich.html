@@ -377,7 +377,7 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
 (function(){
   const CURRENT_LANG = "en";
   const LANGS = ["en","de","it"];
-  const PAGE_MAP = {"en": "/en/ferrari-458-common-issues-zurich","de": "/de/ferrari-458-common-issues-zurich","it": "/it/ferrari-458-common-issues-zurich"};
+  const PAGE_MAP = {"en": "/en/ferrari-458-common-issues-zurich","de": "/de/ferrari-458-haeufige-probleme-zuerich","it": "/it/ferrari-458-problemi-comuni-zurigo"};
   function getLang(){ return CURRENT_LANG; }
   function setLang(next){ if(!LANGS.includes(next)) return; try { localStorage.setItem("lo_lang", next); } catch(e) {} const target = PAGE_MAP[next] || PAGE_MAP[CURRENT_LANG]; if(target) window.location.href = target; }
   function buildUrl(path, lang, hash){ try{ const u = new URL(path, window.location.href); u.searchParams.set("lang", lang || CURRENT_LANG); if(hash) u.hash = hash; return u.pathname + u.search + u.hash; }catch(e){ return path; } }
