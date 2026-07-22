@@ -1126,8 +1126,9 @@ body.loPromoNoScroll{
 <a class="ctaBtn" href="mailto:info@luxuryobsession.ch" id="btnEmail">Email</a>
 </div>
 </div>
-<form action="/submitted_form?lang=it&amp;submitted=1" class="card bookingForm carbonPanel carbonDark formCard" id="quoteForm" method="POST" data-netlify="true" name="quote-request-v2" netlify-honeypot="bot-field">
-<input name="form-name" type="hidden" value="quote-request-v2"/>
+<form action="/submitted_form?lang=it&amp;submitted=1" class="card bookingForm carbonPanel carbonDark formCard" id="quoteForm" method="POST" data-netlify="true" name="quote-request-summary-v6" netlify-honeypot="bot-field">
+<input name="form-name" type="hidden" value="quote-request-summary-v6"/>
+<input aria-hidden="true" autocomplete="off" id="netlifyReplyEmail" name="email" style="display:none" tabindex="-1" type="email"/>
 <input id="formLanguage" type="hidden" value="it"/>
 <input id="requestSummary" name="request_summary" type="hidden"/>
 <p hidden="">
@@ -2187,6 +2188,7 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
       const submitBtn = document.getElementById("btnSubmit");
       const formLanguage = document.getElementById("formLanguage");
       const requestSummary = document.getElementById("requestSummary");
+      const netlifyReplyEmail = document.getElementById("netlifyReplyEmail");
 
       if (form && status) {
         form.addEventListener("submit", async function(e) {
@@ -2236,7 +2238,6 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
             "Language: " + formLang,
             "Car: " + carLabel,
             "Full name: " + name,
-            "Email: " + email,
             "Phone: " + (phone || "Not provided"),
             "Rate: " + rateLabel,
             "Preferred date: " + (date || "Not provided"),
@@ -2248,6 +2249,7 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
 
           if (formLanguage) formLanguage.value = formLang;
           if (requestSummary) requestSummary.value = summary;
+          if (netlifyReplyEmail) netlifyReplyEmail.value = email;
 
           if (status) {
             status.style.display = "block";
@@ -2276,7 +2278,8 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
             // so posting them separately would duplicate the notification email.
             const formData = new URLSearchParams();
 
-            formData.set("form-name", "quote-request-v2");
+            formData.set("form-name", "quote-request-summary-v6");
+            formData.set("email", email);
             formData.set("request_summary", summary);
 
             const botField = document.getElementById("botField");
@@ -2314,7 +2317,7 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
 				send_to: "G-EKE8CWE8SN",
 				event_category: "lead",
 				event_label: "quote_request_form",
-				form_name: "quote-request-v2",
+				form_name: "quote-request-summary-v6",
 				value: 1,
 				currency: "CHF",
 				event_callback: safeRedirect,
