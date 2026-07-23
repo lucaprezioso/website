@@ -32,19 +32,19 @@
   })();
 </script>
 <meta charset="utf-8"/>
-<title>Ferrari mieten Zürich | Preise und Bedingungen</title>
-<meta content="Ferrari 458 Italia in Zürich mieten: transparente Preise, klare Bedingungen, persönliche Übergabe und diskrete Abholung." name="description"/>
+<title>Ferrari mieten Zürich Preise | Ferrari 458 Italia Tarife</title>
+<meta content="Ferrari 458 Italia in Zürich ab CHF 440 mieten. Vergleiche 3h-, Halbtag-, Ganztag-, Wochenend- und Wochentarife, Kilometer, Depot und Abholgebühren." name="description"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="index, follow" name="robots"/>
-<meta content="Ferrari mieten Zürich | Preise und Bedingungen" property="og:title"/>
-<meta content="Ferrari 458 Italia in Zürich mieten: transparente Preise, klare Bedingungen, persönliche Übergabe und diskrete Abholung." property="og:description"/>
+<meta content="Ferrari mieten Zürich Preise | Ferrari 458 Italia Tarife" property="og:title"/>
+<meta content="Ferrari 458 Italia in Zürich ab CHF 440 mieten. Vergleiche 3h-, Halbtag-, Ganztag-, Wochenend- und Wochentarife, Kilometer, Depot und Abholgebühren." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://luxuryobsession.ch/media/ferrari-458-italia-zurich-ogimage.jpg" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="1200" property="og:image:height"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Ferrari mieten Zürich | Preise und Bedingungen" name="twitter:title"/>
-<meta content="Ferrari 458 Italia in Zürich mieten: transparente Preise, klare Bedingungen, persönliche Übergabe und diskrete Abholung." name="twitter:description"/>
+<meta content="Ferrari mieten Zürich Preise | Ferrari 458 Italia Tarife" name="twitter:title"/>
+<meta content="Ferrari 458 Italia in Zürich ab CHF 440 mieten. Vergleiche 3h-, Halbtag-, Ganztag-, Wochenend- und Wochentarife, Kilometer, Depot und Abholgebühren." name="twitter:description"/>
 <meta content="https://luxuryobsession.ch/media/ferrari-458-italia-zurich-ogimage.jpg" name="twitter:image"/>
 <link href="../media/icon.webp" rel="icon" type="image/webp"/>
 <link href="../favicon.ico" rel="icon" sizes="any"/>
@@ -1146,40 +1146,41 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
     white-space:nowrap;
   }
 
-  /* Pickup pricing: keep scrollability, and let Pickup area show fully */
+  /* Pickup pricing: keep scrollability, but avoid label overflow in German */
   #pickupCard .tableWrap table{
-    min-width:520px;
+    min-width:700px;
     table-layout:fixed;
   }
 
   #pickupCard .tableWrap th:nth-child(1),
   #pickupCard .tableWrap td:nth-child(1){
-    width:clamp(118px, 34vw, 132px);
-    min-width:118px;
-    max-width:132px;
-    white-space:nowrap;
-    padding-right:0.30rem;
+    width:170px;
+    min-width:170px;
+    max-width:170px;
+    white-space:normal;
+    overflow-wrap:break-word;
+    padding-right:0.55rem;
   }
-  /* Ensure no truncation for the first column text */
   #pickupCard .tableWrap td:nth-child(1) span{
     display:block;
-    white-space:nowrap;
+    white-space:normal;
     overflow:visible;
     text-overflow:clip;
   }
 
   #pickupCard .tableWrap th:nth-child(2),
   #pickupCard .tableWrap td:nth-child(2){
-    width:140px;
-    min-width:140px;
-    max-width:140px;
-    white-space:nowrap;
+    width:250px;
+    min-width:250px;
+    max-width:250px;
+    white-space:normal;
+    overflow-wrap:break-word;
   }
   #pickupCard .tableWrap th:nth-child(3),
   #pickupCard .tableWrap td:nth-child(3){
-    width:260px;
-    min-width:260px;
-    max-width:260px;
+    width:280px;
+    min-width:280px;
+    max-width:280px;
   }
   #pickupCard .tableWrap td:nth-child(3){
     white-space:normal;
@@ -1276,6 +1277,15 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
 .pricingSeoIntro{margin-top:1.15rem;padding:1.05rem 1.15rem;}
 .pricingSeoIntro p{margin:0;color:var(--muted);line-height:1.65;}
 .pricingSeoIntro p + p{margin-top:0.65rem;}
+.pricingCompareCard p{margin:0;color:var(--muted);line-height:1.65;}
+.pricingCompareCard p + p{margin-top:0.7rem;}
+
+.pickupFootnotes{line-height:1.55;}
+.galleryAction{margin-top:1rem;display:flex;justify-content:flex-start;}
+.galleryAction .ctaBtn{width:auto;min-width:190px;justify-content:center;}
+@media (max-width:760px){
+  .galleryAction .ctaBtn{width:100%;}
+}
 </style>
 <script defer="" src="../assets/lo.js"></script>
 <script id="pricingStructuredData" type="application/ld+json">{
@@ -1329,7 +1339,7 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
     {
       "@type": "ItemList",
       "@id": "https://luxuryobsession.ch/preise#rates",
-      "name": "Ferrari 458 Italia Miettarife in Zürich",
+      "name": "Ferrari 458 Italia Preise in Zürich",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -1344,11 +1354,11 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
             "url": "https://luxuryobsession.ch/preise#rates",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ferrari 458 Italia rental in Zurich",
+              "name": "Ferrari 458 Italia mieten in Zürich",
               "provider": {
                 "@id": "https://luxuryobsession.ch/#business"
               },
-              "serviceType": "Ferrari rental"
+              "serviceType": "Ferrari mieten"
             }
           }
         },
@@ -1365,11 +1375,11 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
             "url": "https://luxuryobsession.ch/preise#rates",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ferrari 458 Italia rental in Zurich",
+              "name": "Ferrari 458 Italia mieten in Zürich",
               "provider": {
                 "@id": "https://luxuryobsession.ch/#business"
               },
-              "serviceType": "Ferrari rental"
+              "serviceType": "Ferrari mieten"
             }
           }
         },
@@ -1386,11 +1396,11 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
             "url": "https://luxuryobsession.ch/preise#rates",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ferrari 458 Italia rental in Zurich",
+              "name": "Ferrari 458 Italia mieten in Zürich",
               "provider": {
                 "@id": "https://luxuryobsession.ch/#business"
               },
-              "serviceType": "Ferrari rental"
+              "serviceType": "Ferrari mieten"
             }
           }
         },
@@ -1407,11 +1417,11 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
             "url": "https://luxuryobsession.ch/preise#rates",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ferrari 458 Italia rental in Zurich",
+              "name": "Ferrari 458 Italia mieten in Zürich",
               "provider": {
                 "@id": "https://luxuryobsession.ch/#business"
               },
-              "serviceType": "Ferrari rental"
+              "serviceType": "Ferrari mieten"
             }
           }
         },
@@ -1428,11 +1438,11 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
             "url": "https://luxuryobsession.ch/preise#rates",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ferrari 458 Italia rental in Zurich",
+              "name": "Ferrari 458 Italia mieten in Zürich",
               "provider": {
                 "@id": "https://luxuryobsession.ch/#business"
               },
-              "serviceType": "Ferrari rental"
+              "serviceType": "Ferrari mieten"
             }
           }
         },
@@ -1449,11 +1459,11 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
             "url": "https://luxuryobsession.ch/preise#rates",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ferrari 458 Italia rental in Zurich",
+              "name": "Ferrari 458 Italia mieten in Zürich",
               "provider": {
                 "@id": "https://luxuryobsession.ch/#business"
               },
-              "serviceType": "Ferrari rental"
+              "serviceType": "Ferrari mieten"
             }
           }
         },
@@ -1470,11 +1480,11 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
             "url": "https://luxuryobsession.ch/preise#rates",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ferrari 458 Italia rental in Zurich",
+              "name": "Ferrari 458 Italia mieten in Zürich",
               "provider": {
                 "@id": "https://luxuryobsession.ch/#business"
               },
-              "serviceType": "Ferrari rental"
+              "serviceType": "Ferrari mieten"
             }
           }
         },
@@ -1491,11 +1501,11 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
             "url": "https://luxuryobsession.ch/preise#rates",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ferrari 458 Italia rental in Zurich",
+              "name": "Ferrari 458 Italia mieten in Zürich",
               "provider": {
                 "@id": "https://luxuryobsession.ch/#business"
               },
-              "serviceType": "Ferrari rental"
+              "serviceType": "Ferrari mieten"
             }
           }
         },
@@ -1512,11 +1522,11 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
             "url": "https://luxuryobsession.ch/preise#rates",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ferrari 458 Italia rental in Zurich",
+              "name": "Ferrari 458 Italia mieten in Zürich",
               "provider": {
                 "@id": "https://luxuryobsession.ch/#business"
               },
-              "serviceType": "Ferrari rental"
+              "serviceType": "Ferrari mieten"
             }
           }
         },
@@ -1533,11 +1543,11 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
             "url": "https://luxuryobsession.ch/preise#rates",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ferrari 458 Italia rental in Zurich",
+              "name": "Ferrari 458 Italia mieten in Zürich",
               "provider": {
                 "@id": "https://luxuryobsession.ch/#business"
               },
-              "serviceType": "Ferrari rental"
+              "serviceType": "Ferrari mieten"
             }
           }
         },
@@ -1554,11 +1564,11 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
             "url": "https://luxuryobsession.ch/preise#rates",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ferrari 458 Italia rental in Zurich",
+              "name": "Ferrari 458 Italia mieten in Zürich",
               "provider": {
                 "@id": "https://luxuryobsession.ch/#business"
               },
-              "serviceType": "Ferrari rental"
+              "serviceType": "Ferrari mieten"
             }
           }
         },
@@ -1575,11 +1585,11 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
             "url": "https://luxuryobsession.ch/preise#rates",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ferrari 458 Italia rental in Zurich",
+              "name": "Ferrari 458 Italia mieten in Zürich",
               "provider": {
                 "@id": "https://luxuryobsession.ch/#business"
               },
-              "serviceType": "Ferrari rental"
+              "serviceType": "Ferrari mieten"
             }
           }
         },
@@ -1596,11 +1606,11 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
             "url": "https://luxuryobsession.ch/preise#rates",
             "itemOffered": {
               "@type": "Service",
-              "name": "Ferrari 458 Italia rental in Zurich",
+              "name": "Ferrari 458 Italia mieten in Zürich",
               "provider": {
                 "@id": "https://luxuryobsession.ch/#business"
               },
-              "serviceType": "Ferrari rental"
+              "serviceType": "Ferrari mieten"
             }
           }
         }
@@ -1653,8 +1663,8 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
 <h1 class="heroTitle" id="title" style="margin-bottom:0.4rem">Tarife</h1>
 <p class="heroSubtitle" id="subtitle">Dauer wählen und Verfügbarkeit anfragen. Jede Buchung wird persönlich bestätigt, mit klaren Bedingungen und diskreter Übergabe.</p>
 <div class="card pricingSeoIntro">
-<p id="pricingIntroP1">Diese Tarife für die Ferrari 458 Italia sind auf echte Fahrten ausgelegt: ein kurzer Ausflug von der Stadt ins Umland, ein Halbtag, ein ganzer Tag, ein Wochenende oder eine ganze Woche in der Schweiz.</p>
-<p id="pricingIntroP2">Jedes Paket wird persönlich bestätigt, inklusive Abholort, inkludierten Kilometern, Depot, Zahlungsbedingungen und allfälliger Zustellgebühr, bevor die Buchung fixiert wird.</p>
+<p id="pricingIntroP1">Ferrari 458 Italia Preise in Zürich sollten immer nach Dauer, Kilometerpaket, Depot und Übergabeort verglichen werden, nicht nur nach dem ersten Tarif.</p>
+<p id="pricingIntroP2">Unsere Pakete sind für echte Fahrerlebnisse aufgebaut: kurze 3-Stunden-Impression, Halbtag, Ganztag, Wochenende oder ganze Woche in der Schweiz, mit persönlicher Bestätigung vor der Zahlung.</p>
 </div>
 <div class="grid2">
 <div class="card heroActionCard">
@@ -1698,31 +1708,11 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
 <th id="thPickupMain">Hauptorte</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td id="pickupArea1">Nänikon</td>
-<td id="pickupPrice1">Inklusive</td>
-<td id="pickupMain1"></td>
-</tr>
-<tr>
-<td id="pickupArea2">Lokale Übergabe</td>
-<td id="pickupPrice2">Inklusive in 2026</td>
-<td id="pickupMain2">Zürich, Flughafen Zürich, Winterthur</td>
-</tr>
-<tr>
-<td id="pickupArea3">Regionale Übergabe</td>
-<td id="pickupPrice3">CHF 140</td>
-<td id="pickupMain3">Zug, Luzern, St. Gallen</td>
-</tr>
-<tr>
-<td id="pickupArea4">Erweiterte Übergabe</td>
-<td id="pickupPrice4">CHF 290</td>
-<td id="pickupMain4">Bern, Basel, Chur</td>
-</tr>
-</tbody>
+<tbody><tr><td id="pickupArea1">Nänikon</td><td id="pickupPrice1">Inklusive</td><td id="pickupMain1">Alle Tarife</td></tr><tr><td id="pickupArea2">Flughafen Zürich</td><td id="pickupPrice2">Inklusive in 2026*</td><td id="pickupMain2">Flughafen Zürich (ZRH)</td></tr><tr><td id="pickupArea3">Zürich &amp; Winterthur</td><td id="pickupPrice3">Inklusive in 2026**</td><td id="pickupMain3">Stadt Zürich, Winterthur</td></tr><tr><td id="pickupArea4">Regionale Übergabe</td><td id="pickupPrice4">CHF 140</td><td id="pickupMain4">Zug, Luzern, St. Gallen</td></tr><tr><td id="pickupArea5">Erweiterte Übergabe</td><td id="pickupPrice5">CHF 290</td><td id="pickupMain5">Bern, Basel, Chur</td></tr></tbody>
 </table></div>
 </div>
-<p class="pricingNote"><span id="pickupNote1">Weitere Orte sind auf Anfrage möglich. Mehr Informationen unter</span> <a href="/standorte" id="pickupNoteLink">Abholorte</a>.</p>
+<p class="pricingNote pickupFootnotes"><span id="pickupNote1">* Flughafen Zürich kostet CHF 50 beim Kurztrip; ab 6h-Tarifen in 2026 inklusive.</span><br/><span id="pickupNote2">** Übergabe in Zürich und Winterthur kostet CHF 80 beim Kurztrip und bei 6h-Tarifen; ab 12h-Tarifen in 2026 inklusive.</span></p>
+<p class="pricingNote"><span id="pickupNote3">Weitere Orte sind auf Anfrage möglich. Mehr Informationen unter</span> <a href="/de/locations" id="pickupNoteLink">Abholorte</a>.</p>
 </div>
 <div class="card" style="margin-top:1.2rem">
 <h2 id="termsTitle" style="margin-top:0">Bedingungen und Optionen</h2>
@@ -1736,6 +1726,7 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
 </table>
 <p class="pricingNote" id="termsNote">Für genaue Details nutze bitte das Anfrageformular oder kontaktiere uns direkt. Verfügbarkeit und finale Details bestätigen wir persönlich.</p>
 </div>
+<div class="card pricingCompareCard" id="pricingCompareCard" style="margin-top:1.2rem"><h2 id="compareTitle" style="margin-top:0">Preise richtig vergleichen</h2><p id="compareP1">Beim Ferrari Mieten in Zürich sollte der Preis immer zusammen mit Dauer, Kilometerpaket, Depot, Übergabeort und geplanter Route betrachtet werden. Ein günstiger wirkendes Angebot kann unpassend sein, wenn das Zeitfenster zu kurz ist oder zu wenig Kilometer für die gewünschte Strecke enthält.</p><p id="compareP2">Unsere Pakete sind deshalb bewusst nach typischen Erlebnissen aufgebaut: kurze Impression, Halbtag, Ganztag, Wochenende und Woche. Vor der Buchung bestätigen wir schriftlich, was im Preis enthalten ist, welche Kilometer gelten und welche Zusatzkosten nur bei besonderen Wünschen entstehen.</p></div>
 <div class="card" style="margin-top:1.2rem">
 <h2 id="galleryTitle" style="margin-top:0">Galerie</h2>
 <div class="gallery" id="gallery">
@@ -1800,6 +1791,7 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
 </picture>
 </button>
 </div>
+<div class="galleryAction"><a class="ctaBtn ctaBtnPrimary" href="/de/gallery" id="fullGalleryLink">Zur vollständigen Galerie</a></div>
 <div aria-hidden="true" aria-label="Galerie" class="lightbox" id="lightbox" role="dialog" tabindex="-1">
 <div class="lbBackdrop" data-lb-close="1"></div>
 <div class="lbPanel">
@@ -1849,7 +1841,7 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
 </div>
 </div>
 </section>
-<section class="seoDeepening"><h2>Preise richtig vergleichen</h2><p>Beim Ferrari Mieten in Zürich sollte der Preis immer zusammen mit Dauer, Kilometerpaket, Depot, Übergabeort und geplanter Route betrachtet werden. Ein günstiger wirkendes Angebot kann unpassend sein, wenn das Zeitfenster zu kurz ist oder zu wenig Kilometer für die gewünschte Strecke enthält.</p><p>Unsere Pakete sind deshalb bewusst nach typischen Erlebnissen aufgebaut: kurze Impression, Halbtag, Ganztag, Wochenende und Woche. Vor der Buchung bestätigen wir schriftlich, was im Preis enthalten ist, welche Kilometer gelten und welche Zusatzkosten nur bei besonderen Wünschen entstehen.</p></section></main>
+</main>
 <footer>
 <div class="container footerInner">
 <div class="footerLeft">© <span id="year"></span> Luxury Obsession.</div>
@@ -1863,7 +1855,7 @@ tbody tr:hover td{background:rgba(255,255,255,0.02)}
 </div>
 </footer>
 <script>
-    const I18N = {"en":{"home":"Home","pricing":"Pricing","blog":"Blog","request":"Request availability","title":"Rates","sub":"Select a duration and request availability. Every booking is confirmed personally, with clear terms and discreet handover.","quickNavEyebrow":"Quick navigation","quickNavTitle":"Choose your next step","quickNavText":"Jump straight to the request form, review pickup options, return home, or browse the gallery.","homeMeta":"Back to the main experience","pickupMeta":"Handover points and delivery areas","requestMeta":"Personal confirmation and final details","galleryMeta":"Browse the Ferrari 458 visuals","fleetTitle":"Current fleet","available":"Available","availableNow":"Available now","soon":"Coming soon","pickup":"Pickup locations","modelNote":"A stylised preview render. A live configurator will follow.","pkgTitle":"Rates","pkg":"Rate","dur":"Duration","km":"Km","price":"Price","terms":"Terms and options","deposit":"Deposit","depositText":"Refundable deposit: CHF 1,500 (CHF 3,000 for drivers under 25)","age":"Age","ageText":"Minimum age is 21","extra":"Extra mileage","extraText":"5 CHF per extra km","options":"Options","optionsText":"Concierge pickup and delivery, second driver, out of hours service, GoPro rental available","termsNote":"For exact arrangements, use the request form or contact us directly. We confirm availability and the final details personally.","gallery":"Gallery","thLimited":"Limited km","thUnlimited":"Unlimited km","pkgNote":"Limited km tiers are shown per rate. Unlimited pricing appears only where available and is shown once per rate.","priceLimited":"Price Limited km","priceUnlimited":"Price Unlimited km","navRates":"Rates","navPhilosophy":"Our Philosophy","navExperiences":"Experiences","navContact":"Contact","navRequest":"Request","navImpressum":"Impressum","navBlog":"Journal","eyebrow":"Zurich, Switzerland","comingSoon":"Coming soon","processTitle":"How it works","processNote":"Times and locations are agreed individually. Every request is confirmed personally before payment.","process1Title":"1. Request","process1Body":"Send your preferred date, time, and rate. We reply personally with availability and a clear confirmation.","process2Title":"2. Confirmation and payment","process2Body":"Once confirmed, payment is made in advance to secure the booking. You receive a written confirmation with the agreed details.","process3Title":"3. Refundable deposit","process3Body":"A refundable deposit is provided at or before pickup. It is held as security and returned after the drive if the car is returned undamaged.","process4Title":"4. Meet at the pickup location","process4Body":"We meet at the agreed location. Identity and licence are verified, and you receive a short briefing on the car and basic rules.","process5Title":"5. The drive","process5Body":"Enjoy your time with the car within the agreed duration and mileage. We stay reachable should anything come up.","process6Title":"6. Return","process6Body":"Return the car at the agreed location and time. A short walk around and confirmation of fuel and mileage closes the handover.","process7Title":"7. Deposit refund","process7Body":"If there is no damage, the deposit is reimbursed immediately or within the agreed window after inspection.","pickupPricingTitle":"Pickup pricing","thPickupArea":"Pickup area","thPickupPrice":"Price","thPickupMain":"Main locations","pickupArea1":"Nänikon","pickupPrice1":"Included","pickupMain1":"","pickupArea2":"Local Pickup","pickupPrice2":"Included in 2026","pickupMain2":"Zurich, Zurich Airport, Winterthur","pickupArea3":"Regional Pickup","pickupPrice3":"CHF 140","pickupMain3":"Zug, Lucerne, St. Gallen","pickupArea4":"Extended Pickup","pickupPrice4":"CHF 290","pickupMain4":"Bern, Basel, Chur","pickupNote1":"Other locations can be requested. More information can be found at","soonTag":"Soon","pricingIntroP1":"These Ferrari 458 Italia rates are structured around real driving use: a short city-to-countryside escape, a half day, a full day, a weekend, or a full week in Switzerland.","pricingIntroP2":"Each package is confirmed personally with the agreed pickup point, included kilometres, deposit, payment terms, and any delivery fee before the booking is fixed."},"de":{"home":"Home","pricing":"Preise","blog":"Blog","request":"Verfügbarkeit anfragen","title":"Tarife","sub":"Dauer wählen und Verfügbarkeit anfragen. Jede Buchung wird persönlich bestätigt, mit klaren Bedingungen und diskreter Übergabe.","quickNavEyebrow":"Schnellnavigation","quickNavTitle":"Wähle den nächsten Schritt","quickNavText":"Direkt zur Anfrage, zu den Abholorten, zurück zur Startseite oder zur Galerie springen.","homeMeta":"Zurück zur Hauptseite","pickupMeta":"Übergabeorte und Liefergebiete","requestMeta":"Persönliche Bestätigung und finale Details","galleryMeta":"Bilder des Ferrari 458 ansehen","fleetTitle":"Aktuelle Flotte","available":"Verfügbar","availableNow":"Jetzt verfügbar","soon":"Bald verfügbar","pickup":"Abholorte","modelNote":"Stilisierte Vorschau. Ein Live Konfigurator folgt.","pkgTitle":"Tarife","pkg":"Tarif","dur":"Dauer","km":"Km","price":"Preis","terms":"Bedingungen und Optionen","deposit":"Depot","depositText":"Rückzahlbares Depot: CHF 1,500 (CHF 3,000 für Fahrer unter 25)","extra":"Mehrkilometer","extraText":"CHF 5 pro zusätzlichem km","options":"Optionen","optionsText":"Concierge-Abholung und Lieferung, Zweitfahrer, Service ausserhalb der Öffnungszeiten, GoPro-Miete verfügbar","termsNote":"Für genaue Details nutze bitte das Anfrageformular oder kontaktiere uns direkt. Verfügbarkeit und finale Details bestätigen wir persönlich.","gallery":"Galerie","thLimited":"Km limitiert","thUnlimited":"Km unbegrenzt","pkgNote":"Limitierte km Stufen werden pro Tarif angezeigt. Unbegrenzte Preise erscheinen nur, wenn verfügbar, und werden einmal pro Tarif angezeigt.","priceLimited":"Preis limitierte km","priceUnlimited":"Preis unbegrenzte km","navRates":"Tarife","navPhilosophy":"Unsere Philosophie","navExperiences":"Erlebnisse","navContact":"Kontakt","navRequest":"Anfrage","navImpressum":"Impressum","navBlog":"Journal","eyebrow":"Zürich, Schweiz","ageText":"Mindestalter ist 21","comingSoon":"Bald verfügbar","processTitle":"Ablauf","processNote":"Zeiten und Orte werden individuell abgestimmt. Jede Anfrage wird persönlich bestätigt, bevor bezahlt wird.","process1Title":"1. Anfrage","process1Body":"Sende Datum, Zeit und gewünschten Tarif. Wir antworten persönlich mit Verfügbarkeit und klarer Bestätigung.","process2Title":"2. Bestätigung und Zahlung","process2Body":"Nach Bestätigung erfolgt die Zahlung im Voraus zur Sicherung der Buchung. Du erhältst eine schriftliche Bestätigung mit allen Details.","process3Title":"3. Rückzahlbares Depot","process3Body":"Das Depot wird bei oder vor der Übergabe hinterlegt. Es dient als Sicherheit und wird nach der Fahrt bei unbeschädigter Rückgabe zurückerstattet.","process4Title":"4. Treffen am Abholort","process4Body":"Wir treffen uns am vereinbarten Ort. Ausweis und Führerschein werden geprüft, danach folgt eine kurze Einführung zum Fahrzeug und den Grundregeln.","process5Title":"5. Fahrt","process5Body":"Geniesse die Fahrt innerhalb der vereinbarten Dauer und Kilometer. Wir bleiben erreichbar, falls etwas sein sollte.","process6Title":"6. Rückgabe","process6Body":"Rückgabe am vereinbarten Ort und zur vereinbarten Zeit. Ein kurzer Rundgang sowie Bestätigung von Treibstoff und Kilometerstand schliessen die Übergabe ab.","process7Title":"7. Rückerstattung","process7Body":"Bei keiner Beschädigung wird das Depot sofort oder innerhalb des vereinbarten Zeitfensters nach Kontrolle zurückerstattet.","age":"Alter","pickupPricingTitle":"Abholpreise","thPickupArea":"Abholgebiet","thPickupPrice":"Preis","thPickupMain":"Hauptorte","pickupArea1":"Nänikon","pickupPrice1":"Inklusive","pickupMain1":"","pickupArea2":"Lokale Übergabe","pickupPrice2":"Inklusive in 2026","pickupMain2":"Zürich, Flughafen Zürich, Winterthur","pickupArea3":"Regionale Übergabe","pickupPrice3":"CHF 140","pickupMain3":"Zug, Luzern, St. Gallen","pickupArea4":"Erweiterte Übergabe","pickupPrice4":"CHF 290","pickupMain4":"Bern, Basel, Chur","pickupNote1":"Weitere Orte sind auf Anfrage möglich. Mehr Informationen unter","soonTag":"Bald","pricingIntroP1":"Diese Tarife für die Ferrari 458 Italia sind auf echte Fahrten ausgelegt: ein kurzer Ausflug von der Stadt ins Umland, ein Halbtag, ein ganzer Tag, ein Wochenende oder eine ganze Woche in der Schweiz.","pricingIntroP2":"Jedes Paket wird persönlich bestätigt, inklusive Abholort, inkludierten Kilometern, Depot, Zahlungsbedingungen und allfälliger Zustellgebühr, bevor die Buchung fixiert wird."},"it":{"home":"Home","pricing":"Prezzi","blog":"Blog","request":"Richiedi disponibilità","title":"Tariffe","sub":"Scegli una durata e richiedi la disponibilità. Ogni prenotazione viene confermata personalmente, con condizioni chiare e consegna discreta.","quickNavEyebrow":"Navigazione rapida","quickNavTitle":"Scegli il prossimo passo","quickNavText":"Vai subito al modulo di richiesta, ai punti di ritiro, alla home oppure alla galleria.","homeMeta":"Torna all’esperienza principale","pickupMeta":"Punti di consegna e aree servite","requestMeta":"Conferma personale e dettagli finali","galleryMeta":"Scopri le immagini della Ferrari 458","fleetTitle":"Flotta attuale","available":"Disponibile","availableNow":"Disponibile ora","soon":"Prossimamente","pickup":"Punti di ritiro","modelNote":"Anteprima stilizzata. Un configuratore live arriverà più avanti.","pkgTitle":"Tariffe","pkg":"Tariffa","dur":"Durata","km":"Km","price":"Prezzo","terms":"Condizioni e opzioni","deposit":"Deposito","depositText":"Deposito rimborsabile: CHF 1,500 (CHF 3,000 per conducenti sotto i 25 anni)","extra":"Km extra","extraText":"5 CHF per km extra","options":"Opzioni","optionsText":"Ritiro e consegna concierge, secondo conducente, servizio fuori orario, noleggio GoPro disponibile","termsNote":"Per i dettagli esatti usa il modulo di richiesta o contattaci direttamente. Confermiamo personalmente disponibilità e dettagli finali.","gallery":"Galleria","thLimited":"Km limitati","thUnlimited":"Km illimitati","pkgNote":"I livelli di km limitati sono mostrati per tariffa. Il prezzo illimitato appare solo dove disponibile e viene mostrato una sola volta per tariffa.","priceLimited":"Prezzo km inclusi","priceUnlimited":"Prezzo km illimitati","navRates":"Tariffe","navPhilosophy":"La nostra filosofia","navExperiences":"Esperienze","navContact":"Contatti","navRequest":"Richiesta","navImpressum":"Impressum","navBlog":"Journal","eyebrow":"Zurigo, Svizzera","ageText":"Età minima 21 anni","comingSoon":"Prossimamente","processTitle":"Come funziona","processNote":"Orari e luoghi vengono concordati individualmente. Ogni richiesta viene confermata personalmente prima del pagamento.","process1Title":"1. Richiesta","process1Body":"Invia data, orario e tariffa desiderata. Rispondiamo personalmente con disponibilità e una conferma chiara.","process2Title":"2. Conferma e pagamento","process2Body":"Dopo la conferma, il pagamento avviene in anticipo per bloccare la prenotazione. Ricevi una conferma scritta con i dettagli concordati.","process3Title":"3. Deposito rimborsabile","process3Body":"Il deposito viene versato al ritiro o prima. Serve come garanzia e viene rimborsato dopo la guida se l'auto viene restituita senza danni.","process4Title":"4. Incontro al punto di ritiro","process4Body":"Ci incontriamo nel luogo concordato. Documento e patente vengono verificati, poi ricevi una breve spiegazione dell’auto e delle regole di base.","process5Title":"5. La guida","process5Body":"Goditi l'esperienza entro durata e chilometraggio concordati. Restiamo reperibili per qualsiasi necessità.","process6Title":"6. Riconsegna","process6Body":"Riconsegna l’auto nel luogo e all’orario concordati. Un controllo rapido e la conferma di carburante e chilometraggio chiudono la consegna.","process7Title":"7. Rimborso del deposito","process7Body":"Se non ci sono danni, il deposito viene rimborsato immediatamente o entro la finestra concordata dopo la verifica.","age":"Età","pickupPricingTitle":"Costi di ritiro","thPickupArea":"Area di ritiro","thPickupPrice":"Prezzo","thPickupMain":"Principali località","pickupArea1":"Nänikon","pickupPrice1":"Incluso","pickupMain1":"","pickupArea2":"Ritiro locale","pickupPrice2":"Incluso nel 2026","pickupMain2":"Zurigo, Aeroporto di Zurigo, Winterthur","pickupArea3":"Ritiro regionale","pickupPrice3":"CHF 140","pickupMain3":"Zugo, Lucerna, San Gallo","pickupArea4":"Ritiro esteso","pickupPrice4":"CHF 290","pickupMain4":"Berna, Basilea, Coira","pickupNote1":"Altre località su richiesta. Maggiori informazioni su","soonTag":"Presto","pricingIntroP1":"Queste tariffe per la Ferrari 458 Italia sono pensate per esperienze reali: una breve fuga dalla città verso la campagna, una mezza giornata, una giornata intera, un weekend o una settimana intera in Svizzera.","pricingIntroP2":"Ogni pacchetto viene confermato personalmente con punto di ritiro concordato, chilometri inclusi, deposito, condizioni di pagamento ed eventuale costo di consegna prima che la prenotazione venga fissata."}};
+    const I18N = {"en":{"home":"Home","pricing":"Pricing","blog":"Blog","request":"Request availability","title":"Rates","sub":"Select a duration and request availability. Every booking is confirmed personally, with clear terms and discreet handover.","quickNavEyebrow":"Quick navigation","quickNavTitle":"Choose your next step","quickNavText":"Jump straight to the request form, review pickup options, return home, or browse the gallery.","homeMeta":"Back to the main experience","pickupMeta":"Handover points and delivery areas","requestMeta":"Personal confirmation and final details","galleryMeta":"Browse the Ferrari 458 visuals","fleetTitle":"Current fleet","available":"Available","availableNow":"Available now","soon":"Coming soon","pickup":"Pickup locations","modelNote":"A stylised preview render. A live configurator will follow.","pkgTitle":"Rates","pkg":"Rate","dur":"Duration","km":"Km","price":"Price","terms":"Terms and options","deposit":"Deposit","depositText":"Refundable deposit: CHF 1,500 (CHF 3,000 for drivers under 25)","age":"Age","ageText":"Minimum age is 21","extra":"Extra mileage","extraText":"5 CHF per extra km","options":"Options","optionsText":"Concierge pickup and delivery, second driver, out of hours service, GoPro rental available","termsNote":"For exact arrangements, use the request form or contact us directly. We confirm availability and the final details personally.","gallery":"Gallery","thLimited":"Limited km","thUnlimited":"Unlimited km","pkgNote":"Limited km tiers are shown per rate. Unlimited pricing appears only where available and is shown once per rate.","priceLimited":"Price Limited km","priceUnlimited":"Price Unlimited km","navRates":"Rates","navPhilosophy":"Our Philosophy","navExperiences":"Experiences","navContact":"Contact","navRequest":"Request","navImpressum":"Impressum","navBlog":"Journal","eyebrow":"Zurich, Switzerland","comingSoon":"Coming soon","processTitle":"How it works","processNote":"Times and locations are agreed individually. Every request is confirmed personally before payment.","process1Title":"1. Request","process1Body":"Send your preferred date, time, and rate. We reply personally with availability and a clear confirmation.","process2Title":"2. Confirmation and payment","process2Body":"Once confirmed, payment is made in advance to secure the booking. You receive a written confirmation with the agreed details.","process3Title":"3. Refundable deposit","process3Body":"A refundable deposit is provided at or before pickup. It is held as security and returned after the drive if the car is returned undamaged.","process4Title":"4. Meet at the pickup location","process4Body":"We meet at the agreed location. Identity and licence are verified, and you receive a short briefing on the car and basic rules.","process5Title":"5. The drive","process5Body":"Enjoy your time with the car within the agreed duration and mileage. We stay reachable should anything come up.","process6Title":"6. Return","process6Body":"Return the car at the agreed location and time. A short walk around and confirmation of fuel and mileage closes the handover.","process7Title":"7. Deposit refund","process7Body":"If there is no damage, the deposit is reimbursed immediately or within the agreed window after inspection.","pickupPricingTitle":"Pickup pricing","thPickupArea":"Pickup area","thPickupPrice":"Price","thPickupMain":"Main locations","pickupArea1":"Nänikon","pickupPrice1":"Included","pickupMain1":"All rates","pickupArea2":"Zurich Airport","pickupPrice2":"Included in 2026*","pickupMain2":"Zurich Airport (ZRH)","pickupArea3":"Zurich & Winterthur","pickupPrice3":"Included in 2026**","pickupMain3":"Zurich city, Winterthur","pickupArea4":"Regional Pickup","pickupPrice4":"CHF 140","pickupMain4":"Zug, Lucerne, St. Gallen","pickupNote1":"* Zurich Airport pickup is CHF 50 for Brief Escape; included from 6h packages in 2026.","soonTag":"Soon","pricingIntroP1":"Ferrari 458 Italia rental prices in Zurich should be compared by duration, mileage, deposit and pickup location, not only by the headline rate.","pricingIntroP2":"These packages are built around real driving use: a short 3-hour impression, a half day, a full day, a weekend or a full week in Switzerland, with every booking confirmed personally before payment.","compareTitle":"How to compare Ferrari rental prices","compareP1":"When renting a Ferrari in Zurich, the price should always be considered together with the duration, mileage package, deposit, pickup point and planned route. A cheaper-looking offer may be less suitable if the time window is too short or the kilometres do not match the drive you have in mind.","compareP2":"Our rates are structured around typical experiences: short impression, half day, full day, weekend and week. Before booking, we confirm in writing what is included, which kilometres apply and which additional costs arise only for special requests.","pickupArea5":"Extended Pickup","pickupPrice5":"CHF 290","pickupMain5":"Bern, Basel, Chur","pickupNote2":"** Zurich and Winterthur pickup is CHF 80 for Brief Escape and 6h packages; included from 12h rates in 2026.","pickupNote3":"Other locations can be requested. More information can be found at","fullGallery":"View full gallery"},"de":{"home":"Home","pricing":"Preise","blog":"Blog","request":"Verfügbarkeit anfragen","title":"Tarife","sub":"Dauer wählen und Verfügbarkeit anfragen. Jede Buchung wird persönlich bestätigt, mit klaren Bedingungen und diskreter Übergabe.","quickNavEyebrow":"Schnellnavigation","quickNavTitle":"Wähle den nächsten Schritt","quickNavText":"Direkt zur Anfrage, zu den Abholorten, zurück zur Startseite oder zur Galerie springen.","homeMeta":"Zurück zur Hauptseite","pickupMeta":"Übergabeorte und Liefergebiete","requestMeta":"Persönliche Bestätigung und finale Details","galleryMeta":"Bilder des Ferrari 458 ansehen","fleetTitle":"Aktuelle Flotte","available":"Verfügbar","availableNow":"Jetzt verfügbar","soon":"Bald verfügbar","pickup":"Abholorte","modelNote":"Stilisierte Vorschau. Ein Live Konfigurator folgt.","pkgTitle":"Tarife","pkg":"Tarif","dur":"Dauer","km":"Km","price":"Preis","terms":"Bedingungen und Optionen","deposit":"Depot","depositText":"Rückzahlbares Depot: CHF 1,500 (CHF 3,000 für Fahrer unter 25)","extra":"Mehrkilometer","extraText":"CHF 5 pro zusätzlichem km","options":"Optionen","optionsText":"Concierge-Abholung und Lieferung, Zweitfahrer, Service ausserhalb der Öffnungszeiten, GoPro-Miete verfügbar","termsNote":"Für genaue Details nutze bitte das Anfrageformular oder kontaktiere uns direkt. Verfügbarkeit und finale Details bestätigen wir persönlich.","gallery":"Galerie","thLimited":"Km limitiert","thUnlimited":"Km unbegrenzt","pkgNote":"Limitierte km Stufen werden pro Tarif angezeigt. Unbegrenzte Preise erscheinen nur, wenn verfügbar, und werden einmal pro Tarif angezeigt.","priceLimited":"Preis limitierte km","priceUnlimited":"Preis unbegrenzte km","navRates":"Tarife","navPhilosophy":"Unsere Philosophie","navExperiences":"Erlebnisse","navContact":"Kontakt","navRequest":"Anfrage","navImpressum":"Impressum","navBlog":"Journal","eyebrow":"Zürich, Schweiz","ageText":"Mindestalter ist 21","comingSoon":"Bald verfügbar","processTitle":"Ablauf","processNote":"Zeiten und Orte werden individuell abgestimmt. Jede Anfrage wird persönlich bestätigt, bevor bezahlt wird.","process1Title":"1. Anfrage","process1Body":"Sende Datum, Zeit und gewünschten Tarif. Wir antworten persönlich mit Verfügbarkeit und klarer Bestätigung.","process2Title":"2. Bestätigung und Zahlung","process2Body":"Nach Bestätigung erfolgt die Zahlung im Voraus zur Sicherung der Buchung. Du erhältst eine schriftliche Bestätigung mit allen Details.","process3Title":"3. Rückzahlbares Depot","process3Body":"Das Depot wird bei oder vor der Übergabe hinterlegt. Es dient als Sicherheit und wird nach der Fahrt bei unbeschädigter Rückgabe zurückerstattet.","process4Title":"4. Treffen am Abholort","process4Body":"Wir treffen uns am vereinbarten Ort. Ausweis und Führerschein werden geprüft, danach folgt eine kurze Einführung zum Fahrzeug und den Grundregeln.","process5Title":"5. Fahrt","process5Body":"Geniesse die Fahrt innerhalb der vereinbarten Dauer und Kilometer. Wir bleiben erreichbar, falls etwas sein sollte.","process6Title":"6. Rückgabe","process6Body":"Rückgabe am vereinbarten Ort und zur vereinbarten Zeit. Ein kurzer Rundgang sowie Bestätigung von Treibstoff und Kilometerstand schliessen die Übergabe ab.","process7Title":"7. Rückerstattung","process7Body":"Bei keiner Beschädigung wird das Depot sofort oder innerhalb des vereinbarten Zeitfensters nach Kontrolle zurückerstattet.","age":"Alter","pickupPricingTitle":"Abholpreise","thPickupArea":"Abholgebiet","thPickupPrice":"Preis","thPickupMain":"Hauptorte","pickupArea1":"Nänikon","pickupPrice1":"Inklusive","pickupMain1":"Alle Tarife","pickupArea2":"Flughafen Zürich","pickupPrice2":"Inklusive in 2026*","pickupMain2":"Flughafen Zürich (ZRH)","pickupArea3":"Zürich & Winterthur","pickupPrice3":"Inklusive in 2026**","pickupMain3":"Stadt Zürich, Winterthur","pickupArea4":"Regionale Übergabe","pickupPrice4":"CHF 140","pickupMain4":"Zug, Luzern, St. Gallen","pickupNote1":"* Flughafen Zürich kostet CHF 50 beim Kurztrip; ab 6h-Tarifen in 2026 inklusive.","soonTag":"Bald","pricingIntroP1":"Ferrari 458 Italia Preise in Zürich sollten immer nach Dauer, Kilometerpaket, Depot und Übergabeort verglichen werden, nicht nur nach dem ersten Tarif.","pricingIntroP2":"Unsere Pakete sind für echte Fahrerlebnisse aufgebaut: kurze 3-Stunden-Impression, Halbtag, Ganztag, Wochenende oder ganze Woche in der Schweiz, mit persönlicher Bestätigung vor der Zahlung.","compareTitle":"Preise richtig vergleichen","compareP1":"Beim Ferrari Mieten in Zürich sollte der Preis immer zusammen mit Dauer, Kilometerpaket, Depot, Übergabeort und geplanter Route betrachtet werden. Ein günstiger wirkendes Angebot kann unpassend sein, wenn das Zeitfenster zu kurz ist oder zu wenig Kilometer für die gewünschte Strecke enthält.","compareP2":"Unsere Pakete sind deshalb bewusst nach typischen Erlebnissen aufgebaut: kurze Impression, Halbtag, Ganztag, Wochenende und Woche. Vor der Buchung bestätigen wir schriftlich, was im Preis enthalten ist, welche Kilometer gelten und welche Zusatzkosten nur bei besonderen Wünschen entstehen.","pickupArea5":"Erweiterte Übergabe","pickupPrice5":"CHF 290","pickupMain5":"Bern, Basel, Chur","pickupNote2":"** Übergabe in Zürich und Winterthur kostet CHF 80 beim Kurztrip und bei 6h-Tarifen; ab 12h-Tarifen in 2026 inklusive.","pickupNote3":"Weitere Orte sind auf Anfrage möglich. Mehr Informationen unter","fullGallery":"Zur vollständigen Galerie"},"it":{"home":"Home","pricing":"Prezzi","blog":"Blog","request":"Richiedi disponibilità","title":"Tariffe","sub":"Scegli una durata e richiedi la disponibilità. Ogni prenotazione viene confermata personalmente, con condizioni chiare e consegna discreta.","quickNavEyebrow":"Navigazione rapida","quickNavTitle":"Scegli il prossimo passo","quickNavText":"Vai subito al modulo di richiesta, ai punti di ritiro, alla home oppure alla galleria.","homeMeta":"Torna all’esperienza principale","pickupMeta":"Punti di consegna e aree servite","requestMeta":"Conferma personale e dettagli finali","galleryMeta":"Scopri le immagini della Ferrari 458","fleetTitle":"Flotta attuale","available":"Disponibile","availableNow":"Disponibile ora","soon":"Prossimamente","pickup":"Punti di ritiro","modelNote":"Anteprima stilizzata. Un configuratore live arriverà più avanti.","pkgTitle":"Tariffe","pkg":"Tariffa","dur":"Durata","km":"Km","price":"Prezzo","terms":"Condizioni e opzioni","deposit":"Deposito","depositText":"Deposito rimborsabile: CHF 1,500 (CHF 3,000 per conducenti sotto i 25 anni)","extra":"Km extra","extraText":"5 CHF per km extra","options":"Opzioni","optionsText":"Ritiro e consegna concierge, secondo conducente, servizio fuori orario, noleggio GoPro disponibile","termsNote":"Per i dettagli esatti usa il modulo di richiesta o contattaci direttamente. Confermiamo personalmente disponibilità e dettagli finali.","gallery":"Galleria","thLimited":"Km limitati","thUnlimited":"Km illimitati","pkgNote":"I livelli di km limitati sono mostrati per tariffa. Il prezzo illimitato appare solo dove disponibile e viene mostrato una sola volta per tariffa.","priceLimited":"Prezzo km inclusi","priceUnlimited":"Prezzo km illimitati","navRates":"Tariffe","navPhilosophy":"La nostra filosofia","navExperiences":"Esperienze","navContact":"Contatti","navRequest":"Richiesta","navImpressum":"Impressum","navBlog":"Journal","eyebrow":"Zurigo, Svizzera","ageText":"Età minima 21 anni","comingSoon":"Prossimamente","processTitle":"Come funziona","processNote":"Orari e luoghi vengono concordati individualmente. Ogni richiesta viene confermata personalmente prima del pagamento.","process1Title":"1. Richiesta","process1Body":"Invia data, orario e tariffa desiderata. Rispondiamo personalmente con disponibilità e una conferma chiara.","process2Title":"2. Conferma e pagamento","process2Body":"Dopo la conferma, il pagamento avviene in anticipo per bloccare la prenotazione. Ricevi una conferma scritta con i dettagli concordati.","process3Title":"3. Deposito rimborsabile","process3Body":"Il deposito viene versato al ritiro o prima. Serve come garanzia e viene rimborsato dopo la guida se l'auto viene restituita senza danni.","process4Title":"4. Incontro al punto di ritiro","process4Body":"Ci incontriamo nel luogo concordato. Documento e patente vengono verificati, poi ricevi una breve spiegazione dell’auto e delle regole di base.","process5Title":"5. La guida","process5Body":"Goditi l'esperienza entro durata e chilometraggio concordati. Restiamo reperibili per qualsiasi necessità.","process6Title":"6. Riconsegna","process6Body":"Riconsegna l’auto nel luogo e all’orario concordati. Un controllo rapido e la conferma di carburante e chilometraggio chiudono la consegna.","process7Title":"7. Rimborso del deposito","process7Body":"Se non ci sono danni, il deposito viene rimborsato immediatamente o entro la finestra concordata dopo la verifica.","age":"Età","pickupPricingTitle":"Costi di ritiro","thPickupArea":"Area di ritiro","thPickupPrice":"Prezzo","thPickupMain":"Principali località","pickupArea1":"Nänikon","pickupPrice1":"Incluso","pickupMain1":"Tutte le tariffe","pickupArea2":"Aeroporto di Zurigo","pickupPrice2":"Incluso nel 2026*","pickupMain2":"Aeroporto di Zurigo (ZRH)","pickupArea3":"Zurigo & Winterthur","pickupPrice3":"Incluso nel 2026**","pickupMain3":"Città di Zurigo, Winterthur","pickupArea4":"Ritiro regionale","pickupPrice4":"CHF 140","pickupMain4":"Zugo, Lucerna, San Gallo","pickupNote1":"* Il ritiro all’Aeroporto di Zurigo costa CHF 50 per Breve Fuga; incluso dai pacchetti 6h nel 2026.","soonTag":"Presto","pricingIntroP1":"I prezzi per il noleggio della Ferrari 458 Italia a Zurigo vanno confrontati considerando durata, chilometri, deposito e punto di ritiro, non solo la tariffa iniziale.","pricingIntroP2":"I pacchetti sono pensati per esperienze reali: breve impressione di 3 ore, mezza giornata, giornata intera, weekend o settimana in Svizzera, sempre con conferma personale prima del pagamento.","compareTitle":"Come confrontare correttamente i prezzi","compareP1":"Nel noleggio Ferrari a Zurigo, il prezzo va sempre valutato insieme a durata, chilometri inclusi, deposito, luogo di ritiro e percorso previsto. Un’offerta apparentemente più economica può essere meno adatta se il tempo è troppo breve o i chilometri non bastano per l’itinerario desiderato.","compareP2":"Per questo i nostri pacchetti seguono esperienze tipiche: breve impressione, mezza giornata, giornata intera, weekend e settimana. Prima della prenotazione confermiamo per iscritto cosa è incluso, quali chilometri valgono e quali costi extra nascono solo da richieste particolari.","pickupArea5":"Ritiro esteso","pickupPrice5":"CHF 290","pickupMain5":"Berna, Basilea, Coira","pickupNote2":"** Il ritiro a Zurigo e Winterthur costa CHF 80 per Breve Fuga e per i pacchetti 6h; incluso dai pacchetti 12h nel 2026.","pickupNote3":"Altre località su richiesta. Maggiori informazioni su","fullGallery":"Vai alla galleria completa"}};
     let PACKAGES = [];
 const DEFAULT_PACKAGES = [{"id":"P3_U","duration":"3h","label":{"en":"Brief Escape","de":"Kurztrip","it":"Breve Fuga"},"unlimited":{"price":440}},{"id":"P6_L","duration":"6h","label":{"en":"Signature Half Day","de":"Signature Halbtag","it":"Signature Mezza giornata"},"limited":[{"km":200,"price":780}],"unlimited":{"price":830}},{"id":"P12_L","duration":"12h","label":{"en":"Grand Tour","de":"Grand Tour","it":"Grand Tour"},"limited":[{"km":300,"price":940},{"km":500,"price":1140}],"unlimited":{"price":1290}},{"id":"P24_L200","duration":"24h","label":{"en":"Full Day Icon","de":"Full Day Icon","it":"Full Day Icon"},"limited":[{"km":200,"price":1340},{"km":500,"price":1590}],"unlimited":{"price":1990}},{"id":"WE_500","duration":"48h","label":{"en":"Weekend Escape","de":"Weekend Escape","it":"Weekend Escape"},"limited":[{"km":500,"price":1990},{"km":800,"price":2790}]},{"id":"WD","duration":{"en":"Mon-Fri","de":"Mo–Fr","it":"Lun–Ven"},"label":{"en":"Weekday Privilege","de":"Weekday Privilege","it":"Weekday Privilege"},"limited":[{"km":800,"price":2190}]},{"id":"FW","duration":{"en":"Full week","de":"Ganze Woche","it":"Settimana intera"},"label":{"en":"Full Week","de":"Ganze Woche","it":"Settimana intera"},"limited":[{"km":1400,"price":4480}]}];
 
@@ -2189,6 +2181,8 @@ const DEFAULT_PACKAGES = [{"id":"P3_U","duration":"3h","label":{"en":"Brief Esca
 
       setText("galleryLink", t.gallery);
       setHref("galleryLink", window.__LO__.buildUrl("gallery.html", lang));
+      setText("fullGalleryLink", t.fullGallery);
+      setHref("fullGalleryLink", window.__LO__.buildUrl("gallery.html", lang));
 
 
       // How it works
@@ -2230,8 +2224,18 @@ const DEFAULT_PACKAGES = [{"id":"P3_U","duration":"3h","label":{"en":"Brief Esca
       setText("pickupPrice4", t.pickupPrice4);
       setText("pickupMain4", t.pickupMain4);
 
+      setText("pickupArea5", t.pickupArea5);
+      setText("pickupPrice5", t.pickupPrice5);
+      setText("pickupMain5", t.pickupMain5);
+
       setText("pickupNote1", t.pickupNote1);
+      setText("pickupNote2", t.pickupNote2);
+      setText("pickupNote3", t.pickupNote3);
       setText("pickupNoteLink", t.pickup);
+
+      setText("compareTitle", t.compareTitle);
+      setText("compareP1", t.compareP1);
+      setText("compareP2", t.compareP2);
       setHref("pickupNoteLink", window.__LO__.buildUrl("locations.html", lang, "top"));
 
       const body = document.getElementById("pkgBody");

@@ -2095,8 +2095,8 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
 	  const pickupOptions = {
         en: [
           ["NANIKON", "Nänikon · FREE"],
-          ["ZURICH", "Zurich · FREE in 2026"],
           ["ZURICH_AIRPORT", "Zurich Airport · FREE in 2026"],
+          ["ZURICH", "Zurich · FREE in 2026"],
           ["WINTERTHUR", "Winterthur · FREE in 2026"],
           ["ZUG", "Zug · CHF 140"],
           ["LUCERNE", "Lucerne · CHF 140"],
@@ -2109,8 +2109,8 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
         ],
         de: [
           ["NANIKON", "Nänikon · KOSTENLOS"],
-          ["ZURICH", "Zürich · KOSTENLOS in 2026"],
           ["ZURICH_AIRPORT", "Flughafen Zürich · KOSTENLOS in 2026"],
+          ["ZURICH", "Zürich · KOSTENLOS in 2026"],
           ["WINTERTHUR", "Winterthur · KOSTENLOS in 2026"],
           ["ZUG", "Zug · CHF 140"],
           ["LUCERNE", "Lucerne · CHF 140"],
@@ -2123,8 +2123,8 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
         ],
         it: [
           ["NANIKON", "Nänikon · GRATIS"],
-          ["ZURICH", "Zurigo · GRATIS nel 2026"],
           ["ZURICH_AIRPORT", "Aeroporto di Zurigo · GRATIS nel 2026"],
+          ["ZURICH", "Zurigo · GRATIS nel 2026"],
           ["WINTERTHUR", "Winterthur · GRATIS nel 2026"],
           ["ZUG", "Zug · CHF 140"],
           ["LUCERNE", "Lucerna · CHF 140"],
@@ -2137,22 +2137,51 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
         ]
       };
 
-      const briefEscapePaidPickupValues = ["ZURICH", "ZURICH_AIRPORT", "WINTERTHUR"];
-      const briefEscapePaidPickupLabels = {
-        en: {
-          ZURICH: "Zurich · CHF 50",
-          ZURICH_AIRPORT: "Zurich Airport · CHF 50",
-          WINTERTHUR: "Winterthur · CHF 50"
+      const paidPickupLabelOverrides = {
+        P3_U: {
+          en: {
+            ZURICH_AIRPORT: "Zurich Airport · CHF 50",
+            ZURICH: "Zurich · CHF 80",
+            WINTERTHUR: "Winterthur · CHF 80"
+          },
+          de: {
+            ZURICH_AIRPORT: "Flughafen Zürich · CHF 50",
+            ZURICH: "Zürich · CHF 80",
+            WINTERTHUR: "Winterthur · CHF 80"
+          },
+          it: {
+            ZURICH_AIRPORT: "Aeroporto di Zurigo · CHF 50",
+            ZURICH: "Zurigo · CHF 80",
+            WINTERTHUR: "Winterthur · CHF 80"
+          }
         },
-        de: {
-          ZURICH: "Zürich · CHF 50",
-          ZURICH_AIRPORT: "Flughafen Zürich · CHF 50",
-          WINTERTHUR: "Winterthur · CHF 50"
+        P6_L: {
+          en: {
+            ZURICH: "Zurich · CHF 80",
+            WINTERTHUR: "Winterthur · CHF 80"
+          },
+          de: {
+            ZURICH: "Zürich · CHF 80",
+            WINTERTHUR: "Winterthur · CHF 80"
+          },
+          it: {
+            ZURICH: "Zurigo · CHF 80",
+            WINTERTHUR: "Winterthur · CHF 80"
+          }
         },
-        it: {
-          ZURICH: "Zurigo · CHF 50",
-          ZURICH_AIRPORT: "Aeroporto di Zurigo · CHF 50",
-          WINTERTHUR: "Winterthur · CHF 50"
+        P6_U: {
+          en: {
+            ZURICH: "Zurich · CHF 80",
+            WINTERTHUR: "Winterthur · CHF 80"
+          },
+          de: {
+            ZURICH: "Zürich · CHF 80",
+            WINTERTHUR: "Winterthur · CHF 80"
+          },
+          it: {
+            ZURICH: "Zurigo · CHF 80",
+            WINTERTHUR: "Winterthur · CHF 80"
+          }
         }
       };
 
@@ -2160,13 +2189,13 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
         const previousValue = pickupSel.value;
         const packageSel = document.getElementById("packageId");
         const selectedPackageId = packageSel ? packageSel.value : "";
-        const isBriefEscape = selectedPackageId === "P3_U";
-        const paidLabels = briefEscapePaidPickupLabels[lang] || briefEscapePaidPickupLabels.en;
+        const packageOverrides = paidPickupLabelOverrides[selectedPackageId] || null;
+        const pickupOverrides = packageOverrides ? (packageOverrides[lang] || packageOverrides.en || {}) : {};
 
         pickupSel.innerHTML = "";
         (pickupOptions[lang] || pickupOptions.en).forEach(([val, label], i) => {
-          if(isBriefEscape && briefEscapePaidPickupValues.includes(val)){
-            label = paidLabels[val] || label;
+          if(pickupOverrides[val]){
+            label = pickupOverrides[val];
           }
 
           const opt = document.createElement("option");
