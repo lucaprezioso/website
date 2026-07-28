@@ -34,3 +34,4 @@ Disallow: /media/poster_480.jpg
 Disallow: /media/poster_480.webp
 
 Sitemap: https://luxuryobsession.ch/sitemap.xml
+Sitemap: https://luxuryobsession.ch/video-sitemap.xml

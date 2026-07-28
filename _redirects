@@ -500,3 +500,17 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /galerie                  /galerie.html            200
 /en/gallery               /en/gallery.html         200
 /it/galleria              /it/galleria.html        200
+
+# Luxury Obsession company video watch pages
+/en/luxury-obsession-video       /luxury-obsession-video.html       200
+/de/luxury-obsession-video       /de/luxury-obsession-video.html    200
+/it/luxury-obsession-video       /it/luxury-obsession-video.html    200
+
+/en/ferrari-458-klausen-pass-drive-zurich.html             /en/ferrari-458-klausen-pass-drive-zurich                    301!
+/de/ferrari-458-klausenpass-fahrt-zuerich.html             /de/ferrari-458-klausenpass-fahrt-zuerich                    301!
+/it/ferrari-458-passo-del-clausen-zurigo.html              /it/ferrari-458-passo-del-clausen-zurigo                     301!
+/en/ferrari-458-klausen-pass-drive-zurich                  /pages/ferrari-458-klausen-pass-drive-zurich.html            200
+/de/ferrari-458-klausenpass-fahrt-zuerich                  /pages/de/ferrari-458-klausenpass-fahrt-zuerich.html         200
+/it/ferrari-458-passo-del-clausen-zurigo                   /pages/it/ferrari-458-passo-del-clausen-zurigo.html          200
+/de/ferrari-458-klausen-pass-drive-zurich                 /de/ferrari-458-klausenpass-fahrt-zuerich                  301!
+/it/ferrari-458-klausen-pass-drive-zurich                 /it/ferrari-458-passo-del-clausen-zurigo                   301!
