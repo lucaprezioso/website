@@ -523,3 +523,15 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /it/regalo-compleanno-ferrari-kyburg-zurigo                 /pages/it/regalo-compleanno-ferrari-kyburg-zurigo.html    200
 /de/ferrari-birthday-gift-kyburg-zurich                     /de/ferrari-geburtstagsgeschenk-kyburg-zuerich            301!
 /it/ferrari-birthday-gift-kyburg-zurich                     /it/regalo-compleanno-ferrari-kyburg-zurigo               301!
+
+# Ferrari experiences video article (published 1 August 2026)
+/en/ferrari-458-experiences-video.html                 /en/ferrari-458-experiences-video               301!
+/de/ferrari-458-experiences-video.html                 /de/ferrari-458-erlebnisse-video                 301!
+/de/ferrari-458-experiences-video                      /de/ferrari-458-erlebnisse-video                 301!
+/it/ferrari-458-experiences-video.html                 /it/video-esperienze-ferrari-458                 301!
+/it/ferrari-458-experiences-video                      /it/video-esperienze-ferrari-458                 301!
+/de/ferrari-458-erlebnisse-video.html                  /de/ferrari-458-erlebnisse-video                 301!
+/it/video-esperienze-ferrari-458.html                  /it/video-esperienze-ferrari-458                 301!
+/en/ferrari-458-experiences-video                      /ferrari-458-experiences-video.html              200
+/de/ferrari-458-erlebnisse-video                       /de/ferrari-458-erlebnisse-video.html            200
+/it/video-esperienze-ferrari-458                       /it/video-esperienze-ferrari-458.html            200

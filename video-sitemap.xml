@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://luxuryobsession.ch/en/luxury-obsession-video</loc>
     <video:video>
       <video:thumbnail_loc>https://i.ytimg.com/vi/PYoR6QuHE5E/hqdefault.jpg</video:thumbnail_loc>
-      <video:title><![CDATA[Meet Luxury Obsession: Ferrari 458 Italia rental near Zurich]]></video:title>
-      <video:description><![CDATA[In this short video, Anna introduces Luxury Obsession, a personally operated Ferrari rental company near Zurich, and the Rosso Corsa Ferrari 458 Italia at the heart of its driving experiences.]]></video:description>
+      <video:title>Meet Luxury Obsession: Ferrari 458 Italia rental near Zurich</video:title>
+      <video:description>In this short video, Anna introduces Luxury Obsession, a personally operated Ferrari rental company near Zurich, and the Rosso Corsa Ferrari 458 Italia at the heart of its driving experiences.</video:description>
       <video:player_loc>https://www.youtube.com/embed/PYoR6QuHE5E</video:player_loc>
       <video:duration>20</video:duration>
       <video:publication_date>2026-07-13</video:publication_date>
@@ -22,8 +22,8 @@
     <loc>https://luxuryobsession.ch/de/luxury-obsession-video</loc>
     <video:video>
       <video:thumbnail_loc>https://i.ytimg.com/vi/PYoR6QuHE5E/hqdefault.jpg</video:thumbnail_loc>
-      <video:title><![CDATA[Luxury Obsession kennenlernen: Ferrari 458 Italia mieten bei Zürich]]></video:title>
-      <video:description><![CDATA[In diesem Kurzvideo stellt Anna Luxury Obsession vor, eine persönlich geführte Ferrari-Vermietung bei Zürich, und den Ferrari 458 Italia in Rosso Corsa im Mittelpunkt der Fahrerlebnisse.]]></video:description>
+      <video:title>Luxury Obsession kennenlernen: Ferrari 458 Italia mieten bei Zürich</video:title>
+      <video:description>In diesem Kurzvideo stellt Anna Luxury Obsession vor, eine persönlich geführte Ferrari-Vermietung bei Zürich, und den Ferrari 458 Italia in Rosso Corsa im Mittelpunkt der Fahrerlebnisse.</video:description>
       <video:player_loc>https://www.youtube.com/embed/PYoR6QuHE5E</video:player_loc>
       <video:duration>20</video:duration>
       <video:publication_date>2026-07-13</video:publication_date>
@@ -40,8 +40,8 @@
     <loc>https://luxuryobsession.ch/it/luxury-obsession-video</loc>
     <video:video>
       <video:thumbnail_loc>https://i.ytimg.com/vi/PYoR6QuHE5E/hqdefault.jpg</video:thumbnail_loc>
-      <video:title><![CDATA[Conosci Luxury Obsession: noleggio Ferrari 458 Italia vicino a Zurigo]]></video:title>
-      <video:description><![CDATA[In questo breve video Anna presenta Luxury Obsession, un servizio di noleggio Ferrari gestito personalmente vicino a Zurigo, e la Ferrari 458 Italia Rosso Corsa al centro delle esperienze di guida.]]></video:description>
+      <video:title>Conosci Luxury Obsession: noleggio Ferrari 458 Italia vicino a Zurigo</video:title>
+      <video:description>In questo breve video Anna presenta Luxury Obsession, un servizio di noleggio Ferrari gestito personalmente vicino a Zurigo, e la Ferrari 458 Italia Rosso Corsa al centro delle esperienze di guida.</video:description>
       <video:player_loc>https://www.youtube.com/embed/PYoR6QuHE5E</video:player_loc>
       <video:duration>20</video:duration>
       <video:publication_date>2026-07-13</video:publication_date>
@@ -54,4 +54,4 @@
       <video:tag>Switzerland</video:tag>
     </video:video>
   </url>
-</urlset>
+<url><loc>https://luxuryobsession.ch/en/ferrari-458-experiences-video</loc><video:video><video:thumbnail_loc>https://i.ytimg.com/vi/Vn6Hq991duo/hqdefault.jpg</video:thumbnail_loc><video:title>Chasing sunsets in a Ferrari 458 Italia</video:title><video:description>A short film about the Ferrari 458 Italia, quiet roads near Zurich, evening light and personally hosted Ferrari experiences in Switzerland.</video:description><video:player_loc>https://www.youtube.com/embed/Vn6Hq991duo</video:player_loc><video:family_friendly>yes</video:family_friendly><video:uploader>Luxury Obsession</video:uploader><video:live>no</video:live><video:tag>Luxury Obsession</video:tag><video:tag>Ferrari 458 Italia</video:tag><video:tag>Ferrari experiences Zurich</video:tag><video:tag>Switzerland</video:tag></video:video></url><url><loc>https://luxuryobsession.ch/de/ferrari-458-erlebnisse-video</loc><video:video><video:thumbnail_loc>https://i.ytimg.com/vi/Vn6Hq991duo/hqdefault.jpg</video:thumbnail_loc><video:title>Sonnenuntergang im Ferrari 458 Italia</video:title><video:description>Ein Kurzfilm über den Ferrari 458 Italia, ruhige Strassen bei Zürich, Abendlicht und persönlich betreute Ferrari Erlebnisse in der Schweiz.</video:description><video:player_loc>https://www.youtube.com/embed/Vn6Hq991duo</video:player_loc><video:family_friendly>yes</video:family_friendly><video:uploader>Luxury Obsession</video:uploader><video:live>no</video:live><video:tag>Luxury Obsession</video:tag><video:tag>Ferrari 458 Italia</video:tag><video:tag>Ferrari experiences Zurich</video:tag><video:tag>Switzerland</video:tag></video:video></url><url><loc>https://luxuryobsession.ch/it/video-esperienze-ferrari-458</loc><video:video><video:thumbnail_loc>https://i.ytimg.com/vi/Vn6Hq991duo/hqdefault.jpg</video:thumbnail_loc><video:title>Inseguendo il tramonto in Ferrari 458 Italia</video:title><video:description>Un breve film sulla Ferrari 458 Italia, strade tranquille vicino a Zurigo, luce serale ed esperienze Ferrari gestite personalmente in Svizzera.</video:description><video:player_loc>https://www.youtube.com/embed/Vn6Hq991duo</video:player_loc><video:family_friendly>yes</video:family_friendly><video:uploader>Luxury Obsession</video:uploader><video:live>no</video:live><video:tag>Luxury Obsession</video:tag><video:tag>Ferrari 458 Italia</video:tag><video:tag>Ferrari experiences Zurich</video:tag><video:tag>Switzerland</video:tag></video:video></url></urlset>

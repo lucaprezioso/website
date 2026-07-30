@@ -357,9 +357,13 @@
 <select id="blogCategory"><option value="">All categories</option></select>
 </div>
 </div>
-<div aria-live="polite" class="blogResults" id="blogResults">Showing 19 of 19</div>
+<div aria-live="polite" class="blogResults" id="blogResults">Showing 20 of 20</div>
 </div>
 <div class="blogGrid" id="blogGrid">
+<a aria-label="Chasing sunsets in a Ferrari 458 Italia" class="card blogCard" href="/en/ferrari-458-experiences-video#top">
+<img alt="Ferrari 458 Italia at sunset near Zurich" class="blogThumb" decoding="async" loading="lazy" src="/media/gallery/hotel-front-sunset-960.webp"/>
+<div class="blogCardInner"><div><div class="blogMeta"><span class="blogPill">Experience</span><span>·</span><time datetime="2026-08-01">2026-08-01</time><span>·</span><span>3 min</span></div><h3 class="blogTitle">Chasing sunsets in a Ferrari 458 Italia</h3><p class="blogExcerpt">A short film about quiet roads near Zurich, evening light and the atmosphere behind a personally hosted Ferrari 458 Italia experience.</p></div><div class="blogRead">Read <span aria-hidden="true">→</span></div></div></a>
+
 <a aria-label="Ferrari 458 Italia birthday gift: a Brief Escape to Kyburg" class="card blogCard" href="/en/ferrari-birthday-gift-kyburg-zurich#top">
 <img alt="Ferrari 458 Italia birthday gift near Schloss Kyburg" class="blogThumb" decoding="async" loading="lazy" src="/media/kyburg-birthday-arrival-960.webp"/>
 <div class="blogCardInner"><div><div class="blogMeta"><span class="blogPill">Experience</span><span>·</span><time datetime="2026-07-27">2026-07-27</time><span>·</span><span>5 min</span></div><h3 class="blogTitle">Ferrari 458 Italia birthday gift: a Brief Escape to Kyburg</h3><p class="blogExcerpt">A birthday surprise, a first supercar drive and three hours from Nänikon to Schloss Kyburg in a naturally aspirated Ferrari 458 Italia.</p></div><div class="blogRead">Read <span aria-hidden="true">→</span></div></div></a>
@@ -738,6 +742,24 @@ const I18N = {
 };
 
 const ARTICLES = [
+
+{
+  slug: "ferrari-458-experiences-video.html",
+  category: {en:"Experience", de:"Erlebnis", it:"Esperienza"},
+  date: "2026-08-01",
+  read: {en:"3 min", de:"3 Min.", it:"3 min"},
+  title: {
+    en:"Chasing sunsets in a Ferrari 458 Italia",
+    de:"Sonnenuntergang im Ferrari 458 Italia",
+    it:"Inseguendo il tramonto in Ferrari 458 Italia"
+  },
+  excerpt: {
+    en:"A short film about quiet roads near Zurich, evening light and the atmosphere behind a personally hosted Ferrari 458 Italia experience.",
+    de:"Ein Kurzfilm über ruhige Strassen bei Zürich, Abendlicht und die Atmosphäre eines persönlich betreuten Ferrari 458 Italia Erlebnisses.",
+    it:"Un breve film su strade tranquille vicino a Zurigo, luce serale e l’atmosfera di un’esperienza Ferrari 458 Italia gestita personalmente."
+  },
+  image: "/media/gallery/hotel-front-sunset-960.webp"
+},
 
 {
   slug: "ferrari-birthday-gift-kyburg-zurich.html",
