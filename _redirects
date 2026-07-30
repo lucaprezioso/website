@@ -514,3 +514,12 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /it/ferrari-458-passo-del-clausen-zurigo                   /pages/it/ferrari-458-passo-del-clausen-zurigo.html          200
 /de/ferrari-458-klausen-pass-drive-zurich                 /de/ferrari-458-klausenpass-fahrt-zuerich                  301!
 /it/ferrari-458-klausen-pass-drive-zurich                 /it/ferrari-458-passo-del-clausen-zurigo                   301!
+
+/en/ferrari-birthday-gift-kyburg-zurich.html                 /en/ferrari-birthday-gift-kyburg-zurich                    301!
+/de/ferrari-geburtstagsgeschenk-kyburg-zuerich.html         /de/ferrari-geburtstagsgeschenk-kyburg-zuerich            301!
+/it/regalo-compleanno-ferrari-kyburg-zurigo.html            /it/regalo-compleanno-ferrari-kyburg-zurigo               301!
+/en/ferrari-birthday-gift-kyburg-zurich                     /pages/ferrari-birthday-gift-kyburg-zurich.html           200
+/de/ferrari-geburtstagsgeschenk-kyburg-zuerich              /pages/de/ferrari-geburtstagsgeschenk-kyburg-zuerich.html 200
+/it/regalo-compleanno-ferrari-kyburg-zurigo                 /pages/it/regalo-compleanno-ferrari-kyburg-zurigo.html    200
+/de/ferrari-birthday-gift-kyburg-zurich                     /de/ferrari-geburtstagsgeschenk-kyburg-zuerich            301!
+/it/ferrari-birthday-gift-kyburg-zurich                     /it/regalo-compleanno-ferrari-kyburg-zurigo               301!
