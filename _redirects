@@ -29,6 +29,15 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /pages/own_vs_rent_annual_costs_v2.png         /media/own_vs_rent_annual_costs_v2.png         301!
 /pages/breakeven_uses_per_year_v2.png          /media/breakeven_uses_per_year_v2.png          301!
 
+# About hub canonical URLs
+/about-us.html                                                       /en/about-us                                                          301!
+/about-us                                                            /en/about-us                                                          301!
+/ueber-uns.html                                                      /ueber-uns                                                            301!
+/en/about-us.html                                                    /en/about-us                                                          301!
+/it/chi-siamo.html                                                   /it/chi-siamo                                                         301!
+/de/ueber-uns                                                        /ueber-uns                                                            301!
+/de/about-us                                                         /ueber-uns                                                            301!
+
 # Round 10 canonical cleanup, localized article slugs and occasion pages
 /experiences.html                                                      /en/experiences                                                        301!
 /philosophy.html                                                       /en/philosophy                                                         301!
@@ -175,6 +184,9 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 
 
 # German-first canonical pages
+/ueber-uns               /ueber-uns.html          200
+/en/about-us             /en/about-us.html        200
+/it/chi-siamo            /it/chi-siamo.html       200
 /preise                   /pages/de/pricing.html   200
 /erlebnisse               /de/experiences.html     200
 /philosophie              /de/philosophy.html      200

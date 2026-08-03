@@ -1396,3 +1396,305 @@ footer{
 @media(max-width:900px){.galleryHeroGrid{grid-template-columns:1fr}.galleryHeroMedia{aspect-ratio:16/10}.galleryFilters{grid-template-columns:1fr 1fr}.galleryCount{grid-column:1/-1;justify-self:start}.galleryPageGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.galleryCtaCard{align-items:flex-start;flex-direction:column}.galleryCtaActions{justify-content:flex-start}}
 @media(max-width:560px){.galleryPageHero{padding-top:1.4rem}.galleryHeroGrid{gap:1.15rem}.galleryHeroMedia{border-radius:20px;aspect-ratio:4/3}.galleryFilters{grid-template-columns:1fr;padding:0.9rem}.galleryCount{grid-column:auto}.galleryPageGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:0.58rem}.galleryCard{aspect-ratio:4/5;border-radius:14px}.galleryCardMeta{left:0.45rem;right:0.45rem;bottom:0.45rem;gap:0.28rem}.galleryCardMeta span{padding:0.23rem 0.4rem;font-size:0.61rem}.galleryCtaActions{width:100%}.galleryCtaActions .btn{justify-content:center;flex:1 1 100%}}
 @media(max-width:340px){.galleryPageGrid{grid-template-columns:1fr}}
+
+/* ===== Homepage mobile simplification and About hub ===== */
+#occasionLinks .occasionAccordion{
+  margin:0;
+  border:0;
+  background:transparent;
+}
+#occasionLinks .occasionAccordionSummary{
+  display:none;
+}
+#occasionLinks .occasionAccordionContent{
+  display:block;
+}
+
+@media (max-width:760px){
+  /* Keep the request heading and conversion actions, remove repeated explanatory copy. */
+  #request #requestSub{
+    display:none !important;
+  }
+  #request .requestLayout{
+    margin-top:1.25rem !important;
+    gap:1rem !important;
+  }
+  #request .requestContactCard{
+    padding:0 !important;
+    border:0 !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    overflow:visible !important;
+  }
+  #request .requestContactCard::before,
+  #request .requestContactCard::after{
+    display:none !important;
+  }
+  #request .requestContactCard .requestCardHeader,
+  #request .requestContactCard > ul{
+    display:none !important;
+  }
+  #request .requestContactCard .ctaRow{
+    display:grid !important;
+    grid-template-columns:minmax(0,1.35fr) minmax(0,0.9fr) minmax(0,0.9fr) !important;
+    gap:0.55rem !important;
+    margin:0 !important;
+  }
+  #request .requestContactCard .ctaBtn{
+    min-width:0 !important;
+    justify-content:center !important;
+    padding:0.78rem 0.55rem !important;
+    border-radius:14px !important;
+    font-size:0.9rem !important;
+    line-height:1.1 !important;
+  }
+
+  /* Progressive-enhancement accordion: content stays in the initial HTML for SEO. */
+  #occasionLinks{
+    padding:0.8rem 0 1.35rem !important;
+  }
+  #occasionLinks + #pricing{
+    padding-top:1.75rem !important;
+  }
+  #occasionLinks .occasionAccordion{
+    border:1px solid rgba(231,220,198,0.14) !important;
+    border-radius:20px !important;
+    background:rgba(255,255,255,0.022) !important;
+    overflow:hidden !important;
+  }
+  #occasionLinks .occasionAccordionSummary{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:1rem !important;
+    padding:1rem !important;
+    cursor:pointer !important;
+    list-style:none !important;
+    color:var(--text) !important;
+  }
+  #occasionLinks .occasionAccordionSummary::-webkit-details-marker{
+    display:none !important;
+  }
+  #occasionLinks .occasionAccordionSummary::after{
+    content:"+";
+    display:grid;
+    place-items:center;
+    flex:0 0 auto;
+    width:2rem;
+    height:2rem;
+    border-radius:999px;
+    border:1px solid rgba(231,220,198,0.18);
+    color:rgba(243,241,238,0.86);
+    font-size:1.1rem;
+    line-height:1;
+  }
+  #occasionLinks .occasionAccordion[open] .occasionAccordionSummary::after{
+    content:"×";
+  }
+  #occasionLinks .occasionAccordionLabel{
+    font-family:var(--font-serif, "Cormorant Garamond", serif);
+    font-size:1.28rem;
+    font-weight:600;
+    line-height:1.12;
+  }
+  #occasionLinks .occasionAccordionContent{
+    padding:0 1rem 1rem !important;
+  }
+  #occasionLinks .occasionAccordionContent .sectionTitle{
+    font-size:1.55rem !important;
+  }
+  #occasionLinks .occasionAccordionContent .sectionSubtitle{
+    line-height:1.65 !important;
+  }
+}
+
+@media (max-width:360px){
+  #request .requestContactCard .ctaRow{
+    grid-template-columns:1fr 1fr !important;
+  }
+  #request .requestContactCard .ctaBtn:first-child{
+    grid-column:1 / -1 !important;
+  }
+}
+
+/* About hub */
+.aboutPage{
+  padding-bottom:2rem;
+}
+.aboutHero{
+  padding:clamp(2.2rem,6vw,5.2rem) 0 2.2rem;
+}
+.aboutHeroGrid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(320px,0.82fr);
+  gap:clamp(1.4rem,4vw,3.4rem);
+  align-items:center;
+}
+.aboutEyebrow{
+  margin:0 0 0.85rem;
+  color:rgba(231,220,198,0.72);
+  font-size:0.72rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+}
+.aboutTitle{
+  margin:0;
+  font-family:var(--font-serif, "Cormorant Garamond", serif);
+  font-size:clamp(2.7rem,6vw,5.4rem);
+  font-weight:500;
+  line-height:0.98;
+  letter-spacing:-0.025em;
+}
+.aboutLead{
+  max-width:42rem;
+  margin:1.15rem 0 0;
+  color:var(--muted);
+  font-size:1.04rem;
+  line-height:1.75;
+}
+.aboutHeroActions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.75rem;
+  margin-top:1.45rem;
+}
+.aboutHeroMedia{
+  margin:0;
+  aspect-ratio:4/5;
+  border-radius:28px;
+  overflow:hidden;
+  border:1px solid rgba(231,220,198,0.16);
+  background:#09090c;
+  box-shadow:0 26px 70px rgba(0,0,0,0.42);
+}
+.aboutHeroMedia img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+.aboutSection{
+  padding:2.4rem 0;
+}
+.aboutSectionHeader{
+  max-width:48rem;
+  margin-bottom:1.35rem;
+}
+.aboutSectionTitle{
+  margin:0;
+  font-family:var(--font-serif, "Cormorant Garamond", serif);
+  font-size:clamp(2rem,4vw,3.2rem);
+  font-weight:500;
+  line-height:1.05;
+}
+.aboutSectionIntro{
+  margin:0.75rem 0 0;
+  color:var(--muted);
+  line-height:1.7;
+}
+.aboutLinkGrid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:0.9rem;
+}
+.aboutLinkCard{
+  display:block;
+  min-height:165px;
+  padding:1.25rem;
+  border-radius:20px;
+  border:1px solid rgba(231,220,198,0.14);
+  background:linear-gradient(150deg,rgba(255,255,255,0.045),rgba(231,220,198,0.018));
+  transition:border-color .18s ease,transform .18s ease,background .18s ease;
+}
+.aboutLinkCard:hover{
+  transform:translateY(-2px);
+  border-color:rgba(231,220,198,0.3);
+  background:linear-gradient(150deg,rgba(231,220,198,0.07),rgba(255,255,255,0.03));
+}
+.aboutLinkCard h2,
+.aboutLinkCard h3{
+  margin:0;
+  font-family:var(--font-serif, "Cormorant Garamond", serif);
+  font-size:1.65rem;
+  font-weight:600;
+}
+.aboutLinkCard p{
+  margin:0.55rem 0 0;
+  color:var(--muted);
+  line-height:1.6;
+}
+.aboutLinkArrow{
+  display:inline-block;
+  margin-top:1rem;
+  color:rgba(231,220,198,0.86);
+  font-weight:600;
+}
+.aboutLegalCard{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1.2rem;
+  padding:1.25rem;
+  border-radius:20px;
+  border:1px solid rgba(231,220,198,0.13);
+  background:rgba(255,255,255,0.022);
+}
+.aboutLegalCopy h2{
+  margin:0;
+  font-family:var(--font-serif, "Cormorant Garamond", serif);
+  font-size:1.8rem;
+}
+.aboutLegalCopy p{
+  margin:0.45rem 0 0;
+  color:var(--muted);
+  line-height:1.6;
+}
+.aboutLegalLinks{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:0.55rem;
+}
+.aboutLegalLinks a{
+  padding:0.58rem 0.78rem;
+  border-radius:999px;
+  border:1px solid rgba(231,220,198,0.15);
+  color:rgba(243,241,238,0.82);
+  font-size:0.86rem;
+}
+.aboutLegalLinks a:hover{
+  border-color:rgba(231,220,198,0.3);
+  color:#fff;
+}
+
+@media(max-width:820px){
+  .aboutHeroGrid{
+    grid-template-columns:1fr;
+  }
+  .aboutHeroMedia{
+    aspect-ratio:16/10;
+    max-width:680px;
+  }
+}
+@media(max-width:620px){
+  .aboutHero{
+    padding-top:1.45rem;
+  }
+  .aboutTitle{
+    font-size:clamp(2.55rem,13vw,4rem);
+  }
+  .aboutLinkGrid{
+    grid-template-columns:1fr;
+  }
+  .aboutLinkCard{
+    min-height:0;
+  }
+  .aboutLegalCard{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .aboutLegalLinks{
+    justify-content:flex-start;
+  }
+}

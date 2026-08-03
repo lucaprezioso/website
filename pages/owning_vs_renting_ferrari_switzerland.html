@@ -456,7 +456,7 @@ try {
     window.history.replaceState(null, "", u.pathname + u.hash);
   }
 } catch (e) {}
-</script></head>
+</script><link href="/assets/lo.journal-back.css" rel="stylesheet"/></head>
 <body>
 <header>
 <div class="container">
@@ -497,7 +497,7 @@ try {
 <main>
 <section class="hero">
 <div class="container articleWrap">
-<div class="eyebrow" id="eyebrow">Luxury Obsession</div>
+<a class="journalBackLink" href="/en/journal"><span aria-hidden="true" class="journalBackLink__arrow">←</span><span>Back to Journal</span></a><div class="eyebrow" id="eyebrow">Luxury Obsession</div>
 <h1 class="heroTitle"><span id="titleA">Owning vs renting</span> <span class="heroHighlight" id="titleB">midengine Ferrari, Switzerland</span></h1>
 <p class="heroDeck" id="deck">A Swiss weekend car cost model using a leased CHF 180,000 Ferrari 458 Italia and pricing loaded from packages.json. Pay for the moments, avoid the fixed cost stack.</p>
 <div class="meta" id="metaDate">2026 01 17</div>
@@ -551,7 +551,7 @@ try {
 <thead><tr><th>Rental option</th><th>Price</th></tr></thead>
 <tbody id="loPackagesRows">
 <tr data-pkgid="P3_U"><td><strong>Brief Escape</strong> <span class="tag">3h · Unlimited · Unlimited</span></td><td>CHF 440</td></tr>
-<tr data-pkgid="P6_L"><td><strong>Signature Half Day</strong> <span class="tag">6h · 200 · Most chosen</span></td><td>CHF 780</td></tr>
+<tr data-pkgid="P6_L"><td><strong>Signature Half Day</strong> <span class="tag">6h · 200 · Most chosen</span></td><td>CHF 680</td></tr>
 <tr data-pkgid="P6_U"><td><strong>Signature Half Day Unlimited</strong> <span class="tag">6h · Unlimited · Unlimited</span></td><td>CHF 830</td></tr>
 <tr data-pkgid="P12_L"><td><strong>Grand Tour 300</strong> <span class="tag">12h · 300 · Day trip</span></td><td>CHF 940</td></tr>
 <tr data-pkgid="P12_L500"><td><strong>Grand Tour 500</strong> <span class="tag">12h · 500 · Day trip</span></td><td>CHF 1'140</td></tr>
@@ -715,7 +715,7 @@ try {
     <thead><tr><th>Rental option</th><th>Price</th></tr></thead>
     <tbody id="loPackagesRows">
       <tr data-pkgid="P3_U"><td><strong>Brief Escape</strong> <span class="tag">3h · Unlimited · Unlimited</span></td><td>CHF 440</td></tr>
-<tr data-pkgid="P6_L"><td><strong>Signature Half Day</strong> <span class="tag">6h · 200 · Most chosen</span></td><td>CHF 780</td></tr>
+<tr data-pkgid="P6_L"><td><strong>Signature Half Day</strong> <span class="tag">6h · 200 · Most chosen</span></td><td>CHF 680</td></tr>
 <tr data-pkgid="P6_U"><td><strong>Signature Half Day Unlimited</strong> <span class="tag">6h · Unlimited · Unlimited</span></td><td>CHF 830</td></tr>
 <tr data-pkgid="P12_L"><td><strong>Grand Tour 300</strong> <span class="tag">12h · 300 · Day trip</span></td><td>CHF 940</td></tr>
 <tr data-pkgid="P12_L500"><td><strong>Grand Tour 500</strong> <span class="tag">12h · 500 · Day trip</span></td><td>CHF 1'140</td></tr>
@@ -853,7 +853,7 @@ try {
     <thead><tr><th>Option</th><th>Preis</th></tr></thead>
     <tbody id="loPackagesRows">
       <tr data-pkgid="P3_U"><td><strong>Kurztrip</strong> <span class="tag">3h · Unlimited · Unlimited</span></td><td>CHF 440</td></tr>
-<tr data-pkgid="P6_L"><td><strong>Signature Halbtag</strong> <span class="tag">6h · 200 · Beliebt</span></td><td>CHF 780</td></tr>
+<tr data-pkgid="P6_L"><td><strong>Signature Halbtag</strong> <span class="tag">6h · 200 · Beliebt</span></td><td>CHF 680</td></tr>
 <tr data-pkgid="P6_U"><td><strong>Signature Halbtag Unlimited</strong> <span class="tag">6h · Unlimited · Unlimited</span></td><td>CHF 830</td></tr>
 <tr data-pkgid="P12_L"><td><strong>Grand Tour 300</strong> <span class="tag">12h · 300 · Tagestrip</span></td><td>CHF 940</td></tr>
 <tr data-pkgid="P12_L500"><td><strong>Grand Tour 500</strong> <span class="tag">12h · 500 · Tagestrip</span></td><td>CHF 1'140</td></tr>
@@ -989,7 +989,7 @@ try {
     <thead><tr><th>Opzione</th><th>Prezzo</th></tr></thead>
     <tbody id="loPackagesRows">
       <tr data-pkgid="P3_U"><td><strong>Breve Fuga</strong> <span class="tag">3h · Unlimited · Unlimited</span></td><td>CHF 440</td></tr>
-<tr data-pkgid="P6_L"><td><strong>Signature Mezza giornata</strong> <span class="tag">6h · 200 · Più scelto</span></td><td>CHF 780</td></tr>
+<tr data-pkgid="P6_L"><td><strong>Signature Mezza giornata</strong> <span class="tag">6h · 200 · Più scelto</span></td><td>CHF 680</td></tr>
 <tr data-pkgid="P6_U"><td><strong>Signature Mezza giornata Unlimited</strong> <span class="tag">6h · Unlimited · Unlimited</span></td><td>CHF 830</td></tr>
 <tr data-pkgid="P12_L"><td><strong>Grand Tour 300</strong> <span class="tag">12h · 300 · Giornata</span></td><td>CHF 940</td></tr>
 <tr data-pkgid="P12_L500"><td><strong>Grand Tour 500</strong> <span class="tag">12h · 500 · Giornata</span></td><td>CHF 1'140</td></tr>
@@ -1043,7 +1043,7 @@ try {
 
 
 // Pricing packages: try to load from ./data/packages.json, fall back to baked in values.
-const LO_FALLBACK_PACKAGES = [{"id": "P3_U", "duration": "3h", "km": "Unlimited", "price": 440, "label": {"en": "Brief Escape", "de": "Kurztrip", "it": "Breve Fuga"}, "tag": {"en": "Unlimited", "de": "Unlimited", "it": "Unlimited"}}, {"id": "P6_L", "duration": "6h", "km": "200", "price": 780, "label": {"en": "Signature Half Day", "de": "Signature Halbtag", "it": "Signature Mezza giornata"}, "tag": {"en": "Most chosen", "de": "Beliebt", "it": "Più scelto"}}, {"id": "P6_U", "duration": "6h", "km": "Unlimited", "price": 830, "label": {"en": "Signature Half Day Unlimited", "de": "Signature Halbtag Unlimited", "it": "Signature Mezza giornata Unlimited"}, "tag": {"en": "Unlimited", "de": "Unlimited", "it": "Unlimited"}}, {"id": "P12_L", "duration": "12h", "km": "300", "price": 940, "label": {"en": "Grand Tour 300", "de": "Grand Tour 300", "it": "Grand Tour 300"}, "tag": {"en": "Day trip", "de": "Tagestrip", "it": "Giornata"}}, {"id": "P12_L500", "duration": "12h", "km": "500", "price": 1140, "label": {"en": "Grand Tour 500", "de": "Grand Tour 500", "it": "Grand Tour 500"}, "tag": {"en": "Day trip", "de": "Tagestrip", "it": "Giornata"}}, {"id": "P12_U", "duration": "12h", "km": "Unlimited", "price": 1290, "label": {"en": "Grand Tour Unlimited", "de": "Grand Tour Unlimited", "it": "Grand Tour Unlimited"}, "tag": {"en": "Unlimited", "de": "Unlimited", "it": "Unlimited"}}, {"id": "P24_L", "duration": "24h", "km": "500", "price": 1590, "label": {"en": "Full Day Icon", "de": "Full Day Icon", "it": "Full Day Icon"}, "tag": {"en": "Full day", "de": "Ganzer Tag", "it": "Intera giornata"}}, {"id": "P24_U", "duration": "24h", "km": "Unlimited", "price": 1990, "label": {"en": "Full Day Icon Unlimited", "de": "Full Day Icon Unlimited", "it": "Full Day Icon Unlimited"}, "tag": {"en": "Unlimited", "de": "Unlimited", "it": "Unlimited"}}, {"id": "WE_500", "duration": "48h", "km": "500", "price": 1990, "label": {"en": "Weekend Escape 500", "de": "Weekend Escape 500", "it": "Weekend Escape 500"}, "tag": {"en": "Weekend", "de": "Weekend", "it": "Weekend"}}, {"id": "WE_800", "duration": "48h", "km": "800", "price": 2790, "label": {"en": "Weekend Escape 800", "de": "Weekend Escape 800", "it": "Weekend Escape 800"}, "tag": {"en": "Weekend", "de": "Weekend", "it": "Weekend"}}, {"id": "WD", "duration": "Mon-Fri", "km": "800", "price": 2480, "label": {"en": "Weekday Privilege", "de": "Weekday Privilege", "it": "Weekday Privilege"}, "tag": {"en": "Weekday", "de": "Weekday", "it": "Weekday"}}, {"id": "FW", "duration": "Full week", "km": "1400", "price": 4480, "label": {"en": "Full Week", "de": "Ganze Woche", "it": "Settimana intera"}, "tag": {"en": "Full week", "de": "Ganze Woche", "it": "Settimana Intera"}}];
+const LO_FALLBACK_PACKAGES = [{"id": "P3_U", "duration": "3h", "km": "Unlimited", "price": 440, "label": {"en": "Brief Escape", "de": "Kurztrip", "it": "Breve Fuga"}, "tag": {"en": "Unlimited", "de": "Unlimited", "it": "Unlimited"}}, {"id": "P6_L", "duration": "6h", "km": "200", "price": 680, "label": {"en": "Signature Half Day", "de": "Signature Halbtag", "it": "Signature Mezza giornata"}, "tag": {"en": "Most chosen", "de": "Beliebt", "it": "Più scelto"}}, {"id": "P6_U", "duration": "6h", "km": "Unlimited", "price": 830, "label": {"en": "Signature Half Day Unlimited", "de": "Signature Halbtag Unlimited", "it": "Signature Mezza giornata Unlimited"}, "tag": {"en": "Unlimited", "de": "Unlimited", "it": "Unlimited"}}, {"id": "P12_L", "duration": "12h", "km": "300", "price": 940, "label": {"en": "Grand Tour 300", "de": "Grand Tour 300", "it": "Grand Tour 300"}, "tag": {"en": "Day trip", "de": "Tagestrip", "it": "Giornata"}}, {"id": "P12_L500", "duration": "12h", "km": "500", "price": 1140, "label": {"en": "Grand Tour 500", "de": "Grand Tour 500", "it": "Grand Tour 500"}, "tag": {"en": "Day trip", "de": "Tagestrip", "it": "Giornata"}}, {"id": "P12_U", "duration": "12h", "km": "Unlimited", "price": 1290, "label": {"en": "Grand Tour Unlimited", "de": "Grand Tour Unlimited", "it": "Grand Tour Unlimited"}, "tag": {"en": "Unlimited", "de": "Unlimited", "it": "Unlimited"}}, {"id": "P24_L", "duration": "24h", "km": "500", "price": 1590, "label": {"en": "Full Day Icon", "de": "Full Day Icon", "it": "Full Day Icon"}, "tag": {"en": "Full day", "de": "Ganzer Tag", "it": "Intera giornata"}}, {"id": "P24_U", "duration": "24h", "km": "Unlimited", "price": 1990, "label": {"en": "Full Day Icon Unlimited", "de": "Full Day Icon Unlimited", "it": "Full Day Icon Unlimited"}, "tag": {"en": "Unlimited", "de": "Unlimited", "it": "Unlimited"}}, {"id": "WE_500", "duration": "48h", "km": "500", "price": 1990, "label": {"en": "Weekend Escape 500", "de": "Weekend Escape 500", "it": "Weekend Escape 500"}, "tag": {"en": "Weekend", "de": "Weekend", "it": "Weekend"}}, {"id": "WE_800", "duration": "48h", "km": "800", "price": 2790, "label": {"en": "Weekend Escape 800", "de": "Weekend Escape 800", "it": "Weekend Escape 800"}, "tag": {"en": "Weekend", "de": "Weekend", "it": "Weekend"}}, {"id": "WD", "duration": "Mon-Fri", "km": "800", "price": 2480, "label": {"en": "Weekday Privilege", "de": "Weekday Privilege", "it": "Weekday Privilege"}, "tag": {"en": "Weekday", "de": "Weekday", "it": "Weekday"}}, {"id": "FW", "duration": "Full week", "km": "1400", "price": 4480, "label": {"en": "Full Week", "de": "Ganze Woche", "it": "Settimana intera"}, "tag": {"en": "Full week", "de": "Ganze Woche", "it": "Settimana Intera"}}];
 
 function LO_escapeHtml(s){
   return String(s ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");

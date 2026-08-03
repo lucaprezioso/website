@@ -8,12 +8,12 @@
 
   const LO_SLUG_MAP = {
     en: {
-      "": "", "pricing": "pricing", "gallery": "gallery", "blog": "journal", "journal": "journal", "experiences": "experiences", "philosophy": "philosophy", "locations": "locations",
+      "": "", "pricing": "pricing", "gallery": "gallery", "blog": "journal", "journal": "journal", "experiences": "experiences", "philosophy": "philosophy", "locations": "locations", "about-us": "about-us",
       "impressum": "impressum", "datenschutz": "datenschutz", "agb": "agb",
       "ferrari-rental-zurich": "ferrari-rental-zurich", "ferrari-rental-zurich-airport": "ferrari-rental-zurich-airport", "ferrari-rental-lucerne": "ferrari-rental-lucerne", "ferrari-rental-bern": "ferrari-rental-bern", "ferrari-rental-winterthur": "ferrari-rental-winterthur", "ferrari-rental-zug": "ferrari-rental-zug", "ferrari-rental-st-gallen": "ferrari-rental-st-gallen", "ferrari-rental-basel": "ferrari-rental-basel", "ferrari-rental-chur": "ferrari-rental-chur", "ferrari-rental-davos": "ferrari-rental-davos", "ferrari-rental-andermatt": "ferrari-rental-andermatt", "ferrari-rental-aargau": "ferrari-rental-aargau", "ferrari-rental-solothurn": "ferrari-rental-solothurn", "ferrari-rental-biel": "ferrari-rental-biel", "ferrari-rental-naenikon": "ferrari-rental-naenikon", "ferrari-gift-voucher-zurich": "ferrari-gift-voucher-zurich", "ferrari-wedding-car-rental-zurich": "ferrari-wedding-car-rental-zurich", "ferrari-birthday-rental-zurich": "ferrari-birthday-rental-zurich", "ferrari-photoshoot-rental-zurich": "ferrari-photoshoot-rental-zurich", "ferrari-corporate-event-rental-zurich": "ferrari-corporate-event-rental-zurich", "ferrari-458-experiences-video": "ferrari-458-experiences-video"
     },
     de: {
-      "": "", "pricing": "preise", "gallery": "galerie", "blog": "journal", "journal": "journal", "experiences": "erlebnisse", "philosophy": "philosophie", "locations": "standorte",
+      "": "", "pricing": "preise", "gallery": "galerie", "blog": "journal", "journal": "journal", "experiences": "erlebnisse", "philosophy": "philosophie", "locations": "standorte", "about-us": "ueber-uns",
       "impressum": "impressum", "datenschutz": "datenschutz", "agb": "agb",
       "ferrari-rental-zurich": "ferrari458-mieten-zuerich",
       "ferrari-mieten-zuerich": "ferrari-mieten-zuerich",
@@ -36,7 +36,7 @@
       "ferrari-vermietung-zuerich": "ferrari-mieten-zuerich", "ferrari-gift-voucher-zurich": "ferrari-gutschein-zuerich", "ferrari-wedding-car-rental-zurich": "ferrari-mieten-hochzeit-zuerich", "ferrari-birthday-rental-zurich": "ferrari-mieten-geburtstag-zuerich", "ferrari-photoshoot-rental-zurich": "ferrari-mieten-fotoshooting-zuerich", "ferrari-corporate-event-rental-zurich": "ferrari-mieten-firmenanlass-zuerich", "ferrari-458-experiences-video": "ferrari-458-erlebnisse-video"
     },
     it: {
-      "": "", "pricing": "pricing", "gallery": "galleria", "blog": "blog", "journal": "blog", "experiences": "experiences", "philosophy": "philosophy", "locations": "locations",
+      "": "", "pricing": "pricing", "gallery": "galleria", "blog": "blog", "journal": "blog", "experiences": "experiences", "philosophy": "philosophy", "locations": "locations", "about-us": "chi-siamo",
       "impressum": "impressum", "datenschutz": "datenschutz", "agb": "agb",
       "ferrari-rental-zurich": "noleggio-ferrari-zurigo",
       "ferrari-rental-zurich-airport": "noleggio-ferrari-aeroporto-zurigo",
@@ -100,7 +100,7 @@ function loLangFromPath(){
 
     // German-first clean URLs live at root. These pages are intentionally not under /de/.
     const deRootSlugs = new Set([
-      "preise", "galerie", "erlebnisse", "philosophie", "journal", "standorte",
+      "preise", "galerie", "erlebnisse", "philosophie", "journal", "standorte", "ueber-uns",
       "impressum", "datenschutz", "agb", "ferrari-458-italia",
       "ferrari-mieten-zuerich-preise-anforderungen-ablauf", "autostrecken-schweiz-ferrari-zuerich", "ferrari-gutschein-zuerich", "ferrari-mieten-hochzeit-zuerich", "ferrari-mieten-geburtstag-zuerich", "ferrari-mieten-fotoshooting-zuerich", "ferrari-mieten-firmenanlass-zuerich"
     ]);
@@ -162,6 +162,7 @@ function loRewriteInternalLinks(effectiveLang){
     "gallery.html": "gallery",
     "experiences.html": "experiences",
     "philosophy.html": "philosophy",
+    "about-us.html": "about-us",
     "impressum.html": "impressum",
     "datenschutz.html": "datenschutz",
     "agb.html": "agb"
@@ -475,6 +476,64 @@ function initFooterLegalLinks(lang){
   });
 }
 
+
+  function primaryNavItems(lang){
+    const effectiveLang = lang || getLang();
+    const labels = {
+      en: { rates:"Rates", gallery:"Gallery", voucher:"Gift voucher", about:"About us" },
+      de: { rates:"Tarife", gallery:"Galerie", voucher:"Gutschein", about:"Über uns" },
+      it: { rates:"Tariffe", gallery:"Galleria", voucher:"Buono regalo", about:"Chi siamo" }
+    };
+    const t = labels[effectiveLang] || labels.de;
+    return [
+      { id:"navRates", text:t.rates, href:buildRootUrl("pricing.html", effectiveLang) },
+      { id:"navGallery", text:t.gallery, href:buildRootUrl("gallery.html", effectiveLang) },
+      { id:"navVoucher", text:t.voucher, href:buildRootUrl("ferrari-gift-voucher-zurich.html", effectiveLang) },
+      { id:"navAbout", text:t.about, href:buildRootUrl("about-us.html", effectiveLang) }
+    ];
+  }
+
+  function simplifyPrimaryNav(lang){
+    const navLinks = document.querySelector(".navLinks");
+    if(!navLinks) return;
+
+    const effectiveLang = lang || getLang();
+    const request = navLinks.querySelector("a.navCta, a#navRequest");
+    const currentId = navLinks.querySelector('[aria-current="page"]')?.id || "";
+    navLinks.innerHTML = "";
+
+    for(const item of primaryNavItems(effectiveLang)){
+      const a = document.createElement("a");
+      a.id = item.id;
+      a.textContent = item.text;
+      a.href = item.href;
+      if(item.id === currentId) a.setAttribute("aria-current", "page");
+      navLinks.appendChild(a);
+    }
+
+    if(request) navLinks.appendChild(request);
+  }
+
+  function initMobileOccasionAccordion(){
+    const details = document.getElementById("occasionLinksDetails");
+    if(!details || details.dataset.loAccordionBound === "1") return;
+
+    details.dataset.loAccordionBound = "1";
+    const mq = window.matchMedia("(max-width: 760px)");
+    let lastMobile = null;
+
+    const sync = () => {
+      const isMobile = mq.matches;
+      if(isMobile === lastMobile) return;
+      lastMobile = isMobile;
+      details.open = !isMobile;
+    };
+
+    sync();
+    if(typeof mq.addEventListener === "function") mq.addEventListener("change", sync);
+    else if(typeof mq.addListener === "function") mq.addListener(sync);
+  }
+
   // Make LUXURY and OBSESSION addressable for wrapping
   function splitBrandWords(){
     const el = document.querySelector(".brandGold");
@@ -542,7 +601,7 @@ function initFooterLegalLinks(lang){
 
     menu.innerHTML = "";
 
-    // 1) Primary links (exclude Request)
+    // 1) Primary links only. Legal and editorial pages live in the About hub and footer.
     const links = Array.from(navLinks.querySelectorAll("a"))
       .filter(a => !a.classList.contains("navCta"));
 
@@ -551,27 +610,6 @@ function initFooterLegalLinks(lang){
       clone.removeAttribute("id");
       menu.appendChild(clone);
     }
-// 2) Legal links (optional, from footer)
-const legalLinks = Array.from(document.querySelectorAll("footer .footerRight a"));
-if(legalLinks.length){
-  for(const a of legalLinks){
-    const clone = a.cloneNode(true);
-    clone.removeAttribute("id");
-    menu.appendChild(clone);
-  }
-} else {
-  const fallback = [
-    { text: "Impressum", href: "/impressum#top" },
-    { text: (effectiveLang === "de" ? "Datenschutz" : "Privacy"), href: "/datenschutz#top" },
-    { text: (effectiveLang === "de" ? "AGB" : (effectiveLang === "it" ? "Condizioni" : "Terms")), href: "/agb#top" }
-  ];
-  for(const it of fallback){
-    const a = document.createElement("a");
-    a.textContent = it.text;
-    a.href = it.href;
-    menu.appendChild(a);
-  }
-}
 
     // Divider
     const div1 = document.createElement("div");
@@ -734,7 +772,7 @@ function loMeasureNav({ width, burger, wrap, hideKeys }){
     node.setAttribute("data-lo-hidden", hidden ? "1" : "0");
   };
 
-  ["navRates","navGallery","navContact","navPhilosophy","navExperiences","navBlog","navJournal"].forEach(k => {
+  ["navRates","navGallery","navVoucher","navAbout","navContact","navPhilosophy","navExperiences","navBlog","navJournal"].forEach(k => {
     setHiddenClone(clone.querySelector('[data-lo-key="' + k + '"]'), hideSet.has(k));
   });
   setHiddenClone(cloneLang, hideSet.has("langSelect"));
@@ -755,6 +793,8 @@ function loMeasureNav({ width, burger, wrap, hideKeys }){
   const widths = {
     navRates: loOuterWidth(clone.querySelector('[data-lo-key="navRates"]')),
     navGallery: loOuterWidth(clone.querySelector('[data-lo-key="navGallery"]')),
+    navVoucher: loOuterWidth(clone.querySelector('[data-lo-key="navVoucher"]')),
+    navAbout: loOuterWidth(clone.querySelector('[data-lo-key="navAbout"]')),
     navContact: loOuterWidth(clone.querySelector('[data-lo-key="navContact"]')),
     navPhilosophy: loOuterWidth(clone.querySelector('[data-lo-key="navPhilosophy"]')),
     navExperiences: loOuterWidth(clone.querySelector('[data-lo-key="navExperiences"]')),
@@ -780,6 +820,8 @@ function applyPriorityNav(){
 
   const rates = el("navRates");
   const gallery = el("navGallery");
+  const voucher = el("navVoucher");
+  const about = el("navAbout");
   const contact = el("navContact");
   const philosophy = el("navPhilosophy");
   const experiences = el("navExperiences");
@@ -810,6 +852,8 @@ function applyPriorityNav(){
   if(philosophy && philosophy.id) lowKeys.push(philosophy.id);
   if(experiences && experiences.id) lowKeys.push(experiences.id);
   if(journal && journal.id) lowKeys.push(journal.id);
+  if(about && about.id) lowKeys.push(about.id);
+  if(voucher && voucher.id) lowKeys.push(voucher.id);
   if(gallery && gallery.id) lowKeys.push(gallery.id);
 
   const m1 = loMeasureNav({ width, burger:true, wrap:false, hideKeys:[] }) || m0;
@@ -1008,6 +1052,7 @@ function initSharedUI
 
 
     try{ loRewriteInternalLinks(effectiveLang); } catch(_e) {}
+    try{ simplifyPrimaryNav(effectiveLang); } catch(_e) {}
 
     // Keep the Experiences label consistent with the homepage without rewriting every page.
     try{
@@ -1026,6 +1071,7 @@ function initSharedUI
     buildMobileMenu(effectiveLang);
     initHamburger();
     initAnalyticsEvents();
+    initMobileOccasionAccordion();
 
 
 // Apply mode after fonts and translated text settle
