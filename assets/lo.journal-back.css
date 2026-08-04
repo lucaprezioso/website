@@ -1,52 +1,111 @@
-/* Contextual return link for pages published in the Luxury Obsession Journal. */
-.journalBackLink{
-  display:inline-flex;
-  align-items:center;
-  gap:.48rem;
-  width:max-content;
-  max-width:100%;
-  margin:0 0 .9rem;
-  padding:.46rem .72rem .46rem .58rem;
-  border:1px solid rgba(243,241,238,.13);
-  border-radius:999px;
-  background:rgba(255,255,255,.025);
-  color:rgba(243,241,238,.76);
+/* Consistent navigation for all Luxury Obsession Journal articles.
+   Desktop: visible breadcrumb trail.
+   Mobile: compact direct return link to the localized Journal. */
+.journalTrail{
+  display:block;
+  width:100%;
+  min-width:0;
+  margin:0 0 .95rem;
   font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  font-size:.82rem;
+  text-align:left;
+}
+.journalTrail__desktop{
+  display:flex;
+  align-items:center;
+  min-width:0;
+  margin:0;
+  padding:0;
+  list-style:none;
+  color:rgba(243,241,238,.60);
+  font-size:.78rem;
   font-weight:500;
-  line-height:1;
-  letter-spacing:.015em;
+  line-height:1.4;
+  letter-spacing:.005em;
+}
+.journalTrail__desktop li{
+  display:flex;
+  align-items:center;
+  min-width:0;
+}
+.journalTrail__desktop li+li::before{
+  content:"›";
+  flex:0 0 auto;
+  margin:0 .48rem;
+  color:rgba(243,241,238,.34);
+}
+.journalTrail__desktop a{
+  color:rgba(243,241,238,.66);
   text-decoration:none;
-  -webkit-tap-highlight-color:transparent;
-  transition:color .2s ease,border-color .2s ease,background-color .2s ease,transform .2s ease;
+  transition:color .2s ease;
 }
-.journalBackLink:hover{
+.journalTrail__desktop a:hover{
   color:var(--text,#f3f1ee);
-  border-color:rgba(231,220,198,.34);
-  background:rgba(231,220,198,.07);
-  transform:translateX(-2px);
+  text-decoration:underline;
+  text-underline-offset:.2em;
 }
-.journalBackLink:focus-visible{
+.journalTrail__desktop a:focus-visible,
+.journalTrail__mobile:focus-visible{
   outline:2px solid rgba(231,220,198,.9);
   outline-offset:3px;
 }
-.journalBackLink__arrow{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  font-size:1.05rem;
-  line-height:.8;
-  transform:translateY(-.01em);
+.journalTrail__current{
+  overflow:hidden;
+  max-width:min(42rem,52vw);
+  color:rgba(243,241,238,.48);
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.journalTrail__mobile{
+  display:none;
 }
 @media (max-width:760px){
-  .journalBackLink{
-    min-height:40px;
+  .journalTrail{
     margin-bottom:.78rem;
+  }
+  .journalTrail__desktop{
+    display:none;
+  }
+  .journalTrail__mobile{
+    display:inline-flex;
+    align-items:center;
+    gap:.48rem;
+    width:max-content;
+    max-width:100%;
+    min-height:40px;
     padding:.55rem .78rem .55rem .64rem;
+    border:1px solid rgba(243,241,238,.13);
+    border-radius:999px;
+    background:rgba(255,255,255,.025);
+    color:rgba(243,241,238,.76);
     font-size:.84rem;
+    font-weight:500;
+    line-height:1;
+    letter-spacing:.015em;
+    text-decoration:none;
+    -webkit-tap-highlight-color:transparent;
+    transition:color .2s ease,border-color .2s ease,background-color .2s ease,transform .2s ease;
+  }
+  .journalTrail__mobile:hover{
+    color:var(--text,#f3f1ee);
+    border-color:rgba(231,220,198,.34);
+    background:rgba(231,220,198,.07);
+    transform:translateX(-2px);
+  }
+  .journalTrail__arrow{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.05rem;
+    line-height:.8;
+    transform:translateY(-.01em);
   }
 }
 @media (prefers-reduced-motion:reduce){
-  .journalBackLink{transition:none}
-  .journalBackLink:hover{transform:none}
+  .journalTrail__desktop a,
+  .journalTrail__mobile{
+    transition:none;
+  }
+  .journalTrail__mobile:hover{
+    transform:none;
+  }
 }
