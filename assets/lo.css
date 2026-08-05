@@ -984,6 +984,9 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 .locTitleRow{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:baseline}
 .locPill{display:inline-flex;align-items:center;gap:0.4rem;border-radius:999px;padding:0.22rem 0.65rem;background:rgba(243,241,238,0.02);border:1px solid rgba(243,241,238,0.12);color:rgba(243,241,238,0.78);font-size:0.82rem;font-weight:500}
 .locNote{margin:0.65rem 0 0;color:var(--muted);line-height:1.55}
+.locMarker{margin-left:.12rem;font-size:.72em;vertical-align:super;color:var(--muted);font-weight:700}
+.locPickupFootnotes{white-space:pre-line;line-height:1.6}
+
 .locList{margin:0.75rem 0 0;padding-left:1.05rem;color:rgba(243,241,238,0.92)}
 .locList li{margin:0.35rem 0}
 .locLink{text-decoration:underline;text-decoration-color:rgba(243,241,238,0.22);text-underline-offset:3px}
