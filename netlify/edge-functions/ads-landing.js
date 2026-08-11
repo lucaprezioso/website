@@ -560,7 +560,9 @@ function removeSectionById(html, id) {
 
 function injectAdsConfig(html, route) {
   const defaultPickup = route.defaultPickup ? `window.LO_DEFAULT_PICKUP_LOCATION=${JSON.stringify(route.defaultPickup)};` : "";
-  const configScript = `<script>window.LO_LANGUAGE_URLS=${JSON.stringify(route.languageUrls)};window.LO_HOME_URL=${JSON.stringify(route.home)};window.LO_NAV_RATES_URL="#pricing";window.LO_NAV_REQUEST_URL="#request";window.LO_CTA_PRICING_URL="#pricing";${defaultPickup}${route.mode === "gift" ? 'window.LO_NAV_VOUCHER_URL="#request";' : ""}<\/script>`;
+  const pricingUrls = { de: "/preise", en: "/en/pricing", it: "/it/pricing" };
+  const navRatesUrl = pricingUrls[route.lang] || "/preise";
+  const configScript = `<script>window.LO_LANGUAGE_URLS=${JSON.stringify(route.languageUrls)};window.LO_HOME_URL=${JSON.stringify(route.home)};window.LO_NAV_RATES_URL=${JSON.stringify(navRatesUrl)};window.LO_NAV_REQUEST_URL="#request";window.LO_CTA_PRICING_URL="#pricing";${defaultPickup}${route.mode === "gift" ? 'window.LO_NAV_VOUCHER_URL="#request";' : ""}<\/script>`;
   return html.replace(/<script[^>]+src=["']\/assets\/lo\.js[^>]*><\/script>/i, `${configScript}$&`);
 }
 
