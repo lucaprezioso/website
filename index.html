@@ -2118,7 +2118,7 @@ renderPackagesPreview();
           ["ZURICH", "Zürich · KOSTENLOS in 2026"],
           ["WINTERTHUR", "Winterthur · KOSTENLOS in 2026"],
           ["ZUG", "Zug · CHF 140"],
-          ["LUCERNE", "Lucerne · CHF 140"],
+          ["LUCERNE", "Luzern · CHF 140"],
           ["ST_GALLEN", "St. Gallen · CHF 140"],
           ["AARGAU", "Aargau · CHF 140"],
           ["BERN", "Bern · CHF 290"],
@@ -2206,7 +2206,9 @@ renderPackagesPreview();
           const opt = document.createElement("option");
           opt.value = val;
           opt.textContent = label;
-          if(previousValue ? val === previousValue : i === 0) opt.selected = true; // Nänikon default
+          const defaultPickupValue = window.LO_DEFAULT_PICKUP_LOCATION || "";
+          const targetPickupValue = previousValue || defaultPickupValue;
+          if(targetPickupValue ? val === targetPickupValue : i === 0) opt.selected = true; // Nänikon default unless an Ads page preselects a delivery city
           pickupSel.appendChild(opt);
         });
       };

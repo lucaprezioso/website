@@ -14,6 +14,58 @@ const LANGUAGE_URLS_BY_MODE = {
     en: "/en/ads/ferrari-gift-voucher-zurich",
     it: "/it/ads/buono-regalo-ferrari-zurigo",
   },
+
+};
+
+const CITY_CONFIG = {
+  luzern: {
+    delivery: 140,
+    pickup: "LUCERNE",
+    names: { de: "Luzern", en: "Lucerne", it: "Lucerna" },
+    locative: { de: "in Luzern", en: "in Lucerne", it: "a Lucerna" },
+    deliveryPhrase: { de: "nach Luzern", en: "to Lucerne", it: "a Lucerna" },
+    slugs: { de: "ferrari-mieten-luzern", en: "ferrari-rental-lucerne", it: "noleggio-ferrari-lucerna" },
+  },
+  aargau: {
+    delivery: 140,
+    pickup: "AARGAU",
+    names: { de: "Aargau", en: "Aargau", it: "Argovia" },
+    locative: { de: "im Aargau", en: "in Aargau", it: "in Argovia" },
+    deliveryPhrase: { de: "in den Aargau", en: "to Aargau", it: "in Argovia" },
+    slugs: { de: "ferrari-mieten-aargau", en: "ferrari-rental-aargau", it: "noleggio-ferrari-argovia" },
+  },
+  bern: {
+    delivery: 290,
+    pickup: "BERN",
+    names: { de: "Bern", en: "Bern", it: "Berna" },
+    locative: { de: "in Bern", en: "in Bern", it: "a Berna" },
+    deliveryPhrase: { de: "nach Bern", en: "to Bern", it: "a Berna" },
+    slugs: { de: "ferrari-mieten-bern", en: "ferrari-rental-bern", it: "noleggio-ferrari-berna" },
+  },
+  basel: {
+    delivery: 290,
+    pickup: "BASEL",
+    names: { de: "Basel", en: "Basel", it: "Basilea" },
+    locative: { de: "in Basel", en: "in Basel", it: "a Basilea" },
+    deliveryPhrase: { de: "nach Basel", en: "to Basel", it: "a Basilea" },
+    slugs: { de: "ferrari-mieten-basel", en: "ferrari-rental-basel", it: "noleggio-ferrari-basilea" },
+  },
+  st_gallen: {
+    delivery: 140,
+    pickup: "ST_GALLEN",
+    names: { de: "St. Gallen", en: "St. Gallen", it: "San Gallo" },
+    locative: { de: "in St. Gallen", en: "in St. Gallen", it: "a San Gallo" },
+    deliveryPhrase: { de: "nach St. Gallen", en: "to St. Gallen", it: "a San Gallo" },
+    slugs: { de: "ferrari-mieten-st-gallen", en: "ferrari-rental-st-gallen", it: "noleggio-ferrari-san-gallo" },
+  },
+  zug: {
+    delivery: 140,
+    pickup: "ZUG",
+    names: { de: "Zug", en: "Zug", it: "Zugo" },
+    locative: { de: "in Zug", en: "in Zug", it: "a Zugo" },
+    deliveryPhrase: { de: "nach Zug", en: "to Zug", it: "a Zugo" },
+    slugs: { de: "ferrari-mieten-zug", en: "ferrari-rental-zug", it: "noleggio-ferrari-zugo" },
+  },
 };
 
 const ROUTES = {
@@ -28,7 +80,23 @@ const ROUTES = {
   "/ads/ferrari-gutschein-zuerich": { lang: "de", mode: "gift", source: "/", home: "/", languageUrls: LANGUAGE_URLS_BY_MODE.gift },
   "/en/ads/ferrari-gift-voucher-zurich": { lang: "en", mode: "gift", source: "/en/", home: "/en/", languageUrls: LANGUAGE_URLS_BY_MODE.gift },
   "/it/ads/buono-regalo-ferrari-zurigo": { lang: "it", mode: "gift", source: "/it/", home: "/it/", languageUrls: LANGUAGE_URLS_BY_MODE.gift },
+
 };
+
+function cityLanguageUrls(city) {
+  return {
+    de: `/ads/${city.slugs.de}`,
+    en: `/en/ads/${city.slugs.en}`,
+    it: `/it/ads/${city.slugs.it}`,
+  };
+}
+
+for (const [cityKey, city] of Object.entries(CITY_CONFIG)) {
+  const languageUrls = cityLanguageUrls(city);
+  ROUTES[languageUrls.de] = { lang: "de", mode: "city", city: cityKey, source: "/", home: "/", defaultPickup: city.pickup, languageUrls };
+  ROUTES[languageUrls.en] = { lang: "en", mode: "city", city: cityKey, source: "/en/", home: "/en/", defaultPickup: city.pickup, languageUrls };
+  ROUTES[languageUrls.it] = { lang: "it", mode: "city", city: cityKey, source: "/it/", home: "/it/", defaultPickup: city.pickup, languageUrls };
+}
 
 const COPY = {
   de: {
@@ -250,7 +318,109 @@ const GIFT_COPY = {
     packagesNote: "La persona che guiderà deve avere almeno 21 anni; cauzione rimborsabile da CHF 1’500. Tutte le richieste sono soggette a disponibilità.",
     heroImageAlt: "Buono regalo Luxury Obsession per guidare una Ferrari 458 Italia a Zurigo",
   },
+
 };
+
+function buildCityCopy(lang, city) {
+  const name = city.names[lang];
+  const locative = city.locative[lang];
+  const deliveryPhrase = city.deliveryPhrase[lang];
+  const fee = city.delivery;
+
+  if (lang === "de") {
+    return {
+      title: `Ferrari mieten ${name} | Ferrari 458 Italia`,
+      description: `Ferrari 458 Italia ${locative} mieten. Lieferung ${deliveryPhrase}: CHF ${fee}. Tarife ab CHF 440, persönliche Übergabe und klare Konditionen.`,
+      eyebrow: `${name}, Schweiz`,
+      showcaseEyebrow: `Ferrari mieten ${name}`,
+      showcaseMicro: `Ab CHF 440 · Lieferung ${deliveryPhrase}: CHF ${fee}`,
+      showcaseBody: `Ferrari 458 Italia ${locative} mieten – mit persönlicher Übergabe, transparenten Tarifen und Lieferung ${deliveryPhrase} für CHF ${fee}.`,
+      showcaseCta: `Verfügbarkeit in ${name} anfragen`,
+      heroTitleA: "Ferrari 458 Italia mieten",
+      heroTitleB: locative,
+      heroSubtitle: `Mieten Sie einen sorgfältig gepflegten Ferrari 458 Italia ${locative}. Die Lieferung ${deliveryPhrase} kostet CHF ${fee}. Die Tarife beginnen bei CHF 440; Übergabe, Konditionen und Termin werden persönlich bestätigt.`,
+      pill0: "Ferrari 458 Italia",
+      pill1: "Inhabergeführt",
+      pill2: `Lieferung ${name}`,
+      pill3: `CHF ${fee} Lieferung`,
+      pill4: "Ab 21 Jahren",
+      ctaRequest: `In ${name} anfragen`,
+      quoteOpen: `Lieferung ${deliveryPhrase} verfügbar`,
+      packagesTitle: `Ferrari mieten ${name} – Tarife ab CHF 440`,
+      packagesSub: `3 Stunden, Halbtag, Ganztag, Wochenende oder ganze Woche. Die Lieferung ${deliveryPhrase} kostet CHF ${fee} zusätzlich zum gewählten Tarif.`,
+      packagesNote: `Lieferung ${deliveryPhrase}: CHF ${fee} zusätzlich zum gewählten Tarif. Alle Anfragen vorbehaltlich Verfügbarkeit. Mindestalter 21 Jahre; rückerstattbare Kaution ab CHF 1’500.`,
+      requestTitle: `Ferrari 458 Italia ${locative} anfragen`,
+      requestSub: `${name} ist im Formular als Übergabeort vorausgewählt. Wählen Sie Tarif, Datum und Uhrzeit; die Lieferkosten betragen CHF ${fee}.`,
+      pickupTitle: "Abholung & Lieferung",
+      pickupNote: `Hauptabholung nahe Zürich. Lieferung ${deliveryPhrase}: CHF ${fee}.`,
+      faqSub: `Häufige Fragen zur Ferrari Miete ${locative}.`,
+      faqQ7: `Was kostet die Lieferung ${deliveryPhrase}?`,
+      faqA7: `Die Lieferung ${deliveryPhrase} kostet CHF ${fee} zusätzlich zum gewählten Miettarif. Der Übergabeort kann direkt im Anfrageformular ausgewählt werden.`,
+    };
+  }
+
+  if (lang === "it") {
+    return {
+      title: `Noleggio Ferrari ${name} | Ferrari 458 Italia`,
+      description: `Noleggio Ferrari 458 Italia ${locative}. Consegna ${deliveryPhrase}: CHF ${fee}. Tariffe da CHF 440, consegna personale e condizioni chiare.`,
+      eyebrow: `${name}, Svizzera`,
+      showcaseEyebrow: `Noleggio Ferrari ${name}`,
+      showcaseMicro: `Da CHF 440 · Consegna ${deliveryPhrase}: CHF ${fee}`,
+      showcaseBody: `Noleggia una Ferrari 458 Italia ${locative}, con tariffe trasparenti, assistenza personale e consegna ${deliveryPhrase} per CHF ${fee}.`,
+      showcaseCta: `Richiedi disponibilità ${locative}`,
+      heroTitleA: "Noleggia una Ferrari 458 Italia",
+      heroTitleB: locative,
+      heroSubtitle: `Noleggia una Ferrari 458 Italia curata con grande attenzione ${locative}. La consegna ${deliveryPhrase} costa CHF ${fee}. Le tariffe partono da CHF 440; confermiamo personalmente disponibilità, condizioni e dettagli della consegna.`,
+      pill0: "Ferrari 458 Italia",
+      pill1: "Gestione personale",
+      pill2: `Consegna ${name}`,
+      pill3: `Consegna CHF ${fee}`,
+      pill4: "Dai 21 anni",
+      ctaRequest: `Richiedi ${locative}`,
+      quoteOpen: `Consegna ${deliveryPhrase} disponibile`,
+      packagesTitle: `Noleggio Ferrari ${name} – tariffe da CHF 440`,
+      packagesSub: `3 ore, mezza giornata, giornata intera, weekend o settimana. La consegna ${deliveryPhrase} costa CHF ${fee} in aggiunta alla tariffa scelta.`,
+      packagesNote: `Consegna ${deliveryPhrase}: CHF ${fee} in aggiunta alla tariffa scelta. Tutte le richieste sono soggette a disponibilità. Età minima 21 anni; cauzione rimborsabile da CHF 1’500.`,
+      requestTitle: `Richiedi la Ferrari 458 Italia ${locative}`,
+      requestSub: `${name} è preselezionata nel modulo come luogo di consegna. Scegli tariffa, data e orario; il costo di consegna è CHF ${fee}.`,
+      pickupTitle: "Ritiro & consegna",
+      pickupNote: `Ritiro principale vicino a Zurigo. Consegna ${deliveryPhrase}: CHF ${fee}.`,
+      faqSub: `Domande frequenti sul noleggio Ferrari ${locative}.`,
+      faqQ7: `Quanto costa la consegna ${deliveryPhrase}?`,
+      faqA7: `La consegna ${deliveryPhrase} costa CHF ${fee} in aggiunta alla tariffa di noleggio scelta. Il luogo di consegna può essere selezionato direttamente nel modulo.`,
+    };
+  }
+
+  return {
+    title: `Ferrari Rental ${name} | Ferrari 458 Italia`,
+    description: `Rent a Ferrari 458 Italia ${locative}. Delivery ${deliveryPhrase}: CHF ${fee}. Rates from CHF 440, personal handover and clear terms.`,
+    eyebrow: `${name}, Switzerland`,
+    showcaseEyebrow: `Ferrari rental ${name}`,
+    showcaseMicro: `From CHF 440 · Delivery ${deliveryPhrase}: CHF ${fee}`,
+    showcaseBody: `Rent a Ferrari 458 Italia ${locative}, with transparent rates, personal handover and delivery ${deliveryPhrase} for CHF ${fee}.`,
+    showcaseCta: `Request availability in ${name}`,
+    heroTitleA: "Rent a Ferrari 458 Italia",
+    heroTitleB: locative,
+    heroSubtitle: `Rent a meticulously maintained Ferrari 458 Italia ${locative}. Delivery ${deliveryPhrase} costs CHF ${fee}. Rates start from CHF 440; availability, terms and handover details are confirmed personally.`,
+    pill0: "Ferrari 458 Italia",
+    pill1: "Owner operated",
+    pill2: `Delivery ${name}`,
+    pill3: `CHF ${fee} delivery`,
+    pill4: "From age 21",
+    ctaRequest: `Request in ${name}`,
+    quoteOpen: `Delivery ${deliveryPhrase} available`,
+    packagesTitle: `Ferrari rental ${name} – rates from CHF 440`,
+    packagesSub: `3 hours, half day, full day, weekend or full week. Delivery ${deliveryPhrase} costs CHF ${fee} in addition to the selected rental rate.`,
+    packagesNote: `Delivery ${deliveryPhrase}: CHF ${fee} in addition to the selected rental rate. All requests are subject to availability. Minimum age 21; refundable deposit from CHF 1,500.`,
+    requestTitle: `Request the Ferrari 458 Italia ${locative}`,
+    requestSub: `${name} is preselected in the form as the handover location. Choose your rate, date and time; delivery costs CHF ${fee}.`,
+    pickupTitle: "Pickup & delivery",
+    pickupNote: `Main pickup near Zurich. Delivery ${deliveryPhrase}: CHF ${fee}.`,
+    faqSub: `Common questions about Ferrari rental ${locative}.`,
+    faqQ7: `How much is delivery ${deliveryPhrase}?`,
+    faqA7: `Delivery ${deliveryPhrase} costs CHF ${fee} in addition to the selected rental rate. You can select the handover location directly in the request form.`,
+  };
+}
 
 function escapeHtml(value) {
   return String(value)
@@ -365,10 +535,13 @@ function updateRuntimeCopy(html, lang, copy) {
       showcaseEyebrow: copy.showcaseEyebrow,
       showcaseBody: copy.showcaseBody,
     };
-    for (const key of ["eyebrow", "pill0", "pill1", "pill2", "pill3", "pill4", "showcaseCta", "ctaRequest", "quoteOpen", "formTitle", "notesHint", "date", "time", "packagesNote"]) {
+    for (const key of ["eyebrow", "pill0", "pill1", "pill2", "pill3", "pill4", "showcaseCta", "ctaRequest", "quoteOpen", "formTitle", "notesHint", "date", "time", "packagesNote", "pickupTitle", "pickupNote", "faqSub"]) {
       if (copy[key] != null) updates[key] = copy[key];
     }
     Object.assign(obj[lang], updates);
+    if (copy.faqQ7 != null && copy.faqA7 != null && Array.isArray(obj[lang].faqs) && obj[lang].faqs[6]) {
+      obj[lang].faqs[6] = { q: copy.faqQ7, a: copy.faqA7 };
+    }
   });
 
   html = mutateConstJson(html, "UX_I18N", (obj) => {
@@ -386,7 +559,8 @@ function removeSectionById(html, id) {
 }
 
 function injectAdsConfig(html, route) {
-  const configScript = `<script>window.LO_LANGUAGE_URLS=${JSON.stringify(route.languageUrls)};window.LO_HOME_URL=${JSON.stringify(route.home)};window.LO_NAV_RATES_URL="#pricing";window.LO_NAV_REQUEST_URL="#request";window.LO_CTA_PRICING_URL="#pricing";${route.mode === "gift" ? 'window.LO_NAV_VOUCHER_URL="#request";' : ""}<\/script>`;
+  const defaultPickup = route.defaultPickup ? `window.LO_DEFAULT_PICKUP_LOCATION=${JSON.stringify(route.defaultPickup)};` : "";
+  const configScript = `<script>window.LO_LANGUAGE_URLS=${JSON.stringify(route.languageUrls)};window.LO_HOME_URL=${JSON.stringify(route.home)};window.LO_NAV_RATES_URL="#pricing";window.LO_NAV_REQUEST_URL="#request";window.LO_CTA_PRICING_URL="#pricing";${defaultPickup}${route.mode === "gift" ? 'window.LO_NAV_VOUCHER_URL="#request";' : ""}<\/script>`;
   return html.replace(/<script[^>]+src=["']\/assets\/lo\.js[^>]*><\/script>/i, `${configScript}$&`);
 }
 
@@ -396,7 +570,9 @@ function patchRequestSummary(html, route) {
     wedding: "New Ferrari wedding request",
     gift: "New Ferrari gift voucher request",
   };
-  const label = labels[route.mode] || labels.rental;
+  const label = route.mode === "city" && route.city
+    ? `New Ferrari rental request – ${CITY_CONFIG[route.city].names.en}`
+    : (labels[route.mode] || labels.rental);
   return html.replace('"New Ferrari rental request",', `${JSON.stringify(label)},`);
 }
 
@@ -418,7 +594,13 @@ function replaceHeroPhoto(html, imagePath, alt, width, height) {
 
 function transformHtml(html, route, publicUrl) {
   const lang = route.lang;
-  const c = route.mode === "wedding" ? WEDDING_COPY[lang] : route.mode === "gift" ? GIFT_COPY[lang] : COPY[lang];
+  const c = route.mode === "city"
+    ? buildCityCopy(lang, CITY_CONFIG[route.city])
+    : route.mode === "wedding"
+      ? WEDDING_COPY[lang]
+      : route.mode === "gift"
+        ? GIFT_COPY[lang]
+        : COPY[lang];
 
   html = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${escapeHtml(c.title)}</title>`);
   html = setMetaContent(html, "name", "description", c.description);
@@ -436,7 +618,7 @@ function transformHtml(html, route, publicUrl) {
     html = setMetaContent(html, "name", "twitter:image", "https://luxuryobsession.ch/media/luxury-obsession-gutschein-900.webp");
   }
 
-  for (const key of ["eyebrow", "showcaseEyebrow", "showcaseMicro", "showcaseBody", "showcaseCta", "heroTitleA", "heroTitleB", "heroSubtitle", "pill0", "pill1", "pill2", "pill3", "pill4", "ctaRequest", "quoteOpen", "packagesTitle", "packagesSub", "packagesNote", "requestTitle", "requestSub", "formTitle"]) {
+  for (const key of ["eyebrow", "showcaseEyebrow", "showcaseMicro", "showcaseBody", "showcaseCta", "heroTitleA", "heroTitleB", "heroSubtitle", "pill0", "pill1", "pill2", "pill3", "pill4", "ctaRequest", "quoteOpen", "packagesTitle", "packagesSub", "packagesNote", "requestTitle", "requestSub", "formTitle", "pickupTitle", "pickupNote", "faqSub", "faqQ7", "faqA7"]) {
     if (c[key] != null) html = replaceElementText(html, key, c[key]);
   }
 
@@ -495,7 +677,7 @@ export default async function adsLanding(request) {
   headers.delete("last-modified");
   headers.set("content-type", "text/html; charset=utf-8");
   headers.set("x-robots-tag", "noindex, follow");
-  headers.set("x-lo-ads-landing", `${route.lang}-${route.mode}`);
+  headers.set("x-lo-ads-landing", route.city ? `${route.lang}-${route.mode}-${route.city}` : `${route.lang}-${route.mode}`);
   // The transformed HTML is deterministic for a deployed version. Cache it at Netlify's
   // edge and ignore normal tracking parameters (gclid/utm_*) in the cache key. A deploy
   // automatically invalidates this cache.
@@ -507,24 +689,5 @@ export default async function adsLanding(request) {
 
 export const config = {
   cache: "manual",
-  path: [
-    "/ads/ferrari-mieten-zuerich",
-    "/ads/ferrari-mieten-zuerich/",
-    "/en/ads/ferrari-rental-zurich",
-    "/en/ads/ferrari-rental-zurich/",
-    "/it/ads/noleggio-ferrari-zurigo",
-    "/it/ads/noleggio-ferrari-zurigo/",
-    "/ads/ferrari-mieten-hochzeit-zuerich",
-    "/ads/ferrari-mieten-hochzeit-zuerich/",
-    "/en/ads/ferrari-wedding-car-rental-zurich",
-    "/en/ads/ferrari-wedding-car-rental-zurich/",
-    "/it/ads/noleggio-ferrari-matrimonio-zurigo",
-    "/it/ads/noleggio-ferrari-matrimonio-zurigo/",
-    "/ads/ferrari-gutschein-zuerich",
-    "/ads/ferrari-gutschein-zuerich/",
-    "/en/ads/ferrari-gift-voucher-zurich",
-    "/en/ads/ferrari-gift-voucher-zurich/",
-    "/it/ads/buono-regalo-ferrari-zurigo",
-    "/it/ads/buono-regalo-ferrari-zurigo/",
-  ],
+  path: Object.keys(ROUTES).flatMap((routePath) => [routePath, `${routePath}/`]),
 };

@@ -1874,7 +1874,9 @@ renderPackagesPreview();
           const opt = document.createElement("option");
           opt.value = val;
           opt.textContent = label;
-          if(previousValue ? val === previousValue : i === 0) opt.selected = true; // Nänikon default
+          const defaultPickupValue = window.LO_DEFAULT_PICKUP_LOCATION || "";
+          const targetPickupValue = previousValue || defaultPickupValue;
+          if(targetPickupValue ? val === targetPickupValue : i === 0) opt.selected = true; // Nänikon default unless an Ads page preselects a delivery city
           pickupSel.appendChild(opt);
         });
       };
