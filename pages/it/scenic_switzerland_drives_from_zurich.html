@@ -80,7 +80,7 @@
   --titaniumA:rgba(252,252,253,0.92);
   --titaniumB:rgba(176,176,186,0.70);
   --hairline:rgba(231,220,198,0.18);
-  --carbonImage:url("../media/carbon.jpg");
+  --carbonImage:url("../media/carbon.webp");
   --max:1120px;
   --logoSize: 60px;
 }
@@ -889,14 +889,14 @@ try {
   document.documentElement.lang = lang;
   localStorage.setItem("lo_lang", lang);
 
-const setHref = (id, value) => {
+const setLocalizedHref = (id, value) => {
   const el = document.getElementById(id);
   if(el) el.href = value;
 };
 
-setHref("navContact", "/it#contact");
-setHref("navRequest", "/it#request");
-setHref("reqQuote", "/it#request");
+setLocalizedHref("navContact", "/it#contact");
+setLocalizedHref("navRequest", "/it#request");
+setLocalizedHref("reqQuote", "/it#request");
 
   function wireHamburgerFallback(){
     const btn = document.getElementById("hamburger");

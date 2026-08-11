@@ -170,7 +170,10 @@ function loRewriteInternalLinks(effectiveLang){
 
   try{
     const brand = document.querySelector("a.brand");
-    if(brand) brand.setAttribute("href", loPrettyUrl("index.html", effectiveLang));
+    if(brand){
+      const explicitHome = (typeof window.LO_HOME_URL === "string" && window.LO_HOME_URL) ? window.LO_HOME_URL : "";
+      brand.setAttribute("href", explicitHome || loPrettyUrl("index.html", effectiveLang));
+    }
   } catch(_e) {}
 
   document.querySelectorAll("a[href]").forEach(a => {
@@ -485,10 +488,12 @@ function initFooterLegalLinks(lang){
       it: { rates:"Tariffe", gallery:"Galleria", voucher:"Buono regalo", about:"Chi siamo" }
     };
     const t = labels[effectiveLang] || labels.de;
+    const ratesOverride = typeof window.LO_NAV_RATES_URL === "string" ? window.LO_NAV_RATES_URL : "";
+    const voucherOverride = typeof window.LO_NAV_VOUCHER_URL === "string" ? window.LO_NAV_VOUCHER_URL : "";
     return [
-      { id:"navRates", text:t.rates, href:buildRootUrl("pricing.html", effectiveLang) },
+      { id:"navRates", text:t.rates, href:ratesOverride || buildRootUrl("pricing.html", effectiveLang) },
       { id:"navGallery", text:t.gallery, href:buildRootUrl("gallery.html", effectiveLang) },
-      { id:"navVoucher", text:t.voucher, href:buildRootUrl("ferrari-gift-voucher-zurich.html", effectiveLang) },
+      { id:"navVoucher", text:t.voucher, href:voucherOverride || buildRootUrl("ferrari-gift-voucher-zurich.html", effectiveLang) },
       { id:"navAbout", text:t.about, href:buildRootUrl("about-us.html", effectiveLang) }
     ];
   }
@@ -1046,6 +1051,20 @@ function initAnalyticsEvents(){
   }, true);
 }
 
+function applyNavigationOverrides(){
+    const pairs = [
+      ["navRates", "LO_NAV_RATES_URL"],
+      ["navRequest", "LO_NAV_REQUEST_URL"],
+      ["ctaPricing", "LO_CTA_PRICING_URL"]
+    ];
+    for(const [id, key] of pairs){
+      const value = window[key];
+      if(typeof value !== "string" || !value) continue;
+      const node = document.getElementById(id);
+      if(node) node.setAttribute("href", value);
+    }
+  }
+
 function initSharedUI
 (lang){
     const effectiveLang = lang || getLang();
@@ -1063,6 +1082,7 @@ function initSharedUI
 
     splitBrandWords();
     promoteRequest();
+    applyNavigationOverrides();
 
     initLangMenu(effectiveLang);
     initFooterYear();

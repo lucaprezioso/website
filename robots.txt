@@ -19,7 +19,6 @@ Disallow: /media/poster-vertical_960.webp
 Disallow: /media/poster_vertical_placeholder_48.webp
 Disallow: /media/poster_1920.jpg
 Disallow: /media/poster_1920.webp
-Disallow: /media/poster_1920.jpg
 Disallow: /media/poster_1600.webp
 Disallow: /media/poster_1600.jpg
 Disallow: /media/poster_1365.jpg

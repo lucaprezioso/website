@@ -1699,7 +1699,7 @@ const DEFAULT_PACKAGES =
 
     async function hydratePackages(){
       try{
-        const res = await fetch("data/packages.json", { cache: "no-store" });
+        const res = await fetch("/data/packages.json", { cache: "no-store" });
         if(!res.ok) throw new Error("bad response");
         const data = await res.json();
         const list = (data && Array.isArray(data.packages)) ? data.packages : (Array.isArray(data) ? data : null);
