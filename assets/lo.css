@@ -1701,3 +1701,13 @@ footer{
     justify-content:flex-start;
   }
 }
+
+
+/* Footer NAP items: indivisible details; four clean rows on mobile */
+.footerNapItem{display:inline-block;white-space:nowrap}
+.footerNapItem:not(:last-child)::after{content:" · ";color:rgba(243,241,238,0.46)}
+@media (max-width:900px){
+  .footerNap{display:grid !important;grid-template-columns:1fr !important;justify-items:center !important;gap:0.1rem !important;width:min(100%,440px) !important;box-sizing:border-box !important}
+  .footerNapItem{display:block !important;white-space:nowrap !important;max-width:100% !important}
+  .footerNapItem:not(:last-child)::after{content:none !important}
+}
