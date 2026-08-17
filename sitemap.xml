@@ -139,7 +139,7 @@
   </url>
   <url>
     <loc>https://luxuryobsession.ch/journal</loc>
-    <lastmod>2026-07-29</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="de-CH" href="https://luxuryobsession.ch/journal" />
     <xhtml:link rel="alternate" hreflang="en-CH" href="https://luxuryobsession.ch/en/journal" />
@@ -1080,7 +1080,7 @@
   </url>
   <url>
     <loc>https://luxuryobsession.ch/en/journal</loc>
-    <lastmod>2026-07-29</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="de-CH" href="https://luxuryobsession.ch/journal" />
     <xhtml:link rel="alternate" hreflang="en-CH" href="https://luxuryobsession.ch/en/journal" />
@@ -1089,7 +1089,7 @@
   </url>
   <url>
     <loc>https://luxuryobsession.ch/it/blog</loc>
-    <lastmod>2026-07-29</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.60</priority>
     <xhtml:link rel="alternate" hreflang="de-CH" href="https://luxuryobsession.ch/journal" />
     <xhtml:link rel="alternate" hreflang="en-CH" href="https://luxuryobsession.ch/en/journal" />
@@ -1302,4 +1302,5 @@
     <xhtml:link rel="alternate" hreflang="it-CH" href="https://luxuryobsession.ch/it/chi-siamo" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://luxuryobsession.ch/ueber-uns" />
   </url>
+<url><loc>https://luxuryobsession.ch/en/ferrari-458-brief-escape-pfannenstiel-meilen</loc><lastmod>2026-08-14</lastmod><priority>0.7</priority><xhtml:link rel="alternate" hreflang="en-CH" href="https://luxuryobsession.ch/en/ferrari-458-brief-escape-pfannenstiel-meilen" /><xhtml:link rel="alternate" hreflang="de-CH" href="https://luxuryobsession.ch/de/ferrari-458-kurztrip-pfannenstiel-meilen-zuerich" /><xhtml:link rel="alternate" hreflang="it-CH" href="https://luxuryobsession.ch/it/ferrari-458-breve-fuga-pfannenstiel-meilen-zurigo" /><xhtml:link rel="alternate" hreflang="x-default" href="https://luxuryobsession.ch/en/ferrari-458-brief-escape-pfannenstiel-meilen" /></url><url><loc>https://luxuryobsession.ch/de/ferrari-458-kurztrip-pfannenstiel-meilen-zuerich</loc><lastmod>2026-08-14</lastmod><priority>0.7</priority><xhtml:link rel="alternate" hreflang="en-CH" href="https://luxuryobsession.ch/en/ferrari-458-brief-escape-pfannenstiel-meilen" /><xhtml:link rel="alternate" hreflang="de-CH" href="https://luxuryobsession.ch/de/ferrari-458-kurztrip-pfannenstiel-meilen-zuerich" /><xhtml:link rel="alternate" hreflang="it-CH" href="https://luxuryobsession.ch/it/ferrari-458-breve-fuga-pfannenstiel-meilen-zurigo" /><xhtml:link rel="alternate" hreflang="x-default" href="https://luxuryobsession.ch/en/ferrari-458-brief-escape-pfannenstiel-meilen" /></url><url><loc>https://luxuryobsession.ch/it/ferrari-458-breve-fuga-pfannenstiel-meilen-zurigo</loc><lastmod>2026-08-14</lastmod><priority>0.7</priority><xhtml:link rel="alternate" hreflang="en-CH" href="https://luxuryobsession.ch/en/ferrari-458-brief-escape-pfannenstiel-meilen" /><xhtml:link rel="alternate" hreflang="de-CH" href="https://luxuryobsession.ch/de/ferrari-458-kurztrip-pfannenstiel-meilen-zuerich" /><xhtml:link rel="alternate" hreflang="it-CH" href="https://luxuryobsession.ch/it/ferrari-458-breve-fuga-pfannenstiel-meilen-zurigo" /><xhtml:link rel="alternate" hreflang="x-default" href="https://luxuryobsession.ch/en/ferrari-458-brief-escape-pfannenstiel-meilen" /></url>
 </urlset>

@@ -1,3 +1,9 @@
+# Redirect old hyphenated domain to canonical domain
+https://luxury-obsession.ch/*      https://luxuryobsession.ch/:splat      301!
+http://luxury-obsession.ch/*       https://luxuryobsession.ch/:splat      301!
+https://www.luxury-obsession.ch/*  https://luxuryobsession.ch/:splat      301!
+http://www.luxury-obsession.ch/*   https://luxuryobsession.ch/:splat      301!
+
 /gallery.html             /en/gallery             301!
 /gallery                  /en/gallery             301!
 /de/gallery               /galerie                301!
@@ -535,6 +541,16 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /it/regalo-compleanno-ferrari-kyburg-zurigo                 /pages/it/regalo-compleanno-ferrari-kyburg-zurigo.html    200
 /de/ferrari-birthday-gift-kyburg-zurich                     /de/ferrari-geburtstagsgeschenk-kyburg-zuerich            301!
 /it/ferrari-birthday-gift-kyburg-zurich                     /it/regalo-compleanno-ferrari-kyburg-zurigo               301!
+
+# Brief Escape client story — Pfannenstiel, Meilen and Zurich
+/en/ferrari-458-brief-escape-pfannenstiel-meilen.html             /en/ferrari-458-brief-escape-pfannenstiel-meilen                    301!
+/de/ferrari-458-kurztrip-pfannenstiel-meilen-zuerich.html        /de/ferrari-458-kurztrip-pfannenstiel-meilen-zuerich               301!
+/it/ferrari-458-breve-fuga-pfannenstiel-meilen-zurigo.html       /it/ferrari-458-breve-fuga-pfannenstiel-meilen-zurigo              301!
+/en/ferrari-458-brief-escape-pfannenstiel-meilen                  /pages/ferrari-458-brief-escape-pfannenstiel-meilen.html            200
+/de/ferrari-458-kurztrip-pfannenstiel-meilen-zuerich             /pages/de/ferrari-458-kurztrip-pfannenstiel-meilen-zuerich.html    200
+/it/ferrari-458-breve-fuga-pfannenstiel-meilen-zurigo            /pages/it/ferrari-458-breve-fuga-pfannenstiel-meilen-zurigo.html   200
+/de/ferrari-458-brief-escape-pfannenstiel-meilen                  /de/ferrari-458-kurztrip-pfannenstiel-meilen-zuerich               301!
+/it/ferrari-458-brief-escape-pfannenstiel-meilen                  /it/ferrari-458-breve-fuga-pfannenstiel-meilen-zurigo              301!
 
 # Ferrari experiences video article (published 1 August 2026)
 /en/ferrari-458-experiences-video.html                 /en/ferrari-458-experiences-video               301!
