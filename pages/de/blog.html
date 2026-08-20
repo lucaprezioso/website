@@ -33,18 +33,18 @@
 </script>
 <meta charset="utf-8"/>
 <title>Journal | Ferrari mieten Zürich</title>
-<meta content="Luxury Obsession Journal: Ferrari-Routen, Miettipps und Ferrari 458 Italia Geschichten aus Zürich." name="description"/>
+<meta content="Entdecken Sie Ferrari-458-Italia-Routen, Miettipps, Kundenerlebnisse und Fahrideen aus Zürich und der Schweiz im Luxury Obsession Journal." name="description"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="index, follow" name="robots"/>
-<meta content="Journal | Ferrari mieten Zürich" property="og:title"/>
-<meta content="Luxury Obsession Journal: Ferrari-Routen, Miettipps und Ferrari 458 Italia Geschichten aus Zürich." property="og:description"/>
+<meta content="Luxury Obsession" property="og:site_name"/><meta content="de_CH" property="og:locale"/><meta content="https://luxuryobsession.ch/journal" property="og:url"/><meta content="Journal | Ferrari mieten Zürich" property="og:title"/>
+<meta content="Entdecken Sie Ferrari-458-Italia-Routen, Miettipps, Kundenerlebnisse und Fahrideen aus Zürich und der Schweiz im Luxury Obsession Journal." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://luxuryobsession.ch/media/ferrari-458-italia-zurich-ogimage.jpg" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="1200" property="og:image:height"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Journal | Ferrari mieten Zürich" name="twitter:title"/>
-<meta content="Luxury Obsession Journal: Ferrari-Routen, Miettipps und Ferrari 458 Italia Geschichten aus Zürich." name="twitter:description"/>
+<meta content="Entdecken Sie Ferrari-458-Italia-Routen, Miettipps, Kundenerlebnisse und Fahrideen aus Zürich und der Schweiz im Luxury Obsession Journal." name="twitter:description"/>
 <meta content="https://luxuryobsession.ch/media/ferrari-458-italia-zurich-ogimage.jpg" name="twitter:image"/>
 <link href="/media/icon.webp" rel="icon" type="image/webp"/>
 <link href="/favicon.ico" rel="icon" sizes="any"/>
@@ -288,8 +288,24 @@
       }
     }
 
+    .blogLoadMoreWrap{
+      display:flex;
+      justify-content:center;
+      margin-top:1.35rem;
+    }
+    .blogLoadMoreWrap[hidden]{display:none!important}
+    .blogLoadMoreBtn{min-width:210px;justify-content:center}
+    @media (max-width: 760px){.blogLoadMoreBtn{width:100%}}
+
+    /* Keep deferred Journal cards completely out of the layout until their batch is loaded. */
+    #blogGrid [data-journal-pending="1"],
+    #blogGrid a[hidden]{
+      display: none !important;
+    }
+
   </style>
 <script defer="" src="/assets/lo.js"></script>
+<noscript><style>#blogGrid [data-journal-pending="1"]{display:grid!important}#blogLoadMoreWrap{display:none!important}</style></noscript>
 </head>
 <body>
 <header>
@@ -357,25 +373,24 @@
 <select id="blogCategory"><option value="">Alle Kategorien</option></select>
 </div>
 </div>
-<div aria-live="polite" class="blogResults" id="blogResults">20 von 20 angezeigt</div>
+<div aria-live="polite" class="blogResults" id="blogResults">8 von 22 angezeigt</div>
 </div>
 <div class="blogGrid" id="blogGrid">
-<a aria-label="Sonnenuntergang im Ferrari 458 Italia" class="card blogCard" href="/de/ferrari-458-erlebnisse-video#top">
+<a aria-label="Ferrari 458 Italia Kurztrip: Pfannenstiel, Meilen und Zürich" class="card blogCard" href="/de/ferrari-458-kurztrip-pfannenstiel-meilen-zuerich">
+<img alt="Ferrari 458 Italia Kurztrip über Pfannenstiel, Meilen und Zürich" class="blogThumb" decoding="async" loading="lazy" src="/media/ferrari-458-pfannenstiel-meilen-960.webp"/>
+<div class="blogCardInner"><div><div class="blogMeta"><span class="blogPill">Erlebnisse &amp; Routen</span><span>·</span><time datetime="2026-08-14">2026-08-14</time><span>·</span><span>6 Min.</span></div><h3 class="blogTitle">Ferrari 458 Italia Kurztrip: Pfannenstiel, Meilen und Zürich</h3><p class="blogExcerpt">Zwei erfahrene Supercar-Enthusiasten, eine langjährige Schwäche für den 458 und eine dreistündige Runde über Maur, Meilen, Pfannenstiel und Dolder Grand.</p></div><div class="blogRead">Lesen <span aria-hidden="true">→</span></div></div></a>
+<a aria-label="Sonnenuntergang im Ferrari 458 Italia" class="card blogCard" href="/de/ferrari-458-erlebnisse-video">
 <img alt="Ferrari 458 Italia bei Sonnenuntergang nahe Zürich" class="blogThumb" decoding="async" loading="lazy" src="/media/gallery/hotel-front-sunset-960.webp"/>
-<div class="blogCardInner"><div><div class="blogMeta"><span class="blogPill">Erlebnisse & Routen</span><span>·</span><time datetime="2026-08-01">2026-08-01</time><span>·</span><span>3 Min.</span></div><h3 class="blogTitle">Sonnenuntergang im Ferrari 458 Italia</h3><p class="blogExcerpt">Ein Kurzfilm über ruhige Strassen bei Zürich, Abendlicht und die Atmosphäre eines persönlich betreuten Ferrari 458 Italia Erlebnisses.</p></div><div class="blogRead">Lesen <span aria-hidden="true">→</span></div></div></a>
-
+<div class="blogCardInner"><div><div class="blogMeta"><span class="blogPill">Erlebnisse &amp; Routen</span><span>·</span><time datetime="2026-08-01">2026-08-01</time><span>·</span><span>3 Min.</span></div><h3 class="blogTitle">Sonnenuntergang im Ferrari 458 Italia</h3><p class="blogExcerpt">Ein Kurzfilm über ruhige Strassen bei Zürich, Abendlicht und die Atmosphäre eines persönlich betreuten Ferrari 458 Italia Erlebnisses.</p></div><div class="blogRead">Lesen <span aria-hidden="true">→</span></div></div></a>
 <a aria-label="Ferrari 458 Italia als Geburtstagsgeschenk: Kurztrip nach Kyburg" class="card blogCard" href="/de/ferrari-geburtstagsgeschenk-kyburg-zuerich">
 <img alt="Ferrari 458 Italia als Geburtstagsgeschenk beim Schloss Kyburg" class="blogThumb" decoding="async" loading="lazy" src="/media/kyburg-birthday-arrival-960.webp"/>
-<div class="blogCardInner"><div><div class="blogMeta"><span class="blogPill">Erlebnisse & Routen</span><span>·</span><time datetime="2026-07-27">2026-07-27</time><span>·</span><span>5 Min.</span></div><h3 class="blogTitle">Ferrari 458 Italia als Geburtstagsgeschenk: Kurztrip nach Kyburg</h3><p class="blogExcerpt">Eine Geburtstagsüberraschung, die erste Supercar-Fahrt und drei Stunden von Nänikon zum Schloss Kyburg im Ferrari 458 Italia mit Saugmotor.</p></div><div class="blogRead">Lesen <span aria-hidden="true">→</span></div></div></a>
-
+<div class="blogCardInner"><div><div class="blogMeta"><span class="blogPill">Erlebnisse &amp; Routen</span><span>·</span><time datetime="2026-07-27">2026-07-27</time><span>·</span><span>5 Min.</span></div><h3 class="blogTitle">Ferrari 458 Italia als Geburtstagsgeschenk: Kurztrip nach Kyburg</h3><p class="blogExcerpt">Eine Geburtstagsüberraschung, die erste Supercar-Fahrt und drei Stunden von Nänikon zum Schloss Kyburg im Ferrari 458 Italia mit Saugmotor.</p></div><div class="blogRead">Lesen <span aria-hidden="true">→</span></div></div></a>
 <a aria-label="Ferrari 458 Italia zum Klausenpass: ein Kundenerlebnis in sechs Stunden" class="card blogCard" href="/de/ferrari-458-klausenpass-fahrt-zuerich">
 <img alt="Ferrari 458 Italia zum Klausenpass: ein Kundenerlebnis in sechs Stunden" class="blogThumb" decoding="async" loading="lazy" src="/media/klausen-departure-960.webp"/>
-<div class="blogCardInner"><div><div class="blogMeta"><span class="blogPill">Erlebnisse & Routen</span><span>·</span><time datetime="2026-07-20">2026-07-20</time><span>·</span><span>5 Min.</span></div><h3 class="blogTitle">Ferrari 458 Italia zum Klausenpass: ein Kundenerlebnis in sechs Stunden</h3><p class="blogExcerpt">Ein Ferrari-begeistertes Paar, ein früher Start in Nänikon und sechs Stunden für Linthal, Klausenstrasse, Fotostopps und Mittagessen nahe der Passhöhe.</p></div><div class="blogRead">Lesen <span aria-hidden="true">→</span></div></div></a>
-
-<a aria-label="Luxury Obsession kennenlernen: Ferrari 458 Italia mieten bei Zürich" class="card blogCard" href="/de/luxury-obsession-video#top">
+<div class="blogCardInner"><div><div class="blogMeta"><span class="blogPill">Erlebnisse &amp; Routen</span><span>·</span><time datetime="2026-07-20">2026-07-20</time><span>·</span><span>5 Min.</span></div><h3 class="blogTitle">Ferrari 458 Italia zum Klausenpass: ein Kundenerlebnis in sechs Stunden</h3><p class="blogExcerpt">Ein Ferrari-begeistertes Paar, ein früher Start in Nänikon und sechs Stunden für Linthal, Klausenstrasse, Fotostopps und Mittagessen nahe der Passhöhe.</p></div><div class="blogRead">Lesen <span aria-hidden="true">→</span></div></div></a>
+<a aria-label="Luxury Obsession kennenlernen: Ferrari 458 Italia mieten bei Zürich" class="card blogCard" href="/de/luxury-obsession-video">
 <img alt="Luxury Obsession kennenlernen: Ferrari 458 Italia mieten bei Zürich" class="blogThumb" decoding="async" loading="lazy" src="/media/gallery/hotel-front-landscape-960.webp"/>
 <div class="blogCardInner"><div><div class="blogMeta"><span class="blogPill">Einblicke</span><span>·</span><time datetime="2026-07-13">2026-07-13</time><span>·</span><span>2 Min.</span></div><h3 class="blogTitle">Luxury Obsession kennenlernen: Ferrari 458 Italia mieten bei Zürich</h3><p class="blogExcerpt">Eine kurze Vorstellung von Anna, Luxury Obsession und dem Ferrari 458 Italia in Rosso Corsa hinter jedem persönlich betreuten Fahrerlebnis.</p></div><div class="blogRead">Lesen <span aria-hidden="true">→</span></div></div></a>
-
 <a aria-label="Warum Carbon und Premium Materialien in Luxusautos wichtig sind" class="card blogCard" href="/de/carbon-luxusautos-ferrari-zuerich">
 <img alt="Warum Carbon und Premium Materialien in Luxusautos wichtig sind" class="blogThumb" decoding="async" loading="lazy" src="/media/ferrari-interior-480.webp"/>
 <div class="blogCardInner">
@@ -427,8 +442,8 @@
 <div class="blogRead">Lesen <span aria-hidden="true">→</span></div>
 </div>
 </a>
-<a aria-label="Ferrari 458 Italia vs Lamborghini Huracan in Zürich" class="card blogCard" href="/de/ferrari-458-vs-lamborghini-huracan-zuerich">
-<img alt="Ferrari 458 Italia vs Lamborghini Huracan in Zürich" class="blogThumb" decoding="async" loading="lazy" src="/media/image02800.jpg"/>
+<a aria-label="Ferrari 458 Italia vs Lamborghini Huracan in Zürich" class="card blogCard" data-journal-pending="1" href="/de/ferrari-458-vs-lamborghini-huracan-zuerich">
+<img alt="Ferrari 458 Italia vs Lamborghini Huracan in Zürich" class="blogThumb" data-src="/media/image02800.jpg" decoding="async" loading="lazy"/>
 <div class="blogCardInner">
 <div>
 <div class="blogMeta">
@@ -444,8 +459,8 @@
 <div class="blogRead">Lesen <span aria-hidden="true">→</span></div>
 </div>
 </a>
-<a aria-label="Ferrari F430 vs Ferrari 458 Italia" class="card blogCard" href="/de/ferrari-f430-vs-ferrari-458-italia">
-<img alt="Ferrari F430 vs Ferrari 458 Italia" class="blogThumb" decoding="async" loading="lazy" src="/media/image02700.jpg"/>
+<a aria-label="Ferrari F430 vs Ferrari 458 Italia" class="card blogCard" data-journal-pending="1" href="/de/ferrari-f430-vs-ferrari-458-italia">
+<img alt="Ferrari F430 vs Ferrari 458 Italia" class="blogThumb" data-src="/media/image02700.jpg" decoding="async" loading="lazy"/>
 <div class="blogCardInner">
 <div>
 <div class="blogMeta">
@@ -461,8 +476,8 @@
 <div class="blogRead">Lesen <span aria-hidden="true">→</span></div>
 </div>
 </a>
-<a aria-label="Warum sich ein Ferrari 458 Italia in der Schweiz anders anfühlt" class="card blogCard" href="/de/warum-ferrari-458-italia-in-der-schweiz-anders-ist">
-<img alt="Warum sich ein Ferrari 458 Italia in der Schweiz anders anfühlt" class="blogThumb" decoding="async" loading="lazy" src="/media/image00520.webp"/>
+<a aria-label="Warum sich ein Ferrari 458 Italia in der Schweiz anders anfühlt" class="card blogCard" data-journal-pending="1" href="/de/warum-ferrari-458-italia-in-der-schweiz-anders-ist">
+<img alt="Warum sich ein Ferrari 458 Italia in der Schweiz anders anfühlt" class="blogThumb" data-src="/media/image00520.webp" decoding="async" loading="lazy"/>
 <div class="blogCardInner">
 <div>
 <div class="blogMeta">
@@ -478,8 +493,8 @@
 <div class="blogRead">Lesen <span aria-hidden="true">→</span></div>
 </div>
 </a>
-<a aria-label="Ferrari 458 Italia Details, die viele übersehen" class="card blogCard" href="/de/ferrari-458-italia-details-die-viele-uebersehen">
-<img alt="Ferrari 458 Italia Details, die viele übersehen" class="blogThumb" decoding="async" loading="lazy" src="/media/image01701.jpg"/>
+<a aria-label="Ferrari 458 Italia Details, die viele übersehen" class="card blogCard" data-journal-pending="1" href="/de/ferrari-458-italia-details-die-viele-uebersehen">
+<img alt="Ferrari 458 Italia Details, die viele übersehen" class="blogThumb" data-src="/media/image01701.jpg" decoding="async" loading="lazy"/>
 <div class="blogCardInner">
 <div>
 <div class="blogMeta">
@@ -495,12 +510,12 @@
 <div class="blogRead">Lesen <span aria-hidden="true">→</span></div>
 </div>
 </a>
-<a aria-label="Ferrari 458 Italia Hochzeitsauto mieten Zürich" class="card blogCard" href="/de/ferrari-458-hochzeitsauto-mieten-zuerich">
-<img alt="Ferrari 458 Italia Hochzeitsauto mieten Zürich" class="blogThumb" decoding="async" loading="lazy" src="/media/wedding_458_hero.webp"/>
+<a aria-label="Ferrari 458 Italia Hochzeitsauto mieten Zürich" class="card blogCard" data-journal-pending="1" href="/de/ferrari-458-hochzeitsauto-mieten-zuerich">
+<img alt="Ferrari 458 Italia Hochzeitsauto mieten Zürich" class="blogThumb" data-src="/media/wedding_458_hero.webp" decoding="async" loading="lazy"/>
 <div class="blogCardInner">
 <div>
 <div class="blogMeta">
-<span class="blogPill">Erlebnisse & Routen</span>
+<span class="blogPill">Erlebnisse &amp; Routen</span>
 <span>·</span>
 <time datetime="2026-02-25">2026-02-25</time>
 <span>·</span>
@@ -512,8 +527,8 @@
 <div class="blogRead">Lesen <span aria-hidden="true">→</span></div>
 </div>
 </a>
-<a aria-label="Instagrammable Orte rund um Zürich und Uster, Teil 1" class="card blogCard" href="/de/instagram-spots-zuerich-uster-ferrari">
-<img alt="Instagrammable Orte rund um Zürich und Uster, Teil 1" class="blogThumb" decoding="async" loading="lazy" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjkwMCIgdmlld0JveD0iMCAwIDE2MDAgOTAwIj4KPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMGIwYjBkIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNTE1MWEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxsaW5lYXJHcmFkaWVudCBpZD0iZ29sZCIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYjM4YTJlIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjAuNSIgc3RvcC1jb2xvcj0iI2U2Yzg2ZSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjYjM4YTJlIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI5MDAiIGZpbGw9InVybCgjYmcpIi8+CjxnIG9wYWNpdHk9IjAuMjUiPgogIDxjaXJjbGUgY3g9IjEyMjAiIGN5PSIyNTAiIHI9IjI2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dvbGQpIiBzdHJva2Utd2lkdGg9IjYiLz4KICA8Y2lyY2xlIGN4PSIxMjIwIiBjeT0iMjUwIiByPSIyMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkKSIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPGNpcmNsZSBjeD0iMTIyMCIgY3k9IjI1MCIgcj0iMTQwIiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZCkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L2c+Cgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMTAsMjMwKSI+CiAgPHBhdGggZD0iTTI2MCAxMTBjMC0yMiAxOC00MCA0MC00MGgxOTBsMzQtNDBoMTEyYzIyIDAgNDAgMTggNDAgNDB2NjBoNzBjMjIgMCA0MCAxOCA0MCA0MHYyOTBjMCAyMi0xOCA0MC00MCA0MEgxMTBjLTIyIDAtNDAtMTgtNDAtNDBWMTkwYzAtMjIgMTgtNDAgNDAtNDBoNzB6IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZCkiIHN0cm9rZS13aWR0aD0iMTAiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSI1MjAiIGN5PSIzNDAiIHI9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dvbGQpIiBzdHJva2Utd2lkdGg9IjEwIi8+CiAgPGNpcmNsZSBjeD0iNTIwIiBjeT0iMzQwIiByPSI1NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dvbGQpIiBzdHJva2Utd2lkdGg9IjgiIG9wYWNpdHk9IjAuNyIvPgogIDxwYXRoIGQ9Ik04NzAgMjIwYzQwIDAgNzIgMzIgNzIgNzIgMCA3NC03MiAxNjAtNzIgMTYwcy03Mi04Ni03Mi0xNjBjMC00MCAzMi03MiA3Mi03MnoiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkKSIgc3Ryb2tlLXdpZHRoPSIxMCIvPgogIDxjaXJjbGUgY3g9Ijg3MCIgY3k9IjI5MiIgcj0iMjIiIGZpbGw9InVybCgjZ29sZCkiLz4KPC9nPgoKPGcgZm9udC1mYW1pbHk9InN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgU2Vnb2UgVUksIFJvYm90bywgQXJpYWwiIHRleHQtYW5jaG9yPSJzdGFydCI+CiAgPHRleHQgeD0iMTIwIiB5PSIxMTAiIGZvbnQtc2l6ZT0iNTYiIGZpbGw9InVybCgjZ29sZCkiIGZvbnQtd2VpZ2h0PSI3MDAiPkluc3RhZ3JhbW1hYmxlIHBsYWNlczwvdGV4dD4KICA8dGV4dCB4PSIxMjAiIHk9IjE3MCIgZm9udC1zaXplPSIzNCIgZmlsbD0iI2U4ZThlZSIgb3BhY2l0eT0iMC45Ij5adXJpY2ggYXJlYSwgY2xvc2VyIHRvIFVzdGVyIOKAoiBQYXJ0IDE8L3RleHQ+CjwvZz4KPC9zdmc+"/>
+<a aria-label="Instagrammable Orte rund um Zürich und Uster, Teil 1" class="card blogCard" data-journal-pending="1" href="/de/instagram-spots-zuerich-uster-ferrari">
+<img alt="Instagrammable Orte rund um Zürich und Uster, Teil 1" class="blogThumb" data-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjkwMCIgdmlld0JveD0iMCAwIDE2MDAgOTAwIj4KPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMGIwYjBkIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNTE1MWEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxsaW5lYXJHcmFkaWVudCBpZD0iZ29sZCIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYjM4YTJlIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjAuNSIgc3RvcC1jb2xvcj0iI2U2Yzg2ZSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjYjM4YTJlIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI5MDAiIGZpbGw9InVybCgjYmcpIi8+CjxnIG9wYWNpdHk9IjAuMjUiPgogIDxjaXJjbGUgY3g9IjEyMjAiIGN5PSIyNTAiIHI9IjI2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dvbGQpIiBzdHJva2Utd2lkdGg9IjYiLz4KICA8Y2lyY2xlIGN4PSIxMjIwIiBjeT0iMjUwIiByPSIyMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkKSIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPGNpcmNsZSBjeD0iMTIyMCIgY3k9IjI1MCIgcj0iMTQwIiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZCkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L2c+Cgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMTAsMjMwKSI+CiAgPHBhdGggZD0iTTI2MCAxMTBjMC0yMiAxOC00MCA0MC00MGgxOTBsMzQtNDBoMTEyYzIyIDAgNDAgMTggNDAgNDB2NjBoNzBjMjIgMCA0MCAxOCA0MCA0MHYyOTBjMCAyMi0xOCA0MC00MCA0MEgxMTBjLTIyIDAtNDAtMTgtNDAtNDBWMTkwYzAtMjIgMTgtNDAgNDAtNDBoNzB6IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZCkiIHN0cm9rZS13aWR0aD0iMTAiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSI1MjAiIGN5PSIzNDAiIHI9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dvbGQpIiBzdHJva2Utd2lkdGg9IjEwIi8+CiAgPGNpcmNsZSBjeD0iNTIwIiBjeT0iMzQwIiByPSI1NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dvbGQpIiBzdHJva2Utd2lkdGg9IjgiIG9wYWNpdHk9IjAuNyIvPgogIDxwYXRoIGQ9Ik04NzAgMjIwYzQwIDAgNzIgMzIgNzIgNzIgMCA3NC03MiAxNjAtNzIgMTYwcy03Mi04Ni03Mi0xNjBjMC00MCAzMi03MiA3Mi03MnoiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkKSIgc3Ryb2tlLXdpZHRoPSIxMCIvPgogIDxjaXJjbGUgY3g9Ijg3MCIgY3k9IjI5MiIgcj0iMjIiIGZpbGw9InVybCgjZ29sZCkiLz4KPC9nPgoKPGcgZm9udC1mYW1pbHk9InN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgU2Vnb2UgVUksIFJvYm90bywgQXJpYWwiIHRleHQtYW5jaG9yPSJzdGFydCI+CiAgPHRleHQgeD0iMTIwIiB5PSIxMTAiIGZvbnQtc2l6ZT0iNTYiIGZpbGw9InVybCgjZ29sZCkiIGZvbnQtd2VpZ2h0PSI3MDAiPkluc3RhZ3JhbW1hYmxlIHBsYWNlczwvdGV4dD4KICA8dGV4dCB4PSIxMjAiIHk9IjE3MCIgZm9udC1zaXplPSIzNCIgZmlsbD0iI2U4ZThlZSIgb3BhY2l0eT0iMC45Ij5adXJpY2ggYXJlYSwgY2xvc2VyIHRvIFVzdGVyIOKAoiBQYXJ0IDE8L3RleHQ+CjwvZz4KPC9zdmc+" decoding="async" loading="lazy"/>
 <div class="blogCardInner">
 <div>
 <div class="blogMeta">
@@ -529,8 +544,8 @@
 <div class="blogRead">Lesen <span aria-hidden="true">→</span></div>
 </div>
 </a>
-<a aria-label="Warum Supercar Miete in der Schweiz oft einfacher und preislich attraktiver wirkt" class="card blogCard" href="/de/supercar-mieten-schweiz-italien-deutschland-frankreich">
-<img alt="Warum Supercar Miete in der Schweiz oft einfacher und preislich attraktiver wirkt" class="blogThumb" decoding="async" loading="lazy" src="/media/458-engine-800.webp"/>
+<a aria-label="Warum Supercar Miete in der Schweiz oft einfacher und preislich attraktiver wirkt" class="card blogCard" data-journal-pending="1" href="/de/supercar-mieten-schweiz-italien-deutschland-frankreich">
+<img alt="Warum Supercar Miete in der Schweiz oft einfacher und preislich attraktiver wirkt" class="blogThumb" data-src="/media/458-engine-800.webp" decoding="async" loading="lazy"/>
 <div class="blogCardInner">
 <div>
 <div class="blogMeta">
@@ -546,12 +561,12 @@
 <div class="blogRead">Lesen <span aria-hidden="true">→</span></div>
 </div>
 </a>
-<a aria-label="Panorama Fahrten ab Zürich. Seen, Pässe und perfekte Halbtages Runden" class="card blogCard" href="/de/schoene-strecken-schweiz-ab-zuerich">
-<img alt="Panorama Fahrten ab Zürich. Seen, Pässe und perfekte Halbtages Runden" class="blogThumb" decoding="async" loading="lazy" src="/media/image01900.jpg"/>
+<a aria-label="Panorama Fahrten ab Zürich. Seen, Pässe und perfekte Halbtages Runden" class="card blogCard" data-journal-pending="1" href="/de/schoene-strecken-schweiz-ab-zuerich">
+<img alt="Panorama Fahrten ab Zürich. Seen, Pässe und perfekte Halbtages Runden" class="blogThumb" data-src="/media/image01900.jpg" decoding="async" loading="lazy"/>
 <div class="blogCardInner">
 <div>
 <div class="blogMeta">
-<span class="blogPill">Erlebnisse & Routen</span>
+<span class="blogPill">Erlebnisse &amp; Routen</span>
 <span>·</span>
 <time datetime="2026-02-06">2026-02-06</time>
 <span>·</span>
@@ -563,8 +578,8 @@
 <div class="blogRead">Lesen <span aria-hidden="true">→</span></div>
 </div>
 </a>
-<a aria-label="Ferrari 458 vs 488. Warum der 458 im Kopf bleibt" class="card blogCard" href="/de/ferrari-458-vs-488">
-<img alt="Ferrari 458 vs 488. Warum der 458 im Kopf bleibt" class="blogThumb" decoding="async" loading="lazy" src="/media/image03000.png"/>
+<a aria-label="Ferrari 458 vs 488. Warum der 458 im Kopf bleibt" class="card blogCard" data-journal-pending="1" href="/de/ferrari-458-vs-488">
+<img alt="Ferrari 458 vs 488. Warum der 458 im Kopf bleibt" class="blogThumb" data-src="/media/image03000.png" decoding="async" loading="lazy"/>
 <div class="blogCardInner">
 <div>
 <div class="blogMeta">
@@ -580,8 +595,8 @@
 <div class="blogRead">Lesen <span aria-hidden="true">→</span></div>
 </div>
 </a>
-<a aria-label="Ferrari 458 und 488. Preisentwicklung in der Schweiz" class="card blogCard" href="/de/ferrari-458-488-preisentwicklung-schweiz">
-<img alt="Ferrari 458 und 488. Preisentwicklung in der Schweiz" class="blogThumb" decoding="async" loading="lazy" src="/media/image03100.jpg"/>
+<a aria-label="Ferrari 458 und 488. Preisentwicklung in der Schweiz" class="card blogCard" data-journal-pending="1" href="/de/ferrari-458-488-preisentwicklung-schweiz">
+<img alt="Ferrari 458 und 488. Preisentwicklung in der Schweiz" class="blogThumb" data-src="/media/image03100.jpg" decoding="async" loading="lazy"/>
 <div class="blogCardInner">
 <div>
 <div class="blogMeta">
@@ -597,8 +612,8 @@
 <div class="blogRead">Lesen <span aria-hidden="true">→</span></div>
 </div>
 </a>
-<a aria-label="Besitz vs Miete. Mittelmotor Ferrari in der Schweiz" class="card blogCard" href="/de/ferrari-kaufen-oder-mieten-schweiz">
-<img alt="Besitz vs Miete. Mittelmotor Ferrari in der Schweiz" class="blogThumb" decoding="async" loading="lazy" src="/media/image03200.jpg"/>
+<a aria-label="Besitz vs Miete. Mittelmotor Ferrari in der Schweiz" class="card blogCard" data-journal-pending="1" href="/de/ferrari-kaufen-oder-mieten-schweiz">
+<img alt="Besitz vs Miete. Mittelmotor Ferrari in der Schweiz" class="blogThumb" data-src="/media/image03200.jpg" decoding="async" loading="lazy"/>
 <div class="blogCardInner">
 <div>
 <div class="blogMeta">
@@ -614,12 +629,12 @@
 <div class="blogRead">Lesen <span aria-hidden="true">→</span></div>
 </div>
 </a>
-<a aria-label="Ferrari 458 Italia. Das Signature Erlebnis in der Schweiz" class="card blogCard" href="/de/ferrari-458-italia-erlebnis-schweiz">
-<img alt="Ferrari 458 Italia. Das Signature Erlebnis in der Schweiz" class="blogThumb" decoding="async" loading="lazy" src="/media/image02500.webp"/>
+<a aria-label="Ferrari 458 Italia. Das Signature Erlebnis in der Schweiz" class="card blogCard" data-journal-pending="1" href="/de/ferrari-458-italia-erlebnis-schweiz">
+<img alt="Ferrari 458 Italia. Das Signature Erlebnis in der Schweiz" class="blogThumb" data-src="/media/image02500.webp" decoding="async" loading="lazy"/>
 <div class="blogCardInner">
 <div>
 <div class="blogMeta">
-<span class="blogPill">Erlebnisse & Routen</span>
+<span class="blogPill">Erlebnisse &amp; Routen</span>
 <span>·</span>
 <time datetime="2026-01-10">2026-01-10</time>
 <span>·</span>
@@ -631,12 +646,12 @@
 <div class="blogRead">Lesen <span aria-hidden="true">→</span></div>
 </div>
 </a>
-<a aria-label="Schweizer Routen, die sich im Ferrari lohnen" class="card blogCard" href="/de/schweizer-routen-ferrari-zuerich">
-<img alt="Schweizer Routen, die sich im Ferrari lohnen" class="blogThumb" decoding="async" loading="lazy" src="/media/image00300.jpg"/>
+<a aria-label="Schweizer Routen, die sich im Ferrari lohnen" class="card blogCard" data-journal-pending="1" href="/de/schweizer-routen-ferrari-zuerich">
+<img alt="Schweizer Routen, die sich im Ferrari lohnen" class="blogThumb" data-src="/media/image00300.jpg" decoding="async" loading="lazy"/>
 <div class="blogCardInner">
 <div>
 <div class="blogMeta">
-<span class="blogPill">Erlebnisse & Routen</span>
+<span class="blogPill">Erlebnisse &amp; Routen</span>
 <span>·</span>
 <time datetime="2026-01-03">2026-01-03</time>
 <span>·</span>
@@ -648,8 +663,8 @@
 <div class="blogRead">Lesen <span aria-hidden="true">→</span></div>
 </div>
 </a>
-<a aria-label="Transparente Tarife. So designen wir Pakete die Sinn machen" class="card blogCard" href="/de/transparente-preise-ferrari-miete-zuerich">
-<img alt="Transparente Tarife. So designen wir Pakete die Sinn machen" class="blogThumb" decoding="async" loading="lazy" src="/media/image00400.webp"/>
+<a aria-label="Transparente Tarife. So designen wir Pakete die Sinn machen" class="card blogCard" data-journal-pending="1" href="/de/transparente-preise-ferrari-miete-zuerich">
+<img alt="Transparente Tarife. So designen wir Pakete die Sinn machen" class="blogThumb" data-src="/media/image00400.webp" decoding="async" loading="lazy"/>
 <div class="blogCardInner">
 <div>
 <div class="blogMeta">
@@ -665,6 +680,9 @@
 <div class="blogRead">Lesen <span aria-hidden="true">→</span></div>
 </div>
 </a>
+</div>
+<div class="blogLoadMoreWrap" id="blogLoadMoreWrap">
+<button aria-controls="blogGrid" class="btn btnSecondary blogLoadMoreBtn" id="blogLoadMore" type="button">Mehr Artikel anzeigen</button>
 </div>
 <div class="blogCTA">
 <a class="btn btnSecondary" href="/preise" id="ctaRates">Tarife ansehen</a>
@@ -708,6 +726,7 @@ const I18N = {
     filterLabel:"Category",
     filterAll:"All categories",
     resultsLabel:"Showing {x} of {y}",
+    loadMoreLabel:"Show more articles",
     empty:"No entries match your search."
   },
   de:{
@@ -725,6 +744,7 @@ const I18N = {
     filterLabel:"Kategorie",
     filterAll:"Alle Kategorien",
     resultsLabel:"{x} von {y} angezeigt",
+    loadMoreLabel:"Mehr Artikel anzeigen",
     empty:"Keine Einträge passen zur Suche."
   },
   it:{
@@ -742,6 +762,7 @@ const I18N = {
     filterLabel:"Categoria",
     filterAll:"Tutte le categorie",
     resultsLabel:"Mostrati {x} di {y}",
+    loadMoreLabel:"Mostra altri articoli",
     empty:"Nessun articolo corrisponde alla ricerca."
   }
 };
@@ -749,7 +770,7 @@ const I18N = {
 const ARTICLES = [
 
 {
-  slug: "ferrari-458-brief-escape-pfannenstiel-meilen.html",
+  slug: {en:"ferrari-458-brief-escape-pfannenstiel-meilen", de:"ferrari-458-kurztrip-pfannenstiel-meilen-zuerich", it:"ferrari-458-breve-fuga-pfannenstiel-meilen-zurigo"},
   category: {en:"Experiences & Routes", de:"Erlebnisse & Routen", it:"Esperienze & Itinerari"},
   date: "2026-08-14",
   read: {en:"6 min", de:"6 Min.", it:"6 min"},
@@ -768,7 +789,7 @@ const ARTICLES = [
 
 
 {
-  slug: "ferrari-458-erlebnisse-video.html",
+  slug: {en:"ferrari-458-experiences-video", de:"ferrari-458-erlebnisse-video", it:"video-esperienze-ferrari-458"},
   category: {en:"Experiences & Routes", de:"Erlebnisse & Routen", it:"Esperienze & Itinerari"},
   date: "2026-08-01",
   read: {en:"3 min", de:"3 Min.", it:"3 min"},
@@ -786,7 +807,7 @@ const ARTICLES = [
 },
 
 {
-  slug: "ferrari-birthday-gift-kyburg-zurich.html",
+  slug: {en:"ferrari-birthday-gift-kyburg-zurich", de:"ferrari-geburtstagsgeschenk-kyburg-zuerich", it:"regalo-compleanno-ferrari-kyburg-zurigo"},
   category: {en:"Experiences & Routes", de:"Erlebnisse & Routen", it:"Esperienze & Itinerari"},
   date: "2026-07-27",
   read: {en:"5 min", de:"5 Min.", it:"5 min"},
@@ -804,7 +825,7 @@ const ARTICLES = [
 },
 
 {
-  slug: "ferrari-458-klausen-pass-drive-zurich.html",
+  slug: {en:"ferrari-458-klausen-pass-drive-zurich", de:"ferrari-458-klausenpass-fahrt-zuerich", it:"ferrari-458-passo-del-clausen-zurigo"},
   category: {en:"Experiences & Routes", de:"Erlebnisse & Routen", it:"Esperienze & Itinerari"},
   date: "2026-07-20",
   read: {en:"5 min", de:"5 Min.", it:"5 min"},
@@ -822,7 +843,7 @@ const ARTICLES = [
 },
 
 {
-  slug: "luxury-obsession-video.html",
+  slug: {en:"luxury-obsession-video", de:"luxury-obsession-video", it:"luxury-obsession-video"},
   category: {en:"Insights", de:"Einblicke", it:"Approfondimenti"},
   date: "2026-07-13",
   read: {en:"2 min", de:"2 Min.", it:"2 min"},
@@ -841,7 +862,7 @@ const ARTICLES = [
 
 
 {
-  slug: "carbon-fiber-luxury-cars-zurich.html",
+  slug: {en:"carbon-fiber-luxury-cars-zurich", de:"carbon-luxusautos-ferrari-zuerich", it:"carbonio-auto-lusso-ferrari-zurigo"},
   category: {en:"Guides", de:"Guides", it:"Guide"},
   date: "2026-04-20",
   read: {en:"8 min", de:"8 min", it:"8 min"},
@@ -859,7 +880,7 @@ const ARTICLES = [
 },
 
 {
-  slug: "ferrari-458-common-issues-zurich.html",
+  slug: {en:"ferrari-458-common-issues-zurich", de:"ferrari-458-haeufige-probleme-zuerich", it:"ferrari-458-problemi-comuni-zurigo"},
   category: {en:"Guides", de:"Guides", it:"Guide"},
   date: "2026-04-12",
   read: {en:"8 min", de:"8 min", it:"8 min"},
@@ -877,7 +898,7 @@ const ARTICLES = [
 },
 
 {
-  slug: "ferrari-rental-zurich-worth-it.html",
+  slug: {en:"ferrari-rental-zurich-worth-it", de:"ferrari-mieten-zuerich-lohnt-es-sich", it:"noleggio-ferrari-zurigo-conviene"},
   category: {en:"Guides", de:"Guides", it:"Guide"},
   date: "2026-04-07",
   read: {en:"8 min", de:"8 min", it:"8 min"},
@@ -895,7 +916,7 @@ const ARTICLES = [
 },
 
 {
-  slug: "ferrari-458-vs-lamborghini-huracan-zurich.html",
+  slug: {en:"ferrari-458-vs-lamborghini-huracan-zurich", de:"ferrari-458-vs-lamborghini-huracan-zuerich", it:"ferrari-458-vs-lamborghini-huracan-zurigo"},
   category: {en:"Comparisons", de:"Vergleiche", it:"Confronti"},
   date: "2026-03-28",
   read: {en:"8 min", de:"8 min", it:"8 min"},
@@ -912,7 +933,7 @@ const ARTICLES = [
   image: "/media/image02800.jpg"
 },
 {
-  slug: "ferrari-f430-vs-ferrari-458-italia.html",
+  slug: {en:"ferrari-f430-vs-ferrari-458-italia", de:"ferrari-f430-vs-ferrari-458-italia", it:"ferrari-f430-vs-ferrari-458-italia"},
   category: {en:"Comparisons", de:"Vergleiche", it:"Confronti"},
   date: "2026-03-21",
   read: {en:"8 min", de:"8 min", it:"8 min"},
@@ -929,7 +950,7 @@ const ARTICLES = [
   image: "/media/image02700.jpg"
 },
   {
-    slug: "why-a-ferrari-458-italia-feels-different-in-switzerland.html",
+    slug: {en:"why-a-ferrari-458-italia-feels-different-in-switzerland", de:"warum-ferrari-458-italia-in-der-schweiz-anders-ist", it:"perche-ferrari-458-italia-in-svizzera-e-diversa"},
     category: {en:"Guides", de:"Guides", it:"Guide"},
     date: "2026-03-13",
     read: {en:"7 min", de:"7 min", it:"7 min"},
@@ -946,7 +967,7 @@ const ARTICLES = [
     image: "/media/image00520.webp"
   },
   {
-    slug: "ferrari-458-italia-details-most-people-miss.html",
+    slug: {en:"ferrari-458-italia-details-most-people-miss", de:"ferrari-458-italia-details-die-viele-uebersehen", it:"ferrari-458-italia-dettagli-spesso-trascurati"},
     category: {en:"Guides", de:"Guides", it:"Guide"},
     date: "2026-03-06",
     read: {en:"7 min", de:"7 min", it:"7 min"},
@@ -963,7 +984,7 @@ const ARTICLES = [
     image: "/media/image01701.jpg"
   },
   {
-    slug: "ferrari_458_wedding_car_rental_zurich.html",
+    slug: {en:"ferrari-458-wedding-car-rental-zurich", de:"ferrari-458-hochzeitsauto-mieten-zuerich", it:"noleggio-ferrari-458-matrimonio-zurigo"},
     category: {en:"Experiences & Routes", de:"Erlebnisse & Routen", it:"Esperienze & Itinerari"},
     date: "2026-02-25",
     read: {en:"3 min", de:"3 min", it:"3 min"},
@@ -980,7 +1001,7 @@ const ARTICLES = [
     image: "/media/wedding_458_hero.webp"
   },
   {
-    slug: "instagrammable_places_zurich_uster_part1.html",
+    slug: {en:"instagrammable-places-zurich-uster-part-1", de:"instagram-spots-zuerich-uster-ferrari", it:"luoghi-instagrammabili-zurigo-uster-ferrari"},
     category: {en:"Guides", de:"Guides", it:"Guide"},
     date: "2026-02-21",
     read: {en:"3 min", de:"3 min", it:"3 min"},
@@ -997,7 +1018,7 @@ const ARTICLES = [
     image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjkwMCIgdmlld0JveD0iMCAwIDE2MDAgOTAwIj4KPGRlZnM+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMGIwYjBkIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNTE1MWEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxsaW5lYXJHcmFkaWVudCBpZD0iZ29sZCIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPgogICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYjM4YTJlIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjAuNSIgc3RvcC1jb2xvcj0iI2U2Yzg2ZSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjYjM4YTJlIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTYwMCIgaGVpZ2h0PSI5MDAiIGZpbGw9InVybCgjYmcpIi8+CjxnIG9wYWNpdHk9IjAuMjUiPgogIDxjaXJjbGUgY3g9IjEyMjAiIGN5PSIyNTAiIHI9IjI2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dvbGQpIiBzdHJva2Utd2lkdGg9IjYiLz4KICA8Y2lyY2xlIGN4PSIxMjIwIiBjeT0iMjUwIiByPSIyMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkKSIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPGNpcmNsZSBjeD0iMTIyMCIgY3k9IjI1MCIgcj0iMTQwIiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZCkiIHN0cm9rZS13aWR0aD0iMiIvPgo8L2c+Cgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMTAsMjMwKSI+CiAgPHBhdGggZD0iTTI2MCAxMTBjMC0yMiAxOC00MCA0MC00MGgxOTBsMzQtNDBoMTEyYzIyIDAgNDAgMTggNDAgNDB2NjBoNzBjMjIgMCA0MCAxOCA0MCA0MHYyOTBjMCAyMi0xOCA0MC00MCA0MEgxMTBjLTIyIDAtNDAtMTgtNDAtNDBWMTkwYzAtMjIgMTgtNDAgNDAtNDBoNzB6IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ29sZCkiIHN0cm9rZS13aWR0aD0iMTAiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSI1MjAiIGN5PSIzNDAiIHI9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dvbGQpIiBzdHJva2Utd2lkdGg9IjEwIi8+CiAgPGNpcmNsZSBjeD0iNTIwIiBjeT0iMzQwIiByPSI1NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI2dvbGQpIiBzdHJva2Utd2lkdGg9IjgiIG9wYWNpdHk9IjAuNyIvPgogIDxwYXRoIGQ9Ik04NzAgMjIwYzQwIDAgNzIgMzIgNzIgNzIgMCA3NC03MiAxNjAtNzIgMTYwcy03Mi04Ni03Mi0xNjBjMC00MCAzMi03MiA3Mi03MnoiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnb2xkKSIgc3Ryb2tlLXdpZHRoPSIxMCIvPgogIDxjaXJjbGUgY3g9Ijg3MCIgY3k9IjI5MiIgcj0iMjIiIGZpbGw9InVybCgjZ29sZCkiLz4KPC9nPgoKPGcgZm9udC1mYW1pbHk9InN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgU2Vnb2UgVUksIFJvYm90bywgQXJpYWwiIHRleHQtYW5jaG9yPSJzdGFydCI+CiAgPHRleHQgeD0iMTIwIiB5PSIxMTAiIGZvbnQtc2l6ZT0iNTYiIGZpbGw9InVybCgjZ29sZCkiIGZvbnQtd2VpZ2h0PSI3MDAiPkluc3RhZ3JhbW1hYmxlIHBsYWNlczwvdGV4dD4KICA8dGV4dCB4PSIxMjAiIHk9IjE3MCIgZm9udC1zaXplPSIzNCIgZmlsbD0iI2U4ZThlZSIgb3BhY2l0eT0iMC45Ij5adXJpY2ggYXJlYSwgY2xvc2VyIHRvIFVzdGVyIOKAoiBQYXJ0IDE8L3RleHQ+CjwvZz4KPC9zdmc+"
   },
   {
-    slug: "switzerland_supercar_rental_vs_italy_germany_france.html",
+    slug: {en:"switzerland-supercar-rental-vs-italy-germany-france", de:"supercar-mieten-schweiz-italien-deutschland-frankreich", it:"noleggio-supercar-svizzera-italia-germania-francia"},
     category: {en:"Guides", de:"Guides", it:"Guide"},
     date: "2026-02-13",
     read: {en:"8 min", de:"8 min", it:"8 min"},
@@ -1014,7 +1035,7 @@ const ARTICLES = [
     image: "/media/458-engine-800.webp"
   },
   {
-    slug: "scenic_switzerland_drives_from_zurich.html",
+    slug: {en:"scenic-switzerland-drives-from-zurich", de:"schoene-strecken-schweiz-ab-zuerich", it:"strade-panoramiche-svizzera-da-zurigo"},
     category: {en:"Experiences & Routes", de:"Erlebnisse & Routen", it:"Esperienze & Itinerari"},
     date: "2026-02-06",
     read: {en:"7 min", de:"7 min", it:"7 min"},
@@ -1032,7 +1053,7 @@ const ARTICLES = [
   },
 
   {
-    slug: "ferrari458vs488.html",
+    slug: {en:"ferrari-458-vs-488", de:"ferrari-458-vs-488", it:"ferrari-458-vs-488"},
     category: {en:"Comparisons", de:"Vergleiche", it:"Confronti"},
     date: "2026-01-30",
     read: {en:"9 min", de:"9 min", it:"9 min"},
@@ -1049,7 +1070,7 @@ const ARTICLES = [
     image: "/media/image03000.png"
   },
   {
-    slug: "ferrari_458_488_price_trends_switzerland.html",
+    slug: {en:"ferrari-458-488-price-trends-switzerland", de:"ferrari-458-488-preisentwicklung-schweiz", it:"ferrari-458-488-andamento-prezzi-svizzera"},
     category: {en:"Insights", de:"Einblicke", it:"Approfondimenti"},
     date: "2026-01-23",
     read: {en:"8 min", de:"8 min", it:"8 min"},
@@ -1066,7 +1087,7 @@ const ARTICLES = [
     image: "/media/image03100.jpg"
   },
   {
-    slug: "owning_vs_renting_ferrari_switzerland.html",
+    slug: {en:"owning-vs-renting-ferrari-switzerland", de:"ferrari-kaufen-oder-mieten-schweiz", it:"comprare-o-noleggiare-ferrari-svizzera"},
     category: {en:"Insights", de:"Einblicke", it:"Approfondimenti"},
     date: "2026-01-17",
     read: {en:"10 min", de:"10 min", it:"10 min"},
@@ -1083,7 +1104,7 @@ const ARTICLES = [
     image: "/media/image03200.jpg"
   },
   {
-    slug: "ferrari-458-italia-the-signature-experience-in-switzerland.html",
+    slug: {en:"ferrari-458-italia-the-signature-experience-in-switzerland", de:"ferrari-458-italia-erlebnis-schweiz", it:"ferrari-458-italia-esperienza-svizzera"},
     category: {en:"Experiences & Routes", de:"Erlebnisse & Routen", it:"Esperienze & Itinerari"},
     date: "2026-01-10",
     read: {en:"6 min", de:"6 min", it:"6 min"},
@@ -1100,7 +1121,7 @@ const ARTICLES = [
     image: "/media/image02500.webp"
   },
   {
-    slug: "swiss-routes-worth-driving-in-a-ferrari.html",
+    slug: {en:"swiss-routes-worth-driving-in-a-ferrari", de:"schweizer-routen-ferrari-zuerich", it:"percorsi-svizzeri-da-guidare-in-ferrari"},
     category: {en:"Experiences & Routes", de:"Erlebnisse & Routen", it:"Esperienze & Itinerari"},
     date: "2026-01-03",
     read: {en:"7 min", de:"7 min", it:"7 min"},
@@ -1117,7 +1138,7 @@ const ARTICLES = [
     image: "/media/image00300.jpg"
   },
   {
-    slug: "transparent-rates-how-we-design-packages-that-make-sense.html",
+    slug: {en:"transparent-rates-how-we-design-packages-that-make-sense", de:"transparente-preise-ferrari-miete-zuerich", it:"tariffe-trasparenti-noleggio-ferrari-zurigo"},
     category: {en:"Insights", de:"Einblicke", it:"Approfondimenti"},
     date: "2025-12-27",
     read: {en:"5 min", de:"5 min", it:"5 min"},
@@ -1136,7 +1157,8 @@ const ARTICLES = [
 ];
 
 
-const STATE = { q:"", cat:"" };
+const JOURNAL_PAGE_SIZE = 8;
+const STATE = { q:"", cat:"", visible:JOURNAL_PAGE_SIZE, filteredCount:0 };
 
 function getCatLabel(a, lang){
   return (a.category && (a.category[lang] || a.category.en)) || "";
@@ -1162,6 +1184,11 @@ function setResults(shown, total, lang){
   el.textContent = tpl.replace("{x}", String(shown)).replace("{y}", String(total));
 }
 
+function resetArticleWindow(lang){
+  STATE.visible = JOURNAL_PAGE_SIZE;
+  renderArticles(lang);
+}
+
 function initControls(lang){
   const t = I18N[lang] || I18N.en;
 
@@ -1172,7 +1199,7 @@ function initControls(lang){
     search.value = STATE.q || "";
     search.addEventListener("input", () => {
       STATE.q = search.value || "";
-      renderArticles(lang);
+      resetArticleWindow(lang);
     });
   }
 
@@ -1205,7 +1232,7 @@ function initControls(lang){
     catSel.setAttribute("aria-label", t.filterLabel || "");
     catSel.addEventListener("change", () => {
       STATE.cat = catSel.value || "";
-      renderArticles(lang);
+      resetArticleWindow(lang);
     });
   }
 
@@ -1226,6 +1253,73 @@ function fmtDate(iso, lang){
   }
 }
 
+function getJournalLoadMoreButton(){
+  const grid = document.getElementById("blogGrid");
+  if(!grid) return null;
+
+  let wrap = document.getElementById("blogLoadMoreWrap");
+  let button = document.getElementById("blogLoadMore");
+
+  if(!wrap){
+    wrap = document.createElement("div");
+    wrap.className = "blogLoadMoreWrap";
+    wrap.id = "blogLoadMoreWrap";
+    grid.insertAdjacentElement("afterend", wrap);
+  }
+
+  if(!button){
+    button = document.createElement("button");
+    button.className = "btn btnSecondary blogLoadMoreBtn";
+    button.id = "blogLoadMore";
+    button.type = "button";
+    button.setAttribute("aria-controls", "blogGrid");
+    wrap.appendChild(button);
+  }
+
+  return button;
+}
+
+function loadDeferredImage(card){
+  const img = card && card.querySelector ? card.querySelector("img") : null;
+  if(!img) return;
+  const deferredSrc = img.getAttribute("data-src");
+  if(!deferredSrc) return;
+  img.setAttribute("src", deferredSrc);
+  img.removeAttribute("data-src");
+}
+
+function revealNextArticleBatch(lang){
+  const grid = document.getElementById("blogGrid");
+  if(!grid) return;
+  const pending = Array.from(grid.querySelectorAll('[data-journal-pending="1"]')).slice(0, JOURNAL_PAGE_SIZE);
+  if(!pending.length){
+    updateLoadMoreButton(lang);
+    return;
+  }
+  pending.forEach(card => {
+    loadDeferredImage(card);
+    card.removeAttribute("data-journal-pending");
+  });
+  STATE.visible = Math.min(STATE.visible + pending.length, STATE.filteredCount);
+  setResults(STATE.visible, STATE.filteredCount, lang);
+  const isMobile = window.matchMedia && window.matchMedia("(max-width: 760px)").matches;
+  if(isMobile) tuneMobileCards();
+  updateLoadMoreButton(lang);
+}
+
+function updateLoadMoreButton(lang){
+  const t = I18N[lang] || I18N.en;
+  const button = getJournalLoadMoreButton();
+  const wrap = document.getElementById("blogLoadMoreWrap");
+  if(!button || !wrap) return;
+  button.textContent = t.loadMoreLabel || "Show more articles";
+  wrap.hidden = !(STATE.visible < STATE.filteredCount);
+  if(!button.dataset.bound){
+    button.addEventListener("click", () => revealNextArticleBatch(lang));
+    button.dataset.bound = "1";
+  }
+}
+
 function renderArticles(lang){
   const grid = document.getElementById("blogGrid");
   grid.innerHTML = "";
@@ -1234,33 +1328,48 @@ function renderArticles(lang){
 
   const q = (STATE.q || "").trim().toLowerCase();
   const catFilter = STATE.cat || "";
-  const filtered = ARTICLES.filter(a => matchesArticle(a, lang, q, catFilter));
-  setResults(filtered.length, ARTICLES.length, lang);
+  const filtered = ARTICLES
+    .filter(a => matchesArticle(a, lang, q, catFilter))
+    .slice()
+    .sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
+
+  STATE.filteredCount = filtered.length;
+  STATE.visible = Math.min(STATE.visible, STATE.filteredCount);
+  const visibleCount = STATE.visible;
+  setResults(visibleCount, STATE.filteredCount, lang);
 
   if(!filtered.length){
     grid.innerHTML = `<div class="card" style="padding:1.2rem;opacity:0.86">${t.empty || ""}</div>`;
+    updateLoadMoreButton(lang);
     return;
   }
 
-  filtered.forEach(a => {
+  filtered.forEach((a, index) => {
     const card = document.createElement("a");
-    const cleanSlug = String(a.slug || "").replace(/\.html$/i, "");
+    const slugValue = (a.slug && typeof a.slug === "object") ? (a.slug[lang] || a.slug.en || "") : (a.slug || "");
+    const cleanSlug = String(slugValue).replace(/\.html$/i, "");
     const articlePrefix = lang === "de" ? "/de/" : (lang === "it" ? "/it/" : "/en/");
-    card.href = articlePrefix + cleanSlug + "#top";
+    card.href = articlePrefix + cleanSlug;
 
     const title = (a.title && (a.title[lang] || a.title.en)) || "";
     const excerpt = (a.excerpt && (a.excerpt[lang] || a.excerpt.en)) || "";
     const cat = (a.category && (a.category[lang] || a.category.en)) || "";
     const read = (a.read && (a.read[lang] || a.read.en)) || "";
     const date = fmtDate(a.date, lang);
+    const isVisible = index < visibleCount;
+    const imageAttr = isVisible ? `src="${a.image}"` : `data-src="${a.image}"`;
 
     card.setAttribute("aria-label", title || "Article");
+    card.setAttribute("data-journal-card", "1");
+    if(!isVisible){
+      card.setAttribute("data-journal-pending", "1");
+    }
 
     if(isMobile){
       card.className = "card blogCardM";
       card.innerHTML = `
         <div class="blogThumbWrapM">
-          <img src="${a.image}" alt="${title.replace(/"/g, "&quot;")}" loading="lazy" decoding="async">
+          <img ${imageAttr} alt="${title.replace(/"/g, "&quot;")}" loading="lazy" decoding="async">
         </div>
         <div class="blogTopM">
           <div class="blogMetaM">
@@ -1280,7 +1389,7 @@ function renderArticles(lang){
     }else{
       card.className = "card blogCard";
       card.innerHTML = `
-        <img class="blogThumb" src="${a.image}" alt="${title.replace(/"/g, "&quot;")}" loading="lazy" decoding="async">
+        <img class="blogThumb" ${imageAttr} alt="${title.replace(/"/g, "&quot;")}" loading="lazy" decoding="async">
         <div class="blogCardInner">
           <div>
             <div class="blogMeta">
@@ -1299,9 +1408,10 @@ function renderArticles(lang){
     }
 
     grid.appendChild(card);
-
   });
+
   if(isMobile) tuneMobileCards();
+  updateLoadMoreButton(lang);
 }
 
 function tuneMobileCards(){
