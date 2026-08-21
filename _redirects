@@ -14,6 +14,22 @@ http://www.luxury-obsession.ch/*   https://luxuryobsession.ch/:splat      301!
 http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 
 
+
+# Legacy URLs seen as 404 in Ahrefs / GSC cleanup
+/ferrari458-mieten-zuerich.html          /ferrari-mieten-zuerich              301!
+/de/ferrari458-mieten-zuerich.html       /ferrari-mieten-zuerich              301!
+/sportwagen-mieten-zuerich.html          /                                      301!
+/de/sportwagen-mieten-zuerich.html       /                                      301!
+/luxusauto-mieten-zuerich.html           /                                      301!
+/de/luxusauto-mieten-zuerich.html        /                                      301!
+/en/ferrari-rental-zurich-airport.html   /en/ferrari-rental-zurich-airport   301!
+/en/ferrari-rental-biel.html             /en/ferrari-rental-biel             301!
+/en/ferrari-rental-nanikon.html          /en/ferrari-rental-naenikon         301!
+/pages/ferrari-rental-nanikon.html       /en/ferrari-rental-naenikon         301!
+/pages/ferrari-rental-nanikon            /en/ferrari-rental-naenikon         301!
+/en/pages/blog.html                       /en/journal                          301!
+/en/pages/pricing.html                    /en/pricing                          301!
+
 # Canonical cleanup for common old static paths
 /index.html                /                         301!
 /de/index.html             /                         301!
@@ -64,8 +80,8 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /de/ferrari-mieten-uster                                               /ferrari-mieten-uster                                                  301!
 /de/ferrari-mieten-zuerich-preise-anforderungen-ablauf                 /ferrari-mieten-zuerich-preise-anforderungen-ablauf                    301!
 /de/autostrecken-schweiz-ferrari-zuerich                               /autostrecken-schweiz-ferrari-zuerich                                  301!
-/de/luxusauto-mieten-zuerich                                           /luxusauto-mieten-zuerich                                              301!
-/de/sportwagen-mieten-zuerich                                          /sportwagen-mieten-zuerich                                             301!
+/de/luxusauto-mieten-zuerich                                           /                                                                    301!
+/de/sportwagen-mieten-zuerich                                          /                                                                    301!
 /en/ferrari_458_488_price_trends_switzerland                           /en/ferrari-458-488-price-trends-switzerland                           301!
 /de/ferrari_458_488_price_trends_switzerland                           /de/ferrari-458-488-preisentwicklung-schweiz                           301!
 /it/ferrari_458_488_price_trends_switzerland                           /it/ferrari-458-488-andamento-prezzi-svizzera                          301!
@@ -213,9 +229,9 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /en/imprint               /imprint                       301!
 /it/note-legali           /note-legali                   301!
 /ferrari-mieten-zuerich   /pages/de/ferrari-mieten-zuerich.html 200
-/ferrari458-mieten-zuerich /pages/de/ferrari-rental-zurich.html 200
-/sportwagen-mieten-zuerich /pages/de/sportwagen-mieten-zuerich.html 200
-/luxusauto-mieten-zuerich /pages/de/luxusauto-mieten-zuerich.html 200
+/ferrari458-mieten-zuerich /ferrari-mieten-zuerich 301!
+/sportwagen-mieten-zuerich / 301!
+/luxusauto-mieten-zuerich / 301!
 /ferrari-mieten-schweiz   /pages/de/ferrari-mieten-schweiz.html 200
 /ferrari-mieten-uster     /pages/de/ferrari-mieten-uster.html 200
 /ferrari-seite  /ferrari-458-italia  301!
@@ -234,11 +250,11 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /en/blog                  /en/journal              301!
 /en/blog.html             /en/journal              301!
 /pages/blog.html          /en/journal              301!
-/pages/de/ferrari-rental-zurich.html /ferrari458-mieten-zuerich 301!
+/pages/de/ferrari-rental-zurich.html /ferrari-mieten-zuerich 301!
 /pages/pricing.html       /en/pricing              301!
 /ferrari-vermietung-zuerich /ferrari-mieten-zuerich 301!
-/de/ferrari-rental-zurich             /ferrari458-mieten-zuerich 301!
-/de/ferrari-rental-zurich.html /ferrari458-mieten-zuerich 301!
+/de/ferrari-rental-zurich             /ferrari-mieten-zuerich 301!
+/de/ferrari-rental-zurich.html /ferrari-mieten-zuerich 301!
 /it/ferrari-rental-zurich             /it/noleggio-ferrari-zurigo 301!
 /it/ferrari-rental-zurich.html /it/noleggio-ferrari-zurigo 301!
 /noleggio-ferrari-zurigo                                   /it/noleggio-ferrari-zurigo 301!
