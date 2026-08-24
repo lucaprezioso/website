@@ -1,0 +1,172 @@
+/* Location-page navigation: hierarchical breadcrumbs + compact related-location links.
+   Keeps SEO links as normal HTML anchors; no JavaScript is required for discovery. */
+.locationTrail{
+  display:block;
+  width:100%;
+  min-width:0;
+  margin:0 0 1.05rem;
+  font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  text-align:left;
+}
+.locationTrail__desktop{
+  display:flex;
+  align-items:center;
+  min-width:0;
+  margin:0;
+  padding:0;
+  list-style:none;
+  color:rgba(243,241,238,.60);
+  font-size:.78rem;
+  font-weight:500;
+  line-height:1.4;
+  letter-spacing:.005em;
+}
+.locationTrail__desktop li{display:flex;align-items:center;min-width:0}
+.locationTrail__desktop li+li::before{
+  content:"›";
+  flex:0 0 auto;
+  margin:0 .48rem;
+  color:rgba(243,241,238,.34);
+}
+.locationTrail__desktop a{
+  color:rgba(243,241,238,.68);
+  text-decoration:none;
+  transition:color .2s ease;
+}
+.locationTrail__desktop a:hover{
+  color:var(--text,#f3f1ee);
+  text-decoration:underline;
+  text-underline-offset:.2em;
+}
+.locationTrail__desktop a:focus-visible,
+.locationTrail__mobile:focus-visible,
+.locationRelatedLink:focus-visible,
+.locationRelatedAll:focus-visible{
+  outline:2px solid rgba(231,220,198,.9);
+  outline-offset:3px;
+}
+.locationTrail__current{
+  overflow:hidden;
+  max-width:min(32rem,44vw);
+  color:rgba(243,241,238,.48);
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.locationTrail__mobile{display:none}
+.locationTrailWrap{margin-bottom:.1rem}
+
+.locationRelated{
+  padding:1.2rem 0 3.2rem;
+}
+.locationRelatedInner{
+  padding:1.35rem 1.45rem;
+  border:1px solid rgba(231,220,198,.13);
+  border-radius:18px;
+  background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.015));
+}
+.locationRelatedKicker{
+  margin:0 0 .45rem;
+  color:rgba(231,220,198,.68);
+  font-size:.69rem;
+  font-weight:600;
+  letter-spacing:.18em;
+  line-height:1.3;
+  text-transform:uppercase;
+}
+.locationRelatedTitle{
+  margin:0;
+  color:var(--text,#f3f1ee);
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(1.45rem,2.3vw,1.9rem);
+  font-weight:600;
+  line-height:1.1;
+}
+.locationRelatedBody{
+  max-width:62ch;
+  margin:.55rem 0 0;
+  color:rgba(243,241,238,.64);
+  font-size:.9rem;
+  line-height:1.65;
+}
+.locationRelatedLinks{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.58rem;
+  margin-top:1rem;
+}
+.locationRelatedLink,
+.locationRelatedAll{
+  display:inline-flex;
+  align-items:center;
+  min-height:40px;
+  padding:.58rem .82rem;
+  border:1px solid rgba(231,220,198,.16);
+  border-radius:999px;
+  color:rgba(243,241,238,.82);
+  font-size:.82rem;
+  font-weight:500;
+  line-height:1.2;
+  text-decoration:none;
+  transition:color .2s ease,border-color .2s ease,background-color .2s ease,transform .2s ease;
+}
+.locationRelatedLink:hover,
+.locationRelatedAll:hover{
+  color:var(--text,#f3f1ee);
+  border-color:rgba(231,220,198,.34);
+  background:rgba(231,220,198,.065);
+  transform:translateY(-1px);
+}
+.locationRelatedAll{
+  border-color:transparent;
+  color:rgba(231,220,198,.74);
+}
+.locationRelatedAll::after{content:"→";margin-left:.38rem}
+
+@media (max-width:760px){
+  .locationTrail{margin-bottom:.82rem}
+  .locationTrail__desktop{display:none}
+  .locationTrail__mobile{
+    display:inline-flex;
+    align-items:center;
+    gap:.48rem;
+    width:max-content;
+    max-width:100%;
+    min-height:40px;
+    padding:.55rem .78rem .55rem .64rem;
+    border:1px solid rgba(243,241,238,.13);
+    border-radius:999px;
+    background:rgba(255,255,255,.025);
+    color:rgba(243,241,238,.76);
+    font-size:.84rem;
+    font-weight:500;
+    line-height:1;
+    letter-spacing:.015em;
+    text-decoration:none;
+    -webkit-tap-highlight-color:transparent;
+    transition:color .2s ease,border-color .2s ease,background-color .2s ease,transform .2s ease;
+  }
+  .locationTrail__mobile:hover{
+    color:var(--text,#f3f1ee);
+    border-color:rgba(231,220,198,.34);
+    background:rgba(231,220,198,.07);
+    transform:translateX(-2px);
+  }
+  .locationTrail__arrow{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.05rem;
+    line-height:.8;
+  }
+  .locationRelated{padding:.8rem 0 2.5rem}
+  .locationRelatedInner{padding:1.15rem 1rem}
+  .locationRelatedLinks{gap:.5rem}
+  .locationRelatedLink,.locationRelatedAll{font-size:.8rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .locationTrail__desktop a,
+  .locationTrail__mobile,
+  .locationRelatedLink,
+  .locationRelatedAll{transition:none}
+  .locationTrail__mobile:hover,.locationRelatedLink:hover,.locationRelatedAll:hover{transform:none}
+}
