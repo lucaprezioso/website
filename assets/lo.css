@@ -1711,3 +1711,26 @@ footer{
   .footerNapItem{display:block !important;white-space:nowrap !important;max-width:100% !important}
   .footerNapItem:not(:last-child)::after{content:none !important}
 }
+
+/* ===== Final mobile header safety patch =====
+   Keeps the primary actions fully inside the viewport even before lo.js has
+   finished adapting the navigation. The brand icon remains visible at every
+   width; the long wordmark is hidden only on compact phones. */
+@media (max-width: 520px){
+  header .container{padding-left:1rem;padding-right:1rem;}
+  .navInner{gap:0.55rem !important;}
+  .brand{flex:0 0 auto;min-width:0;gap:0.45rem;}
+  .brandGold{display:none !important;}
+  .navRight{margin-left:auto;min-width:0;gap:0.40rem !important;}
+  .navCta{padding:0.42rem 0.68rem !important;font-size:0.79rem !important;}
+  .langToggle{padding:0.42rem 0.54rem !important;font-size:0.79rem !important;}
+  .hamburger{width:40px !important;height:40px !important;flex:0 0 40px;}
+}
+
+@media (max-width: 340px){
+  header .container{padding-left:0.75rem;padding-right:0.75rem;}
+  .navInner{gap:0.40rem !important;}
+  .navRight{gap:0.28rem !important;}
+  .navCta{padding-left:0.55rem !important;padding-right:0.55rem !important;}
+  .langToggle{padding-left:0.44rem !important;padding-right:0.44rem !important;}
+}

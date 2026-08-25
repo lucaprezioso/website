@@ -274,6 +274,7 @@
     .prose h3{margin:1.5rem 0 0.55rem;font-size:1.45rem}
     .prose ul{margin:0.5rem 0 1.05rem;padding-left:1.2rem;color:rgba(243,241,238,0.90);line-height:1.8}
     .prose li{margin:0.25rem 0}
+    .prose a{color:rgba(231,220,198,0.96);text-decoration:underline;text-underline-offset:3px}
 
     figure{margin:1.4rem 0}
     figure img{width:100%;height:auto;border-radius:18px;border:1px solid rgba(243,241,238,0.10);display:block}
@@ -639,7 +640,7 @@
 <p data-i18n="p14">Zum Schluss halten wir die Kommunikation bewusst kurz und klar. Sie sollten keinen langen Nachrichtenverlauf brauchen, um zu verstehen, was enthalten ist. Wenn Sie es einfach möchten, bleibt es einfach.</p>
 <div class="card callout">
 <h3 class="calloutTitle" data-i18n="callout2_title">Wo Sie die exakten Zahlen finden</h3>
-<p class="calloutBody" data-i18n="callout2_body">Genaue Preise, Kilometerkontingente und optionale Services finden Sie auf der Preisseite. Dieser Artikel erklärt die Logik dahinter, damit die Zahlen sofort nachvollziehbar wirken, wenn Sie sie sehen.</p>
+<p class="calloutBody" data-i18n="callout2_body" data-i18n-html="1">Genaue Preise, Kilometerkontingente und optionale Services finden Sie auf der Preisseite. Dieser Artikel erklärt die Logik dahinter, damit die Zahlen sofort nachvollziehbar wirken, wenn Sie sie sehen. Für den kompletten Buchungsrahmen finden Sie auch <a href="/ferrari-mieten-zuerich-preise-anforderungen-ablauf">Preise, Anforderungen und Ablauf</a> kompakt zusammengefasst.</p>
 </div>
 <h2 data-i18n="h2_6" id="faq">Häufige Fragen</h2>
 <h3 data-i18n="faq_q1">Warum gibt es nicht einfach einen einzigen Fixpreis</h3>
@@ -1016,7 +1017,7 @@ setHref("req", "/de#request");
           p14:"Zum Schluss halten wir die Kommunikation bewusst kurz und klar. Sie sollten keinen langen Nachrichtenverlauf brauchen, um zu verstehen, was enthalten ist. Wenn Sie es einfach möchten, bleibt es einfach.",
 
           callout2_title:"Wo Sie die exakten Zahlen finden",
-          callout2_body:"Genaue Preise, Kilometerkontingente und optionale Services finden Sie auf der Preisseite. Dieser Artikel erklärt die Logik dahinter, damit die Zahlen sofort nachvollziehbar wirken, wenn Sie sie sehen.",
+          callout2_body:"Genaue Preise, Kilometerkontingente und optionale Services finden Sie auf der Preisseite. Dieser Artikel erklärt die Logik dahinter, damit die Zahlen sofort nachvollziehbar wirken, wenn Sie sie sehen. Für den kompletten Buchungsrahmen finden Sie auch <a href='/ferrari-mieten-zuerich-preise-anforderungen-ablauf'>Preise, Anforderungen und Ablauf</a> kompakt zusammengefasst.",
 
           h2_6:"Häufige Fragen",
           faq_q1:"Warum gibt es nicht einfach einen einzigen Fixpreis",
@@ -1162,7 +1163,10 @@ setHref("req", "/de#request");
         document.querySelectorAll("[data-i18n]").forEach(el => {
           const key = el.getAttribute("data-i18n");
           const val = dict[key];
-          if(typeof val === "string") el.textContent = val;
+          if(typeof val === "string") {
+            if(el.hasAttribute("data-i18n-html")) el.innerHTML = val;
+            else el.textContent = val;
+          }
         });
       }
 

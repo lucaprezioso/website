@@ -5,7 +5,7 @@
 
    window.__LO_LOCATION_PAGE__ = {
      mapsQuery: "Zurich, Switzerland",
-     heroImage: "../media/image00100.png",
+     heroImage: "/media/gallery/hotel-terrace-landscape-1600.webp",
      heroImageAlt: "Ferrari 458 Italia",
      badgeRight: "Switzerland",
      i18n: {
@@ -300,7 +300,7 @@
 
   const DEFAULT_CONFIG = {
     mapsQuery: "Zurich, Switzerland",
-    heroImage: "../media/image00100.png",
+    heroImage: "/media/gallery/hotel-terrace-landscape-1600.webp",
     heroImageAlt: "Ferrari 458 Italia",
     badgeRight: "Switzerland",
     i18n: DEFAULT_I18N
@@ -387,10 +387,6 @@
     if(cfg.heroImageAlt) setAttr("heroImage", "alt", cfg.heroImageAlt);
     if(cfg.badgeRight) setText("badgeRight", cfg.badgeRight);
 
-    // Attempt to keep og image in sync for client side share previews
-    if(cfg.heroImage){
-      setMeta("og:image", cfg.heroImage);
-    }
 
     // Location section
     setText("locTitle", t.locTitle);

@@ -2,8 +2,6 @@ User-agent: *
 Allow: /
 
 User-agent: Googlebot-Image
-Disallow: /media/image00103.jpg
-Disallow: /media/image00201.jpg
 Disallow: /media/homepage-poster-vertical.jpg
 Disallow: /media/homepage-poster-vertical.webp
 Disallow: /media/homepage-poster.jpg
