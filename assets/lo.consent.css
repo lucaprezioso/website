@@ -1,0 +1,421 @@
+.loConsentBanner,
+.loConsentModal,
+.loConsentManage {
+  --lo-consent-bg: #0c0c0f;
+  --lo-consent-panel: #151519;
+  --lo-consent-line: rgba(231, 220, 198, 0.22);
+  --lo-consent-gold: #d8c59c;
+  --lo-consent-ink: #f3f1ee;
+  --lo-consent-muted: rgba(243, 241, 238, 0.72);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  box-sizing: border-box;
+}
+
+.loConsentBanner *,
+.loConsentModal *,
+.loConsentManage {
+  box-sizing: border-box;
+}
+
+.loConsentBanner[hidden],
+.loConsentModal[hidden] {
+  display: none !important;
+}
+
+.loConsentBanner {
+  position: fixed;
+  z-index: 2147483000;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  color: var(--lo-consent-ink);
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 220ms ease, transform 220ms ease;
+  pointer-events: none;
+}
+
+.loConsentBanner.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.loConsentBanner__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 28px;
+  width: min(1120px, 100%);
+  max-height: calc(100dvh - 36px);
+  overflow: auto;
+  margin: 0 auto;
+  padding: 22px 24px;
+  border: 1px solid var(--lo-consent-line);
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.035), transparent 48%),
+    rgba(12, 12, 15, 0.98);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.loConsentEyebrow {
+  margin: 0 0 5px !important;
+  color: var(--lo-consent-gold) !important;
+  font-family: Cinzel, Georgia, serif;
+  font-size: 11px !important;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  line-height: 1.4 !important;
+  text-transform: uppercase;
+}
+
+.loConsentBanner h2,
+.loConsentPanel h2 {
+  margin: 0 0 7px !important;
+  color: var(--lo-consent-ink) !important;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(24px, 3vw, 32px) !important;
+  font-weight: 500 !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+.loConsentBanner p,
+.loConsentPanel p {
+  margin: 0 !important;
+  color: var(--lo-consent-muted) !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+  text-align: left !important;
+}
+
+.loConsentBanner .loConsentDetail {
+  margin-top: 4px !important;
+  font-size: 12px !important;
+}
+
+.loConsentBanner a,
+.loConsentPrivacyLink {
+  color: var(--lo-consent-gold) !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.loConsentBanner__actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(132px, 1fr));
+  gap: 8px;
+  min-width: 300px;
+}
+
+.loConsentButton,
+.loConsentTextButton,
+.loConsentClose,
+.loConsentManage {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.loConsentButton {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid rgba(231, 220, 198, 0.4);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.025);
+  color: var(--lo-consent-ink);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  transition: border-color 160ms ease, background 160ms ease, color 160ms ease;
+}
+
+.loConsentButton:hover {
+  border-color: var(--lo-consent-gold);
+  background: rgba(216, 197, 156, 0.09);
+}
+
+.loConsentButton--primary {
+  border-color: var(--lo-consent-gold);
+  background: var(--lo-consent-gold);
+  color: #111114;
+}
+
+.loConsentButton--primary:hover {
+  background: #e5d5b3;
+  color: #09090b;
+}
+
+.loConsentTextButton {
+  grid-column: 1 / -1;
+  min-height: 36px;
+  padding: 4px 10px;
+  background: transparent;
+  color: var(--lo-consent-gold);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.loConsentButton:focus-visible,
+.loConsentTextButton:focus-visible,
+.loConsentClose:focus-visible,
+.loConsentManage:focus-visible,
+.loConsentSwitch input:focus-visible + span,
+.loConsentPrivacyLink:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.loConsentModal {
+  position: fixed;
+  z-index: 2147483100;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.loConsentModal.is-visible {
+  opacity: 1;
+}
+
+.loConsentModal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
+
+.loConsentPanel {
+  position: relative;
+  z-index: 1;
+  width: min(620px, 100%);
+  max-height: min(760px, calc(100vh - 36px));
+  overflow: auto;
+  padding: 28px;
+  border: 1px solid var(--lo-consent-line);
+  border-radius: 18px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.035), transparent 45%),
+    var(--lo-consent-bg);
+  color: var(--lo-consent-ink);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.65);
+  transform: translateY(10px) scale(0.985);
+  transition: transform 180ms ease;
+}
+
+.loConsentModal.is-visible .loConsentPanel {
+  transform: translateY(0) scale(1);
+}
+
+.loConsentModalOpen {
+  overflow: hidden !important;
+}
+
+.loConsentClose {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 1px solid rgba(231, 220, 198, 0.22);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.025);
+  color: var(--lo-consent-ink);
+  font-size: 25px;
+  line-height: 1;
+}
+
+.loConsentPanel__intro {
+  margin-bottom: 18px !important;
+}
+
+.loConsentCategory {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  padding: 17px 0;
+  border-top: 1px solid rgba(231, 220, 198, 0.14);
+}
+
+.loConsentCategory:first-of-type {
+  margin-top: 18px;
+}
+
+.loConsentCategory h3 {
+  margin: 0 0 4px !important;
+  color: var(--lo-consent-ink) !important;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+.loConsentCategory--selectable {
+  cursor: pointer;
+}
+
+.loConsentAlwaysOn {
+  color: var(--lo-consent-gold);
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.loConsentSwitch {
+  position: relative;
+  display: inline-flex;
+}
+
+.loConsentSwitch input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.loConsentSwitch span {
+  position: relative;
+  display: block;
+  width: 48px;
+  height: 28px;
+  border: 1px solid rgba(231, 220, 198, 0.38);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.loConsentSwitch span::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(243, 241, 238, 0.76);
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.loConsentSwitch input:checked + span {
+  border-color: var(--lo-consent-gold);
+  background: rgba(216, 197, 156, 0.22);
+}
+
+.loConsentSwitch input:checked + span::after {
+  background: var(--lo-consent-gold);
+  transform: translateX(20px);
+}
+
+.loConsentPanel__actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 8px;
+}
+
+.loConsentPrivacyLink {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 12px;
+}
+
+.loConsentManage {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  opacity: 0.82;
+}
+
+.loConsentManage:hover {
+  opacity: 1;
+}
+
+.loConsentManage--floating {
+  position: fixed;
+  z-index: 2147482000;
+  left: 12px;
+  bottom: 12px;
+  padding: 8px 11px;
+  border: 1px solid rgba(231, 220, 198, 0.28);
+  border-radius: 999px;
+  background: rgba(12, 12, 15, 0.9);
+  color: #f3f1ee;
+  font-size: 11px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@media (max-width: 760px) {
+  .loConsentBanner {
+    right: 8px;
+    bottom: 8px;
+    left: 8px;
+  }
+
+  .loConsentBanner__inner {
+    display: block;
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .loConsentBanner__actions {
+    min-width: 0;
+    margin-top: 15px;
+  }
+
+  .loConsentPanel {
+    padding: 24px 18px 20px;
+    border-radius: 15px;
+  }
+
+  .loConsentCategory {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .loConsentBanner__actions,
+  .loConsentPanel__actions {
+    grid-template-columns: 1fr;
+  }
+
+  .loConsentTextButton {
+    grid-column: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loConsentBanner,
+  .loConsentModal,
+  .loConsentPanel,
+  .loConsentButton,
+  .loConsentSwitch span,
+  .loConsentSwitch span::after {
+    transition: none !important;
+  }
+}

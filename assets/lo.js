@@ -250,6 +250,28 @@ function loRewriteInternalLinks(effectiveLang){
     return "de";
   }
 
+  const LO_ATTRIBUTION_PARAMS = new Set([
+    "gclid", "dclid", "gclsrc", "wbraid", "gbraid", "_gl"
+  ]);
+
+  function withAttributionParams(target){
+    try{
+      const current = new URL(window.location.href);
+      const destination = new URL(target, current);
+      if(destination.origin !== current.origin) return target;
+
+      current.searchParams.forEach((value, key) => {
+        const normalized = key.toLowerCase();
+        if(!LO_ATTRIBUTION_PARAMS.has(normalized) && !normalized.startsWith("utm_")) return;
+        if(!destination.searchParams.has(key)) destination.searchParams.append(key, value);
+      });
+
+      return destination.pathname + destination.search + destination.hash;
+    } catch(_e) {
+      return target;
+    }
+  }
+
 
   function loAlternateHrefForLang(lang){
     try{
@@ -284,7 +306,7 @@ function loRewriteInternalLinks(effectiveLang){
     if(!__LO_IS_FILE__){
       const altHref = loAlternateHrefForLang(next);
       if(altHref){
-        window.location.href = altHref + (window.location.hash || "");
+        window.location.href = withAttributionParams(altHref + (window.location.hash || ""));
         return;
       }
     }
@@ -325,7 +347,7 @@ function loRewriteInternalLinks(effectiveLang){
     dest = dest.replace(/\/+/g, "/");
     if(!dest.startsWith("/")) dest = "/" + dest;
 
-    window.location.href = dest + (window.location.hash || "");
+    window.location.href = withAttributionParams(dest + (window.location.hash || ""));
   }
 
   function buildUrl(path, lang, hash){
@@ -443,6 +465,7 @@ function loRewriteInternalLinks(effectiveLang){
 function initFooterLegalLinks(lang){
   const footerRight = document.querySelector("footer .footerRight");
   if(!footerRight) return;
+  const consentManage = footerRight.querySelector(".loConsentManage");
 
   const effectiveLang = lang || getLang();
 
@@ -477,6 +500,10 @@ function initFooterLegalLinks(lang){
       footerRight.appendChild(document.createTextNode(" · "));
     }
   });
+  if(consentManage){
+    footerRight.appendChild(document.createTextNode(" · "));
+    footerRight.appendChild(consentManage);
+  }
 }
 
 
@@ -1146,6 +1173,7 @@ if(navLinks){
     getLang,
     setLang,
     buildUrl,
+    withAttributionParams,
     initLangMenu,
     initFooterYear,
     initFooterLegalLinks,

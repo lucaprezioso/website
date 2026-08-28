@@ -1,35 +1,8 @@
 <!DOCTYPE html>
 
 <html lang="en"><head>
-<!-- Google tag (gtag.js) -->
-<script>
-  (function () {
-    const GA_ID = "G-EKE8CWE8SN";
-    const ADS_ID = "AW-17961819738";
-
-    function loadGtag() {
-      if (window.__gtagLoaded) return;
-      window.__gtagLoaded = true;
-
-      const s = document.createElement("script");
-      s.async = true;
-      s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
-      document.head.appendChild(s);
-
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){ window.dataLayer.push(arguments); }
-      window.gtag = gtag;
-
-      gtag("js", new Date());
-
-      gtag("config", GA_ID, { anonymize_ip: true });
-      gtag("config", ADS_ID);
-    }
-
-    window.loadAnalytics = loadGtag;
-    loadGtag();
-  })();
-</script>
+<link href="/assets/lo.consent.css" rel="stylesheet"/>
+<script data-lo-google-tracking src="/assets/lo.consent.js"></script>
 
 <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="#050509" name="theme-color"/>
 <title>Ferrari Birthday Rental Zurich | 458 Gift</title><meta content="Rent a Ferrari 458 Italia for a birthday in Zurich: surprise gift, shared drive or voucher with clear planning." name="description"/>

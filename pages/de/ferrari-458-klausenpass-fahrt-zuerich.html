@@ -2,35 +2,8 @@
 
 <html lang="de">
 <head>
-<!-- Google tag (gtag.js) -->
-<script>
-  (function () {
-    const GA_ID = "G-EKE8CWE8SN";
-    const ADS_ID = "AW-17961819738";
-
-    function loadGtag() {
-      if (window.__gtagLoaded) return;
-      window.__gtagLoaded = true;
-
-      const s = document.createElement("script");
-      s.async = true;
-      s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
-      document.head.appendChild(s);
-
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){ window.dataLayer.push(arguments); }
-      window.gtag = gtag;
-
-      gtag("js", new Date());
-
-      gtag("config", GA_ID, { anonymize_ip: true });
-      gtag("config", ADS_ID);
-    }
-
-    window.loadAnalytics = loadGtag;
-    loadGtag();
-  })();
-</script>
+<link href="/assets/lo.consent.css" rel="stylesheet"/>
+<script data-lo-google-tracking src="/assets/lo.consent.js"></script>
 <meta charset="utf-8"/>
 <title>Ferrari mieten Zürich: Ferrari 458 zum Klausenpass | Kundenerlebnis</title>
 <meta content="Ein echtes Ferrari-458-Italia-Erlebnis ab Nänikon über Glarus und Linthal zum Klausenpass – mit Route, Fotos, Zeitplan und Fahrtipps." name="description"/>
@@ -431,7 +404,7 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
   const LANGS = ["en","de","it"];
   const PAGE_MAP = {"en": "/en/ferrari-458-klausen-pass-drive-zurich", "de": "/de/ferrari-458-klausenpass-fahrt-zuerich", "it": "/it/ferrari-458-passo-del-clausen-zurigo"};
   function getLang(){ return CURRENT_LANG; }
-  function setLang(next){ if(!LANGS.includes(next)) return; try { localStorage.setItem("lo_lang", next); } catch(e) {} const target = PAGE_MAP[next] || PAGE_MAP[CURRENT_LANG]; if(target) window.location.href = target; }
+  function setLang(next){ if(!LANGS.includes(next)) return; try { localStorage.setItem("lo_lang", next); } catch(e) {} const target = PAGE_MAP[next] || PAGE_MAP[CURRENT_LANG]; if(target) window.location.href = (window.__LO__ && typeof window.__LO__.withAttributionParams === "function") ? window.__LO__.withAttributionParams(target) : target; }
   function buildUrl(path, lang, hash){ try{ const u = new URL(path, window.location.href); u.searchParams.set("lang", lang || CURRENT_LANG); if(hash) u.hash = hash; return u.pathname + u.search + u.hash; }catch(e){ return path; } }
   function initLangMenu(lang){ const toggle = document.getElementById("langToggle"); const menu = document.getElementById("langMenu"); const codeEl = document.getElementById("langCode"); if(!toggle || !menu || !codeEl) return; const codes = { en:"EN", de:"DE", it:"IT" }; codeEl.textContent = codes[lang] || codes[CURRENT_LANG]; function close(){ menu.hidden = true; toggle.setAttribute("aria-expanded","false"); } function open(){ menu.hidden = false; toggle.setAttribute("aria-expanded","true"); } toggle.addEventListener("click", (e) => { e.stopPropagation(); const isOpen = !menu.hidden; if(isOpen) close(); else open(); }); document.addEventListener("click", () => close(), { passive:true }); document.addEventListener("keydown", (e) => { if(e.key === "Escape") close(); }); menu.querySelectorAll("[data-lang]").forEach(btn => { const code = btn.getAttribute("data-lang"); btn.setAttribute("aria-current", code === lang ? "true" : "false"); btn.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); setLang(code); }); }); }
   function initHamburger(){ const btn = document.getElementById("hamburger"); const menu = document.getElementById("mobileMenu"); if(!btn || !menu) return; function close(){ menu.style.display = "none"; menu.setAttribute("data-open","0"); btn.setAttribute("aria-expanded","false"); } btn.addEventListener("click", () => { const open = menu.getAttribute("data-open") === "1"; if(open) close(); else { menu.style.display = "block"; menu.setAttribute("data-open","1"); btn.setAttribute("aria-expanded","true"); } }); menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close)); document.addEventListener("click", (e) => { if(menu.getAttribute("data-open") !== "1") return; if(menu.contains(e.target) || btn.contains(e.target)) return; close(); }); }
@@ -439,7 +412,7 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
 })();
 </script>
 <link href="../assets/lo.css" rel="stylesheet"/><script defer="" src="../assets/lo.js"></script><script>
-try { localStorage.setItem("lo_lang", "de"); const u = new URL(window.location.href); if (u.searchParams.has("lang")) { u.searchParams.delete("lang"); window.history.replaceState(null, "", u.pathname + u.hash); } } catch (e) {}
+try { localStorage.setItem("lo_lang", "de"); const u = new URL(window.location.href); if (u.searchParams.has("lang")) { u.searchParams.delete("lang"); window.history.replaceState(null, "", u.pathname + u.search + u.hash); } } catch (e) {}
 </script><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [

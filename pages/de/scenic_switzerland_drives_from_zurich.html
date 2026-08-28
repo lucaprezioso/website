@@ -2,35 +2,8 @@
 
 <html lang="de">
 <head>
-<!-- Google tag (gtag.js) -->
-<script>
-  (function () {
-    const GA_ID = "G-EKE8CWE8SN";
-    const ADS_ID = "AW-17961819738";
-
-    function loadGtag() {
-      if (window.__gtagLoaded) return;
-      window.__gtagLoaded = true;
-
-      const s = document.createElement("script");
-      s.async = true;
-      s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
-      document.head.appendChild(s);
-
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){ window.dataLayer.push(arguments); }
-      window.gtag = gtag;
-
-      gtag("js", new Date());
-
-      gtag("config", GA_ID, { anonymize_ip: true });
-      gtag("config", ADS_ID);
-    }
-
-    window.loadAnalytics = loadGtag;
-    loadGtag();
-  })();
-</script>
+<link href="/assets/lo.consent.css" rel="stylesheet"/>
+<script data-lo-google-tracking src="/assets/lo.consent.js"></script>
 <meta charset="utf-8"/>
 <title>Panoramafahrten Schweiz ab Zürich</title>
 <meta content="Panoramafahrten ab Zürich: ausgewählte See-Routen, Alpenpässe, Saisonhinweise und praktische Tipps für besondere Fahrten in der Schweiz." name="description"/>
@@ -453,7 +426,7 @@ try {
   const u = new URL(window.location.href);
   if (u.searchParams.has("lang")) {
     u.searchParams.delete("lang");
-    window.history.replaceState(null, "", u.pathname + u.hash);
+    window.history.replaceState(null, "", u.pathname + u.search + u.hash);
   }
 } catch (e) {}
 </script><meta content="https://luxuryobsession.ch/de/schoene-strecken-schweiz-ab-zuerich" property="og:url"/><meta content="de_CH" property="og:locale"/><meta content="2026-02-06" property="article:published_time"/><meta content="2026-03-19" property="article:modified_time"/><meta content="Luxury Obsession" name="author"/><script type="application/ld+json">[
