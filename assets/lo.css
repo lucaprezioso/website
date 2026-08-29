@@ -982,6 +982,7 @@ h1,h2,h3,.heroTitle,.sectionTitle,.mediaTitle{font-family:var(--font-serif) !imp
 
 /* Locations */
 .locTitleRow{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:baseline}
+.locTitleRow h2,#otherTitle{font-size:1.17em}
 .locPill{display:inline-flex;align-items:center;gap:0.4rem;border-radius:999px;padding:0.22rem 0.65rem;background:rgba(243,241,238,0.02);border:1px solid rgba(243,241,238,0.12);color:rgba(243,241,238,0.78);font-size:0.82rem;font-weight:500}
 .locNote{margin:0.65rem 0 0;color:var(--muted);line-height:1.55}
 .locMarker{margin-left:.12rem;font-size:.72em;vertical-align:super;color:var(--muted);font-weight:700}
@@ -1095,32 +1096,6 @@ header[data-brand-wrap="1"] .brandGold .brandWord2{display:block}
   .navRight{gap:0.5rem;}
   .navCta{padding:0.46rem 0.78rem;font-size:0.82rem;}
   .langToggle{padding:0.46rem 0.62rem;font-size:0.82rem;}
-}
-
-/* Ultra-small screens: keep Request, language, and hamburger visible without horizontal scrolling */
-@media (max-width: 360px){
-  header .container{padding:0 1rem;}
-  .navInner{gap:0.6rem;padding:0.35rem 0;}
-
-  /* Let brand shrink and ellipsize so the right controls never get pushed off-screen */
-  .brand{flex:1 1 auto;min-width:0;gap:0.5rem;}
-  .brandGold{
-    display:inline-block;
-    max-width:34vw;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
-  }
-
-  .navRight{gap:0.35rem;}
-  .navCta{padding:0.40rem 0.62rem;font-size:0.78rem;}
-  .langToggle{padding:0.40rem 0.50rem;font-size:0.78rem;}
-  .hamburger{width:40px;height:40px !important;}
-}
-
-/* Extreme narrow devices: show icon only to preserve controls */
-@media (max-width: 320px){
-  .brandGold{display:none;}
 }
 
 /* =========================================================
@@ -1713,18 +1688,56 @@ footer{
 }
 
 /* ===== Final mobile header safety patch =====
-   Keeps the primary actions fully inside the viewport even before lo.js has
-   finished adapting the navigation. The brand icon remains visible at every
-   width; the long wordmark is hidden only on compact phones. */
+   Keeps the primary actions fully inside the viewport while preserving the
+   brand name. lo.js measures the available width and sets data-brand-wrap;
+   compact phones also get a CSS fallback so LUXURY / OBSESSION is visible on
+   two lines before JavaScript has finished adapting the navigation. */
 @media (max-width: 520px){
   header .container{padding-left:1rem;padding-right:1rem;}
   .navInner{gap:0.55rem !important;}
   .brand{flex:0 0 auto;min-width:0;gap:0.45rem;}
-  .brandGold{display:none !important;}
+  header .brandGold{
+    display:inline-flex !important;
+    max-width:none;
+    overflow:visible;
+    text-overflow:clip;
+    white-space:nowrap !important;
+    font-size:0.78rem;
+    letter-spacing:0.13em;
+  }
+  header[data-brand-wrap="1"] .brandGold{
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:0.04em !important;
+    width:min-content;
+    white-space:normal !important;
+    line-height:1 !important;
+  }
   .navRight{margin-left:auto;min-width:0;gap:0.40rem !important;}
   .navCta{padding:0.42rem 0.68rem !important;font-size:0.79rem !important;}
   .langToggle{padding:0.42rem 0.54rem !important;font-size:0.79rem !important;}
   .hamburger{width:40px !important;height:40px !important;flex:0 0 40px;}
+}
+
+/* Typical current phone widths: use the compact two-line wordmark directly.
+   This is also the no-JavaScript fallback for the automatic measurement. */
+@media (max-width: 420px){
+  header .brandGold{
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:0.04em !important;
+    width:min-content;
+    white-space:normal !important;
+    line-height:1 !important;
+  }
+}
+
+@media (max-width: 360px){
+  .navInner{gap:0.45rem !important;padding:0.35rem 0;}
+  .navRight{gap:0.32rem !important;}
+  .navCta{padding:0.40rem 0.62rem !important;font-size:0.78rem !important;}
+  .langToggle{padding:0.40rem 0.50rem !important;font-size:0.78rem !important;}
+  header .brandGold{font-size:0.70rem;letter-spacing:0.11em;}
 }
 
 @media (max-width: 340px){
@@ -1733,4 +1746,16 @@ footer{
   .navRight{gap:0.28rem !important;}
   .navCta{padding-left:0.55rem !important;padding-right:0.55rem !important;}
   .langToggle{padding-left:0.44rem !important;padding-right:0.44rem !important;}
+  header .brand{gap:0.36rem;}
+  header .brandIcon{width:32px;height:32px;}
+  header .brandGold{font-size:0.66rem;letter-spacing:0.09em;}
+  .navCta{font-size:0.74rem !important;}
+  .langToggle{font-size:0.74rem !important;}
+  .hamburger{width:38px !important;height:38px !important;flex-basis:38px;}
+}
+
+/* 320 px is below the width of almost every current smartphone. At this last
+   resort only, preserve Request, language and menu by keeping the icon alone. */
+@media (max-width: 320px){
+  header .brandGold{display:none !important;}
 }

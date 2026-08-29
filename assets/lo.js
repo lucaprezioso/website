@@ -869,6 +869,21 @@ function applyPriorityNav(){
   const width = Math.ceil(navInner.clientWidth || 0);
   if(width <= 0) return;
 
+  // Mobile keeps Request, language and hamburger visible by design. Measure
+  // that exact fixed cluster and wrap the brand only when the one-line name
+  // would overflow; desktop link-priority rules are not relevant here.
+  const isMobile = window.matchMedia && window.matchMedia("(max-width: 760px)").matches;
+  if(isMobile){
+    const mobileOneLine = loMeasureNav({ width, burger:true, wrap:false, hideKeys:[] });
+    const shouldWrapBrand = !mobileOneLine || mobileOneLine.overflow > 1;
+
+    header.setAttribute("data-burger", "1");
+    header.setAttribute("data-brand-wrap", shouldWrapBrand ? "1" : "0");
+    for(const a of links) setHidden(a, false);
+    if(langSel) setHidden(langSel, false);
+    return;
+  }
+
   // 1) Try full layout (no hamburger).
   const m0 = loMeasureNav({ width, burger:false, wrap:false, hideKeys:[] });
   if(m0 && m0.overflow <= 1){
