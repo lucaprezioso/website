@@ -925,7 +925,7 @@ body.loPromoNoScroll{
 <main>
 <section class="showcase" id="showcase">
 <div class="mediaFull">
-<video aria-label="Video cinematico della Ferrari 458 Italia in Svizzera" autoplay="" id="showcaseVideo" muted="" playsinline="" poster="" preload="none">
+<video aria-label="Video cinematico della Ferrari 458 Italia in Svizzera" autoplay="" id="showcaseVideo" muted="" playsinline="" poster="/media/poster_vertical_480.webp" preload="none">
 <source data-src="/media/FerrariWebShort_VeryLowRes_vertical.mp4" id="showcaseSource" type="video/mp4"/>
 </video>
 <script>
@@ -2675,7 +2675,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (poster) showcaseVideo.poster = poster;
 
-    requestAnimationFrame(() => {
+    const startShowcaseVideo = () => {
+      if (showcaseVideo.dataset.videoStarted === "true") return;
+      showcaseVideo.dataset.videoStarted = "true";
       showcaseSource.src = desired;
       showcaseVideo.load();
 
@@ -2688,7 +2690,21 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       showcaseVideo.play().catch(() => {});
-    });
+    };
+
+    const scheduleShowcaseVideo = () => {
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(startShowcaseVideo, { timeout: 1200 });
+      } else {
+        window.setTimeout(startShowcaseVideo, 500);
+      }
+    };
+
+    if (document.readyState === "complete") {
+      scheduleShowcaseVideo();
+    } else {
+      window.addEventListener("load", scheduleShowcaseVideo, { once: true });
+    }
 
     if (isDesktopWide && DESKTOP_WIDE_VIDEO_MODE === "stop553") {
       const stopAt = 5.53;

@@ -1025,7 +1025,7 @@ body.loPromoNoScroll{
 <main>
 <section class="showcase" id="showcase">
 <div class="mediaFull">
-<video aria-label="Cinematic Drohnenvideo der Ferrari 458 Italia in der Schweiz" autoplay="" id="showcaseVideo" muted="" playsinline="" poster="" preload="none">
+<video aria-label="Cinematic Drohnenvideo der Ferrari 458 Italia in der Schweiz" autoplay="" id="showcaseVideo" muted="" playsinline="" poster="/media/poster_vertical_480.webp" preload="none">
 <source data-src="/media/FerrariWebShort_VeryLowRes_vertical.mp4" id="showcaseSource" type="video/mp4"/>
 </video>
 <script>
@@ -1902,7 +1902,7 @@ const DEFAULT_PACKAGES =
       setText("navRequest", t.navRequest);
 
       const prefix = lang === "de" ? "/de" : lang === "it" ? "/it" : "";
-      const homePath = prefix ? prefix + "/" : "/";
+      const homePath = lang === "de" ? "/" : (prefix ? prefix + "/" : "/");
 
       setHref("navRates", `${prefix}/pricing`);
       setHref("navGallery", lang === "de" ? "/galerie" : (lang === "it" ? "/it/galleria" : "/en/gallery"));
@@ -2791,7 +2791,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (poster) showcaseVideo.poster = poster;
 
-    requestAnimationFrame(() => {
+    const startShowcaseVideo = () => {
+      if (showcaseVideo.dataset.videoStarted === "true") return;
+      showcaseVideo.dataset.videoStarted = "true";
       showcaseSource.src = desired;
       showcaseVideo.load();
 
@@ -2804,7 +2806,21 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       showcaseVideo.play().catch(() => {});
-    });
+    };
+
+    const scheduleShowcaseVideo = () => {
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(startShowcaseVideo, { timeout: 1200 });
+      } else {
+        window.setTimeout(startShowcaseVideo, 500);
+      }
+    };
+
+    if (document.readyState === "complete") {
+      scheduleShowcaseVideo();
+    } else {
+      window.addEventListener("load", scheduleShowcaseVideo, { once: true });
+    }
 
     if (isDesktopWide && DESKTOP_WIDE_VIDEO_MODE === "stop553") {
       const stopAt = 5.53;

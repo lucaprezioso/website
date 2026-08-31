@@ -1685,6 +1685,15 @@ footer{
   .footerNap{display:grid !important;grid-template-columns:1fr !important;justify-items:center !important;gap:0.1rem !important;width:min(100%,440px) !important;box-sizing:border-box !important}
   .footerNapItem{display:block !important;white-space:nowrap !important;max-width:100% !important}
   .footerNapItem:not(:last-child)::after{content:none !important}
+  .footerNap a,
+  .footerRight a{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    min-height:44px !important;
+    padding:0.25rem 0.35rem !important;
+    box-sizing:border-box !important;
+  }
 }
 
 /* ===== Final mobile header safety patch =====
