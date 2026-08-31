@@ -568,6 +568,14 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /en/ferrari-458-brief-escape-pfannenstiel-meilen                  /pages/ferrari-458-brief-escape-pfannenstiel-meilen.html            200
 /de/ferrari-458-kurztrip-pfannenstiel-meilen-zuerich             /pages/de/ferrari-458-kurztrip-pfannenstiel-meilen-zuerich.html    200
 /it/ferrari-458-breve-fuga-pfannenstiel-meilen-zurigo            /pages/it/ferrari-458-breve-fuga-pfannenstiel-meilen-zurigo.html   200
+
+# Bespoke Ferrari 458 Swiss Alps road trip, published 22 August 2026
+/en/ferrari-458-swiss-alps-road-trip-andermatt.html               /en/ferrari-458-swiss-alps-road-trip-andermatt                     301!
+/de/ferrari-458-alpenpaesse-andermatt-72-stunden.html             /de/ferrari-458-alpenpaesse-andermatt-72-stunden                   301!
+/it/ferrari-458-tour-passi-svizzeri-andermatt.html                /it/ferrari-458-tour-passi-svizzeri-andermatt                      301!
+/en/ferrari-458-swiss-alps-road-trip-andermatt                    /pages/ferrari-458-swiss-alps-road-trip-andermatt.html             200
+/de/ferrari-458-alpenpaesse-andermatt-72-stunden                  /pages/de/ferrari-458-alpenpaesse-andermatt-72-stunden.html        200
+/it/ferrari-458-tour-passi-svizzeri-andermatt                     /pages/it/ferrari-458-tour-passi-svizzeri-andermatt.html           200
 /de/ferrari-458-brief-escape-pfannenstiel-meilen                  /de/ferrari-458-kurztrip-pfannenstiel-meilen-zuerich               301!
 /it/ferrari-458-brief-escape-pfannenstiel-meilen                  /it/ferrari-458-breve-fuga-pfannenstiel-meilen-zurigo              301!
 
