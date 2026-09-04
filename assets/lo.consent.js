@@ -10,6 +10,7 @@
   var CONSENT_VERSION = 3;
   var MAX_AGE_MS = 180 * 24 * 60 * 60 * 1000;
   var MAX_AGE_SECONDS = Math.floor(MAX_AGE_MS / 1000);
+  var GOOGLE_TAG_DELAY_MS = 8000;
 
   var googleTagLoaded = false;
   var currentChoice = readChoice();
@@ -20,7 +21,14 @@
   };
 
   setDefaultConsent(currentChoice);
-  loadGoogleTag();
+  if (window.__LO_FORCE_GOOGLE_TAG__ === true || window.__LO_PENDING_GOOGLE_CONVERSION__) {
+    loadGoogleTag();
+  } else if (shouldDelayGoogleTag()) {
+    scheduleGoogleTag();
+  } else {
+    loadGoogleTag();
+  }
+  flushPendingGoogleConversion();
 
   window.loadAnalytics = function () {
     loadGoogleTag();
@@ -183,6 +191,48 @@
     window.gtag("consent", "update", consentValues(choice));
   }
 
+  function shouldDelayGoogleTag() {
+    var pathname = (window.location.pathname || "/").replace(/\/+$/, "") || "/";
+    var isHomepage = pathname === "/" || pathname === "/en" || pathname === "/it";
+    if (!isHomepage) return false;
+
+    try {
+      var params = new URLSearchParams(window.location.search || "");
+      var adClickKeys = ["gclid", "dclid", "gclsrc", "wbraid", "gbraid", "_gl"];
+      for (var i = 0; i < adClickKeys.length; i += 1) {
+        if (params.has(adClickKeys[i])) return false;
+      }
+    } catch (error) {
+      // If the URL cannot be inspected, prefer complete measurement.
+      return false;
+    }
+
+    return true;
+  }
+
+  function scheduleGoogleTag() {
+    if (!trackingEnabled || googleTagLoaded) return;
+
+    var activate = function () {
+      loadGoogleTag();
+    };
+    var passiveOnce = { once: true, passive: true };
+
+    document.addEventListener("pointerdown", activate, passiveOnce);
+    document.addEventListener("touchstart", activate, passiveOnce);
+    document.addEventListener("scroll", activate, { once: true, passive: true, capture: true });
+    document.addEventListener("keydown", activate, { once: true });
+
+    var startFallback = function () {
+      window.setTimeout(activate, GOOGLE_TAG_DELAY_MS);
+    };
+    if (document.readyState === "complete") {
+      startFallback();
+    } else {
+      window.addEventListener("load", startFallback, { once: true });
+    }
+  }
+
   function loadGoogleTag() {
     if (!trackingEnabled || googleTagLoaded) return;
 
@@ -201,6 +251,15 @@
     window.gtag("set", "url_passthrough", true);
     window.gtag("config", GA_ID, { anonymize_ip: true });
     window.gtag("config", ADS_ID);
+  }
+
+  function flushPendingGoogleConversion() {
+    var payload = window.__LO_PENDING_GOOGLE_CONVERSION__;
+    if (!payload) return;
+
+    window.gtag("event", "conversion", payload);
+    window.__LO_PENDING_GOOGLE_CONVERSION__ = null;
+    window.__LO_FORCE_GOOGLE_TAG__ = false;
   }
 
   function clearGoogleCookies(category) {
@@ -241,6 +300,7 @@
     closePreferences();
     saveChoice(choice);
     updateConsent(choice);
+    loadGoogleTag();
 
     try {
       if (!choice.analytics) clearGoogleCookies("analytics");
@@ -390,7 +450,6 @@
       banner.innerHTML =
         '<div class="loConsentBanner__inner">' +
           '<div class="loConsentBanner__copy">' +
-            '<p class="loConsentEyebrow">Luxury Obsession</p>' +
             '<h2 id="loConsentTitle">' + text.title + '</h2>' +
             '<p>' + text.intro + '</p>' +
             '<p class="loConsentDetail">' + text.detail + ' <a href="' + privacyUrl() + '">' + text.privacy + '</a>.</p>' +

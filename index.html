@@ -157,10 +157,6 @@ html.loConsentBannerOpen .loLangSuggest {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-.loConsentBanner .loConsentEyebrow {
-  font-family: Georgia, "Times New Roman", serif;
-}
-
 .loConsentBanner h2 {
   font-family: Georgia, "Times New Roman", serif !important;
 }
@@ -502,7 +498,7 @@ html.loConsentBannerOpen .loLangSuggest {
 @media (max-width: 760px) {
   .loConsentBanner {
     right: 8px;
-    bottom: 8px;
+    bottom: 4px;
     left: 8px;
   }
 
@@ -572,7 +568,7 @@ html.loConsentBannerOpen .loLangSuggest {
   }
 }
 </style>
-<script data-lo-google-tracking defer="" src="/assets/lo.consent.js?v=79"></script>
+<script data-lo-google-tracking defer="" src="/assets/lo.consent.js?v=81"></script>
 <style id="lo-home-critical">
 /* Luxury Obsession shared stylesheet */
 :root{
@@ -3292,7 +3288,6 @@ body.loPromoNoScroll{
 <section aria-label="Cookie-Einwilligung" aria-labelledby="loConsentTitle" aria-modal="false" class="loConsentBanner is-visible" id="loConsentBanner" role="dialog">
 <div class="loConsentBanner__inner">
 <div class="loConsentBanner__copy">
-<p class="loConsentEyebrow">Luxury Obsession</p>
 <h2 id="loConsentTitle">Ihre Privatsphäre, Ihre Wahl</h2>
 <p>Wir verwenden notwendige Technologien für den Betrieb dieser Website. Analyse und Werbung bleiben ohne Ihre Einwilligung deaktiviert.</p>
 <p class="loConsentDetail">Weitere Informationen finden Sie in den Einstellungen und in unserer <a href="/datenschutz">Datenschutzerklärung</a>.</p>
@@ -3354,15 +3349,15 @@ body.loPromoNoScroll{
   if (!showcaseVideo) return;
 
   const isMobile = window.matchMedia("(max-width: 760px)").matches;
-  const aspect = window.innerWidth / Math.max(1, window.innerHeight);
-  const threshold = 5 / 6;
+  const isMediumMobile = window.matchMedia("(min-width: 601px)").matches;
+  const isWideAspect = window.matchMedia("(min-aspect-ratio: 5/6)").matches;
 
   let poster;
   if (isMobile) {
-    poster = window.innerWidth >= 601
+    poster = isMediumMobile
       ? "/media/poster_vertical_720.webp"
       : "/media/poster_vertical_480.webp";
-  } else if (aspect > threshold) {
+  } else if (isWideAspect) {
     poster = "/media/poster_1200.webp";
   } else {
     poster = "/media/poster_960.webp";

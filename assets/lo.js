@@ -964,6 +964,7 @@ function initAnalyticsEvents(){
   window.__loAnalyticsEventsBound = true;
 
   function sendLoEvent(eventName, params){
+    if(typeof window.loadAnalytics === "function") window.loadAnalytics();
     if(typeof window.gtag !== "function") return;
 
     const payload = Object.assign({
