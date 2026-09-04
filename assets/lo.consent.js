@@ -390,6 +390,7 @@
       banner.innerHTML =
         '<div class="loConsentBanner__inner">' +
           '<div class="loConsentBanner__copy">' +
+            '<p class="loConsentEyebrow">Luxury Obsession</p>' +
             '<h2 id="loConsentTitle">' + text.title + '</h2>' +
             '<p>' + text.intro + '</p>' +
             '<p class="loConsentDetail">' + text.detail + ' <a href="' + privacyUrl() + '">' + text.privacy + '</a>.</p>' +

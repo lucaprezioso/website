@@ -56,6 +56,10 @@ html.loConsentBannerOpen .loLangSuggest {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+.loConsentBanner .loConsentEyebrow {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
 .loConsentBanner h2 {
   font-family: Georgia, "Times New Roman", serif !important;
 }
@@ -397,7 +401,7 @@ html.loConsentBannerOpen .loLangSuggest {
 @media (max-width: 760px) {
   .loConsentBanner {
     right: 8px;
-    bottom: max(4px, env(safe-area-inset-bottom));
+    bottom: 8px;
     left: 8px;
   }
 
