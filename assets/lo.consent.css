@@ -41,24 +41,52 @@
   pointer-events: auto;
 }
 
+/* The homepage can include the banner in its initial HTML for a faster first paint.
+   Returning visitors are hidden before rendering by a tiny consent-state check. */
+html.loConsentKnown .loConsentBanner {
+  display: none !important;
+}
+
+html.loConsentBannerOpen .loLangSuggest {
+  display: none !important;
+}
+
+/* Keep the first-view consent text independent from remote font timing. */
+.loConsentBanner {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.loConsentBanner .loConsentEyebrow {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.loConsentBanner h2 {
+  font-family: Georgia, "Times New Roman", serif !important;
+}
+
+.loConsentBanner__inner {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
 .loConsentBanner__inner {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  gap: 28px;
-  width: min(1120px, 100%);
+  gap: 22px;
+  width: min(980px, 100%);
   max-height: calc(100dvh - 36px);
   overflow: auto;
   margin: 0 auto;
-  padding: 22px 24px;
+  padding: 18px 20px;
   border: 1px solid var(--lo-consent-line);
   border-radius: 16px;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.035), transparent 48%),
-    rgba(12, 12, 15, 0.98);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent 48%),
+    rgba(10, 10, 13, 0.90);
   box-shadow: 0 22px 70px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .loConsentEyebrow {
@@ -379,13 +407,29 @@
 
   .loConsentBanner__inner {
     display: block;
-    padding: 18px;
+    padding: 14px 16px 13px;
     border-radius: 14px;
+  }
+
+  .loConsentBanner h2 {
+    margin-bottom: 5px !important;
+    font-size: 24px !important;
+    line-height: 1.05 !important;
+  }
+
+  .loConsentBanner p {
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+  }
+
+  .loConsentBanner .loConsentDetail {
+    margin-top: 3px !important;
+    font-size: 12px !important;
   }
 
   .loConsentBanner__actions {
     min-width: 0;
-    margin-top: 15px;
+    margin-top: 11px;
   }
 
   .loConsentPanel {
@@ -399,12 +443,19 @@
 }
 
 @media (max-width: 420px) {
-  .loConsentBanner__actions,
+  .loConsentBanner__actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .loConsentBanner .loConsentTextButton {
+    grid-column: 1 / -1;
+  }
+
   .loConsentPanel__actions {
     grid-template-columns: 1fr;
   }
 
-  .loConsentTextButton {
+  .loConsentPanel .loConsentTextButton {
     grid-column: auto;
   }
 }

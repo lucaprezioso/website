@@ -30,15 +30,29 @@
     getChoice: function () {
       return currentChoice ? copyChoice(currentChoice) : null;
     },
+    acceptAll: function () {
+      initInterface();
+      applyChoice(true, true);
+    },
+    rejectAll: function () {
+      initInterface();
+      applyChoice(false, false);
+    },
     openSettings: function () {
+      initInterface();
       openPreferences();
     }
   };
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initInterface, { once: true });
-  } else {
+  function startInterface() {
     initInterface();
+
+    var pendingAction = window.__LO_CONSENT_PENDING__;
+    window.__LO_CONSENT_PENDING__ = "";
+
+    if (pendingAction === "accept") applyChoice(true, true);
+    if (pendingAction === "reject") applyChoice(false, false);
+    if (pendingAction === "settings") openPreferences();
   }
 
   function copyChoice(choice) {
@@ -177,6 +191,8 @@
 
     var tag = document.createElement("script");
     tag.async = true;
+    tag.fetchPriority = "low";
+    tag.setAttribute("fetchpriority", "low");
     tag.id = "loGoogleTag";
     tag.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
     document.head.appendChild(tag);
@@ -221,14 +237,17 @@
     };
 
     currentChoice = choice;
+    closeBanner();
+    closePreferences();
     saveChoice(choice);
     updateConsent(choice);
 
-    if (!choice.analytics) clearGoogleCookies("analytics");
-    if (!choice.ads) clearGoogleCookies("ads");
-
-    closeBanner();
-    closePreferences();
+    try {
+      if (!choice.analytics) clearGoogleCookies("analytics");
+      if (!choice.ads) clearGoogleCookies("ads");
+    } catch (error) {
+      // Cookie cleanup must never prevent the user's choice from taking effect.
+    }
 
     try {
       window.dispatchEvent(new CustomEvent("lo:consentchange", { detail: copyChoice(choice) }));
@@ -241,8 +260,8 @@
     de: {
       bannerLabel: "Cookie-Einwilligung",
       title: "Ihre Privatsphäre, Ihre Wahl",
-      intro: "Wir verwenden notwendige Technologien für den Betrieb dieser Website. Ohne Einwilligung bleiben Analyse- und Werbe-Cookies deaktiviert; Google erhält jedoch cookielose Messsignale wie die aufgerufene Seite, die Verweisquelle und gegebenenfalls Informationen zu einem Anzeigenklick. Diese Signale helfen bei aggregierten Auswertungen und Modellierungen.",
-      detail: "Sie können optionale Cookies und Speicherfunktionen akzeptieren, ablehnen oder individuell auswählen. Ihre Auswahl wird 180 Tage gespeichert und kann jederzeit geändert werden.",
+      intro: "Wir verwenden notwendige Technologien für den Betrieb dieser Website. Analyse und Werbung bleiben ohne Ihre Einwilligung deaktiviert.",
+      detail: "Weitere Informationen finden Sie in den Einstellungen und in unserer",
       accept: "Alle akzeptieren",
       reject: "Alle ablehnen",
       settings: "Einstellungen",
@@ -263,8 +282,8 @@
     en: {
       bannerLabel: "Cookie consent",
       title: "Your privacy, your choice",
-      intro: "We use essential technologies to operate this website. Without consent, analytics and advertising cookies remain disabled; however, Google receives cookieless measurement signals such as the page viewed, referral source and, where applicable, ad-click information. These signals support aggregate reporting and modeling.",
-      detail: "You can accept, reject or customize optional cookies and storage functions. Your choice is stored for 180 days and can be changed at any time.",
+      intro: "We use essential technologies to operate this website. Analytics and advertising remain disabled without your consent.",
+      detail: "More information is available in Preferences and in our",
       accept: "Accept all",
       reject: "Reject all",
       settings: "Preferences",
@@ -285,8 +304,8 @@
     it: {
       bannerLabel: "Consenso ai cookie",
       title: "La tua privacy, la tua scelta",
-      intro: "Utilizziamo tecnologie necessarie al funzionamento del sito. Senza consenso i cookie di analisi e pubblicitari restano disattivati; Google riceve tuttavia segnali di misurazione senza cookie, come la pagina visitata, la provenienza e, se presenti, informazioni sul clic pubblicitario. Questi segnali supportano analisi aggregate e modellazione.",
-      detail: "Puoi accettare, rifiutare o personalizzare i cookie e le funzioni di memorizzazione opzionali. La scelta viene ricordata per 180 giorni e può essere modificata in qualsiasi momento.",
+      intro: "Utilizziamo tecnologie necessarie al funzionamento del sito. Analisi e pubblicità restano disattivate senza il tuo consenso.",
+      detail: "Maggiori informazioni sono disponibili nelle Preferenze e nella nostra",
       accept: "Accetta tutto",
       reject: "Rifiuta tutto",
       settings: "Preferenze",
@@ -314,6 +333,7 @@
   var previousFocus;
   var language;
   var text;
+  var reopenBannerAfterPreferences = false;
 
   function detectLanguage() {
     var queryLanguage = "";
@@ -348,34 +368,47 @@
     renderPreferences();
     renderManageButton();
 
-    if (!currentChoice) openBanner();
+    if (!currentChoice &&
+        window.__LO_CONSENT_PENDING__ !== "accept" &&
+        window.__LO_CONSENT_PENDING__ !== "reject") {
+      openBanner();
+    }
   }
 
   function renderBanner() {
-    banner = document.createElement("section");
-    banner.className = "loConsentBanner";
-    banner.id = "loConsentBanner";
-    banner.setAttribute("role", "dialog");
-    banner.setAttribute("aria-modal", "false");
-    banner.setAttribute("aria-labelledby", "loConsentTitle");
-    banner.setAttribute("aria-label", text.bannerLabel);
-    banner.hidden = true;
-    banner.innerHTML =
-      '<div class="loConsentBanner__inner">' +
-        '<div class="loConsentBanner__copy">' +
-          '<p class="loConsentEyebrow">Luxury Obsession</p>' +
-          '<h2 id="loConsentTitle">' + text.title + '</h2>' +
-          '<p>' + text.intro + '</p>' +
-          '<p class="loConsentDetail">' + text.detail + ' <a href="' + privacyUrl() + '">' + text.privacy + '</a>.</p>' +
-        '</div>' +
-        '<div class="loConsentBanner__actions">' +
-          '<button class="loConsentButton loConsentButton--primary" data-lo-consent="accept" type="button">' + text.accept + '</button>' +
-          '<button class="loConsentButton" data-lo-consent="reject" type="button">' + text.reject + '</button>' +
-          '<button class="loConsentTextButton" data-lo-consent="settings" type="button">' + text.settings + '</button>' +
-        '</div>' +
-      '</div>';
+    banner = document.getElementById("loConsentBanner");
 
-    document.body.appendChild(banner);
+    if (!banner) {
+      banner = document.createElement("section");
+      banner.className = "loConsentBanner";
+      banner.id = "loConsentBanner";
+      banner.setAttribute("role", "dialog");
+      banner.setAttribute("aria-modal", "false");
+      banner.setAttribute("aria-labelledby", "loConsentTitle");
+      banner.setAttribute("aria-label", text.bannerLabel);
+      banner.hidden = true;
+      banner.innerHTML =
+        '<div class="loConsentBanner__inner">' +
+          '<div class="loConsentBanner__copy">' +
+            '<p class="loConsentEyebrow">Luxury Obsession</p>' +
+            '<h2 id="loConsentTitle">' + text.title + '</h2>' +
+            '<p>' + text.intro + '</p>' +
+            '<p class="loConsentDetail">' + text.detail + ' <a href="' + privacyUrl() + '">' + text.privacy + '</a>.</p>' +
+          '</div>' +
+          '<div class="loConsentBanner__actions">' +
+            '<button class="loConsentButton loConsentButton--primary" data-lo-consent="accept" type="button">' + text.accept + '</button>' +
+            '<button class="loConsentButton" data-lo-consent="reject" type="button">' + text.reject + '</button>' +
+            '<button class="loConsentTextButton" data-lo-consent="settings" type="button">' + text.settings + '</button>' +
+          '</div>' +
+        '</div>';
+
+      document.body.appendChild(banner);
+    } else if (currentChoice) {
+      banner.classList.remove("is-visible");
+      banner.hidden = true;
+      document.documentElement.classList.remove("loConsentBannerOpen");
+    }
+
     banner.querySelector('[data-lo-consent="accept"]').addEventListener("click", function () {
       applyChoice(true, true);
     });
@@ -460,18 +493,18 @@
 
   function openBanner() {
     if (!banner) return;
+    document.documentElement.classList.add("loConsentBannerOpen");
     banner.hidden = false;
     window.requestAnimationFrame(function () {
-      banner.classList.add("is-visible");
+      if (!banner.hidden) banner.classList.add("is-visible");
     });
   }
 
   function closeBanner() {
     if (!banner || banner.hidden) return;
     banner.classList.remove("is-visible");
-    window.setTimeout(function () {
-      banner.hidden = true;
-    }, 220);
+    banner.hidden = true;
+    document.documentElement.classList.remove("loConsentBannerOpen");
   }
 
   function openPreferences() {
@@ -481,6 +514,8 @@
     }
 
     previousFocus = document.activeElement;
+    reopenBannerAfterPreferences = Boolean(!currentChoice && banner && !banner.hidden);
+    if (reopenBannerAfterPreferences) closeBanner();
     analyticsToggle.checked = Boolean(currentChoice && currentChoice.analytics);
     adsToggle.checked = Boolean(currentChoice && currentChoice.ads);
     modal.hidden = false;
@@ -500,6 +535,8 @@
     document.documentElement.classList.remove("loConsentModalOpen");
     window.setTimeout(function () {
       modal.hidden = true;
+      if (reopenBannerAfterPreferences && !currentChoice) openBanner();
+      reopenBannerAfterPreferences = false;
       if (previousFocus && typeof previousFocus.focus === "function") previousFocus.focus();
     }, 180);
   }
@@ -529,5 +566,14 @@
       event.preventDefault();
       first.focus();
     }
+  }
+
+  // Start only after all configuration, copy and interface state above has
+  // been initialized. Deferred scripts can run while readyState is already
+  // "interactive", so starting near the top of the file is unsafe.
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", startInterface, { once: true });
+  } else {
+    startInterface();
   }
 })();
