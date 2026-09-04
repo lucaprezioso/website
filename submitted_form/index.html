@@ -2,8 +2,8 @@
 
 <html lang="en">
 <head>
-<link href="/assets/lo.consent.css?v=81" rel="stylesheet"/>
-<script data-lo-google-tracking defer="" src="/assets/lo.consent.js?v=81"></script>
+<link href="/assets/lo.consent.css?v=80" rel="stylesheet"/>
+<script data-lo-google-tracking defer="" src="/assets/lo.consent.js?v=80"></script>
 <!-- Event snippet for Submit lead form conversion page -->
 <script>
   (function () {
@@ -23,7 +23,7 @@
       // The explicit fallback parameter is added only after a successful form submission.
     }
 
-    if (submitted && !localTest && (allowedByFormSubmit || storageFallback) && !conversionAlreadySent) {
+    if (submitted && !localTest && (allowedByFormSubmit || storageFallback) && !conversionAlreadySent && typeof gtag === "function") {
       try {
         sessionStorage.setItem(storageKey, "1");
         sessionStorage.removeItem("lo_submit_form_conversion_allowed");
@@ -31,13 +31,12 @@
         // The URL is cleaned below, which prevents a normal reload from repeating the conversion.
       }
 
-      window.__LO_FORCE_GOOGLE_TAG__ = true;
-      window.__LO_PENDING_GOOGLE_CONVERSION__ = {
+      gtag("event", "conversion", {
         "send_to": "AW-17961819738/x1cDCO69vK0cENq87vRC",
         "value": 1.0,
         "currency": "CHF",
         "page_location": conversionPageLocation
-      };
+      });
     }
 
     if (submitted) {

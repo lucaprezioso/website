@@ -397,7 +397,7 @@ html.loConsentBannerOpen .loLangSuggest {
 @media (max-width: 760px) {
   .loConsentBanner {
     right: 8px;
-    bottom: 4px;
+    bottom: max(4px, env(safe-area-inset-bottom));
     left: 8px;
   }
 
