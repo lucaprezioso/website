@@ -8,7 +8,7 @@
 <link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_vertical_720.webp" media="(width > 600px) and (max-width: 760px)" rel="preload" type="image/webp"/>
 <link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_1200.webp" media="(width > 760px) and (min-aspect-ratio: 5/6)" rel="preload" type="image/webp"/>
 <link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_960.webp" media="(width > 760px) and (aspect-ratio < 5/6)" rel="preload" type="image/webp"/>
-<meta name="lo-release" content="2026-09-07-form-poster-r3"/>
+<meta name="lo-release" content="2026-09-08-reviewed-r5"/>
 <script id="lo-consent-prepaint">
 (function (d) {
   var values = [];
@@ -2906,7 +2906,7 @@ body.loPromoNoScroll{
 }
 
 </style>
-<script defer="" src="/assets/lo.js?v=c2b205a9c5ca"></script>
+<script defer="" src="/assets/lo.js?v=472995f9c693"></script>
 <link href="https://luxuryobsession.ch/en/" rel="canonical"/><link href="https://luxuryobsession.ch/" hreflang="de-CH" rel="alternate"/><link href="https://luxuryobsession.ch/en/" hreflang="en-CH" rel="alternate"/><link href="https://luxuryobsession.ch/it/" hreflang="it-CH" rel="alternate"/><link href="https://luxuryobsession.ch/" hreflang="x-default" rel="alternate"/><style id="lo-occasion-links-style">#occasionLinks{position:relative;padding-top:clamp(2.8rem,6vw,4.2rem)}#occasionLinks .sectionSubtitle{max-width:56rem}.seoLinkGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.85rem;margin-top:1.35rem}.seoLinkGrid a{display:flex;align-items:center;justify-content:center;min-height:4.1rem;padding:.95rem 1rem;border:1px solid rgba(231,220,198,.14);border-radius:20px;background:linear-gradient(150deg,rgba(255,255,255,.045),rgba(231,220,198,.025));color:rgba(231,220,198,.86);text-align:center;text-decoration:none;font-weight:600;letter-spacing:.01em;box-shadow:inset 0 1px 0 rgba(255,255,255,.04);transition:transform .2s ease,border-color .2s ease,background .2s ease,color .2s ease,box-shadow .2s ease}.seoLinkGrid a:hover{transform:translateY(-2px);border-color:rgba(231,220,198,.30);background:linear-gradient(150deg,rgba(231,220,198,.065),rgba(255,255,255,.04));color:#fff;box-shadow:0 14px 34px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.055)}@media(max-width:980px){.seoLinkGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.seoLinkGrid{grid-template-columns:1fr}}</style><style data-lo-accessibility>
 
 /* Keyboard access and booking details; initial hero layout is unchanged. */
@@ -3154,7 +3154,7 @@ body.loPromoNoScroll{
 </div>
 <div class="fieldGroup calWrap span-4 span-md-6 span-sm-12">
 <label for="preferredDate" id="lblDate">Preferred date</label>
-<input aria-controls="calPopup" aria-haspopup="dialog" id="preferredDate" readonly="" type="text"/><noscript><style>#preferredDate{display:none!important}</style><input aria-label="Preferred date" id="preferredDateNoJs" name="preferred_date" type="date"/></noscript>
+<input aria-controls="calPopup" aria-haspopup="dialog" id="preferredDate" role="combobox" aria-expanded="false" readonly="" type="text"/><noscript><style>#preferredDate{display:none!important}</style><input aria-label="Preferred date" id="preferredDateNoJs" name="preferred_date" type="date"/></noscript>
 <div aria-label="Calendar" class="calPopup" id="calPopup" role="dialog">
 <div class="calHeader">
 <button aria-label="Previous month" class="calNavBtn" id="calPrev" type="button">‹</button>
@@ -4443,8 +4443,10 @@ renderPackagesPreview();
       const requestSummary = document.getElementById("requestSummary");
 
       if (form && status) {
+        let submissionInFlight = false;
         form.addEventListener("submit", async function(e) {
           e.preventDefault();
+          if (submissionInFlight) return;
 
           const formLang =
             (typeof lang === "string" && lang) ||
@@ -4504,6 +4506,7 @@ renderPackagesPreview();
                 : "Sending your request...");
           }
 
+          submissionInFlight = true;
           if (submitBtn) submitBtn.disabled = true;
 
           const isLocal =
@@ -4517,7 +4520,7 @@ renderPackagesPreview();
 
           try {
             // Populate every existing Netlify field; keep the summary brief.
-            const formData = new URLSearchParams(new FormData(form));
+            const formData = new URLSearchParams();
             formData.set("form-name", form.getAttribute("name") || "quote-request-summary-v6");
             formData.set("language", formLang);
             formData.set("request_summary", summary);
@@ -4532,7 +4535,7 @@ renderPackagesPreview();
             formData.set("notes", notes || "None");
 
             const botField = form.querySelector('[name="bot-field"]');
-            if (botField && botField.value) {
+            if (botField) {
               formData.set("bot-field", botField.value);
             }
 
@@ -4549,7 +4552,9 @@ renderPackagesPreview();
 
 			let conversionHandoffStored = false;
 			try {
-			  sessionStorage.setItem("lo_submit_form_conversion_allowed", "1");
+			  // A successful new enquiry may be measured once, even in the same tab.
+              sessionStorage.removeItem("lo_submit_form_conversion_sent");
+              sessionStorage.setItem("lo_submit_form_conversion_allowed", "1");
 			  conversionHandoffStored = true;
 			} catch (storageError) {
 			  // Continue after a successful Netlify submission even when browser storage is blocked.
@@ -4586,6 +4591,7 @@ renderPackagesPreview();
 			}
 
           } catch (err) {
+            submissionInFlight = false;
             if (submitBtn) submitBtn.disabled = false;
 
             if (status) {

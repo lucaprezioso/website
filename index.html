@@ -8,7 +8,7 @@
 <link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_vertical_720.webp" media="(width > 600px) and (max-width: 760px)" rel="preload" type="image/webp"/>
 <link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_1200.webp" media="(width > 760px) and (min-aspect-ratio: 5/6)" rel="preload" type="image/webp"/>
 <link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_960.webp" media="(width > 760px) and (aspect-ratio < 5/6)" rel="preload" type="image/webp"/>
-<meta name="lo-release" content="2026-09-07-form-poster-r3"/>
+<meta name="lo-release" content="2026-09-08-reviewed-r5"/>
 <script id="lo-consent-prepaint">
 (function (d) {
   var values = [];
@@ -3000,7 +3000,7 @@ body.loPromoNoScroll{
   }
 }
 </style>
-<script defer="" src="/assets/lo.js?v=c2b205a9c5ca"></script>
+<script defer="" src="/assets/lo.js?v=472995f9c693"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -3541,7 +3541,7 @@ body.loPromoNoScroll{
 </div>
 <div class="fieldGroup calWrap span-4 span-md-6 span-sm-12">
 <label for="preferredDate" id="lblDate">Wunschtermin</label>
-<input aria-controls="calPopup" aria-haspopup="dialog" id="preferredDate" readonly="" type="text"/><noscript><style>#preferredDate{display:none!important}</style><input aria-label="Wunschtermin" id="preferredDateNoJs" name="preferred_date" type="date"/></noscript>
+<input aria-controls="calPopup" aria-haspopup="dialog" id="preferredDate" role="combobox" aria-expanded="false" readonly="" type="text"/><noscript><style>#preferredDate{display:none!important}</style><input aria-label="Wunschtermin" id="preferredDateNoJs" name="preferred_date" type="date"/></noscript>
 <div aria-label="Kalender" class="calPopup" id="calPopup" role="dialog">
 <div class="calHeader">
 <button aria-label="Vorheriger Monat" class="calNavBtn" id="calPrev" type="button">‹</button>
@@ -4775,8 +4775,10 @@ renderPackagesPreview();
       const requestSummary = document.getElementById("requestSummary");
 
       if (form && status) {
+        let submissionInFlight = false;
         form.addEventListener("submit", async function(e) {
           e.preventDefault();
+          if (submissionInFlight) return;
 
           const formLang =
             (typeof lang === "string" && lang) ||
@@ -4836,6 +4838,7 @@ renderPackagesPreview();
                 : "Sending your request...");
           }
 
+          submissionInFlight = true;
           if (submitBtn) submitBtn.disabled = true;
 
           const isLocal =
@@ -4849,7 +4852,7 @@ renderPackagesPreview();
 
           try {
             // Populate every existing Netlify field; keep the summary brief.
-            const formData = new URLSearchParams(new FormData(form));
+            const formData = new URLSearchParams();
             formData.set("form-name", form.getAttribute("name") || "quote-request-summary-v6");
             formData.set("language", formLang);
             formData.set("request_summary", summary);
@@ -4864,7 +4867,7 @@ renderPackagesPreview();
             formData.set("notes", notes || "None");
 
             const botField = form.querySelector('[name="bot-field"]');
-            if (botField && botField.value) {
+            if (botField) {
               formData.set("bot-field", botField.value);
             }
 
@@ -4881,7 +4884,9 @@ renderPackagesPreview();
             
 			let conversionHandoffStored = false;
 			try {
-			  sessionStorage.setItem("lo_submit_form_conversion_allowed", "1");
+			  // A successful new enquiry may be measured once, even in the same tab.
+              sessionStorage.removeItem("lo_submit_form_conversion_sent");
+              sessionStorage.setItem("lo_submit_form_conversion_allowed", "1");
 			  conversionHandoffStored = true;
 			} catch (storageError) {
 			  // Continue after a successful Netlify submission even when browser storage is blocked.
@@ -4918,6 +4923,7 @@ renderPackagesPreview();
 			}
 			
           } catch (err) {
+            submissionInFlight = false;
             if (submitBtn) submitBtn.disabled = false;
 
             if (status) {

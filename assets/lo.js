@@ -628,6 +628,17 @@ function initFooterLegalLinks(lang){
 
     const effectiveLang = lang || getLang();
 
+    // Navigation layout changes do not change menu content. Preserve nodes and
+    // their focus/listeners across resize and font-ready callbacks.
+    const requestLink = document.querySelector(".navRight a.navCta, .navRight a#navRequest, a.navCta#navRequest");
+    const menuSignature = JSON.stringify([effectiveLang,
+      Array.from(navLinks.querySelectorAll("a")).filter(a => !a.classList.contains("navCta"))
+        .map(a => [a.textContent, a.getAttribute("href"), a.className]),
+      requestLink && [requestLink.textContent, requestLink.getAttribute("href")]
+    ]);
+    if(menu.dataset.loContent === menuSignature) return;
+    menu.dataset.loContent = menuSignature;
+
     // Preserve open state
     const wasOpen = menu.getAttribute("data-open") === "1";
 
@@ -1109,6 +1120,8 @@ function applyNavigationOverrides(){
 
 let loNavSchedule = null;
 let loNavLanguage = "de";
+let loNavFontRevision = 0;
+let loNavLayoutKey = "";
 function initSharedUI
 (lang){
     const effectiveLang = lang || getLang();
@@ -1148,7 +1161,16 @@ const schedule = () => {
   __loNavScheduled = true;
   window.requestAnimationFrame(() => {
     __loNavScheduled = false;
-    applyPriorityNav();
+    const nav = document.querySelector(".navInner");
+    const links = document.querySelector(".navLinks");
+    const right = document.querySelector(".navRight");
+    const key = JSON.stringify([nav && nav.clientWidth, window.innerWidth,
+      loNavLanguage, loNavFontRevision, links && links.textContent,
+      right && right.textContent]);
+    if(key !== loNavLayoutKey){
+      applyPriorityNav();
+      loNavLayoutKey = key;
+    }
     buildMobileMenu(loNavLanguage);
   });
 };
@@ -1171,7 +1193,8 @@ if("ResizeObserver" in window){
 
 // Re run after fonts load (Cinzel changes width)
 if(document.fonts && document.fonts.ready){
-  document.fonts.ready.then(schedule).catch(() => {});
+  document.fonts.ready.then(() => {loNavFontRevision++;schedule();}).catch(() => {});
+  document.fonts.addEventListener?.("loadingdone", () => {loNavFontRevision++;schedule();});
 }
 
 // Re run when nav text changes (translations)
