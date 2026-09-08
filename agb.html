@@ -3,7 +3,7 @@
 <html lang="de">
 <head>
 <link href="/assets/lo.consent.css" rel="stylesheet"/>
-<script src="/assets/lo.consent.js?v=79"></script>
+<script src="/assets/lo.consent.js?v=3bf9ebdac11d"></script>
 <meta charset="utf-8"/>
 <title>Luxury Obsession | AGB</title>
 <meta content="Allgemeine Geschäftsbedingungen für die Fahrzeugmiete bei Luxury Obsession in Nänikon 8606, Schweiz." name="description"/>
@@ -50,8 +50,22 @@
   -ms-hyphens: auto;
 }
 </style>
+<style data-lo-accessibility>
+
+/* Keyboard access and booking details; initial hero layout is unchanged. */
+.loSkipLink{position:fixed;top:8px;left:12px;transform:translateY(-180%);z-index:2147483647;padding:12px 18px;border-radius:8px;background:#e7d8b8;color:#101010;font:600 15px/1.4 system-ui;text-decoration:none}
+.loSkipLink:focus{transform:translateY(0)}
+:where(a,button,input,select,textarea,[tabindex]:not([tabindex="-1"])):focus-visible{outline:2px solid #e7d8b8!important;outline-offset:3px!important}
+.calPopup{max-height:calc(100vh - 16px);max-height:calc(100dvh - 16px);overflow-y:auto}
+.loBookingDetails{margin-top:12px;font-size:.82rem;line-height:1.5;color:rgba(255,255,255,.8)}
+.loBookingDetails summary{cursor:pointer;color:#e7d8b8;padding:6px 0}
+.loBookingDetails p{margin:6px 0 10px}
+.loFormPrivacy{margin:8px 0;font-size:.78rem;line-height:1.5;color:rgba(255,255,255,.75)}
+.loFormPrivacy a{text-decoration:underline;text-underline-offset:3px}
+</style>
 </head>
 <body>
+<a class="loSkipLink" href="#main-content">Zum Inhalt springen</a>
 <header>
 <div class="container">
 <div class="navInner">
@@ -87,7 +101,7 @@
 <div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation"></div>
 </div>
 </header>
-<main>
+<main id="main-content" tabindex="-1">
 <section class="pageHero" id="top">
 <div class="container">
 <p class="eyebrow">Schweiz</p>
@@ -98,7 +112,7 @@
 <section>
 <div class="container">
 <div class="pageProse pageIntro">
-<p><strong>Wichtig:</strong> Dieser Text dient als praktikable AGB Seite für die Website und ersetzt keine individuelle Rechtsberatung. Im Konfliktfall gehen schriftliche Buchungsbestätigungen sowie zwingendes Schweizer Recht vor.</p>
+<p><strong>Wichtig:</strong> Im Konfliktfall gehen schriftliche Buchungsbestätigungen sowie zwingendes Schweizer Recht vor.</p>
 </div>
 <div class="grid12" style="margin-top:1.8rem">
 <div class="span-12"><h2 class="cardTitle" style="margin:0 0 0.65rem 0">1. Geltungsbereich und Vertrag</h2><div class="pageProse"><p>Diese AGB gelten für sämtliche Fahrzeugmieten von Luxury Obsession. Ein Mietvertrag kommt zustande, sobald wir die Buchung schriftlich bestätigen, per E Mail oder Nachricht.</p></div></div>

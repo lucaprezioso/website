@@ -1768,3 +1768,14 @@ footer{
 @media (max-width: 320px){
   header .brandGold{display:none !important;}
 }
+
+/* Keyboard access and booking details; initial hero layout is unchanged. */
+.loSkipLink{position:fixed;top:8px;left:12px;transform:translateY(-180%);z-index:2147483647;padding:12px 18px;border-radius:8px;background:#e7d8b8;color:#101010;font:600 15px/1.4 system-ui;text-decoration:none}
+.loSkipLink:focus{transform:translateY(0)}
+:where(a,button,input,select,textarea,[tabindex]:not([tabindex="-1"])):focus-visible{outline:2px solid #e7d8b8!important;outline-offset:3px!important}
+.calPopup{max-height:calc(100vh - 16px);max-height:calc(100dvh - 16px);overflow-y:auto}
+.loBookingDetails{margin-top:12px;font-size:.82rem;line-height:1.5;color:rgba(255,255,255,.8)}
+.loBookingDetails summary{cursor:pointer;color:#e7d8b8;padding:6px 0}
+.loBookingDetails p{margin:6px 0 10px}
+.loFormPrivacy{margin:8px 0;font-size:.78rem;line-height:1.5;color:rgba(255,255,255,.75)}
+.loFormPrivacy a{text-decoration:underline;text-underline-offset:3px}

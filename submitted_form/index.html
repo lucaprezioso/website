@@ -3,10 +3,11 @@
 <html lang="en">
 <head>
 <link href="/assets/lo.consent.css" rel="stylesheet"/>
-<script data-lo-google-tracking defer="" src="/assets/lo.consent.js?v=79"></script>
+<script data-lo-google-tracking defer="" src="/assets/lo.consent.js?v=3bf9ebdac11d"></script>
 <!-- Event snippet for Submit lead form conversion page -->
 <script>
   (function () {
+    function trackConfirmedSubmission(){
     const params = new URLSearchParams(window.location.search);
     const submitted = params.get("submitted") === "1";
     const localTest = params.get("local") === "1";
@@ -47,6 +48,10 @@
       const cleanUrl = window.location.pathname + (remainingQuery ? "?" + remainingQuery : "");
       window.history.replaceState(null, "", cleanUrl);
     }
+    }
+    if(document.readyState === "loading"){
+      document.addEventListener("DOMContentLoaded", trackConfirmedSubmission, {once:true});
+    }else{trackConfirmedSubmission();}
   })();
 </script>
 <meta charset="utf-8"/>
@@ -60,7 +65,7 @@
 <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
 <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<link href="/assets/lo.css" rel="stylesheet"/>
+<link href="/assets/lo.css?v=6054b11a2309" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;family=Cinzel:wght@400;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
@@ -159,7 +164,8 @@
 </style>
 </head>
 <body>
-<main class="submittedWrap">
+<a class="loSkipLink" href="#main-content">Skip to content</a>
+<main class="submittedWrap" id="main-content" tabindex="-1">
 <img alt="Luxury Obsession" class="submittedLogo" src="/media/icon.webp" width="237" height="238"/>
 <p class="submittedEyebrow" id="submittedEyebrow">Luxury Obsession</p>
 <h1 class="submittedTitle" id="submittedTitle">Thank you for your enquiry</h1>

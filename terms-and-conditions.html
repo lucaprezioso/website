@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <link href="/assets/lo.consent.css" rel="stylesheet"/>
-<script src="/assets/lo.consent.js?v=79"></script>
+<script src="/assets/lo.consent.js?v=3bf9ebdac11d"></script>
 <meta charset="utf-8"/>
 <title>Terms and Conditions | Luxury Obsession</title>
 <meta content="Terms and conditions for Ferrari 458 Italia rental with Luxury Obsession in Nänikon near Zurich, Switzerland." name="description"/>
@@ -50,8 +50,22 @@
   -ms-hyphens: auto;
 }
 </style>
+<style data-lo-accessibility>
+
+/* Keyboard access and booking details; initial hero layout is unchanged. */
+.loSkipLink{position:fixed;top:8px;left:12px;transform:translateY(-180%);z-index:2147483647;padding:12px 18px;border-radius:8px;background:#e7d8b8;color:#101010;font:600 15px/1.4 system-ui;text-decoration:none}
+.loSkipLink:focus{transform:translateY(0)}
+:where(a,button,input,select,textarea,[tabindex]:not([tabindex="-1"])):focus-visible{outline:2px solid #e7d8b8!important;outline-offset:3px!important}
+.calPopup{max-height:calc(100vh - 16px);max-height:calc(100dvh - 16px);overflow-y:auto}
+.loBookingDetails{margin-top:12px;font-size:.82rem;line-height:1.5;color:rgba(255,255,255,.8)}
+.loBookingDetails summary{cursor:pointer;color:#e7d8b8;padding:6px 0}
+.loBookingDetails p{margin:6px 0 10px}
+.loFormPrivacy{margin:8px 0;font-size:.78rem;line-height:1.5;color:rgba(255,255,255,.75)}
+.loFormPrivacy a{text-decoration:underline;text-underline-offset:3px}
+</style>
 </head>
 <body>
+<a class="loSkipLink" href="#main-content">Skip to content</a>
 <header>
 <div class="container">
 <div class="navInner">
@@ -87,9 +101,9 @@
 <div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation"></div>
 </div>
 </header>
-<main>
+<main id="main-content" tabindex="-1">
 <section class="pageHero" id="top"><div class="container"><p class="eyebrow">Switzerland</p><h1 class="sectionTitle">Terms and Conditions</h1><p class="sectionSubtitle pageIntro">General terms for renting a vehicle from Luxury Obsession.</p></div></section>
-<section><div class="container"><div class="pageProse pageIntro"><p><strong>Important:</strong> This page is a practical set of website terms and does not replace tailored legal advice. In case of conflict, the written booking confirmation and mandatory Swiss law prevail.</p></div><div class="grid12" style="margin-top:1.8rem">
+<section><div class="container"><div class="pageProse pageIntro"><p><strong>Important:</strong> In case of conflict, the written booking confirmation and mandatory Swiss law prevail.</p></div><div class="grid12" style="margin-top:1.8rem">
 <div class="span-12"><h2 class="cardTitle" style="margin:0 0 0.65rem 0">1. Scope and contract</h2><div class="pageProse"><p>These terms apply to all rentals of vehicles offered by Luxury Obsession. A rental contract is concluded when we confirm the booking in writing by email or message.</p></div></div>
 <div class="span-12" style="margin-top:1.15rem"><h2 class="cardTitle" style="margin:0 0 0.65rem 0">2. Prices, payment and security deposit</h2><div class="pageProse"><ul><li>Prices and inclusions follow the selected package and the written booking confirmation.</li><li><strong>Payment is always due in advance.</strong> The booking is secured once the full rental price has been received by the deadline stated in the booking confirmation.</li><li><strong>Security deposit:</strong> A refundable security deposit is required at pickup. Unless stated otherwise in the booking confirmation, it is paid in cash and amounts to <strong>CHF 1,500</strong> for drivers aged <strong>25 and above</strong>, and <strong>CHF 3,000</strong> for drivers aged <strong>21 to 24</strong>.</li><li>The security deposit is returned after the vehicle has been returned and inspected, minus any amounts due, for example damages, loss of use, excess mileage, fuel, extra cleaning, tolls, parking fees, fines and administrative fees.</li><li>If payment is late, we may cancel the booking and charge reasonable costs already incurred.</li></ul></div></div>
 <div class="span-12" style="margin-top:1.15rem"><h2 class="cardTitle" style="margin:0 0 0.65rem 0">3. Driver requirements</h2><div class="pageProse"><ul><li><strong>Minimum driver age is 21 years.</strong> Additional age requirements, if any, are stated in the booking confirmation.</li><li>The renter and any additional drivers must present a valid driving licence and an ID document at pickup.</li><li>Only drivers approved by us may drive the vehicle. Handing the vehicle to third parties is forbidden.</li><li>The renter is responsible for ensuring that all drivers are fit to drive and comply with Swiss traffic law.</li></ul></div></div>

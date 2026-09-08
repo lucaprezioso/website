@@ -3,7 +3,7 @@
 <html lang="it">
 <head>
 <link href="/assets/lo.consent.css" rel="stylesheet"/>
-<script data-lo-google-tracking defer="" src="/assets/lo.consent.js?v=79"></script>
+<script data-lo-google-tracking defer="" src="/assets/lo.consent.js?v=3bf9ebdac11d"></script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="index, follow" name="robots"/>
@@ -75,8 +75,22 @@
       "item": "https://luxuryobsession.ch/it/noleggio-ferrari-davos"
     }
   ]
-}</script></head>
+}</script><style data-lo-accessibility>
+
+/* Keyboard access and booking details; initial hero layout is unchanged. */
+.loSkipLink{position:fixed;top:8px;left:12px;transform:translateY(-180%);z-index:2147483647;padding:12px 18px;border-radius:8px;background:#e7d8b8;color:#101010;font:600 15px/1.4 system-ui;text-decoration:none}
+.loSkipLink:focus{transform:translateY(0)}
+:where(a,button,input,select,textarea,[tabindex]:not([tabindex="-1"])):focus-visible{outline:2px solid #e7d8b8!important;outline-offset:3px!important}
+.calPopup{max-height:calc(100vh - 16px);max-height:calc(100dvh - 16px);overflow-y:auto}
+.loBookingDetails{margin-top:12px;font-size:.82rem;line-height:1.5;color:rgba(255,255,255,.8)}
+.loBookingDetails summary{cursor:pointer;color:#e7d8b8;padding:6px 0}
+.loBookingDetails p{margin:6px 0 10px}
+.loFormPrivacy{margin:8px 0;font-size:.78rem;line-height:1.5;color:rgba(255,255,255,.75)}
+.loFormPrivacy a{text-decoration:underline;text-underline-offset:3px}
+</style>
+</head>
 <body>
+<a class="loSkipLink" href="#main-content">Vai al contenuto</a>
 <header>
 <div class="container">
 <div class="navInner">
@@ -113,7 +127,7 @@
 <div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation"></div>
 </div>
 </header>
-<main>
+<main id="main-content" tabindex="-1">
 <section class="hero" id="top">
 <div class="container locationTrailWrap"><nav aria-label="Breadcrumb" class="locationTrail"><ol class="locationTrail__desktop"><li><a href="/it/">Home</a></li><li><a href="/it/locations">Località</a></li><li aria-current="page" class="locationTrail__current">Davos</li></ol><a class="locationTrail__mobile" href="/it/locations"><span aria-hidden="true" class="locationTrail__arrow">←</span><span>Torna alle località</span></a></nav></div>
 <div class="container heroGrid">

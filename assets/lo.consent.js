@@ -260,8 +260,8 @@
     de: {
       bannerLabel: "Cookie-Einwilligung",
       title: "Ihre Privatsphäre, Ihre Wahl",
-      intro: "Wir verwenden notwendige Technologien für den Betrieb dieser Website. Analyse und Werbung bleiben ohne Ihre Einwilligung deaktiviert.",
-      detail: "Weitere Informationen finden Sie in den Einstellungen und in unserer",
+      intro: "Wir verwenden notwendige Technologien. Analyse- und Werbe-Cookies bleiben ohne Einwilligung deaktiviert. Google erhält begrenzte Messdaten ohne Cookies.",
+      detail: "Details in den Einstellungen und in unserer",
       accept: "Alle akzeptieren",
       reject: "Alle ablehnen",
       settings: "Einstellungen",
@@ -282,8 +282,8 @@
     en: {
       bannerLabel: "Cookie consent",
       title: "Your privacy, your choice",
-      intro: "We use essential technologies to operate this website. Analytics and advertising remain disabled without your consent.",
-      detail: "More information is available in Preferences and in our",
+      intro: "We use essential technologies. Analytics and advertising cookies stay off without consent. Google receives limited cookieless measurements.",
+      detail: "Details in Preferences and our",
       accept: "Accept all",
       reject: "Reject all",
       settings: "Preferences",
@@ -304,8 +304,8 @@
     it: {
       bannerLabel: "Consenso ai cookie",
       title: "La tua privacy, la tua scelta",
-      intro: "Utilizziamo tecnologie necessarie al funzionamento del sito. Analisi e pubblicità restano disattivate senza il tuo consenso.",
-      detail: "Maggiori informazioni sono disponibili nelle Preferenze e nella nostra",
+      intro: "Usiamo tecnologie necessarie. I cookie di analisi e pubblicità restano disattivati senza consenso. Google riceve misurazioni limitate senza cookie.",
+      detail: "Dettagli nelle Preferenze e nella nostra",
       accept: "Accetta tutto",
       reject: "Rifiuta tutto",
       settings: "Preferenze",

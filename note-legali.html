@@ -3,7 +3,7 @@
 <html lang="it">
 <head>
 <link href="/assets/lo.consent.css" rel="stylesheet"/>
-<script src="/assets/lo.consent.js?v=79"></script>
+<script src="/assets/lo.consent.js?v=3bf9ebdac11d"></script>
 <meta charset="utf-8"/>
 <title>Note legali | Luxury Obsession</title>
 <meta content="Informazioni legali e contatti di Luxury Obsession a Nänikon, vicino a Zurigo, Svizzera." name="description"/>
@@ -86,8 +86,22 @@
   }
 
 </style>
+<style data-lo-accessibility>
+
+/* Keyboard access and booking details; initial hero layout is unchanged. */
+.loSkipLink{position:fixed;top:8px;left:12px;transform:translateY(-180%);z-index:2147483647;padding:12px 18px;border-radius:8px;background:#e7d8b8;color:#101010;font:600 15px/1.4 system-ui;text-decoration:none}
+.loSkipLink:focus{transform:translateY(0)}
+:where(a,button,input,select,textarea,[tabindex]:not([tabindex="-1"])):focus-visible{outline:2px solid #e7d8b8!important;outline-offset:3px!important}
+.calPopup{max-height:calc(100vh - 16px);max-height:calc(100dvh - 16px);overflow-y:auto}
+.loBookingDetails{margin-top:12px;font-size:.82rem;line-height:1.5;color:rgba(255,255,255,.8)}
+.loBookingDetails summary{cursor:pointer;color:#e7d8b8;padding:6px 0}
+.loBookingDetails p{margin:6px 0 10px}
+.loFormPrivacy{margin:8px 0;font-size:.78rem;line-height:1.5;color:rgba(255,255,255,.75)}
+.loFormPrivacy a{text-decoration:underline;text-underline-offset:3px}
+</style>
 </head>
 <body>
+<a class="loSkipLink" href="#main-content">Vai al contenuto</a>
 <header>
 <div class="container">
 <div class="navInner">
@@ -123,7 +137,7 @@
 <div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation"></div>
 </div>
 </header>
-<main>
+<main id="main-content" tabindex="-1">
 <section class="pageHero" id="top"><div class="container"><p class="eyebrow">Svizzera</p><h1 class="sectionTitle">Note legali</h1><p class="sectionSubtitle pageIntro">Informazioni legali e dettagli di contatto di Luxury Obsession.</p></div></section>
 <section><div class="container"><div class="legalStack"><article class="legalCard legalCardPrimary"><h2 class="sectionTitle legalTitle">Fornitore del servizio</h2><div class="pageProse pageIntro legalProvider"><p><strong>Luxury Obsession</strong></p><p>Gestito da <strong>Anna Loi</strong></p><p>Forma giuridica: <span>Ditta individuale</span></p><p>UID: CHE 170.570.674</p><p>Responsabile dei contenuti: <strong>Anna Loi</strong></p><p>Waldaustrasse 2<br/>8606 Nänikon<br/>Svizzera</p><p>Email: <a href="mailto:info@luxuryobsession.ch">info@luxuryobsession.ch</a><br/>Telefono: <span>+41 76 587 04 58</span></p></div></article><article class="legalCard"><h3 class="cardTitle legalSubTitle">Esclusione di responsabilità</h3><div class="pageProse"><p>I contenuti di questo sito sono preparati con cura. Tuttavia non garantiamo completezza, accuratezza o attualità delle informazioni fornite.</p><p>Sono escluse, nei limiti consentiti dalla legge, eventuali pretese di responsabilità derivanti dall'uso di questo sito, inclusi danni diretti o indiretti.</p></div></article><article class="legalCard"><h3 class="cardTitle legalSubTitle">Link esterni</h3><div class="pageProse"><p>Questo sito può contenere link a siti esterni. Non abbiamo alcuna influenza sui contenuti esterni e pertanto non ci assumiamo responsabilità. Il rispettivo fornitore è responsabile dei contenuti delle pagine collegate.</p></div></article><article class="legalCard"><h3 class="cardTitle legalSubTitle">Diritto d'autore</h3><div class="pageProse"><p>Tutti i contenuti di questo sito, inclusi testi e media, sono protetti da diritto d'autore. Qualsiasi riproduzione, distribuzione o altro utilizzo richiede il previo consenso scritto, salvo quanto consentito dalla legge.</p></div></article><article class="legalCard"><h3 class="cardTitle legalSubTitle">Privacy</h3><div class="pageProse"><p>Si prega di consultare anche la nostra <a href="/informativa-privacy">Informativa sulla privacy</a>.</p></div></article><div class="legalActions"><a class="btn btnSecondary" data-back-home="1" href="/it/">Torna alla home</a></div></div></div></section>
 </main>

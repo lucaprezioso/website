@@ -3,7 +3,7 @@
 <html lang="de">
 <head>
 <link href="/assets/lo.consent.css" rel="stylesheet"/>
-<script src="/assets/lo.consent.js?v=79"></script>
+<script src="/assets/lo.consent.js?v=3bf9ebdac11d"></script>
 <meta charset="utf-8"/>
 <title>Impressum | Luxury Obsession</title>
 <meta content="Impressum und Kontaktangaben von Luxury Obsession in Nänikon 8606, Schweiz." name="description"/>
@@ -86,8 +86,22 @@
   }
 
 </style>
+<style data-lo-accessibility>
+
+/* Keyboard access and booking details; initial hero layout is unchanged. */
+.loSkipLink{position:fixed;top:8px;left:12px;transform:translateY(-180%);z-index:2147483647;padding:12px 18px;border-radius:8px;background:#e7d8b8;color:#101010;font:600 15px/1.4 system-ui;text-decoration:none}
+.loSkipLink:focus{transform:translateY(0)}
+:where(a,button,input,select,textarea,[tabindex]:not([tabindex="-1"])):focus-visible{outline:2px solid #e7d8b8!important;outline-offset:3px!important}
+.calPopup{max-height:calc(100vh - 16px);max-height:calc(100dvh - 16px);overflow-y:auto}
+.loBookingDetails{margin-top:12px;font-size:.82rem;line-height:1.5;color:rgba(255,255,255,.8)}
+.loBookingDetails summary{cursor:pointer;color:#e7d8b8;padding:6px 0}
+.loBookingDetails p{margin:6px 0 10px}
+.loFormPrivacy{margin:8px 0;font-size:.78rem;line-height:1.5;color:rgba(255,255,255,.75)}
+.loFormPrivacy a{text-decoration:underline;text-underline-offset:3px}
+</style>
 </head>
 <body>
+<a class="loSkipLink" href="#main-content">Zum Inhalt springen</a>
 <header>
 <div class="container">
 <div class="navInner">
@@ -123,7 +137,7 @@
 <div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation"></div>
 </div>
 </header>
-<main>
+<main id="main-content" tabindex="-1">
 <section class="pageHero" id="top"><div class="container"><p class="eyebrow">Schweiz</p><h1 class="sectionTitle">Impressum</h1><p class="sectionSubtitle pageIntro">Rechtliche Hinweise und Kontaktdaten von Luxury Obsession.</p></div></section>
 <section><div class="container"><div class="legalStack"><article class="legalCard legalCardPrimary"><h2 class="sectionTitle legalTitle">Anbieter</h2><div class="pageProse pageIntro legalProvider"><p><strong>Luxury Obsession</strong></p><p>Betrieben von <strong>Anna Loi</strong></p><p>Rechtsform: <span>Einzelunternehmen</span></p><p>UID: CHE 170.570.674</p><p>Verantwortlich für den Inhalt: <strong>Anna Loi</strong></p><p>Waldaustrasse 2<br/>8606 Nänikon<br/>Schweiz</p><p>E Mail: <a href="mailto:info@luxuryobsession.ch">info@luxuryobsession.ch</a><br/>Telefon: <span>+41 76 587 04 58</span></p></div></article><article class="legalCard"><h3 class="cardTitle legalSubTitle">Haftungsausschluss</h3><div class="pageProse"><p>Die Inhalte dieser Website werden mit Sorgfalt erstellt. Für Vollständigkeit, Richtigkeit und Aktualität übernehmen wir jedoch keine Gewähr.</p><p>Haftungsansprüche aus der Nutzung dieser Website, auch für direkte oder indirekte Schäden, sind im gesetzlich zulässigen Umfang ausgeschlossen.</p></div></article><article class="legalCard"><h3 class="cardTitle legalSubTitle">Externe Links</h3><div class="pageProse"><p>Diese Website kann Links zu externen Webseiten enthalten. Auf deren Inhalte haben wir keinen Einfluss und übernehmen daher keine Verantwortung. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich.</p></div></article><article class="legalCard"><h3 class="cardTitle legalSubTitle">Urheberrecht</h3><div class="pageProse"><p>Alle Inhalte dieser Website, einschließlich Texte und Medien, sind urheberrechtlich geschützt. Jede Vervielfältigung, Verbreitung oder sonstige Nutzung bedarf der vorherigen schriftlichen Zustimmung, sofern nicht gesetzlich erlaubt.</p></div></article><article class="legalCard"><h3 class="cardTitle legalSubTitle">Datenschutz</h3><div class="pageProse"><p>Bitte beachten Sie auch unsere <a href="/datenschutz">Datenschutzerklärung</a>.</p></div></article><div class="legalActions"><a class="btn btnSecondary" data-back-home="1" href="/">Zur Startseite</a></div></div></div></section>
 </main>

@@ -773,7 +773,7 @@ function loOuterWidth(node){
   return r.width + loNumPx(cs.marginLeft) + loNumPx(cs.marginRight);
 }
 
-function loMeasureNav({ width, burger, wrap, hideKeys }){
+function loMeasureNav({ width, burger, wrap, hideKeys, measureWidths = true }){
   const header = document.querySelector("header");
   const host = loGetNavMeasureHost();
   if(!header || !host) return null;
@@ -822,7 +822,7 @@ function loMeasureNav({ width, burger, wrap, hideKeys }){
   const csLinks = getComputedStyle(navLinks);
   const gap = loNumPx(csLinks.columnGap || csLinks.gap || "0");
 
-  const widths = {
+  const widths = measureWidths ? {
     navRates: loOuterWidth(clone.querySelector('[data-lo-key="navRates"]')),
     navGallery: loOuterWidth(clone.querySelector('[data-lo-key="navGallery"]')),
     navVoucher: loOuterWidth(clone.querySelector('[data-lo-key="navVoucher"]')),
@@ -832,7 +832,7 @@ function loMeasureNav({ width, burger, wrap, hideKeys }){
     navExperiences: loOuterWidth(clone.querySelector('[data-lo-key="navExperiences"]')),
     navBlog: loOuterWidth(clone.querySelector('[data-lo-key="navBlog"]')) || loOuterWidth(clone.querySelector('[data-lo-key="navJournal"]')),
     langSelect: loOuterWidth(cloneLang)
-  };
+  } : {};
 
   const overflow = navInner.scrollWidth - navInner.clientWidth;
 
@@ -874,7 +874,7 @@ function applyPriorityNav(){
   // would overflow; desktop link-priority rules are not relevant here.
   const isMobile = window.matchMedia && window.matchMedia("(max-width: 760px)").matches;
   if(isMobile){
-    const mobileOneLine = loMeasureNav({ width, burger:true, wrap:false, hideKeys:[] });
+    const mobileOneLine = loMeasureNav({ width, burger:true, wrap:false, hideKeys:[], measureWidths:false });
     const shouldWrapBrand = !mobileOneLine || mobileOneLine.overflow > 1;
 
     header.setAttribute("data-burger", "1");
@@ -1107,6 +1107,8 @@ function applyNavigationOverrides(){
     }
   }
 
+let loNavSchedule = null;
+let loNavLanguage = "de";
 function initSharedUI
 (lang){
     const effectiveLang = lang || getLang();
@@ -1136,6 +1138,9 @@ function initSharedUI
     initMobileOccasionAccordion();
 
 
+loNavLanguage = effectiveLang;
+if(loNavSchedule){loNavSchedule();return;}
+
 // Apply mode after fonts and translated text settle
 let __loNavScheduled = false;
 const schedule = () => {
@@ -1144,11 +1149,12 @@ const schedule = () => {
   window.requestAnimationFrame(() => {
     __loNavScheduled = false;
     applyPriorityNav();
-    buildMobileMenu(effectiveLang);
+    buildMobileMenu(loNavLanguage);
   });
 };
 
 // Run now
+loNavSchedule=schedule;
 schedule();
 
 // Re run on resize (debounced via rAF)
