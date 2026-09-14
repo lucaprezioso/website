@@ -1036,7 +1036,7 @@ body.loPromoNoScroll{
 <main id="main-content" tabindex="-1">
 <section class="showcase" id="showcase">
 <div class="mediaFull">
-<video aria-label="Cinematic Drohnenvideo der Ferrari 458 Italia in der Schweiz" autoplay="" id="showcaseVideo" muted="" playsinline="" poster="/media/poster_vertical_480.webp" preload="none">
+<video aria-label="Cinematic Drohnenvideo der Ferrari 458 Italia in der Schweiz" autoplay="" id="showcaseVideo" loop="" muted="" playsinline="" poster="/media/poster_vertical_480.webp" preload="none">
 <source data-src="/media/FerrariWebShort_VeryLowRes_vertical.mp4" id="showcaseSource" type="video/mp4"/>
 </video>
 <script>
@@ -2615,10 +2615,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const saveData = navigator.connection && navigator.connection.saveData;
 
-  // Choose one mode for testing:
-  // "loop"    -> repeats forever
-  // "stop553" -> pauses at 5.53 seconds
-  const DESKTOP_WIDE_VIDEO_MODE = "loop";
 
     const showcaseVideo = document.getElementById("showcaseVideo");
   const showcaseSource = document.getElementById("showcaseSource");
@@ -2627,13 +2623,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const wideViewport = window.matchMedia("(min-aspect-ratio: 5/6)").matches;
 
     let desired = showcaseSource.dataset.src || "";
-    let isDesktopWide = false;
 
     if (isMobile) {
       desired = "/media/FerrariWebShort_VeryLowRes_vertical.mp4";
     } else if (wideViewport) {
       desired = "/media/FerrariWebShort_VeryLowRes_rev1.MP4";
-      isDesktopWide = true;
     }
 
 
@@ -2643,13 +2637,7 @@ document.addEventListener("DOMContentLoaded", () => {
       showcaseSource.src = desired;
       showcaseVideo.load();
 
-      if (isMobile) {
-        showcaseVideo.loop = true;
-      } else if (isDesktopWide && DESKTOP_WIDE_VIDEO_MODE === "loop") {
-        showcaseVideo.loop = true;
-      } else {
-        showcaseVideo.loop = false;
-      }
+      showcaseVideo.loop = true;
 
       showcaseVideo.play().catch(() => {});
     };
@@ -2668,24 +2656,6 @@ document.addEventListener("DOMContentLoaded", () => {
       window.addEventListener("load", scheduleShowcaseVideo, { once: true });
     }
 
-    if (isDesktopWide && DESKTOP_WIDE_VIDEO_MODE === "stop553") {
-      const stopAt = 5.53;
-      let stopped = false;
-
-      showcaseVideo.addEventListener("timeupdate", () => {
-        if (stopped) return;
-        if (showcaseVideo.currentTime >= stopAt) {
-          stopped = true;
-          showcaseVideo.pause();
-          try { showcaseVideo.currentTime = stopAt; } catch (e) {}
-        }
-      });
-    } else if (!isMobile && !(isDesktopWide && DESKTOP_WIDE_VIDEO_MODE === "loop")) {
-      showcaseVideo.addEventListener("ended", () => {
-        showcaseVideo.pause();
-        try { showcaseVideo.currentTime = showcaseVideo.duration; } catch (e) {}
-      });
-    }
   }
 
   // Hero card mini video: load only on desktop and only when near the viewport
