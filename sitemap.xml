@@ -114,7 +114,7 @@
   </url>
   <url>
     <loc>https://luxuryobsession.ch/journal</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="de-CH" href="https://luxuryobsession.ch/journal" />
     <xhtml:link rel="alternate" hreflang="en-CH" href="https://luxuryobsession.ch/en/journal" />
@@ -1055,7 +1055,7 @@
   </url>
   <url>
     <loc>https://luxuryobsession.ch/en/journal</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="de-CH" href="https://luxuryobsession.ch/journal" />
     <xhtml:link rel="alternate" hreflang="en-CH" href="https://luxuryobsession.ch/en/journal" />
@@ -1064,7 +1064,7 @@
   </url>
   <url>
     <loc>https://luxuryobsession.ch/it/blog</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-19</lastmod>
     <priority>0.60</priority>
     <xhtml:link rel="alternate" hreflang="de-CH" href="https://luxuryobsession.ch/journal" />
     <xhtml:link rel="alternate" hreflang="en-CH" href="https://luxuryobsession.ch/en/journal" />
@@ -1307,5 +1307,29 @@
     <xhtml:link rel="alternate" hreflang="de-CH" href="https://luxuryobsession.ch/de/ferrari-458-alpenpaesse-andermatt-72-stunden" />
     <xhtml:link rel="alternate" hreflang="it-CH" href="https://luxuryobsession.ch/it/ferrari-458-tour-passi-svizzeri-andermatt" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://luxuryobsession.ch/en/ferrari-458-swiss-alps-road-trip-andermatt" />
+  </url>
+  <url>
+    <loc>https://luxuryobsession.ch/en/ferrari-rental-maranello-italy-road-trip</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CH" href="https://luxuryobsession.ch/en/ferrari-rental-maranello-italy-road-trip" />
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://luxuryobsession.ch/de/ferrari-mieten-maranello-italien-roadtrip" />
+    <xhtml:link rel="alternate" hreflang="it-CH" href="https://luxuryobsession.ch/it/noleggio-ferrari-maranello-viaggio-italia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxuryobsession.ch/en/ferrari-rental-maranello-italy-road-trip" />
+  </url>
+  <url>
+    <loc>https://luxuryobsession.ch/de/ferrari-mieten-maranello-italien-roadtrip</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CH" href="https://luxuryobsession.ch/en/ferrari-rental-maranello-italy-road-trip" />
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://luxuryobsession.ch/de/ferrari-mieten-maranello-italien-roadtrip" />
+    <xhtml:link rel="alternate" hreflang="it-CH" href="https://luxuryobsession.ch/it/noleggio-ferrari-maranello-viaggio-italia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxuryobsession.ch/en/ferrari-rental-maranello-italy-road-trip" />
+  </url>
+  <url>
+    <loc>https://luxuryobsession.ch/it/noleggio-ferrari-maranello-viaggio-italia</loc>
+    <lastmod>2026-09-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-CH" href="https://luxuryobsession.ch/en/ferrari-rental-maranello-italy-road-trip" />
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://luxuryobsession.ch/de/ferrari-mieten-maranello-italien-roadtrip" />
+    <xhtml:link rel="alternate" hreflang="it-CH" href="https://luxuryobsession.ch/it/noleggio-ferrari-maranello-viaggio-italia" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://luxuryobsession.ch/en/ferrari-rental-maranello-italy-road-trip" />
   </url>
 </urlset>

@@ -589,3 +589,11 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /en/ferrari-458-experiences-video                      /ferrari-458-experiences-video.html              200
 /de/ferrari-458-erlebnisse-video                       /de/ferrari-458-erlebnisse-video.html            200
 /it/video-esperienze-ferrari-458                       /it/video-esperienze-ferrari-458.html            200
+
+# Ferrari Maranello Italy road trip, published 19 September 2026
+/en/ferrari-rental-maranello-italy-road-trip.html  /en/ferrari-rental-maranello-italy-road-trip  301!
+/en/ferrari-rental-maranello-italy-road-trip  /pages/ferrari-rental-maranello-italy-road-trip.html  200
+/de/ferrari-mieten-maranello-italien-roadtrip.html  /de/ferrari-mieten-maranello-italien-roadtrip  301!
+/de/ferrari-mieten-maranello-italien-roadtrip  /pages/de/ferrari-mieten-maranello-italien-roadtrip.html  200
+/it/noleggio-ferrari-maranello-viaggio-italia.html  /it/noleggio-ferrari-maranello-viaggio-italia  301!
+/it/noleggio-ferrari-maranello-viaggio-italia  /pages/it/noleggio-ferrari-maranello-viaggio-italia.html  200
