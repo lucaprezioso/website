@@ -597,3 +597,11 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /de/ferrari-mieten-maranello-italien-roadtrip  /pages/de/ferrari-mieten-maranello-italien-roadtrip.html  200
 /it/noleggio-ferrari-maranello-viaggio-italia.html  /it/noleggio-ferrari-maranello-viaggio-italia  301!
 /it/noleggio-ferrari-maranello-viaggio-italia  /pages/it/noleggio-ferrari-maranello-viaggio-italia.html  200
+
+# First-time Ferrari driving guide
+/en/first-time-driving-ferrari-zurich.html  /en/first-time-driving-ferrari-zurich  301!
+/en/first-time-driving-ferrari-zurich  /pages/first-time-driving-ferrari-zurich.html  200
+/de/zum-ersten-mal-ferrari-fahren-zuerich.html  /de/zum-ersten-mal-ferrari-fahren-zuerich  301!
+/de/zum-ersten-mal-ferrari-fahren-zuerich  /pages/de/zum-ersten-mal-ferrari-fahren-zuerich.html  200
+/it/guidare-ferrari-prima-volta-zurigo.html  /it/guidare-ferrari-prima-volta-zurigo  301!
+/it/guidare-ferrari-prima-volta-zurigo  /pages/it/guidare-ferrari-prima-volta-zurigo.html  200
