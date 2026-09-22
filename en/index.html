@@ -6,9 +6,9 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_vertical_480.webp" media="(max-width: 600px)" rel="preload" type="image/webp"/>
 <link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_vertical_720.webp" media="(width > 600px) and (max-width: 760px)" rel="preload" type="image/webp"/>
-<link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_1200.webp" media="(width > 760px) and (min-aspect-ratio: 5/6)" rel="preload" type="image/webp"/>
-<link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_960.webp" media="(width > 760px) and (aspect-ratio < 5/6)" rel="preload" type="image/webp"/>
-<meta name="lo-release" content="2026-09-08-reviewed-r5"/>
+<link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_1200.webp?v=84-susten" media="(width > 760px) and (min-aspect-ratio: 5/6)" rel="preload" type="image/webp"/>
+<link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_960.webp?v=84-susten" media="(width > 760px) and (aspect-ratio < 5/6)" rel="preload" type="image/webp"/>
+<meta name="lo-release" content="2026-09-22-v84"/>
 <script id="lo-consent-prepaint">
 (function (d) {
   var values = [];
@@ -4631,12 +4631,34 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isMobile) {
       desired = "/media/FerrariWebShort_VeryLowRes_vertical.mp4";
     } else if (wideViewport) {
-      desired = "/media/FerrariWebShort_VeryLowRes_rev1.MP4";
+      // v84: choose one horizontal MP4 before playback. Network information is
+      // an estimate and is unavailable in some browsers; default to 720p.
+      const connection = navigator.connection;
+      const effectiveType = connection ? connection.effectiveType : "";
+      const downlink = connection && Number.isFinite(connection.downlink)
+        ? connection.downlink : null; // Estimated Mbps, not a speed test.
+      const verySlow = effectiveType === "slow-2g" || effectiveType === "2g" ||
+        (downlink !== null && downlink <= 0.5);
+      const slow = effectiveType === "3g" ||
+        (downlink !== null && downlink < 3);
+      const largeDisplay = window.matchMedia("(min-width: 1440px)").matches;
+
+      if (verySlow) {
+        desired = ""; // Keep the existing poster; do not request a video.
+      } else if (slow) {
+        desired = "/media/458-home-horizontal-cut-540p.mp4";
+      } else if (largeDisplay && downlink !== null && downlink >= 8) {
+        desired = "/media/458-home-horizontal-1080p.mp4";
+      } else {
+        desired = "/media/458-home-horizontal-720p.mp4";
+      }
+      // Do not switch on resize or connection changes: avoid another download
+      // and preserve the loop, including the shorter 540p edit.
     }
 
 
     const startShowcaseVideo = () => {
-      if (showcaseVideo.dataset.videoStarted === "true") return;
+      if (!desired || showcaseVideo.dataset.videoStarted === "true") return;
       showcaseVideo.dataset.videoStarted = "true";
       showcaseSource.src = desired;
       showcaseVideo.load();

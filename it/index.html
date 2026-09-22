@@ -6,9 +6,9 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_vertical_480.webp" media="(max-width: 600px)" rel="preload" type="image/webp"/>
 <link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_vertical_720.webp" media="(width > 600px) and (max-width: 760px)" rel="preload" type="image/webp"/>
-<link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_1200.webp" media="(width > 760px) and (min-aspect-ratio: 5/6)" rel="preload" type="image/webp"/>
-<link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_960.webp" media="(width > 760px) and (aspect-ratio < 5/6)" rel="preload" type="image/webp"/>
-<meta name="lo-release" content="2026-09-08-reviewed-r5"/>
+<link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_1200.webp?v=84-susten" media="(width > 760px) and (min-aspect-ratio: 5/6)" rel="preload" type="image/webp"/>
+<link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_960.webp?v=84-susten" media="(width > 760px) and (aspect-ratio < 5/6)" rel="preload" type="image/webp"/>
+<meta name="lo-release" content="2026-09-22-v84"/>
 <script id="lo-consent-prepaint">
 (function (d) {
   var values = [];
@@ -3176,27 +3176,7 @@ body.loPromoNoScroll{
     }
   ]
 }</script>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": "Ferrari 458 Italia cinematic drone video in Switzerland",
-  "description": "A cinematic drone video of the Ferrari 458 Italia by Luxury Obsession, filmed in Swiss vineyards and mountain roads near Zurich.",
-  "thumbnailUrl": [
-    "https://luxuryobsession.ch/media/rates-gallery-mobile-01-480.webp"
-  ],
-  "uploadDate": "2026-04-22T08:00:00+02:00",
-  "duration": "PT15S",
-  "contentUrl": "https://luxuryobsession.ch/media/FerrariWebShort_VeryLowRes_rev1.MP4",
-  "embedUrl": "https://luxuryobsession.ch/it/",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Luxury Obsession",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://luxuryobsession.ch/media/icon.webp"
-    }
-  }
-}</script>
+
 <link href="https://luxuryobsession.ch/it/" rel="canonical"/><link href="https://luxuryobsession.ch/" hreflang="de-CH" rel="alternate"/><link href="https://luxuryobsession.ch/en/" hreflang="en-CH" rel="alternate"/><link href="https://luxuryobsession.ch/it/" hreflang="it-CH" rel="alternate"/><link href="https://luxuryobsession.ch/" hreflang="x-default" rel="alternate"/><style id="lo-occasion-links-style">#occasionLinks{position:relative;padding-top:clamp(2.8rem,6vw,4.2rem)}#occasionLinks .sectionSubtitle{max-width:56rem}.seoLinkGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.85rem;margin-top:1.35rem}.seoLinkGrid a{display:flex;align-items:center;justify-content:center;min-height:4.1rem;padding:.95rem 1rem;border:1px solid rgba(231,220,198,.14);border-radius:20px;background:linear-gradient(150deg,rgba(255,255,255,.045),rgba(231,220,198,.025));color:rgba(231,220,198,.86);text-align:center;text-decoration:none;font-weight:600;letter-spacing:.01em;box-shadow:inset 0 1px 0 rgba(255,255,255,.04);transition:transform .2s ease,border-color .2s ease,background .2s ease,color .2s ease,box-shadow .2s ease}.seoLinkGrid a:hover{transform:translateY(-2px);border-color:rgba(231,220,198,.30);background:linear-gradient(150deg,rgba(231,220,198,.065),rgba(255,255,255,.04));color:#fff;box-shadow:0 14px 34px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.055)}@media(max-width:980px){.seoLinkGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.seoLinkGrid{grid-template-columns:1fr}}</style><style data-lo-accessibility>
 
 /* Keyboard access and booking details; initial hero layout is unchanged. */
@@ -4846,12 +4826,34 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isMobile) {
       desired = "/media/FerrariWebShort_VeryLowRes_vertical.mp4";
     } else if (wideViewport) {
-      desired = "/media/FerrariWebShort_VeryLowRes_rev1.MP4";
+      // v84: choose one horizontal MP4 before playback. Network information is
+      // an estimate and is unavailable in some browsers; default to 720p.
+      const connection = navigator.connection;
+      const effectiveType = connection ? connection.effectiveType : "";
+      const downlink = connection && Number.isFinite(connection.downlink)
+        ? connection.downlink : null; // Estimated Mbps, not a speed test.
+      const verySlow = effectiveType === "slow-2g" || effectiveType === "2g" ||
+        (downlink !== null && downlink <= 0.5);
+      const slow = effectiveType === "3g" ||
+        (downlink !== null && downlink < 3);
+      const largeDisplay = window.matchMedia("(min-width: 1440px)").matches;
+
+      if (verySlow) {
+        desired = ""; // Keep the existing poster; do not request a video.
+      } else if (slow) {
+        desired = "/media/458-home-horizontal-cut-540p.mp4";
+      } else if (largeDisplay && downlink !== null && downlink >= 8) {
+        desired = "/media/458-home-horizontal-1080p.mp4";
+      } else {
+        desired = "/media/458-home-horizontal-720p.mp4";
+      }
+      // Do not switch on resize or connection changes: avoid another download
+      // and preserve the loop, including the shorter 540p edit.
     }
 
 
     const startShowcaseVideo = () => {
-      if (showcaseVideo.dataset.videoStarted === "true") return;
+      if (!desired || showcaseVideo.dataset.videoStarted === "true") return;
       showcaseVideo.dataset.videoStarted = "true";
       showcaseSource.src = desired;
       showcaseVideo.load();
