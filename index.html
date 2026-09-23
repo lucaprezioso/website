@@ -4,11 +4,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_vertical_480.webp" media="(max-width: 600px)" rel="preload" type="image/webp"/>
-<link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_vertical_720.webp" media="(width > 600px) and (max-width: 760px)" rel="preload" type="image/webp"/>
+<link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_vertical_480.webp?v=85-susten-vertical" media="(max-width: 600px)" rel="preload" type="image/webp"/>
+<link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_vertical_720.webp?v=85-susten-vertical" media="(width > 600px) and (max-width: 760px)" rel="preload" type="image/webp"/>
 <link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_1200.webp?v=84-susten" media="(width > 760px) and (min-aspect-ratio: 5/6)" rel="preload" type="image/webp"/>
 <link data-lo-showcase-poster as="image" fetchpriority="high" href="/media/poster_960.webp?v=84-susten" media="(width > 760px) and (aspect-ratio < 5/6)" rel="preload" type="image/webp"/>
-<meta name="lo-release" content="2026-09-22-v84"/>
+<meta name="lo-release" content="2026-09-23-v85"/>
 <script id="lo-consent-prepaint">
 (function (d) {
   var values = [];
@@ -3343,8 +3343,8 @@ body.loPromoNoScroll{
 <main id="main-content" tabindex="-1">
 <section class="showcase" id="showcase">
 <div class="mediaFull">
-<video aria-label="Cinematic Drohnenvideo der Ferrari 458 Italia in der Schweiz" autoplay="" id="showcaseVideo" loop="" muted="" playsinline="" poster="/media/poster_vertical_480.webp" preload="none">
-<source data-src="/media/FerrariWebShort_VeryLowRes_vertical.mp4" id="showcaseSource" type="video/mp4"/>
+<video aria-label="Cinematic Drohnenvideo der Ferrari 458 Italia in der Schweiz" autoplay="" id="showcaseVideo" loop="" muted="" playsinline="" poster="/media/poster_vertical_480.webp?v=85-susten-vertical" preload="none">
+<source data-src="/media/458-home-vertical-720p.mp4" id="showcaseSource" type="video/mp4"/>
 </video>
 <script>
 (function () {
@@ -4940,8 +4940,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let desired = showcaseSource.dataset.src || "";
 
-    if (isMobile) {
-      desired = "/media/FerrariWebShort_VeryLowRes_vertical.mp4";
+    if (isMobile || !wideViewport) {
+      // v85: vertical videos use the same conservative network thresholds.
+      // Unknown connection information defaults to 720p, including Safari.
+      const connection = navigator.connection;
+      const effectiveType = connection ? connection.effectiveType : "";
+      const downlink = connection && Number.isFinite(connection.downlink)
+        ? connection.downlink : null;
+      const verySlow = effectiveType === "slow-2g" || effectiveType === "2g" ||
+        (downlink !== null && downlink <= 0.5);
+      const slow = effectiveType === "3g" ||
+        (downlink !== null && downlink < 3);
+      const pixelRatio = Math.min(window.devicePixelRatio || 1, 3);
+      const benefitsFrom1080 = window.innerWidth * pixelRatio >= 1000;
+
+      if (verySlow) {
+        desired = ""; // Keep the poster without downloading a video.
+      } else if (slow) {
+        desired = "/media/458-home-vertical-cut2-540p.mp4";
+      } else if (benefitsFrom1080 && downlink !== null && downlink >= 8) {
+        desired = "/media/458-home-vertical-1080p.mp4";
+      } else {
+        desired = "/media/458-home-vertical-720p.mp4";
+      }
+      // Select once; do not restart or download another variant on resize.
     } else if (wideViewport) {
       // v84: choose one horizontal MP4 before playback. Network information is
       // an estimate and is unavailable in some browsers; default to 720p.
