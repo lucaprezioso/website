@@ -2986,6 +2986,52 @@ body.loPromoNoScroll{
     if (video.getAttribute("poster") !== poster) video.setAttribute("poster", poster);
     break;
   }
+  // Keep a separate poster visible while the browser prepares its first frame.
+  const media = video.parentElement;
+  media.style.backgroundImage = 'url(' + JSON.stringify(video.getAttribute("poster")) + ')';
+  media.style.backgroundSize = "cover";
+  media.style.backgroundPosition = "center center";
+  media.style.backgroundRepeat = "no-repeat";
+  video.style.opacity = "0";
+  let revealed = false;
+  let frameRequest = null;
+  let generation = 0;
+  const reveal = () => {
+    if (revealed || video.paused || video.readyState < 2) return;
+    revealed = true;
+    video.style.opacity = "1";
+  };
+  const resetPoster = () => {
+    generation += 1;
+    if (frameRequest !== null && typeof video.cancelVideoFrameCallback === "function") {
+      video.cancelVideoFrameCallback(frameRequest);
+    }
+    frameRequest = null;
+    revealed = false;
+    video.style.opacity = "0";
+  };
+  const awaitFrame = () => {
+    if (revealed || frameRequest !== null) return;
+    const currentGeneration = generation;
+    if (typeof video.requestVideoFrameCallback === "function") {
+      frameRequest = video.requestVideoFrameCallback(() => {
+        frameRequest = null;
+        if (generation !== currentGeneration) return;
+        requestAnimationFrame(() => {
+          if (generation === currentGeneration) reveal();
+        });
+      });
+    } else if (video.currentTime > 0 && video.readyState >= 2) {
+      // Older browsers: wait for playback progress and two paint opportunities.
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        if (generation === currentGeneration) reveal();
+      }));
+    }
+  };
+  video.addEventListener("playing", awaitFrame);
+  video.addEventListener("timeupdate", awaitFrame);
+  video.addEventListener("emptied", resetPoster);
+  video.addEventListener("error", resetPoster);
 })();
 </script>
 <div class="mediaOverlay">
@@ -4690,19 +4736,8 @@ document.addEventListener("DOMContentLoaded", () => {
       showcaseVideo.play().catch(() => {});
     };
 
-    const scheduleShowcaseVideo = () => {
-      if ("requestIdleCallback" in window) {
-        window.requestIdleCallback(startShowcaseVideo, { timeout: 1200 });
-      } else {
-        window.setTimeout(startShowcaseVideo, 500);
-      }
-    };
-
-    if (document.readyState === "complete") {
-      scheduleShowcaseVideo();
-    } else {
-      window.addEventListener("load", scheduleShowcaseVideo, { once: true });
-    }
+    // Start after the initial paint, without waiting for unrelated page assets.
+    requestAnimationFrame(() => requestAnimationFrame(startShowcaseVideo));
 
   }
 
