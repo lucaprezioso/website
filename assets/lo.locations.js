@@ -180,7 +180,7 @@
       btnMaps: "In Google Maps öffnen",
 
       ctaTitle: "Datum anfragen",
-      ctaBody: "Nennen Sie Ihren Wunschtermin. Wir melden uns mit Bestätigung und den relevanten Details.",
+      ctaBody: "Nenne deinen Wunschtermin. Wir melden uns mit Bestätigung und den relevanten Details.",
       ctaBtnRequest: "Anfrage",
       ctaBtnRates: "Tarife ansehen",
 
@@ -191,7 +191,7 @@
       heroTitleA: "Ferrari 458 Italia",
       heroTitleB: "Abholung Zürich",
       heroSubtitle:
-        "Zürich verbindet City Vibe mit den ersten freien Kilometern. Wir halten die Übergabe diskret und den Ablauf klar, damit Ihr Fokus auf der Fahrt bleibt.\n\nVom See bis zu den Höhenzügen helfen wir Ihnen, eine Route zu wählen, die zu Zeit und Tarif passt.",
+        "Zürich verbindet City Vibe mit den ersten freien Kilometern. Wir halten die Übergabe diskret und den Ablauf klar, damit dein Fokus auf der Fahrt bleibt.\n\nVom See bis zu den Höhenzügen helfen wir dir, eine Route zu wählen, die zu Zeit und Tarif passt.",
 
       pill1: "City zu Landstrasse",
       pill2: "Klare Konditionen und Versicherung",
@@ -209,10 +209,10 @@
 
       pickupTitle: "Abholung und Übergabe",
       pickupBody:
-        "Den genauen Treffpunkt bestätigen wir mit Ihrer Buchung. Abholung in Zürich organisieren wir nach Ihrem Zeitplan, mit sauberer Übergabe und klarer schriftlicher Bestätigung.\n\nWenn Sie noch ruhiger starten möchten, ist unser Hauptsitz in Nänikon eine entspannte Alternative.",
+        "Den genauen Treffpunkt bestätigen wir mit deiner Buchung. Abholung in Zürich organisieren wir nach deinem Zeitplan, mit sauberer Übergabe und klarer schriftlicher Bestätigung.\n\nWenn du noch ruhiger starten möchtest, ist unser Hauptsitz in Nänikon eine entspannte Alternative.",
 
       routesTitle: "Kuratiere Routen",
-      routesIntro: "Zürich bietet sofort Optionen. Sie nennen den Mood, wir empfehlen die Linie.",
+      routesIntro: "Zürich bietet sofort Optionen. Du nennst den Mood, wir empfehlen die Linie.",
       routes: [
         "Zürichsee Ufer bis Rapperswil für klassische Szenerie",
         "Albisgrat für schnelle Höhenmeter und weite Blicke",

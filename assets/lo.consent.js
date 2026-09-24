@@ -259,7 +259,7 @@
   var COPY = {
     de: {
       bannerLabel: "Cookie-Einwilligung",
-      title: "Ihre Privatsphäre, Ihre Wahl",
+      title: "Deine Privatsphäre, deine Wahl",
       intro: "Wir verwenden notwendige Technologien. Analyse- und Werbe-Cookies bleiben ohne Einwilligung deaktiviert. Google erhält begrenzte Messdaten ohne Cookies.",
       detail: "Details in den Einstellungen und in unserer",
       accept: "Alle akzeptieren",
@@ -268,9 +268,9 @@
       privacy: "Datenschutzerklärung",
       manage: "Cookie-Einstellungen",
       preferencesTitle: "Cookie-Einstellungen",
-      preferencesIntro: "Wählen Sie, welche optionalen Technologien verwendet werden dürfen.",
+      preferencesIntro: "Wähle, welche optionalen Technologien verwendet werden dürfen.",
       necessaryTitle: "Notwendig",
-      necessaryBody: "Speichert Ihre Sprache und Ihre Cookie-Auswahl für bis zu 180 Tage. Diese Funktionen sind für den sicheren Betrieb erforderlich.",
+      necessaryBody: "Speichert deine Sprache und deine Cookie-Auswahl für bis zu 180 Tage. Diese Funktionen sind für den sicheren Betrieb erforderlich.",
       alwaysOn: "Immer aktiv",
       analyticsTitle: "Analyse",
       analyticsBody: "Erlaubt Analytics-Cookies und eine vollständige Messung der Websitenutzung, damit wir das Angebot verbessern können.",
