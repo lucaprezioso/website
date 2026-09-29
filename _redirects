@@ -1,3 +1,20 @@
+# Public model pages and alpine route hubs
+/de/alpenpaesse-sportwagen-touren.html  /de/alpenpaesse-sportwagen-touren  301!
+/de/alpenpaesse-sportwagen-touren  /de/alpenpaesse-sportwagen-touren.html  200
+/en/supercar-alpine-routes.html  /en/supercar-alpine-routes  301!
+/en/supercar-alpine-routes  /en/supercar-alpine-routes.html  200
+/it/itinerari-alpini-supercar.html  /it/itinerari-alpini-supercar  301!
+/it/itinerari-alpini-supercar  /it/itinerari-alpini-supercar.html  200
+/en/ferrari-rental-switzerland.html  /en/ferrari-rental-switzerland  301!
+/en/ferrari-rental-switzerland  /en/ferrari-rental-switzerland.html  200
+/ferrari-458-italia.html  /ferrari-458-italia  301!
+/ferrari-458-italia  /ferrari-458-italia.html  200
+/en/ferrari-458-italia.html  /en/ferrari-458-italia  301!
+/en/ferrari-458-italia  /en/ferrari-458-italia.html  200
+/it/ferrari-458-italia.html  /it/ferrari-458-italia  301!
+/it/ferrari-458-italia  /it/ferrari-458-italia.html  200
+# Editorial route guides and English Switzerland rental
+
 # Redirect old hyphenated domain to canonical domain
 https://luxury-obsession.ch/*      https://luxuryobsession.ch/:splat      301!
 http://luxury-obsession.ch/*       https://luxuryobsession.ch/:splat      301!
@@ -237,7 +254,6 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /ferrari-mieten-schweiz   /pages/de/ferrari-mieten-schweiz.html 200
 /ferrari-mieten-uster     /pages/de/ferrari-mieten-uster.html 200
 /ferrari-seite  /ferrari-458-italia  301!
-/ferrari-458-italia       /pages/de/ferrari-458-italia.html 200
 /ferrari-mieten-zuerich-preise-anforderungen-ablauf /pages/de/ferrari-mieten-zuerich-preise-anforderungen-ablauf.html 200
 /autostrecken-schweiz-ferrari-zuerich /pages/de/autostrecken-schweiz-ferrari-zuerich.html 200
 /it/blog                  /pages/it/blog.html      200

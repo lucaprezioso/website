@@ -1,0 +1,28 @@
+/* Editorial guides: scoped, responsive tables and natural text flow. */
+.loGuideBlock,.loGuideCta,.loGuideFaq{margin:2.2rem 0;min-width:0}
+.seoMain section{margin:2.2rem 0}.seoMain p,.seoMain li{line-height:1.8}.seoMain li{margin:.6rem 0}
+.loGuideTable{max-width:100%;overflow-x:auto;margin:1.4rem 0;overscroll-behavior-x:contain;scrollbar-width:thin}
+.loGuideTable:focus-visible{outline:2px solid #d6b56d;outline-offset:4px}
+.loGuideTable table{border-collapse:collapse;width:100%;min-width:580px;font:inherit;line-height:1.6}
+.loGuideTable th,.loGuideTable td{padding:.8rem .9rem;text-align:left;vertical-align:top;border-bottom:1px solid rgba(231,220,198,.2);white-space:normal}
+.loGuideTable thead th{color:#e7dcc6;background:rgba(255,255,255,.035)}
+.loGuideTable caption{text-align:left;padding:0 0 .7rem;color:var(--muted,#c2beb5)}
+.loGuideCta{padding:1.5rem;border:1px solid rgba(231,220,198,.25);border-radius:18px;background:rgba(231,220,198,.045)}
+.loGuideCta h2{margin-top:0}.loGuideCta a{overflow-wrap:anywhere}
+.loGuideFaq details{border:1px solid rgba(231,220,198,.2);border-radius:14px;padding:1rem;margin:.8rem 0}
+.loGuideFaq summary{cursor:pointer;font-weight:600;line-height:1.5;white-space:normal;overflow-wrap:anywhere}
+.loGuideSources{font-size:.82rem;line-height:1.7;color:var(--muted,#c2beb5)}
+.loGuideGallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;margin:1.5rem 0}
+.loGuideGallery figure{margin:0;min-width:0}.loGuideGallery img{display:block;width:100%;height:280px;object-fit:contain;border-radius:12px;background:rgba(255,255,255,.025)}
+.loGuideGallery figcaption{font-size:.82rem;line-height:1.6;margin-top:.6rem;color:var(--muted,#c2beb5)}
+.loHubLink{margin:1.2rem 0;padding:1rem 1.2rem;border-left:2px solid #d6b56d;line-height:1.7}
+@media(max-width:760px){.loGuideGallery{grid-template-columns:1fr}.loGuideGallery figure{max-width:500px;margin:0 auto;width:100%}.loGuideGallery img{height:auto;max-height:480px}.loGuideTable th,.loGuideTable td{padding:.7rem}.loGuideCta{padding:1rem}.loGuideCta .seoActions{display:flex;gap:.7rem;flex-wrap:wrap}.loGuideTable{font-size:.88rem}.seoMain{padding-top:2rem}}
+
+/* Model imagery: preserve focal points at each viewport. */
+.loModelPhoto{margin:1.5rem 0 1.8rem;min-width:0}.loModelPhoto img{display:block;width:100%;height:auto;object-fit:cover;border-radius:16px}
+.loModelPhoto .loModelProfile{aspect-ratio:16/9;height:auto;object-position:50% 72%}
+.loModelPhoto .loModelEngine{aspect-ratio:16/10;height:auto;object-position:50% 50%}
+.loModelPhoto figcaption,.loModelCaption{font-size:.84rem;line-height:1.65;color:var(--muted,#c2beb5);margin:.7rem 0 1.4rem}
+.loModelCarbon{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.1rem;margin-top:1.5rem}.loModelCarbon .loModelPhoto{margin:0}
+.loModelCarbon img{aspect-ratio:4/3;height:auto}.loModelCarbon .loModelSteering{object-position:50% 32%}.loModelCarbon .loModelConsole{object-position:50% 50%}
+@media(max-width:680px){.loModelPhoto .loModelProfile{aspect-ratio:4/3;object-position:50% 72%}.loModelPhoto .loModelEngine{aspect-ratio:3/2}.loModelCarbon{grid-template-columns:1fr}.loModelCarbon img{aspect-ratio:1/1}}
