@@ -191,9 +191,9 @@
       heroTitleA: "Ferrari 458 Italia",
       heroTitleB: "Abholung Zürich",
       heroSubtitle:
-        "Zürich verbindet City Vibe mit den ersten freien Kilometern. Wir halten die Übergabe diskret und den Ablauf klar, damit dein Fokus auf der Fahrt bleibt.\n\nVom See bis zu den Höhenzügen helfen wir dir, eine Route zu wählen, die zu Zeit und Tarif passt.",
+        "Zürich verbindet Stadtleben mit den ersten freien Kilometern. Wir halten die Übergabe diskret und den Ablauf klar, damit dein Fokus auf der Fahrt bleibt.\n\nVom See bis zu den Höhenzügen helfen wir dir, eine Route zu wählen, die zu Zeit und Tarif passt.",
 
-      pill1: "City zu Landstrasse",
+      pill1: "Stadt und Landstrasse",
       pill2: "Klare Konditionen und Versicherung",
       pill3: "Concierge Support",
       pill4: "Diskrete Übergabe",
@@ -211,8 +211,8 @@
       pickupBody:
         "Den genauen Treffpunkt bestätigen wir mit deiner Buchung. Abholung in Zürich organisieren wir nach deinem Zeitplan, mit sauberer Übergabe und klarer schriftlicher Bestätigung.\n\nWenn du noch ruhiger starten möchtest, ist unser Hauptsitz in Nänikon eine entspannte Alternative.",
 
-      routesTitle: "Kuratiere Routen",
-      routesIntro: "Zürich bietet sofort Optionen. Du nennst den Mood, wir empfehlen die Linie.",
+      routesTitle: "Kuratierte Routen",
+      routesIntro: "Zürich bietet sofort Optionen. Du nennst deine Wünsche, wir empfehlen die Linie.",
       routes: [
         "Zürichsee Ufer bis Rapperswil für klassische Szenerie",
         "Albisgrat für schnelle Höhenmeter und weite Blicke",
@@ -385,7 +385,7 @@
     // Hero media
     if(cfg.heroImage) setAttr("heroImage", "src", cfg.heroImage);
     if(cfg.heroImageAlt) setAttr("heroImage", "alt", cfg.heroImageAlt);
-    if(cfg.badgeRight) setText("badgeRight", cfg.badgeRight);
+    if(cfg.badgeRight) setText("badgeRight", cfg.badgeRight === "Switzerland" ? ({de:"Schweiz",it:"Svizzera",en:"Switzerland"}[lang] || cfg.badgeRight) : cfg.badgeRight);
 
 
     // Location section

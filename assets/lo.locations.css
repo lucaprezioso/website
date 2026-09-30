@@ -185,3 +185,36 @@ section{padding:3.4rem 0}
   .hero{padding-top:1.2rem}
   .btn{padding:0.82rem 1.0rem}
 }
+
+
+/* City pages: retain the desktop photo below the hero copy on mobile. */
+@media (max-width:979.98px){
+  .hero{padding-bottom:1.75rem}
+  .heroGrid{gap:1.5rem}
+  .heroGrid > .heroMediaCard{
+    display:block;
+    width:100%;
+    max-width:640px;
+    min-height:0;
+    margin:0 auto;
+    aspect-ratio:3 / 2;
+    border-radius:20px;
+  }
+  .heroMediaCard .heroPhoto{display:block;width:100%;height:100%}
+  .heroMediaCard .heroPhoto img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:50% 50%;
+    border-radius:0;
+    transform:none;
+  }
+  .heroMediaCard .heroBadge{
+    bottom:.75rem;
+    left:.75rem;
+    right:.75rem;
+    padding:.5rem .75rem;
+    font-size:.7rem;
+  }
+  #rates-preview{padding-top:1.75rem}
+}

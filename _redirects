@@ -1,3 +1,13 @@
+# Italian wedding consolidation: all retired aliases go directly to the ranking page.
+/it/noleggio-ferrari-458-matrimonio-zurigo  /it/noleggio-ferrari-matrimonio-zurigo  301!
+/it/noleggio-ferrari-458-matrimonio-zurigo.html  /it/noleggio-ferrari-matrimonio-zurigo  301!
+/it/ferrari_458_wedding_car_rental_zurich  /it/noleggio-ferrari-matrimonio-zurigo  301!
+/it/ferrari_458_wedding_car_rental_zurich.html  /it/noleggio-ferrari-matrimonio-zurigo  301!
+/pages/it/ferrari_458_wedding_car_rental_zurich  /it/noleggio-ferrari-matrimonio-zurigo  301!
+/pages/it/ferrari_458_wedding_car_rental_zurich.html  /it/noleggio-ferrari-matrimonio-zurigo  301!
+/pages/it/noleggio-ferrari-458-matrimonio-zurigo  /it/noleggio-ferrari-matrimonio-zurigo  301!
+/pages/it/noleggio-ferrari-458-matrimonio-zurigo.html  /it/noleggio-ferrari-matrimonio-zurigo  301!
+
 # Public model pages and alpine route hubs
 /de/alpenpaesse-sportwagen-touren.html  /de/alpenpaesse-sportwagen-touren  301!
 /de/alpenpaesse-sportwagen-touren  /de/alpenpaesse-sportwagen-touren.html  200
@@ -106,7 +116,6 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /it/ferrari_458_488_price_trends_switzerland                           /it/ferrari-458-488-andamento-prezzi-svizzera                          301!
 /en/ferrari_458_wedding_car_rental_zurich                              /en/ferrari-458-wedding-car-rental-zurich                              301!
 /de/ferrari_458_wedding_car_rental_zurich                              /de/ferrari-458-hochzeitsauto-mieten-zuerich                           301!
-/it/ferrari_458_wedding_car_rental_zurich                              /it/noleggio-ferrari-458-matrimonio-zurigo                             301!
 /en/instagrammable_places_zurich_uster_part1                           /en/instagrammable-places-zurich-uster-part-1                          301!
 /de/instagrammable_places_zurich_uster_part1                           /de/instagram-spots-zuerich-uster-ferrari                              301!
 /it/instagrammable_places_zurich_uster_part1                           /it/luoghi-instagrammabili-zurigo-uster-ferrari                        301!
@@ -145,7 +154,6 @@ http://luxuryobsession.ch/*  https://luxuryobsession.ch/:splat  301!
 /it/ferrari-458-488-andamento-prezzi-svizzera                          /pages/it/ferrari_458_488_price_trends_switzerland.html                200
 /en/ferrari-458-wedding-car-rental-zurich                              /pages/ferrari_458_wedding_car_rental_zurich.html                      200
 /de/ferrari-458-hochzeitsauto-mieten-zuerich                           /pages/de/ferrari_458_wedding_car_rental_zurich.html                   200
-/it/noleggio-ferrari-458-matrimonio-zurigo                             /pages/it/ferrari_458_wedding_car_rental_zurich.html                   200
 /en/instagrammable-places-zurich-uster-part-1                          /pages/instagrammable_places_zurich_uster_part1.html                   200
 /de/instagram-spots-zuerich-uster-ferrari                              /pages/de/instagrammable_places_zurich_uster_part1.html                200
 /it/luoghi-instagrammabili-zurigo-uster-ferrari                        /pages/it/instagrammable_places_zurich_uster_part1.html                200
