@@ -60,7 +60,7 @@ html.loConsentBannerOpen .loLangSuggest {
   font-family: Georgia, "Times New Roman", serif;
 }
 
-.loConsentBanner h2 {
+.loConsentBanner .loConsentTitle {
   font-family: Georgia, "Times New Roman", serif !important;
 }
 
@@ -100,7 +100,7 @@ html.loConsentBannerOpen .loLangSuggest {
   text-transform: uppercase;
 }
 
-.loConsentBanner h2,
+.loConsentBanner .loConsentTitle,
 .loConsentPanel h2 {
   margin: 0 0 7px !important;
   color: var(--lo-consent-ink) !important;
@@ -411,7 +411,7 @@ html.loConsentBannerOpen .loLangSuggest {
     border-radius: 14px;
   }
 
-  .loConsentBanner h2 {
+  .loConsentBanner .loConsentTitle {
     margin-bottom: 5px !important;
     font-size: 24px !important;
     line-height: 1.05 !important;

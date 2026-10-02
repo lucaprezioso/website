@@ -41,6 +41,13 @@
       index=(i+lightboxItems.length)%lightboxItems.length;
       const item=lightboxItems[index], img=item.querySelector("img");
       if(!lb.classList.contains("open")) lastFocus=document.activeElement;
+      // Reuse the existing image family; let the browser choose for this lightbox.
+      const candidates=img.getAttribute("srcset");
+      const width=Number(img.getAttribute("width")), height=Number(img.getAttribute("height"));
+      const ratio=width>0 && height>0 ? width/height : 1;
+      lbImg.sizes=`min(1100px, 92vw, ${(80*ratio).toFixed(3)}vh)`;
+      if(candidates) lbImg.srcset=candidates;
+      else lbImg.removeAttribute("srcset");
       lbImg.src=item.dataset.full || img.currentSrc || img.src;
       lbImg.alt=img.alt || "Gallery image";
       lbCap.textContent=[item.dataset.caption, `${index+1} / ${lightboxItems.length}`].filter(Boolean).join(" · ");
