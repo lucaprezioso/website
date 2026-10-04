@@ -4,6 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link rel="preload" href="/assets/fonts/inter-latin-3100e775e8.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="/assets/fonts/cormorant-garamond-latin-d80df8ff5a.woff2" as="font" type="font/woff2" crossorigin/>
 <link as="image" data-lo-showcase-poster="" fetchpriority="high" href="/media/poster_vertical_480.webp?v=85-susten-vertical" media="(max-width: 600px)" rel="preload" type="image/webp"/>
 <link as="image" data-lo-showcase-poster="" fetchpriority="high" href="/media/poster_vertical_720.webp?v=85-susten-vertical" media="(width &gt; 600px) and (max-width: 760px)" rel="preload" type="image/webp"/>
 <link as="image" data-lo-showcase-poster="" fetchpriority="high" href="/media/poster_1200.webp?v=84-susten" media="(width &gt; 760px) and (min-aspect-ratio: 5/6)" rel="preload" type="image/webp"/>
@@ -68,14 +70,14 @@
 </script>
 <meta content="telephone=no, email=no, address=no" name="format-detection"/>
 <meta content="nointentdetection" name="chrome"/>
-<title>Ferrari &amp; Luxury Car Rental Zurich – Ferrari 458 Italia from CHF 440</title>
+<title>Ferrari &amp; Luxury Car Rental Zurich – 458 Italia from CHF 440</title>
 <meta content="Ferrari and luxury car rental in Zurich from CHF 440. Drive our Ferrari 458 Italia with personal handover, clear terms and Zurich Airport delivery on request." name="description"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <meta content="Luxury Obsession" property="og:site_name"/>
 <meta content="Luxury Obsession" name="application-name"/>
 <meta content="Luxury Obsession" name="apple-mobile-web-app-title"/>
 <meta content="en_CH" property="og:locale"/><meta content="it_CH" property="og:locale:alternate"/><meta content="de_CH" property="og:locale:alternate"/>
-<meta content="Ferrari &amp; Luxury Car Rental Zurich – Ferrari 458 Italia from CHF 440" property="og:title"/>
+<meta content="Ferrari &amp; Luxury Car Rental Zurich – 458 Italia from CHF 440" property="og:title"/>
 <meta content="Ferrari and luxury car rental in Zurich from CHF 440. Drive our Ferrari 458 Italia with personal handover, clear terms and Zurich Airport delivery on request." property="og:description"/>
 <meta content="website" property="og:type"/>
 <meta content="https://luxuryobsession.ch/en/" property="og:url"/>
@@ -83,10 +85,10 @@
 <meta content="1200" property="og:image:width"/>
 <meta content="1200" property="og:image:height"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Ferrari &amp; Luxury Car Rental Zurich – Ferrari 458 Italia from CHF 440" name="twitter:title"/>
+<meta content="Ferrari &amp; Luxury Car Rental Zurich – 458 Italia from CHF 440" name="twitter:title"/>
 <meta content="Ferrari and luxury car rental in Zurich from CHF 440. Drive our Ferrari 458 Italia with personal handover, clear terms and Zurich Airport delivery on request." name="twitter:description"/>
 <meta content="https://luxuryobsession.ch/media/ferrari-458-italia-zurich-ogimage.jpg" name="twitter:image"/>
-<link href="/media/icon.webp" rel="icon" type="image/webp"/>
+<link href="/media/brand-icon-60.webp" rel="icon" type="image/webp"/>
 <link href="/favicon.ico" rel="icon" sizes="any"/>
 <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
@@ -566,8 +568,7 @@ html.loConsentBannerOpen .loLangSuggest {
 }
 </style>
 <script data-lo-google-tracking="" defer="" src="/assets/lo.consent.js?v=49d936697035"></script>
-<link href="/assets/lo.shared-home-e30457772645.css" id="lo-home-critical" rel="stylesheet"/>
-<link href="/assets/lo.site-consistency.css?v=a1d730ba180f" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/lo.home-b38326154979.css" id="lo-home-critical"/>
 <link href="/site.webmanifest" rel="manifest"/>
 <!-- Round 9: homepage visual refinements aligned with Italian homepage -->
 <style>
@@ -1142,8 +1143,33 @@ body.loPromoNoScroll{
 .loFormPrivacy{margin:8px 0;font-size:.78rem;line-height:1.5;color:rgba(255,255,255,.75)}
 .loFormPrivacy a{text-decoration:underline;text-underline-offset:3px}
 </style>
-<link rel="stylesheet" href="/assets/lo.reviews.css?v=20261002g"/>
-<script defer src="/assets/lo.reviews.js?v=20261002f"></script>
+<style id="lo-reviews-styles">
+/* Full text stays readable without JavaScript; expansion is ordinary in-page content. */
+#customer-reviews{padding:3rem 0}
+.loReviewsHeader{display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.loReviewsScore{display:flex;align-items:center;flex-wrap:wrap;gap:.6rem;font-size:.9rem}
+.loReviewStars{color:#d6b56d;letter-spacing:.12em;white-space:nowrap}
+.loReviewHeading{display:flex;align-items:center;flex-wrap:wrap;gap:.45rem .75rem}
+.loReviewName{font-size:.95rem;font-weight:600;color:inherit}
+.loReviewsGrid{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x proximity;align-items:flex-start;padding:.25rem .1rem 1rem;scrollbar-width:thin;scrollbar-color:#898c94 transparent}
+.loReviewCard{box-sizing:border-box;flex:0 0 calc((100% - 2rem)/3);min-width:0;margin:0;padding:1.5rem 1.5rem .25rem;border:1px solid var(--line,rgba(255,255,255,.15));border-radius:18px;background:rgba(255,255,255,.035);scroll-snap-align:start}
+.loReviewText{line-height:1.75;margin:1rem 0 0;overflow-wrap:anywhere;white-space:pre-line}
+.loReviewCard.is-enhanced:not(.is-expanded) .loReviewText{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:6;overflow:hidden;height:10.5em}
+.loReviewCard.is-expanded{scroll-snap-align:center}
+.loReviewCard.is-expanded .loReviewText{display:block;height:auto;max-height:50vh;max-height:min(28rem,50dvh);overflow-y:auto;scrollbar-width:thin;scrollbar-color:#898c94 transparent;scrollbar-gutter:stable;padding-right:.4rem}
+.loReviewControls{display:flex;flex-wrap:wrap;gap:0 .75rem;min-height:2.75rem;align-items:center}
+.loReviewControls button,.loReviewCard .loReviewSource{box-sizing:border-box;display:inline-flex;align-items:center;min-width:44px;min-height:44px;max-width:100%;font:inherit;font-size:.88rem;line-height:1.5;color:#c9cbd1;background:transparent;border:0;padding:.5rem 0;text-decoration:underline;text-underline-offset:.25em;cursor:pointer}
+.loReviewCard figcaption{margin:0}
+.loReviewControls button:hover,.loReviewControls button:active,.loReviewCard .loReviewSource:hover,.loReviewCard .loReviewSource:active{color:#fff}
+.loReviewControls [hidden]{display:none}.loReviewSource{font-size:.85rem;text-underline-offset:.2em}
+.loReviewsGrid:focus-visible,.loReviewText:focus-visible,.loReviewControls button:focus-visible,.loReviewSource:focus-visible{outline:2px solid #e4e5e8;outline-offset:4px}
+.loReviewsFooter{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-top:1rem;font-size:.85rem}.loReviewsDate{color:var(--muted)}
+@media(max-width:1000px){.loReviewCard{flex-basis:calc((100% - 1rem)/2)}}
+@media(max-width:600px){.loReviewsGrid.has-expanded::before,.loReviewsGrid.has-expanded::after{content:"";flex:0 0 var(--loReviewEdgeSpace,0px)}.loReviewCard{flex-basis:86%;padding:1.1rem 1.1rem .25rem}.loReviewCard.is-enhanced:not(.is-expanded) .loReviewText{-webkit-line-clamp:5;height:8.75em}.loReviewCard.is-expanded .loReviewText{max-height:45vh;max-height:45dvh}.loReviewsHeader{align-items:start}}
+
+@media(min-width:601px){.loReviewCard.is-expanded:first-of-type{scroll-snap-align:start}.loReviewCard.is-expanded:last-of-type{scroll-snap-align:end}}
+</style>
+<script defer src="/assets/lo.reviews.js?v=20261003-a11y"></script>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -1536,7 +1562,7 @@ I thank Anna and her husband again for this superb organisation; it was very, ve
 <span lang="de">Es war eine wunderschöne Woche das Glück zu haben den Ferrari zu fahren und geniessen, ein sehr schönes Erlebniss,
 ich danke nochmals Anna und sein Mann für diese super Organisation, war sehr sehr gut</span></template>
 <div class="loReviewControls"><button type="button" class="loReviewExpand" hidden aria-expanded="false" aria-controls="review-6-text" data-more="See more" data-less="Show less">See more</button><button type="button" class="loReviewLanguage" hidden aria-controls="review-6-text" aria-pressed="false" data-original="See original" data-translate="Translate">See original</button></div>
-<figcaption><a class="loReviewSource" href="https://maps.app.goo.gl/LpjAU7obwZRTHWcGA" rel="noopener noreferrer" target="_blank">Read the original on Google</a></figcaption></figure></div><div class="loReviewsFooter"><a href="https://maps.app.goo.gl/NUBnAA8kKw68ugHv7" rel="noopener noreferrer" target="_blank">Read all reviews on Google</a><span class="loReviewsDate">Rating checked on <time datetime="2026-10-01">01.10.2026</time>.</span></div></div></section><section aria-labelledby="personalFerrariTitle" id="personal-ferrari"><div class="container"><h2 class="sectionTitle" id="personalFerrariTitle">One Ferrari, cared for personally</h2><p class="sectionSubtitle">You book this exact Ferrari 458 Italia. We know its controls, its character and its condition, and prepare it personally for your drive. Your handover includes time for questions and a short accompanied test drive. From the first enquiry to your return, you have a direct contact who knows the car.</p> <a class="btn btnSecondary" href="/en/ferrari-rental-zurich" hreflang="en">Ferrari 458 Italia rental</a></div></section><section aria-labelledby="airportHandoverTitle" id="airport-handover"><div class="container"><h2 class="sectionTitle" id="airportHandoverTitle">Zurich Airport handover for international guests</h2><p class="sectionSubtitle">Start your Swiss visit with a personal Ferrari handover. Share your flight details and preferred meeting time, and we will agree the meeting point and return arrangements before your arrival. Allow time for a vehicle briefing and a short accompanied drive before setting off.</p><p class="sectionSubtitle">In 2026, Zurich Airport handover is included with rentals of 6 hours or more. For the 3-hour package, the airport handover fee is CHF 50 per agreed pickup or return. Parking tickets are paid separately by the customer. Small bags may fit in the front luggage compartment. Larger luggage can be delivered to your hotel for an agreed extra fee; please send us its dimensions in advance.</p><p class="sectionSubtitle">For meeting points, arrival timing and visitor requirements, see our <a href="/ferrari-mieten-zuerich-flughafen" hreflang="de" lang="de">Informationen zur Flughafenübergabe auf Deutsch</a>.</p><a class="btn btnSecondary" href="/en/ferrari-rental-zurich-airport">Explore Zurich Airport handover</a></div></section>
+<figcaption><a class="loReviewSource" href="https://maps.app.goo.gl/LpjAU7obwZRTHWcGA" rel="noopener noreferrer" target="_blank">Read the original on Google</a></figcaption></figure></div><div class="loReviewsFooter"><a href="https://maps.app.goo.gl/NUBnAA8kKw68ugHv7" rel="noopener noreferrer" target="_blank">Read all reviews on Google</a><span class="loReviewsDate">Rating checked on <time datetime="2026-10-01">01.10.2026</time>.</span></div></div></section><section aria-labelledby="personalFerrariTitle" id="personal-ferrari"><div class="container"><h2 class="sectionTitle" id="personalFerrariTitle">One Ferrari, cared for personally</h2><p class="sectionSubtitle">You book this exact Ferrari 458 Italia. We know its controls, its character and its condition, and prepare it personally for your drive. Your handover includes time for questions and a short accompanied test drive. From the first enquiry to your return, you have a direct contact who knows the car.</p> <a class="btn btnSecondary" href="/en/ferrari-rental-zurich" hreflang="en">Ferrari 458 Italia rental</a></div></section><section aria-labelledby="airportHandoverTitle" id="airport-handover"><div class="container"><h2 class="sectionTitle" id="airportHandoverTitle">Zurich Airport handover for international guests</h2><p class="sectionSubtitle">Start your Swiss visit with a personal Ferrari handover. Share your flight details and preferred meeting time, and we will agree the meeting point and return arrangements before your arrival. Allow time for a vehicle briefing and a short accompanied drive before setting off.</p><p class="sectionSubtitle">In 2026, Zurich Airport handover is included with rentals of 6 hours or more. For the 3-hour package, the airport handover fee is CHF 50 per agreed pickup or return. Parking tickets are paid separately by the customer. Small bags may fit in the front luggage compartment. Larger luggage can be delivered to your hotel for an agreed extra fee; please send us its dimensions in advance.</p><p class="sectionSubtitle">For meeting points, arrival timing and visitor requirements, see our <a href="/en/ferrari-rental-zurich-airport" hreflang="en">Zurich Airport handover guide</a>.</p><a class="btn btnSecondary" href="/en/ferrari-rental-zurich-airport">Explore Zurich Airport handover</a></div></section>
 <section id="request">
 <div class="container">
 <h2 class="sectionTitle" id="requestTitle">Request your Ferrari rental in Zurich</h2>
@@ -1593,7 +1619,7 @@ ich danke nochmals Anna und sein Mann für diese super Organisation, war sehr se
 <select id="packageId" name="package_id" required=""><option value="P3_U">Brief Escape · 3h · ∞ · 440 CHF</option><option value="P6_L">Signature Half Day · 6h · 200 km · 780 CHF</option><option value="P6_U">Signature Half Day Unlimited · 6h · ∞ · 830 CHF</option><option value="P12_L">Grand Tour 300 · 12h · 300 km · 940 CHF</option><option value="P12_L500">Grand Tour 500 · 12h · 500 km · 1140 CHF</option><option value="P12_U">Grand Tour Unlimited · 12h · ∞ · 1290 CHF</option><option value="P24_L200">Full Day Icon 200 · 24h · 200 km · 1340 CHF</option><option value="P24_L500">Full Day Icon 500 · 24h · 500 km · 1590 CHF</option><option value="P24_U">Full Day Icon Unlimited · 24h · ∞ · 1990 CHF</option><option value="WE_500">Weekend Escape 500 · 48h · 500 km · 1990 CHF</option><option value="WE_800">Weekend Escape 800 · 48h · 800 km · 2790 CHF</option><option value="WD">Weekday Privilege · Mon–Fri · 800 km · 2480 CHF</option><option value="FW">Full Week · Full week · 1400 km · 4480 CHF</option></select>
 </div><div class="fieldGroup">
 <label for="pickupLocation" id="lblPickupLoc">Pickup location</label>
-<select id="pickupLocation" name="pickup_location"><option value="NANIKON">Nänikon · FREE</option><option value="ZURICH_AIRPORT">Zurich Airport · fee confirmed with request</option><option value="ZURICH">Zurich · fee confirmed with request</option><option value="WINTERTHUR">Winterthur · fee confirmed with request</option><option value="ZUG">Zug · CHF 140</option><option value="LUCERNE">Lucerne · CHF 140</option><option value="ST_GALLEN">St. Gallen · CHF 140</option><option value="AARGAU">Aargau · CHF 140</option><option value="BERN">Bern · CHF 290</option><option value="BASEL">Basel · CHF 290</option><option value="CHUR">Chur · CHF 290</option><option value="OTHER">Other · Please specify in the Notes</option></select>
+<select id="pickupLocation" name="pickup_location"><option value="NANIKON">Nänikon · FREE</option><option value="ZURICH_AIRPORT">Zurich Airport · fee confirmed with request</option><option value="ZURICH">Zurich · fee confirmed with request</option><option value="WINTERTHUR">Winterthur · fee confirmed with request</option><option value="ZUG">Zug · CHF 140</option><option value="LUCERNE">Lucerne · CHF 140</option><option value="ST_GALLEN">St. Gallen · CHF 140</option><option value="AARGAU">Aargau · CHF 140</option><option value="BERN">Bern · CHF 290</option><option value="SOLOTHURN">Solothurn · CHF 290</option><option value="BASEL">Basel · CHF 290</option><option value="CHUR">Chur · CHF 290</option><option value="OTHER">Other · Please specify in the Notes</option></select>
 </div></div>
 <div class="loBookingDateRow"><div class="fieldGroup calWrap">
 <label for="preferredDate" id="lblDate">Preferred date</label>
@@ -2163,8 +2189,9 @@ const DEFAULT_PACKAGES =
         const r = input.getBoundingClientRect();
         const margin = 8;
         // Ensure width is known
-        const w = pop.getBoundingClientRect().width || 320;
-        const h = pop.getBoundingClientRect().height || 360;
+        const popupBox = pop.getBoundingClientRect();
+        const w = popupBox.width || 320;
+        const h = popupBox.height || 360;
 
         let left = r.left;
         if(left + w + margin > window.innerWidth){
@@ -2567,6 +2594,7 @@ renderPackagesPreview();
           ["ST_GALLEN", "St. Gallen · CHF 140"],
           ["AARGAU", "Aargau · CHF 140"],
           ["BERN", "Bern · CHF 290"],
+          ["SOLOTHURN", "Solothurn · CHF 290"],
           ["BASEL", "Basel · CHF 290"],
           ["CHUR", "Chur · CHF 290"],
           ["OTHER", "Other · Please specify in the Notes"]
@@ -2581,6 +2609,7 @@ renderPackagesPreview();
           ["ST_GALLEN", "St. Gallen · CHF 140"],
           ["AARGAU", "Aargau · CHF 140"],
           ["BERN", "Bern · CHF 290"],
+          ["SOLOTHURN", "Solothurn · CHF 290"],
           ["BASEL", "Basel · CHF 290"],
           ["CHUR", "Chur · CHF 290"],
           ["OTHER", "Andere · Bitte in Notizen angeben"]
@@ -2595,6 +2624,7 @@ renderPackagesPreview();
           ["ST_GALLEN", "St. Gallen · CHF 140"],
           ["AARGAU", "Argovia · CHF 140"],
           ["BERN", "Berna · CHF 290"],
+          ["SOLOTHURN", "Soletta · CHF 290"],
           ["BASEL", "Basilea · CHF 290"],
           ["CHUR", "Chur · CHF 290"],
           ["OTHER", "Altro · Prego specificare nelle note"]

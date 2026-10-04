@@ -2,7 +2,7 @@
 
 <html lang="it">
 <head>
-<link href="/assets/lo.consent.css?v=7291af9302eb" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/lo.bundle-f740ff63176a.css"/>
 <script data-lo-google-tracking="" defer="" src="/assets/lo.consent.js?v=49d936697035"></script>
 <meta charset="utf-8"/>
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-latin-3100e775e8.woff2" crossorigin="anonymous"/>
@@ -22,7 +22,7 @@
 <meta content="Noleggio Ferrari 458 Italia: prezzi da CHF 440" name="twitter:title"/>
 <meta content="Ferrari 458 Italia da CHF 440 per 3 ore con km illimitati. Confronta prezzi, pacchetti, cauzione e costi di consegna per scegliere la tua esperienza." name="twitter:description"/>
 <meta content="https://luxuryobsession.ch/media/ferrari-458-italia-zurich-ogimage.jpg" name="twitter:image"/>
-<link href="../media/icon.webp" rel="icon" type="image/webp"/>
+<link href="/media/brand-icon-60.webp" rel="icon" type="image/webp"/>
 <link href="../favicon.ico" rel="icon" sizes="any"/>
 <link href="../favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="../favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/>
@@ -32,9 +32,9 @@
 
 
 
-<link href="../assets/lo.css" rel="stylesheet"/>
-<link rel="stylesheet" href="/assets/lo.shared-page-e75741be91cb.css"/>
-<link rel="stylesheet" href="/assets/lo.site-consistency.css?v=a1d730ba180f"/>
+
+
+
 
 <script defer="" src="../assets/lo.js?v=472995f9c693"></script>
 <script id="pricingStructuredData" type="application/ld+json">{
@@ -487,7 +487,7 @@
 <div class="container">
 <div class="navInner">
 <a aria-label="Luxury Obsession" class="brand" href="/it/">
-<img alt="Luxury Obsession icon" class="brandIcon" height="238" src="../media/icon.webp" width="237"/>
+<img alt="Luxury Obsession icon" class="brandIcon" height="238" src="/media/brand-icon-60.webp" srcset="/media/brand-icon-120.webp 2x, /media/brand-icon-180.webp 3x" width="237"/>
 <span class="brandGold">Luxury Obsession</span>
 </a>
 <div class="navRight">
@@ -1026,7 +1026,7 @@ const DEFAULT_PACKAGES = [{"id":"P3_U","duration":"3h","label":{"en":"Brief Esca
 
     async function init(){
       const lang = window.__LO__.getLang();
-      await hydratePackages();
+      const packagesReady = hydratePackages();
       document.documentElement.lang = lang;
       window.__LO__.initLangMenu(lang);
       window.__LO__.initHamburger();
@@ -1036,7 +1036,7 @@ const DEFAULT_PACKAGES = [{"id":"P3_U","duration":"3h","label":{"en":"Brief Esca
 
       const setText = (id, txt) => {
         const el = document.getElementById(id);
-        if(el) el.textContent = txt;
+        if(el && el.textContent !== txt) el.textContent = txt;
       };
       const setHref = (id, href) => {
         const el = document.getElementById(id);
@@ -1078,8 +1078,8 @@ const DEFAULT_PACKAGES = [{"id":"P3_U","duration":"3h","label":{"en":"Brief Esca
       setHref("mRequest", window.__LO__.buildUrl("../index.html", lang, "request"));
 
       setText("eyebrow", t.eyebrow);
-      document.getElementById("title").textContent = t.title;
-      document.getElementById("subtitle").textContent = t.sub;
+      setText("title", t.title);
+      setText("subtitle", t.sub);
       setText("pricingIntroP1", t.pricingIntroP1);
       setText("pricingIntroP2", t.pricingIntroP2);
       setText("quickNavEyebrow", t.quickNavEyebrow);
@@ -1150,6 +1150,7 @@ const DEFAULT_PACKAGES = [{"id":"P3_U","duration":"3h","label":{"en":"Brief Esca
       setText("compareP2", t.compareP2);
       setHref("pickupNoteLink", window.__LO__.buildUrl("locations.html", lang, "top"));
 
+      await packagesReady;
       const body = document.getElementById("pkgBody");
       const mobileBody = document.getElementById("pkgMobileBody");
       body.innerHTML = "";
