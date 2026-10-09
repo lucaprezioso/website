@@ -179,7 +179,7 @@
     {
       "id": "WD",
       "duration": "Mon-Fri",
-      "km": "800",
+      "km": "700",
       "price": 2480,
       "label": {
         "en": "Weekday Privilege",
@@ -195,7 +195,7 @@
     {
       "id": "FW",
       "duration": "Full week",
-      "km": "1400",
+      "km": "1300",
       "price": 4480,
       "label": {
         "en": "Full Week",

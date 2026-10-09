@@ -1,0 +1,1 @@
+/* Watermarks are embedded in the image files. No visual overlay is needed. */

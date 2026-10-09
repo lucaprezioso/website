@@ -5,7 +5,7 @@
 
    window.__LO_LOCATION_PAGE__ = {
      mapsQuery: "Zurich, Switzerland",
-     heroImage: "/media/gallery/hotel-terrace-landscape-1600.webp",
+     heroImage: "/media/unwatermarked/gallery/hotel-terrace-landscape-1600.webp",
      heroImageAlt: "Ferrari 458 Italia",
      badgeRight: "Switzerland",
      i18n: {
@@ -300,7 +300,7 @@
 
   const DEFAULT_CONFIG = {
     mapsQuery: "Zurich, Switzerland",
-    heroImage: "/media/gallery/hotel-terrace-landscape-1600.webp",
+    heroImage: "/media/unwatermarked/gallery/hotel-terrace-landscape-1600.webp",
     heroImageAlt: "Ferrari 458 Italia",
     badgeRight: "Switzerland",
     i18n: DEFAULT_I18N
