@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="/assets/lo.bundle-dc9240d0b07a.css">
+<script data-lo-google-tracking defer src="/assets/lo.consent.js?v=49d936697035"></script>
+<meta charset="utf-8">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-latin-3100e775e8.woff2" crossorigin="anonymous">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/cormorant-garamond-latin-d80df8ff5a.woff2" crossorigin="anonymous">
+
+<title>Ferrari F12 vs 458: V12 GT, Handling &amp; Hidden Details</title>
+<meta name="description" content="Ferrari F12 vs 458 Italia: V12 engineering, F1-inspired details, weight, handling and luggage, plus the F12’s mechanical appeal beside the 812.">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="index, follow" name="robots"><meta content="Luxury Obsession" name="author"><meta content="#050509" name="theme-color"><meta content="https://luxuryobsession.ch/en/ferrari-f12-vs-458-812" property="og:url"><meta content="en_CH" property="og:locale"><meta property="article:published_time" content="2026-10-09"><meta property="article:modified_time" content="2026-10-10">
+<meta property="og:title" content="Ferrari F12 vs 458: V12 GT, Handling &amp; Hidden Details">
+<meta property="og:description" content="Ferrari F12 vs 458 Italia: V12 engineering, F1-inspired details, weight, handling and luggage, plus the F12’s mechanical appeal beside the 812.">
+<meta content="article" property="og:type">
+<meta property="og:image" content="https://luxuryobsession.ch/media/ferrari-f12-front-960.webp">
+<meta property="og:image:width" content="960">
+<meta property="og:image:height" content="514">
+<meta content="summary_large_image" name="twitter:card">
+<meta name="twitter:title" content="Ferrari F12 vs 458: V12 GT, Handling &amp; Hidden Details">
+<meta name="twitter:description" content="Ferrari F12 vs 458 Italia: V12 engineering, F1-inspired details, weight, handling and luggage, plus the F12’s mechanical appeal beside the 812.">
+<meta name="twitter:image" content="https://luxuryobsession.ch/media/ferrari-f12-front-960.webp">
+<link href="/media/brand-icon-60.webp?v=logo-20261004-transparent" rel="icon" type="image/webp">
+<link href="../favicon.ico?v=logo-20261004-transparent" rel="icon" sizes="any">
+<link href="../favicon-32x32.png?v=logo-20261004-transparent" rel="icon" sizes="32x32" type="image/png">
+<link href="../favicon-48x48.png?v=logo-20261004-transparent" rel="icon" sizes="48x48" type="image/png">
+<link href="../apple-touch-icon.png?v=logo-20261004-transparent" rel="apple-touch-icon" sizes="180x180">
+<link href="../site.webmanifest?v=logo-20261004-transparent" rel="manifest">
+<link href="https://luxuryobsession.ch/en/ferrari-f12-vs-458-812" rel="canonical">
+<link href="https://luxuryobsession.ch/de/ferrari-f12-vs-458-812" hreflang="de-CH" rel="alternate">
+<link href="https://luxuryobsession.ch/de/ferrari-f12-vs-458-812" hreflang="de" rel="alternate">
+<link href="https://luxuryobsession.ch/en/ferrari-f12-vs-458-812" hreflang="en-CH" rel="alternate">
+<link href="https://luxuryobsession.ch/en/ferrari-f12-vs-458-812" hreflang="en" rel="alternate">
+<link href="https://luxuryobsession.ch/it/ferrari-f12-vs-458-812" hreflang="it-CH" rel="alternate">
+<link href="https://luxuryobsession.ch/it/ferrari-f12-vs-458-812" hreflang="it" rel="alternate">
+<link href="https://luxuryobsession.ch/en/ferrari-f12-vs-458-812" hreflang="x-default" rel="alternate">
+
+
+
+
+
+
+
+
+<script>
+(function(){
+  const CURRENT_LANG = "en";
+  const LANGS = ["en","de","it"];
+  const PAGE_MAP = {
+    en: "/en/ferrari-f12-vs-458-812",
+    de: "/de/ferrari-f12-vs-458-812",
+    it: "/it/ferrari-f12-vs-458-812"
+  };
+
+  function getLang(){
+    return CURRENT_LANG;
+  }
+
+  function setLang(next){
+    if(!LANGS.includes(next)) return;
+    try { localStorage.setItem("lo_lang", next); } catch(e) {}
+    const target = PAGE_MAP[next] || PAGE_MAP[CURRENT_LANG];
+    if(target) window.location.href = (window.__LO__ && typeof window.__LO__.withAttributionParams === "function") ? window.__LO__.withAttributionParams(target) : target;
+  }
+
+  function buildUrl(path, lang, hash){
+    try{
+      const u = new URL(path, window.location.href);
+      u.searchParams.set("lang", lang || CURRENT_LANG);
+      if(hash) u.hash = hash;
+      return u.pathname + u.search + u.hash;
+    }catch(e){
+      return path;
+    }
+  }
+
+  function initLangMenu(lang){
+    const toggle = document.getElementById("langToggle");
+    const menu = document.getElementById("langMenu");
+    const codeEl = document.getElementById("langCode");
+    if(!toggle || !menu || !codeEl) return;
+
+    const codes = { en:"EN", de:"DE", it:"IT" };
+    codeEl.textContent = codes[lang] || codes[CURRENT_LANG];
+
+    function close(){
+      menu.hidden = true;
+      toggle.setAttribute("aria-expanded","false");
+    }
+    function open(){
+      menu.hidden = false;
+      toggle.setAttribute("aria-expanded","true");
+    }
+
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = !menu.hidden;
+      if(isOpen) close();
+      else open();
+    });
+
+    document.addEventListener("click", () => close(), { passive:true });
+    document.addEventListener("keydown", (e) => { if(e.key === "Escape") close(); });
+
+    menu.querySelectorAll("[data-lang]").forEach(btn => {
+      const code = btn.getAttribute("data-lang");
+      btn.setAttribute("aria-current", code === lang ? "true" : "false");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setLang(code);
+      });
+    });
+  }
+
+  function initHamburger(){
+    const btn = document.getElementById("hamburger");
+    const menu = document.getElementById("mobileMenu");
+    if(!btn || !menu) return;
+
+    function close(){
+      menu.style.display = "none";
+      menu.setAttribute("data-open","0");
+      btn.setAttribute("aria-expanded","false");
+    }
+
+    btn.addEventListener("click", () => {
+      const open = menu.getAttribute("data-open") === "1";
+      if(open) close();
+      else {
+        menu.style.display = "block";
+        menu.setAttribute("data-open","1");
+        btn.setAttribute("aria-expanded","true");
+      }
+    });
+
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
+    document.addEventListener("click", (e) => {
+      if(menu.getAttribute("data-open") !== "1") return;
+      if(menu.contains(e.target) || btn.contains(e.target)) return;
+      close();
+    });
+  }
+
+  window.__LO__ = { getLang, setLang, buildUrl, initLangMenu, initHamburger };
+})();
+</script>
+<link rel="stylesheet" href="/assets/lo.bundle-407be8ad2933.css">
+
+<script defer src="../assets/lo.js?v=472995f9c693"></script><script>
+try {
+  localStorage.setItem("lo_lang", "en");
+  const u = new URL(window.location.href);
+  if (u.searchParams.has("lang")) {
+    u.searchParams.delete("lang");
+    window.history.replaceState(null, "", u.pathname + u.search + u.hash);
+  }
+} catch (e) {}
+</script><link href="/assets/lo.journal-back.css" rel="stylesheet"><style data-lo-accessibility>
+
+/* Keyboard access and booking details; initial hero layout is unchanged. */
+.loSkipLink{position:fixed;top:8px;left:12px;transform:translateY(-180%);z-index:2147483647;padding:12px 18px;border-radius:8px;background:#e7d8b8;color:#101010;font:600 15px/1.4 system-ui;text-decoration:none}
+.loSkipLink:focus{transform:translateY(0)}
+:where(a,button,input,select,textarea,[tabindex]:not([tabindex="-1"])):focus-visible{outline:2px solid #e7d8b8!important;outline-offset:3px!important}
+.calPopup{max-height:calc(100vh - 16px);max-height:calc(100dvh - 16px);overflow-y:auto}
+.loBookingDetails{margin-top:12px;font-size:.82rem;line-height:1.5;color:rgba(255,255,255,.8)}
+.loBookingDetails summary{cursor:pointer;color:#e7d8b8;padding:6px 0}
+.loBookingDetails p{margin:6px 0 10px}
+.loFormPrivacy{margin:8px 0;font-size:.78rem;line-height:1.5;color:rgba(255,255,255,.75)}
+.loFormPrivacy a{text-decoration:underline;text-underline-offset:3px}
+</style>
+<link rel="stylesheet" href="/assets/lo.guides.css?v=20260928b">
+
+<style id="lo-compact-header">
+/* Shared compact header; kept inline to avoid a new blocking request. */
+header .brand .brandIcon{width:48px;height:48px;flex:0 0 48px;object-fit:contain}
+header .navInner{padding-top:6px!important;padding-bottom:6px!important}
+@media(max-width:760px){header .brand .brandIcon{width:44px;height:44px;flex-basis:44px}header .navInner{padding-top:4px!important;padding-bottom:4px!important}}
+@media(max-width:360px){header .brand .brandIcon{width:40px;height:40px;flex-basis:40px}}
+</style>
+<script defer src="/assets/lo.photo-context.js?v=20261007a"></script>
+<style>
+.f12Story .f12Copy{max-width:74ch;margin-left:auto;margin-right:auto}
+.f12Story .f12Hero{margin:1.6rem 0 1.8rem}
+.f12Story .f12Hero img{display:block;width:100%;height:auto;border-radius:16px}
+.f12Story figcaption{margin-top:.55rem;font-size:.86rem;line-height:1.6;color:var(--muted)}
+.f12Story .f12Engine{display:grid;grid-template-columns:minmax(0,1fr) 168px;gap:1.8rem;align-items:start}
+.f12Story .f12Engine figure{margin:2.2rem 0 0;width:168px}
+.f12Story .f12Engine img{display:block;width:168px;height:299px;border-radius:10px}
+.f12Story h2{line-height:1.2}.f12Story section{scroll-margin-top:90px}
+.f12Story .f12Compare{overflow-x:auto;margin:1rem 0;border:1px solid rgba(243,241,238,.16);border-radius:14px}
+.f12Story table{width:100%;min-width:620px;border-collapse:collapse;font-size:.94rem}
+.f12Story th,.f12Story td{padding:.8rem;text-align:left;border-bottom:1px solid rgba(243,241,238,.12);line-height:1.5}
+.f12Story th{font-weight:600}.f12Story th:nth-child(2),.f12Story td:nth-child(2){background:rgba(231,220,198,.07)}
+.f12Story .f12Videos{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:1.5rem;align-items:start}
+.f12Story .f12Video{position:relative;aspect-ratio:16/9;display:grid;place-items:center;background:#121214;border:1px solid rgba(243,241,238,.2);border-radius:14px;overflow:hidden}
+.f12Story .f12Video--short{aspect-ratio:9/16;max-width:240px;margin:auto}
+.f12Story .f12Video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.f12Story .f12Video button{min-height:48px;padding:.85rem 1rem;margin:1rem;border:1px solid #aaa;border-radius:24px;background:#242426;color:#fff;font:inherit;cursor:pointer}
+.f12Story .f12Video a{padding:.8rem;color:#fff}.f12Story .f12External{display:inline-flex;min-height:44px;align-items:center;font-size:.9rem}
+.f12Story .f12Privacy,.f12Story .f12Sources{font-size:.88rem;line-height:1.7;color:var(--muted)}
+.f12Story .f12Sources a{overflow-wrap:anywhere}.f12Story .f12Sources li{scroll-margin-top:90px}
+.f12Story .f12Faq details{border-bottom:1px solid rgba(243,241,238,.15);padding:.8rem 0}
+.f12Story .f12Faq summary{cursor:pointer;min-height:44px;display:list-item;align-content:center;font-weight:600}
+.f12Story .f12Faq p{margin:.65rem 0}.f12Story .f12Cta{margin-top:2rem;padding:1.3rem;border:1px solid rgba(231,220,198,.25);border-radius:16px}
+.f12Story .f12Cta h2{margin-top:0}.f12Story .ctaRow{flex-wrap:wrap}
+@media(max-width:600px){.f12Story .f12Engine{grid-template-columns:1fr;gap:0}.f12Story .f12Engine figure{margin:.3rem auto 1.5rem}.f12Story .f12Videos{grid-template-columns:1fr}.f12Story h2{font-size:1.65rem}}
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "@id": "https://luxuryobsession.ch/en/ferrari-f12-vs-458-812#article", "headline": "Ferrari F12 vs 458 Italia: V12 character, supercar agility and the details that matter", "description": "Ferrari F12 vs 458 Italia: V12 engineering, F1-inspired details, weight, handling and luggage, plus the F12’s mechanical appeal beside the 812.", "image": ["https://luxuryobsession.ch/media/ferrari-f12-front-960.webp"], "author": {"@type": "Organization", "name": "Luxury Obsession"}, "publisher": {"@type": "Organization", "name": "Luxury Obsession", "logo": {"@type": "ImageObject", "url": "https://luxuryobsession.ch/media/icon.webp?v=logo-20261004-transparent"}}, "datePublished": "2026-10-09", "dateModified": "2026-10-10", "inLanguage": "en", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://luxuryobsession.ch/en/ferrari-f12-vs-458-812"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxuryobsession.ch/en/"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://luxuryobsession.ch/en/journal"}, {"@type": "ListItem", "position": 3, "name": "Ferrari F12 vs 458 Italia: V12 character, supercar agility and the details that matter", "item": "https://luxuryobsession.ch/en/ferrari-f12-vs-458-812"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do the F12 and 458 differ on winding roads?", "acceptedAnswer": {"@type": "Answer", "text": "The 458 has a lower published dry weight, a shorter wheelbase and a mid-engine layout. The F12 combines more power and torque with rear-biased weight distribution and direct steering. These characteristics shape different driving experiences; they do not prove that either car is faster through every corner."}}, {"@type": "Question", "name": "Is the F12 an alternative to the 458?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if you are comparing experiences rather than looking for the same layout. The F12 is a front-mid-engine V12 GT; the 458 Italia is a mid-rear-engine V8 supercar."}}, {"@type": "Question", "name": "What changes between the F12 and 812 Superfast?", "acceptedAnswer": {"@type": "Answer", "text": "The 812 adds 60 CV, increases engine capacity to 6.5 litres and combines electric power steering with rear-wheel steering. The standard F12berlinetta uses hydraulic power assistance without rear-wheel steering. Both are naturally aspirated V12 GTs with rear-wheel drive."}}, {"@type": "Question", "name": "Can I rent the F12 from Luxury Obsession?", "acceptedAnswer": {"@type": "Answer", "text": "Our rental car is the Ferrari 458 Italia. This article discusses the F12 as an enthusiast comparison, not as an available rental model."}}]}]}</script><script>window.LO_LANGUAGE_URLS={"en": "/en/ferrari-f12-vs-458-812", "de": "/de/ferrari-f12-vs-458-812", "it": "/it/ferrari-f12-vs-458-812"};</script><script defer src="/assets/lo.f12-video.js?v=20261010b"></script><style>
+/* Article photography and video previews. */
+.f12Story .f12Photo{margin:1.5rem auto;max-width:100%}
+.f12Story .f12Photo img{display:block;width:100%;height:auto;border-radius:12px}
+.f12Story .f12Photo--portrait{max-width:300px}
+.f12Story .f12PhotoPair{display:flex;flex-wrap:wrap;gap:1.4rem;align-items:start;justify-content:center;margin:1.5rem 0}
+.f12Story .f12PhotoPair .f12Photo{flex:0 1 auto;margin:0}
+.f12Story .f12Video .f12Poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.f12Story .f12Video button{position:relative;z-index:1;background:rgba(15,15,18,.9);box-shadow:0 2px 16px rgba(0,0,0,.45)}
+.f12Story .f12Video noscript{position:relative;z-index:1;background:#121214}
+</style>
+<style>
+@media(min-width:761px){
+ .f12Story .f12FogSection{display:flow-root}
+ .f12Story .f12FogSection .f12Photo--portrait{float:right;width:260px;max-width:40%;margin:.25rem 0 1rem 1.6rem}
+ .f12Story .f12FogSection .f12Photo--portrait img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center bottom}
+}
+</style>
+</head>
+<body>
+<a class="loSkipLink" href="#main-content">Skip to content</a>
+<header>
+<div class="container">
+<div class="navInner">
+<a aria-label="Luxury Obsession" class="brand" data-withlang="1" href="/en/">
+<img alt="Luxury Obsession icon" class="brandIcon" src="/media/brand-icon-60.webp?v=logo-20261004-transparent" srcset="/media/brand-icon-120.webp?v=logo-20261004-transparent 2x, /media/brand-icon-180.webp?v=logo-20261004-transparent 3x" width="237" height="237">
+<span class="brandGold">Luxury Obsession</span>
+</a>
+<div class="navRight">
+<nav aria-label="Primary" class="navLinks">
+<a data-i18n="nav_rates" data-withlang="1" href="/en/pricing" id="navRates">Rates</a>
+<a href="/en/gallery" id="navGallery">Gallery</a>
+<a data-i18n="nav_philosophy" data-withlang="1" href="/en/philosophy" id="navPhilosophy">Our Philosophy</a>
+<a data-i18n="nav_experiences" data-withlang="1" href="/en/experiences" id="navExperiences">Experiences</a><a href="/en/ferrari-gift-voucher-zurich" id="navVoucher">Gift voucher</a>
+<a data-i18n="nav_journal" data-withlang="1" href="/en/journal" id="navBlog">Journal</a>
+<a data-i18n="nav_contact" href="/en/#contact" id="navContact">Contact</a>
+<a class="navCta" data-i18n="nav_request" href="/en/#request" id="navRequest">Request</a>
+</nav>
+<div aria-label="Language" class="langSelect">
+<button aria-expanded="false" aria-haspopup="menu" class="langToggle" id="langToggle" type="button">
+<span aria-label="Current language" id="langCode">EN</span>
+<span aria-hidden="true" class="langChevron">▾</span>
+</button>
+<div aria-label="Select language" class="langMenu" hidden="" id="langMenu" role="menu">
+<button class="langOption" data-lang="en" role="menuitem" type="button">English</button>
+<button class="langOption" data-lang="de" role="menuitem" type="button">Deutsch</button>
+<button class="langOption" data-lang="it" role="menuitem" type="button">Italiano</button>
+</div>
+</div>
+<button aria-expanded="false" aria-label="menu" class="hamburger" id="hamburger" type="button">
+<div class="hamburgerLines"><span></span><span></span><span></span></div>
+</button>
+</div>
+</div>
+<div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation" style="display:none"></div>
+</div>
+</header>
+<main id="main-content" tabindex="-1" class="f12Story"><section class="hero"><div class="container articleWrap">
+<nav aria-label="Breadcrumb" class="journalTrail"><ol class="journalTrail__desktop"><li><a href="/en/">Home</a></li><li><a href="/en/journal">Journal</a></li><li aria-current="page" class="journalTrail__current">F12 · 458 · 812</li></ol><a class="journalTrail__mobile" href="/en/journal"><span aria-hidden="true" class="journalTrail__arrow">←</span><span>Back to journal</span></a></nav>
+<div class="eyebrow">Luxury Obsession Journal</div><h1 class="heroTitle">Ferrari F12 vs 458 Italia: V12 character, supercar agility and the details that matter</h1><p class="heroDeck">The F12berlinetta combines a spectacular V12 with grand-touring proportions. The 458 Italia brings a 4.5-litre, 9,000-rpm V8 to a lighter mid-engine chassis. Their strengths explain why the 458 is such a compelling driving car and the F12 such an appealing V12 GT.</p><div class="meta"><time datetime="2026-10-09">09.10.2026</time> · Luxury Obsession</div>
+<figure class="f12Hero"><img src="/media/ferrari-f12-front-960.webp" srcset="/media/ferrari-f12-front-480.webp 480w, /media/ferrari-f12-front-960.webp 960w" sizes="(max-width: 980px) calc(100vw - 3rem), 932px" alt="Red Ferrari F12berlinetta viewed from the front three-quarter angle" width="960" height="514" fetchpriority="high" decoding="async"><figcaption>Long bonnet, sculpted flanks and a compact cabin: the F12’s proportions are part of its appeal.</figcaption></figure>
+<article class="prose f12Copy"><p>A Ferrari comparison should start with what makes each car special. The 458 Italia has a 4.5-litre naturally aspirated V8 producing 570 CV at 9,000 rpm, a seven-speed dual-clutch gearbox and a mid-engine layout. These are the ingredients of a serious supercar, with lower mass and compact proportions that give it a particularly strong case on winding roads. The F12berlinetta answers with a 6.3-litre V12, 740 CV and the long-bonnet silhouette of a two-seat grand tourer.</p><p>The distinction is between two accomplished expressions of Ferrari engineering. The 458 concentrates the experience around a high-revving V8 and an agile chassis. The F12 adds twelve-cylinder theatre and greater touring flexibility. Its hydraulic steering, integrated aerodynamics and carefully considered details also give it a distinctive appeal beside the later 812 Superfast and 12Cilindri. Understanding those details makes this a more useful comparison than simply choosing the highest power figure.</p><section><h2>The 458’s 4.5-litre V8 and mid-engine character</h2><p>The 458’s engine is an attraction in its own right. Its 570 CV from 4.5 litres equates to approximately 127 CV per litre without turbocharging, with peak power arriving at 9,000 rpm. <a href="#source-458">[5]</a> That combination gives the Italia a clear identity: the reward is in response, revs and the relationship between accelerator, gearbox and road, rather than the effortless delivery of a much larger torque figure.</p><p>It also puts the F12 comparison into perspective. Four fewer cylinders do not make the 458 a diluted Ferrari. Its engine sits behind the occupants in a body built around the mid-engine concept, and the lower published dry weight reduces the mass the chassis must manage. On an itinerary made up of climbs, linked bends and frequent changes of direction, those are relevant strengths.</p><p>For a driver who wants the journey to revolve around cornering rhythm and the sound of a naturally aspirated engine, the 458 offers a complete proposition. The F12’s greater output gives it a different character, rather than automatically a more rewarding one.</p></section><section class="f12Engine"><div><h2>A V12 with two distinct sides</h2><p>The F12’s 6,262 cc, 65-degree naturally aspirated V12 produces 740 CV at 8,250 rpm and 690 Nm at 6,000 rpm, with an 8,700 rpm limit. Those last two numbers matter together. There is substantial torque to work with, but peak power still arrives high in the rev range. This is a large engine with a reason to keep revving, rather than one that has finished its best work halfway up the dial. <a href="#source-f12">[1]</a></p><p>The combination gives the F12 two useful characteristics: substantial torque for touring and a power peak that rewards using the upper rev range. Its seven-speed dual-clutch gearbox allows the driver to select gears with the paddles or use automatic operation. The V12 therefore belongs in a grand tourer without losing the high-revving nature associated with Ferrari’s sports cars.</p></div><figure><img src="/media/ferrari-f12-v12-engine.webp" alt="Ferrari F12berlinetta with its bonnet open, showing the V12 engine" width="168" height="299" loading="lazy" decoding="async"><figcaption>The V12 beneath the F12’s long bonnet.</figcaption></figure></section><section><h2>A detail behind the drama: useful torque well before the red line</h2><p>One less obvious F12 detail is that Ferrari quoted 80 per cent of maximum torque as available from 2,500 rpm. The same engine uses 200-bar direct injection and reaches its power peak at 8,250 rpm. <a href="#source-torque">[11]</a> The interest lies in the breadth: its character is not confined to a narrow band near the limiter.</p><p>That helps explain why an engine capable of such dramatic high-rev performance can also work in a grand tourer. The driver need not treat every section of a journey as an exercise in chasing the next downshift. When the road and conditions permit, the upper rev range remains a distinct part of the experience. This flexibility is one of the F12’s strongest arguments as a V12 GT.</p></section><section><h2>Front engine does not mean all the weight is at the front</h2><p>The F12 uses a front-mid-engine layout with a rear transaxle: the gearbox sits at the back, helping distribute mass along the car. Ferrari quotes 46 per cent of the weight over the front axle and 54 per cent over the rear. Its seven-speed dual-clutch transmission drives the rear wheels. Reading it as a conventional nose-heavy coupé therefore misses the point. <a href="#source-launch">[2]</a></p><p>The layout also changes the view from the driving seat and the packaging of the cabin and luggage space. In the F12, the long bonnet stretches ahead of the occupants. In the 458, the engine sits behind them and the main luggage compartment is at the front. These are different ways of organising a sports car, rather than a simple division between a capable and an incapable chassis.</p></section><section><h2>Twelve alloys beneath the bodywork</h2><p>The F12’s aluminium structure is another detail that headline power figures can obscure. Ferrari describes the use of twelve different alloy types in its construction. <a href="#source-alloys">[12]</a> That reflects an approach in which the material is selected for the task, rather than treating every part of the structure as the same piece of metal.</p><p>A body has to satisfy several demands at once: stiffness, weight, load paths, manufacturing and the way its components are joined. The alloy count is interesting because it reveals the engineering beneath an apparently traditional long-bonnet coupé. The F12’s appeal is therefore more than an exceptional engine placed in an elegant shell; the shell is part of the performance project.</p></section><section><h2>The Aero Bridge: the beautiful part is doing a job</h2><p>The F12’s sculpted front wings are more than decoration. The Aero Bridge directs airflow from the bonnet towards the sides of the car to help generate downforce. Active Brake Cooling adds movable vanes to the brake-cooling ducts, opening them when cooling is needed and reducing drag when closed. <a href="#source-aero">[3]</a></p><p>The design was developed by the Ferrari Styling Centre in collaboration with Pininfarina. <a href="#source-design">[4]</a> The air passages are integrated into the bonnet and flanks, making the aerodynamic treatment a defining part of the body shape. The long bonnet and rearward cabin distinguish it clearly from the mid-engine proportions of the 458.</p><p>Ferrari’s brochure quotes a drag coefficient of 0.299 and 123 kg of downforce at 200 km/h for the F12. <a href="#source-brochure">[13]</a> These figures put the Aero Bridge and brake-cooling vanes into context: the body was developed to manage both resistance and aerodynamic load, while retaining recognisable GT proportions.</p><p>The brake-cooling arrangement is particularly revealing. Keeping the vanes open all the time would not be the most efficient solution; opening them when cooling is required reconciles two competing demands. The same design logic gives the Aero Bridge its interest: a passage shaped into the body does useful work without becoming an oversized external appendage.</p><p>The quoted downforce is a measurement at a specified speed, not a constant load available at any road speed. Its significance here is the development effort behind the shape, rather than a promise about ordinary-road cornering.</p></section><section class="f12FogSection"><h2>The F1-inspired rear fog light and the Kamm-style tail</h2><figure class="f12Photo f12Photo--portrait"><img src="/media/f12-article-fog-private-480.webp" srcset="/media/f12-article-fog-private-480.webp 480w" sizes="(min-width: 761px) 260px, 300px" width="480" height="1024" loading="lazy" decoding="async" alt="F12 rear view: the F1-inspired fog light sits low in the centre. Photo: Ferrari."><figcaption>F12 rear view: the F1-inspired fog light sits low in the centre. Photo: Ferrari.</figcaption></figure><p>Look low in the centre of the rear and the F12 has a small detail with a clear motorsport connection: Ferrari describes its rear fog light as F1-inspired. The rear also combines circular tail lamps with a Kamm-style treatment and the vertical elements of the diffuser, creating a distinctive T-shaped composition. <a href="#source-f12">[1]</a> It is a design reference to Formula 1, rather than a claim that the road car uses an identical racing component.</p><p>This is one of the details that rewards looking beyond the familiar front three-quarter view. The long bonnet communicates the grand-tourer layout; the concentrated lighting and diffuser treatment at the back express a more competition-influenced identity. Together they explain how the F12 can look elegant and purposeful without relying on a large rear wing.</p></section><section><h2>Three Ferraris, three different priorities</h2><p>Standard F12berlinetta, 458 Italia and 812 Superfast coupés. Manufacturer figures; CV/PS denotes metric horsepower, not SAE hp. All three have rear-wheel drive and seven-speed dual-clutch transmissions.</p><div class="f12Compare" role="region" tabindex="0" aria-label="Three Ferraris, three different priorities"><table><thead><tr><th scope="col">Specification</th><th scope="col">F12berlinetta</th><th scope="col">458 Italia</th><th scope="col">812 Superfast</th></tr></thead><tbody><tr><th scope="row">Engine</th><td>6,262 cc V12</td><td>4,497 cc V8</td><td>6,496 cc V12</td></tr><tr><th scope="row">Position</th><td>Front-mid</td><td>Mid-rear</td><td>Front-mid</td></tr><tr><th scope="row">Power</th><td>740 CV</td><td>570 CV</td><td>800 CV</td></tr><tr><th scope="row">Peak power speed</th><td>8,250 rpm</td><td>9,000 rpm</td><td>8,500 rpm</td></tr><tr><th scope="row">Published dry weight*</th><td>1,525 kg</td><td>1,380 kg</td><td>1,525 kg</td></tr><tr><th scope="row">Length</th><td>4,618 mm</td><td>4,527 mm</td><td>4,657 mm</td></tr><tr><th scope="row">Body width</th><td>1,942 mm</td><td>1,937 mm</td><td>1,971 mm</td></tr><tr><th scope="row">Height</th><td>1,273 mm</td><td>1,213 mm</td><td>1,276 mm</td></tr><tr><th scope="row">Wheelbase</th><td>2,720 mm</td><td>2,650 mm</td><td>2,720 mm</td></tr></tbody></table></div><p class="f12Privacy">Video previews are loaded from YouTube. The video player loads only when you choose to watch.<a href="#source-dimensions">[9]</a></p><p class="f12Privacy"><a href="#source-f12">[1]</a> · <a href="#source-458">[5]</a> · <a href="#source-812">[6]</a></p></section><section><h2>Ferrari F12 vs 458: weight, dimensions and agility</h2><p>The 458 has 170 CV less than the F12, but Ferrari’s published dry figures put it 145 kg lighter. Its wheelbase is 70 mm shorter and its body 91 mm shorter and 60 mm lower. Width is almost identical: the F12 is only 5 mm wider. The distinction is therefore more about mass, engine position and proportions than a dramatically narrower footprint. <a href="#source-dimensions">[9]</a></p><p>Lower mass means less inertia to manage under braking and during changes of direction. Together with its mid-engine layout, this helps explain the 458’s appeal on roads with linked bends, climbs and changing gradients. Its supercar character centres on placing the car accurately, working with the gearbox and building a rhythm through corners.</p><p>The F12 pairs greater mass with substantially more power and torque. Its rear-biased weight distribution and direct steering make it a performance-focused GT, rather than a soft touring coupé. The Straight Pipes review discussed below is particularly useful on this point: its reported steering impressions underline how responsive the F12 can be. Weight and dimensions help explain the distinction, but do not establish a universal cornering-speed or lap-time ranking.</p><p>For more detail on the V8 car’s engine and design, see the <a href="/en/ferrari-458-italia">Ferrari 458 Italia guide</a>.</p></section><section><h2>A two-seat GT, including the space behind the seats</h2><p>The F12’s touring brief is visible inside as well. Ferrari’s description includes an upholstered rear shelf or bench area with leather straps for securing bags. <a href="#source-f12">[1]</a> This is luggage space, not a second row of passenger seats: the F12 remains a two-seater.</p><p>That distinction matters when imagining a trip for two. The appeal is not simply carrying more objects, but having an interior organised around travelling with them. It complements the rear luggage area and helps explain why the F12 suits a longer GT itinerary. The 458 makes a different trade-off, prioritising its mid-engine arrangement and asking the travellers to pack more selectively.</p><figure class="f12Photo"><img src="/media/f12-article-luggage-960.webp" srcset="/media/f12-article-luggage-480.webp 480w, /media/f12-article-luggage-960.webp 960w" sizes="(max-width: 600px) calc(100vw - 3rem), 740px" width="960" height="540" loading="lazy" decoding="async" alt="The F12’s luggage area behind the two seats, with leather retaining straps."><figcaption>The F12’s luggage area behind the two seats, with leather retaining straps.</figcaption></figure><figure class="f12Photo"><img src="/media/f12-article-interior-960.webp" srcset="/media/f12-article-interior-480.webp 480w, /media/f12-article-interior-960.webp 960w" sizes="(max-width: 600px) calc(100vw - 3rem), 740px" width="960" height="720" loading="lazy" decoding="async" alt="Inside the F12: the dashboard and centre console viewed through the side window."><figcaption>Inside the F12: the dashboard and centre console viewed through the side window.</figcaption></figure></section><section><h2>F12 or 458 for two people: luggage and touring</h2><p>The F12’s rear luggage area and GT layout make it the more practical of these two choices for a couple carrying more bags or planning a longer touring itinerary. The 458’s front luggage compartment calls for a more selective packing approach.</p><p>For lighter travel, a soft weekender bag and a small backpack per person provide a useful starting point for planning a 458 trip. Fit depends on the dimensions and fullness of the individual bags; this is not a guarantee that any four bags will fit. Share the measurements before booking so the arrangement can be checked and everything safely stowed.</p><p>The practical distinction is straightforward: the F12 offers more luggage flexibility, while the 458 suits travellers willing to pack around a more compact, mid-engine sports car.</p></section><section><h2>Ferrari F12 vs 812 Superfast: what the successor improves</h2><p>The 812 Superfast develops the front-engine V12 formula with 6,496 cc and 800 CV at 8,500 rpm, an increase of 60 CV over the F12. It retains the naturally aspirated engine and rear-wheel drive, while introducing electric power steering to Ferrari’s range and combining it with rear-wheel steering through Virtual Short Wheelbase 2.0. <a href="#source-812">[6]</a></p><p>These changes make the 812 a substantial evolution. It combines greater engine output with a more integrated approach to steering and chassis control, extending the capabilities of the V12 GT rather than changing its fundamental identity. It remains a compelling car in its own right: a high-revving twelve-cylinder engine, two-seat touring layout and sophisticated chassis in one package.</p><p>The standard F12berlinetta uses hydraulic power assistance and does not have the rear-wheel-steering system introduced on the F12tdf. <a href="#source-manual">[7]</a> <a href="#source-tdf">[8]</a></p><div class="f12PhotoPair"><figure class="f12Photo" style="width:330px"><img src="/media/f12-article-812-330.webp" srcset="/media/f12-article-812-330.webp 330w" sizes="(max-width: 600px) calc(100vw - 3rem), 330px" width="330" height="169" loading="lazy" decoding="async" alt="Ferrari 812 Superfast: the next generation of the front-engine V12 GT."><figcaption>Ferrari 812 Superfast: the next generation of the front-engine V12 GT.</figcaption></figure><figure class="f12Photo" style="width:250px"><img src="/media/f12-article-812-interior-250.webp" srcset="/media/f12-article-812-interior-250.webp 250w" sizes="(max-width: 600px) calc(100vw - 3rem), 250px" width="250" height="167" loading="lazy" decoding="async" alt="The 812’s driver-focused cockpit."><figcaption>The 812’s driver-focused cockpit.</figcaption></figure></div></section><section><h2>Why the F12 appeals to enthusiasts seeking a more mechanical feel</h2><p>The F12’s case against the 812 is strongest when the comparison moves from outright capability to the way that capability is experienced. Hydraulic steering and the absence of rear-wheel steering on the standard berlinetta give it an earlier configuration of controls. For an enthusiast who values that arrangement, the F12 offers a reason to seek out the predecessor deliberately, rather than simply accept it as the older car.</p><p>A contemporary Automobile first drive praised the F12’s steering communication and described a car whose electronic assistance remained unobtrusive from the driver’s seat. <a href="#source-drive">[14]</a> That helps explain its reputation for an immediate, mechanical character: the attraction is the sensation of direct responses, not a literal absence of electronics. Its dual-clutch transmission and electronic chassis systems are integral to the car.</p><p>The 812 takes that formula further with more power and additional chassis control. Forza’s road test found its steering related in feel to the F12’s and described the newer systems as subtle aids to exploiting its ability. <a href="#source-812-drive">[15]</a> The useful distinction is therefore the F12’s rawer appeal to drivers who favour the earlier setup, alongside the 812’s broader technical capabilities. Both are enthusiast cars; the F12’s specific strengths remain compelling even when the successor is objectively more advanced.</p></section><section><h2>Where the Ferrari 12Cilindri fits</h2><p>The 12Cilindri continues the front-mid-engine V12 lineage after the 812 Superfast. Its naturally aspirated 6.5-litre engine produces 830 CV and reaches a 9,500 rpm limit, paired with an eight-speed dual-clutch gearbox. <a href="#source-12cilindri">[10]</a></p><p>It also gives the concept a different visual identity, with a more geometric, retro-futuristic treatment than the flowing F12. Across these three generations, the underlying appeal remains a naturally aspirated V12 ahead of a two-seat cabin. The differences lie in their design, controls and degree of technical development, rather than a simple progression from character to its absence.</p><figure class="f12Photo"><img src="/media/f12-article-12cilindri-960.webp" srcset="/media/f12-article-12cilindri-480.webp 480w, /media/f12-article-12cilindri-960.webp 960w" sizes="(max-width: 600px) calc(100vw - 3rem), 740px" width="960" height="620" loading="lazy" decoding="async" alt="Ferrari 12Cilindri: a new interpretation of the front-engine V12."><figcaption>Ferrari 12Cilindri: a new interpretation of the front-engine V12.</figcaption></figure></section><section><h2>Watch the F12 in motion</h2><p>The Straight Pipes review explores the F12’s performance, steering, sound and design. The Short below offers another look at the car.</p><p class="f12Privacy">Loading a video connects to YouTube. No video player is loaded before you choose to watch.</p><div class="f12Videos"><div><h3>The Straight Pipes · F12 review</h3><p>The review presents the 2015 F12 as an intimidatingly powerful Ferrari, with its V12 and rear-wheel drive central to that impression. The presenters praise the naturally aspirated engine’s sound and rapid response (<a href="https://www.youtube.com/watch?v=jUUAcc87RZQ&amp;t=121s" target="_blank" rel="noopener noreferrer">2:01–2:20</a>). Their design comparison is particularly relevant here: they prefer the 458’s mid-engine proportions while also appreciating the F12’s long bonnet and muscular profile (<a href="https://www.youtube.com/watch?v=jUUAcc87RZQ&amp;t=276s" target="_blank" rel="noopener noreferrer">4:36–4:48</a>). They are also impressed by the F12’s exceptionally quick, precise steering, and discuss its firm suspension and adjustable damping (<a href="https://www.youtube.com/watch?v=jUUAcc87RZQ&amp;t=425s" target="_blank" rel="noopener noreferrer">7:05–7:55</a>). Inside, the steering-wheel shift lights and the quality and driver focus of the cabin receive particular attention. These observations add an important nuance to the comparison: the F12’s GT proportions and greater weight do not make it a relaxed or unresponsive alternative to the 458. The review describes an intense, demanding performance car.</p><div class="f12Video "><img class="f12Poster" src="https://i.ytimg.com/vi/jUUAcc87RZQ/hqdefault.jpg" width="480" height="360" loading="lazy" decoding="async" referrerpolicy="no-referrer" alt=""><button hidden type="button" data-f12-video="jUUAcc87RZQ" data-title="The Straight Pipes · F12 review" aria-label="Load video: The Straight Pipes · F12 review">▶ Load video</button><noscript><a href="https://www.youtube.com/watch?v=jUUAcc87RZQ" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></noscript></div><a class="f12External" href="https://www.youtube.com/watch?v=jUUAcc87RZQ" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></div><div><h3>F12 · YouTube Short</h3><div class="f12Video f12Video--short"><img class="f12Poster" src="https://i.ytimg.com/vi/Qq-75JlY0cs/hqdefault.jpg" width="480" height="360" loading="lazy" decoding="async" referrerpolicy="no-referrer" alt=""><button hidden type="button" data-f12-video="Qq-75JlY0cs" data-title="F12 · YouTube Short" aria-label="Load video: F12 · YouTube Short">▶ Load video</button><noscript><a href="https://www.youtube.com/shorts/Qq-75JlY0cs" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></noscript></div><a class="f12External" href="https://www.youtube.com/shorts/Qq-75JlY0cs" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></div></div></section>
+<section class="f12Faq"><h2>A few questions about the F12</h2><details><summary>How do the F12 and 458 differ on winding roads?</summary><p>The 458 has a lower published dry weight, a shorter wheelbase and a mid-engine layout. The F12 combines more power and torque with rear-biased weight distribution and direct steering. These characteristics shape different driving experiences; they do not prove that either car is faster through every corner.</p></details><details><summary>Is the F12 an alternative to the 458?</summary><p>Yes, if you are comparing experiences rather than looking for the same layout. The F12 is a front-mid-engine V12 GT; the 458 Italia is a mid-rear-engine V8 supercar.</p></details><details><summary>What changes between the F12 and 812 Superfast?</summary><p>The 812 adds 60 CV, increases engine capacity to 6.5 litres and combines electric power steering with rear-wheel steering. The standard F12berlinetta uses hydraulic power assistance without rear-wheel steering. Both are naturally aspirated V12 GTs with rear-wheel drive.</p></details><details><summary>Can I rent the F12 from Luxury Obsession?</summary><p>Our rental car is the Ferrari 458 Italia. This article discusses the F12 as an enthusiast comparison, not as an available rental model.</p></details></section>
+<section><h2>Luxury Obsession’s view: 458 for the curves, F12 among the V12s</h2><p>For a couple travelling light and building a Swiss driving holiday around winding roads, our choice is the Ferrari 458 Italia. Its lower mass, mid-engine layout and racier character are the qualities we value most for that kind of journey. With a weekender bag and a small backpack each, subject to a fit check, it is the Ferrari we would choose to make the drive the centre of the holiday.</p><p>For more luggage and a V12 grand tour, we would choose the F12berlinetta. Its proportions and combination of V12 performance with GT practicality make it our favourite of the three twelve-cylinder cars discussed here. The 812 Superfast is also a great Ferrari, with genuine performance and chassis advances; preferring the F12 does not diminish those strengths. The 12Cilindri is technically impressive, but its styling appeals to us less. That final preference is about taste, while the differences in the comparison above explain what each car offers.</p></section><section class="f12Cta"><h2>Experience the 458 side of the comparison</h2><p>You can <a href="/en/ferrari-rental-zurich">rent the Ferrari 458 Italia with Luxury Obsession</a>, with collection in Nänikon near Zurich and a personal handover. It is a chance to discover what a naturally aspirated mid-engine Ferrari means to you. Explore the <a href="/en/pricing">rental packages</a> and choose a journey that leaves time to enjoy the car.</p><p>For a personally hosted <a href="/en/">Ferrari rental in Zurich</a>, start with Luxury Obsession and plan the route around your time and luggage.</p><a class="ctaBtn ctaBtnPrimary" href="/en/#request">Request your 458 drive</a></section>
+<section class="f12Sources"><h2>Sources and technical references</h2><ol><li id="source-f12"><a href="https://www.ferrarisouthbay.com/past-models/f12-berlinetta" target="_blank" rel="noopener noreferrer">Ferrari South Bay · F12berlinetta</a></li><li id="source-launch"><a href="https://www.prnewswire.com/news-releases/the-f12berlinetta-the-fastest-ferrari-ever-built-makes-north-american-debut-at-pebble-beach-concours-delegance-166145426.html" target="_blank" rel="noopener noreferrer">Ferrari · F12berlinetta, 2012</a></li><li id="source-aero"><a href="https://www.millermotorcars.com/showroom/ferrari/f12_berlinetta/" target="_blank" rel="noopener noreferrer">Miller Motorcars · F12 / Aero Bridge / Active Brake Cooling</a></li><li id="source-design"><a href="https://www.ferrari.com/it-SM/history/momenti/2012/prestazioni-e-design/more" target="_blank" rel="noopener noreferrer">Ferrari · Prestazioni e design</a></li><li id="source-458"><a href="https://www.ferrari.com/en-EN/auto/458-italia" target="_blank" rel="noopener noreferrer">Ferrari · 458 Italia</a></li><li id="source-812"><a href="https://www.ferrari.com/en-US/corporate/articles/the-ferrari-812-superfast-the-new-extreme-performance-v12-berlinetta" target="_blank" rel="noopener noreferrer">Ferrari · 812 Superfast, 2017</a></li><li id="source-manual"><a href="https://di-uploads-development.s3.us-east-1.amazonaws.com/ferrarioffortlauderdale/uploads/2020/05/f12berlinetta.pdf" target="_blank" rel="noopener noreferrer">Ferrari · F12berlinetta owner’s manual (PDF)</a></li><li id="source-tdf"><a href="https://cdn.ferrari.com/cms/network/media/pdf/2016_12_31_-_ferrari_nv_20f_0.pdf" target="_blank" rel="noopener noreferrer">Ferrari · Annual report 2016, F12berlinetta / F12tdf (PDF, p. 30)</a></li><li id="source-dimensions">Ferrari: <a href="https://www.ferrari.com/en-EN/auto/458-italia">458 Italia</a> · <a href="https://www.ferrarisouthbay.com/past-models/f12-berlinetta">F12berlinetta</a> · <a href="https://www.ferrari.com/en-EN/auto/812-superfast">812 Superfast</a></li><li id="source-12cilindri"><a href="https://cdn.ferrari.com/cms/network/media/pdf/CS_Ferrari_12Cilindri_gbr.pdf">Ferrari · 12Cilindri, 2024 (PDF)</a></li><li id="source-torque"><a href="https://www.prnewswire.com/news-releases/ferrari-drives-sandy-relief-auctions-first-f12berlinetta-in-the-us-to-support-hurricane-sandy-relief-178151541.html" target="_blank" rel="noopener noreferrer">Ferrari North America · F12berlinetta engine specifications</a></li><li id="source-alloys"><a href="https://www.ferrari.com/magazine/articles/the-beauty-of-the-berlinetta" target="_blank" rel="noopener noreferrer">Ferrari Magazine · The Beauty of the Berlinetta</a></li><li id="source-brochure"><a href="https://autocatalogarchive.com/wp-content/uploads/2016/05/Ferrari-F12-Berlinetta-2013.pdf" target="_blank" rel="noopener noreferrer">Ferrari · F12berlinetta brochure (PDF)</a></li><li id="source-drive"><a href="https://www.motortrend.com/reviews/2013-ferrari-f12-berlinetta-first-drive-1" target="_blank" rel="noopener noreferrer">Automobile / MotorTrend · F12berlinetta first drive</a></li><li id="source-812-drive"><a href="https://www.forza-mag.com/issues/161/articles/superfast" target="_blank" rel="noopener noreferrer">Forza · 812 Superfast road test</a></li></ol></section></article>
+<div class="ctaRow"><a class="ctaBtn" href="/en/journal">Back to journal</a></div></div></section></main>
+<footer>
+<div class="container footerInner">
+<div class="footerLeft">© <span id="year">2026</span> Luxury Obsession</div>
+<div class="footerCenter">Currently available: Ferrari 458 Italia</div>
+<div class="footerNap">
+<span class="footerNapItem">Luxury Obsession by Anna Loi</span>
+<span class="footerNapItem">Nänikon 8606, Switzerland</span>
+<span class="footerNapItem"><a href="mailto:info@luxuryobsession.ch">info@luxuryobsession.ch</a></span>
+<span class="footerNapItem"><a href="tel:+41765870458">+41 76 587 04 58</a></span>
+</div>
+<div class="footerRight">
+<a href="/imprint" id="footerImpressum">Imprint</a>
+<a href="/privacy-policy" id="footerPrivacy">Privacy</a>
+<a href="/terms-and-conditions" id="footerTerms">Terms</a>
+</div>
+</div>
+</footer>
+<script>
+(function(){
+  const lang = "en";
+
+const setHref = (id, value) => {
+  const el = document.getElementById(id);
+  if(el) el.href = value;
+};
+
+setHref("navContact", "/en#contact");
+setHref("navRequest", "/en#request");
+setHref("reqQuote", "/en#request");
+
+
+  function wireHamburgerFallback(){
+    const btn = document.getElementById("hamburger");
+    const menu = document.getElementById("mobileMenu");
+    if(!btn || !menu) return;
+
+    if(btn.dataset.loHamburgerFallback === "1") return;
+    btn.dataset.loHamburgerFallback = "1";
+
+    if(menu.children.length === 0){
+      const desktop = Array.from(document.querySelectorAll(".navLinks a"));
+      const normal = desktop.filter(a => !a.classList.contains("navCta"));
+      const cta = desktop.find(a => a.classList.contains("navCta"));
+
+      normal.forEach(a => {
+        const clone = a.cloneNode(true);
+        clone.classList.remove("navCta");
+        menu.appendChild(clone);
+      });
+
+      const divider = document.createElement("div");
+      divider.className = "mobileMenuDivider";
+      menu.appendChild(divider);
+
+      if(cta){
+        const cloneCta = cta.cloneNode(true);
+        cloneCta.classList.remove("navCta");
+        cloneCta.classList.add("mobileMenuCta");
+        menu.appendChild(cloneCta);
+      }
+    }
+
+    function close(){
+      menu.style.display = "none";
+      menu.setAttribute("data-open","0");
+      btn.setAttribute("aria-expanded","false");
+    }
+
+    function open(){
+      menu.style.display = "block";
+      menu.setAttribute("data-open","1");
+      btn.setAttribute("aria-expanded","true");
+    }
+
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      const isOpen = menu.getAttribute("data-open") === "1";
+      if(isOpen) close();
+      else open();
+    }, true);
+
+    menu.addEventListener("click", (e) => {
+      if(e.target.closest("a")) close();
+    });
+
+    document.addEventListener("click", (e) => {
+      if(menu.getAttribute("data-open") !== "1") return;
+      if(menu.contains(e.target) || btn.contains(e.target)) return;
+      close();
+    });
+
+    close();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const lo = window.__LO__;
+    if(lo && typeof lo.initSharedUI === "function") lo.initSharedUI(lang);
+    else if(lo && typeof lo.initLangMenu === "function") lo.initLangMenu(lang);
+
+    wireHamburgerFallback();
+
+    document.querySelectorAll("[data-withlang='1']").forEach(a => {
+      const href = a.getAttribute("href");
+      if(href && lo && lo.buildUrl) a.setAttribute("href", lo.buildUrl(href, lang));
+    });
+
+    const year = document.getElementById("year");
+    if(year) year.textContent = String(new Date().getFullYear());
+  });
+})();
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var map = {
+    en: "/en/ferrari-f12-vs-458-812",
+    de: "/de/ferrari-f12-vs-458-812",
+    it: "/it/ferrari-f12-vs-458-812"
+  };
+  document.querySelectorAll(".langOption").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var code = (btn.getAttribute("data-lang") || "en").toLowerCase();
+      window.location.href = map[code] || map["en"];
+    }, true);
+  });
+});
+</script>
+</body>
+</html>
