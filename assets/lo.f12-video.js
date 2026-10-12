@@ -1,12 +1,3 @@
-document.querySelectorAll('.f12Poster').forEach(function(img){
-  function fallback(){
-    if(img.dataset.fallback)return;
-    img.dataset.fallback='1';
-    img.src='/media/ferrari-f12-front-480.webp';
-  }
-  img.addEventListener('error',fallback,{once:true});
-  if(img.complete && !img.naturalWidth)fallback();
-});
 document.querySelectorAll('[data-f12-video]').forEach(function(b){b.hidden=false;});
 document.addEventListener('click',function(e){
 const button=e.target.closest('[data-f12-video]');if(!button)return;
