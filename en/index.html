@@ -3143,7 +3143,6 @@ header .navInner{padding-top:6px!important;padding-bottom:6px!important}
     it: ["Riproduci il video della homepage", "Metti in pausa il video della homepage"]
   }[language] || ["Play homepage video", "Pause homepage video"];
   video.removeAttribute("autoplay");
-  video.setAttribute("role", "button");
   video.tabIndex = 0;
   video.style.cursor = "pointer";
   let userPaused = false;
