@@ -2353,6 +2353,12 @@ footer{
 
 /* Desktop scrollbar styling; preserve each page's original scope. */
 @media (hover:hover) and (pointer:fine){:where(html[data-lo-scrollbars~="calPopup"]) .calPopup,:where(html[data-lo-scrollbars~="loConsentBanner__inner"]) .loConsentBanner__inner,:where(html[data-lo-scrollbars~="loConsentPanel"]) .loConsentPanel,:where(html[data-lo-scrollbars~="pricingGrid"]) .pricingGrid{scrollbar-width:thin;scrollbar-color:#898c94 transparent}}
+
+/* Native video control: visually transparent, with a keyboard focus indicator. */
+#showcasePlayback{position:absolute;inset:0;z-index:1;display:block;width:100%;height:100%;margin:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;cursor:pointer;appearance:none}
+#showcasePlayback:focus-visible{outline:2px solid #e7d8b8;outline-offset:-4px}
+#showcase .mediaOverlay{z-index:2;pointer-events:none}
+#showcase .mediaOverlay :is(a,button,input,select,textarea){pointer-events:auto}
 </style>
 
 <link href="/site.webmanifest?v=logo-20261004-transparent" rel="manifest"/>
@@ -3305,6 +3311,7 @@ header .navInner{padding-top:6px!important;padding-bottom:6px!important}
 <video aria-label="Cinematic Drohnenvideo der Ferrari 458 Italia in der Schweiz" autoplay="" id="showcaseVideo" loop="" muted="" playsinline="" poster="/media/poster_vertical_480.webp?v=85-susten-vertical" preload="none">
 <source data-src="/media/458-home-vertical-720p.mp4" id="showcaseSource" type="video/mp4"/>
 </video>
+<button id="showcasePlayback" type="button" aria-controls="showcaseVideo" aria-label="Startseitenvideo abspielen"></button>
 <script>
 (function () {
   const video = document.getElementById("showcaseVideo");
@@ -3318,9 +3325,8 @@ header .navInner{padding-top:6px!important;padding-bottom:6px!important}
     it: ["Riproduci il video della homepage", "Metti in pausa il video della homepage"]
   }[language] || ["Play homepage video", "Pause homepage video"];
   video.removeAttribute("autoplay");
-  video.setAttribute("role", "button");
-  video.tabIndex = 0;
-  video.style.cursor = "pointer";
+  const playbackControl = document.getElementById("showcasePlayback");
+  if (!playbackControl) return;
   let userPaused = false;
   let userHasChosen = false;
   let playbackRequested = false;
@@ -3328,7 +3334,7 @@ header .navInner{padding-top:6px!important;padding-bottom:6px!important}
   let inViewport = false;
   let pageSuspended = false;
   let playPending = false;
-  const syncPlaybackLabel = () => video.setAttribute("aria-label", playbackLabels[video.paused ? 0 : 1]);
+  const syncPlaybackLabel = () => playbackControl.setAttribute("aria-label", playbackLabels[video.paused ? 0 : 1]);
   const shouldPlay = () => playbackRequested && !userPaused && inViewport && !document.hidden && !pageSuspended;
   function reconcilePlayback() {
     if (!shouldPlay()) {
@@ -3369,18 +3375,8 @@ header .navInner{padding-top:6px!important;padding-bottom:6px!important}
     playbackRequested = true;
     reconcilePlayback();
   };
-  video.parentElement.addEventListener("click", event => {
-    if (event.target.closest("a, button, input, select, textarea")) return;
-    const bounds = video.getBoundingClientRect();
-    if (event.clientX < bounds.left || event.clientX > bounds.right ||
-        event.clientY < bounds.top || event.clientY > bounds.bottom) return;
-    togglePlayback();
-  });
-  video.addEventListener("keydown", event => {
-    if (event.key !== "Enter" && event.key !== " ") return;
-    event.preventDefault();
-    if (!event.repeat) togglePlayback();
-  });
+  // Native buttons provide Enter and Space activation without custom key handlers.
+  playbackControl.addEventListener("click", togglePlayback);
   video.addEventListener("play", () => {
     if (!shouldPlay()) video.pause();
     syncPlaybackLabel();
