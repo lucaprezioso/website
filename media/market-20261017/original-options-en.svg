@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="792pt" height="468pt" viewBox="0 0 792 468" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 468 
+L 792 468 
+L 792 0 
+L 0 0 
+z
+" style="fill: #101116"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 178.47649 430.77226 
+L 788.99976 430.77226 
+L 788.99976 37.917584 
+L 178.47649 37.917584 
+z
+" style="fill: #101116"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m5d2f40f527" d="M 0 0 
+L 0 3.5 
+" style="stroke: #d9d7d2; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m5d2f40f527" x="178.47649" y="430.77226" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d9d7d2" x="178.47649" y="446.890385" transform="rotate(-0 178.47649 446.890385)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m5d2f40f527" x="308.375058" y="430.77226" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d9d7d2" x="308.375058" y="446.890385" transform="rotate(-0 308.375058 446.890385)">2’000</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m5d2f40f527" x="438.273626" y="430.77226" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d9d7d2" x="438.273626" y="446.890385" transform="rotate(-0 438.273626 446.890385)">4’000</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m5d2f40f527" x="568.172194" y="430.77226" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d9d7d2" x="568.172194" y="446.890385" transform="rotate(-0 568.172194 446.890385)">6’000</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m5d2f40f527" x="698.070762" y="430.77226" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d9d7d2" x="698.070762" y="446.890385" transform="rotate(-0 698.070762 446.890385)">8’000</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d9d7d2" x="483.738125" y="462.504135" transform="rotate(-0 483.738125 462.504135)">Original option price (USD)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <path d="M 178.47649 72.008279 
+L 788.99976 72.008279 
+" clip-path="url(#pe943ac2a92)" style="fill: none; stroke: #353740; stroke-opacity: 0.65; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7">
+      <defs>
+       <path id="m88907b7ea5" d="M 0 0 
+L -3.5 0 
+" style="stroke: #d9d7d2; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m88907b7ea5" x="178.47649" y="72.008279" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d9d7d2" x="171.47649" y="76.567341" transform="rotate(-0 171.47649 76.567341)">Racing seats</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <path d="M 178.47649 126.120493 
+L 788.99976 126.120493 
+" clip-path="url(#pe943ac2a92)" style="fill: none; stroke: #353740; stroke-opacity: 0.65; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m88907b7ea5" x="178.47649" y="126.120493" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d9d7d2" x="171.47649" y="130.679556" transform="rotate(-0 171.47649 130.679556)">Carbon driving zone + LEDs</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10">
+      <path d="M 178.47649 180.232708 
+L 788.99976 180.232708 
+" clip-path="url(#pe943ac2a92)" style="fill: none; stroke: #353740; stroke-opacity: 0.65; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m88907b7ea5" x="178.47649" y="180.232708" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d9d7d2" x="171.47649" y="184.79177" transform="rotate(-0 171.47649 184.79177)">Carbon dashboard</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12">
+      <path d="M 178.47649 234.344922 
+L 788.99976 234.344922 
+" clip-path="url(#pe943ac2a92)" style="fill: none; stroke: #353740; stroke-opacity: 0.65; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m88907b7ea5" x="178.47649" y="234.344922" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d9d7d2" x="171.47649" y="238.903984" transform="rotate(-0 171.47649 238.903984)">Carbon centre console</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_14">
+      <path d="M 178.47649 288.457136 
+L 788.99976 288.457136 
+" clip-path="url(#pe943ac2a92)" style="fill: none; stroke: #353740; stroke-opacity: 0.65; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m88907b7ea5" x="178.47649" y="288.457136" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d9d7d2" x="171.47649" y="293.016199" transform="rotate(-0 171.47649 293.016199)">Carbon B-pillars</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_16">
+      <path d="M 178.47649 342.569351 
+L 788.99976 342.569351 
+" clip-path="url(#pe943ac2a92)" style="fill: none; stroke: #353740; stroke-opacity: 0.65; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m88907b7ea5" x="178.47649" y="342.569351" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d9d7d2" x="171.47649" y="347.128413" transform="rotate(-0 171.47649 347.128413)">Carbon front wings</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_18">
+      <path d="M 178.47649 396.681565 
+L 788.99976 396.681565 
+" clip-path="url(#pe943ac2a92)" style="fill: none; stroke: #353740; stroke-opacity: 0.65; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m88907b7ea5" x="178.47649" y="396.681565" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d9d7d2" x="171.47649" y="401.240627" transform="rotate(-0 171.47649 401.240627)">Carbon exterior sill</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 178.47649 55.774614 
+L 693.978957 55.774614 
+L 693.978957 88.241943 
+L 178.47649 88.241943 
+z
+" clip-path="url(#pe943ac2a92)" style="fill: #e6c781"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 178.47649 109.886829 
+L 660.400178 109.886829 
+L 660.400178 142.354157 
+L 178.47649 142.354157 
+z
+" clip-path="url(#pe943ac2a92)" style="fill: #e6c781"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 178.47649 163.999043 
+L 638.44732 163.999043 
+L 638.44732 196.466372 
+L 178.47649 196.466372 
+z
+" clip-path="url(#pe943ac2a92)" style="fill: #e6c781"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 178.47649 218.111258 
+L 353.709658 218.111258 
+L 353.709658 250.578586 
+L 178.47649 250.578586 
+z
+" clip-path="url(#pe943ac2a92)" style="fill: #e6c781"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 178.47649 272.223472 
+L 409.241296 272.223472 
+L 409.241296 304.690801 
+L 178.47649 304.690801 
+z
+" clip-path="url(#pe943ac2a92)" style="fill: #e6c781"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 178.47649 326.335686 
+L 408.461905 326.335686 
+L 408.461905 358.803015 
+L 178.47649 358.803015 
+z
+" clip-path="url(#pe943ac2a92)" style="fill: #e6c781"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 178.47649 380.447901 
+L 298.892463 380.447901 
+L 298.892463 412.915229 
+L 178.47649 412.915229 
+z
+" clip-path="url(#pe943ac2a92)" style="fill: #e6c781"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 178.47649 430.77226 
+L 178.47649 37.917584 
+" style="fill: none; stroke: #62636a; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 178.47649 430.77226 
+L 788.99976 430.77226 
+" style="fill: none; stroke: #62636a; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #f1eee8" x="702.422364" y="75.319529" transform="rotate(-0 702.422364 75.319529)">$7,937</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #f1eee8" x="668.843585" y="129.431743" transform="rotate(-0 668.843585 129.431743)">$7,420</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #f1eee8" x="646.890727" y="183.543958" transform="rotate(-0 646.890727 183.543958)">$7,082</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #f1eee8" x="362.153065" y="237.656172" transform="rotate(-0 362.153065 237.656172)">$2,698</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #f1eee8" x="417.684703" y="291.768386" transform="rotate(-0 417.684703 291.768386)">$3,553</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #f1eee8" x="416.905312" y="345.880601" transform="rotate(-0 416.905312 345.880601)">$3,541</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #f1eee8" x="307.33587" y="399.992815" transform="rotate(-0 307.33587 399.992815)">$1,854</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #f1eee8" x="178.47649" y="15.917584" transform="rotate(-0 178.47649 15.917584)">Carbon and seats were expensive new</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pe943ac2a92">
+   <rect x="178.47649" y="37.917584" width="610.52327" height="392.854676"/>
+  </clipPath>
+ </defs>
+</svg>

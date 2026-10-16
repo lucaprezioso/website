@@ -688,12 +688,11 @@ h1,h2,h3,.sectionTitle,.heroTitle{font-family:"Cormorant Garamond",serif;letter-
 .calloutBody{margin:0;color:rgba(243,241,238,0.84);line-height:1.8}
 
 .tableWrap{overflow:auto;border-radius:16px;border:1px solid rgba(243,241,238,0.10);background:rgba(0,0,0,0.18)}
-.table{width:100%;border-collapse:collapse;min-width:720px;font-size:0.96rem;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.table{width:100%;border-collapse:collapse;min-width:720px}
 .table th, .table td{padding:0.9rem 0.9rem;border-bottom:1px solid rgba(243,241,238,0.08);text-align:left;vertical-align:top}
 .table th{font-size:0.82rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(243,241,238,0.78)}
 .table td{color:rgba(243,241,238,0.90);line-height:1.65}
 .table tr:last-child td{border-bottom:none}
-@media (max-width: 640px){ .table{font-size:0.92rem} .table th,.table td{padding:0.78rem 0.78rem} }
 .tag{display:inline-flex;align-items:center;gap:0.4rem;padding:0.25rem 0.55rem;border-radius:999px;border:1px solid rgba(231,220,198,0.18);background:rgba(231,220,198,0.06);color:rgba(231,220,198,0.92);font-size:0.78rem;white-space:nowrap}
 
 .routeCards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1rem 0 0}
@@ -748,3 +747,5 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
   .footerRight{justify-content:center}
 }
   
+/* Desktop scrollbar styling; preserve each page's original scope. */
+@media (hover:hover) and (pointer:fine){:where(html[data-lo-scrollbars~="calPopup"]) .calPopup,:where(html[data-lo-scrollbars~="f12Compare"]) .f12Compare,:where(html[data-lo-scrollbars~="loConsentBanner__inner"]) .loConsentBanner__inner,:where(html[data-lo-scrollbars~="loConsentPanel"]) .loConsentPanel,:where(html[data-lo-scrollbars~="loGuideTable"]) .loGuideTable,:where(html[data-lo-scrollbars~="tableWrap"]) .tableWrap{scrollbar-width:thin;scrollbar-color:#898c94 transparent}}

@@ -470,3 +470,6 @@ html.loConsentBannerOpen .loLangSuggest {
     transition: none !important;
   }
 }
+
+/* Desktop scrollbar styling; preserve each page's original scope. */
+@media (hover:hover) and (pointer:fine){:where(html[data-lo-scrollbars~="calPopup"]) .calPopup,:where(html[data-lo-scrollbars~="loConsentBanner__inner"]) .loConsentBanner__inner,:where(html[data-lo-scrollbars~="loConsentPanel"]) .loConsentPanel{scrollbar-width:thin;scrollbar-color:#898c94 transparent}}

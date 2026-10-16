@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="792pt" height="468pt" viewBox="0 0 792 468" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 468 
+L 792 468 
+L 792 0 
+L 0 0 
+z
+" style="fill: #101116"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 184.75399 430.77226 
+L 788.99976 430.77226 
+L 788.99976 38.597584 
+L 184.75399 38.597584 
+z
+" style="fill: #101116"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="mcad27d89bc" d="M 0 0 
+L 0 3.5 
+" style="stroke: #d9d7d2; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mcad27d89bc" x="184.75399" y="430.77226" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d9d7d2" x="184.75399" y="446.890385" transform="rotate(-0 184.75399 446.890385)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#mcad27d89bc" x="313.31692" y="430.77226" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d9d7d2" x="313.31692" y="446.890385" transform="rotate(-0 313.31692 446.890385)">2’000</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#mcad27d89bc" x="441.87985" y="430.77226" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d9d7d2" x="441.87985" y="446.890385" transform="rotate(-0 441.87985 446.890385)">4’000</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mcad27d89bc" x="570.442779" y="430.77226" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d9d7d2" x="570.442779" y="446.890385" transform="rotate(-0 570.442779 446.890385)">6’000</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#mcad27d89bc" x="699.005709" y="430.77226" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d9d7d2" x="699.005709" y="446.890385" transform="rotate(-0 699.005709 446.890385)">8’000</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d9d7d2" x="486.876875" y="462.504135" transform="rotate(-0 486.876875 462.504135)">Prezzo originale dell’optional (USD)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <path d="M 184.75399 72.629271 
+L 788.99976 72.629271 
+" clip-path="url(#p5880a71a3f)" style="fill: none; stroke: #353740; stroke-opacity: 0.65; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7">
+      <defs>
+       <path id="mcaaacda13a" d="M 0 0 
+L -3.5 0 
+" style="stroke: #d9d7d2; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mcaaacda13a" x="184.75399" y="72.629271" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d9d7d2" x="177.75399" y="77.188333" transform="rotate(-0 177.75399 77.188333)">Sedili racing</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <path d="M 184.75399 126.647821 
+L 788.99976 126.647821 
+" clip-path="url(#p5880a71a3f)" style="fill: none; stroke: #353740; stroke-opacity: 0.65; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#mcaaacda13a" x="184.75399" y="126.647821" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d9d7d2" x="177.75399" y="131.206883" transform="rotate(-0 177.75399 131.206883)">Zona guida carbonio + LED</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10">
+      <path d="M 184.75399 180.666371 
+L 788.99976 180.666371 
+" clip-path="url(#p5880a71a3f)" style="fill: none; stroke: #353740; stroke-opacity: 0.65; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#mcaaacda13a" x="184.75399" y="180.666371" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d9d7d2" x="177.75399" y="185.225434" transform="rotate(-0 177.75399 185.225434)">Plancia in carbonio</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12">
+      <path d="M 184.75399 234.684922 
+L 788.99976 234.684922 
+" clip-path="url(#p5880a71a3f)" style="fill: none; stroke: #353740; stroke-opacity: 0.65; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#mcaaacda13a" x="184.75399" y="234.684922" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d9d7d2" x="177.75399" y="239.243984" transform="rotate(-0 177.75399 239.243984)">Tunnel in carbonio</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_14">
+      <path d="M 184.75399 288.703472 
+L 788.99976 288.703472 
+" clip-path="url(#p5880a71a3f)" style="fill: none; stroke: #353740; stroke-opacity: 0.65; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#mcaaacda13a" x="184.75399" y="288.703472" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d9d7d2" x="177.75399" y="293.262535" transform="rotate(-0 177.75399 293.262535)">Montanti B in carbonio</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_16">
+      <path d="M 184.75399 342.722023 
+L 788.99976 342.722023 
+" clip-path="url(#p5880a71a3f)" style="fill: none; stroke: #353740; stroke-opacity: 0.65; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#mcaaacda13a" x="184.75399" y="342.722023" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d9d7d2" x="177.75399" y="347.281085" transform="rotate(-0 177.75399 347.281085)">Parafanghi anteriori carbonio</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_18">
+      <path d="M 184.75399 396.740573 
+L 788.99976 396.740573 
+" clip-path="url(#p5880a71a3f)" style="fill: none; stroke: #353740; stroke-opacity: 0.65; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#mcaaacda13a" x="184.75399" y="396.740573" style="fill: #d9d7d2; stroke: #d9d7d2; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #d9d7d2" x="177.75399" y="401.299636" transform="rotate(-0 177.75399 401.299636)">Sottoporta esterno carbonio</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 184.75399 56.423705 
+L 694.955977 56.423705 
+L 694.955977 88.834836 
+L 184.75399 88.834836 
+z
+" clip-path="url(#p5880a71a3f)" style="fill: #e6c781"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 184.75399 110.442256 
+L 661.72246 110.442256 
+L 661.72246 142.853386 
+L 184.75399 142.853386 
+z
+" clip-path="url(#p5880a71a3f)" style="fill: #e6c781"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 184.75399 164.460806 
+L 639.995324 164.460806 
+L 639.995324 196.871937 
+L 184.75399 196.871937 
+z
+" clip-path="url(#p5880a71a3f)" style="fill: #e6c781"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 184.75399 218.479357 
+L 358.185382 218.479357 
+L 358.185382 250.890487 
+L 184.75399 250.890487 
+z
+" clip-path="url(#p5880a71a3f)" style="fill: #e6c781"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 184.75399 272.497907 
+L 413.146035 272.497907 
+L 413.146035 304.909037 
+L 184.75399 304.909037 
+z
+" clip-path="url(#p5880a71a3f)" style="fill: #e6c781"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 184.75399 326.516458 
+L 412.374657 326.516458 
+L 412.374657 358.927588 
+L 184.75399 358.927588 
+z
+" clip-path="url(#p5880a71a3f)" style="fill: #e6c781"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 184.75399 380.535008 
+L 303.931826 380.535008 
+L 303.931826 412.946138 
+L 184.75399 412.946138 
+z
+" clip-path="url(#p5880a71a3f)" style="fill: #e6c781"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 184.75399 430.77226 
+L 184.75399 38.597584 
+" style="fill: none; stroke: #62636a; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 184.75399 430.77226 
+L 788.99976 430.77226 
+" style="fill: none; stroke: #62636a; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #f1eee8" x="703.312567" y="75.940521" transform="rotate(-0 703.312567 75.940521)">$7,937</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #f1eee8" x="670.07905" y="129.959071" transform="rotate(-0 670.07905 129.959071)">$7,420</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #f1eee8" x="648.351915" y="183.977621" transform="rotate(-0 648.351915 183.977621)">$7,082</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #f1eee8" x="366.541973" y="237.996172" transform="rotate(-0 366.541973 237.996172)">$2,698</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #f1eee8" x="421.502625" y="292.014722" transform="rotate(-0 421.502625 292.014722)">$3,553</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #f1eee8" x="420.731248" y="346.033273" transform="rotate(-0 420.731248 346.033273)">$3,541</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #f1eee8" x="312.288416" y="400.051823" transform="rotate(-0 312.288416 400.051823)">$1,854</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #f1eee8" x="184.75399" y="16.597584" transform="rotate(-0 184.75399 16.597584)">Carbonio e sedili costavano già da nuovi</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p5880a71a3f">
+   <rect x="184.75399" y="38.597584" width="604.24577" height="392.174676"/>
+  </clipPath>
+ </defs>
+</svg>

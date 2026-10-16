@@ -2254,3 +2254,165 @@ footer{
 .loFormPrivacy a{text-decoration:underline;text-underline-offset:3px}
 
 @font-face{font-family: 'Cinzel';font-style: normal;font-weight: 400 700;font-display: swap;src: url(/assets/fonts/cinzel-latin-ext-8fc2606f8a.woff2) format('woff2');unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family: 'Cinzel';font-style: normal;font-weight: 400 700;font-display: swap;src: url(/assets/fonts/cinzel-latin-09941fb1c1.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family: 'Cormorant Garamond';font-style: normal;font-weight: 400 600;font-display: swap;src: url(/assets/fonts/cormorant-garamond-latin-ext-cfa9a397d8.woff2) format('woff2');unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family: 'Cormorant Garamond';font-style: normal;font-weight: 400 600;font-display: swap;src: url(/assets/fonts/cormorant-garamond-latin-d80df8ff5a.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family: 'Inter';font-style: normal;font-weight: 400 700;font-display: swap;src: url(/assets/fonts/inter-latin-ext-34b9c504ca.woff2) format('woff2');unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family: 'Inter';font-style: normal;font-weight: 400 700;font-display: swap;src: url(/assets/fonts/inter-latin-3100e775e8.woff2) format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}:root{--font-sans:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--font-serif:"Cormorant Garamond",Georgia,serif;--serif:var(--font-serif);--display:var(--font-serif)}html body{font-family:var(--font-sans)!important}body h1,body h2,body h3,body h4,body h5,body h6,body .heroTitle,body .sectionTitle,body .mediaTitle,body .cardTitle,body .calloutTitle,body .routeTitle,body .galleryPageTitle{font-family:var(--font-serif)!important}body input,body select,body textarea,body button,body label,body table,body .btn,body .ctaBtn,body .navLinks,body .mobileMenu{font-family:var(--font-sans)!important}body .brandGold{font-family:"Cinzel",Georgia,serif!important}body .loConsentBanner{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body .loConsentBanner .loConsentTitle,body .loConsentBanner .loConsentEyebrow{font-family:Georgia,"Times New Roman",serif!important}.seoCard a,.loGuideTable a{color:var(--champagne,#e7dcc6);text-decoration:underline;text-underline-offset:.2em;text-decoration-thickness:1px}.seoCard a{display:inline-block;margin-top:.4rem;font-weight:500;line-height:1.6}.seoCard a:hover,.loGuideTable a:hover{text-decoration-thickness:2px}.seoCard a:focus-visible,.loGuideTable a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:2px}.bookingForm .loBookingRateRow,.bookingForm .loBookingDateRow{display:grid;grid-template-columns:minmax(0,1fr);gap:.75rem}.bookingForm .loBookingRateRow>.fieldGroup,.bookingForm .loBookingDateRow>.fieldGroup{min-width:0;grid-column:auto}.bookingForm .loBookingRateRow select,.bookingForm .loBookingDateRow select,.bookingForm .loBookingDateRow input{box-sizing:border-box;min-width:0;width:100%}@media(min-width:900px){.bookingForm .loBookingRateRow{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}.bookingForm .loBookingDateRow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Adaptive YouTube player used on Philosophy and dedicated video pages. */
+.phVideoShell[data-lo-youtube]{position:relative;isolation:isolate;background:#000}
+.phVideoShell[data-lo-youtube] .phYoutubeMount,
+.phVideoShell[data-lo-youtube] iframe,
+.phVideoShell[data-lo-youtube] .phVideoPoster{position:absolute;inset:0;width:100%;height:100%;border:0}
+.phVideoShell[data-lo-youtube] iframe{z-index:1;display:block}
+.phVideoShell[data-lo-youtube] .phVideoPoster{z-index:2;display:block;object-fit:cover;object-position:center;transition:opacity .35s ease,visibility .35s ease}
+.phVideoShell[data-lo-youtube].is-playing .phVideoPoster{opacity:0;visibility:hidden;pointer-events:none}
+.phPlayOverlay{position:absolute;z-index:4;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;width:100%;height:100%;border:0;padding:1.5rem;background:linear-gradient(180deg,rgba(3,3,7,.10),rgba(3,3,7,.48));color:#fff;cursor:pointer;font:700 .92rem/1.3 Inter,sans-serif;text-align:center;transition:opacity .25s ease,visibility .25s ease}
+.phPlayOverlay[hidden]{display:none}
+.phPlayGlyph{display:grid;place-items:center;width:68px;height:68px;padding-left:4px;border:1px solid rgba(255,255,255,.55);border-radius:50%;background:rgba(5,5,9,.62);backdrop-filter:blur(12px);box-shadow:0 12px 34px rgba(0,0,0,.38);font-size:1.45rem}
+.phPlayText{padding:.65rem .9rem;border-radius:999px;background:rgba(5,5,9,.72);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(10px)}
+.phVideoShell[data-lo-youtube] .phSoundToggle{position:absolute;z-index:5;left:50%;bottom:1rem;transform:translateX(-50%);display:inline-flex;align-items:center;gap:.5rem;white-space:nowrap}
+.phVideoShell[data-lo-youtube] .phSoundToggle[hidden]{display:none}
+.phVideoShell[data-lo-youtube] .phSoundToggle[data-muted="false"] .phSoundIcon{background:#f2d9a6;box-shadow:0 0 10px rgba(242,217,166,.75)}
+.phVideoNote[data-video-note]{min-height:2.3em}
+@media(prefers-reduced-motion:reduce){
+  .phVideoShell[data-lo-youtube] .phVideoPoster,
+  .phPlayOverlay{transition:none}
+  .phVideoShell[data-lo-youtube] iframe{visibility:visible}
+  .phVideoShell[data-lo-youtube] .phSoundToggle{display:inline-flex}
+  .phVideoShell[data-lo-youtube] .phSoundToggle[hidden]{display:none}
+}
+
+:root{
+  --exp-champagne:#e7dcc6;
+  --exp-muted:rgba(243,241,238,.72);
+  --exp-line:rgba(231,220,198,.15);
+  --exp-card:rgba(255,255,255,.035);
+  --exp-red:#b1121d;
+}
+.expPage{overflow-x:hidden;overflow-y:auto}
+.expPage main{padding-bottom:0}
+.expHero{position:relative;padding:clamp(3.1rem,7vw,6.4rem) 0 clamp(3rem,6vw,5.2rem);background:
+  radial-gradient(780px 420px at 12% 15%,rgba(177,18,29,.16),transparent 64%),
+  radial-gradient(760px 420px at 90% 20%,rgba(231,220,198,.08),transparent 66%),
+  linear-gradient(180deg,rgba(255,255,255,.015),transparent)}
+.expHeroGrid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(520px,1.08fr);gap:clamp(2rem,5vw,5.5rem);align-items:center}
+.expKicker{margin:0 0 .85rem;color:var(--exp-champagne);font-size:.74rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+.expHero h1,.expSection h2,.expVideoCopy h2,.expStoryHead h2,.expCta h2{font-family:"Cormorant Garamond",serif;text-wrap:balance}
+.expHero h1{max-width:800px;margin:0;font-size:clamp(3rem,6vw,5.9rem);font-weight:500;line-height:.91;letter-spacing:-.035em}
+.expHeroLead{max-width:650px;margin:1.35rem 0 0;color:rgba(243,241,238,.82);font-size:clamp(1rem,1.45vw,1.18rem);line-height:1.78}
+.expHeroActions,.expCardActions,.expVideoActions,.expCtaActions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.45rem}
+.expBtn{display:inline-flex;align-items:center;justify-content:center;gap:.42rem;min-height:46px;padding:.75rem 1.05rem;border:1px solid rgba(255,255,255,.13);border-radius:999px;background:rgba(255,255,255,.035);color:#fff;font-size:.9rem;font-weight:750;line-height:1.1;transition:transform .2s,border-color .2s,background .2s,color .2s}
+.expBtn:hover{transform:translateY(-2px);border-color:rgba(231,220,198,.32);background:rgba(255,255,255,.065)}
+.expBtnPrimary{border-color:rgba(0,0,0,.16);background:linear-gradient(135deg,rgba(231,220,198,.98),rgba(243,241,238,.9));color:#090a0d}
+.expBtnText{border-color:transparent;background:transparent;color:var(--exp-champagne);padding-left:.2rem;padding-right:.2rem}
+.expHeroFacts{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.25rem}
+.expHeroFact{padding:.42rem .68rem;border:1px solid var(--exp-line);border-radius:999px;background:rgba(255,255,255,.025);color:rgba(243,241,238,.72);font-size:.76rem}
+.expMosaic{display:grid;grid-template-columns:1.08fr .92fr;grid-template-rows:1fr 1fr;gap:.72rem;min-height:600px;transform:rotate(.25deg)}
+.expMosaic figure{position:relative;min-width:0;margin:0;overflow:hidden;border:1px solid rgba(255,255,255,.12);border-radius:24px;background:#0b0c10;box-shadow:0 26px 75px rgba(0,0,0,.28)}
+.expMosaic figure:first-child{grid-row:1 / span 2}
+.expMosaic img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease,filter .8s ease;filter:saturate(.96) contrast(1.03)}
+.expMosaic figure:first-child img{object-position:center 45%}
+.expMosaic figure:nth-child(2) img{object-position:center 54%}
+.expMosaic figure:nth-child(3) img{object-position:center 62%}
+.expMosaic figure:after{content:"";position:absolute;inset:auto 0 0;height:42%;background:linear-gradient(180deg,transparent,rgba(5,5,9,.76));pointer-events:none}
+.expMosaic figcaption{position:absolute;z-index:1;left:1rem;right:1rem;bottom:.85rem;color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.03em;text-shadow:0 2px 14px rgba(0,0,0,.75)}
+@media(hover:hover){.expMosaic figure:hover img{transform:scale(1.035);filter:saturate(1.08) contrast(1.04)}}
+.expSection{padding:clamp(3.8rem,8vw,7.2rem) 0}
+.expSectionAlt{background:linear-gradient(180deg,rgba(255,255,255,.015),rgba(255,255,255,.035),rgba(255,255,255,.012));border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05)}
+.expSectionHead{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(1rem,5vw,4.8rem);align-items:end;margin-bottom:2rem}
+.expSection h2,.expStoryHead h2,.expCta h2{margin:0;font-size:clamp(2.35rem,4.5vw,4.45rem);font-weight:500;line-height:.98;letter-spacing:-.028em}
+.expSectionIntro{max-width:720px;margin:0;color:var(--exp-muted);font-size:1.02rem;line-height:1.78}
+.expExperienceGrid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:1rem}
+.expCard{position:relative;display:flex;flex-direction:column;grid-column:span 6;min-height:570px;overflow:hidden;border:1px solid rgba(255,255,255,.11);border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.018));box-shadow:0 18px 60px rgba(0,0,0,.2)}
+.expCard:nth-child(3),.expCard:nth-child(4){grid-column:span 6}
+.expCardMedia{position:relative;height:310px;overflow:hidden;background:#0b0c10}
+.expCardMedia:after{content:"";position:absolute;inset:auto 0 0;height:46%;background:linear-gradient(180deg,transparent,rgba(5,5,9,.62))}
+.expCardMedia img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+.expCardWedding .expCardMedia img{object-position:center 48%}
+.expCardBirthday .expCardMedia img{object-position:center 56%}
+.expCardMountain .expCardMedia img{object-position:center 58%}
+.expCardCorporate .expCardMedia img{object-position:center 50%}
+.expCardPhoto .expCardMedia img{object-position:center 48%}
+.expCardGift .expCardMedia img{object-position:center 58%}
+.expCard:hover .expCardMedia img{transform:scale(1.025)}
+.expCardNumber{position:absolute;z-index:2;top:1rem;left:1rem;display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(255,255,255,.22);border-radius:50%;background:rgba(5,5,9,.58);backdrop-filter:blur(12px);font-family:"Cormorant Garamond",serif;font-size:1.15rem}
+.expCardBody{display:flex;flex:1;flex-direction:column;padding:1.35rem 1.35rem 1.45rem}
+.expCardEyebrow{margin:0 0 .35rem;color:var(--exp-champagne);font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.expCard h3{margin:0;font-family:"Cormorant Garamond",serif;font-size:clamp(1.8rem,3vw,2.55rem);font-weight:500;line-height:1.03}
+.expCard p{margin:.8rem 0 0;color:var(--exp-muted);line-height:1.7}
+.expCardMeta{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.95rem}
+.expCardMeta span{padding:.34rem .58rem;border:1px solid rgba(231,220,198,.13);border-radius:999px;color:rgba(243,241,238,.63);font-size:.72rem}
+.expCardActions{margin-top:auto;padding-top:1.15rem}
+.expCardActions .expBtn{font-size:.82rem}
+.expVideoGrid{display:grid;grid-template-columns:minmax(320px,.72fr) minmax(0,1.28fr);gap:clamp(2rem,6vw,6rem);align-items:center}
+.expVideoFrame{max-width:430px;margin:0 auto}
+.expVideoShell{position:relative;aspect-ratio:9/16;overflow:hidden;border:1px solid rgba(255,255,255,.13);border-radius:30px;background:#000;box-shadow:0 34px 90px rgba(0,0,0,.38)}
+.expVideoShell .phVideoPoster{object-position:center 45%}
+.expVideoNote{margin:.75rem auto 0;max-width:430px;color:rgba(243,241,238,.55);font-size:.77rem;line-height:1.5;text-align:center}
+.expVideoCopy h2{margin:0;font-size:clamp(2.65rem,5vw,5rem);font-weight:500;line-height:.93;letter-spacing:-.03em}
+.expVideoCopy p{max-width:720px;color:var(--exp-muted);font-size:1.02rem;line-height:1.8}
+.expQuote{margin:1.2rem 0 0;padding:1rem 0 1rem 1.25rem;border-left:1px solid rgba(231,220,198,.5);font-family:"Cormorant Garamond",serif;color:var(--exp-champagne);font-size:clamp(1.35rem,2.5vw,2rem);font-style:italic;line-height:1.3}
+.expStoryHead{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1.4rem}
+.expStories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.expStory{overflow:hidden;border:1px solid rgba(255,255,255,.11);border-radius:24px;background:rgba(255,255,255,.025);transition:transform .2s,border-color .2s}
+.expStory:hover{transform:translateY(-3px);border-color:rgba(231,220,198,.28)}
+.expStory img{width:100%;height:220px;object-fit:cover}
+.expStory:nth-child(1) img{object-position:center 58%}
+.expStory:nth-child(2) img{object-position:center 55%}
+.expStory:nth-child(3) img{object-position:center 48%}
+.expStoryBody{padding:1rem 1.05rem 1.15rem}
+.expStoryMeta{color:var(--exp-champagne);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.expStory h3{margin:.45rem 0 .55rem;font-family:"Cormorant Garamond",serif;font-size:1.65rem;font-weight:500;line-height:1.08}
+.expStory p{margin:0;color:var(--exp-muted);font-size:.9rem;line-height:1.6}
+.expProcess{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1.6rem}
+.expStep{padding:1.25rem;border:1px solid rgba(255,255,255,.11);border-radius:24px;background:linear-gradient(150deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}
+.expStepNo{display:inline-flex;margin-bottom:.8rem;color:var(--exp-champagne);font-family:"Cormorant Garamond",serif;font-size:1.55rem}
+.expStep h3{margin:0;font-size:1.05rem}
+.expStep p{margin:.55rem 0 0;color:var(--exp-muted);line-height:1.65;font-size:.9rem}
+.expFaq{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(2rem,6vw,5rem);align-items:start}
+.expFaqList{display:grid;gap:.7rem}
+.expFaq details{border:1px solid rgba(255,255,255,.11);border-radius:18px;background:rgba(255,255,255,.025);padding:1rem 1.05rem}
+.expFaq summary{cursor:pointer;font-weight:700;list-style:none}
+.expFaq summary::-webkit-details-marker{display:none}
+.expFaq details p{margin:.8rem 0 0;color:var(--exp-muted);line-height:1.7}
+.expCta{padding:clamp(3rem,7vw,6rem) 0}
+.expCtaPanel{position:relative;overflow:hidden;padding:clamp(2rem,6vw,4.4rem);border:1px solid rgba(231,220,198,.16);border-radius:32px;background:
+  radial-gradient(700px 360px at 10% 20%,rgba(177,18,29,.22),transparent 68%),
+  radial-gradient(700px 420px at 90% 20%,rgba(231,220,198,.10),transparent 65%),
+  linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.018));
+  text-align:center;box-shadow:0 30px 100px rgba(0,0,0,.26)}
+.expCtaPanel p{max-width:720px;margin:1rem auto 0;color:var(--exp-muted);font-size:1.02rem;line-height:1.75}
+.expCtaActions{justify-content:center}
+.expFooterLinks{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin-top:1.1rem}
+.expFooterLinks a{color:rgba(243,241,238,.6);font-size:.82rem}
+@media(max-width:980px){
+  .expHeroGrid,.expVideoGrid,.expFaq{grid-template-columns:1fr}
+  .expHeroGrid{gap:2.6rem}
+  .expMosaic{min-height:520px}
+  .expSectionHead{grid-template-columns:1fr;align-items:start}
+  .expStories{grid-template-columns:1fr 1fr}
+  .expStory:last-child{grid-column:1/-1}
+  .expStory:last-child img{height:270px}
+}
+@media(max-width:760px){
+  .expHero{padding-top:2.2rem}
+  .expHero h1{font-size:clamp(2.8rem,14vw,4.5rem)}
+  .expMosaic{grid-template-columns:1fr 1fr;grid-template-rows:330px 205px;min-height:0;gap:.55rem;transform:none}
+  .expMosaic figure:first-child{grid-column:1/-1;grid-row:auto}
+  .expMosaic figure{border-radius:20px}
+  .expMosaic figcaption{font-size:.7rem}
+  .expExperienceGrid{grid-template-columns:1fr}
+  .expCard,.expCard:nth-child(3),.expCard:nth-child(4){grid-column:auto;min-height:0}
+  .expCardMedia{height:260px}
+  .expStories,.expProcess{grid-template-columns:1fr}
+  .expStory:last-child{grid-column:auto}
+  .expStory img,.expStory:last-child img{height:230px}
+  .expStoryHead{align-items:start;flex-direction:column}
+  .expVideoFrame{max-width:380px}
+}
+@media(max-width:520px){
+  .expHeroActions,.expCardActions,.expCtaActions{display:grid;grid-template-columns:1fr}
+  .expBtn{width:100%}
+  .expMosaic{grid-template-rows:300px 175px}
+  .expCardMedia{height:225px}
+}
+
+/* Desktop scrollbar styling; preserve each page's original scope. */
+@media (hover:hover) and (pointer:fine){:where(html[data-lo-scrollbars~="loConsentBanner__inner"]) .loConsentBanner__inner,:where(html[data-lo-scrollbars~="loConsentPanel"]) .loConsentPanel{scrollbar-width:thin;scrollbar-color:#898c94 transparent}}

@@ -1,0 +1,754 @@
+{
+  "observed": "2026-10-15",
+  "scheduled_update": "2026-10-17",
+  "swiss": [
+    {
+      "model": "458 Italia",
+      "year": 2011,
+      "km": 87900,
+      "chf": 159500,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Italia",
+      "year": 2010,
+      "km": 61000,
+      "chf": 158900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Italia",
+      "year": 2011,
+      "km": 71500,
+      "chf": 174900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Italia",
+      "year": 2011,
+      "km": 36800,
+      "chf": 179999,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Italia",
+      "year": 2011,
+      "km": 29800,
+      "chf": 189500,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Italia",
+      "year": 2011,
+      "km": 62300,
+      "chf": 167900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Italia",
+      "year": 2011,
+      "km": 71000,
+      "chf": 168900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Italia",
+      "year": 2011,
+      "km": 72200,
+      "chf": 172890,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Italia",
+      "year": 2011,
+      "km": 54000,
+      "chf": 179900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Italia",
+      "year": 2014,
+      "km": 68900,
+      "chf": 159800,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Italia",
+      "year": 2010,
+      "km": 80800,
+      "chf": 169900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Italia",
+      "year": 2011,
+      "km": 74000,
+      "chf": 157900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Italia",
+      "year": 2010,
+      "km": 57300,
+      "chf": 189900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Italia",
+      "year": 2011,
+      "km": 10600,
+      "chf": 270000,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Italia",
+      "year": 2010,
+      "km": 56000,
+      "chf": 159900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Spider",
+      "year": 2012,
+      "km": 61000,
+      "chf": 178000,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Spider",
+      "year": 2012,
+      "km": 75844,
+      "chf": 179000,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Spider",
+      "year": 2012,
+      "km": 23987,
+      "chf": 214900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Spider",
+      "year": 2014,
+      "km": 79500,
+      "chf": 169900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Spider",
+      "year": 2013,
+      "km": 48950,
+      "chf": 224900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "458 Spider",
+      "year": 2012,
+      "km": 99900,
+      "chf": 219800,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+    },
+    {
+      "model": "488 GTB",
+      "year": 2016,
+      "km": 42900,
+      "chf": 207500,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 GTB",
+      "year": 2016,
+      "km": 26000,
+      "chf": 189890,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 GTB",
+      "year": 2017,
+      "km": 66000,
+      "chf": 176900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 GTB",
+      "year": 2017,
+      "km": 14500,
+      "chf": 204000,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 GTB",
+      "year": 2019,
+      "km": 26000,
+      "chf": 219999,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 GTB",
+      "year": 2016,
+      "km": 26500,
+      "chf": 198000,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 GTB",
+      "year": 2018,
+      "km": 2222,
+      "chf": 248900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 GTB",
+      "year": 2016,
+      "km": 39000,
+      "chf": 197900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 GTB",
+      "year": 2016,
+      "km": 85900,
+      "chf": 168500,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 GTB",
+      "year": 2018,
+      "km": 45700,
+      "chf": 198500,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 GTB",
+      "year": 2018,
+      "km": 7000,
+      "chf": 249900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 GTB",
+      "year": 2018,
+      "km": 18000,
+      "chf": 243999,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 Spider",
+      "year": 2019,
+      "km": 38000,
+      "chf": 219488,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 Spider",
+      "year": 2018,
+      "km": 18000,
+      "chf": 229000,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 Spider",
+      "year": 2016,
+      "km": 75800,
+      "chf": 189000,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 Spider",
+      "year": 2016,
+      "km": 85643,
+      "chf": 177900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 Spider",
+      "year": 2018,
+      "km": 158500,
+      "chf": 159500,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 Spider",
+      "year": 2018,
+      "km": 49600,
+      "chf": 219900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 Spider",
+      "year": 2017,
+      "km": 55800,
+      "chf": 215900,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 Spider",
+      "year": 2016,
+      "km": 25000,
+      "chf": 229999,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 Spider",
+      "year": 2017,
+      "km": 82000,
+      "chf": 199000,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 Spider",
+      "year": 2017,
+      "km": 36700,
+      "chf": 229000,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 Spider",
+      "year": 2016,
+      "km": 21400,
+      "chf": 233300,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    },
+    {
+      "model": "488 Spider",
+      "year": 2016,
+      "km": 45000,
+      "chf": 224990,
+      "observed": "2026-10-15",
+      "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+    }
+  ],
+  "us": [
+    {
+      "model": "458 Italia",
+      "date": "2025-02-27",
+      "year": 2011,
+      "miles": 53000,
+      "usd": 166000,
+      "source": "https://bringatrailer.com/listing/2011-ferrari-458-italia-37/"
+    },
+    {
+      "model": "458 Italia",
+      "date": "2025-03-15",
+      "year": 2010,
+      "miles": 17000,
+      "usd": 148789,
+      "source": "https://bringatrailer.com/listing/2010-ferrari-458-italia-31/"
+    },
+    {
+      "model": "458 Italia",
+      "date": "2025-05-03",
+      "year": 2013,
+      "miles": 4800,
+      "usd": 238000,
+      "source": "https://bringatrailer.com/listing/2013-ferrari-458-italia-29/"
+    },
+    {
+      "model": "458 Italia",
+      "date": "2025-06-04",
+      "year": 2011,
+      "miles": 11000,
+      "usd": 205000,
+      "source": "https://bringatrailer.com/listing/2011-ferrari-458-italia-39/"
+    },
+    {
+      "model": "458 Italia",
+      "date": "2025-06-24",
+      "year": 2015,
+      "miles": 831,
+      "usd": 303330,
+      "source": "https://bringatrailer.com/listing/2015-ferrari-458-italia-15/"
+    },
+    {
+      "model": "458 Italia",
+      "date": "2025-08-26",
+      "year": 2011,
+      "miles": 17000,
+      "usd": 213000,
+      "source": "https://bringatrailer.com/listing/2011-ferrari-458-italia-45/"
+    },
+    {
+      "model": "458 Italia",
+      "date": "2025-11-25",
+      "year": 2013,
+      "miles": 25000,
+      "usd": 201000,
+      "source": "https://bringatrailer.com/listing/2013-ferrari-458-italia-36/"
+    },
+    {
+      "model": "458 Italia",
+      "date": "2026-04-06",
+      "year": 2011,
+      "miles": 6000,
+      "usd": 233000,
+      "source": "https://bringatrailer.com/listing/2011-ferrari-458-italia-51/"
+    },
+    {
+      "model": "458 Italia",
+      "date": "2026-07-28",
+      "year": 2010,
+      "miles": 28000,
+      "usd": 285919,
+      "source": "https://bringatrailer.com/listing/2010-ferrari-458-italia-40/"
+    },
+    {
+      "model": "458 Italia",
+      "date": "2026-08-05",
+      "year": 2010,
+      "miles": 28000,
+      "usd": 235786,
+      "source": "https://bringatrailer.com/listing/2010-ferrari-458-italia-41/"
+    },
+    {
+      "model": "458 Italia",
+      "date": "2026-08-12",
+      "year": 2011,
+      "miles": 23000,
+      "usd": 290000,
+      "source": "https://bringatrailer.com/listing/2011-ferrari-458-italia-55/"
+    },
+    {
+      "model": "458 Italia",
+      "date": "2026-09-21",
+      "year": 2011,
+      "miles": null,
+      "usd": 234117,
+      "source": "https://bringatrailer.com/listing/2011-ferrari-458-italia-59/"
+    },
+    {
+      "model": "488 GTB",
+      "date": "2026-04-13",
+      "year": 2016,
+      "miles": 12000,
+      "usd": 224000,
+      "source": "https://bringatrailer.com/listing/2016-ferrari-488-gtb-34/"
+    },
+    {
+      "model": "488 GTB",
+      "date": "2026-06-02",
+      "year": 2016,
+      "miles": 4900,
+      "usd": 257000,
+      "source": "https://bringatrailer.com/listing/2016-ferrari-488-gtb-35/"
+    },
+    {
+      "model": "488 GTB",
+      "date": "2026-08-10",
+      "year": 2017,
+      "miles": 7000,
+      "usd": 325000,
+      "source": "https://bringatrailer.com/listing/2017-ferrari-488-gtb-41/"
+    },
+    {
+      "model": "488 GTB",
+      "date": "2026-09-21",
+      "year": 2016,
+      "miles": 8000,
+      "usd": 295000,
+      "source": "https://bringatrailer.com/listing/2016-ferrari-488-gtb-37/"
+    },
+    {
+      "model": "488 GTB",
+      "date": "2026-09-22",
+      "year": 2016,
+      "miles": 398,
+      "usd": 342000,
+      "source": "https://bringatrailer.com/listing/2016-ferrari-488-gtb-36/"
+    }
+  ],
+  "method": "Purposive snapshot of 45 standard road-car advertisements shown on the first AutoUncle result page for each model, not a census or transaction index. Excludes named Novitec conversion, Challenge and 488 with ambiguous 2026 registration. Includes high-mileage cars. No historical Swiss observations inferred. US sample: 17 selected published BaT winning bids; not matched repeat sales; buyer fees excluded.",
+  "options_estimates_percent": {
+    "Rosso Corsa": [
+      3,
+      7
+    ],
+    "Nero interior": [
+      0,
+      2
+    ],
+    "LED carbon wheel": [
+      2,
+      4
+    ],
+    "Cabin carbon package": [
+      3,
+      6
+    ],
+    "Exterior carbon": [
+      4,
+      8
+    ],
+    "Racing seats": [
+      5,
+      10
+    ]
+  },
+  "depreciation_examples": [
+    {
+      "model": "California 2011",
+      "new": 269700,
+      "ask": 79000,
+      "source": "https://www.autolina.ch/auto/ferrari-california/5022874"
+    },
+    {
+      "model": "California T 2017",
+      "new": 220634,
+      "ask": 129900,
+      "source": "https://www.autoscout24.ch/de/d/ferrari-39-turbo-20847012"
+    },
+    {
+      "model": "296 GTS 2026",
+      "new": 389035,
+      "ask": 309889,
+      "source": "https://autokunz.ch/en/autos/ferrari-296-gts-77571/"
+    },
+    {
+      "model": "SF90 Stradale 2021",
+      "new": 650000,
+      "ask": 315000,
+      "source": "https://gratis-auto-inserate.ch/inserat/ferrari-sf90-stradale-66207"
+    }
+  ],
+  "original_options_usd": {
+    "source": "https://www.parkplaceltd.com/used-Bellevue-2014-Ferrari-458%2BItalia-2dr%2BConv-ZFF68NHA6E0197133",
+    "car": "2014 Ferrari 458 Spider, US specification",
+    "prices": {
+      "Racing seats": 7937,
+      "Carbon driving zone + LEDs": 7420,
+      "Carbon dashboard": 7082,
+      "Carbon centre console": 2698,
+      "Carbon B-pillars": 3553,
+      "Carbon front wings": 3541,
+      "Carbon exterior sill": 1854
+    }
+  },
+  "mileage_comparison": {
+    "maximum_km": 50000,
+    "same_rule_for_all_models": true,
+    "count": 22,
+    "rows": [
+      {
+        "model": "458 Italia",
+        "year": 2011,
+        "km": 36800,
+        "chf": 179999,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+      },
+      {
+        "model": "458 Italia",
+        "year": 2011,
+        "km": 29800,
+        "chf": 189500,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+      },
+      {
+        "model": "458 Italia",
+        "year": 2011,
+        "km": 10600,
+        "chf": 270000,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+      },
+      {
+        "model": "458 Spider",
+        "year": 2012,
+        "km": 23987,
+        "chf": 214900,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+      },
+      {
+        "model": "458 Spider",
+        "year": 2013,
+        "km": 48950,
+        "chf": 224900,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/458"
+      },
+      {
+        "model": "488 GTB",
+        "year": 2016,
+        "km": 42900,
+        "chf": 207500,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+      },
+      {
+        "model": "488 GTB",
+        "year": 2016,
+        "km": 26000,
+        "chf": 189890,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+      },
+      {
+        "model": "488 GTB",
+        "year": 2017,
+        "km": 14500,
+        "chf": 204000,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+      },
+      {
+        "model": "488 GTB",
+        "year": 2019,
+        "km": 26000,
+        "chf": 219999,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+      },
+      {
+        "model": "488 GTB",
+        "year": 2016,
+        "km": 26500,
+        "chf": 198000,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+      },
+      {
+        "model": "488 GTB",
+        "year": 2018,
+        "km": 2222,
+        "chf": 248900,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+      },
+      {
+        "model": "488 GTB",
+        "year": 2016,
+        "km": 39000,
+        "chf": 197900,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+      },
+      {
+        "model": "488 GTB",
+        "year": 2018,
+        "km": 45700,
+        "chf": 198500,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+      },
+      {
+        "model": "488 GTB",
+        "year": 2018,
+        "km": 7000,
+        "chf": 249900,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+      },
+      {
+        "model": "488 GTB",
+        "year": 2018,
+        "km": 18000,
+        "chf": 243999,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+      },
+      {
+        "model": "488 Spider",
+        "year": 2019,
+        "km": 38000,
+        "chf": 219488,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+      },
+      {
+        "model": "488 Spider",
+        "year": 2018,
+        "km": 18000,
+        "chf": 229000,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+      },
+      {
+        "model": "488 Spider",
+        "year": 2018,
+        "km": 49600,
+        "chf": 219900,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+      },
+      {
+        "model": "488 Spider",
+        "year": 2016,
+        "km": 25000,
+        "chf": 229999,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+      },
+      {
+        "model": "488 Spider",
+        "year": 2017,
+        "km": 36700,
+        "chf": 229000,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+      },
+      {
+        "model": "488 Spider",
+        "year": 2016,
+        "km": 21400,
+        "chf": 233300,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+      },
+      {
+        "model": "488 Spider",
+        "year": 2016,
+        "km": 45000,
+        "chf": 224990,
+        "observed": "2026-10-15",
+        "source": "https://www.autouncle.ch/de-ch/gebrauchtwagen/Ferrari/488"
+      }
+    ],
+    "note": "Exploratory same-mileage-ceiling subset; not condition-adjusted, and very small 458 samples. Original 45 rows unchanged."
+  }
+}

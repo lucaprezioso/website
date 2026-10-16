@@ -758,3 +758,5 @@ footer{border-top:1px solid rgba(243,241,238,0.06);padding:1.5rem 0;font-size:0.
   .footerRight{justify-content:center}
 }
   
+/* Desktop scrollbar styling; preserve each page's original scope. */
+@media (hover:hover) and (pointer:fine){:where(html[data-lo-scrollbars~="calPopup"]) .calPopup,:where(html[data-lo-scrollbars~="loConsentBanner__inner"]) .loConsentBanner__inner,:where(html[data-lo-scrollbars~="loConsentPanel"]) .loConsentPanel,:where(html[data-lo-scrollbars~="tableWrap"]) .tableWrap{scrollbar-width:thin;scrollbar-color:#898c94 transparent}}
