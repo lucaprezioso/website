@@ -120,7 +120,7 @@ function loSlugFromTarget(target){
   t = t.replace(/^pages\//i, "");
   const parts = t.split("/").filter(Boolean);
   const last = parts.length ? parts[parts.length - 1] : "";
-  if(!last) return "";
+  if(!last || (parts.length === 1 && /^(de|en|it)$/i.test(last))) return "";
   if(last.toLowerCase() === "index.html") return "";
   if(last.toLowerCase().endsWith(".html")) return last.slice(0, -5);
   return last;

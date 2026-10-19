@@ -2359,6 +2359,12 @@ footer{
 #showcasePlayback:focus-visible{outline:2px solid #e7d8b8;outline-offset:-4px}
 #showcase .mediaOverlay{z-index:2;pointer-events:none}
 #showcase .mediaOverlay :is(a,button,input,select,textarea){pointer-events:auto}
+
+/* Paint the already-preloaded poster before playback JavaScript runs. */
+#showcase .mediaFull{background-image:url("/media/poster_vertical_480.webp?v=85-susten-vertical");background-size:cover;background-position:center;background-repeat:no-repeat}
+@media (width > 600px) and (max-width:760px){#showcase .mediaFull{background-image:url("/media/poster_vertical_720.webp?v=85-susten-vertical")}}
+@media (width > 760px) and (min-aspect-ratio:5/6){#showcase .mediaFull{background-image:url("/media/poster_1200.webp?v=84-susten")}}
+@media (width > 760px) and (aspect-ratio < 5/6){#showcase .mediaFull{background-image:url("/media/poster_960.webp?v=84-susten")}}
 </style>
 
 <link href="/site.webmanifest?v=logo-20261004-transparent" rel="manifest"/>
@@ -3014,7 +3020,7 @@ body.loPromoNoScroll{
   }
 }
 </style>
-<script defer="" src="/assets/lo.js?v=472995f9c693"></script>
+<script defer="" src="/assets/lo.js?v=9df03e74d6fe"></script>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "AutoRental",
@@ -3275,17 +3281,17 @@ header .navInner{padding-top:6px!important;padding-bottom:6px!important}
 <span class="brandGold">Luxury Obsession</span>
 </a>
 <div class="navRight">
-<nav aria-label="Primary" class="navLinks"><a href="/preise" id="navRates">Tarife</a>
+<nav aria-label="Hauptnavigation" class="navLinks"><a href="/preise" id="navRates">Tarife</a>
 <a href="/galerie" id="navGallery">Galerie</a>
 <a href="/ferrari-gutschein-zuerich" id="navVoucher">Gutschein</a>
 <a href="/ueber-uns" id="navAbout">Über uns</a>
 <a class="navCta" href="#request" id="navRequest">Anfrage</a></nav>
-<div aria-label="Language" class="langSelect">
+<div aria-label="Sprache" class="langSelect">
 <button aria-expanded="false" aria-haspopup="menu" class="langToggle" id="langToggle" type="button">
-<span aria-label="Current language" id="langCode">DE</span>
+<span aria-label="Aktuelle Sprache" id="langCode">DE</span>
 <span aria-hidden="true" class="langChevron">▾</span>
 </button>
-<div aria-label="Select language" class="langMenu" hidden="" id="langMenu" role="menu">
+<div aria-label="Sprache auswählen" class="langMenu" hidden="" id="langMenu" role="menu">
 <button class="langOption" data-lang="en" role="menuitem" type="button">English</button>
 <button class="langOption" data-lang="de" role="menuitem" type="button">Deutsch</button>
 <button class="langOption" data-lang="it" role="menuitem" type="button">Italiano</button>
@@ -3296,13 +3302,13 @@ header .navInner{padding-top:6px!important;padding-bottom:6px!important}
 </button>
 </div>
 </div>
-<div aria-label="Mobile" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation"></div>
+<div aria-label="Mobile Navigation" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation"></div>
 </div>
 </header>
 <div aria-live="polite" class="loLangSuggest" hidden="" id="loLangSuggest">
 <div class="container loLangSuggestInner">
 <p class="loLangSuggestText" id="loLangSuggestText"></p>
-<button aria-label="Dismiss language suggestion" class="loLangSuggestClose" id="loLangSuggestClose" type="button">×</button>
+<button aria-label="Sprachvorschlag schließen" class="loLangSuggestClose" id="loLangSuggestClose" type="button">×</button>
 </div>
 </div>
 <main id="main-content" tabindex="-1">
@@ -3676,7 +3682,7 @@ ich danke nochmals Anna und sein Mann für diese super Organisation, war sehr se
 <select id="packageId" name="package_id" required=""><option value="P3_U">Kurztrip · 3h · ∞ · 440 CHF</option><option value="P6_L">Signature Halbtag · 6h · 200 km · 780 CHF</option><option value="P6_U">Signature Halbtag Unlimited · 6h · ∞ · 830 CHF</option><option value="P12_L">Grand Tour 300 · 12h · 300 km · 940 CHF</option><option value="P12_L500">Grand Tour 500 · 12h · 500 km · 1140 CHF</option><option value="P12_U">Grand Tour Unlimited · 12h · ∞ · 1290 CHF</option><option value="P24_L200">Full Day Icon 200 · 24h · 200 km · 1340 CHF</option><option value="P24_L500">Full Day Icon 500 · 24h · 500 km · 1590 CHF</option><option value="P24_U">Full Day Icon Unlimited · 24h · ∞ · 1990 CHF</option><option value="WE_500">Weekend Escape 500 · 48h · 500 km · 1990 CHF</option><option value="WE_800">Weekend Escape 800 · 48h · 800 km · 2790 CHF</option><option value="WD">Weekday Privilege · Mo–Fr · 700 km · 2480 CHF</option><option value="FW">Ganze Woche · Ganze Woche · 1300 km · 4480 CHF</option></select>
 </div><div class="fieldGroup">
 <label for="pickupLocation" id="lblPickupLoc">Abholort</label>
-<select id="pickupLocation" name="pickup_location"><option value="NANIKON">Nänikon · KOSTENLOS</option><option value="ZURICH_AIRPORT">Flughafen Zürich · Kosten bei Bestätigung</option><option value="ZURICH">Zürich · Kosten bei Bestätigung</option><option value="WINTERTHUR">Winterthur · Kosten bei Bestätigung</option><option value="ZUG">Zug · CHF 140</option><option value="LUCERNE">Luzern · CHF 140</option><option value="ST_GALLEN">St. Gallen · CHF 140</option><option value="AARGAU">Aargau · CHF 140</option><option value="BERN">Bern · CHF 290</option><option value="SOLOTHURN">Solothurn · CHF 290</option><option value="BASEL">Basel · CHF 290</option><option value="BIEL">Biel · CHF 290</option><option value="CHUR">Chur · CHF 290</option><option value="ALTDORF">Altdorf UR (für Andermatt) · CHF 290</option><option value="CHUR_DAVOS">Chur (für Davos) · CHF 290</option><option value="OTHER">Andere · Bitte in Notizen angeben</option></select>
+<select id="pickupLocation" name="pickup_location"><option value="NANIKON">Nänikon · KOSTENLOS</option><option value="ZURICH_AIRPORT">Flughafen Zürich · Kosten bei Bestätigung</option><option value="ZURICH">Zürich · Kosten bei Bestätigung</option><option value="WINTERTHUR">Winterthur · Kosten bei Bestätigung</option><option value="ZUG">Zug · CHF 140</option><option value="AARGAU">Aargau · CHF 140</option><option value="LUCERNE">Luzern · CHF 190</option><option value="ST_GALLEN">St. Gallen · CHF 190</option><option value="BERN">Bern · CHF 290</option><option value="SOLOTHURN">Solothurn · CHF 290</option><option value="BASEL">Basel · CHF 290</option><option value="BIEL">Biel · CHF 290</option><option value="CHUR">Chur · CHF 290</option><option value="ALTDORF">Altdorf UR (für Andermatt) · CHF 290</option><option value="CHUR_DAVOS">Chur (für Davos) · CHF 290</option><option value="OTHER">Andere · Bitte in Notizen angeben</option></select>
 </div></div>
 <div class="loBookingDateRow"><div class="fieldGroup calWrap">
 <label for="preferredDate" id="lblDate">Wunschtermin</label>
@@ -4637,9 +4643,9 @@ renderPackagesPreview();
           ["ZURICH", "Zurich · FREE in 2026"],
           ["WINTERTHUR", "Winterthur · FREE in 2026"],
           ["ZUG", "Zug · CHF 140"],
-          ["LUCERNE", "Lucerne · CHF 140"],
-          ["ST_GALLEN", "St. Gallen · CHF 140"],
           ["AARGAU", "Aargau · CHF 140"],
+          ["LUCERNE", "Lucerne · CHF 190"],
+          ["ST_GALLEN", "St. Gallen · CHF 190"],
           ["BERN", "Bern · CHF 290"],
           ["SOLOTHURN", "Solothurn · CHF 290"],
           ["BASEL", "Basel · CHF 290"],
@@ -4655,9 +4661,9 @@ renderPackagesPreview();
           ["ZURICH", "Zürich · KOSTENLOS in 2026"],
           ["WINTERTHUR", "Winterthur · KOSTENLOS in 2026"],
           ["ZUG", "Zug · CHF 140"],
-          ["LUCERNE", "Luzern · CHF 140"],
-          ["ST_GALLEN", "St. Gallen · CHF 140"],
           ["AARGAU", "Aargau · CHF 140"],
+          ["LUCERNE", "Luzern · CHF 190"],
+          ["ST_GALLEN", "St. Gallen · CHF 190"],
           ["BERN", "Bern · CHF 290"],
           ["SOLOTHURN", "Solothurn · CHF 290"],
           ["BASEL", "Basel · CHF 290"],
@@ -4673,9 +4679,9 @@ renderPackagesPreview();
           ["ZURICH", "Zurigo · GRATIS nel 2026"],
           ["WINTERTHUR", "Winterthur · GRATIS nel 2026"],
           ["ZUG", "Zug · CHF 140"],
-          ["LUCERNE", "Lucerna · CHF 140"],
-          ["ST_GALLEN", "St. Gallen · CHF 140"],
           ["AARGAU", "Argovia · CHF 140"],
+          ["LUCERNE", "Lucerna · CHF 190"],
+          ["ST_GALLEN", "St. Gallen · CHF 190"],
           ["BERN", "Berna · CHF 290"],
           ["SOLOTHURN", "Soletta · CHF 290"],
           ["BASEL", "Basilea · CHF 290"],

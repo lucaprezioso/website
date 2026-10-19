@@ -29,7 +29,7 @@ const LANGUAGE_URLS_BY_MODE = {
 
 const CITY_CONFIG = {
   luzern: {
-    delivery: 140,
+    delivery: 190,
     pickup: "LUCERNE",
     names: { de: "Luzern", en: "Lucerne", it: "Lucerna" },
     locative: { de: "in Luzern", en: "in Lucerne", it: "a Lucerna" },
@@ -61,7 +61,7 @@ const CITY_CONFIG = {
     slugs: { de: "ferrari-mieten-basel", en: "ferrari-rental-basel", it: "noleggio-ferrari-basilea" },
   },
   st_gallen: {
-    delivery: 140,
+    delivery: 190,
     pickup: "ST_GALLEN",
     names: { de: "St. Gallen", en: "St. Gallen", it: "San Gallo" },
     locative: { de: "in St. Gallen", en: "in St. Gallen", it: "a San Gallo" },
@@ -194,7 +194,7 @@ const SWITZERLAND_COPY = {
     showcaseCta: "Verfügbarkeit in der Schweiz anfragen",
     heroTitleA: "Ferrari 458 Italia mieten",
     heroTitleB: "in der Schweiz ab CHF 440",
-    heroSubtitle: "Miete den Ferrari 458 Italia in der Schweiz ab CHF 440 für 3 Stunden. Die kostenlose Hauptabholung ist in Nänikon nahe Zürich. Lieferungen nach Zug, Luzern, St. Gallen und Aargau kosten CHF 140; nach Bern, Basel und Chur CHF 290. Wähle im Formular deinen Ort und erhalte eine persönliche Bestätigung ohne versteckte Lieferkosten.",
+    heroSubtitle: "Miete den Ferrari 458 Italia in der Schweiz ab CHF 440 für 3 Stunden. Die kostenlose Hauptabholung ist in Nänikon nahe Zürich. Lieferungen nach Zug und Aargau kosten CHF 140, nach Luzern und St. Gallen CHF 190; nach Bern, Basel und Chur CHF 290. Wähle im Formular deinen Ort und erhalte eine persönliche Bestätigung ohne versteckte Lieferkosten.",
     pill0: "Ferrari 458 Italia",
     pill1: "Selbst fahren",
     pill2: "Nänikon kostenlos",
@@ -211,7 +211,7 @@ const SWITZERLAND_COPY = {
     pickupNote: "Nänikon nahe Zürich kostenlos; ausgewählte Lieferorte ab CHF 140.",
     faqSub: "Antworten zur Ferrari Vermietung, Abholung und Lieferung in der Schweiz.",
     faqQ7: "Wo kann ich den Ferrari in der Schweiz übernehmen?",
-    faqA7: "Die Hauptabholung in Nänikon nahe Zürich ist kostenlos. Lieferung nach Zug, Luzern, St. Gallen und Aargau kostet CHF 140; nach Bern, Basel und Chur CHF 290. Weitere Orte prüfen wir auf Anfrage.",
+    faqA7: "Die Hauptabholung in Nänikon nahe Zürich ist kostenlos. Lieferung nach Zug und Aargau kostet CHF 140, nach Luzern und St. Gallen CHF 190; nach Bern, Basel und Chur CHF 290. Weitere Orte prüfen wir auf Anfrage.",
   },
   en: {
     title: "Ferrari Rental Switzerland from CHF 440 | 458 Italia",
@@ -224,7 +224,7 @@ const SWITZERLAND_COPY = {
     showcaseCta: "Request availability in Switzerland",
     heroTitleA: "Rent a Ferrari 458 Italia",
     heroTitleB: "in Switzerland from CHF 440",
-    heroSubtitle: "Rent the Ferrari 458 Italia in Switzerland from CHF 440 for 3 hours. Main pickup in Nänikon near Zurich is free. Delivery to Zug, Lucerne, St. Gallen and Aargau costs CHF 140; delivery to Bern, Basel and Chur costs CHF 290. Choose your location in the form and receive a personal confirmation with no hidden delivery fees.",
+    heroSubtitle: "Rent the Ferrari 458 Italia in Switzerland from CHF 440 for 3 hours. Main pickup in Nänikon near Zurich is free. Delivery to Zug and Aargau costs CHF 140, and to Lucerne and St. Gallen CHF 190; delivery to Bern, Basel and Chur costs CHF 290. Choose your location in the form and receive a personal confirmation with no hidden delivery fees.",
     pill0: "Ferrari 458 Italia",
     pill1: "Self-drive rental",
     pill2: "Free Nänikon pickup",
@@ -241,7 +241,7 @@ const SWITZERLAND_COPY = {
     pickupNote: "Free pickup in Nänikon near Zurich; selected delivery locations from CHF 140.",
     faqSub: "Answers about Ferrari rental, pickup and delivery in Switzerland.",
     faqQ7: "Where can I collect the Ferrari in Switzerland?",
-    faqA7: "Main pickup in Nänikon near Zurich is free. Delivery to Zug, Lucerne, St. Gallen and Aargau costs CHF 140; delivery to Bern, Basel and Chur costs CHF 290. We can review other locations on request.",
+    faqA7: "Main pickup in Nänikon near Zurich is free. Delivery to Zug and Aargau costs CHF 140, and to Lucerne and St. Gallen CHF 190; delivery to Bern, Basel and Chur costs CHF 290. We can review other locations on request.",
   },
   it: {
     title: "Noleggio Ferrari Svizzera da CHF 440 | 458 Italia",
@@ -254,7 +254,7 @@ const SWITZERLAND_COPY = {
     showcaseCta: "Richiedi disponibilità in Svizzera",
     heroTitleA: "Noleggia una Ferrari 458 Italia",
     heroTitleB: "in Svizzera da CHF 440",
-    heroSubtitle: "Noleggia la Ferrari 458 Italia in Svizzera da CHF 440 per 3 ore. Il ritiro principale a Nänikon, vicino a Zurigo, è gratuito. La consegna a Zugo, Lucerna, San Gallo e Argovia costa CHF 140; a Berna, Basilea e Coira CHF 290. Scegli la località nel modulo e ricevi una conferma personale senza costi di consegna nascosti.",
+    heroSubtitle: "Noleggia la Ferrari 458 Italia in Svizzera da CHF 440 per 3 ore. Il ritiro principale a Nänikon, vicino a Zurigo, è gratuito. La consegna a Zugo e Argovia costa CHF 140, a Lucerna e San Gallo CHF 190; a Berna, Basilea e Coira CHF 290. Scegli la località nel modulo e ricevi una conferma personale senza costi di consegna nascosti.",
     pill0: "Ferrari 458 Italia",
     pill1: "Guida tu",
     pill2: "Ritiro Nänikon gratuito",
@@ -271,7 +271,7 @@ const SWITZERLAND_COPY = {
     pickupNote: "Ritiro gratuito a Nänikon vicino a Zurigo; località di consegna selezionate da CHF 140.",
     faqSub: "Risposte sul noleggio Ferrari, il ritiro e la consegna in Svizzera.",
     faqQ7: "Dove posso ritirare la Ferrari in Svizzera?",
-    faqA7: "Il ritiro principale a Nänikon vicino a Zurigo è gratuito. La consegna a Zugo, Lucerna, San Gallo e Argovia costa CHF 140; a Berna, Basilea e Coira CHF 290. Valutiamo altre località su richiesta.",
+    faqA7: "Il ritiro principale a Nänikon vicino a Zurigo è gratuito. La consegna a Zugo e Argovia costa CHF 140, a Lucerna e San Gallo CHF 190; a Berna, Basilea e Coira CHF 290. Valutiamo altre località su richiesta.",
   },
 };
 
