@@ -1,0 +1,61 @@
+{
+  "rapperswil": {
+    "author": "Jakub Hałun",
+    "source": "https://commons.wikimedia.org/wiki/File:View_from_Rapperswil_Castle,_20250330_0913_7869.jpg",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "sizes": [
+      [
+        480,
+        320
+      ],
+      [
+        960,
+        641
+      ],
+      [
+        1440,
+        961
+      ]
+    ],
+    "changes": "Resized and converted to WebP; original framing retained."
+  },
+  "iseltwald": {
+    "author": "Alps",
+    "source": "https://commons.wikimedia.org/wiki/File:Iseltwald.jpg",
+    "license": "Public domain",
+    "license_url": "https://commons.wikimedia.org/wiki/File:Iseltwald.jpg#Licensing",
+    "sizes": [
+      [
+        480,
+        323
+      ],
+      [
+        955,
+        643
+      ]
+    ],
+    "changes": "Resized and converted to WebP; original framing retained."
+  },
+  "susten": {
+    "author": "Norbert Aepli, Switzerland",
+    "source": "https://commons.wikimedia.org/wiki/File:Sustenpass_01.JPG",
+    "license": "CC BY 2.5",
+    "license_url": "https://creativecommons.org/licenses/by/2.5/",
+    "sizes": [
+      [
+        480,
+        360
+      ],
+      [
+        960,
+        720
+      ],
+      [
+        1440,
+        1080
+      ]
+    ],
+    "changes": "Resized and converted to WebP; original framing retained."
+  }
+}

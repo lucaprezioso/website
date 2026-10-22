@@ -1,0 +1,16 @@
+#articleBody .comparisonPair{margin:2.6rem 0;clear:both}
+#articleBody .comparisonPair>h3{margin-bottom:1.1rem}
+#articleBody .comparisonPairGrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.1rem;align-items:start}
+#articleBody .comparisonPair figure,#articleBody .comparisonConsole{margin:0;min-width:0}
+#articleBody .comparisonModel{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#d1af73;margin-bottom:.65rem;font-weight:600}
+#articleBody .comparisonImage{overflow:hidden;background:#101014;border-radius:10px;aspect-ratio:3/2}
+#articleBody .comparisonPair--portrait .comparisonImage{aspect-ratio:4/5}
+#articleBody .comparisonImage img{display:block;width:100%;height:100%;object-fit:cover;cursor:default;pointer-events:none}
+#articleBody .comparisonPair figcaption,#articleBody .comparisonConsole figcaption{font-size:.87rem;line-height:1.6;margin-top:.75rem;color:inherit}
+#articleBody .comparisonCredit{display:block;font-size:.72rem;line-height:1.5;opacity:.7;margin-top:.45rem;overflow-wrap:anywhere}
+#articleBody .comparisonConsole{max-width:540px;margin:2rem auto}
+#articleBody .comparisonConsole .comparisonImage{aspect-ratio:4/3}
+@media(max-width:700px){#articleBody .comparisonPairGrid{grid-template-columns:minmax(0,1fr);gap:1.6rem}#articleBody .comparisonPair{margin:2rem 0}#articleBody .comparisonPair--portrait .comparisonImage{aspect-ratio:4/5}#articleBody .comparisonModel{font-size:.75rem}}
+
+#articleBody .comparisonImage{position:relative}
+#articleBody .comparisonPair--square .comparisonImage{aspect-ratio:1}

@@ -1,0 +1,15 @@
+/* Scoped to the F430 / 458 article; existing site typography is retained. */
+#articleBody .comparisonContents{display:flex;flex-wrap:wrap;gap:.65rem 1.2rem;padding:1.1rem 0;border-top:1px solid rgba(255,255,255,.15);border-bottom:1px solid rgba(255,255,255,.15);margin:1.5rem 0 2rem}
+#articleBody h2[id]{scroll-margin-top:7rem}
+#articleBody .tableWrap{width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+#articleBody table{width:100%;min-width:620px;border-collapse:collapse}
+#articleBody caption{text-align:left;font-size:.9rem;margin-bottom:.8rem;line-height:1.5}
+#articleBody th,#articleBody td{padding:.85rem;text-align:left;vertical-align:top;border-bottom:1px solid rgba(255,255,255,.13)}
+#articleBody tbody th{font-weight:600;width:26%}
+#articleBody .comparisonNote{font-size:.88rem;line-height:1.65;opacity:.85}
+#articleBody .comparisonFigure{margin:2rem 0;width:100%}
+#articleBody .comparisonFigure img{display:block;width:100%;height:auto;border-radius:12px}
+#articleBody .comparisonFigure figcaption{font-size:.84rem;line-height:1.6;margin-top:.7rem;opacity:.85}
+#articleBody .comparisonPortrait{max-width:400px;margin:2rem auto}
+#articleBody a:focus-visible,#articleBody .tableWrap:focus-visible{outline:2px solid #d1af73;outline-offset:5px}
+@media(max-width:520px){#articleBody .comparisonContents{gap:.7rem 1rem;font-size:.9rem}#articleBody th,#articleBody td{padding:.7rem}#articleBody .comparisonFigure{margin-top:1.5rem;margin-bottom:1.5rem}}

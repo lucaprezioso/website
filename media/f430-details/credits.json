@@ -1,0 +1,31 @@
+{
+  "front": {
+    "author": "Calreyn88",
+    "title": "2005 Ferrari F430 F1 1.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:2005_Ferrari_F430_F1_1.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Resized to WebP. CSS framing may crop the displayed image; source file framing retained.",
+    "derivative_license": "CC BY-SA 4.0"
+  },
+  "cockpit": {
+    "author": "Rdsmith4",
+    "title": "Ferrari F430 interior at 2006 Chicago Auto Show.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Ferrari_F430_interior_at_2006_Chicago_Auto_Show.jpg",
+    "license": "CC BY-SA 2.5",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.5/",
+    "changes": "Resized to WebP. CSS framing may crop the displayed image; source file framing retained.",
+    "derivative_license": "CC BY-SA 2.5"
+  },
+  "rear": {
+    "author": "KlausNahr",
+    "source": "https://commons.wikimedia.org/wiki/File:Ferrari_F430_Rear.jpg",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "changes": "Resized to WebP; CSS framing adjusted.",
+    "derivative_license": "CC BY-SA 2.0"
+  },
+  "manual": {
+    "source": "User-supplied image approved for this article"
+  }
+}
