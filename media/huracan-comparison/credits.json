@@ -1,0 +1,18 @@
+{
+  "exterior": {
+    "author": "Calreyn88",
+    "source": "https://commons.wikimedia.org/wiki/File:2015_Lamborghini_Huracan_LP610-4.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Resized to WebP; CSS framing may crop displayed view.",
+    "derivative_license": "CC BY-SA 4.0"
+  },
+  "interior": {
+    "author": "Zlatko at English Wikipedia",
+    "source": "https://commons.wikimedia.org/wiki/File:Lamborghini_Huracan_Interior.jpg",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "changes": "Resized to WebP; CSS framing may crop displayed view.",
+    "derivative_license": "CC BY-SA 3.0"
+  }
+}
