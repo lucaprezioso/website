@@ -1,0 +1,23 @@
+#articleBody h2[id],#articleBody li[id]{scroll-margin-top:7rem}
+#articleBody .detailsSummary{padding:1.3rem 1.5rem;border-left:3px solid #c8aa72;background:rgba(200,170,114,.06);margin:2rem 0}
+#articleBody .detailsSummary h2{margin-top:0}
+#articleBody .detailsContents{padding:1.3rem 0;border-top:1px solid #ffffff24;border-bottom:1px solid #ffffff24;margin:2rem 0}
+#articleBody .detailsContents ol{display:grid;grid-template-columns:1fr 1fr;gap:.6rem 2rem;padding-left:1.5rem;margin-bottom:0}
+#articleBody .detailFigure{margin:2rem 0;min-width:0}
+#articleBody .detailImage{overflow:hidden;border-radius:10px;background:#101014}
+#articleBody .detailImage img{display:block;width:100%;height:auto;pointer-events:none;cursor:default}
+#articleBody .detailWide .detailImage,#articleBody .detailFront .detailImage{aspect-ratio:3/2}
+#articleBody .detailWide img,#articleBody .detailFront img{height:100%;object-fit:cover}
+#articleBody .detailFigure figcaption{font-size:.85rem;line-height:1.6;margin-top:.7rem;opacity:.85}
+#articleBody .detailPair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.2rem;margin:2rem 0}
+#articleBody .detailPair .detailFigure{margin:0}
+#articleBody .detailPair .detailImage{aspect-ratio:4/5}
+#articleBody .detailPair img{height:100%;object-fit:cover}
+#articleBody .detailsProfile{display:grid;grid-template-columns:160px minmax(0,1fr);gap:1.5rem;align-items:start}
+#articleBody .detailsProfile .detailPortrait{margin:.4rem 0 1rem}
+#articleBody .detailPortrait figcaption{font-size:.72rem;line-height:1.5}
+#articleBody .detailCredit{display:block;font-size:.67rem;margin-top:.5rem;overflow-wrap:anywhere}
+#articleBody .detailsSources{margin-top:2.5rem;padding-top:1rem;border-top:1px solid #ffffff24;font-size:.82rem;line-height:1.65;overflow-wrap:anywhere}
+#articleBody a:focus-visible{outline:2px solid #d1af73;outline-offset:4px}
+@media(max-width:700px){#articleBody .detailPair{grid-template-columns:1fr}#articleBody .detailsContents ol{gap:.65rem 1.2rem}#articleBody .detailsSummary{padding:1rem}}
+@media(max-width:520px){#articleBody .detailsProfile{display:block}#articleBody .detailsProfile .detailPortrait{max-width:140px}#articleBody .detailsContents ol{grid-template-columns:1fr}}
