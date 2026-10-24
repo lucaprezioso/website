@@ -1,0 +1,12 @@
+/* Scoped to the European rental comparison. */
+.countryGuide .countryNote{margin:1.5rem 0;padding:1.2rem 1.4rem;border-left:3px solid #cdb885;background:rgba(205,184,133,.06);border-radius:0 12px 12px 0;font-size:.96rem;line-height:1.8}
+.countryGuide .countryContents{display:flex;flex-wrap:wrap;gap:.55rem 1.2rem;margin:1.5rem 0 2.2rem;padding:1rem 0;border-top:1px solid rgba(255,255,255,.15);border-bottom:1px solid rgba(255,255,255,.15);font-size:.9rem}
+.countryGuide h2[id]{scroll-margin-top:100px}
+.countryGuide .countryPhoto{margin:1.8rem 0 2.4rem}.countryGuide .countryPhoto img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,.12)}
+.countryGuide .countryPhoto--wide img{aspect-ratio:auto}
+.countryGuide .countryPhoto figcaption{margin:.65rem 0 0;font-size:.88rem;line-height:1.65;color:rgba(243,241,238,.83)}
+.countryGuide .photoCredit{display:block;margin-top:.25rem;font-size:.73rem;color:rgba(243,241,238,.65)}
+.countryGuide .photoCredit a{color:inherit;text-underline-offset:3px}
+.countryGuide .countryTable{overflow-x:auto;margin:1.4rem 0}.countryGuide .countryTable table{min-width:620px;width:100%}.countryGuide .countryTable th[scope=row]{font-size:1rem;text-transform:none;letter-spacing:normal}
+.countryGuide .countrySources{margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.15);font-size:.87rem;line-height:1.7}.countryGuide .countrySources h2{font-size:1.5rem}
+@media(max-width:600px){.countryGuide .countryNote{padding:1rem}.countryGuide .countryPhoto{margin:1.4rem 0 2rem}.countryGuide .countryPhoto img{border-radius:10px}.countryGuide .countryContents{gap:.75rem 1.2rem}}

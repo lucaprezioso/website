@@ -1,0 +1,42 @@
+[
+  {
+    "files": [
+      "488-front-480.webp",
+      "488-front-960.webp"
+    ],
+    "author": "Vauxford",
+    "source": "https://commons.wikimedia.org/wiki/File:2017_Ferrari_488_GTB_Automatic_3.9_Front.jpg",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Resized and converted to WebP; CSS may crop display. CC BY-SA derivatives remain CC BY-SA 4.0."
+  },
+  {
+    "files": [
+      "488-profile-480.webp",
+      "488-profile-960.webp"
+    ],
+    "author": "Norbert Aepli, Switzerland",
+    "source": "https://commons.wikimedia.org/wiki/File:2015-03-03_Geneva_Motor_Show_3924.JPG",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "changes": "Resized and converted to WebP; CSS may crop display."
+  },
+  {
+    "files": [
+      "488-rear-480.webp",
+      "488-rear-960.webp"
+    ],
+    "author": "Vauxford",
+    "source": "https://commons.wikimedia.org/wiki/File:2017_Ferrari_488_GTB_Automatic_3.9_Rear.jpg",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "changes": "Resized and converted to WebP; CSS may crop display. CC BY-SA derivatives remain CC BY-SA 4.0."
+  },
+  {
+    "files": [
+      "488-interior-480.webp",
+      "488-interior-960.webp"
+    ],
+    "author": "Paolo Resteghini",
+    "source": "https://unsplash.com/photos/the-interior-of-a-red-sports-car-with-its-door-open-Ig-X2wylDTQ",
+    "license": "https://unsplash.com/license",
+    "changes": "Resized and converted to WebP; CSS may crop display."
+  }
+]
