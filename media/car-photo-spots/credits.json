@@ -1,0 +1,12 @@
+{
+  "title": "Museum Bellerive 2022",
+  "author": "Paebi",
+  "source": "https://commons.wikimedia.org/wiki/File:Museum_Bellerive_2022.jpg",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "changes": "Resized and converted to WebP; no crop or content alteration. Same licence applies.",
+  "files": [
+    "bellerive-480.webp",
+    "bellerive-960.webp"
+  ]
+}

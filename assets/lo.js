@@ -722,11 +722,13 @@ function initFooterLegalLinks(lang){
     btn.dataset.loBound = "1";
 
     function close(){
+      menu.style.removeProperty("display");
       menu.setAttribute("data-open","0");
       btn.setAttribute("aria-expanded","false");
     }
 
     function open(){
+      menu.style.removeProperty("display");
       menu.setAttribute("data-open","1");
       btn.setAttribute("aria-expanded","true");
     }
