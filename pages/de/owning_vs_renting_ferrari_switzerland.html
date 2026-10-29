@@ -147,7 +147,7 @@
   </script>
 <link rel="stylesheet" href="/assets/lo.bundle-5b7a4e72291d.css"/>
 
-<script defer src="../assets/lo.js?v=9df03e74d6fe"></script><script>
+<script defer src="../assets/lo.js?v=link-audit-20261029"></script><script>
 try {
   localStorage.setItem("lo_lang", "de");
   const u = new URL(window.location.href);
@@ -380,8 +380,8 @@ header .navInner{padding-top:6px!important;padding-bottom:6px!important}
     setText("footerImpressum", "Impressum");
 
     const brand = document.querySelector(".brand");
-    if(brand) brand.setAttribute("href", "/de/");
-    setHref("navRates", "/de/pricing");
+    if(brand) brand.setAttribute("href", "/");
+    setHref("navRates", "/preise");
     setHref("navPhilosophy", "/de/philosophy");
     setHref("navExperiences", "/de/experiences");
     setHref("navBlog", "/de/blog");
@@ -389,7 +389,7 @@ header .navInner{padding-top:6px!important;padding-bottom:6px!important}
     setHref("navRequest", "/#request");
     setHref("backBlog", "/de/blog");
     setHref("reqQuote", "/#request");
-    setHref("footerImpressum", "/de/impressum");
+    setHref("footerImpressum", "/impressum");
 
     if(lo && typeof lo.initSharedUI === "function") lo.initSharedUI(lang);
     else if(lo && typeof lo.initLangMenu === "function") lo.initLangMenu(lang);

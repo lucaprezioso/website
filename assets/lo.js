@@ -126,6 +126,24 @@ function loSlugFromTarget(target){
   return last;
 }
 
+// Resolve known legacy aliases without changing language, query strings or booking fragments.
+function loCanonicalInternalHref(href){
+  const match = /^([^?#]*)([?#].*)?$/.exec(String(href || ""));
+  if(!match) return href;
+  const aliases = {
+    "/en/blog": "/en/journal",
+    "/en/impressum": "/imprint",
+    "/it/impressum": "/note-legali",
+    "/de/impressum": "/impressum",
+    "/de/pricing": "/preise",
+    "/de/": "/",
+    "/de": "/",
+    "/en": "/en/",
+    "/it": "/it/"
+  };
+  return (aliases[match[1]] || match[1]) + (match[2] || "");
+}
+
 function loPrettyUrl(target, lang, hash){
   const effectiveLang = lang || getLang();
   const base = loBasePathname();
@@ -150,7 +168,7 @@ function loPrettyUrl(target, lang, hash){
     const h = String(hash).replace(/^#/, "");
     if(h) out += "#" + h;
   }
-  return out;
+  return loCanonicalInternalHref(out);
 }
 
 function loRewriteInternalLinks(effectiveLang){
@@ -179,6 +197,11 @@ function loRewriteInternalLinks(effectiveLang){
   document.querySelectorAll("a[href]").forEach(a => {
     const href = a.getAttribute("href");
     if(!href) return;
+    const canonicalHref = loCanonicalInternalHref(href);
+    if(canonicalHref !== href){
+      a.setAttribute("href", canonicalHref);
+      return;
+    }
     if(href.startsWith("#")) return;
 
     const low = href.toLowerCase();
@@ -1219,6 +1242,7 @@ if(navLinks){
     getLang,
     setLang,
     buildUrl,
+    canonicalInternalHref: loCanonicalInternalHref,
     withAttributionParams,
     initLangMenu,
     initFooterYear,

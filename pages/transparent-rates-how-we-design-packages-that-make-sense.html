@@ -386,7 +386,7 @@
   </script>
 <link rel="stylesheet" href="/assets/lo.bundle-5b7a4e72291d.css"/>
 
-<script defer src="../assets/lo.js?v=9df03e74d6fe"></script><link href="/assets/lo.journal-back.css" rel="stylesheet"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxuryobsession.ch/en/"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://luxuryobsession.ch/en/journal"}, {"@type": "ListItem", "position": 3, "name": "Transparent pricing how we design packages that make sense", "item": "https://luxuryobsession.ch/en/transparent-rates-how-we-design-packages-that-make-sense"}]}</script><style data-lo-accessibility>
+<script defer src="../assets/lo.js?v=link-audit-20261029"></script><link href="/assets/lo.journal-back.css" rel="stylesheet"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxuryobsession.ch/en/"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://luxuryobsession.ch/en/journal"}, {"@type": "ListItem", "position": 3, "name": "Transparent pricing how we design packages that make sense", "item": "https://luxuryobsession.ch/en/transparent-rates-how-we-design-packages-that-make-sense"}]}</script><style data-lo-accessibility>
 
 /* Keyboard access and booking details; initial hero layout is unchanged. */
 .loSkipLink{position:fixed;top:8px;left:12px;transform:translateY(-180%);z-index:2147483647;padding:12px 18px;border-radius:8px;background:#e7d8b8;color:#101010;font:600 15px/1.4 system-ui;text-decoration:none}
@@ -481,7 +481,7 @@ header .navInner{padding-top:6px!important;padding-bottom:6px!important}
 </div>
 <article aria-label="Article" class="prose">
 <p data-i18n="p1">Luxury should never feel vague. When pricing is unclear, you spend mental energy on numbers instead of the road. Our goal is a structure that lets you decide in minutes, not in messages.</p>
-<p data-i18n="p2">That is why our Rates are built around two simple questions: how long do you want the car, and how far do you plan to drive. Everything else is stated upfront as either included, optional, or outside scope.</p>
+<p data-i18n="p2">That is why <a href="/en/pricing">our Rates</a> are built around two simple questions: how long do you want the car, and how far do you plan to drive. Everything else is stated upfront as either included, optional, or outside scope.</p>
 <div class="callout card callout">
 <h3 class="calloutTitle" data-i18n="callout_title">A quick way to think about it</h3>
 <p class="calloutBody" data-i18n="callout_body">Start with the time window you want. Then choose the distance allowance that matches your route. If you are unsure, request a quote and we will map it to the cleanest package.</p>
@@ -660,8 +660,8 @@ header .navInner{padding-top:6px!important;padding-bottom:6px!important}
 		};
 
 setHref("navContact", "/en#contact");
-setHref("navRequest", "/en#request");
-setHref("req", "/en#request");
+setHref("navRequest", "/en/#request");
+setHref("req", "/en/#request");
       
       function wireHamburgerFallback(){
         const btn = document.getElementById("hamburger");
@@ -780,7 +780,7 @@ setHref("req", "/en#request");
           toc_6:"Frequently asked questions",
 
           p1:"Luxury should never feel vague. When pricing is unclear, you spend mental energy on numbers instead of the road. Our goal is a structure that lets you decide in minutes, not in messages.",
-          p2:"That is why our Rates are built around two simple questions: how long do you want the car, and how far do you plan to drive. Everything else is stated upfront as either included, optional, or outside scope.",
+          p2:"That is why <a href='/en/pricing'>our Rates</a> are built around two simple questions: how long do you want the car, and how far do you plan to drive. Everything else is stated upfront as either included, optional, or outside scope.",
 
           callout_title:"A quick way to think about it",
           callout_body:"Start with the time window you want. Then choose the distance allowance that matches your route. If you are unsure, request a quote and we will map it to the cleanest package.",
@@ -1116,7 +1116,11 @@ setHref("req", "/en#request");
         document.querySelectorAll("[data-i18n]").forEach(el => {
           const key = el.getAttribute("data-i18n");
           const val = dict[key];
-          if(typeof val === "string") el.textContent = val;
+          if(typeof val === "string") {
+            // Only this site-authored paragraph contains a contextual link.
+            if(key === "p2") el.innerHTML = val;
+            else el.textContent = val;
+          }
         });
       }
 

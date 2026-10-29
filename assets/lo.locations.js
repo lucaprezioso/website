@@ -68,13 +68,15 @@
     if(el) el.setAttribute(name, value);
   }
 
-  function fillList(id, items){
+  function fillList(id, items, allowHTML = false){
     const ul = document.getElementById(id);
     if(!ul) return;
     ul.innerHTML = "";
     (items || []).forEach((t) => {
       const li = document.createElement("li");
-      li.textContent = t;
+      // HTML is enabled only for trusted, site-authored route descriptions.
+      if(allowHTML) li.innerHTML = t;
+      else li.textContent = t;
       ul.appendChild(li);
     });
   }
@@ -363,7 +365,7 @@
     setText("eyebrow", t.eyebrow);
     setText("heroTitleA", t.heroTitleA);
     setText("heroTitleB", t.heroTitleB);
-    setText("heroSubtitle", t.heroSubtitle);
+    setHTML("heroSubtitle", t.heroSubtitle);
 
     setText("pill1", t.pill1);
     setText("pill2", t.pill2);
@@ -396,13 +398,13 @@
     setText("pickupBody", t.pickupBody);
 
     setText("routesTitle", t.routesTitle);
-    setText("routesIntro", t.routesIntro);
+    setHTML("routesIntro", t.routesIntro);
 
     setText("notesTitle", t.notesTitle);
 
     // About
     setText("aboutTitle", t.aboutTitle);
-    setText("aboutSub", t.aboutSub);
+    setHTML("aboutSub", t.aboutSub);
     setText("aboutBody", t.aboutBody);
 
     // Location CTAs
@@ -417,7 +419,7 @@
     setHref("btnMaps", mapsLink);
 
     // Lists
-    fillList("routesList", t.routes);
+    fillList("routesList", t.routes, true);
     fillList("notesList", t.notes);
 
     // CTA section

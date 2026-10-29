@@ -170,3 +170,31 @@
   .locationRelatedAll{transition:none}
   .locationTrail__mobile:hover,.locationRelatedLink:hover,.locationRelatedAll:hover{transform:none}
 }
+
+/* Subtle contextual links with hover and keyboard-focus feedback. */
+#heroSubtitle a,
+#aboutSub a,
+#routesIntro a,
+#routesList a {
+  text-decoration-line: none;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .18em;
+  text-decoration-color: currentColor;
+  text-decoration-skip-ink: auto;
+}
+#heroSubtitle a:hover,
+#aboutSub a:hover,
+#routesIntro a:hover,
+#routesList a:hover {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+}
+#heroSubtitle a:focus-visible,
+#aboutSub a:focus-visible,
+#routesIntro a:focus-visible,
+#routesList a:focus-visible {
+  text-decoration-line: underline;
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
