@@ -92,7 +92,7 @@
           "@type": "ListItem",
           "position": 2,
           "name": "Zurigo",
-          "url": "https://luxuryobsession.ch/it/"
+          "url": "https://luxuryobsession.ch/it/noleggio-ferrari-zurigo"
         },
         {
           "@type": "ListItem",
@@ -257,7 +257,7 @@ header .navInner{padding-top:6px!important;padding-bottom:6px!important}
 <span class="locPill" id="b0Fee">In base al pacchetto</span>
 </div>
 <ul class="locList">
-<li><a class="locLink" data-internal="" href="/it/" id="locZurich">Zurigo</a><sup class="locMarker" aria-hidden="true">**</sup></li>
+<li><a class="locLink" data-internal="" href="/it/noleggio-ferrari-zurigo" id="locZurich">Zurigo</a><sup class="locMarker" aria-hidden="true">**</sup></li>
 <li><a class="locLink" data-internal="" href="/it/noleggio-ferrari-aeroporto-zurigo" id="locZurichAirport">Aeroporto di Zurigo</a><sup class="locMarker" aria-hidden="true">*</sup></li>
 <li><a class="locLink" data-internal="" href="/it/noleggio-ferrari-winterthur" id="locWinterthur">Winterthur</a><sup class="locMarker" aria-hidden="true">**</sup></li>
 </ul>
@@ -588,10 +588,9 @@ header .navInner{padding-top:6px!important;padding-bottom:6px!important}
       setText("locAndermatt", t.locAndermatt);
       setText("locNaenikon", t.locNaenikon);
 
-      // Apply lang to internal links
-      document.querySelectorAll("a[data-internal]").forEach(a => {
-        a.setAttribute("href", window.__LO__.buildUrl(a.getAttribute("href"), lang));
-      });
+      // These dedicated language pages already contain canonical links.
+      // Preserve their destinations and fragments, including the booking anchor.
+      // Rebuilding them here used to discard #request and remap canonical slugs.
 
       setHref("brandHome", window.__LO__.buildUrl("../index.html", lang));
       setHref("navRates", window.__LO__.buildUrl("pricing.html", lang));
