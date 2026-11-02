@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html data-lo-scrollbars="calPopup loConsentBanner__inner loConsentPanel tableWrap" lang="de">
+<head>
+<link rel="stylesheet" href="/assets/lo.bundle-f5069ba4b3a0.css"/>
+<script data-lo-google-tracking defer src="/assets/lo.consent.js?v=49d936697035"></script>
+<meta charset="utf-8"/>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-latin-3100e775e8.woff2" crossorigin="anonymous"/>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/cormorant-garamond-latin-d80df8ff5a.woff2" crossorigin="anonymous"/>
+
+<meta content="telephone=no, email=no, address=no" name="format-detection"/>
+<meta content="nointentdetection" name="chrome"/>
+<title>Ferrari F8 Tributo im Test: wenn mehr Leistung nicht alles ist</title>
+<meta content="Ein herausragender F8 im Schatten des 458 Italia: Leistung, Klang und Design im Blick auf den Throttle-House-Test von Thomas und James." name="description">
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="index, follow" name="robots"/><meta content="Luxury Obsession" name="author"/><meta content="#050509" name="theme-color"/><meta content="https://luxuryobsession.ch/de/ferrari-f8-tributo-test" property="og:url"/><meta content="de_CH" property="og:locale"><meta content="2026-11-01" property="article:published_time"><meta content="2026-11-01" property="article:modified_time">
+<meta content="Ferrari F8 Tributo im Test: wenn mehr Leistung nicht alles ist" property="og:title">
+<meta content="Ein herausragender F8 im Schatten des 458 Italia: Leistung, Klang und Design im Blick auf den Throttle-House-Test von Thomas und James." property="og:description">
+<meta content="article" property="og:type"/>
+<meta content="https://luxuryobsession.ch/media/f8-review/blue-1280.webp" property="og:image">
+<meta content="1280" property="og:image:width">
+<meta content="775" property="og:image:height">
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Ferrari F8 Tributo im Test: wenn mehr Leistung nicht alles ist" name="twitter:title">
+<meta content="Ein herausragender F8 im Schatten des 458 Italia: Leistung, Klang und Design im Blick auf den Throttle-House-Test von Thomas und James." name="twitter:description">
+<meta content="https://luxuryobsession.ch/media/f8-review/blue-1280.webp" name="twitter:image">
+<link href="/media/brand-icon-60.webp?v=logo-20261004-transparent" rel="icon" type="image/webp"/>
+<link href="/favicon.ico?v=logo-20261004-transparent" rel="icon" sizes="any"/>
+<link href="/favicon-32x32.png?v=logo-20261004-transparent" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon-48x48.png?v=logo-20261004-transparent" rel="icon" sizes="48x48" type="image/png"/>
+<link href="/apple-touch-icon.png?v=logo-20261004-transparent" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/site.webmanifest?v=logo-20261004-transparent" rel="manifest"/>
+<link href="https://luxuryobsession.ch/de/ferrari-f8-tributo-test" rel="canonical"/>
+<link href="https://luxuryobsession.ch/de/ferrari-f8-tributo-test" hreflang="de-CH" rel="alternate"/>
+<link href="https://luxuryobsession.ch/de/ferrari-f8-tributo-test" hreflang="de" rel="alternate"/>
+<link href="https://luxuryobsession.ch/en/ferrari-f8-tributo-review" hreflang="en-CH" rel="alternate"/>
+<link href="https://luxuryobsession.ch/en/ferrari-f8-tributo-review" hreflang="en" rel="alternate"/>
+<link href="https://luxuryobsession.ch/it/ferrari-f8-tributo-recensione" hreflang="it-CH" rel="alternate"/>
+<link href="https://luxuryobsession.ch/it/ferrari-f8-tributo-recensione" hreflang="it" rel="alternate"/>
+<link href="https://luxuryobsession.ch/en/ferrari-f8-tributo-review" hreflang="x-default" rel="alternate"/>
+
+
+
+
+
+
+
+
+<script>
+(function(){
+  const CURRENT_LANG = "de";
+  const LANGS = ["en","de","it"];
+  const PAGE_MAP = {
+      "en": "/en/ferrari-f8-tributo-review",
+      "de": "/de/ferrari-f8-tributo-test",
+      "it": "/it/ferrari-f8-tributo-recensione"
+  };
+
+  function getLang(){
+    return CURRENT_LANG;
+  }
+
+  function setLang(next){
+    if(!LANGS.includes(next)) return;
+    try { localStorage.setItem("lo_lang", next); } catch(e) {}
+    const target = PAGE_MAP[next] || PAGE_MAP[CURRENT_LANG];
+    if(target) window.location.href = (window.__LO__ && typeof window.__LO__.withAttributionParams === "function") ? window.__LO__.withAttributionParams(target) : target;
+  }
+
+  function buildUrl(path, lang, hash){
+    try{
+      const u = new URL(path, window.location.href);
+      u.searchParams.set("lang", lang || CURRENT_LANG);
+      if(hash) u.hash = hash;
+      return u.pathname + u.search + u.hash;
+    }catch(e){
+      return path;
+    }
+  }
+
+  function initLangMenu(lang){
+    const toggle = document.getElementById("langToggle");
+    const menu = document.getElementById("langMenu");
+    const codeEl = document.getElementById("langCode");
+    if(!toggle || !menu || !codeEl) return;
+
+    const codes = { en:"EN", de:"DE", it:"IT" };
+    codeEl.textContent = codes[lang] || codes[CURRENT_LANG];
+
+    function close(){
+      menu.hidden = true;
+      toggle.setAttribute("aria-expanded","false");
+    }
+    function open(){
+      menu.hidden = false;
+      toggle.setAttribute("aria-expanded","true");
+    }
+
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = !menu.hidden;
+      if(isOpen) close();
+      else open();
+    });
+
+    document.addEventListener("click", () => close(), { passive:true });
+    document.addEventListener("keydown", (e) => { if(e.key === "Escape") close(); });
+
+    menu.querySelectorAll("[data-lang]").forEach(btn => {
+      const code = btn.getAttribute("data-lang");
+      btn.setAttribute("aria-current", code === lang ? "true" : "false");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setLang(code);
+      });
+    });
+  }
+
+  function initHamburger(){
+    const btn = document.getElementById("hamburger");
+    const menu = document.getElementById("mobileMenu");
+    if(!btn || !menu) return;
+
+    function close(){
+      menu.style.display = "none";
+      menu.setAttribute("data-open","0");
+      btn.setAttribute("aria-expanded","false");
+    }
+
+    btn.addEventListener("click", () => {
+      const open = menu.getAttribute("data-open") === "1";
+      if(open) close();
+      else {
+        menu.style.display = "block";
+        menu.setAttribute("data-open","1");
+        btn.setAttribute("aria-expanded","true");
+      }
+    });
+
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
+    document.addEventListener("click", (e) => {
+      if(menu.getAttribute("data-open") !== "1") return;
+      if(menu.contains(e.target) || btn.contains(e.target)) return;
+      close();
+    });
+  }
+
+  window.__LO__ = { getLang, setLang, buildUrl, initLangMenu, initHamburger };
+})();
+</script>
+<link rel="stylesheet" href="/assets/lo.bundle-5b7a4e72291d.css"/>
+
+
+<style>
+.tableWrap{
+  overflow:auto !important;
+  position:relative !important;
+  border-radius:16px !important;
+  border:1px solid rgba(243,241,238,0.10) !important;
+  background:#07070a !important;
+  box-shadow:none !important;
+  -webkit-mask-image:none !important;
+  mask-image:none !important;
+}
+
+.tableWrap::before,
+.tableWrap::after{
+  content:none !important;
+  display:none !important;
+  background:none !important;
+  box-shadow:none !important;
+  opacity:0 !important;
+}
+
+.table{
+  width:100% !important;
+  border-collapse:collapse !important;
+  min-width:720px !important;
+  background:#07070a !important;
+}
+
+.table th,
+.table td{
+  background:#07070a !important;
+  background-clip:padding-box !important;
+}
+
+.table th:first-child,
+.table td:first-child{
+  position:static !important;
+  left:auto !important;
+  z-index:auto !important;
+  box-shadow:none !important;
+}
+</style>
+<script defer src="/assets/lo.js?v=link-audit-20261029"></script><script>
+try {
+  localStorage.setItem("lo_lang", "de");
+  const u = new URL(window.location.href);
+  if (u.searchParams.has("lang")) {
+    u.searchParams.delete("lang");
+    window.history.replaceState(null, "", u.pathname + u.search + u.hash);
+  }
+} catch (e) {}
+</script><link href="/assets/lo.journal-back.css" rel="stylesheet"/><style data-lo-accessibility>
+
+/* Keyboard access and booking details; initial hero layout is unchanged. */
+.loSkipLink{position:fixed;top:8px;left:12px;transform:translateY(-180%);z-index:2147483647;padding:12px 18px;border-radius:8px;background:#e7d8b8;color:#101010;font:600 15px/1.4 system-ui;text-decoration:none}
+.loSkipLink:focus{transform:translateY(0)}
+:where(a,button,input,select,textarea,[tabindex]:not([tabindex="-1"])):focus-visible{outline:2px solid #e7d8b8!important;outline-offset:3px!important}
+.calPopup{max-height:calc(100vh - 16px);max-height:calc(100dvh - 16px);overflow-y:auto}
+.loBookingDetails{margin-top:12px;font-size:.82rem;line-height:1.5;color:rgba(255,255,255,.8)}
+.loBookingDetails summary{cursor:pointer;color:#e7d8b8;padding:6px 0}
+.loBookingDetails p{margin:6px 0 10px}
+.loFormPrivacy{margin:8px 0;font-size:.78rem;line-height:1.5;color:rgba(255,255,255,.75)}
+.loFormPrivacy a{text-decoration:underline;text-underline-offset:3px}
+</style>
+
+
+<style id="lo-compact-header">
+/* Shared compact header; kept inline to avoid a new blocking request. */
+header .brand .brandIcon{width:48px;height:48px;flex:0 0 48px;object-fit:contain}
+header .navInner{padding-top:6px!important;padding-bottom:6px!important}
+@media(max-width:760px){header .brand .brandIcon{width:44px;height:44px;flex-basis:44px}header .navInner{padding-top:4px!important;padding-bottom:4px!important}}
+@media(max-width:360px){header .brand .brandIcon{width:40px;height:40px;flex-basis:40px}}
+</style>
+<script defer src="/assets/lo.photo-context.js?v=20261007a"></script>
+
+
+<link rel="stylesheet" href="/assets/huracan-comparison-20261022.css"><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Ferrari F8 Tributo im Test: wenn mehr Leistung nicht alles ist", "description": "Ein herausragender F8 im Schatten des 458 Italia: Leistung, Klang und Design im Blick auf den Throttle-House-Test von Thomas und James.", "image": ["https://luxuryobsession.ch/media/f8-review/blue-1280.webp", "https://luxuryobsession.ch/media/f8-review/red-1280.webp"], "author": {"@type": "Organization", "name": "Luxury Obsession"}, "publisher": {"@type": "Organization", "name": "Luxury Obsession", "logo": {"@type": "ImageObject", "url": "https://luxuryobsession.ch/media/brand-icon-180.webp"}}, "datePublished": "2026-11-01", "dateModified": "2026-11-01", "inLanguage": "de", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://luxuryobsession.ch/de/ferrari-f8-tributo-test"}, "citation": ["https://www.youtube.com/watch?v=62Wf3GMJzpQ", "https://cdn.ferrari.com/cms/network/media/pdf/cs_reveal_ferrari_f8_tributo_gbr.pdf"]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxuryobsession.ch/"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://luxuryobsession.ch/journal"}, {"@type": "ListItem", "position": 3, "name": "Ferrari F8 Tributo im Test: wenn mehr Leistung nicht alles ist", "item": "https://luxuryobsession.ch/de/ferrari-f8-tributo-test"}]}]}</script><link rel="stylesheet" href="/assets/f8-review-20261101.css"></head>
+<body>
+<a class="loSkipLink" href="#main-content">Zum Inhalt springen</a>
+<header>
+<div class="container">
+<div class="navInner">
+<a aria-label="Luxury Obsession" class="brand" href="/">
+<img alt="Luxury Obsession icon" class="brandIcon" src="/media/brand-icon-60.webp?v=logo-20261004-transparent" srcset="/media/brand-icon-120.webp?v=logo-20261004-transparent 2x, /media/brand-icon-180.webp?v=logo-20261004-transparent 3x" width="237" height="237"/>
+<span class="brandGold">Luxury Obsession</span>
+</a>
+<div class="navRight">
+<nav aria-label="Hauptnavigation" class="navLinks">
+<a data-i18n="nav_rates" href="/preise" id="navRates">Preise</a>
+<a href="/galerie" id="navGallery">Galerie</a>
+<a data-i18n="nav_philosophy" href="/philosophie" id="navPhilosophy">Unsere Philosophie</a>
+<a data-i18n="nav_experiences" href="/erlebnisse" id="navExperiences">Erlebnisse</a><a href="/ferrari-gutschein-zuerich" id="navVoucher">Gutschein</a>
+<a data-i18n="nav_journal" href="/journal" id="navBlog">Journal</a>
+<a data-i18n="nav_contact" href="/#contact" id="navContact">Kontakt</a>
+<a class="navCta" data-i18n="nav_request" href="/#request" id="navRequest">Anfrage</a>
+</nav>
+<div aria-label="Sprache" class="langSelect">
+<button aria-expanded="false" aria-haspopup="menu" class="langToggle" id="langToggle" type="button">
+<span aria-label="Aktuelle Sprache" id="langCode">DE</span>
+<span aria-hidden="true" class="langChevron">▾</span>
+</button>
+<div aria-label="Sprache auswählen" class="langMenu" hidden="" id="langMenu" role="menu">
+<button class="langOption" data-lang="en" role="menuitem" type="button">English</button>
+<button class="langOption" data-lang="de" role="menuitem" type="button">Deutsch</button>
+<button class="langOption" data-lang="it" role="menuitem" type="button">Italiano</button>
+</div>
+</div>
+<button aria-expanded="false" aria-label="menu" class="hamburger" id="hamburger" type="button">
+<div class="hamburgerLines"><span></span><span></span><span></span></div>
+</button>
+</div>
+</div>
+<div aria-label="Mobile Navigation" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation" style="display:none"></div>
+</div>
+</header>
+<main id="main-content" tabindex="-1"><section class="hero"><div class="container articleWrap">
+<nav aria-label="Breadcrumb" class="journalTrail"><ol class="journalTrail__desktop"><li><a href="/">Home</a></li><li><a href="/journal">Journal</a></li><li aria-current="page" class="journalTrail__current">Ferrari F8 Tributo</li></ol><a class="journalTrail__mobile" href="/journal"><span aria-hidden="true" class="journalTrail__arrow">←</span><span>Zurück zum Journal</span></a></nav>
+<div class="eyebrow">Luxury Obsession Journal</div><h1 class="heroTitle"><span>Ferrari F8 Tributo im Test</span> <span class="heroHighlight">– wenn mehr Leistung nicht alles ist</span></h1><p class="heroDeck">Ein aussergewöhnliches Fahrwerk, enorme Leistung und brillante Reaktionen. Doch hinter den Stärken des F8 Tributo steht ein Vorgänger, dessen Faszination sich weitaus schwerer übertreffen lässt.</p><div class="meta articleDates">Veröffentlicht <time datetime="2026-11-01">1. Nov. 2026</time> · Luxury Obsession</div>
+<div class="prose" id="articleBody"><p>Der Ferrari F8 Tributo ist ein grossartiges Auto im Schatten eines Meisterwerks. Diese Spannung zieht sich durch den Throttle-House-Test von Thomas und James: Bewunderung für das, was Ferrari erreicht hat, begleitet von einer immer wieder spürbaren Zuneigung zu dem, was der 458 Italia bereits mitbrachte.</p>
+<p>Auf dem Papier ist der Fortschritt eindeutig. Der Biturbo-V8 des F8 leistet 720 PS, Ferrari nennt 2,9 Sekunden für den Sprint von 0 auf 100 km/h. Seine Beschleunigung ist aussergewöhnlich, das Getriebe erntet begeistertes Lob, und das Fahrwerk macht die enorme Leistung überraschend zugänglich. Doch die Faszination eines Ferrari liegt auch im Motorklang, in der Art seiner Leistungsentfaltung und in der Freude, ihn einfach anzusehen. In diesen Bereichen bleibt der 458 ein anspruchsvoller Massstab.</p>
+<p>Der Wunsch am Ende des Tests bringt das Dilemma auf den Punkt: das aussergewöhnliche Gesamtpaket des F8 mit dem ursprünglichen Motor des 458. Nach all der Begeisterung für das neuere Auto ist es der ältere V8-Saugmotor, den sie sich weiterhin wünschen.</p>
+<p class="comparisonNote">Dieser Artikel basiert auf dem <a href="#video">Throttle-House-Test von Thomas und James</a>. Die Fahreindrücke stammen aus ihrem Test, die technischen Angaben von Ferrari.</p>
+<figure class="comparisonFigure"><img src="/media/f8-review/blue-1280.webp" srcset="/media/f8-review/blue-480.webp 480w, /media/f8-review/blue-960.webp 960w, /media/f8-review/blue-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 900px" width="1280" height="775" alt="Blauer Ferrari F8 Tributo schräg von vorne" loading="lazy" decoding="async"><figcaption>Blauer Ferrari F8 Tributo schräg von vorne. <a href="https://commons.wikimedia.org/wiki/File:Ferrari_F8_Tributo_(56206).jpg" rel="noopener noreferrer" target="_blank">Calreyn88 / Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noopener noreferrer" target="_blank">CC BY-SA 4.0</a>. Verkleinert und in WebP umgewandelt; diese Bildversionen stehen weiterhin unter CC BY-SA 4.0. Illustratives F8-Foto; keine Aufnahme aus dem Testvideo.</figcaption></figure>
+<nav class="comparisonContents" aria-label="Artikelabschnitte"><a href="#engine">Motor</a><a href="#sound">Klang</a><a href="#driving">Fahrgefühl</a><a href="#design">Design</a><a href="#interior">Innenraum</a><a href="#verdict">Fazit</a><a href="#video">Video</a></nav>
+<h2 id="engine">Ein beeindruckender V8 mit einem schweren Erbe</h2>
+<p>Der 3,9-Liter-Biturbo-V8 des F8 Tributo liefert 720 PS und 770 Nm. Diese Zahlen erklären seine enorme Leistungsfähigkeit, beschreiben seinen Charakter aber nur teilweise.</p>
+<p>Thomas und James finden viel Gefallen an diesem Motor. Trotz der Turbolader belohnt er hohe Drehzahlen und animiert dazu, sich den 8’000 U/min zu nähern. Das Erlebnis besteht aus mehr als einem kurzen Drehmomentschub mit anschliessendem frühen Hochschalten. Ferrari hat einen guten Grund bewahrt, auch den oberen Bereich des Drehzahlmessers zu erkunden.</p>
+<p>Der Vergleich mit dem 458 zeigt jedoch den Unterschied zwischen einem stärkeren Motor und einem begehrenswerteren Motor.</p>
+<p>Der V8-Saugmotor des 458 steht weiterhin im Zentrum ihrer Bewunderung für das ältere Auto. Seinen Klang und seine Leistungsentfaltung würden sie gerne in den F8 übernehmen. Der neuere Motor bietet deutlich mehr Leistung. Die Frage, welcher die stärkere emotionale Verbindung schafft, ist damit aber nicht beantwortet.</p>
+<p>Für alle, die den <a href="/ferrari-458-italia">Ferrari 458 Italia</a> lieben, ist dies vielleicht das aussagekräftigste Kompliment des Tests. Selbst neben einem hervorragenden Nachfolger bleibt sein Motor ein Wunschobjekt.</p>
+<h2 id="sound">Klang: wo der Fortschritt seinen Preis hat</h2>
+<p>Der deutlichste Vorbehalt betrifft den Sound.</p>
+<p>Im Test werden die Turbolader und Partikelfilter des F8 als Hindernisse zwischen dem Motor und jenem ausdrucksstarken Klang beschrieben, den die Moderatoren von einem Ferrari erwarten. Der Motor dreht weiterhin begeistert hoch, liefert Leistung und macht Freude. Akustisch erreicht das Ergebnis aber nicht dieselbe Faszination wie der 458.</p>
+<p>Hier werden die Folgen der Turboaufladung und der Abgasnachbehandlung unmittelbar erlebbar. Man hört sie jedes Mal, wenn der Motor arbeitet – unabhängig davon, ob man die volle Leistung des Autos abruft.</p>
+<p>Das ist relevant, denn maximale Beschleunigung ist nur ein Teil des Vergnügens an einem Supersportwagen. Der Motorcharakter begleitet viel mehr Momente: Drehzahl aufbauen, schalten, vom Gas gehen und wieder beschleunigen. Ein Vorteil im Datenblatt kann einen weniger einprägsamen Sound nicht automatisch ausgleichen.</p>
+<p>Der Wunsch von Thomas und James nach dem 458-Motor hat deshalb Gewicht. Sie bewundern den F8 und suchen dennoch in der Vergangenheit nach dem Klang und der Leistungsentfaltung, die ihn für sie vervollständigen würden.</p>
+<p>Unser <a href="/de/ferrari-458-vs-488">Vergleich Ferrari 458 vs. 488</a> beleuchtet den früheren Übergang vom Saugmotor zur Turboaufladung ausführlicher.</p>
+<h2 id="driving">Die Stärken des F8 reichen weit über seine Leistung hinaus</h2>
+<p>Es würde dem Test allerdings nicht gerecht, den F8 lediglich als schnelleren Ferrari mit leiserer Stimme darzustellen. Besonders gelobt wird, wie viel Freude er macht, ohne seine gesamte Leistung einzusetzen.</p>
+<p>Thomas und James beschreiben eine präzise, natürlich wirkende Lenkung, feine Reaktionen und ein Fahrwerk, das Unebenheiten beeindruckend souverän verarbeitet. Die Faszination des F8 entsteht aus dem Zusammenspiel dieser Eigenschaften: wie er einlenkt, auf einen Impuls reagiert und sich auf der Strasse abstützt.</p>
+<p>Bei einem Auto mit derart einschüchternden Leistungsdaten ist diese Zugänglichkeit eine beachtliche Leistung. Ihre Begeisterung zeigt, dass sich der F8 als reaktionsfreudiger Sportwagen geniessen lässt, nicht nur als Maschine für enorme Beschleunigung.</p>
+<p>Das Siebengang-Doppelkupplungsgetriebe trägt zu dieser Einbindung bei. Schnelle, befriedigende Gangwechsel und gut platzierte Schaltwippen machen das Schalten selbst zum Vergnügen. Der Test zeigt überzeugend, wie viel Fahrfreude ein Wippengetriebe vermitteln kann, wenn es so gut zum Auto passt.</p>
+<p>Ein Vorbehalt bleibt: Sie berichten von gewissen Karosserievibrationen, selbst beim getesteten Coupé. Das schmälert ihre grundsätzliche Begeisterung für das Fahrwerk nicht entscheidend, verhindert aber ein uneingeschränktes Lob.</p>
+<p>Hier verdient sich der F8 seinen Ruf. Die Schwierigkeit liegt darin, dass seine erheblichen Stärken neben einem Motorvergleich bestehen, der emotional weiterhin für den 458 spricht.</p>
+<figure class="comparisonFigure"><img src="/media/f8-review/red-1280.webp" srcset="/media/f8-review/red-480.webp 480w, /media/f8-review/red-960.webp 960w, /media/f8-review/red-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 900px" width="1280" height="881" alt="Roter Ferrari F8 Tributo mit schmalen Scheinwerfern und markanter Front" loading="lazy" decoding="async"><figcaption>Roter Ferrari F8 Tributo mit schmalen Scheinwerfern und markanter Front. <a href="https://commons.wikimedia.org/wiki/File:Ferrari_F8_Tributo.jpg" rel="noopener noreferrer" target="_blank">Calreyn88 / Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license noopener noreferrer" target="_blank">CC BY-SA 4.0</a>. Verkleinert und in WebP umgewandelt; diese Bildversionen stehen weiterhin unter CC BY-SA 4.0. Illustratives F8-Foto; keine Aufnahme aus dem Testvideo.</figcaption></figure>
+<h2 id="design">Design: der lange Schatten des 458</h2>
+<p>Dieselbe Spannung kehrt zurück, als Thomas und James das Auto von aussen betrachten.</p>
+<p>Der F8 besitzt eine eindrucksvolle Präsenz: schmale Scheinwerfer, ausgeprägte Lufteinlässe und eine plastisch geformte Front. Die transparente Motorabdeckung erinnert zudem reizvoll an den F40. Es gibt viel zu bewundern, und die Moderatoren fällen keineswegs ein einstimmiges Urteil gegen ihn.</p>
+<p>Besonders aufschlussreich ist jedoch ihr Gespräch über den 458.</p>
+<p>Das Argument für ihn liegt in der Geschlossenheit seiner Form: fliessende Linien, eine klarere Front und eine Einfachheit, durch die das gesamte Auto stimmig wirkt. Daneben kann die aufwendigere Front des F8 unruhiger erscheinen.</p>
+<p>Einer der Moderatoren stellt sich sogar vor, dass der 458 Italia Jahrzehnte später als der schönste jemals gebaute Supersportwagen gelten könnte. Der andere verteidigt das Aussehen des F8. Diese unterschiedliche Sicht ist relevant – ebenso wie die Tragweite des Kompliments.</p>
+<p>Der 458 wird hier als mehr als nur ein attraktiver älterer Ferrari betrachtet. Es geht um ein Design, das eine Epoche prägen und schön bleiben kann, lange nachdem neuere Autos seine Fahrleistungen übertroffen haben.</p>
+<p>Für den F8 ist das ein aussergewöhnlich anspruchsvolles Erbe.</p>
+<h2 id="interior">Ein Cockpit, das die wichtigen Dinge richtig macht</h2>
+<p>Im Innenraum erhält der F8 viel Zustimmung.</p>
+<p>Thomas und James schätzen sein Leder, die Carbon-Elemente, den analogen Drehzahlmesser und die Sitze, die auch nach Stunden bequem bleiben. Nach ihren Schwierigkeiten mit dem Bedienkonzept des Ferrari Roma begrüssen sie zudem die Bedienelemente des F8.</p>
+<p>Das trägt wesentlich zu seinem Erfolg bei. Das Cockpit unterstützt das Fahrerlebnis durch die Dinge, die man ständig sieht und berührt. Sein Reiz erschliesst sich unmittelbar: ein klarer Mittelpunkt im Drehzahlmesser, angenehm zu bedienende Elemente und eine Sitzumgebung, die über einen kurzen aufregenden Moment hinaus funktioniert.</p>
+<p>Hier zeigt der F8, wie überzeugend ein vertrauter Ansatz bleiben kann, wenn er gut umgesetzt ist. Sein Cockpit stärkt die Verbindung zum Auto.</p>
+<h2 id="verdict">Fazit: ein herausragender Ferrari im Vergleich mit einem Meisterwerk</h2>
+<p>Der Test von Thomas und James lässt kaum Zweifel daran, dass der F8 Tributo ein aussergewöhnliches Fahrerauto ist. Lenkung, Getriebe und Souveränität verdienen die Begeisterung, die ihnen entgegengebracht wird. Seine Fahrleistungen sind enorm. Dass er auch unterhalb seiner Grenzen Freude bereitet, ist womöglich relevanter als die spektakulären Zahlen.</p>
+<p>Dennoch kehrt das Gespräch immer wieder zum 458 zurück.</p>
+<p>Seinen Saugmotor wünschen sie sich weiterhin. Sein Klang verkörpert etwas, das der aufgeladene und gefilterte F8 nicht vollständig zurückholen kann. Sein Design weckt eine Bewunderung, die weit über Nostalgie hinausgeht.</p>
+<p>Genau das macht diesen Test so interessant. Der F8 muss keine Enttäuschung sein, damit der 458 ein Meisterwerk bleibt. Das neuere Auto kann aussergewöhnlich gelungen sein und dennoch einige der begehrenswertesten Eigenschaften seines Vorgängers zurücklassen.</p>
+<p><strong>Der F8 verschiebt die Leistungsgrenzen. In diesem Gespräch setzt der 458 weiterhin den emotionalen Massstab.</strong></p>
+<p>Wer diesen Saugmotorcharakter selbst erleben möchte, findet mit unserer <a href="/ferrari-mieten-zuerich">Ferrari 458 Italia Vermietung bei Zürich</a> die Gelegenheit dazu.</p>
+<aside class="comparisonNote"><h2>Quellen und Zeitmarken</h2><p>Throttle House, <a href="https://www.youtube.com/watch?v=62Wf3GMJzpQ" target="_blank" rel="noopener noreferrer">Ferrari F8 Tributo Review // Hold Me Closer</a> (06.04.2022): <a href="https://www.youtube.com/watch?v=62Wf3GMJzpQ&amp;t=180s">3:00 – Motor und Klang</a>; <a href="https://www.youtube.com/watch?v=62Wf3GMJzpQ&amp;t=505s">8:25 – Design-Diskussion</a>; <a href="https://www.youtube.com/watch?v=62Wf3GMJzpQ&amp;t=842s">14:02 – Vergleich mit dem 458-Motor</a>. <a href="https://cdn.ferrari.com/cms/network/media/pdf/cs_reveal_ferrari_f8_tributo_gbr.pdf" target="_blank" rel="noopener noreferrer">Ferrari F8 Tributo: Herstellerangaben</a>.</p></aside>
+<section class="f8VideoSection" aria-labelledby="video"><h2 id="video">Der vollständige Test von Throttle House</h2><div class="f8Video" data-f8-video><div class="f8VideoPlaceholder"><p>Throttle House · Ferrari F8 Tributo</p><button type="button" class="ctaBtn ctaBtnPrimary" data-f8-play>Video laden</button></div></div><p class="comparisonNote">Beim Laden des Players wird eine Verbindung zu YouTube hergestellt. <a href="https://www.youtube.com/watch?v=62Wf3GMJzpQ" target="_blank" rel="noopener noreferrer">Auf YouTube ansehen</a>.</p></section>
+</div></div></section></main>
+<footer>
+<div class="container footerInner">
+<div class="footerLeft">© <span id="year">2026</span> Luxury Obsession</div>
+<div class="footerCenter">Aktuell verfügbar: Ferrari 458 Italia</div>
+<div class="footerNap">
+<span class="footerNapItem">Luxury Obsession by Anna Loi</span>
+<span class="footerNapItem">Nänikon 8606, Schweiz</span>
+<span class="footerNapItem"><a href="mailto:info@luxuryobsession.ch">info@luxuryobsession.ch</a></span>
+<span class="footerNapItem"><a href="tel:+41765870458">+41 76 587 04 58</a></span>
+</div>
+<div class="footerRight">
+<a href="/impressum" id="footerImpressum">Impressum</a>
+<a href="/datenschutz" id="footerPrivacy">Datenschutz</a>
+<a href="/agb" id="footerTerms">AGB</a>
+</div>
+</div>
+</footer>
+<script>
+(function(){
+  const lang = "de";
+
+  function wireHamburgerFallback(){
+    const btn = document.getElementById("hamburger");
+    const menu = document.getElementById("mobileMenu");
+    if(!btn || !menu) return;
+
+    if(btn.dataset.loHamburgerFallback === "1") return;
+    btn.dataset.loHamburgerFallback = "1";
+
+    if(menu.children.length === 0){
+      const desktop = Array.from(document.querySelectorAll(".navLinks a"));
+      const normal = desktop.filter(a => !a.classList.contains("navCta"));
+      const cta = desktop.find(a => a.classList.contains("navCta"));
+
+      normal.forEach(a => {
+        const clone = a.cloneNode(true);
+        clone.classList.remove("navCta");
+        menu.appendChild(clone);
+      });
+
+      const divider = document.createElement("div");
+      divider.className = "mobileMenuDivider";
+      menu.appendChild(divider);
+
+      if(cta){
+        const cloneCta = cta.cloneNode(true);
+        cloneCta.classList.remove("navCta");
+        cloneCta.classList.add("mobileMenuCta");
+        menu.appendChild(cloneCta);
+      }
+    }
+
+    function close(){
+      menu.style.display = "none";
+      menu.setAttribute("data-open","0");
+      btn.setAttribute("aria-expanded","false");
+    }
+
+    function open(){
+      menu.style.display = "block";
+      menu.setAttribute("data-open","1");
+      btn.setAttribute("aria-expanded","true");
+    }
+
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      const isOpen = menu.getAttribute("data-open") === "1";
+      if(isOpen) close();
+      else open();
+    }, true);
+
+    menu.addEventListener("click", (e) => {
+      if(e.target.closest("a")) close();
+    });
+
+    document.addEventListener("click", (e) => {
+      if(menu.getAttribute("data-open") !== "1") return;
+      if(menu.contains(e.target) || btn.contains(e.target)) return;
+      close();
+    });
+
+    close();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const lo = window.__LO__;
+    if(lo && typeof lo.initSharedUI === "function") lo.initSharedUI(lang);
+    else if(lo && typeof lo.initLangMenu === "function") lo.initLangMenu(lang);
+
+    wireHamburgerFallback();
+
+    document.querySelectorAll("[data-withlang='1']").forEach(a => {
+      const href = a.getAttribute("href");
+      if(href && lo && lo.buildUrl) a.setAttribute("href", lo.buildUrl(href, lang));
+    });
+
+    const year = document.getElementById("year");
+    if(year) year.textContent = String(new Date().getFullYear());
+  });
+})();
+</script>
+<script defer src="/assets/f8-review-20261101.js"></script></body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "author": "Calreyn88",
+  "images": [
+    {
+      "files": "blue-*.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Ferrari_F8_Tributo_(56206).jpg",
+      "changes": "Resized and converted to WebP; image derivatives licensed CC BY-SA 4.0."
+    },
+    {
+      "files": "red-*.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Ferrari_F8_Tributo.jpg",
+      "changes": "Resized and converted to WebP; image derivatives licensed CC BY-SA 4.0."
+    }
+  ]
+}

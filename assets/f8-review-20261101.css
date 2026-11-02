@@ -1,0 +1,9 @@
+/* F8 article only; the journal's shared type, colours and spacing are retained. */
+.f8VideoSection{margin-top:2.5rem}
+.f8Video{aspect-ratio:16/9;width:100%;overflow:hidden;border-radius:16px;border:1px solid rgba(243,241,238,.16);background:#0b0b0f}
+.f8VideoPlaceholder{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;padding:1rem;text-align:center;box-sizing:border-box}
+.f8VideoPlaceholder p{margin:0!important;color:#e7d8b8}
+.f8Video iframe{display:block;width:100%;height:100%;border:0}
+.f8Video button{cursor:pointer;max-width:100%;white-space:normal}
+@media(max-width:520px){.f8VideoPlaceholder{gap:.5rem}.f8VideoPlaceholder p{font-size:.9rem}}
+@media(max-width:420px){header .brand .brandGold{font-size:12px;letter-spacing:1px}header .navRight{gap:6px}header .navInner{gap:8px}}
