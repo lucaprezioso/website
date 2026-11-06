@@ -156,9 +156,9 @@
 
       notesTitle: "Practical notes",
       notes: [
-        "Valid driving licence and an ID document required",
+        "A valid driving licence held for at least three years and an ID document are required",
         "A short walk through of the car at handover, then you are ready",
-        "Fuel policy and kilometres depend on the chosen package",
+        "The Ferrari is handed over with a full tank and must be returned with a full tank. Included kilometres depend on the selected package.",
         "Return location and timing are confirmed in writing"
       ]
     },
@@ -224,9 +224,9 @@
 
       notesTitle: "Hinweise",
       notes: [
-        "Gültiger Führerausweis und Ausweis erforderlich",
+        "Gültiger Führerausweis seit mindestens drei Jahren und ein Ausweisdokument erforderlich",
         "Kurzer Rundgang ums Fahrzeug bei der Übergabe",
-        "Tank und Kilometer gemäss Tarif",
+        "Der Ferrari wird vollgetankt übergeben und muss vollgetankt zurückgegeben werden. Die Inklusivkilometer richten sich nach dem gewählten Paket.",
         "Rückgabeort und Zeit werden schriftlich bestätigt"
       ]
     },
@@ -292,9 +292,9 @@
 
       notesTitle: "Note pratiche",
       notes: [
-        "Patente valida e documento d’identità richiesti",
+        "Patente valida da almeno tre anni e documento d’identità richiesti",
         "Breve controllo dell’auto alla consegna, poi si parte",
-        "Carburante e chilometri dipendono dalla tariffa scelta",
+        "La Ferrari viene consegnata con il pieno e deve essere restituita con il pieno. I chilometri inclusi dipendono dal pacchetto scelto.",
         "Luogo e orario di rientro vengono confermati per iscritto"
       ]
     }
