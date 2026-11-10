@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html data-lo-scrollbars="calPopup loConsentBanner__inner loConsentPanel tableWrap" lang="de">
+<head>
+<link rel="stylesheet" href="/assets/lo.bundle-f5069ba4b3a0.css"/>
+<script data-lo-google-tracking defer src="/assets/lo.consent.js?v=49d936697035"></script>
+<meta charset="utf-8"/>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-latin-3100e775e8.woff2" crossorigin="anonymous"/>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/cormorant-garamond-latin-d80df8ff5a.woff2" crossorigin="anonymous"/>
+
+<meta content="telephone=no, email=no, address=no" name="format-detection"/>
+<meta content="nointentdetection" name="chrome"/>
+<title>Ferrari Testarossa — mehr als ein Postertraum</title>
+<meta content="Ferrari Testarossa im Porträt. Original, 512 TR und F512 M im Vergleich, historische Preise, berühmte Besitzer und die Faszination des Zwölfzylinders." name="description">
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="index, follow" name="robots"/><meta content="Luxury Obsession" name="author"/><meta content="#050509" name="theme-color"/><meta content="https://luxuryobsession.ch/de/ferrari-testarossa-fahrbericht" property="og:url"/><meta content="de_CH" property="og:locale"><meta content="2026-11-15" property="article:published_time"><meta content="2026-11-15" property="article:modified_time">
+<meta content="Ferrari Testarossa — mehr als ein Postertraum" property="og:title">
+<meta content="Ferrari Testarossa im Porträt. Original, 512 TR und F512 M im Vergleich, historische Preise, berühmte Besitzer und die Faszination des Zwölfzylinders." property="og:description">
+<meta content="article" property="og:type"/>
+<meta content="https://luxuryobsession.ch/media/testarossa-review/tr-1280.webp" property="og:image">
+<meta content="1280" property="og:image:width">
+<meta content="573" property="og:image:height">
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Ferrari Testarossa — mehr als ein Postertraum" name="twitter:title">
+<meta content="Ferrari Testarossa im Porträt. Original, 512 TR und F512 M im Vergleich, historische Preise, berühmte Besitzer und die Faszination des Zwölfzylinders." name="twitter:description">
+<meta content="https://luxuryobsession.ch/media/testarossa-review/tr-1280.webp" name="twitter:image">
+<link href="/media/brand-icon-60.webp?v=logo-20261004-transparent" rel="icon" type="image/webp"/>
+<link href="/favicon.ico?v=logo-20261004-transparent" rel="icon" sizes="any"/>
+<link href="/favicon-32x32.png?v=logo-20261004-transparent" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon-48x48.png?v=logo-20261004-transparent" rel="icon" sizes="48x48" type="image/png"/>
+<link href="/apple-touch-icon.png?v=logo-20261004-transparent" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/site.webmanifest?v=logo-20261004-transparent" rel="manifest"/>
+<link href="https://luxuryobsession.ch/de/ferrari-testarossa-fahrbericht" rel="canonical"/>
+<link href="https://luxuryobsession.ch/de/ferrari-testarossa-fahrbericht" hreflang="de-CH" rel="alternate"/>
+<link href="https://luxuryobsession.ch/de/ferrari-testarossa-fahrbericht" hreflang="de" rel="alternate"/>
+<link href="https://luxuryobsession.ch/en/ferrari-testarossa-review" hreflang="en-CH" rel="alternate"/>
+<link href="https://luxuryobsession.ch/en/ferrari-testarossa-review" hreflang="en" rel="alternate"/>
+<link href="https://luxuryobsession.ch/it/ferrari-testarossa-recensione" hreflang="it-CH" rel="alternate"/>
+<link href="https://luxuryobsession.ch/it/ferrari-testarossa-recensione" hreflang="it" rel="alternate"/>
+<link href="https://luxuryobsession.ch/en/ferrari-testarossa-review" hreflang="x-default" rel="alternate"/>
+
+
+
+
+
+
+
+
+<script>
+(function(){
+  const CURRENT_LANG = "de";
+  const LANGS = ["en","de","it"];
+  const PAGE_MAP = {
+      "en": "/en/ferrari-testarossa-review",
+      "de": "/de/ferrari-testarossa-fahrbericht",
+      "it": "/it/ferrari-testarossa-recensione"
+  };
+
+  function getLang(){
+    return CURRENT_LANG;
+  }
+
+  function setLang(next){
+    if(!LANGS.includes(next)) return;
+    try { localStorage.setItem("lo_lang", next); } catch(e) {}
+    const target = PAGE_MAP[next] || PAGE_MAP[CURRENT_LANG];
+    if(target) window.location.href = (window.__LO__ && typeof window.__LO__.withAttributionParams === "function") ? window.__LO__.withAttributionParams(target) : target;
+  }
+
+  function buildUrl(path, lang, hash){
+    try{
+      const u = new URL(path, window.location.href);
+      u.searchParams.set("lang", lang || CURRENT_LANG);
+      if(hash) u.hash = hash;
+      return u.pathname + u.search + u.hash;
+    }catch(e){
+      return path;
+    }
+  }
+
+  function initLangMenu(lang){
+    const toggle = document.getElementById("langToggle");
+    const menu = document.getElementById("langMenu");
+    const codeEl = document.getElementById("langCode");
+    if(!toggle || !menu || !codeEl) return;
+
+    const codes = { en:"EN", de:"DE", it:"IT" };
+    codeEl.textContent = codes[lang] || codes[CURRENT_LANG];
+
+    function close(){
+      menu.hidden = true;
+      toggle.setAttribute("aria-expanded","false");
+    }
+    function open(){
+      menu.hidden = false;
+      toggle.setAttribute("aria-expanded","true");
+    }
+
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = !menu.hidden;
+      if(isOpen) close();
+      else open();
+    });
+
+    document.addEventListener("click", () => close(), { passive:true });
+    document.addEventListener("keydown", (e) => { if(e.key === "Escape") close(); });
+
+    menu.querySelectorAll("[data-lang]").forEach(btn => {
+      const code = btn.getAttribute("data-lang");
+      btn.setAttribute("aria-current", code === lang ? "true" : "false");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setLang(code);
+      });
+    });
+  }
+
+  function initHamburger(){
+    const btn = document.getElementById("hamburger");
+    const menu = document.getElementById("mobileMenu");
+    if(!btn || !menu) return;
+
+    function close(){
+      menu.style.display = "none";
+      menu.setAttribute("data-open","0");
+      btn.setAttribute("aria-expanded","false");
+    }
+
+    btn.addEventListener("click", () => {
+      const open = menu.getAttribute("data-open") === "1";
+      if(open) close();
+      else {
+        menu.style.display = "block";
+        menu.setAttribute("data-open","1");
+        btn.setAttribute("aria-expanded","true");
+      }
+    });
+
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
+    document.addEventListener("click", (e) => {
+      if(menu.getAttribute("data-open") !== "1") return;
+      if(menu.contains(e.target) || btn.contains(e.target)) return;
+      close();
+    });
+  }
+
+  window.__LO__ = { getLang, setLang, buildUrl, initLangMenu, initHamburger };
+})();
+</script>
+<link rel="stylesheet" href="/assets/lo.bundle-5b7a4e72291d.css"/>
+
+
+<style>
+.tableWrap{
+  overflow:auto !important;
+  position:relative !important;
+  border-radius:16px !important;
+  border:1px solid rgba(243,241,238,0.10) !important;
+  background:#07070a !important;
+  box-shadow:none !important;
+  -webkit-mask-image:none !important;
+  mask-image:none !important;
+}
+
+.tableWrap::before,
+.tableWrap::after{
+  content:none !important;
+  display:none !important;
+  background:none !important;
+  box-shadow:none !important;
+  opacity:0 !important;
+}
+
+.table{
+  width:100% !important;
+  border-collapse:collapse !important;
+  min-width:720px !important;
+  background:#07070a !important;
+}
+
+.table th,
+.table td{
+  background:#07070a !important;
+  background-clip:padding-box !important;
+}
+
+.table th:first-child,
+.table td:first-child{
+  position:static !important;
+  left:auto !important;
+  z-index:auto !important;
+  box-shadow:none !important;
+}
+</style>
+<script defer src="/assets/lo.js?v=link-audit-20261029"></script><script>
+try {
+  localStorage.setItem("lo_lang", "de");
+  const u = new URL(window.location.href);
+  if (u.searchParams.has("lang")) {
+    u.searchParams.delete("lang");
+    window.history.replaceState(null, "", u.pathname + u.search + u.hash);
+  }
+} catch (e) {}
+</script><link href="/assets/lo.journal-back.css" rel="stylesheet"/><style data-lo-accessibility>
+
+/* Keyboard access and booking details; initial hero layout is unchanged. */
+.loSkipLink{position:fixed;top:8px;left:12px;transform:translateY(-180%);z-index:2147483647;padding:12px 18px;border-radius:8px;background:#e7d8b8;color:#101010;font:600 15px/1.4 system-ui;text-decoration:none}
+.loSkipLink:focus{transform:translateY(0)}
+:where(a,button,input,select,textarea,[tabindex]:not([tabindex="-1"])):focus-visible{outline:2px solid #e7d8b8!important;outline-offset:3px!important}
+.calPopup{max-height:calc(100vh - 16px);max-height:calc(100dvh - 16px);overflow-y:auto}
+.loBookingDetails{margin-top:12px;font-size:.82rem;line-height:1.5;color:rgba(255,255,255,.8)}
+.loBookingDetails summary{cursor:pointer;color:#e7d8b8;padding:6px 0}
+.loBookingDetails p{margin:6px 0 10px}
+.loFormPrivacy{margin:8px 0;font-size:.78rem;line-height:1.5;color:rgba(255,255,255,.75)}
+.loFormPrivacy a{text-decoration:underline;text-underline-offset:3px}
+</style>
+
+
+<style id="lo-compact-header">
+/* Shared compact header; kept inline to avoid a new blocking request. */
+header .brand .brandIcon{width:48px;height:48px;flex:0 0 48px;object-fit:contain}
+header .navInner{padding-top:6px!important;padding-bottom:6px!important}
+@media(max-width:760px){header .brand .brandIcon{width:44px;height:44px;flex-basis:44px}header .navInner{padding-top:4px!important;padding-bottom:4px!important}}
+@media(max-width:360px){header .brand .brandIcon{width:40px;height:40px;flex-basis:40px}}
+</style>
+<script defer src="/assets/lo.photo-context.js?v=20261007a"></script>
+
+
+<link rel="stylesheet" href="/assets/huracan-comparison-20261022.css"><script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Ferrari Testarossa — mehr als ein Postertraum", "description": "Ferrari Testarossa im Porträt. Original, 512 TR und F512 M im Vergleich, historische Preise, berühmte Besitzer und die Faszination des Zwölfzylinders.", "image": ["https://luxuryobsession.ch/media/testarossa-review/tr-1280.webp", "https://luxuryobsession.ch/media/testarossa-review/mid-1280.webp", "https://luxuryobsession.ch/media/testarossa-review/m-1280.webp", "https://luxuryobsession.ch/media/testarossa-review/engine.jpg", "https://luxuryobsession.ch/media/testarossa-review/interior.jpg"], "author": {"@type": "Organization", "name": "Luxury Obsession"}, "publisher": {"@type": "Organization", "name": "Luxury Obsession", "logo": {"@type": "ImageObject", "url": "https://luxuryobsession.ch/media/brand-icon-180.webp"}}, "datePublished": "2026-11-15", "dateModified": "2026-11-15", "inLanguage": "de", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://luxuryobsession.ch/de/ferrari-testarossa-fahrbericht"}, "citation": ["https://www.youtube.com/watch?v=8Xe4ES93nuo", "https://www.ferrari.com/en-EN/auto/testarossa", "https://www.ferrari.com/en-EN/auto/512-tr", "https://www.ferrari.com/en-EN/auto/f512-m", "https://www.caranddriver.com/reviews/a15142218/1985-ferrari-testarossa-archived-road-test-review/", "https://www.hagerty.com/valuation-tools/past-sales/1985-ferrari-testarossa/ZFFSA17A2F0058549/43b050e0-e219-4dea-b3d1-5ea5de3f12b5", "https://rmsothebys.com/auctions/mo06/lots/r222-1987-ferrari-testarossa-monodado/", "https://exoticcomps.com/blog/ferrari-testarossa-prices-by-year/", "https://fred.stlouisfed.org/data/CPIAUCNS", "https://www.artcurial.com/ventes/2219/lots/382-a", "https://www.motorious.com/articles/news/elton-johns-ferrari-testarossa/", "https://www.einnews.com/pr_news/802438000/curated-discovers-michael-jordan-s-long-lost-ferrari-512-tr", "https://rmsothebys.com/auctions/ve23/lots/r0006-1989-ferrari-testarossa/", "https://www.streetinsider.com/Press+Releases/+and+quot%3BStraight+Outta+Compton+and+quot%3B+and+and+quot%3BMiami+Vice+and+quot%3B+Cars+Have+Something+in+Common/10816588.html", "https://www.motorauthority.com/news/1089593_ferrari-testarossa-driven-by-michael-jackson-heads-to-barrett-jackson", "https://news.dupontregistry.com/blogs/celebrity-cars/kendall-jenner-s-ferrari-512-tr-instagram-post-sparks-classic-car-buzz", "https://www.ansa.it/canale_motori/notizie/mondo_motori/2020/11/26/diego-maradona-la-storia-misteriosa-delle-due-ferrari-nere_0081f4f6-65cd-46e3-83e6-e8725158bebd.html", "https://motor.elpais.com/supercoches/ferrari-negro-de-maradona-mito-o-realidad/"]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://luxuryobsession.ch/"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://luxuryobsession.ch/journal"}, {"@type": "ListItem", "position": 3, "name": "Ferrari Testarossa im Fahrbericht: Testarossa, 512 TR und F512 M", "item": "https://luxuryobsession.ch/de/ferrari-testarossa-fahrbericht"}]}]}</script><link rel="stylesheet" href="/assets/f8-review-20261101.css"><style>.trSocial{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(1rem,3vw,2rem);align-items:center;margin:1.5rem 0}
+.trSocial figure,.prose .trSocial p{margin:0}.trSocial img{display:block;width:100%;height:auto;border-radius:12px}.trSocial figcaption{margin-top:.55rem;font-size:.84rem;line-height:1.6}
+@media(max-width:680px){.trSocial{grid-template-columns:1fr;gap:.7rem}.trSocial figure{width:100%;max-width:600px}}
+#articleBody .trComparison{padding:0;margin:1.35rem 0}#articleBody .trComparison h3{margin:0 0 .55rem}#articleBody .trComparison .tableWrap{margin:0}
+.f8VideoPlaceholder.trPoster{background:linear-gradient(to top,rgba(0,0,0,.75),transparent 52%),url(/media/testarossa-review/video-preview.webp) center/cover;justify-content:flex-end}.trPoster p{display:none}.trInstagram p{text-align:center}.comparisonFigure img{max-width:100%;height:auto}</style></head>
+<body>
+<a class="loSkipLink" href="#main-content">Zum Inhalt springen</a>
+<header>
+<div class="container">
+<div class="navInner">
+<a aria-label="Luxury Obsession" class="brand" href="/">
+<img alt="Luxury Obsession icon" class="brandIcon" src="/media/brand-icon-60.webp?v=logo-20261004-transparent" srcset="/media/brand-icon-120.webp?v=logo-20261004-transparent 2x, /media/brand-icon-180.webp?v=logo-20261004-transparent 3x" width="237" height="237"/>
+<span class="brandGold">Luxury Obsession</span>
+</a>
+<div class="navRight">
+<nav aria-label="Hauptnavigation" class="navLinks">
+<a data-i18n="nav_rates" href="/preise" id="navRates">Preise</a>
+<a href="/galerie" id="navGallery">Galerie</a>
+<a data-i18n="nav_philosophy" href="/philosophie" id="navPhilosophy">Unsere Philosophie</a>
+<a data-i18n="nav_experiences" href="/erlebnisse" id="navExperiences">Erlebnisse</a><a href="/ferrari-gutschein-zuerich" id="navVoucher">Gutschein</a>
+<a data-i18n="nav_journal" href="/journal" id="navBlog">Journal</a>
+<a data-i18n="nav_contact" href="/#contact" id="navContact">Kontakt</a>
+<a class="navCta" data-i18n="nav_request" href="/#request" id="navRequest">Anfrage</a>
+</nav>
+<div aria-label="Sprache" class="langSelect">
+<button aria-expanded="false" aria-haspopup="menu" class="langToggle" id="langToggle" type="button">
+<span aria-label="Aktuelle Sprache" id="langCode">DE</span>
+<span aria-hidden="true" class="langChevron">▾</span>
+</button>
+<div aria-label="Sprache auswählen" class="langMenu" hidden="" id="langMenu" role="menu">
+<button class="langOption" data-lang="en" role="menuitem" type="button">English</button>
+<button class="langOption" data-lang="de" role="menuitem" type="button">Deutsch</button>
+<button class="langOption" data-lang="it" role="menuitem" type="button">Italiano</button>
+</div>
+</div>
+<button aria-expanded="false" aria-label="menu" class="hamburger" id="hamburger" type="button">
+<div class="hamburgerLines"><span></span><span></span><span></span></div>
+</button>
+</div>
+</div>
+<div aria-label="Mobile Navigation" class="mobileMenu" data-open="0" id="mobileMenu" role="navigation" style="display:none"></div>
+</div>
+</header>
+<main id="main-content" tabindex="-1"><section class="hero"><div class="container articleWrap">
+<nav aria-label="Breadcrumb" class="journalTrail"><ol class="journalTrail__desktop"><li><a href="/">Home</a></li><li><a href="/journal">Journal</a></li><li aria-current="page" class="journalTrail__current">Ferrari Testarossa</li></ol><a class="journalTrail__mobile" href="/journal"><span aria-hidden="true" class="journalTrail__arrow">←</span><span>Zurück zum Journal</span></a></nav>
+<div class="eyebrow">Luxury Obsession Journal</div><h1 class="heroTitle">Ferrari Testarossa — mehr als ein Postertraum</h1><div class="meta articleDates">Veröffentlicht <time datetime="2026-11-15">15. November 2026</time> · Luxury Obsession</div><div class="prose" id="articleBody"><p>Bevor man den Hubraum des Testarossa kannte, kannte man seine Form. Die langen Lamellen an den Türen. Das unglaublich breite Heck. Die Scheinwerfer, die in der Haube verschwanden. Eine Ferrari Testarossa erkannte man am anderen Ende der Strasse, lange bevor ihr Zwölfzylinder zu hören war.</p><p>In <i>Miami Vice</i> bekam der ganze Wagen seinen Auftritt. Vom Fahrersitz aus sieht man ihn aus einem anderen Winkel. Vorne verschwindet die flache Nase fast aus dem Blickfeld. Im Aussenspiegel dagegen füllt der hintere Kotflügel das Bild. Schon beim Spurwechsel bekommt man ein Gefühl dafür, wie breit der Wagen hinter den Türen wird.</p><p>Für ihren Fahrbericht nehmen TheCarGuys einen gelben Testarossa von 1989 mit auf eine britische Landstrasse. Was den Fahrer dort überrascht, ist der Komfort. In diesem Ferrari könnte er sich gut einen ganzen Nachmittag am Steuer vorstellen.</p><h2>Als die Kühlung das Design prägte</h2><p>Beim Rundgang verändern sich die Proportionen. Vorne wirkt die flache Nase beinahe zurückhaltend. Entlang der Flanken wächst die Karosserie bis zu den gewaltigen hinteren Schultern.</p><p>Die Extravaganz hat technische Gründe. Ferrari verlegte die Kühler an die Seiten, um Schwächen der vorherigen Berlinetta Boxer zu beheben. Dafür waren grosse Lufteinlässe hinter den Türen nötig. Pininfarina machte daraus das prägende Gestaltungselement. Die langen Lamellen lenken den Blick direkt zu den Kühlluftöffnungen.</p><p>Hinten verbindet ein dunkles Gitter optisch die beiden Kotflügel und verdeckt die Leuchten. Darüber liegt die breite Motorabdeckung. Je genauer man hinsieht, desto bewusster erscheint diese Gestaltung.</p><figure class="comparisonFigure"><img src="/media/testarossa-review/tr-960.webp" srcset="/media/testarossa-review/tr-480.webp 480w, /media/testarossa-review/tr-960.webp 960w, /media/testarossa-review/tr-1280.webp 1280w" sizes="(max-width: 900px) 94vw, 880px" width="1280" height="573" alt="Testarossa von 1991 mit geschlossenen Klappscheinwerfern und seitlichen Lamellen" fetchpriority="high" decoding="async"><figcaption>Testarossa von 1991 mit geschlossenen Klappscheinwerfern und seitlichen Lamellen. <a href="https://commons.wikimedia.org/wiki/File:Ferrari_Testarossa_(1991)_1X7A6526.jpg">Alexander-93</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</figcaption></figure><h2>Zwölf Zylinder, fünf Gänge und Zeit zum Geniessen</h2><p>Hinter den Sitzen arbeitet ein frei saugender Zwölfzylinder mit 4’943 cm³. Seine Architektur entspricht einem V12 mit 180 Grad Bankwinkel, meist als Flat-Twelve bezeichnet. Das europäische Original leistet 390 PS und 490 Nm. Die roten Zylinderkopfdeckel erklären den Namen Testarossa.</p><p>Kupplungspedal, Metallhebel und offene Schaltkulisse bestimmen die Bedienung. Der erste Gang liegt links hinten. Jeder Gangwechsel verlangt eine bewusste Bewegung und gibt dem Beschleunigen seinen eigenen Rhythmus.</p><p>Im zweiten Gang gibt der Fahrer des gelben Wagens bei etwa 3’000 Umdrehungen Gas. Man hört, wie der Ton des Zwölfzylinders steigt, bis er den Fuss hebt. Eine kurze Pause für den Griff zum Schalthebel, dann setzt der Motor wieder ein.</p><figure class="comparisonFigure"><img loading="lazy" decoding="async" src="/media/testarossa-review/engine.jpg" width="1080" height="720" alt="Der 4,9-Liter-Zwölfzylinder mit seinen roten Zylinderkopfdeckeln."><figcaption>Der 4,9-Liter-Zwölfzylinder mit seinen roten Zylinderkopfdeckeln. <a href="https://commons.wikimedia.org/wiki/File:Ferrari_Testarossa_Motor.jpg">René Anderes</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></figcaption></figure><h2>Die angenehme Überraschung des Originals</h2><p>Auf der Landstrasse federt der Testarossa von 1989 unerwartet geschmeidig. Der Fahrer erwähnt ausdrücklich die bequemen Sitze und die gute Sicht durch die Heckscheibe. Wer sich drei oder vier Stunden am Steuer vorstellt, versteht, weshalb ihm gerade diese Details auffallen.</p><p>Auch innen zeigt sich der Reisecharakter. Hinter den Sitzen gibt es eine Ablage, dazu ein dünnes Lenkrad und zahlreiche zeittypische Instrumente und Schalter. Selbst das Kassettenfach trägt zum Vergnügen bei, einer anderen Epoche zu begegnen.</p><p>Bei den Bremsen fällt das Urteil unter höherer Belastung zurückhaltender aus. Die breiten hinteren Kotflügel bleiben in den Spiegeln präsent. Zudem prägt der Zustand dieses konkreten Autos die Eindrücke. Trotzdem zeigt sich das Original als überzeugender Gran Turismo. Den Rhythmus mit dem Getriebe finden, den Zwölfzylinder arbeiten lassen und die Reise geniessen.</p><figure class="comparisonFigure"><img loading="lazy" decoding="async" src="/media/testarossa-review/interior.jpg" width="2048" height="1536" alt="Das Testarossa-Cockpit mit offener Fünfgang-Schaltkulisse."><figcaption>Das Testarossa-Cockpit mit offener Fünfgang-Schaltkulisse. <a href="https://commons.wikimedia.org/wiki/File:Ferrari_Testarossa_interieur_01.jpg">Arnaud 25</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></figcaption></figure><h2>Die Testarossa in den Garagen der Stars</h2><p>Elton John besass eine Testarossa von 1987, die später wieder versteigert wurde. Alain Delons ebenfalls 1987 gebaute Testarossa bietet einen besonders schönen Schweizer Bezug. Artcurial dokumentierte Schweizer Fahrzeugpapiere und eine persönliche Widmung des Schauspielers im Serviceheft. Auf Delons Wunsch stellte der Katalog ausserdem klar, dass sein Hund Shalva bei ihm bleiben würde.</p><p>Michael Jordan wählte eine schwarze 512 TR von 1992 mit dem berühmten Kennzeichen «M AIR J». Laut CURATED wurde sie im Februar 1992 über Lake Forest Ferrari ausgeliefert und blieb bis Oktober 1995 in seinem Besitz. Auch Mike Tyson zählt in RM Sotheby’s Rückblick zur Kulturgeschichte des Modells zu den bekannten Besitzern.</p><p>Dr. Dres weisse Testarossa wurde Teil seiner Erfolgsgeschichte. Für Straight Outta Compton wurde diese Verbindung mit einem gemieteten Exemplar nachgestellt. Michael Jacksons am besten dokumentierte Verbindung ist die schwarze Straman-Cabrioletversion aus dem Pepsi-Werbefilm The Chopper von 1987.</p><div class="trSocial"><p>Im Frühling 2026 zeigte sich Kendall Jenner bei einem Mode-Shooting mit einem silbernen 512 TR. Die Fotos teilte sie auf <a href="https://www.instagram.com/p/DXxGgTMD9vS/">Instagram</a>. Über dreissig Jahre nach Produktionsende sorgte der Ferrari damit erneut in der Motorpresse für Gesprächsstoff.</p><figure><a href="https://www.instagram.com/p/DXxGgTMD9vS/"><img src="https://img-api.cloud.mediaset.net/api/images/kn/v1/image_main/600/338/111700629?r=8" width="600" height="338" loading="lazy" decoding="async" referrerpolicy="no-referrer" alt="Kendall Jenner steht neben einem silbernen Ferrari 512 TR"></a><figcaption>Mehr zum Fotoshooting gibt es <a href="https://www.sportmediaset.mediaset.it/drive-up/kendall-jenner-si-e-comprata-una-ferrari-testarossa_111699274-202602k.shtml">im Artikel von SportMediaset</a>.</figcaption></figure></div><h2>Maradona wollte seinen Ferrari in Schwarz</h2><p>Während seiner Zeit beim SSC Neapel wollte Diego Maradona eine schwarze Ferrari. Sein Manager Guillermo Coppola schilderte später Verhandlungen, bei denen sich Enzo Ferrari persönlich mit der Farbfrage befasst haben soll. Nach Coppolas Darstellung half die Aussicht auf eine Umlackierung in Neapel, Ferrari zur Erfüllung des Wunsches zu bewegen.</p><p>Die Geschichte passt zu Maradonas Persönlichkeit. Er wusste genau, was er wollte, und selbst die Farbe seiner Ferrari wurde zum Ereignis. Spätere Erzählungen vermischen allerdings Details der Testarossa und der F40. ANSA und El País weisen auf zeitliche Widersprüche hin. Schwarz war zudem als Werksfarbe für die Testarossa erhältlich. Die Erzählung vom gebrochenen allgemeinen Rot-Gebot gehört zur Legende. Das Gespräch mit Enzo lässt sich als Coppolas vielfach wiederholte Schilderung einordnen.</p><p>Mit Maradona am Steuer brauchte eine schwarze Testarossa in Neapel ohnehin wenig Hilfe, um Aufmerksamkeit zu erregen.</p><h2>Was sich beim 512 TR unter der Karosserie änderte</h2><p>Aus der Ferne scheinen neue Räder und eine geänderte Front die wichtigsten Unterschiede zu sein. Die Entwicklung ging tiefer. Ferrari setzte Motor und Getriebe niedriger, überarbeitete das Fahrwerk und entwickelte den Motor weiter. Die europäische Leistung stieg auf 428 PS. Der Innenraum wurde übersichtlicher, die offene Schaltkulisse blieb.</p><p>Das Auto im TheCarGuys-Film hat eine Tieferlegung, Distanzscheiben, ein kleineres Momo-Lenkrad, eine geänderte Schaltkulisse und eine andere Auspuffanlage. Der straffere und lautere Eindruck erklärt sich teilweise durch diese Umbauten. Auch das Original im Film hat einen anderen Auspuff. Der Vergleich vermittelt vor allem den Charakter dieser beiden konkreten Fahrzeuge.</p><figure class="comparisonFigure"><img src="/media/testarossa-review/mid-960.webp" srcset="/media/testarossa-review/mid-480.webp 480w, /media/testarossa-review/mid-960.webp 960w, /media/testarossa-review/mid-1280.webp 1280w" sizes="(max-width: 900px) 94vw, 880px" width="1280" height="1044" alt="Ferrari 512 TR mit überarbeiteter Front und geschlossenen Klappscheinwerfern" loading="lazy" decoding="async"><figcaption>Ferrari 512 TR mit überarbeiteter Front und geschlossenen Klappscheinwerfern. <a href="https://commons.wikimedia.org/wiki/File:Ferrari_Testarossa_512_TR_(front).jpg">Fiver, der Hellseher</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</figcaption></figure><section class="trComparison"><h3 id="tr-specs">Technische Daten der europäischen Versionen</h3><div class="tableWrap" role="region" tabindex="0" aria-labelledby="tr-specs"><table aria-labelledby="tr-specs"><thead><tr><th scope="col">Modell</th><th scope="col">Testarossa</th><th scope="col">512 TR</th><th scope="col">F512 M</th></tr></thead><tbody><tr><th scope="row">Zeitraum</th><td>1984–1991</td><td>1991/92–1994</td><td>1994–1996</td></tr><tr><th scope="row">Leistung (kW / PS)</th><td>287 / 390</td><td>315 / 428</td><td>324 / 440</td></tr><tr><th scope="row">Drehmoment</th><td>490 Nm</td><td>491 Nm</td><td>500 Nm</td></tr><tr><th scope="row">Trockengewicht</th><td>1506 kg</td><td>1473 kg</td><td>1455 kg</td></tr><tr><th scope="row">0–100 km/h</th><td>5,8 s</td><td>4,8 s</td><td>4,7 s</td></tr><tr><th scope="row">Höchstgeschwindigkeit</th><td>290 km/h</td><td>313,8 km/h</td><td>315 km/h</td></tr></tbody></table></div></section><section class="trComparison"><h3 id="tr-design">Die wichtigsten Erkennungsmerkmale</h3><div class="tableWrap" role="region" tabindex="0" aria-labelledby="tr-design"><table aria-labelledby="tr-design"><thead><tr><th scope="col">Modell</th><th scope="col">Testarossa</th><th scope="col">512 TR</th><th scope="col">F512 M</th></tr></thead><tbody><tr><th scope="row">Front und Scheinwerfer</th><td>Ursprüngliche Front mit Klappscheinwerfern</td><td>Überarbeitete Front mit Klappscheinwerfern</td><td>Feste Scheinwerfer unter klaren Abdeckungen</td></tr><tr><th scope="row">Heckansicht</th><td>Schwarzes Gitter vor den Rückleuchten</td><td>Gitter bleibt; geänderte Motorabdeckung</td><td>Einzeln sichtbare runde Rückleuchten</td></tr><tr><th scope="row">Technische Entwicklung</th><td>Seitliche Kühler und lange Luftleitlamellen</td><td>Motor und Getriebe tiefer; grössere Bremsen</td><td>Titanpleuel und überarbeitete Kurbelwelle</td></tr></tbody></table></div></section><h2>Die F512 M und die Weiterentwicklung einer Ikone</h2><p>Beim F512 M bleiben die Scheinwerfer auch ausgeschaltet sichtbar. Am Heck treten die runden Leuchten einzeln hervor. Beim ersten Testarossa zog das dunkle Gitter den Blick noch über die ganze Wagenbreite.</p><p>Ferrari überarbeitete auch die Kurbelwelle und verbaute Pleuel aus Titan. Der europäische F512 M leistete 440 PS, das angegebene Trockengewicht lag bei 1’455 kg. Mit ihm endete bei Ferrari die Ära der Strassenwagen mit flachem Zwölfzylinder.</p><figure class="comparisonFigure"><img src="/media/testarossa-review/m-960.webp" srcset="/media/testarossa-review/m-480.webp 480w, /media/testarossa-review/m-960.webp 960w, /media/testarossa-review/m-1280.webp 1280w" sizes="(max-width: 900px) 94vw, 880px" width="1280" height="563" alt="Heckansicht des F512 M mit runden Rückleuchten" loading="lazy" decoding="async"><figcaption>Heckansicht des F512 M mit runden Rückleuchten. <a href="https://commons.wikimedia.org/wiki/File:Ferrari_F512_M_1X7A6567.jpg">Alexander-93</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</figcaption></figure><h2>Ferrari-Testarossa-Preise und der Preis des Traums</h2><p>Car and Driver nannte im damaligen Test für die Testarossa von 1985 einen US-Grundpreis von 94’000 Dollar. Das entspricht ungefähr 294’000 Dollar mit der Kaufkraft von September 2026. Schon der Neuwagenkauf war eine erhebliche Ausgabe.</p><p>Im August 2000 verkaufte RM in Monterey ein rotes Exemplar von 1985 mit 68’221 Meilen für 61’600 Dollar. Die Auktionsnotizen beschrieben Gebrauchsspuren im Innenraum und verwiesen auf vergleichbare Fahrzeuge für rund 55’000 Dollar. Aus dem Postertraum war ein gebrauchter Exot geworden, dessen Zustand und Preis sorgfältig verglichen werden mussten. Eine Testarossa Monodado von 1987 erzielte 2006 in Monterey 71’500 Dollar.</p><p>Die späteren Verkaufsdaten zeigen einen wechselhaften Sammlermarkt. Die veröffentlichten jährlichen US-Mediane stiegen 2015 stark an, gaben bis 2020 nach und legten 2025–2026 wieder zu. Inflationsbereinigt liegt der Median von 2015 bei etwa 219’000 Dollar, jener der Stichprobe von 2026 bei etwa 196’000 Dollar.</p><p>Laufleistung, Originalität, Wartung und Herkunft beeinflussen das Ergebnis. Jedes Jahr wechseln andere Autos den Besitzer. Die Grafik gibt dem Traum und seiner veränderten Erschwinglichkeit historischen Kontext.</p><figure class="comparisonFigure"><img loading="lazy" decoding="async" src="/media/testarossa-review/prices-de.png" width="1650" height="825" alt="Testarossa-Preise in US-Dollar mit Kaufkraft September 2026"><figcaption>Die Linie verbindet die belegten Werte. Bis 1991 zeigen die Punkte den Basispreis bei Einführung und die US-Listenpreise einzelner Neuwagen. Von 1998 bis 2011 folgen ausgewählte US-Auktionsergebnisse, ab 2013 jährliche Medianpreise aus US-Verkäufen. Für Jahre zwischen den Punkten liegen hier keine Beobachtungen vor. US-CPI-U im Jahresmittel bis 2024, für 2025 und 2026 jeweils im September. Bereinigte Preise auf 1’000 Dollar gerundet. Verkäufe 2026 bis 20. Oktober.</figcaption></figure><div class="tableWrap" role="region" tabindex="0" aria-label="USD"><table><thead><tr><th scope="col">Jahr</th><th scope="col">USD</th><th scope="col">USD · September 2026</th><th scope="col">Quelle</th></tr></thead><tbody><tr><th scope="row">1985</th><td>$94,000</td><td>$294,000</td><td>Neupreis</td></tr><tr><th scope="row">1987</th><td>$121,700</td><td>$361,000</td><td>Neupreis · <a href="https://bringatrailer.com/listing/1985-ferrari-testarossa-5/">Lake Forest Sportscars</a></td></tr><tr><th scope="row">1989</th><td>$141,780</td><td>$385,000</td><td>Neupreis · <a href="https://bringatrailer.com/listing/1989-ferrari-testarossa-51/">Brentwood Volvo</a></td></tr><tr><th scope="row">1990</th><td>$162,250</td><td>$418,000</td><td>Neupreis · <a href="https://bringatrailer.com/listing/1990-ferrari-testarossa-24/">Ogner Motorcars</a></td></tr><tr><th scope="row">1991</th><td>$175,950</td><td>$435,000</td><td>Neupreis · <a href="https://bringatrailer.com/listing/1991-ferrari-testarossa-18/">Ferrari of Houston</a></td></tr><tr><th scope="row">1998</th><td>$57,800</td><td>$119,000</td><td>Auktionsverkauf · <a href="https://www.hagerty.com/valuation-tools/past-sales/1985-ferrari-testarossa/57619/8d0eb101-7d55-4736-83d5-98a0d5e61be2">Kruse · Auburn</a></td></tr><tr><th scope="row">2000</th><td>$61,600</td><td>$121,000</td><td>Auktionsverkauf</td></tr><tr><th scope="row">2001</th><td>$57,240</td><td>$109,000</td><td>Auktionsverkauf · <a href="https://www.hagerty.com/valuation-tools/past-sales/1986-Ferrari-Testarossa/SFFSA17A0G0066327/64feb2d6-10c9-4910-b935-7e56ee3ad6d7">Kruse · Auburn</a></td></tr><tr><th scope="row">2002</th><td>$68,370</td><td>$128,000</td><td>Auktionsverkauf · <a href="https://www.hagerty.com/valuation-tools/past-sales/1991-ferrari-testarossa/ZFFSG17A3M0088977/00d35766-54a4-4493-8127-f0a2ba669a08">RM · Novi</a></td></tr><tr><th scope="row">2004</th><td>$67,650</td><td>$121,000</td><td>Auktionsverkauf · <a href="https://www.hagerty.com/valuation-tools/past-sales/1986-ferrari-testarossa/ZFFSA17A4G0060479/8c9acddd-5a87-43c5-92b0-f54f690c5bba">RM · Phoenix</a></td></tr><tr><th scope="row">2006</th><td>$71,500</td><td>$120,000</td><td>Auktionsverkauf</td></tr><tr><th scope="row">2010</th><td>$55,000</td><td>$85,000</td><td>Auktionsverkauf · <a href="https://www.hagerty.com/valuation-tools/past-sales/1988-ferrari-testarossa/ZFFAA17B000073873/c3e6d84e-5420-48cc-afdf-971f3127fb05">Barrett-Jackson · Newport Beach</a></td></tr><tr><th scope="row">2011</th><td>$78,100</td><td>$117,000</td><td>Auktionsverkauf · <a href="https://www.hagerty.com/valuation-tools/past-sales/1991-ferrari-testarossa/ZFFSM17AXM0088175/862bcf60-84ba-4289-8422-b78a6855eb3a">Barrett-Jackson · Scottsdale</a></td></tr><tr><th scope="row">2013</th><td>$80,300</td><td>$116,000</td><td>Jahresmedian</td></tr><tr><th scope="row">2014</th><td>$79,750</td><td>$114,000</td><td>Jahresmedian</td></tr><tr><th scope="row">2015</th><td>$154,000</td><td>$219,000</td><td>Jahresmedian</td></tr><tr><th scope="row">2016</th><td>$137,500</td><td>$193,000</td><td>Jahresmedian</td></tr><tr><th scope="row">2017</th><td>$129,250</td><td>$178,000</td><td>Jahresmedian</td></tr><tr><th scope="row">2018</th><td>$104,500</td><td>$140,000</td><td>Jahresmedian</td></tr><tr><th scope="row">2019</th><td>$106,700</td><td>$141,000</td><td>Jahresmedian</td></tr><tr><th scope="row">2020</th><td>$104,020</td><td>$135,000</td><td>Jahresmedian</td></tr><tr><th scope="row">2021</th><td>$142,000</td><td>$177,000</td><td>Jahresmedian</td></tr><tr><th scope="row">2022</th><td>$144,999</td><td>$167,000</td><td>Jahresmedian</td></tr><tr><th scope="row">2023</th><td>$146,000</td><td>$161,000</td><td>Jahresmedian</td></tr><tr><th scope="row">2024</th><td>$129,800</td><td>$139,000</td><td>Jahresmedian</td></tr><tr><th scope="row">2025</th><td>$155,500</td><td>$161,000</td><td>Jahresmedian</td></tr><tr><th scope="row">2026</th><td>$196,111</td><td>$196,000</td><td>Jahresmedian</td></tr></tbody></table></div><h2>Vom Testarossa-Traum zur Ferrari-Fahrt in der Schweiz</h2><p>Die Testarossa weckt den Wunsch, Ferrari selbst am Steuer zu erleben. Bei Luxury Obsession lässt sich für eine Fahrt in der Schweiz eine <a href="/ferrari-mieten-zuerich">Ferrari 458 Italia mieten</a>. Ihr V8-Saugmotor, das Doppelkupplungsgetriebe mit Schaltwippen und das jüngere Fahrwerk besitzen einen eigenen Charakter. Der Motor steht auch hier im Mittelpunkt.</p><p>Eine Fahrt entlang eines Schweizer Sees oder durch die Alpenlandschaft lässt Zeit für Gasannahme, wechselnde Klangfarben und die Vorfreude auf den nächsten Strassenabschnitt.</p><h2>Der Blick, der bleibt</h2><p>Vom Fahrersitz der Testarossa sieht man die gewaltigen hinteren Kotflügel in den Spiegeln. Die Form des alten Posters wird Teil jeder Fahrt.</p><section class="f8VideoSection"><h2>Der Fahrbericht im Video</h2><div class="f8Video" data-tr-video><div class="f8VideoPlaceholder trPoster"><p>TheCarGuys · Drive Every Ferrari</p><button class="ctaBtn ctaBtnPrimary" type="button" data-tr-play>YouTube-Video laden</button></div></div><p class="comparisonNote">Beim Laden wird eine Verbindung zu YouTube hergestellt. <a href="https://www.youtube.com/watch?v=8Xe4ES93nuo">YouTube</a></p></section><aside class="comparisonNote"><h2>Quellen und ursprünglicher Fahrbericht</h2><p><a href="https://www.youtube.com/watch?v=8Xe4ES93nuo">TheCarGuys</a> · <a href="https://www.ferrari.com/en-EN/auto/testarossa">Ferrari Testarossa</a> · <a href="https://www.ferrari.com/en-EN/auto/512-tr">Ferrari 512 TR</a> · <a href="https://www.ferrari.com/en-EN/auto/f512-m">Ferrari F512 M</a> · <a href="https://www.caranddriver.com/reviews/a15142218/1985-ferrari-testarossa-archived-road-test-review/">Car and Driver · 1985</a> · <a href="https://www.hagerty.com/valuation-tools/past-sales/1985-ferrari-testarossa/ZFFSA17A2F0058549/43b050e0-e219-4dea-b3d1-5ea5de3f12b5">Hagerty · Monterey 2000</a> · <a href="https://rmsothebys.com/auctions/mo06/lots/r222-1987-ferrari-testarossa-monodado/">RM · Monterey 2006</a> · <a href="https://exoticcomps.com/blog/ferrari-testarossa-prices-by-year/">Exotic Comps · US sales</a> · <a href="https://fred.stlouisfed.org/data/CPIAUCNS">BLS CPI-U · FRED</a> · <a href="https://www.artcurial.com/ventes/2219/lots/382-a">Alain Delon · Artcurial</a> · <a href="https://www.motorious.com/articles/news/elton-johns-ferrari-testarossa/">Elton John</a> · <a href="https://www.einnews.com/pr_news/802438000/curated-discovers-michael-jordan-s-long-lost-ferrari-512-tr">Michael Jordan · CURATED</a> · <a href="https://rmsothebys.com/auctions/ve23/lots/r0006-1989-ferrari-testarossa/">Mike Tyson · RM</a> · <a href="https://www.streetinsider.com/Press+Releases/+and+quot%3BStraight+Outta+Compton+and+quot%3B+and+and+quot%3BMiami+Vice+and+quot%3B+Cars+Have+Something+in+Common/10816588.html">Dr. Dre</a> · <a href="https://www.motorauthority.com/news/1089593_ferrari-testarossa-driven-by-michael-jackson-heads-to-barrett-jackson">Michael Jackson</a> · <a href="https://news.dupontregistry.com/blogs/celebrity-cars/kendall-jenner-s-ferrari-512-tr-instagram-post-sparks-classic-car-buzz">Kendall Jenner · duPont Registry</a> · <a href="https://www.ansa.it/canale_motori/notizie/mondo_motori/2020/11/26/diego-maradona-la-storia-misteriosa-delle-due-ferrari-nere_0081f4f6-65cd-46e3-83e6-e8725158bebd.html">Maradona · ANSA</a> · <a href="https://motor.elpais.com/supercoches/ferrari-negro-de-maradona-mito-o-realidad/">Maradona · El País</a></p></aside></div></div></section></main>
+<footer>
+<div class="container footerInner">
+<div class="footerLeft">© <span id="year">2026</span> Luxury Obsession</div>
+<div class="footerCenter">Aktuell verfügbar: Ferrari 458 Italia</div>
+<div class="footerNap">
+<span class="footerNapItem">Luxury Obsession by Anna Loi</span>
+<span class="footerNapItem">Nänikon 8606, Schweiz</span>
+<span class="footerNapItem"><a href="mailto:info@luxuryobsession.ch">info@luxuryobsession.ch</a></span>
+<span class="footerNapItem"><a href="tel:+41765870458">+41 76 587 04 58</a></span>
+</div>
+<div class="footerRight">
+<a href="/impressum" id="footerImpressum">Impressum</a>
+<a href="/datenschutz" id="footerPrivacy">Datenschutz</a>
+<a href="/agb" id="footerTerms">AGB</a>
+</div>
+</div>
+</footer>
+<script>
+(function(){
+  const lang = "de";
+
+  function wireHamburgerFallback(){
+    const btn = document.getElementById("hamburger");
+    const menu = document.getElementById("mobileMenu");
+    if(!btn || !menu) return;
+
+    if(btn.dataset.loHamburgerFallback === "1") return;
+    btn.dataset.loHamburgerFallback = "1";
+
+    if(menu.children.length === 0){
+      const desktop = Array.from(document.querySelectorAll(".navLinks a"));
+      const normal = desktop.filter(a => !a.classList.contains("navCta"));
+      const cta = desktop.find(a => a.classList.contains("navCta"));
+
+      normal.forEach(a => {
+        const clone = a.cloneNode(true);
+        clone.classList.remove("navCta");
+        menu.appendChild(clone);
+      });
+
+      const divider = document.createElement("div");
+      divider.className = "mobileMenuDivider";
+      menu.appendChild(divider);
+
+      if(cta){
+        const cloneCta = cta.cloneNode(true);
+        cloneCta.classList.remove("navCta");
+        cloneCta.classList.add("mobileMenuCta");
+        menu.appendChild(cloneCta);
+      }
+    }
+
+    function close(){
+      menu.style.display = "none";
+      menu.setAttribute("data-open","0");
+      btn.setAttribute("aria-expanded","false");
+    }
+
+    function open(){
+      menu.style.display = "block";
+      menu.setAttribute("data-open","1");
+      btn.setAttribute("aria-expanded","true");
+    }
+
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      const isOpen = menu.getAttribute("data-open") === "1";
+      if(isOpen) close();
+      else open();
+    }, true);
+
+    menu.addEventListener("click", (e) => {
+      if(e.target.closest("a")) close();
+    });
+
+    document.addEventListener("click", (e) => {
+      if(menu.getAttribute("data-open") !== "1") return;
+      if(menu.contains(e.target) || btn.contains(e.target)) return;
+      close();
+    });
+
+    close();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const lo = window.__LO__;
+    if(lo && typeof lo.initSharedUI === "function") lo.initSharedUI(lang);
+    else if(lo && typeof lo.initLangMenu === "function") lo.initLangMenu(lang);
+
+    wireHamburgerFallback();
+
+    document.querySelectorAll("[data-withlang='1']").forEach(a => {
+      const href = a.getAttribute("href");
+      if(href && lo && lo.buildUrl) a.setAttribute("href", lo.buildUrl(href, lang));
+    });
+
+    const year = document.getElementById("year");
+    if(year) year.textContent = String(new Date().getFullYear());
+  });
+})();
+</script>
+<script defer src="/assets/testarossa-review-video.js"></script></body>
+</html>
