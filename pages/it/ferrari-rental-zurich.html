@@ -266,7 +266,7 @@ header .navInner{padding-top:6px!important;padding-bottom:6px!important}
 }</script>
 
 
-</head>
+<style>.modelGallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}.modelGallery figure{margin:0;min-width:0}.modelGallery img{display:block;width:100%;height:auto;border-radius:16px}.modelGallery figcaption{font-size:.8rem;line-height:1.5;color:#b9b9bc;margin-top:.65rem}.modelVideo{position:relative;width:100%;max-width:none;aspect-ratio:16/9;margin:1.4rem auto;background:#050509;border-radius:18px;overflow:hidden;display:flex;align-items:center;justify-content:center}.modelVideo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}.modelVideo>button{z-index:1;margin:1rem;white-space:normal}.modelVideo iframe{width:100%;height:100%;border:0}@media(max-width:1000px){.modelGallery{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.modelGallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1rem}.modelGallery figure{flex:0 0 88%;scroll-snap-align:start}}</style></head>
 <body>
 <a class="loSkipLink" href="#main-content">Vai al contenuto</a>
 <header>
@@ -424,7 +424,12 @@ header .navInner{padding-top:6px!important;padding-bottom:6px!important}
 <p class="locationBody">Per approfondire la storia del modello, il design e le differenze rispetto a Spider e Speciale, leggi la <a href="/it/ferrari-458-italia">guida alla Ferrari 458 Italia</a>. Per organizzare il <a href="/it/">noleggio Ferrari a Zurigo e in Svizzera</a>, trovi sulla homepage il modulo di richiesta e le opzioni disponibili.</p>
 <p class="locationBody"><a class="ctaBtn ctaBtnPrimary" href="/it/#request-P3_U">Richiedi la 458 per 3 ore · CHF 440</a></p>
 </div></section>
-<section id="location">
+<section><div class="container"><h2 class="sectionTitle">Le linee di Pininfarina, da vicino</h2><p class="sectionSubtitle">La vista laterale mette in risalto il muso basso e il volume sopra le ruote posteriori. Sul retro, i tre scarichi centrali sono uno dei dettagli più riconoscibili della 458 Italia.</p><div aria-label="Foto della nostra Ferrari 458 Italia" class="modelGallery">
+<figure><img alt="La 458 Italia in Rosso Corsa vista di fronte." decoding="async" height="1200" loading="lazy" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 42vw, 240px" src="/media/ferrari-458-model-front-800.webp" srcset="/media/ferrari-458-model-front-400.webp 400w, /media/ferrari-458-model-front-800.webp 800w, /media/ferrari-458-model-front-1200.webp 1200w" width="800"/><figcaption>La 458 Italia in Rosso Corsa vista di fronte.</figcaption></figure>
+<figure><img alt="I tre terminali di scarico centrali della 458 Italia." decoding="async" height="1200" loading="lazy" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 42vw, 240px" src="/media/ferrari-458-model-rear-800.webp" srcset="/media/ferrari-458-model-rear-400.webp 400w, /media/ferrari-458-model-rear-800.webp 800w, /media/ferrari-458-model-rear-1200.webp 1200w" width="800"/><figcaption>I tre terminali di scarico centrali della 458 Italia.</figcaption></figure>
+<figure><img alt="Il profilo laterale disegnato da Pininfarina." decoding="async" height="1200" loading="lazy" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 42vw, 240px" src="/media/ferrari-458-model-profile-800.webp" srcset="/media/ferrari-458-model-profile-400.webp 400w, /media/ferrari-458-model-profile-800.webp 800w, /media/ferrari-458-model-profile-1200.webp 1200w" width="800"/><figcaption>Il profilo laterale disegnato da Pininfarina.</figcaption></figure>
+<figure><img alt="Il cerchio con il Cavallino e la pinza freno rossa." decoding="async" height="1200" loading="lazy" sizes="(max-width: 600px) 85vw, (max-width: 1000px) 42vw, 240px" src="/media/ferrari-458-model-wheel-800.webp" srcset="/media/ferrari-458-model-wheel-400.webp 400w, /media/ferrari-458-model-wheel-800.webp 800w, /media/ferrari-458-model-wheel-1200.webp 1200w" width="800"/><figcaption>Il cerchio con il Cavallino e la pinza freno rossa.</figcaption></figure>
+</div><h2 class="sectionTitle">Il V8 sul passo del Susten</h2><p class="sectionSubtitle">Nel filmato di Francesco puoi ascoltare il V8 aspirato della nostra 458 mentre sale lungo i tornanti del Susten.</p><div class="modelVideo" data-model-video=""><img alt="Ferrari 458 Italia in Rosso Corsa sulle Alpi svizzere" height="720" loading="lazy" src="/media/ferrari-458-cinematic-poster.webp" width="1280"/><button class="btn btnPrimary" data-model-play="" type="button">Guarda il filmato</button></div><p>Avviando il video ti colleghi a YouTube. <a href="https://www.youtube.com/watch?v=8I_FMpu9oJE">Guarda su YouTube</a></p></div></section><section id="location">
 <div class="container">
 <h2 class="sectionTitle" id="locTitle">Consegna e primi chilometri con la Ferrari 458</h2>
 <p class="sectionSubtitle" id="locSub">Parti da Nänikon, vicino a Zurigo, oppure concorda una consegna adatta ai tuoi programmi.</p>
@@ -697,5 +702,5 @@ header .navInner{padding-top:6px!important;padding-bottom:6px!important}
       });
     })();
   </script>
-</body>
+<script>document.querySelector('[data-model-play]').addEventListener('click',function(){const frame=document.createElement('iframe');frame.src='https://www.youtube-nocookie.com/embed/8I_FMpu9oJE?autoplay=1&playsinline=1';frame.title='Ferrari 458 Italia | Filmato sul passo del Susten';frame.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';frame.allowFullscreen=true;this.closest('[data-model-video]').replaceChildren(frame);});</script></body>
 </html>

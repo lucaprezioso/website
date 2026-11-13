@@ -3201,7 +3201,7 @@ header .navInner{padding-top:6px!important;padding-bottom:6px!important}
 <script defer src="/assets/lo.photo-context.js?v=20261007a"></script>
 
 
-</head>
+<style>form label[for="fullName"]::after, form label[for="email"]::after{content:" *";color:inherit}</style><style>.handoverInfo{margin-top:.3rem}.handoverInfo summary{width:fit-content;cursor:pointer;color:inherit;font-size:.85rem;text-decoration:underline;text-underline-offset:.16em;padding:.25rem 0}</style></head>
 <body>
 <a class="loSkipLink" href="#main-content">Zum Inhalt springen</a>
 <header>
@@ -3624,10 +3624,10 @@ ich danke nochmals Anna und sein Mann für diese super Organisation, war sehr se
 </div>
 <div class="loBookingRateRow"><div class="fieldGroup">
 <label for="packageId" id="lblPackage">Tarif</label>
-<select id="packageId" name="package_id" required=""><option value="P3_U">Kurztrip · 3h · ∞ · 440 CHF</option><option value="P6_L">Signature Halbtag · 6h · 200 km · 780 CHF</option><option value="P6_U">Signature Halbtag Unlimited · 6h · ∞ · 830 CHF</option><option value="P12_L">Grand Tour 300 · 12h · 300 km · 940 CHF</option><option value="P12_L500">Grand Tour 500 · 12h · 500 km · 1140 CHF</option><option value="P12_U">Grand Tour Unlimited · 12h · ∞ · 1290 CHF</option><option value="P24_L200">Full Day Icon 200 · 24h · 200 km · 1340 CHF</option><option value="P24_L500">Full Day Icon 500 · 24h · 500 km · 1590 CHF</option><option value="P24_U">Full Day Icon Unlimited · 24h · ∞ · 1990 CHF</option><option value="WE_500">Weekend Escape 500 · 48h · 500 km · 1990 CHF</option><option value="WE_800">Weekend Escape 800 · 48h · 800 km · 2790 CHF</option><option value="WD">Weekday Privilege · Mo–Fr · 700 km · 2480 CHF</option><option value="FW">Ganze Woche · Ganze Woche · 1300 km · 4480 CHF</option></select>
+<select id="packageId" name="package_id"><option value="RECOMMEND">Bitte um Paketempfehlung</option><option value="P3_U">Kurztrip · 3h · ∞ · 440 CHF</option><option value="P6_L">Signature Halbtag · 6h · 200 km · 780 CHF</option><option value="P6_U">Signature Halbtag Unlimited · 6h · ∞ · 830 CHF</option><option value="P12_L">Grand Tour 300 · 12h · 300 km · 940 CHF</option><option value="P12_L500">Grand Tour 500 · 12h · 500 km · 1140 CHF</option><option value="P12_U">Grand Tour Unlimited · 12h · ∞ · 1290 CHF</option><option value="P24_L200">Full Day Icon 200 · 24h · 200 km · 1340 CHF</option><option value="P24_L500">Full Day Icon 500 · 24h · 500 km · 1590 CHF</option><option value="P24_U">Full Day Icon Unlimited · 24h · ∞ · 1990 CHF</option><option value="WE_500">Weekend Escape 500 · 48h · 500 km · 1990 CHF</option><option value="WE_800">Weekend Escape 800 · 48h · 800 km · 2790 CHF</option><option value="WD">Weekday Privilege · Mo–Fr · 700 km · 2480 CHF</option><option value="FW">Ganze Woche · Ganze Woche · 1300 km · 4480 CHF</option></select>
 </div><div class="fieldGroup">
 <label for="pickupLocation" id="lblPickupLoc">Abholort</label>
-<select id="pickupLocation" name="pickup_location"><option value="NANIKON">Nänikon · KOSTENLOS</option><option value="ZURICH_AIRPORT">Flughafen Zürich · Kosten bei Bestätigung</option><option value="ZURICH">Zürich · Kosten bei Bestätigung</option><option value="WINTERTHUR">Winterthur · Kosten bei Bestätigung</option><option value="ZUG">Zug · CHF 140</option><option value="AARGAU">Aargau · CHF 140</option><option value="LUCERNE">Luzern · CHF 190</option><option value="ST_GALLEN">St. Gallen · CHF 190</option><option value="BERN">Bern · CHF 290</option><option value="SOLOTHURN">Solothurn · CHF 290</option><option value="BASEL">Basel · CHF 290</option><option value="BIEL">Biel · CHF 290</option><option value="CHUR">Chur · CHF 290</option><option value="ALTDORF">Altdorf UR (für Andermatt) · CHF 290</option><option value="CHUR_DAVOS">Chur (für Davos) · CHF 290</option><option value="OTHER">Andere · Bitte in Notizen angeben</option></select>
+<select id="pickupLocation" name="pickup_location"><option value="NANIKON">Nänikon · KOSTENLOS</option><option value="ZURICH_AIRPORT">Flughafen Zürich · Kosten bei Bestätigung</option><option value="ZURICH">Zürich · Kosten bei Bestätigung</option><option value="WINTERTHUR">Winterthur · Kosten bei Bestätigung</option><option value="ZUG">Zug · CHF 140</option><option value="AARGAU">Aargau · CHF 140</option><option value="LUCERNE">Luzern · CHF 190</option><option value="ST_GALLEN">St. Gallen · CHF 190</option><option value="BERN">Bern · CHF 290</option><option value="SOLOTHURN">Solothurn · CHF 290</option><option value="BASEL">Basel · CHF 290</option><option value="BIEL">Biel · CHF 290</option><option value="CHUR">Chur · CHF 290</option><option value="ALTDORF">Altdorf UR (für Andermatt) · CHF 290</option><option value="CHUR_DAVOS">Chur (für Davos) · CHF 290</option><option value="OTHER">Andere · Bitte in Notizen angeben</option></select><details class="handoverInfo"><summary>Mehr Infos</summary><p class="pricingNote" id="pickupFeeNote">Die angegebene Übergabegebühr umfasst Abholung und Rückgabe zusammen. Den gesamten Betrag bestätigen wir vor der Buchung.</p></details>
 </div></div>
 <div class="loBookingDateRow"><div class="fieldGroup calWrap">
 <label for="preferredDate" id="lblDate">Wunschtermin</label>
@@ -3746,7 +3746,7 @@ ich danke nochmals Anna und sein Mann für diese super Organisation, war sehr se
 <details class="card carbonPanel carbonDark faqItem">
 <summary class="faqSummary" id="faqQ10">Wie sind Storno und Umbuchung geregelt</summary>
 <div class="faqAnswer"><p id="faqA10">Das hängt vom Zeitpunkt und von der Verfügbarkeit ab. Die genauen Bedingungen bestätigen wir schriftlich vor der Zahlung.</p></div>
-</details>
+</details><details class="card carbonPanel carbonDark faqItem"><summary class="faqSummary">Darf ich mit dem Ferrari ins Ausland fahren?</summary><div class="faqAnswer"><p>Die Miete gilt für Fahrten in der Schweiz. Wenn du ins Ausland fahren möchtest, nenne uns bei der Anfrage die Länder und deine geplante Route. Dafür brauchst du vorab unsere schriftliche Zustimmung. Versicherungsschutz und allfällige Zusatzkosten bestätigen wir vor der Buchung.</p></div></details>
 </div>
 </div>
 </section>
@@ -4657,7 +4657,10 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
 
         pickupSel.innerHTML = "";
         (pickupOptions[lang] || pickupOptions.en).forEach(([val, label], i) => {
-          if(pickupOverrides[val]){
+          if(selectedPackageId === "RECOMMEND" && ["ZURICH_AIRPORT", "ZURICH", "WINTERTHUR"].includes(val)){
+            const feeNote = {de: "Gebühr je nach Paket", en: "fee depends on package", it: "costo in base al pacchetto"};
+            label = label.split(" · ")[0] + " · " + feeNote[lang];
+          }else if(pickupOverrides[val]){
             label = pickupOverrides[val];
           }
 
@@ -4678,6 +4681,8 @@ window.addEventListener("resize", () => renderPackagesPreview(), { passive: true
       function renderPackageOptions(){
       const selected=pkgSel.value;
       pkgSel.innerHTML = "";
+      const adviceLabels = {de: "Bitte um Paketempfehlung", en: "Please recommend a package", it: "Consigliatemi un pacchetto"};
+      pkgSel.add(new Option(adviceLabels[lang] || adviceLabels.en, "RECOMMEND"));
       PACKAGES.forEach(p => {
         const opt = document.createElement("option");
         opt.value = p.id;
