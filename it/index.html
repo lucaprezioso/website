@@ -2,6 +2,7 @@
 
 <html data-lo-scrollbars="calPopup loConsentBanner__inner loConsentPanel pricingGrid" lang="it">
 <head>
+<script data-lo-google-tracking="" defer="" src="/assets/lo.consent-home-eba179b2cf0a.js"></script>
 <meta charset="utf-8"/>
 
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -573,7 +574,7 @@ html.loConsentBannerOpen .loLangSuggest {
   }
 }
 </style>
-<script data-lo-google-tracking="" defer="" src="/assets/lo.consent-home-dd21c45f4f71.js"></script>
+
 <style id="lo-home-critical">
 
 /* Luxury Obsession shared stylesheet */
@@ -3564,7 +3565,7 @@ ich danke nochmals Anna und sein Mann für diese super Organisation, war sehr se
 </div>
 <div class="loBookingRateRow"><div class="fieldGroup">
 <label for="packageId" id="lblPackage">Tariffa</label>
-<select id="packageId" name="package_id"><option value="RECOMMEND">Consigliatemi un pacchetto</option><option value="P3_U">Breve Fuga · 3h · ∞ · 440 CHF</option><option value="P6_L">Signature Mezza giornata · 6h · 200 km · 780 CHF</option><option value="P6_U">Signature Mezza giornata Unlimited · 6h · ∞ · 830 CHF</option><option value="P12_L">Grand Tour 300 · 12h · 300 km · 940 CHF</option><option value="P12_L500">Grand Tour 500 · 12h · 500 km · 1140 CHF</option><option value="P12_U">Grand Tour Unlimited · 12h · ∞ · 1290 CHF</option><option value="P24_L200">Full Day Icon 200 · 24h · 200 km · 1340 CHF</option><option value="P24_L500">Full Day Icon 500 · 24h · 500 km · 1590 CHF</option><option value="P24_U">Full Day Icon Unlimited · 24h · ∞ · 1990 CHF</option><option value="WE_500">Weekend Escape 500 · 48h · 500 km · 1990 CHF</option><option value="WE_800">Weekend Escape 800 · 48h · 800 km · 2790 CHF</option><option value="WD">Weekday Privilege · Lun–Ven · 700 km · 2480 CHF</option><option value="FW">Settimana intera · Settimana intera · 1300 km · 4480 CHF</option></select>
+<select id="packageId" name="package_id"><option value="RECOMMEND">Consigliatemi un pacchetto</option><option value="P3_U">Breve Fuga · 3h · ∞ · 440 CHF</option><option value="P6_L">Signature Mezza giornata · 6h · 200 km · 780 CHF</option><option value="P6_U">Signature Mezza giornata Unlimited · 6h · ∞ · 830 CHF</option><option value="P12_L">Grand Tour 300 · 12h · 300 km · 940 CHF</option><option value="P12_L500">Grand Tour 500 · 12h · 500 km · 1140 CHF</option><option value="P12_U">Grand Tour Unlimited · 12h · ∞ · 1290 CHF</option><option value="P24_L200">Full Day Icon 200 · 24h · 200 km · 1340 CHF</option><option value="P24_L500">Full Day Icon 500 · 24h · 500 km · 1590 CHF</option><option value="P24_U">Full Day Icon Unlimited · 24h · ∞ · 1990 CHF</option><option value="WE_500">Weekend Escape 500 · 48h · 500 km · 1990 CHF</option><option value="WE_800">Weekend Escape 800 · 48h · 800 km · 2790 CHF</option><option value="WD">Weekday Privilege · Lun–Ven · 700 km · 2480 CHF</option><option value="FW">Settimana intera · 7 giorni · 1300 km · 4480 CHF</option></select>
 </div><div class="fieldGroup">
 <label for="pickupLocation" id="lblPickupLoc">Luogo di ritiro</label>
 <select id="pickupLocation" name="pickup_location"><option value="NANIKON">Nänikon · GRATIS</option><option value="ZURICH_AIRPORT">Aeroporto di Zurigo · costo confermato nella risposta</option><option value="ZURICH">Zurigo · costo confermato nella risposta</option><option value="WINTERTHUR">Winterthur · costo confermato nella risposta</option><option value="ZUG">Zug · CHF 140</option><option value="AARGAU">Argovia · CHF 140</option><option value="LUCERNE">Lucerna · CHF 190</option><option value="ST_GALLEN">St. Gallen · CHF 190</option><option value="BERN">Berna · CHF 290</option><option value="SOLOTHURN">Soletta · CHF 290</option><option value="BASEL">Basilea · CHF 290</option><option value="BIEL">Bienne · CHF 290</option><option value="CHUR">Coira · CHF 290</option><option value="ALTDORF">Altdorf UR (per Andermatt) · CHF 290</option><option value="CHUR_DAVOS">Coira (per Davos) · CHF 290</option><option value="OTHER">Altro · Specificare nelle note</option></select><details class="handoverInfo"><summary>Più informazioni</summary><p class="pricingNote" id="pickupFeeNote" style="margin:0.35rem 0 0">Il costo di consegna indicato comprende sia il ritiro sia la restituzione. Confermiamo il totale prima della prenotazione.</p></details>
@@ -4047,7 +4048,7 @@ const DEFAULT_PACKAGES =
       const duration = String(value || "");
       const localized = {
         "Mon-Fri": { en: "Mon–Fri", de: "Mo–Fr", it: "Lun–Ven" },
-        "Full week": { en: "Full week", de: "Ganze Woche", it: "Settimana intera" }
+        "Full week": { en: "7 days", de: "7 Tage", it: "7 giorni" }
       };
       return localized[duration] ? (localized[duration][currentLang] || localized[duration].en) : duration;
     }

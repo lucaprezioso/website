@@ -3,8 +3,6 @@
 
   var script = document.currentScript;
   var trackingEnabled = Boolean(script && script.hasAttribute("data-lo-google-tracking"));
-  var GA_ID = "G-EKE8CWE8SN";
-  var ADS_ID = "AW-17961819738";
   var STORAGE_KEY = "lo_cookie_consent_v2";
   var COOKIE_NAME = "lo_cookie_consent";
   var CONSENT_VERSION = 3;
@@ -20,6 +18,10 @@
   };
 
   setDefaultConsent(currentChoice);
+  if (trackingEnabled) window.gtag("set", "url_passthrough", true);
+  window.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
+  // Keep measurement disabled on legal and error pages, including on reload.
+  if (trackingEnabled) window.dataLayer.push({ event: "lo_measurement_ready" });
   loadGoogleTag();
 
   window.loadAnalytics = function () {
@@ -184,7 +186,7 @@
   }
 
   function loadGoogleTag() {
-    if (!trackingEnabled || googleTagLoaded) return;
+    if (googleTagLoaded) return;
 
     googleTagLoaded = true;
     window.__gtagLoaded = true;
@@ -194,13 +196,8 @@
     tag.fetchPriority = "low";
     tag.setAttribute("fetchpriority", "low");
     tag.id = "loGoogleTag";
-    tag.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
+    tag.src = "https://www.googletagmanager.com/gtm.js?id=GTM-KRF75RLX";
     document.head.appendChild(tag);
-
-    window.gtag("js", new Date());
-    window.gtag("set", "url_passthrough", true);
-    window.gtag("config", GA_ID, { anonymize_ip: true });
-    window.gtag("config", ADS_ID);
   }
 
   function clearGoogleCookies(category) {

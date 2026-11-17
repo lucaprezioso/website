@@ -2,6 +2,7 @@
 
 <html data-lo-scrollbars="calPopup loConsentBanner__inner loConsentPanel pricingGrid" lang="de">
 <head>
+<script data-lo-google-tracking="" defer="" src="/assets/lo.consent-home-eba179b2cf0a.js"></script>
 <meta charset="utf-8"/>
 
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -2287,7 +2288,7 @@ footer{
 @media (width > 760px) and (min-aspect-ratio:5/6){#showcase .mediaFull{background-image:url("/media/poster_1200.webp?v=84-susten")}}
 @media (width > 760px) and (aspect-ratio < 5/6){#showcase .mediaFull{background-image:url("/media/poster_960.webp?v=84-susten")}}
 </style>
-<script data-lo-google-tracking="" defer="" src="/assets/lo.consent-home-dd21c45f4f71.js"></script>
+
 <meta content="telephone=no, email=no, address=no" name="format-detection"/>
 <meta content="nointentdetection" name="chrome"/>
 <title>Ferrari mieten Zürich ab CHF 440 | Sportwagen &amp; Luxusauto</title>
@@ -3624,7 +3625,7 @@ ich danke nochmals Anna und sein Mann für diese super Organisation, war sehr se
 </div>
 <div class="loBookingRateRow"><div class="fieldGroup">
 <label for="packageId" id="lblPackage">Tarif</label>
-<select id="packageId" name="package_id"><option value="RECOMMEND">Bitte um Paketempfehlung</option><option value="P3_U">Kurztrip · 3h · ∞ · 440 CHF</option><option value="P6_L">Signature Halbtag · 6h · 200 km · 780 CHF</option><option value="P6_U">Signature Halbtag Unlimited · 6h · ∞ · 830 CHF</option><option value="P12_L">Grand Tour 300 · 12h · 300 km · 940 CHF</option><option value="P12_L500">Grand Tour 500 · 12h · 500 km · 1140 CHF</option><option value="P12_U">Grand Tour Unlimited · 12h · ∞ · 1290 CHF</option><option value="P24_L200">Full Day Icon 200 · 24h · 200 km · 1340 CHF</option><option value="P24_L500">Full Day Icon 500 · 24h · 500 km · 1590 CHF</option><option value="P24_U">Full Day Icon Unlimited · 24h · ∞ · 1990 CHF</option><option value="WE_500">Weekend Escape 500 · 48h · 500 km · 1990 CHF</option><option value="WE_800">Weekend Escape 800 · 48h · 800 km · 2790 CHF</option><option value="WD">Weekday Privilege · Mo–Fr · 700 km · 2480 CHF</option><option value="FW">Ganze Woche · Ganze Woche · 1300 km · 4480 CHF</option></select>
+<select id="packageId" name="package_id"><option value="RECOMMEND">Bitte um Paketempfehlung</option><option value="P3_U">Kurztrip · 3h · ∞ · 440 CHF</option><option value="P6_L">Signature Halbtag · 6h · 200 km · 780 CHF</option><option value="P6_U">Signature Halbtag Unlimited · 6h · ∞ · 830 CHF</option><option value="P12_L">Grand Tour 300 · 12h · 300 km · 940 CHF</option><option value="P12_L500">Grand Tour 500 · 12h · 500 km · 1140 CHF</option><option value="P12_U">Grand Tour Unlimited · 12h · ∞ · 1290 CHF</option><option value="P24_L200">Full Day Icon 200 · 24h · 200 km · 1340 CHF</option><option value="P24_L500">Full Day Icon 500 · 24h · 500 km · 1590 CHF</option><option value="P24_U">Full Day Icon Unlimited · 24h · ∞ · 1990 CHF</option><option value="WE_500">Weekend Escape 500 · 48h · 500 km · 1990 CHF</option><option value="WE_800">Weekend Escape 800 · 48h · 800 km · 2790 CHF</option><option value="WD">Weekday Privilege · Mo–Fr · 700 km · 2480 CHF</option><option value="FW">Ganze Woche · 7 Tage · 1300 km · 4480 CHF</option></select>
 </div><div class="fieldGroup">
 <label for="pickupLocation" id="lblPickupLoc">Abholort</label>
 <select id="pickupLocation" name="pickup_location"><option value="NANIKON">Nänikon · KOSTENLOS</option><option value="ZURICH_AIRPORT">Flughafen Zürich · Kosten bei Bestätigung</option><option value="ZURICH">Zürich · Kosten bei Bestätigung</option><option value="WINTERTHUR">Winterthur · Kosten bei Bestätigung</option><option value="ZUG">Zug · CHF 140</option><option value="AARGAU">Aargau · CHF 140</option><option value="LUCERNE">Luzern · CHF 190</option><option value="ST_GALLEN">St. Gallen · CHF 190</option><option value="BERN">Bern · CHF 290</option><option value="SOLOTHURN">Solothurn · CHF 290</option><option value="BASEL">Basel · CHF 290</option><option value="BIEL">Biel · CHF 290</option><option value="CHUR">Chur · CHF 290</option><option value="ALTDORF">Altdorf UR (für Andermatt) · CHF 290</option><option value="CHUR_DAVOS">Chur (für Davos) · CHF 290</option><option value="OTHER">Andere · Bitte in Notizen angeben</option></select><details class="handoverInfo"><summary>Mehr Infos</summary><p class="pricingNote" id="pickupFeeNote">Die angegebene Übergabegebühr umfasst Abholung und Rückgabe zusammen. Den gesamten Betrag bestätigen wir vor der Buchung.</p></details>
@@ -4073,7 +4074,7 @@ const DEFAULT_PACKAGES =
       const duration = String(value || "");
       const localized = {
         "Mon-Fri": { en: "Mon–Fri", de: "Mo–Fr", it: "Lun–Ven" },
-        "Full week": { en: "Full week", de: "Ganze Woche", it: "Settimana intera" }
+        "Full week": { en: "7 days", de: "7 Tage", it: "7 giorni" }
       };
       return localized[duration] ? (localized[duration][currentLang] || localized[duration].en) : duration;
     }
